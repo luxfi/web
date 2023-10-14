@@ -1,5 +1,7 @@
 # next-template
 
+From shadcn
+
 A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 
 ## Usage
@@ -7,6 +9,8 @@ A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 ```bash
 npx create-next-app -e https://github.com/shadcn/next-template
 ```
+
+*artemis-prime* for Hanzo: Using pnpm and modules upgrade
 
 ## Features
 
