@@ -1,16 +1,20 @@
-# next-template
+# LUX Shop
 
-From shadcn
+React using shadcn (Next 13, Tailwind)
+Pulling all content from static json (`/content`)
 
+
+## Created using.
+
+From shadcn/next-template
 A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 
-## Usage
-
-```bash
+```
+bash
 npx create-next-app -e https://github.com/shadcn/next-template
 ```
 
-*artemis-prime* for Hanzo: Using pnpm and modules upgrade
+*artemis-prime*: THem improving for Hanzo: Using pnpm and modules upgrade
 
 ## Features
 
