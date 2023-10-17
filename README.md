@@ -13,17 +13,15 @@ pnpm dev
 Since "pnpm" is a finger twister, many people alias it to "pn". For example, with `bash`, put `alias pn='pnpm'` in `.bashrc`.
 
 
-## From starter site based on shadcn/next-template
+## From Hanzo's boilerplate repo based on shadcn/next-template
 
-- React using shadcn's ui system (Next 13.4+, Tailwind)
-- Restructured and cleaned up slightly
-- Pulls all content from static json (`/src/content`)
-- lives on GitHub [here](https://github.com/hanzoai/shadcn-boilerplate)
+- A React using shadcn's ui system (Next 13.4+, Tailwind), restructured and cleaned up.
+- Pulls content from static json (in `/src/content`)
+- Lives [on GitHub here](https://github.com/hanzoai/shadcn-boilerplate)
 
 ### Originally created using
 
 From shadcn/next-template
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 
 ```
 bash
@@ -44,4 +42,6 @@ npx create-next-app -e https://github.com/shadcn/next-template
 #### improvments made by us
 - better tree structure and naming
 - no linting or prettier
+- uses `pnpm`
+- updated module versions
 
