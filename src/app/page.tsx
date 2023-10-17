@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
+import { siteContent } from "@/content/site-content"
 import { buttonVariants } from "@/components/ui/button"
 
 export default function IndexPage() {
@@ -18,7 +18,7 @@ export default function IndexPage() {
       </div>
       <div className="flex gap-4">
         <Link
-          href={siteConfig.links.docs}
+          href={siteContent.links.docs}
           target="_blank"
           rel="noreferrer"
           className={buttonVariants()}
@@ -28,7 +28,7 @@ export default function IndexPage() {
         <Link
           target="_blank"
           rel="noreferrer"
-          href={siteConfig.links.github}
+          href={siteContent.links.github}
           className={buttonVariants({ variant: "outline" })}
         >
           GitHub
