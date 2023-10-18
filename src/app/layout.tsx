@@ -1,19 +1,17 @@
 import "@/style/globals.css"
+import "@/style/typo.css"
 import { Metadata } from "next"
 
-import { siteContent } from "@/content/site-content"
-import { fontSans } from "@/style/fonts"
-import { cn } from "@/util"
-import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
+import ThemeProvider from "@/context-providers/theme-provider"
+import { PropsWithChildren } from "react"
 
 export const metadata: Metadata = {
   title: {
-    default: siteContent.name,
-    template: `%s - ${siteContent.name}`,
+    default: "Lux.market - new",
+    template: `%s - Lux.market - new`,
   },
-  description: siteContent.description,
+  description: "Your destination for all cool things.",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -25,30 +23,19 @@ export const metadata: Metadata = {
   },
 }
 
-interface RootLayoutProps {
-  children: React.ReactNode
-}
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
-  )
-}
+const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
+  <html lang="en" suppressHydrationWarning>
+    <head />
+    <body className={"min-h-screen bg-background antialiased"}>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <div className="relative flex min-h-screen flex-col">
+          {children}
+        </div>
+        <TailwindIndicator />
+      </ThemeProvider>
+    </body>
+  </html>
+)
+
+export default RootLayout
