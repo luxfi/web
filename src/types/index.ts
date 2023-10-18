@@ -1,8 +1,8 @@
 import type NavItem from './nav-item'
-import type SimpleAsset from './simple-asset'
+import type AssetBanner from './asset-banner'
 
 
 export { 
   type NavItem, 
-  type SimpleAsset
+  type AssetBanner
 }

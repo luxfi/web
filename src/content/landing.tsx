@@ -1,5 +1,5 @@
 import React from 'react'
-import { SimpleAsset, NavItem } from '@/types'
+import { AssetBanner, NavItem } from '@/types'
 
 export default {
   assets: [
@@ -9,7 +9,7 @@ export default {
 
 
     }
-  ] as SimpleAsset[],
+  ] as AssetBanner[],
 
   bottomText: (
     <><p>Foo</p></>
@@ -17,6 +17,7 @@ export default {
   
   cta: {
     title: 'Enter App',
-    href: '/'
+    href: '/',
+    variant: 'default'
   } as NavItem
 }
