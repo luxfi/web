@@ -12,7 +12,7 @@ const MainNav: React.FC<{
 }) => (
   <>
   {items?.length ? (
-    <nav className="flex gap-6 font-nav">
+    <nav className="flex gap-6 font-headtextwide">
       {items?.map((item, index) => (
          (!item.variant || item.variant === 'link') ? (
           <Link

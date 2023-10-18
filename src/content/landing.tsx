@@ -5,9 +5,35 @@ export default {
   assets: [
     {
       title: 'LUX SILVER',
-      byline: 'The Silver Rush is Here.'
-
-
+      byline: 'The Silver Rush is Here.',
+      media: {
+        type: 'video',
+        videoProps: {
+          autoPlay: true, 
+          loop: true, 
+          muted: true, 
+          playsInline: true
+        }, 
+        sources: ['/assets/video/luxsilver.mp4'],
+          // From manually looking at aspect ratio
+          // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
+        dim: {
+          width: 200,
+          height: 327
+        }
+      },
+      ctas: [
+        {
+          title: "Learn More",
+          href: "/",
+          variant: 'outline'
+        },
+        {
+          title: "Buy Now",
+          href: "/",
+          variant: 'default'
+        },
+      ]
     }
   ] as AssetBanner[],
 

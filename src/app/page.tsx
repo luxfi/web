@@ -1,71 +1,68 @@
 import React  from 'react'
+import Link from "next/link"
 
+import { cn } from "@/util"
 import SiteHeader from "@/components/SiteHeader"
+import { landing } from '@/content'
+import { buttonVariants } from "@/components/button"
 
-const Page: React.FC = () => {
-  return (<>
-    <SiteHeader />
-    <h2>foo</h2>
-    <div className="flex-1">
-
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2 font-sans">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
-      </div>
+const Page: React.FC = () => (<>
+  <SiteHeader />
+  <div className='container flex flex-col justify-center items-center pb-6 pt-4'>
+  {landing.assets.map((asset, index) => (
+    <section key={index} className="flex flex-col justify-center items-center max-w-3xl gap-6 pb-4 pt-4">
+      <h2 className="text-6xl font-extrabold text-center font-headtextwide">
+        {asset.title}
+      </h2>
+      {asset.byline && (
+      <h6 className="text-2xl text-center">
+        {asset.byline}
+      </h6>
+      )}
+      {asset.media && asset.media.type === 'video' && (
+        <video {...asset.media.dim} {...asset.media.videoProps}>
+          {asset.media.sources?.map((source, iindex) => (  
+            <source key={iindex} src={source} />
+          ))} 
+        </video>
+      )}
+      {asset.ctas && (
+      <div className='flex flex-row gap-6 justify-between'>
+      {asset.ctas.map((item, iindex) => (
+        (!item.variant || item.variant === 'link') ? (
+          <Link
+            key={iindex}
+            href={item.href!}
+            className={cn(
+              "flex items-center text-medium font-medium text-muted-foreground hover:text-foreground",
+              item.disabled && "cursor-not-allowed opacity-80 hover:text-muted-foreground"
+            )}
+          >
+            {item.title}
+          </Link>
+        ) : (
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            key={iindex}
+            href={item.href!}
+            className={buttonVariants({ variant: item.variant, size: 'lg' })}
+          >
+            {item.title}
+          </Link>
+          )
+      ))}
+      </div>  
+      )}
     </section>
-    </div>
-  </>)
-}
+  ))}
+  </div>
+</>)
 
+/*
+     <video id="a17d1946-3061-662f-0606-a3b65df0d242-video" autoplay="" loop="" style="background-image:url(&quot;videos/LUX-CARD-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="videos/LUX-CARD-transcode.mp4" data-wf-ignore="true">
+              <source src="videos/LUX-CARD-transcode.webm" data-wf-ignore="true">
+            </video>
+*/
 export default Page

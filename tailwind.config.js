@@ -18,7 +18,7 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "var(--background)", // NOT HSL
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -55,8 +55,9 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Inter"],
-        nav: ["Druk Text Wide"]
+        sans: ["var(--font-sans)", ...fontFamily.sans], // mapped to Inter in style/font.ts
+        headwide: ["Druk Wide"],
+        headtextwide: ["Druk Text Wide"]
       },
       keyframes: {
         "accordion-down": {
