@@ -10,7 +10,7 @@ const Page: React.FC = () => (<>
   <SiteHeader />
   <div className='container flex flex-col justify-center items-center pb-6 pt-4'>
   {landing.assets.map((asset, index) => (
-    <section key={index} className="flex flex-col justify-center items-center max-w-3xl gap-6 pb-4 pt-4">
+    <section key={index} className="flex flex-col justify-center items-center max-w-3xl gap-6 pb-10 mb-12 pt-4">
       <h2 className="text-6xl font-extrabold text-center font-headtextwide">
         {asset.title}
       </h2>

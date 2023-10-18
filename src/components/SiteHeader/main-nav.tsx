@@ -31,7 +31,7 @@ const MainNav: React.FC<{
             rel="noreferrer"
             key={index}
             href={item.href!}
-            className={buttonVariants({ variant: item.variant, size: 'lg' })}
+            className={cn(buttonVariants({ variant: item.variant, size: 'lg' }), 'min-w-0')}
           >
             {item.title}
           </Link>
