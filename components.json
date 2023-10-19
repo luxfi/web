@@ -5,11 +5,11 @@
     "config": "tailwind.config.js",
     "css": "src/style/globals.css",
     "baseColor": "slate",
-    "cssVariables": true
+    "cssVariables": true 
   },
   "rsc": true,
   "aliases": {
     "utils": "@/util",
-    "components": "@/components"
+    "components": "@/primitives"
   }
 }

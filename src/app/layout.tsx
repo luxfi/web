@@ -1,9 +1,9 @@
 import React, { PropsWithChildren } from "react"
-import "@/style/globals.css"
 import "@/style/typo.css"
+import "@/style/globals.css"
 import { Metadata } from "next"
 
-import { TailwindIndicator } from "@/components/tailwind-indicator"
+import TailwindIndicator from "@/primitives/tailwind-indicator"
 import ThemeProvider from "@/context-providers/theme-provider"
 import { cn } from "@/util"
 import { sans } from "@/style/fonts"

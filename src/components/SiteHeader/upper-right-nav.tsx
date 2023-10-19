@@ -1,8 +1,8 @@
 import React from 'react'
 //import Link from "next/link"
 //import { siteContent } from "@/content/site-content"
-//import { buttonVariants } from "@/components/button"
-//import { Icons } from "@/components/icons"
+//import { buttonVariants } from "@/primitives/button"
+//import { Icons } from "@/components/Icons"
 
 import ThemeToggle from "./theme-toggle"
 

@@ -1,17 +1,15 @@
 "use client"
 
 import React from "react"
+// @ts-ignore
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
 
 import { cn } from "@/util"
 
 const Dialog = DialogPrimitive.Root
-
 const DialogTrigger = DialogPrimitive.Trigger
-
 const DialogPortal = DialogPrimitive.Portal
-
 const DialogClose = DialogPrimitive.Close
 
 const DialogOverlay = React.forwardRef<
@@ -73,7 +71,7 @@ const DialogFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+      "flex flex-col justify-start align-center",
       className
     )}
     {...props}

@@ -1,4 +1,4 @@
-import { NavItem } from '@/types'
+import { LinkItemDef } from './types'
 
 export default [
   {
@@ -26,5 +26,5 @@ export default [
     href: "/",
     variant: 'default'
   },
-] as NavItem[]
+] as LinkItemDef[]
 

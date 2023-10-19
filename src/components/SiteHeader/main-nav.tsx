@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 
-import { NavItem }  from '@/types'
+import { type LinkItemDef }  from '@/content/types'
 import { cn } from "@/util"
-import { buttonVariants } from "../button"
+import { buttonVariants } from '@/primitives/button'
 
 const MainNav: React.FC<{
-  items?: NavItem[]
+  items?: LinkItemDef[]
 }> = ({ 
   items 
 }) => (
@@ -19,8 +19,8 @@ const MainNav: React.FC<{
             key={index}
             href={item.href!}
             className={cn(
-              "flex items-center text-medium font-medium text-muted-foreground hover:text-foreground",
-              item.disabled && "cursor-not-allowed opacity-80 hover:text-muted-foreground"
+              'flex items-center text-medium font-medium text-muted-foreground hover:text-foreground',
+              item.disabled && 'cursor-not-allowed opacity-80 hover:text-muted-foreground'
             )}
           >
             {item.title}
