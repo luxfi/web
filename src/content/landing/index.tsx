@@ -3,7 +3,7 @@ import { AssetBannerBlock, ElementBlock } from '../types'
 import ContactDialog from '@/components/ContactDialog'
 import Button from '@/primitives/button'
 
-import BottomMD from './landing-bottom.mdx'
+import BottomMDX from './landing-bottom.mdx'
 
 export default {
   assets: [
@@ -213,6 +213,6 @@ export default {
   ] as AssetBannerBlock[],
   bottom: {
     blockType: 'element',
-    element: <BottomMD /> 
+    element: <BottomMDX /> 
   } as ElementBlock
 }

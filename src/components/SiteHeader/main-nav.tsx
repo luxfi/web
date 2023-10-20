@@ -12,31 +12,30 @@ const MainNav: React.FC<{
 }) => (
   <>
   {items?.length ? (
-    <nav className="flex gap-6 font-headtextwide">
-      {items?.map((item, index) => (
-         (!item.variant || item.variant === 'link') ? (
+    <nav className="flex gap-6">
+      {items?.map((item, index) => {
+        const toSpread = {
+          href: item.href!,
+          ...((item.external) ?  { rel: "noreferrer" } : {}),
+          ...((item.target) ? {target: item.target } : {})
+        }
+
+        return (
           <Link
-            key={index}
-            href={item.href!}
-            className={cn(
-              'flex items-center text-medium font-medium text-muted-foreground hover:text-foreground',
-              item.disabled && 'cursor-not-allowed opacity-80 hover:text-muted-foreground'
+            className={cn(buttonVariants({ 
+                variant: item.variant ?  item.variant : 'link', 
+                size: (!item.variant || item.variant.includes('link'))  ? undefined : 'lg'
+              }), 
+              'min-w-0'
             )}
-          >
-            {item.title}
-          </Link>
-        ) : (
-          <Link
-            target="_blank"
-            rel="noreferrer"
             key={index}
-            href={item.href!}
-            className={cn(buttonVariants({ variant: item.variant, size: 'lg' }), 'min-w-0')}
+            {...toSpread}
           >
             {item.title}
           </Link>
         )
-      ))}
+      }
+    )}
     </nav>
   ) : null}
   </>
