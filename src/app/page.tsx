@@ -4,8 +4,6 @@ import SiteHeader from "@/components/SiteHeader"
 import { landing } from '@/content'
 import AssetBanner from '@/components/asset-banner'
 
-import BottomMD from '@/content/landing-bottom.mdx'
-
 const Page: React.FC = () => (<>
   <SiteHeader />
   <div className='container flex flex-col justify-center items-center pb-6 pt-4'>
@@ -15,7 +13,7 @@ const Page: React.FC = () => (<>
     </section>
   ))}
     <div className='typography dark:typography-invert flex flex-col justify-center items-center' >
-      <BottomMD />
+      {landing.bottom.element}
     </div>
   </div>
 </>)

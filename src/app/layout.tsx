@@ -10,8 +10,8 @@ import { inter } from "@/style/fonts"
 
 export const metadata: Metadata = {
   title: {
-    default: "Lux.market - new",
-    template: `%s - Lux.market - new`,
+    default: "new Lux.market",
+    template: `%s - Lux.market`,
   },
   description: "Your destination for all cool things.",
   themeColor: [

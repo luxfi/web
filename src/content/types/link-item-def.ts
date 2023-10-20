@@ -1,5 +1,7 @@
 import type { ComponentType } from 'react'
 
+import type { ButtonVariants } from '@/primitives/button'
+
 interface DialogProps {
   open: boolean
   onOpenChange: (b: boolean) => void
@@ -11,13 +13,14 @@ interface DialogProps {
 interface LinkItemDef {
   title?: string
   href?: string
+  target?: '_blank' | '_self'
   disabled?: boolean
   external?: boolean
-  variant?: 'default' | 'outline' | 'link'
+  variant?: ButtonVariants
   Modal?: ComponentType<DialogProps>
   trigger?: React.ForwardedRef<HTMLButtonElement> | React.ForwardedRef<HTMLAnchorElement>
   modalProps?: any
-  modalTitle: string
+  modalTitle?: string
   modalByline?: string
   //modalSubmit?: (data: any) => void
 }
