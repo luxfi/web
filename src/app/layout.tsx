@@ -6,7 +6,7 @@ import { Metadata } from "next"
 import TailwindIndicator from "@/primitives/tailwind-indicator"
 import ThemeProvider from "@/context-providers/theme-provider"
 import { cn } from "@/util"
-import { sans } from "@/style/fonts"
+import { inter } from "@/style/fonts"
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
   <html lang="en" suppressHydrationWarning>
     <head />
-    <body className={cn("min-h-screen bg-background font-sans antialiased", sans.variable )}>
+    <body className={cn("min-h-screen bg-background font-sans antialiased", inter.variable )}>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
         <div className="relative flex min-h-screen flex-col">
           {children}
