@@ -5,8 +5,7 @@ import type { AssetBannerBlock } from '@/content/types'
 
 import MediaComponent from './media-comp'
 import CTAComponent from './cta-comp'
-// className="text-6xl font-extrabold text-center font-headtextwide"
-// "text-2xl text-center"
+
 const AssetBanner: React.FC<{
   asset: AssetBannerBlock
 }> = ({
