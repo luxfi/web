@@ -43,6 +43,9 @@ module.exports = {
               fontSize: theme('fontSize.xl'),  
               margin: 0,
               fontFamily: theme('fontFamily.inter')
+            },
+            p: {
+              margin: 0,
             }
           }
         }

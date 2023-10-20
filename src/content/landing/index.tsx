@@ -1,8 +1,9 @@
 import React from 'react'
-import { AssetBannerBlock, LinkItemDef } from './types'
+import { AssetBannerBlock, ElementBlock } from '../types'
 import ContactDialog from '@/components/ContactDialog'
 import Button from '@/primitives/button'
 
+import BottomMD from './landing-bottom.mdx'
 
 export default {
   assets: [
@@ -38,7 +39,7 @@ export default {
           {
             title: "Buy Now",
             href: "/",
-            variant: 'default'
+            variant: 'primary'
           },
         ]
       } 
@@ -75,7 +76,7 @@ export default {
           {
             title: "Buy Now",
             href: "/",
-            variant: 'default'
+            variant: 'primary'
           },
         ]
       }
@@ -115,7 +116,7 @@ export default {
           },
           {
             Modal: ContactDialog,
-            trigger: <Button variant='default' size='lg'>Waitlist</Button>,
+            trigger: <Button variant='primary' size='lg'>Waitlist</Button>,
             modalTitle: 'Join the Waitlist',
             modalByline: 'Be the first to own LUX Coin',
           },
@@ -160,7 +161,7 @@ export default {
           },
           {
             Modal: ContactDialog,
-            trigger: <Button variant='default' size='lg'>Waitlist</Button>,
+            trigger: <Button variant='primary' size='lg'>Waitlist</Button>,
             modalTitle: 'Join the Waitlist',
             modalByline: 'Be the first to get access to LUX Validator.',
           },
@@ -202,7 +203,7 @@ export default {
           },
           {
             Modal: ContactDialog,
-            trigger: <Button variant='default' size='lg'>Waitlist</Button>,
+            trigger: <Button variant='primary' size='lg'>Waitlist</Button>,
             modalTitle: 'Join the Waitlist',
             modalByline: 'Be the first to get access to LUX Credit.',
           },
@@ -210,14 +211,8 @@ export default {
       }
     }
   ] as AssetBannerBlock[],
-
-  bottomText: (
-    <><p>Foo</p></>
-  ) as React.ReactNode,
-  
-  cta: {
-    title: 'Enter App',
-    href: '/',
-    variant: 'default'
-  } as LinkItemDef
+  bottom: {
+    blockType: 'element',
+    element: <BottomMD /> 
+  } as ElementBlock
 }
