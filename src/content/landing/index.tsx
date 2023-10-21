@@ -116,7 +116,7 @@ export default {
           },
           {
             Modal: ContactDialog,
-            trigger: <Button variant='primary' size='lg'>Waitlist</Button>,
+            component: <Button variant='primary' size='lg'>Waitlist</Button>,
             modalTitle: 'Join the Waitlist',
             modalByline: 'Be the first to own LUX Coin',
           },
@@ -161,7 +161,7 @@ export default {
           },
           {
             Modal: ContactDialog,
-            trigger: <Button variant='primary' size='lg'>Waitlist</Button>,
+            component: <Button variant='primary' size='lg'>Waitlist</Button>,
             modalTitle: 'Join the Waitlist',
             modalByline: 'Be the first to get access to LUX Validator.',
           },
@@ -203,7 +203,7 @@ export default {
           },
           {
             Modal: ContactDialog,
-            trigger: <Button variant='primary' size='lg'>Waitlist</Button>,
+            component: <Button variant='primary' size='lg'>Waitlist</Button>,
             modalTitle: 'Join the Waitlist',
             modalByline: 'Be the first to get access to LUX Credit.',
           },
