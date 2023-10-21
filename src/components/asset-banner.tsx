@@ -25,7 +25,7 @@ const AssetBanner: React.FC<{
     )}
     {asset.contentAfter}
     {asset.ctas && (
-      <div className='flex flex-row gap-6 justify-between not-typography'>
+      <div className='flex flex-row gap-6 justify-between'>
         <CTAComponent cta={asset.ctas} />
       </div>  
     )}

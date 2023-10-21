@@ -5,7 +5,7 @@ export default [
     {
       title: 'Market',
       href: "https://lux.market/",
-      variant: 'em-link'
+      variant: 'emlink'
     },
     {
       title: 'Lux Gold',

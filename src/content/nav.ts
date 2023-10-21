@@ -3,28 +3,33 @@ import { LinkItemDef } from './types'
 export default [
   {
     title: "Credit",
-    href: "/",
+    href: "https://lux.credit",
+    variant: 'emlink'
   },
   {
     title: "Finance",
-    href: "/",
+    href: "https://lux.finance",
+    variant: 'emlink'
   },
   {
     title: "Market",
-    href: "/",
+    href: "#",
+    variant: 'emlink'
   },
   {
     title: "Network",
-    href: "/",
+    href: "https://lux.network",
+    variant: 'emlink'
   },
   {
     title: "Partners",
-    href: "/",
+    href: "https://lux.partners",
+    variant: 'emlink'
   },
   {
     title: "Enter App",
-    href: "/",
-    variant: 'default'
+    href: "/app.lux.market",
+    variant: 'primary'
   },
 ] as LinkItemDef[]
 
