@@ -32,8 +32,4 @@ export default [
       href: '/pass',
     },
   ],
-  [],
-  [],
-  [],
-  []
 ] as LinkItemDef[][]

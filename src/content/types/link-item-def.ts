@@ -1,4 +1,4 @@
-import type { ComponentType } from 'react'
+import * as React from 'react'
 
 import type { ButtonVariants } from '@/primitives/button'
 
@@ -10,6 +10,7 @@ interface DialogProps {
   byline?: string
   //onSubmit: (data: any) => void
 }
+
 interface LinkItemDef {
   title?: string
   href?: string
@@ -17,8 +18,12 @@ interface LinkItemDef {
   disabled?: boolean
   external?: boolean
   variant?: ButtonVariants
-  Modal?: ComponentType<DialogProps>
-  trigger?: React.ForwardedRef<HTMLButtonElement> | React.ForwardedRef<HTMLAnchorElement>
+
+    // If Modal is not also supplied, this component is rendered. Otherwise...
+  component?: React.ReactNode // ForwardRefButton | ForwardRefLink | React.ReactNode
+    // ... if Modal is supplied, the component is rendered as the trigger for the Modal.
+    // Must supply component if Modal is supplied.
+  Modal?: React.ComponentType<DialogProps>
   modalProps?: any
   modalTitle?: string
   modalByline?: string
@@ -27,5 +32,5 @@ interface LinkItemDef {
 
 export {
   type LinkItemDef as default,
-  type DialogProps
+  type DialogProps,
 }
