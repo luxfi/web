@@ -1,4 +1,5 @@
-# LUX Shop marketing site
+# lux.shop
+Lux NFT marketing site.
 
 ## To run locally
 
