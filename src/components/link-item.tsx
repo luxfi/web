@@ -45,9 +45,7 @@ const LinkItem: React.FC<{
         />
       )
     }
-    else {
-      return component as React.ReactElement
-    }
+    return component as React.ReactElement
   }
 
   const {

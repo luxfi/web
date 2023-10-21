@@ -23,6 +23,9 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.14)(react@18.2.0)
+  '@tailwindcss/container-queries':
+    specifier: ^0.1.1
+    version: 0.1.1(tailwindcss@3.3.2)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -600,6 +603,14 @@ packages:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /@tailwindcss/container-queries@0.1.1(tailwindcss@3.3.2):
+    resolution: {integrity: sha512-p18dswChx6WnTSaJCSGx6lTmrGzNNvm2FtXmiO6AuA1V4U5REyoqwmT6kgAsIMdjo07QdAfYXHJ4hnMtfHzWgA==}
+    peerDependencies:
+      tailwindcss: '>=3.2.0'
+    dependencies:
+      tailwindcss: 3.3.2
     dev: false
 
   /@tailwindcss/typography@0.5.10(tailwindcss@3.3.2):

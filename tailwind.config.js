@@ -12,20 +12,20 @@ module.exports = {
             maxWidth: 'initial',
             h1: {
               fontSize: theme('fontSize[8xl]'),
-              fontFamily: theme('fontFamily.headtextwide'),
+              fontFamily: theme('fontFamily.heading'),
               margin: 0,
               fontWeight: 800
             },
             h2: {
               fontSize: theme('fontSize[6xl]'),  
-              fontFamily: theme('fontFamily.headtextwide'),
+              fontFamily: theme('fontFamily.heading'),
               margin: 0,
               fontWeight: 700
             },
             h3: {
               fontSize: theme('fontSize[5xl]'),  
               margin: 0,
-              fontFamily: theme('fontFamily.headtextwide')
+              fontFamily: theme('fontFamily.heading')
             },
             h4: {
               fontSize: theme('fontSize[4xl]'),  
@@ -887,7 +887,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1536px',
+      '2xl': '1600px',
     },
     scrollMargin: ({ theme }) => ({
       ...theme('spacing'),
@@ -1098,6 +1098,7 @@ module.exports = {
         className: 'typography'
       }
     ),
+    require('@tailwindcss/container-queries'),
   ],
 }
 
