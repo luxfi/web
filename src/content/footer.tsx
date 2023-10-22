@@ -1,4 +1,9 @@
+
 import { type CTABlock} from './types'
+
+import SocialIcon from '@/primitives/social-icon'
+
+const SOC_ICON_SIZE = 18
 
 export default [
   {
@@ -114,31 +119,37 @@ export default [
         title: 'Discord',
         href: 'https://discord.gg/luxdefi',
         external: true,
+        icon: <SocialIcon network='discord' size={SOC_ICON_SIZE} />
       },
       {
         title: 'Telegram',
         href: 'https://t.me/luxdefi',
-        external: true
+        external: true,
+        icon: <SocialIcon network='telegram' size={SOC_ICON_SIZE} />
       },
       {
         title: 'X (fm. Twitter)',
         href: 'https://twitter.com/luxdefi',
-        external: true
+        external: true,
+        icon: <SocialIcon network='x' size={SOC_ICON_SIZE} />
       },
       {
         title: 'Facebook',
         href: 'https://facebook.com/luxdefi',
-        external: true
+        external: true,
+        icon: <SocialIcon network='facebook' size={SOC_ICON_SIZE + 2} />
       },
       {
         title: 'LinkedIn',
         href: 'https://linkedin.com/company/luxdefi',
-        external: true
+        external: true,
+        icon: <SocialIcon network='linkedin' size={SOC_ICON_SIZE + 2} />
       },
       {
         title: 'Instagram',
         href: 'https://instagram.com/luxdefi',
-        external: true
+        external: true,
+        icon: <SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
       },
     ] 
   },

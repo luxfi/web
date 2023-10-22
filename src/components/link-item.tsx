@@ -73,10 +73,13 @@ const LinkItem: React.FC<{
           variant: variant ?  variant : 'link', 
           size: (!variant || variant.includes('ink'))  ? 'link' : size
         }), 
-        extraClasses + (href ? '' : ' pointer-events-none')
+        extraClasses 
+          + (href ? '' : ' pointer-events-none')
+          + (item.icon ? ' color-foreground hover:color-muted-foreground' : '')
       )}
       {...toSpread}
     >
+      {item.icon && (<div className='pr-1'>{item.icon}</div>)}
       {title}
     </Link>
   )

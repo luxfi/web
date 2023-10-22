@@ -20,9 +20,10 @@ interface LinkItemDef {
   newTab?: boolean  
   disabled?: boolean
   variant?: ButtonVariants
+  icon?: React.ReactNode
 
     // If Modal is not also supplied, this component is rendered. Otherwise...
-  component?: React.ReactNode // ForwardRefButton | ForwardRefLink | React.ReactNode
+  component?: React.ReactNode 
     // ... if Modal is supplied, the component is rendered as the trigger for the Modal.
     // Must supply component if Modal is supplied.
   Modal?: React.ComponentType<DialogProps>
