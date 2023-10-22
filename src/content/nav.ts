@@ -28,7 +28,7 @@ export default [
   },
   {
     title: "Enter App",
-    href: "/app.lux.market",
+    href: "https://app.lux.market",
     variant: 'primary'
   },
 ] as LinkItemDef[]
