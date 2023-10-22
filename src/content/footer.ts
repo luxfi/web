@@ -6,8 +6,10 @@ export default [
     items: [
       {
         title: 'Market',
-        href: "https://lux.market/",
-        variant: 'emlink'
+        href: "https://app.lux.market/",
+        external: true,
+        newTab: false,
+        variant: 'emLinkBright'
       },
       {
         title: 'Lux Gold',
@@ -41,7 +43,7 @@ export default [
       {
         title: 'Network',
         href: "https://lux.network/",
-        variant: 'emlink'
+        variant: 'emLinkBright'
       },
       {
         title: 'Apply for Beta',
@@ -64,24 +66,24 @@ export default [
       {
         title: 'Partners',
         href: "https://lux.partners/",
-        variant: 'emlink',
-        target: '_blank',
+        variant: 'emLinkBright',
         external: true
       },
       {
         title: 'About',
         href: 'https://lux.partners',
-        external: true
+        external: true,
+        newTab: false,
       },
       {
         title: 'Partner with Lux',
         href: 'https://apply.lux.partners/',
-        target: '_blank',
         external: true
       },
       {
         title: 'Lux Fund',
         href: 'https://lux.fund',
+        newTab: false,
         external: true
       },
       {
@@ -92,13 +94,11 @@ export default [
       {
         title: 'Careers',
         href: 'https://docs.lux.network/about/v/lux-job-listings/',
-        target: '_blank',
         external: true
       },
       {
         title: 'Press Kit',
         href: 'https://drive.google.com/drive/folders/14OJtKLVakGY6883XO9yGbiHtlFxQUUm5?usp=share_link',
-        target: '_blank',
         external: true
       },
     ] 
@@ -108,42 +108,36 @@ export default [
     items: [
       {
         title: 'Community',
-        variant: 'emlink',
+        variant: 'emLinkBright',
       },
       {
         title: 'Discord',
         href: 'https://discord.gg/luxdefi',
         external: true,
-        target: '_blank'
       },
       {
         title: 'Telegram',
         href: 'https://t.me/luxdefi',
-        target: '_blank',
         external: true
       },
       {
         title: 'X (fm. Twitter)',
         href: 'https://twitter.com/luxdefi',
-        target: '_blank',
         external: true
       },
       {
         title: 'Facebook',
         href: 'https://facebook.com/luxdefi',
-        target: '_blank',
         external: true
       },
       {
         title: 'LinkedIn',
         href: 'https://linkedin.com/company/luxdefi',
-        target: '_blank',
         external: true
       },
       {
         title: 'Instagram',
         href: 'https://instagram.com/luxdefi',
-        target: '_blank',
         external: true
       },
     ] 
@@ -153,17 +147,17 @@ export default [
     items: [
       {
         title: 'Legal',
-        variant: 'emlink',
+        variant: 'emLinkBright',
       },
       {
         title: 'Terms and Condistions',
         href: '/assets/pdf/LUX-NFT-Terms-and-Conditions.pdf',
-        target: '_blank'
+        newTab: true,
       },
       {
         title: 'Privacy Policy',
         href: '/assets/pdf/LUX-Privacy-Policy.pdf',
-        target: '_blank'
+        newTab: true,
       },
     ] 
   },

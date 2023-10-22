@@ -51,22 +51,27 @@ const LinkItem: React.FC<{
   const {
     href,
     external,
-    target,
+    newTab,
     variant,
     title
   } = item
 
   const toSpread = {
     ...((href) ? { href } : { href: '#'}),
-    ...((external) ?  { rel: "noreferrer" } : {}),
-    ...((target) ? { target } : {}),
+    ...((external) ?  { 
+      rel: "noreferrer",
+        // As per comments in LinkItemDef
+      target: (newTab !== undefined && (newTab === false)) ? '_self' : '_blank'
+    } : {
+      target: (newTab !== undefined && (newTab === true)) ? '_blank' : '_self' 
+    }),
   }
 
   return (
     <Link
       className={cn(buttonVariants({ 
           variant: variant ?  variant : 'link', 
-          size: (!variant || variant.includes('link'))  ? 'link' : size
+          size: (!variant || variant.includes('ink'))  ? 'link' : size
         }), 
         extraClasses + (href ? '' : ' pointer-events-none')
       )}

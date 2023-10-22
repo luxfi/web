@@ -14,9 +14,11 @@ interface DialogProps {
 interface LinkItemDef {
   title?: string
   href?: string
-  target?: '_blank' | '_self'
+    // external links get target='_blank' by default, unless newTab=false
+    // interal links get no target set by default, unless newTab=true
+  external?: boolean 
+  newTab?: boolean  
   disabled?: boolean
-  external?: boolean
   variant?: ButtonVariants
 
     // If Modal is not also supplied, this component is rendered. Otherwise...
