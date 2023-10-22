@@ -102,5 +102,67 @@ export default [
         external: true
       },
     ] 
+  },  
+  {
+    blockType: 'cta',
+    items: [
+      {
+        title: 'Community',
+        variant: 'emlink',
+      },
+      {
+        title: 'Discord',
+        href: 'https://discord.gg/luxdefi',
+        external: true,
+        target: '_blank'
+      },
+      {
+        title: 'Telegram',
+        href: 'https://t.me/luxdefi',
+        target: '_blank',
+        external: true
+      },
+      {
+        title: 'X (fm. Twitter)',
+        href: 'https://twitter.com/luxdefi',
+        target: '_blank',
+        external: true
+      },
+      {
+        title: 'Facebook',
+        href: 'https://facebook.com/luxdefi',
+        target: '_blank',
+        external: true
+      },
+      {
+        title: 'LinkedIn',
+        href: 'https://linkedin.com/company/luxdefi',
+        target: '_blank',
+        external: true
+      },
+      {
+        title: 'Instagram',
+        href: 'https://instagram.com/luxdefi',
+        target: '_blank',
+        external: true
+      },
+    ] 
+  },
+  {
+    blockType: 'cta',
+    items: [
+      {
+        title: 'Legal',
+        variant: 'emlink',
+      },
+      {
+        title: 'Terms and Condistions',
+        href: '/assets/pdf/LUX-NFT-Terms-and-Conditions.pdf',
+      },
+      {
+        title: 'Privacy Policy',
+        href: '/assets/pdf/LUX-Privacy-Policy.pdf',
+      },
+    ] 
   },
 ] as CTABlock[]

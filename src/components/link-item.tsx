@@ -57,7 +57,7 @@ const LinkItem: React.FC<{
   } = item
 
   const toSpread = {
-    href: href!,
+    ...((href) ? { href } : { href: '#'}),
     ...((external) ?  { rel: "noreferrer" } : {}),
     ...((target) ? { target } : {}),
   }
@@ -68,7 +68,7 @@ const LinkItem: React.FC<{
           variant: variant ?  variant : 'link', 
           size: (!variant || variant.includes('link'))  ? 'link' : size
         }), 
-        extraClasses
+        extraClasses + (href ? '' : ' pointer-events-none')
       )}
       {...toSpread}
     >
