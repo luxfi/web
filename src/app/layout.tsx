@@ -1,6 +1,4 @@
 import React, { PropsWithChildren } from "react"
-import "@/style/typo.css"
-import "@/style/globals.css"
 import { Metadata } from "next"
 
 import TailwindIndicator from "@/primitives/tailwind-indicator"
@@ -8,9 +6,13 @@ import ThemeProvider from "@/context-providers/theme-provider"
 import { cn } from "@/util"
 import { inter } from "@/style/fonts"
 
+import "@/style/typo.css"
+import "@/style/globals.css"
+
+
 export const metadata: Metadata = {
   title: {
-    default: "new Lux.market",
+    default: "Lux.market",
     template: `%s - Lux.market`,
   },
   description: "Your destination for all cool things.",
