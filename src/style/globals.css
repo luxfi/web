@@ -38,7 +38,7 @@
 
   .dark {
     --background: black; 
-    --foreground: hsl(213 31% 91%);
+    --foreground: hsl(213 31% 80%);
 
     --muted: hsl(223 47% 11%);
     --muted-foreground: hsl(215.4 16.3% 56.9%);
@@ -53,7 +53,7 @@
     --input: hsl(216 34% 17%);
 
     --card: hsl(224 71% 4%);
-    --card-foreground: hsl(213 31% 91%);
+    --card-foreground: hsl(213 31% 80%);
 
     --primary: hsl(210 40% 98%);
     --primary-foreground: hsl(222.2 47.4% 1.2%);

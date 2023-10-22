@@ -4,31 +4,36 @@ export default [
   {
     title: "Credit",
     href: "https://lux.credit",
-    variant: 'emlink'
+    external: true,
+    variant: 'emLink'
   },
   {
     title: "Finance",
     href: "https://lux.finance",
-    variant: 'emlink'
+    external: true,
+    variant: 'emLink'
   },
   {
     title: "Market",
-    href: "#",
-    variant: 'emlink'
+    variant: 'emLinkCurrent'
   },
   {
     title: "Network",
     href: "https://lux.network",
-    variant: 'emlink'
+    external: true,
+    variant: 'emLink'
   },
   {
     title: "Partners",
     href: "https://lux.partners",
-    variant: 'emlink'
+    external: true,
+    variant: 'emLink'
   },
   {
     title: "Enter App",
     href: "https://app.lux.market",
+    newTab: false,
+    external: true,
     variant: 'primary'
   },
 ] as LinkItemDef[]

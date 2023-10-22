@@ -1,13 +1,14 @@
-import Link from 'next/link'
-import { buttonVariants } from '@/primitives/button'
-import { cn } from "@/util"
+import LinkItem from '@/components/link-item'
 
 ##### Join the global rush to own silver
 ## THE SILVER RUSH IS HERE
 <br/>
-<Link
-  target="_blank"
-  rel="noreferrer"
-  href='/'
-  className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'not-typography')}
->Enter App</Link>
+<LinkItem 
+  item={{
+    title: 'Enter App',
+    href: 'https://app.lux.market',
+    external: 'true',
+    variant: 'primary',
+  }}
+  size='lg'
+/>

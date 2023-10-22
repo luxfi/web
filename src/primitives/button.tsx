@@ -13,7 +13,10 @@ const variant = {
   destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
   ghost: "hover:bg-accent hover:text-accent-foreground",
   link: commonLinkClasses,
-  emlink: commonLinkClasses + " font-heading not-typography",
+  emLink: commonLinkClasses + ' font-heading not-typography',
+  linkCurrent: commonLinkClasses + ' text-accent-foreground pointer-events-none',
+  emLinkCurrent: commonLinkClasses + ' font-heading not-typography text-accent-foreground pointer-events-none',
+  emLinkBright: commonLinkClasses + ' font-heading not-typography text-accent-foreground hover:text-foreground',
 }
 
 const size = {

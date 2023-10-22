@@ -12,7 +12,7 @@ const Header: React.FC = () => (
     <div className="flex h-16 items-center space-x-4 justify-between sm:space-x-0 mx-auto max-w-screen-2xl">
       <Link href="/" className="flex items-center space-x-2">
         <Icons.logo className='h-10 w-10' />
-        <span className="inline-block font-bold text-3xl font-headingWider">LUX</span>
+        <span className="inline-block font-bold text-3xl text-primary font-headingWider">LUX</span>
       </Link>
       <MainNav items={nav} />
       <UpperRightNav />

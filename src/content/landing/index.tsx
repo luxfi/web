@@ -171,7 +171,7 @@ export default {
     {
       blockType: 'asset-banner',
       title: 'LUX CREDIT',
-      byline: 'Never serll your crypto again.',
+      byline: 'Never sell your crypto again.',
       media: {
         blockType: 'video',
         videoProps: {

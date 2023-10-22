@@ -15,7 +15,7 @@ const Footer: React.FC = () => (
       <div className='flex flex-col' key={0}>
         <Link href="/" className="flex items-center space-x-2">
           <Icons.logo className='h-8 w-8' />
-          <span className="inline-block font-bold text-2xl font-headingWider">LUX</span>
+          <span className="inline-block font-bold text-2xl text-primary font-headingWider">LUX</span>
         </Link>
       </div>
       {footer.map((ctaBlock, index) => (
