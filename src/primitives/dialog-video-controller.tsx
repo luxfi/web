@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react'
 
-import {type DialogProps} from '@/content/types/link-item-def'
+import {type LinkModalProps} from '@/content/types/link-item-def'
 
 const DialogVideoController: React.FC<{
-  renderDialog: (props: Omit<DialogProps, 'trigger' | 'title' | 'byline' /* | 'onSubmit' */>) => React.ReactNode
+  renderDialog: (props: Omit<LinkModalProps, 'trigger' | 'title' | 'byline'  | 'onSubmit' >) => React.ReactNode
 }> = ({
   renderDialog,
 }) => {
@@ -13,7 +13,6 @@ const DialogVideoController: React.FC<{
 
   const onOpenChange = (b: boolean) => {
     setOpen(b)
-    console.log("OPEN: " + b)
     const videos = document.getElementsByTagName('video')
     const videoArray = Array.from(videos)
     videoArray.forEach((v) => {
@@ -34,5 +33,5 @@ const DialogVideoController: React.FC<{
 
 export {
   DialogVideoController as default,
-  type DialogProps
+  type LinkModalProps
 } 

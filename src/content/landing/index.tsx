@@ -5,6 +5,15 @@ import Button from '@/primitives/button'
 
 import BottomMDX from './landing-bottom.mdx'
 
+import saveToListAction from '@/server-actions/save-to-waitlist'
+
+const videoProps = {
+  autoPlay: true, 
+  loop: true, 
+  muted: true, 
+  playsInline: true
+}
+
 export default {
   assets: [
     {
@@ -13,12 +22,7 @@ export default {
       byline: 'The Silver Rush is Here.',
       media: {
         blockType: 'video',
-        videoProps: {
-          autoPlay: true, 
-          loop: true, 
-          muted: true, 
-          playsInline: true
-        }, 
+        videoProps, 
         sources: ['/assets/video/luxsilver.mp4'],
           // From manually looking at aspect ratio
           // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
@@ -50,12 +54,7 @@ export default {
       byline: 'Responsibly manufactured, ethically sourced.',
       media: {
         blockType: 'video',
-        videoProps: {
-          autoPlay: true, 
-          loop: true, 
-          muted: true, 
-          playsInline: true
-        }, 
+        videoProps, 
         sources: ['/assets/video/luxgold.mp4'],
           // From manually looking at aspect ratio
           // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
@@ -87,12 +86,7 @@ export default {
       byline: 'Genesis Collection now available on Open Sea.',
       media: {
         blockType: 'video',
-        videoProps: {
-          autoPlay: true, 
-          loop: true, 
-          muted: true, 
-          playsInline: true
-        }, 
+        videoProps, 
         image: '/assets/video/LUX-COIN-poster.jpg',
         sources: [
           '/assets/video/LUX-COIN-transcode.mp4', 
@@ -115,10 +109,17 @@ export default {
             variant: 'outline'
           },
           {
-            Modal: ContactDialog,
             component: <Button variant='primary' size='lg'>Waitlist</Button>,
-            modalTitle: 'Join the Waitlist',
-            modalByline: 'Be the first to own LUX Coin',
+            modal: {
+              Comp: ContactDialog,
+              title: 'Join the Waitlist',
+              byline: 'Be the first to own LUX Coin',
+              action: saveToListAction,
+              actionEnclusure: {
+                listId: 3211420,
+                reply: "You're on the LUX Coin Whitelist. Join the official LUX telegram to access the drop. https://t.me/luxdefichat"
+              }
+            }
           },
         ]
       }
@@ -132,12 +133,7 @@ export default {
       </>),
       media: {
         blockType: 'video',
-        videoProps: {
-          autoPlay: true, 
-          loop: true, 
-          muted: true, 
-          playsInline: true
-        }, 
+        videoProps, 
         image: '/assets/video/Lux-VALIDATOR-poster.jpg',
         sources: [
           '/assets/video/Lux-VALIDATOR-transcode.mp4', 
@@ -160,10 +156,17 @@ export default {
             variant: 'outline'
           },
           {
-            Modal: ContactDialog,
             component: <Button variant='primary' size='lg'>Waitlist</Button>,
-            modalTitle: 'Join the Waitlist',
-            modalByline: 'Be the first to get access to LUX Validator.',
+            modal: {
+              Comp: ContactDialog,
+              title: 'Join the Waitlist',
+              byline: 'Be the first to get access to LUX Validator.',
+              action: saveToListAction,
+              actionEnclusure: {
+                listId: 3211418,
+                reply: "You're on the LUX Validator Whitelist. Join the official LUX telegram to access the drop. https://t.me/luxdefichat"
+              }
+            }
           },
         ]
       }
@@ -174,12 +177,7 @@ export default {
       byline: 'Never sell your crypto again.',
       media: {
         blockType: 'video',
-        videoProps: {
-          autoPlay: true, 
-          loop: true, 
-          muted: true, 
-          playsInline: true
-        }, 
+        videoProps, 
         image: '/assets/video/Lux-CARD-poster.jpg',
         sources: [
           '/assets/video/LUX-CARD-transcode.mp4', 
@@ -202,10 +200,17 @@ export default {
             variant: 'outline'
           },
           {
-            Modal: ContactDialog,
             component: <Button variant='primary' size='lg'>Waitlist</Button>,
-            modalTitle: 'Join the Waitlist',
-            modalByline: 'Be the first to get access to LUX Credit.',
+            modal: {
+              Comp: ContactDialog,
+              title: 'Join the Waitlist',
+              byline: 'Be the first to get access to LUX Credit.',
+              action: saveToListAction,
+              actionEnclusure: {
+                listId: 33211417,
+                reply: "You're on the LUX Credit Whitelist. Join the official LUX telegram to access thedrop. https://t.me/luxdefichat"
+              }
+            }
           },
         ]
       }

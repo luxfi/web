@@ -1,59 +1,46 @@
 'use client'
 
 import React from 'react'
-import Button from "@/primitives/button"
+
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/primitives/dialog"
 
-import Input from "@/primitives/input"
-import Label from "@/primitives/label"
+import type { LinkModalProps} from '@/content/types/link-item-def'
+import ContactForm from './contact-form'
+import Disclaimer from './disclaimer.mdx'
 
-import {type DialogProps} from '@/content/types/link-item-def'
-
-const ContactDialog: React.FC<DialogProps> = ({
+const ContactDialog: React.FC<LinkModalProps> = ({
   open,
   onOpenChange,
   trigger,
   title,
   byline,
-  //onSubmit
+  onSubmit,
+  submitEnclosure
 }) => {
 
-  return (
+   return (
     <Dialog open={open} onOpenChange={onOpenChange} >
       <DialogTrigger asChild>
         {trigger}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
+      <DialogContent className="sm:max-w-[500px] p-0 gap-0">
+        <DialogHeader className='border-b bg-accent py-4'>
           <DialogTitle className='text-4xl text-center'>{title}</DialogTitle>
           {byline && (<DialogDescription className='text-center'>{byline} </DialogDescription>)}
         </DialogHeader>
-        <div className="grid gap-4 py-4" >
-          <div className="grid grid-cols-4 items-center gap-4" key='foo'>
-            <Label htmlFor="email" className="text-right">
-              email
-            </Label>
-            <Input id="email" value="" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4" key='foo2'>
-            <Label htmlFor="phone" className="text-right">
-              phone
-            </Label>
-            <Input id="phone" value="" className="col-span-3" />
+        <div className='p-8 border-2 rounded-e-lg flex flex-col justify-start items-center'>
+          <ContactForm onSubmit={onSubmit} enclosure={submitEnclosure}/>
+          <div className='typography dark:typography-invert text-xs mt-4' >
+            <Disclaimer />
           </div>
         </div>
-        <DialogFooter className=''>
-          <Button onClick={() => { console.log("Modal Submitted")}} size='lg'>Submit</Button>
-          <p className="text-[10px] text-center mt-4">By entering your phone number and submitting, you consent to receive text messages from Lux at the number provided. Message and data rates may apply. Message frequency varies. You can unsubscribe at any time by replying STOP. View our <a href="#" className=""><span>Privacy Policy</span></a> and <a href="#" className="">Terms &amp; conditions</a>.</p>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   )

@@ -2,13 +2,24 @@ import * as React from 'react'
 
 import type { ButtonVariants } from '@/primitives/button'
 
-interface DialogProps {
+type SubmitServerAction = (data: any, enclosure?: any) => Promise<void>
+interface LinkModalProps {
   open: boolean
   onOpenChange: (b: boolean) => void
   trigger: React.ReactNode
   title: string
   byline?: string
-  //onSubmit: (data: any) => void
+  onSubmit: SubmitServerAction
+  submitEnclosure?: any
+}
+
+interface LinkModalDef {
+  Comp: React.ComponentType<LinkModalProps>
+  title: string
+  props?: any
+  byline?: string
+  action?: SubmitServerAction
+  actionEnclusure?: any
 }
 
 interface LinkItemDef {
@@ -22,18 +33,16 @@ interface LinkItemDef {
   variant?: ButtonVariants
   icon?: React.ReactNode
 
-    // If Modal is not also supplied, this component is rendered. Otherwise...
+    // If 'modal' is not provided, 'component' is simply rendered. Otherwise...
   component?: React.ReactNode 
-    // ... if Modal is supplied, the component is rendered as the trigger for the Modal.
-    // Must supply component if Modal is supplied.
-  Modal?: React.ComponentType<DialogProps>
-  modalProps?: any
-  modalTitle?: string
-  modalByline?: string
-  //modalSubmit?: (data: any) => void
+    // ... if 'modal' is provided, 'component' is rendered as its trigger.
+    // 'component' is required if 'modal is provided.
+  modal?: LinkModalDef
 }
 
 export {
   type LinkItemDef as default,
-  type DialogProps,
+  type LinkModalDef,
+  type LinkModalProps,
+  type SubmitServerAction
 }

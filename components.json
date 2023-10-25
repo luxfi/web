@@ -8,6 +8,7 @@
     "cssVariables": true 
   },
   "rsc": true,
+  "tsx": true,
   "aliases": {
     "utils": "@/util",
     "components": "@/primitives"

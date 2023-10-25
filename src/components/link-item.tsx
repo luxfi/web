@@ -17,34 +17,39 @@ const LinkItem: React.FC<{
 } ) => {
 
     // See notes in content/types/link-item-def
-  const { component } = item
+  const { component, modal } = item
 
   if (component) {
 
-    const { 
-      Modal, 
-      modalTitle: title,
-      modalByline: byline,        
-      modalProps,
-    } = item
+    if (modal) {
 
-    if (Modal) {
+      const {
+        Comp,
+        title,
+        props,
+        byline,
+        action,
+        actionEnclusure
+      } = modal
+
       return (
         <DialogVideoController 
           renderDialog={({open, onOpenChange}) => (
-            <Modal 
+            <Comp 
               open={open} 
               onOpenChange={onOpenChange} 
               trigger={component}
               title={title}
               byline={byline} 
-              {...modalProps}
-              //onSubmit={onSubmit}
+              onSubmit={action}
+              submitEnclosure={actionEnclusure}
+              {...props}
             />
           )} 
         />
       )
     }
+      // if no modal, then just render the component
     return component as React.ReactElement
   }
 

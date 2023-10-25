@@ -44,7 +44,15 @@ module.exports = {
             },
             p: {
               margin: 0,
+            },
+            a: {
+              textDecoration: 'none',
+              '&:hover': {
+                opacity: 0.6,
+                textDecoration: 'underline',
+              }
             }
+
           }
         }
       })
