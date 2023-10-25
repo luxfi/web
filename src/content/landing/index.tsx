@@ -37,7 +37,7 @@ export default {
         items: [
           {
             title: "Learn More",
-            href: "/",
+            href: "/silver",
             variant: 'outline'
           },
           {
@@ -69,7 +69,7 @@ export default {
         items: [
           {
             title: "Learn More",
-            href: "/",
+            href: "/gold",
             variant: 'outline'
           },
           {
