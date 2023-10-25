@@ -3,7 +3,7 @@ import React from 'react'
 import Logo from '@/components/logo'
 import { footer } from '@/content'
 
-import CTAComponent from './cta-comp'
+import CTABlockComponent from './block/cta-block'
 
 const Footer: React.FC = () => (
   <footer className='border-t mt-20'> 
@@ -17,7 +17,7 @@ const Footer: React.FC = () => (
       </div>
       {footer.map((ctaBlock, index) => (
       <div className='flex flex-col gap-4 justify-start items-start'>
-        <CTAComponent cta={ctaBlock} key={index + 1}/> 
+        <CTABlockComponent cta={ctaBlock} key={index + 1}/> 
       </div>
     ))}
     </div>

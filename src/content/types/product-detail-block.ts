@@ -6,10 +6,9 @@ import type AccordianBlock from './accordian-block'
 interface ProductDetailBlock extends Block {
   blockType: 'product-detail'
   title: string
-  desc?: ElementBlock
+  desc?: ElementBlock | string
   media: MediaBlock
   accordian: AccordianBlock
-
 }
 
 export {

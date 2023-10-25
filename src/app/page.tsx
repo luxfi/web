@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import AssetBanner from '@/components/asset-banner'
+import AssetBanner from '@/components/block/asset-banner-block'
 import Footer from '@/components/footer'
 
 import { landing } from '@/content'

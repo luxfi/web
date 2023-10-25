@@ -3,10 +3,10 @@ import React  from 'react'
 
 import type { AssetBannerBlock } from '@/content/types'
 
-import MediaComponent from './media-comp'
-import CTAComponent from './cta-comp'
+import MediaBlockComponent from './media-block'
+import CTABlockComponent from './cta-block'
 
-const AssetBanner: React.FC<{
+const AssetBannerBlockComponent: React.FC<{
   asset: AssetBannerBlock
 }> = ({
   asset
@@ -21,15 +21,15 @@ const AssetBanner: React.FC<{
     )}
     {asset.contentBefore}
     {asset.media && (
-      <MediaComponent media={asset.media} />
+      <MediaBlockComponent media={asset.media} />
     )}
     {asset.contentAfter}
     {asset.ctas && (
       <div className='flex flex-row gap-6 justify-between'>
-        <CTAComponent cta={asset.ctas} />
+        <CTABlockComponent cta={asset.ctas} />
       </div>  
     )}
 </>
 )
 
-export default AssetBanner
+export default AssetBannerBlockComponent

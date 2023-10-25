@@ -1,8 +1,8 @@
 import React from 'react'
 import { type MediaBlock } from '@/content/types'
-import VideoPlayer from './video-player'
+import VideoPlayer from '@/primitives/video-player'
 
-const MediaComponent: React.FC<{
+const MediaBlockComponent: React.FC<{
   media: MediaBlock
 }> = ({
   media
@@ -14,5 +14,5 @@ const MediaComponent: React.FC<{
   )
 )
 
-export default MediaComponent
+export default MediaBlockComponent
 

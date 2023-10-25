@@ -6,13 +6,8 @@ import Button from '@/primitives/button'
 import BottomMDX from './landing-bottom.mdx'
 
 import saveToListAction from '@/server-actions/save-to-waitlist'
-
-const videoProps = {
-  autoPlay: true, 
-  loop: true, 
-  muted: true, 
-  playsInline: true
-}
+import { defaultVideoProps as videoProps } from '@/util'
+import silverMedia from '@/content/products/silver/video'
 
 export default {
   assets: [
@@ -20,18 +15,7 @@ export default {
       blockType: 'asset-banner',
       title: 'LUX SILVER',
       byline: 'The Silver Rush is Here.',
-      media: {
-        blockType: 'video',
-        videoProps, 
-        sources: ['/assets/video/luxsilver.mp4'],
-          // From manually looking at aspect ratio
-          // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-        dim: {
-            // .61 aspect
-          width: 200,
-          height: 327
-        }
-      },
+      media: silverMedia,
       ctas: {
         blockType: 'cta',
         items: [
