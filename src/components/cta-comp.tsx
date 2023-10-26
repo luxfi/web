@@ -5,9 +5,11 @@ import { type CTABlock } from '@/content/types'
 import LinkItem from '@/components/link-item'
 
 const CTAComponent: React.FC<{
-  cta: CTABlock
+  cta: CTABlock,
+  itemClassName?: string
 }> = ({
-  cta : { items } 
+  cta : { items },
+  itemClassName='' 
 }) => (
   <>
   {items?.map((item, index) => (
@@ -15,6 +17,7 @@ const CTAComponent: React.FC<{
       item={item}
       key={index}
       size='lg'
+      className={itemClassName}
     />
   ))}
   </>

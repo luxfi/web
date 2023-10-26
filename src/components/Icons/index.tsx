@@ -2,6 +2,7 @@ import {
   type LucideProps,
   Moon,
   SunMedium,
+  Menu,
   type XIcon as LucideIcon,
 } from 'lucide-react'
 
@@ -22,5 +23,6 @@ export default {
   sun: SunMedium,
   moon: Moon,
   logo: LuxLogo,
+  burger: Menu,
   gitHub: GitHub
 }

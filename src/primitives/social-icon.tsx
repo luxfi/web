@@ -8,18 +8,18 @@ const SocialIcon: React.FC<{
     // one of these: https://github.com/couetilc/react-social-icons/tree/main/db
   network: string
   size: number
-  extraClasses?: string
+  className?: string
 }> = ({
   network,
   size,
-  extraClasses = ''
+  className = ''
 }) => (
   <BaseSocialIcon 
     network={network}
     as='div' 
       // This is set up so the enclosing element sets the color.
       // For example, something like 'color-foreground hover:color-muted-foreground' 
-    className={'color-inherit ' + extraClasses}
+    className={'color-inherit ' + className}
     bgColor='transparent' 
     fgColor='currentColor'
     style={{height: size, width: size}} 

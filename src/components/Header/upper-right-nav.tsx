@@ -6,9 +6,13 @@ import React from 'react'
 
 import ThemeToggle from "./theme-toggle"
 
-const UpperRightNav: React.FC = () => (
+const UpperRightNav: React.FC<{
+  className?: string
+}> = ({
+  className=''
+}) => (
 
-  <nav className="flex items-center space-x-1">
+  <nav className={'flex items-center space-x-1 ' + className}>
     { /*
     <Link
       href={siteContent.links.twitter}

@@ -9,11 +9,11 @@ import DialogVideoController from '@/primitives/dialog-video-controller'
 const LinkItem: React.FC<{
   item: LinkItemDef,
   size?: ButtonSizes 
-  extraClasses?: string
+  className?: string
 }> = ({ 
   item,
   size = 'lg',
-  extraClasses = ''
+  className = ''
 } ) => {
 
     // See notes in content/types/link-item-def
@@ -58,6 +58,7 @@ const LinkItem: React.FC<{
     external,
     newTab,
     variant,
+    size: defSize, 
     title
   } = item
 
@@ -76,9 +77,10 @@ const LinkItem: React.FC<{
     <Link
       className={cn(buttonVariants({ 
           variant: variant ?  variant : 'link', 
-          size: (!variant || variant.includes('ink'))  ? 'link' : size
+          size: (!variant || variant.includes('ink'))  ? 'link' 
+            : (size ? size : defSize)
         }), 
-        extraClasses 
+        className 
           + (href ? '' : ' pointer-events-none')
           + (item.icon ? ' color-foreground hover:color-muted-foreground' : '')
       )}

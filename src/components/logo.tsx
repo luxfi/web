@@ -6,28 +6,42 @@ import Icons from '@/components/Icons'
 
 const Logo: React.FC<{
   size: 'sm' | 'md' | 'lg' 
+  logoOnly?: boolean
+  href?: string
+  className?: string
 }> = ({
-  size
+  size,
+  href='/',
+  className='',
+  logoOnly=false
 }) => {
   let classes: any = {}
+  const toAdd = (logoOnly) ? {
+    span: ' hidden',
+    icon: ' mr-r'
+  } : {
+    span: '',
+    icon: ''
+  }
   if (size === 'lg') {
-    classes.icon = 'h-10 w-10'
-    classes.span = 'text-3xl'
+    classes.icon = 'h-10 w-10 mr-4 color-inherit' + toAdd.icon
+    classes.span = 'text-3xl' + toAdd.span
   }
   else if (size === 'md') {
-    classes.icon = 'h-8 w-8'
-    classes.span = 'text-2xl'
+    classes.icon = 'h-7 w-7 mr-2 color-inherit' + toAdd.icon
+    classes.span = 'text-xl' + toAdd.span
   }
   else {
-    classes.icon = 'h-6 w-6'
-    classes.span = 'text-xl'
+    classes.icon = 'h-6 w-6 mr-2 color-inherit' + toAdd.icon
+    classes.span = 'text-lg' + toAdd.span
   }
 
-  const spanClasses = 'inline-block font-bold text-primary font-headingWider ' + classes.span 
+  const spanClasses = 'inline-block font-bold text-accent-foreground font-headingWider ' + classes.span 
+  const linkClasses = 'flex items-center text-accent-foreground hover:text-foreground ' + className
 
   return (
-    <Link href="/" className='flex items-center space-x-2 text-accent-foreground hover:text-foreground'>
-      <Icons.logo className={classes.icon + ' color-inherit'} />
+    <Link href={href} className={linkClasses} >
+      <Icons.logo className={classes.icon} />
       <span className={spanClasses + ' text-inherit'}>LUX</span>
     </Link>
   )

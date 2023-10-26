@@ -4,11 +4,13 @@ import VideoPlayer from './video-player'
 
 const MediaComponent: React.FC<{
   media: MediaBlock
+  className?: string
 }> = ({
-  media
+  media,
+  className
 }) => (
   media.blockType === 'video' ? (
-    <VideoPlayer sources={media.sources} {...media.dim} {...media.videoProps} />
+    <VideoPlayer className={className} sources={media.sources} {...media.dim} {...media.videoProps} />
   ) : (
     <p>image to do</p>
   )

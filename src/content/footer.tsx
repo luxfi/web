@@ -161,7 +161,7 @@ export default [
         variant: 'emLinkBright',
       },
       {
-        title: 'Terms and Condistions',
+        title: 'Terms and Conditions',
         href: '/assets/pdf/LUX-NFT-Terms-and-Conditions.pdf',
         newTab: true,
       },

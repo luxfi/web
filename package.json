@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
+    "cn": "rm -r ./.next",
     "tc": "tsc --noEmit"
   },
   "dependencies": {

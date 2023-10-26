@@ -1,3 +1,5 @@
+const typoPluginExtends = require('./src/style/typo-plugin-extends')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [],
@@ -6,56 +8,7 @@ module.exports = {
   theme: {
 
     extend: {
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            maxWidth: 'initial',
-            h1: {
-              fontSize: theme('fontSize[8xl]'),
-              fontFamily: theme('fontFamily.heading'),
-              margin: 0,
-              fontWeight: 800
-            },
-            h2: {
-              fontSize: theme('fontSize[6xl]'),  
-              fontFamily: theme('fontFamily.heading'),
-              margin: 0,
-              fontWeight: 700
-            },
-            h3: {
-              fontSize: theme('fontSize[5xl]'),  
-              margin: 0,
-              fontFamily: theme('fontFamily.heading')
-            },
-            h4: {
-              fontSize: theme('fontSize[4xl]'),  
-              margin: 0,
-              fontFamily: theme('fontFamily.inter')
-            },
-            h5: {
-              fontSize: theme('fontSize[2xl]'),  
-              margin: 0,
-              fontFamily: theme('fontFamily.inter')
-            },
-            h6: {
-              fontSize: theme('fontSize.xl'),  
-              margin: 0,
-              fontFamily: theme('fontFamily.inter')
-            },
-            p: {
-              margin: 0,
-            },
-            a: {
-              textDecoration: 'none',
-              '&:hover': {
-                opacity: 0.6,
-                textDecoration: 'underline',
-              }
-            }
-
-          }
-        }
-      })
+      typography: typoPluginExtends,
     },
 
     accentColor: ({ theme }) => ({
@@ -891,6 +844,7 @@ module.exports = {
       150: '1.5',
     },
     screens: {
+      xs: '400px',
       sm: '640px',
       md: '768px',
       lg: '1024px',

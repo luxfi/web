@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
   <html lang="en" suppressHydrationWarning>
     <head />
-    <body className={cn("min-h-screen bg-background font-sans antialiased", inter.variable )}>
+    <body className={cn("min-h-screen bg-background font-sans antialiased overflow-x-hidden", inter.variable )}>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
         <div className="relative flex min-h-screen flex-col">
           {children}

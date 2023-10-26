@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import type { ButtonVariants } from '@/primitives/button'
+import type { ButtonVariants, ButtonSizes } from '@/primitives/button'
 
 type SubmitServerAction = (data: any, enclosure?: any) => Promise<void>
 interface LinkModalProps {
@@ -31,6 +31,7 @@ interface LinkItemDef {
   newTab?: boolean  
   disabled?: boolean
   variant?: ButtonVariants
+  size?: ButtonSizes
   icon?: React.ReactNode
 
     // If 'modal' is not provided, 'component' is simply rendered. Otherwise...

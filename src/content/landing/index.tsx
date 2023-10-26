@@ -128,8 +128,8 @@ export default {
       blockType: 'asset-banner',
       title: 'LUX VALIDATOR',
       contentBefore: (<>
-        <p className='text-lg'>FREE priority access to LUX events and NFT drops.</p>
-        <p className='text-base'>Get priority access to the launch.</p>
+        <h6>FREE priority access to LUX events and NFT drops.</h6>
+        <p>Get priority access to the launch.</p>
       </>),
       media: {
         blockType: 'video',

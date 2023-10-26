@@ -1,6 +1,6 @@
 import { LinkItemDef } from './types'
 
-export default [
+const nav = [
   {
     title: "Credit",
     href: "https://lux.credit",
@@ -29,12 +29,24 @@ export default [
     external: true,
     variant: 'emLink'
   },
+] as LinkItemDef[]
+
+const buttons = [
   {
     title: "Enter App",
     href: "https://app.lux.market",
     newTab: false,
     external: true,
-    variant: 'primary'
+    variant: 'primary',
   },
 ] as LinkItemDef[]
 
+const all = [...nav, ...buttons]
+
+const elements = {
+  all,
+  nav,
+  buttons
+}
+
+export default elements

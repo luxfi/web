@@ -5,6 +5,7 @@ import type { AssetBannerBlock } from '@/content/types'
 
 import MediaComponent from './media-comp'
 import CTAComponent from './cta-comp'
+import ApplyTypography from '@/primitives/apply-typography'
 
 const AssetBanner: React.FC<{
   asset: AssetBannerBlock
@@ -19,13 +20,21 @@ const AssetBanner: React.FC<{
         {asset.byline}
       </h6>
     )}
-    {asset.contentBefore}
-    {asset.media && (
-      <MediaComponent media={asset.media} />
+    {asset.contentBefore && (
+      <ApplyTypography className='text-center'>
+        {asset.contentBefore}
+      </ApplyTypography>
     )}
-    {asset.contentAfter}
+    {asset.media && (
+      <MediaComponent className='self-center' media={asset.media} />
+    )}
+    {asset.contentAfter && (
+      <ApplyTypography className='text-center'>
+        {asset.contentAfter}
+      </ApplyTypography>
+    )}
     {asset.ctas && (
-      <div className='flex flex-row gap-6 justify-between'>
+      <div className='flex flex-col gap-2 items-stretch sm:flex-row sm:gap-6 sm:justify-center'>
         <CTAComponent cta={asset.ctas} />
       </div>  
     )}

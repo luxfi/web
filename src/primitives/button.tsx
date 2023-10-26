@@ -21,15 +21,15 @@ const variant = {
 
 const size = {
   link: '',
-  sm: "h-9 px-3 rounded-md",
-  default: "h-10 py-2 px-4",
-  lg: "h-10 px-8 rounded-lg min-w-[260px]",
+  sm: "h-9 px-3 rounded-md text-xs ",
+  default: "h-10 py-2 px-4 text-sm ",
+  lg: "h-10 px-8 text-base rounded-lg min-w-[260px]",
   icon: "h-10 w-10",
 }
 
 
 const buttonVariants = cva(
-  "flex items-center justify-center rounded-md text-sm font-medium transition-colors " +
+  "flex items-center justify-center rounded-md font-medium transition-colors " +
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 " +
   "disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
