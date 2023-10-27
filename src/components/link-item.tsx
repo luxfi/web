@@ -16,7 +16,7 @@ const LinkItem: React.FC<{
   item,
   size = 'lg',
   onClick,
-  variant = 'link',
+  variant,
   className = ''
 } ) => {
 

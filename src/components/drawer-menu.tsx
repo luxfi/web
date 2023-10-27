@@ -29,7 +29,7 @@ const DrawerMenu: React.FC<{
       <SheetTrigger >
         {trigger}
       </SheetTrigger>
-      <SheetContent side="right" className={className}>
+      <SheetContent side="right" className={className} onClick={onAction}>
         <Contents onAction={onAction} {...contentsProps} />
       </SheetContent>
     </Sheet>

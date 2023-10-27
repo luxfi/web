@@ -15,7 +15,7 @@ const variant = {
   link: commonLinkClasses,
   emLink: commonLinkClasses + ' font-heading not-typography',
   linkCurrent: commonLinkClasses + ' text-accent-foreground pointer-events-none',
-  emLinkCurrent: commonLinkClasses + ' font-heading not-typography text-accent-foreground pointer-events-none',
+  emLinkCurrent: commonLinkClasses + ' font-heading not-typography text-accent-foreground',
   emLinkBright: commonLinkClasses + ' font-heading not-typography text-accent-foreground hover:text-foreground',
 }
 

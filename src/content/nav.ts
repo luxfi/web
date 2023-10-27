@@ -15,6 +15,7 @@ const nav = [
   },
   {
     title: "Market",
+    href: '/',
     variant: 'emLinkCurrent'
   },
   {

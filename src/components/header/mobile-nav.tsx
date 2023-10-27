@@ -33,7 +33,7 @@ const MobileNav: React.FC<{
             className={itemClassName}
             variant={itemVariant}
             onClick = {() => {
-              router.push(item.href!.toString())
+              //router.push(item.href!.toString())
               onAction()
             }} 
           />
