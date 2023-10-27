@@ -28,14 +28,14 @@ export async function generateMetadata({ params}: Props) {
 
 const ProductPage = ({ params }: Props) => {
 
-  const prod = products[params.slug] as ProductDetailBlock
-  if (!prod) {
+  const product = products[params.slug] as ProductDetailBlock
+  if (!product) {
     return null
   }
 
   return (<>
     <div className='flex flex-col justify-center items-center pb-6 pt-4'>
-      <ProductDetailBlockComponent product={prod}/>
+      <ProductDetailBlockComponent product={product}/>
     </div>
     <Footer />
   </>)
