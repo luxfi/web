@@ -6,7 +6,7 @@ const typoClasses =
   'md:typography-md dark:md:typography-invert-md md:gap-4' +
   'lg:typography-lg dark:lg:typography-invert-lg lg:gap-5 '
 
-const ApplyTypo: React.FC<
+const ApplyTypography: React.FC<
   PropsWithChildren & {
     className?: string,
     asTag?: 'div' | 'section' | 'nav' | 'main' | 'article'
@@ -23,4 +23,4 @@ const ApplyTypo: React.FC<
     </Tag>
   )
 }
-export default ApplyTypo
+export default ApplyTypography
