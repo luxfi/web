@@ -4,7 +4,7 @@ import React from 'react'
 import { type CTABlock } from '@/content/types'
 import LinkItem from '@/components/link-item'
 
-const CTAComponent: React.FC<{
+const CtaBlockComponent: React.FC<{
   cta: CTABlock,
   itemClassName?: string
 }> = ({
@@ -23,4 +23,4 @@ const CTAComponent: React.FC<{
   </>
 )
 
-export default CTAComponent
+export default CtaBlockComponent

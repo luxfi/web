@@ -1,10 +1,23 @@
 import nav from './nav'
 import landing from './landing'
 import footer from './footer'
+import silver from './products/silver'
+import gold from './products/silver'
+import coin from './products/silver'
+import credit from './products/silver'
+import validator from './products/silver'
 
+const products = {
+  silver,
+  gold,
+  coin,
+  credit,
+  validator
+}
 
 export {
   nav,
   landing,
-  footer
+  footer,
+  products
 }

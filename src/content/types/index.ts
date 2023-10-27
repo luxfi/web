@@ -1,3 +1,4 @@
+import type AccordianBlock from './accordian-block'
 import type Block from './block'
 import type LinkItemDef from './link-item-def'
 import type MediaBlock from './media-block'
@@ -8,6 +9,7 @@ import type AssetBannerBlock from './asset-banner-block'
 
 
 export { 
+  type AccordianBlock,
   type Block, 
   type LinkItemDef,
   type MediaBlock,

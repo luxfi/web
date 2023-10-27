@@ -2,12 +2,12 @@
 import React  from 'react'
 
 import type { AssetBannerBlock } from '@/content/types'
-
-import MediaComponent from './media-comp'
-import CTAComponent from './cta-comp'
 import ApplyTypography from '@/primitives/apply-typography'
 
-const AssetBanner: React.FC<{
+import MediaBlockComponent from './media-block'
+import CTABlockComponent from './cta-block'
+
+const AssetBannerBlockComponent: React.FC<{
   asset: AssetBannerBlock
 }> = ({
   asset
@@ -26,7 +26,7 @@ const AssetBanner: React.FC<{
       </ApplyTypography>
     )}
     {asset.media && (
-      <MediaComponent className='self-center' media={asset.media} />
+      <MediaBlockComponent className='self-center' media={asset.media} />
     )}
     {asset.contentAfter && (
       <ApplyTypography className='text-center'>
@@ -35,10 +35,10 @@ const AssetBanner: React.FC<{
     )}
     {asset.ctas && (
       <div className='flex flex-col gap-2 items-stretch sm:flex-row sm:gap-6 sm:justify-center'>
-        <CTAComponent cta={asset.ctas} />
+        <CTABlockComponent cta={asset.ctas} />
       </div>  
     )}
 </>
 )
 
-export default AssetBanner
+export default AssetBannerBlockComponent

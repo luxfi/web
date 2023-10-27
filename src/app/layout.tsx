@@ -6,6 +6,8 @@ import ThemeProvider from "@/context-providers/theme-provider"
 import { cn } from "@/util"
 import { inter } from "@/style/fonts"
 
+import Header from "@/components/Header"
+
 import "@/style/typo.css"
 import "@/style/globals.css"
 
@@ -13,7 +15,7 @@ import "@/style/globals.css"
 export const metadata: Metadata = {
   title: {
     default: "Lux.market",
-    template: `%s - Lux.market`,
+    template: `Lux.market - %s`,
   },
   description: "Your destination for all cool things.",
   themeColor: [
@@ -29,10 +31,14 @@ export const metadata: Metadata = {
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
   <html lang="en" suppressHydrationWarning>
-    <head />
-    <body className={cn("min-h-screen bg-background font-sans antialiased overflow-x-hidden", inter.variable )}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+    <head >
+      {/* https://stackoverflow.com/a/75716588/11645689 */}
+      <base target="_blank" />
+    </head>
+    <body className={cn('min-h-screen bg-background font-sans antialiased overflow-x-hidden', inter.variable )}>
+      <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
         <div className="relative flex min-h-screen flex-col">
+          <Header />
           {children}
         </div>
         <TailwindIndicator />
