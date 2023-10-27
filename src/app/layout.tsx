@@ -6,7 +6,7 @@ import ThemeProvider from "@/context-providers/theme-provider"
 import { cn } from "@/util"
 import { inter } from "@/style/fonts"
 
-import Header from "@/components/Header"
+import Header from "@/components/header"
 
 import "@/style/typo.css"
 import "@/style/globals.css"

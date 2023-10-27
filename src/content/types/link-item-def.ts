@@ -42,7 +42,7 @@ interface LinkItemDef {
 }
 
 export {
-  type LinkItemDef as default,
+  type LinkItemDef,
   type LinkModalDef,
   type LinkModalProps,
   type SubmitServerAction

@@ -1,6 +1,6 @@
 import React from 'react'
 import { AssetBannerBlock, ElementBlock } from '../types'
-import ContactDialog from '@/components/ContactDialog'
+import ContactDialog from '@/components/contact-dialog'
 import Button from '@/primitives/button'
 
 import BottomMDX from './landing-bottom.mdx'

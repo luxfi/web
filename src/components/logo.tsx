@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import Icons from '@/components/Icons'
+import Icons from '@/components/icons'
 
 const Logo: React.FC<{
   size: 'sm' | 'md' | 'lg' 

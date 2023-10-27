@@ -1,18 +1,22 @@
 import React from "react"
 import Link from "next/link"
 
-import type LinkItemDef  from '@/content/types/link-item-def'
+import type { LinkItemDef }  from '@/content/types/link-item-def'
 import { cn } from "@/util"
-import { buttonVariants, type ButtonSizes } from '@/primitives/button'
+import { buttonVariants, type ButtonSizes, type ButtonVariants } from '@/primitives/button'
 import DialogVideoController from '@/primitives/dialog-video-controller'
 
 const LinkItem: React.FC<{
   item: LinkItemDef,
+  variant? : ButtonVariants
   size?: ButtonSizes 
+  onClick?: () => void
   className?: string
 }> = ({ 
   item,
   size = 'lg',
+  onClick,
+  variant = 'link',
   className = ''
 } ) => {
 
@@ -57,7 +61,7 @@ const LinkItem: React.FC<{
     href,
     external,
     newTab,
-    variant,
+    variant: defVariant,
     size: defSize, 
     title
   } = item
@@ -71,13 +75,14 @@ const LinkItem: React.FC<{
     } : {
       target: (newTab !== undefined && (newTab === true)) ? '_blank' : '_self' 
     }),
+    ...(onClick ? { onClick } : {})
   }
 
   return (
     <Link
       className={cn(buttonVariants({ 
-          variant: variant ?  variant : 'link', 
-          size: (!variant || variant.includes('ink'))  ? 'link' 
+          variant: variant ?  variant : (defVariant ? defVariant : 'link'), 
+          size: (!defVariant || defVariant.includes('ink') || variant?.includes('ink'))  ? 'link' 
             : (size ? size : defSize)
         }), 
         className 

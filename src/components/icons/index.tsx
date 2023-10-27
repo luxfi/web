@@ -8,7 +8,7 @@ import {
 
 export { type LucideIcon as Icon } 
 
-import LuxLogo from './LUXLogo'
+import LuxLogo from './lux-logo'
 
 const GitHub: React.FC<LucideProps> = (props: LucideProps) => (
   <svg viewBox="0 0 438.549 438.549" {...props}>
