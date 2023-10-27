@@ -42,10 +42,37 @@ export default {
   blocks: [
     {
       blockType: 'heading',
+      heading: 'Editions'
+    } as C.HeadingBlock,
+    {
+      blockType: 'card',
+      cardType: 'mint',
+      title: 'NEXT MINT',
+      content: <>
+        <p>Available: 10,000,1000 oz</p>
+        <p>Price: $20 / oz</p>
+        <p>Spot price:: ~$25 / oz</p>
+      </>,
+      media,
+    } as C.CardBlock,
+    {
+      blockType: 'cta',
+      items: [{
+        title: 'Buy Now',
+        href: '/', // TOOD
+        variant: 'primary'
+      }]
+    } as C.CTABlock,
+    {
+      blockType: 'space'
+    },
+    {
+      blockType: 'heading',
       heading: 'Lux Silver News'
     } as C.HeadingBlock,
     {
       blockType: 'card',
+      cardType: 'news',
       content: <YahooFinanceCard />,
       link: {
         title: 'View on Yahoo Finance',
@@ -62,6 +89,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
+      cardType: 'news',
       content: <SilverStockInvestorCard />,
       link: {
         title: 'Download PDF',
