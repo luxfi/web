@@ -5,7 +5,7 @@ interface AccordianBlock extends Block {
   blockType: 'accordian'
   items: {
     trigger: string
-    content: ElementBlock | string
+    content: React.ReactNode | JSX.Element | string
   }[]
 }
 

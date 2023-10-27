@@ -2,9 +2,13 @@ export default (theme) => ({
   DEFAULT: {
     css: {
       maxWidth: 'initial',
+      
       p: {
         margin: 0,
-        alignSelf: 'flex-start'
+        alignSelf: 'flex-start',
+        fontSize: '1.1rem',
+        lineHeight: 1.4,
+        fontWeight: 500
       },
       ol: {
         margin: 0,
@@ -22,7 +26,7 @@ export default (theme) => ({
         }
       },
       h1: {
-        fontSize: theme('fontSize[2xl]'),
+        fontSize: theme('fontSize[3xl]'),
         fontFamily: theme('fontFamily.heading'),
         margin: 0,
         fontWeight: 800,

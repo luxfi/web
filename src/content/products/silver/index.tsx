@@ -1,6 +1,10 @@
-import type ProductDetailBlock from '@/content/types/product-detail-block'
+import type * as C from '@/content/types'
+
 import media from './video'
+
 import LuxStandardMDX from './accordian/lux-standard-guar-backing.mdx'
+import YahooFinanceCard from './yahoo-finance-card.mdx'
+import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
 export default {
   blockType: 'product-detail',
@@ -19,5 +23,51 @@ export default {
         content: <LuxStandardMDX />
       },
     ]
-  }
-} as ProductDetailBlock
+  },
+  price: {
+    heading: 'Price',
+    priceCard: {
+      blockType: 'card',
+      title: 'Lux Silver Price / Oz.',
+      content: <h3>USD 20</h3>
+    },
+    msCard: {
+      blockType: 'special',
+      typeId: 'market-spot',
+      options: {
+        asset: 'silver'
+      }
+    }
+  },
+  blocks: [
+    {
+      blockType: 'heading',
+      heading: 'Lux Silver News'
+    } as C.HeadingBlock,
+    {
+      blockType: 'card',
+      content: <YahooFinanceCard />,
+      link: {
+        title: 'View on Yahoo Finance',
+        external: true,
+        href: 'https://finance.yahoo.com/news/viscount-mining-lux-partners-ltd-114500431.html'
+      }
+    } as C.CardBlock,
+    {
+      blockType: 'space'
+    },
+    {
+      blockType: 'heading',
+      heading: 'Silver Market News'
+    } as C.HeadingBlock,
+    {
+      blockType: 'card',
+      content: <SilverStockInvestorCard />,
+      link: {
+        title: 'Download PDF',
+        href: '/assets/pdf/Silver-Stock-Investor.pdf'
+      }
+    } as C.CardBlock,
+
+  ] as C.Block[]
+} as C.ProductDetailBlock

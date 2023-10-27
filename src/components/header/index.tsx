@@ -13,7 +13,7 @@ import MobileNav from './mobile-nav'
 import UpperRightNav from "./upper-right-nav"
 
 const Header: React.FC = () => (
-  <header className="bg-background sticky top-0 z-40 border-b">
+  <header className="bg-background sticky top-0 z-100 border-b">
     <div className="hidden md:flex h-16 items-center justify-between px-2 lg:px-4 2xl:mx-auto max-w-screen-2xl">
       <Logo size='sm' className='hidden md:flex lg:hidden' key='one'/>
       <Logo size='lg' className='hidden lg:flex' key='two'/>
