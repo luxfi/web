@@ -8,6 +8,10 @@ import type ProductDetailBlock from '@/content/types/product-detail-block'
 import MediaBlockComponent from './media-block'
 import AccordianBlockComponent from './accordian-block'
 import { StandardCard } from './card-block'
+<<<<<<< HEAD
+import BlockRenderer from './block-renderer'
+=======
+>>>>>>> main
 
 const Spacer: React.FC = () => (
   <h3 className='invisible'>&nbsp;</h3>
@@ -20,8 +24,8 @@ const ProductDetailBlockComponent: React.FC<{
   product: p
 }) => (
   <>
-  <div className='max-w-[1100px] flex flex-col justify-start items-center p-4 md:flex-row md:gap-8'>
-    <div className='mb-12 md:min-w-[400px] md:w-1/2'>
+  <div className='max-w-[1100px] flex flex-col justify-start items-stretch p-4 md:flex-row md:gap-8'>
+    <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-60'>
       <MediaBlockComponent media={p.media} className='mx-auto'/>
     </div>
     <div className='md:bg-scroll md:w-1/2 md:pt-20'>
@@ -39,6 +43,20 @@ const ProductDetailBlockComponent: React.FC<{
           <StandardCard card={p.price.priceCard} />
           <StandardCard card={p.price.msCard} />
         </div>
+        <Spacer />
+        {p.blocks.map((block, index) => {
+          if (block.blockType === 'cta') {
+            return (
+              <div className='grid grid-cols-1 gap-2 self-stretch md:self-center md:flex md:flex-row md:justify-center' key={index}>
+                <BlockRenderer block={block} />
+              </div>
+            )
+          }
+          else if (block.blockType === 'space') {
+            return <Spacer key={index}/>
+          } 
+          return <BlockRenderer block={block} key={index}/>
+        })}
       </ApplyTypography>
     </div>
   </div>
