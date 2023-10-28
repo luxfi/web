@@ -20,7 +20,7 @@ const ProductDetailBlockComponent: React.FC<{
   product: p
 }) => (
   <>
-  <div className='max-w-[1100px] relative flex flex-col justify-start items-center p-4 md:flex-row md:gap-8'>
+  <div className='max-w-[1100px] flex flex-col justify-start items-center p-4 md:flex-row md:gap-8'>
     <div className='mb-12 md:min-w-[400px] md:w-1/2'>
       <MediaBlockComponent media={p.media} className='mx-auto'/>
     </div>
@@ -35,7 +35,7 @@ const ProductDetailBlockComponent: React.FC<{
         <AccordianBlockComponent accordian={p.accordian} className='mt-10'/>
         <Spacer />
         <h3>{p.price.heading}</h3>
-        <div className='flex flex-col justify-start items-stretch md:grid md:grid-cols-2 gap-4 '>
+        <div className='flex flex-col justify-start items-stretch self-stretch md:self-center md:grid md:grid-cols-2 gap-4 '>
           <StandardCard card={p.price.priceCard} />
           <StandardCard card={p.price.msCard} />
         </div>
