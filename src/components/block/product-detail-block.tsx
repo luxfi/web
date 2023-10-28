@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 
 import ApplyTypography from '@/primitives/apply-typography'
@@ -11,18 +13,19 @@ const Spacer: React.FC = () => (
   <h3 className='invisible'>&nbsp;</h3>
 )
 
+/* md:absolute  md:left-0 md:top-px-50 md:z-10 md:bg-background   */
 const ProductDetailBlockComponent: React.FC<{
   product: ProductDetailBlock
 }> = ({
   product: p
 }) => (
   <>
-  <div className='relative flex flex-col justify-start items-center p-4 md:flex-row md:gap-8'>
-    <div className='mb-12 md:z-10 md:bg-background md:absolute md:min-w-[400px] md:h-screen md:left-0 md:top-px-50 md:w-1/3'>
-      <MediaBlockComponent media={p.media} />
+  <div className='max-w-[1100px] relative flex flex-col justify-start items-center p-4 md:flex-row md:gap-8'>
+    <div className='mb-12 md:min-w-[400px] md:w-1/2'>
+      <MediaBlockComponent media={p.media} className='mx-auto'/>
     </div>
-    <div className='md:bg-scroll'>
-      <ApplyTypography>
+    <div className='md:bg-scroll md:w-1/2 md:pt-20'>
+      <ApplyTypography className='flex flex-col items-start'>
         <h1 className='mb-8'>{p.title}</h1>
         {p.desc && (
           (typeof p.desc === 'string') ? (
@@ -32,8 +35,9 @@ const ProductDetailBlockComponent: React.FC<{
         <AccordianBlockComponent accordian={p.accordian} className='mt-10'/>
         <Spacer />
         <h3>{p.price.heading}</h3>
-        <div>
+        <div className='flex flex-col justify-start items-stretch md:grid md:grid-cols-2 gap-4 '>
           <StandardCard card={p.price.priceCard} />
+          <StandardCard card={p.price.msCard} />
         </div>
       </ApplyTypography>
     </div>

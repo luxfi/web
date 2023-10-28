@@ -6,6 +6,8 @@ import LuxStandardMDX from './accordian/lux-standard-guar-backing.mdx'
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
+import MiniChart from '@/components/mini-chart'
+
 export default {
   blockType: 'product-detail',
   title: 'LUX SILVER',
@@ -28,15 +30,22 @@ export default {
     heading: 'Price',
     priceCard: {
       blockType: 'card',
-      title: 'Lux Silver Price / Oz.',
-      content: <h3>USD 20</h3>,
+      title: 'Lux Silver Price / Oz',
+      content: <h5>USD 20</h5>,
     },
     msCard: {
-      blockType: 'special',
-      typeId: 'market-spot',
-      options: {
-        asset: 'silver'
-      }
+      blockType: 'card',
+      cardType: 'full-width',
+      title: 'Market Spot Price / Oz',
+      content: <MiniChart widgetProps={{
+        symbol: 'SILVER',
+        width: '100%',
+        height: '100%',
+        locale: 'en',
+        autosize: true,
+        colorTheme: 'dark',
+        dateRange: '1Y'
+      }}/>
     }
   },
   blocks: [

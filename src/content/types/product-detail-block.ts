@@ -14,7 +14,7 @@ interface ProductDetailBlock extends Block {
   price: {
     heading: string
     priceCard: CardBlock
-    msCard: SpecialBlock
+    msCard: CardBlock
   },
   blocks: Block[]
 }
