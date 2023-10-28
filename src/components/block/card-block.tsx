@@ -17,11 +17,13 @@ import CTABlockComponent from './cta-block'
 const StandardCard: React.FC<{
   card: CardBlock
   className?: string
+  contentClassName?: string
 }> = ({
   card,
-  className=''
+  className='',
+  contentClassName=''
 }) => (
-  <Card className={'flex flex-col ' + className}>
+  <Card className={'flex flex-col self-stretch ' + (card.cardType?.includes('bg-card') ? 'bg-accent ' : ' ')+ className}>
     {(card.title || card.byline) && (
       <CardHeader>
         {card.title && (<CardTitle className='not-typography text-center text-lg font-medium'>{card.title}</CardTitle>)}
@@ -29,7 +31,7 @@ const StandardCard: React.FC<{
       </CardHeader>      
     )}
     <CardContent className={
-      'flex flex-col justify-center items-center' + 
+      'flex flex-col justify-start items-center ' + contentClassName + 
       ((card.cardType === 'full-width') ? ' p-0' : '') + 
       ((!card.cta) ? ' grow' : '')
     }>
@@ -50,6 +52,46 @@ const StandardCard: React.FC<{
   </Card>  
 )
 
+const MediaLeftCard: React.FC<{
+  card: CardBlock
+  className?: string
+}> = ({
+  card,
+  className=''
+}) => (
+  <Card className={'flex flex-col self-stretch ' + className}>
+    {(card.title || card.byline) && (
+      <CardHeader>
+        {card.title && (<CardTitle className='not-typography text-center text-lg font-medium'>{card.title}</CardTitle>)}
+        {card.byline && (<CardDescription>{card.byline}</CardDescription>)}
+      </CardHeader>      
+    )}
+    <CardContent className='flex flex-row justify-center items-stretch p-0 grow'>
+      {card.media && (
+        <div className='px-6 py-3 box-content' style={{
+          width: card.media.dim.width
+        }}>
+          <MediaBlockComponent media={card.media} />
+        </div>
+      )}
+      {card.content && (
+        <div className='grow border-l p-6'>
+        {(typeof card.content === 'string') ? (
+
+          <p>{card.content}</p>
+        ) : card.content} 
+        </div>
+      )}
+    </CardContent>
+    {card.cta && (
+      <CardFooter className='grid grid-cols-1 gap-2 md:flex md:flex-row md:justify-center' >
+        <CTABlockComponent cta={card.cta} />
+      </CardFooter>
+    )}
+  </Card>  
+)
+
 export {
-  StandardCard  
+  StandardCard,
+  MediaLeftCard  
 }

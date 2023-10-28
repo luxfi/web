@@ -2,30 +2,19 @@ import type * as C from '@/content/types'
 
 import media from './video'
 
-import LuxStandardMDX from './accordian/lux-standard-guar-backing.mdx'
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
 import MiniChart from '@/components/mini-chart'
+
+import accordian from './accordian/accordian'
 
 export default {
   blockType: 'product-detail',
   title: 'LUX SILVER',
   desc: 'Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.',
   media,
-  accordian: {
-    blockType: 'accordian',
-    items: [
-      {
-        trigger: 'Direct Ownership of Silver',
-        content: "Each Lux Silver NFT is 1:1 backed by audit verified physical silver deposits under an exclusive agreement with publicly traded Viscount Mining Co. of Canada – see the Lux Standard for more."
-      },
-      {
-        trigger: 'Lux Standard Guaranteed Backing',
-        content: <LuxStandardMDX />
-      },
-    ]
-  },
+  accordian,
   price: {
     heading: 'Price',
     priceCard: {
@@ -55,14 +44,20 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'mint',
+      cardType: 'media-left',
       title: 'NEXT MINT',
       content: <>
         <p>Available: 10,000,1000 oz</p>
         <p>Price: $20 / oz</p>
         <p>Spot price:: ~$25 / oz</p>
       </>,
-      media,
+      media: {...media,
+        dim: {
+            // quarter size
+          width: 50,
+          height: 82
+        }
+      },
     } as C.CardBlock,
     {
       blockType: 'cta',
@@ -81,7 +76,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'news',
+      cardType: 'left-justify-content bg-card',
       content: <YahooFinanceCard />,
       link: {
         title: 'View on Yahoo Finance',
@@ -98,7 +93,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'news',
+      cardType: 'left-justify-content bg-card',
       content: <SilverStockInvestorCard />,
       link: {
         title: 'Download PDF',

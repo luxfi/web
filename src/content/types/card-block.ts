@@ -6,7 +6,7 @@ import type MediaBlock from './media-block'
 
 interface CardBlock extends Block {
   blockType: 'card'
-  cardType: string // 'mint', 'article', etc... Can be used to determine card layout
+  cardType?: string // 'mint', 'article', etc... Can be used to determine card layout
   title?: string
   byline?: string
   media?: MediaBlock

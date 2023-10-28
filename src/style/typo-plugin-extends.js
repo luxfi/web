@@ -1,30 +1,37 @@
+const commonTags = {
+  p: {
+    margin: 0,
+    alignSelf: 'flex-start',
+    fontSize: '1.1rem',
+    lineHeight: 1.4,
+    fontWeight: 500
+  },
+  ol: {
+    margin: 0,
+    alignSelf: 'flex-start'
+  },
+  ul: {
+    margin: 0,
+    alignSelf: 'flex-start'
+  },
+  a: {
+    textDecoration: 'none',
+    '&:hover': {
+      opacity: 0.6,
+      textDecoration: 'underline',
+    }
+  },
+  img: {
+    margin: 0
+  },
+}
+
+
 export default (theme) => ({
   DEFAULT: {
     css: {
       maxWidth: 'initial',
-      
-      p: {
-        margin: 0,
-        alignSelf: 'flex-start',
-        fontSize: '1.1rem',
-        lineHeight: 1.4,
-        fontWeight: 500
-      },
-      ol: {
-        margin: 0,
-        alignSelf: 'flex-start'
-      },
-      ul: {
-        margin: 0,
-        alignSelf: 'flex-start'
-      },
-      a: {
-        textDecoration: 'none',
-        '&:hover': {
-          opacity: 0.6,
-          textDecoration: 'underline',
-        }
-      },
+      ...commonTags,
       h1: {
         fontSize: theme('fontSize[3xl]'),
         fontFamily: theme('fontFamily.heading'),
@@ -72,6 +79,7 @@ export default (theme) => ({
   md: {
     css: {
       maxWidth: 'initial',
+      ...commonTags,
       h1: {
         fontSize: theme('fontSize[4xl]'),
         fontFamily: theme('fontFamily.heading'),
@@ -115,6 +123,7 @@ export default (theme) => ({
   lg: {
     css: {
       maxWidth: 'initial',
+      ...commonTags,
       h1: {
         fontSize: theme('fontSize[6xl]'),
         fontFamily: theme('fontFamily.heading'),
