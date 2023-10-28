@@ -8,10 +8,7 @@ import type ProductDetailBlock from '@/content/types/product-detail-block'
 import MediaBlockComponent from './media-block'
 import AccordianBlockComponent from './accordian-block'
 import { StandardCard } from './card-block'
-<<<<<<< HEAD
 import BlockRenderer from './block-renderer'
-=======
->>>>>>> main
 
 const Spacer: React.FC = () => (
   <h3 className='invisible'>&nbsp;</h3>
