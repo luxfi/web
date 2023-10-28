@@ -7,6 +7,7 @@ import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
 import MiniChart from '@/components/mini-chart'
 
+
 import accordian from './accordian/accordian'
 
 export default {
@@ -93,7 +94,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'left-justify-content bg-card',
+      cardType: 'news',
       content: <SilverStockInvestorCard />,
       link: {
         title: 'Download PDF',
