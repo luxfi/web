@@ -17,12 +17,16 @@ export default [
         variant: 'emLinkBright'
       },
       {
+        title: 'Lux Silver',
+        href: '/silver',
+      },
+      {
         title: 'Lux Gold',
         href: '/gold',
       },
       {
-        title: 'Lux Silver',
-        href: '/silver',
+        title: 'Lux Coin',
+        href: '/coin',
       },
       {
         title: 'Lux Credit',
@@ -32,14 +36,12 @@ export default [
         title: 'Lux Validator',
         href: '/validator',
       },
-      {
-        title: 'Lux Coin',
-        href: '/coin',
-      },
+      /*
       {
         title: 'Lux Pass',
         href: '/pass',
       },
+      */
     ] 
   },
   {
