@@ -11,7 +11,7 @@ import accordian from './accordian'
 export default {
   blockType: 'product-detail',
   title: 'LUX GOLD',
-  desc: 'Get unprecedented access to gold with 1:1 asset-backed Lux Gold NFTs, sovereign ownership of physical gold without management fees, and mine-direct discount pricing.',
+  desc: 'Experience unparalleled access to gold with 1:1 asset-backed Lux Gold NFTs, sovereign ownership of physical gold without management fees, and mine-direct discount pricing.',
   media,
   accordian,
   price: {
@@ -19,7 +19,7 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Gold Price / Oz',
-      content: <h5>USD 1950</h5>,
+      content: <h5>USD 2000</h5>,
     },
     msCard: {
       blockType: 'card',
@@ -39,16 +39,16 @@ export default {
   blocks: [
     {
       blockType: 'heading',
-      heading: 'NFT Drops'
+      heading: 'Editions'
     } as C.HeadingBlock,
     {
       blockType: 'card',
       cardType: 'media-left',
-      title: 'UPCOMING DROP',
+      title: 'NEXT MINT',
       content: <>
-        <p>Available: 10,000 oz</p>
-        <p>Price: $1950 / oz</p>
-        <p>Spot price:: ~$2005 / oz</p>
+        <p>Available: 1,000,100 oz</p>
+        <p>Price: $2000 / oz</p>
+        <p>Spot price:: ~$2050 / oz</p>
       </>,
       media: {...media,
         dim: {
@@ -66,39 +66,5 @@ export default {
         variant: 'primary'
       }]
     } as C.CTABlock,
-    {
-      blockType: 'space'
-    },
-    {
-      blockType: 'heading',
-      heading: 'Lux Gold News'
-    } as C.HeadingBlock,
-    {
-      blockType: 'card',
-      cardType: 'left-justify-content bg-card',
-      content: <YahooFinanceCard />,
-      link: {
-        title: 'View on Yahoo Finance',
-        external: true,
-        href: 'https://finance.yahoo.com/news/viscount-mining-lux-partners-ltd-114500431.html'
-      }
-    } as C.CardBlock,
-    {
-      blockType: 'space'
-    },
-    {
-      blockType: 'heading',
-      heading: 'Gold Market News'
-    } as C.HeadingBlock,
-    {
-      blockType: 'card',
-      cardType: 'news',
-      content: <SilverStockInvestorCard />,
-      link: {
-        title: 'Download PDF',
-        href: '/assets/pdf/Silver-Stock-Investor.pdf'
-      }
-    } as C.CardBlock,
-
   ] as C.Block[]
 } as C.ProductDetailBlock
