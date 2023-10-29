@@ -111,7 +111,7 @@ export default {
         items: [
           {
             title: "Learn More",
-            href: "/",
+            href: "/credit",
             variant: 'outline'
           },
           {

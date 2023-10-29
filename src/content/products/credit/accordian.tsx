@@ -2,24 +2,20 @@ export default {
   blockType: 'accordian',
   items: [
     {
-      trigger: 'Staked crypto sets your limit',
-      content: 'Instantly set and adjust your spending limit by staking your crypto assets to borrow up to 50% of its value.'
+      trigger: 'Direct Ownership of Digital Assets',
+      content: 'Maintain sovereign ownership of your digital assets with the security and transparency of blockchain technology.',
     },
     {
-      trigger: 'Paid off your balance by staking',
-      content: 'Industry leading APY rewards that enable the automatic repayment of your spending.' 
+      trigger: 'Easy Asset Management',
+      content: 'Manage, trade, and convert your digital assets effortlessly with the intuitive Lux Card interface.',
     },
     {
-      trigger: 'No capital gains by borrowing',
-      content: 'Never sell your crypto again and avoid capital gains taxes by paying off your balance with staking rewards.'
+      trigger: 'Lux Standard Guaranteed Backing',
+      content: 'Each transaction and asset held on the Lux Card is backed by the Lux Standard, ensuring a trustworthy and reliable experience.',
     },
     {
-      trigger: 'Crypto-back on purchases',
-      content: 'Get crypto-based rewards and use them to pay down your borrowed amount alongside your staking rewards.'
-    },
-    {
-      trigger: 'Countless member benefits',
-      content: 'Lux Card will offer a wide range of benefits that increase as your staked amount increases, including services for cellular, health, concierge, and so much more.'
+      trigger: 'Enhanced Security',
+      content: 'Experience peace of mind with advanced security features ensuring the safety of your assets.',
     },
     {
       trigger: 'DAO membership included',

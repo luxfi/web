@@ -9,7 +9,7 @@ import modal from './waitlist-modal'
 export default {
   blockType: 'product-detail',
   title: 'LUX CREDIT',
-  desc: 'Set your credit limit instantly with staking and borrow up to 50% of this amount while earning an industry leading APY on your staked amount and earning crypto rewards on purchases.',
+  desc: 'Unlock a world of digital assets with the Lux Card, your gateway to seamless transactions and asset management in the Lux ecosystem.',
   media,
   accordian,
   blocks: [
