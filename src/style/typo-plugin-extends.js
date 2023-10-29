@@ -8,12 +8,16 @@ const commonTags = {
   },
   ol: {
     margin: 0,
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
+    
   },
   ul: {
     margin: 0,
-    alignSelf: 'flex-start'
+    listStylePosition: 'outside',
+    //listStyleType: 'disc',
+    listStyleImage: "url('/assets/img/lux-icon-for-bullet-list--18x16.png')",
   },
+
   a: {
     textDecoration: 'none',
     '&:hover': {

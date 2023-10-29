@@ -29,22 +29,22 @@ const ProductDetailBlockComponent: React.FC<{
       <ApplyTypography className='flex flex-col items-start'>
         <h1 className='mb-8'>{p.title}</h1>
         {p.desc && (
-          (typeof p.desc === 'string') ? (
-            <p>{p.desc}</p>
-          ) : p.desc.element 
+          (typeof p.desc === 'string') ? (<p>{p.desc}</p>) : ('element' in p.desc ? p.desc.element : p.desc)
         )}
         <AccordianBlockComponent accordian={p.accordian} className='mt-10'/>
+        {p.price && (<>
+          <Spacer />
+          <h3>{p.price.heading}</h3>
+          <div className='flex flex-col justify-start items-stretch self-stretch md:self-center md:grid md:grid-cols-2 gap-4 '>
+            <StandardCard card={p.price.priceCard} />
+            <StandardCard card={p.price.msCard} />
+          </div>
+        </>)}
         <Spacer />
-        <h3>{p.price.heading}</h3>
-        <div className='flex flex-col justify-start items-stretch self-stretch md:self-center md:grid md:grid-cols-2 gap-4 '>
-          <StandardCard card={p.price.priceCard} />
-          <StandardCard card={p.price.msCard} />
-        </div>
-        <Spacer />
-        {p.blocks.map((block, index) => {
+        {p.blocks?.map((block, index) => {
           if (block.blockType === 'cta') {
             return (
-              <div className='grid grid-cols-1 gap-2 self-stretch md:self-center md:flex md:flex-row md:justify-center' key={index}>
+              <div className='grid grid-cols-1 gap-2 self-stretch md:flex md:flex-row md:justify-center' key={index}>
                 <BlockRenderer block={block} />
               </div>
             )

@@ -8,6 +8,8 @@ import BottomMDX from './landing-bottom.mdx'
 import saveToListAction from '@/server-actions/save-to-waitlist'
 import { defaultVideoProps as videoProps } from '@/util'
 import silverMedia from '@/content/products/silver/video'
+import goldMedia from '@/content/products/gold/video'
+import coinMedia from '@/content/products/coin/video'
 
 export default {
   assets: [
@@ -36,18 +38,7 @@ export default {
       blockType: 'asset-banner',
       title: 'LUX GOLD',
       byline: 'Responsibly manufactured, ethically sourced.',
-      media: {
-        blockType: 'video',
-        videoProps, 
-        sources: ['/assets/video/luxgold.mp4'],
-          // From manually looking at aspect ratio
-          // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-        dim: {
-            // .67 ar
-          width: 219,
-          height: 327
-        }
-      },
+      media: goldMedia,
       ctas: {
         blockType: 'cta',
         items: [
@@ -68,22 +59,7 @@ export default {
       blockType: 'asset-banner',
       title: 'LUX COIN',
       byline: 'Genesis Collection now available on Open Sea.',
-      media: {
-        blockType: 'video',
-        videoProps, 
-        image: '/assets/video/LUX-COIN-poster.jpg',
-        sources: [
-          '/assets/video/LUX-COIN-transcode.mp4', 
-          '/assets/video/LUX-COIN-transcode.webm'
-        ],
-          // Determin aspect ration from dims manually...
-          // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-        dim: {
-          // dims are 546x540, let's cut in half
-          width: 273,
-          height: 270
-        }
-      },
+      media: coinMedia,
       ctas: {
         blockType: 'cta',
         items: [

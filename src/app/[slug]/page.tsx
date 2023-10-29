@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 
   const products = [
     'silver',
-    'gold'
+    'gold',
+    'coin'
   ]
  
   return products.map((p) => ({

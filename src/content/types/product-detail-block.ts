@@ -8,15 +8,15 @@ import type SpecialBlock from './special-block'
 interface ProductDetailBlock extends Block {
   blockType: 'product-detail'
   title: string
-  desc?: ElementBlock | string
+  desc?: ElementBlock | JSX.Element | string
   media: MediaBlock
   accordian: AccordianBlock
-  price: {
+  price?: {
     heading: string
     priceCard: CardBlock
     msCard: CardBlock
   },
-  blocks: Block[]
+  blocks?: Block[]
 }
 
 export {

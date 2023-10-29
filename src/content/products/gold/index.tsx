@@ -7,7 +7,6 @@ import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
 import MiniChart from '@/components/mini-chart'
 
-
 import accordian from './accordian/accordian'
 
 export default {
