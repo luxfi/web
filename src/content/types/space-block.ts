@@ -4,7 +4,7 @@ import type Block from './block'
 
 interface SpaceBlock extends Block {
   blockType: 'space'
-  count?: number // multiples of gap
+  level?: number // inserts invisible h<level> tag
 }
 
 export {

@@ -133,42 +133,47 @@ export default (theme) => ({
         fontFamily: theme('fontFamily.heading'),
         margin: 0,
         fontWeight: 800,
-        textAlign: 'center'
+        textAlign: 'center',
+        lineHeight: 1.0
       },
       h2: {
         fontSize: theme('fontSize[5xl]'),  
         fontFamily: theme('fontFamily.heading'),
         margin: 0,
         fontWeight: 800,
-        textAlign: 'center'
+        textAlign: 'center',
+        lineHeight: 1.0
       },
       h3: {
         fontSize: theme('fontSize[4xl]'),  
         margin: 0,
         fontFamily: theme('fontFamily.heading'),
         fontWeight: 800,
-        textAlign: 'center'
+        textAlign: 'center',
+        lineHeight: 1.0
       },
       h4: {
-        fontSize: theme('fontSize[4xl]'),  
-        margin: 0,
-        fontFamily: theme('fontFamily.inter'),
-        fontWeight: 700,
-        textAlign: 'center'
-      },
-      h5: {
         fontSize: theme('fontSize[3xl]'),  
         margin: 0,
         fontFamily: theme('fontFamily.inter'),
-        fontWeight: 800,
-        textAlign: 'center'
+        fontWeight: 700,
+        textAlign: 'center',
+        lineHeight: 1.0,
       },
-      h6: {
-        fontSize: theme('fontSize.[2xl]'),  
+      h5: {
+        fontSize: theme('fontSize[2xl]'),  
         margin: 0,
         fontFamily: theme('fontFamily.inter'),
         fontWeight: 800,
-        textAlign: 'center'
+        textAlign: 'center',
+      },
+      h6: {
+        fontSize: theme('fontSize.xl'),  
+        margin: 0,
+        fontFamily: theme('fontFamily.inter'),
+        fontWeight: 800,
+        textAlign: 'center',
+        lineHeight: 1.1,
       },
     }
   }

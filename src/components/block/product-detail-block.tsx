@@ -11,7 +11,7 @@ import { StandardCard } from './card-block'
 import BlockRenderer from './block-renderer'
 
 const Spacer: React.FC = () => (
-  <h3 className='invisible'>&nbsp;</h3>
+  <p className='invisible m-0 h-[1px]'>&nbsp;</p>
 )
 
 /* md:absolute  md:left-0 md:top-px-50 md:z-10 md:bg-background   */
@@ -31,7 +31,7 @@ const ProductDetailBlockComponent: React.FC<{
         {p.desc && (
           (typeof p.desc === 'string') ? (<p>{p.desc}</p>) : ('element' in p.desc ? p.desc.element : p.desc)
         )}
-        <AccordianBlockComponent accordian={p.accordian} className='mt-10'/>
+        <AccordianBlockComponent accordian={p.accordian} className='mt-5'/>
         {p.price && (<>
           <Spacer />
           <h3>{p.price.heading}</h3>
@@ -49,9 +49,6 @@ const ProductDetailBlockComponent: React.FC<{
               </div>
             )
           }
-          else if (block.blockType === 'space') {
-            return <Spacer key={index}/>
-          } 
           return <BlockRenderer block={block} key={index}/>
         })}
       </ApplyTypography>

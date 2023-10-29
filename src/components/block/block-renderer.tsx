@@ -34,7 +34,7 @@ const BlockRenderer: React.FC<{
     return <HeadingBlockComponent heading={headingBlock} className={className}/>
   }
   else if (block.blockType === 'space') {
-    return <HeadingBlockComponent heading={{blockType: 'heading', heading: '&nbsp;'}} className={className + ' invisible'} />
+    return <HeadingBlockComponent heading={{blockType: 'heading', heading: '&nbsp;', level: 0}} className={className + ' h-[1px] m-0 invisible'} />
   }
   else if (block.blockType === 'cta') {
     const ctaBlock = block as B.CTABlock

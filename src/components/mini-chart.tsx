@@ -68,7 +68,9 @@ const MiniChart = (props: MiniChartProps) => {
     }
   }, [ref, widgetProps, widgetPropsAny]);
 
-  return <div ref={ref} style={{width: '100%'}} />;
+  return <div ref={ref} style={{
+    width: '100%'
+  }} />;
 }
 
 export default MiniChart;

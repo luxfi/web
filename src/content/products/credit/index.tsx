@@ -17,7 +17,7 @@ export default {
       blockType: 'cta',
       items: [
         {
-          component: <Button className='w-full -mt-8 md:-mt-16' variant='primary' size='lg'>Waitlist</Button>,
+          component: <Button className='w-full -mt-2' variant='primary' size='lg'>Waitlist</Button>,
           modal 
         }
       ]

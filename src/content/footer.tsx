@@ -29,6 +29,10 @@ export default [
         href: '/coin',
       },
       {
+        title: 'Lux Uranium',
+        href: '/uranium',
+      },
+      {
         title: 'Lux Credit',
         href: '/credit',
       },

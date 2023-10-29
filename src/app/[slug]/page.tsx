@@ -7,7 +7,7 @@ import type ProductDetailBlock from '@/content/types/product-detail-block'
 
 type Props = {
   params: {
-    slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator'
+    slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator' | 'pass' | 'uranium'
   }
 }
 
@@ -16,7 +16,11 @@ export async function generateStaticParams() {
   const products = [
     'silver',
     'gold',
-    'coin'
+    'coin',
+    'uranium',
+    'credit',
+    'validator',
+    'pass',
   ]
  
   return products.map((p) => ({
