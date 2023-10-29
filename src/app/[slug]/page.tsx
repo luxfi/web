@@ -14,7 +14,8 @@ type Props = {
 export async function generateStaticParams() {
 
   const products = [
-    "silver"
+    'silver',
+    'gold'
   ]
  
   return products.map((p) => ({
