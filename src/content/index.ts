@@ -4,7 +4,7 @@ import footer from './footer'
 import silver from './products/silver'
 import gold from './products/gold'
 import coin from './products/coin'
-import credit from './products/silver'
+import credit from './products/credit'
 import validator from './products/silver'
 
 const products = {

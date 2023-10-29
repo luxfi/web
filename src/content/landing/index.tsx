@@ -10,6 +10,7 @@ import { defaultVideoProps as videoProps } from '@/util'
 import silverMedia from '@/content/products/silver/video'
 import goldMedia from '@/content/products/gold/video'
 import coinMedia from '@/content/products/coin/video'
+import creditMedia from '@/content/products/credit/video'
 
 export default {
   assets: [
@@ -135,22 +136,7 @@ export default {
       blockType: 'asset-banner',
       title: 'LUX CREDIT',
       byline: 'Never sell your crypto again.',
-      media: {
-        blockType: 'video',
-        videoProps, 
-        image: '/assets/video/Lux-CARD-poster.jpg',
-        sources: [
-          '/assets/video/LUX-CARD-transcode.mp4', 
-          '/assets/video/LUX-CARD-transcode.webm'
-        ],
-          // Determin aspect ration from dims manually...
-          // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-        dim: {
-          // dims are 758x588, let's cut in half
-          width: 379,
-          height: 294
-        }
-      },
+      media: creditMedia,
       ctas: {
         blockType: 'cta',
         items: [

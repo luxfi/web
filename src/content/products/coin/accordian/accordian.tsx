@@ -1,6 +1,3 @@
-
-import LuxStandardMDX from './lux-standard-guar-backing.mdx'
-import HoldSecurelyMDX from './hold-securely.mdx'
 import LuxCoinTokenomicsMDX from './lux-coin-tokenomics.mdx'
 
 export default {
