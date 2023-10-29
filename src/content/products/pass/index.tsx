@@ -8,8 +8,8 @@ import modal from './waitlist-modal'
 
 export default {
   blockType: 'product-detail',
-  title: 'LUX VALIDATOR',
-  desc: <p>Buy into the <a href="http://lux.network" target="_blank">Lux Network</a> in the most meaningful way by becoming a Lux Validator owner and earn <a href="/coin">LUX Coin</a> from every network transaction fee.</p>,
+  title: 'LUX PASS',
+  desc: 'Mint Lux Pass to get first access to future launches and events, and get 1,000 LUX Coins as a gift in a new Lux Wallet – for just $1',
   media,
   accordian,
   blocks: [
@@ -22,4 +22,3 @@ export default {
     } as C.CTABlock
   ] as C.Block[]
 } as C.ProductDetailBlock
-

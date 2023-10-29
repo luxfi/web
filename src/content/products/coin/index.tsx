@@ -1,12 +1,11 @@
 import type * as C from '@/content/types'
 
 import Button from '@/primitives/button'
-import ContactDialog from '@/components/contact-dialog'
-import saveToListAction from '@/server-actions/save-to-waitlist'
 
 
 import media from './video'
-import accordian from './accordian/accordian'
+import accordian from './accordian'
+import modal from './waitlist-modal'
 
 export default {
   blockType: 'product-detail',
@@ -20,16 +19,7 @@ export default {
       items: [
         {
           component: <Button className='w-full -mt-8 md:-mt-16' variant='primary' size='lg'>Waitlist</Button>,
-          modal: {
-            Comp: ContactDialog,
-            title: 'Join the Waitlist',
-            byline: 'Be the first to own LUX Coin',
-            action: saveToListAction,
-            actionEnclusure: {
-              listId: 3211420,
-              reply: "You're on the LUX Coin Whitelist. Join the official LUX telegram to access the drop. https://t.me/luxdefichat"
-            }
-          }
+          modal,
         },
       ]
     } as C.CTABlock

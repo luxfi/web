@@ -55,7 +55,8 @@ export default [
       {
         title: 'Apply for Beta',
         href: 'https://apply.lux.network/',
-        external: true
+        external: true,
+        newTab: false
       },
       {
         title: 'Whitepapers',
@@ -101,6 +102,7 @@ export default [
       {
         title: 'Careers',
         href: 'https://docs.lux.network/about/v/lux-job-listings/',
+        newTab: false,
         external: true
       },
       {

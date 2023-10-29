@@ -1,13 +1,12 @@
 import type * as C from '@/content/types'
 
+import MiniChart from '@/components/mini-chart'
+
 import media from './video'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
-
-import MiniChart from '@/components/mini-chart'
-
-import accordian from './accordian/accordian'
+import accordian from './accordian'
 
 export default {
   blockType: 'product-detail',

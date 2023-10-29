@@ -6,13 +6,15 @@ import gold from './products/gold'
 import coin from './products/coin'
 import credit from './products/credit'
 import validator from './products/validator'
+import pass from './products/pass'
 
 const products = {
   silver,
   gold,
   coin,
   credit,
-  validator
+  validator,
+  pass,
 }
 
 export {

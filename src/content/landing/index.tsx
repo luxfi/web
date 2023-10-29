@@ -1,17 +1,21 @@
 import React from 'react'
 import { AssetBannerBlock, ElementBlock } from '../types'
-import ContactDialog from '@/components/contact-dialog'
 import Button from '@/primitives/button'
 
 import BottomMDX from './landing-bottom.mdx'
 
-import saveToListAction from '@/server-actions/save-to-waitlist'
-import { defaultVideoProps as videoProps } from '@/util'
 import silverMedia from '@/content/products/silver/video'
 import goldMedia from '@/content/products/gold/video'
 import coinMedia from '@/content/products/coin/video'
 import creditMedia from '@/content/products/credit/video'
 import validatorMedia from '@/content/products/validator/video'
+import passMedia from '@/content/products/pass/video'
+
+import coinWaitlistModal from '@/content/products/coin/waitlist-modal'
+import creditWaitlistModal from '@/content/products/credit/waitlist-modal'
+import passWaitlistModal from '@/content/products/pass/waitlist-modal'
+import validatorWaitlistModal from '@/content/products/validator/waitlist-modal'
+
 
 export default {
   assets: [
@@ -72,16 +76,7 @@ export default {
           },
           {
             component: <Button variant='primary' size='lg'>Waitlist</Button>,
-            modal: {
-              Comp: ContactDialog,
-              title: 'Join the Waitlist',
-              byline: 'Be the first to own LUX Coin',
-              action: saveToListAction,
-              actionEnclusure: {
-                listId: 3211420,
-                reply: "You're on the LUX Coin Whitelist. Join the official LUX telegram to access the drop. https://t.me/luxdefichat"
-              }
-            }
+            modal: coinWaitlistModal
           },
         ]
       }
@@ -89,10 +84,7 @@ export default {
     {
       blockType: 'asset-banner',
       title: 'LUX VALIDATOR',
-      contentBefore: (<>
-        <h6>FREE priority access to LUX events and NFT drops.</h6>
-        <p>Get priority access to the launch.</p>
-      </>),
+      byline: 'Run the chain.',
       media: validatorMedia,
       ctas: {
         blockType: 'cta',
@@ -104,16 +96,7 @@ export default {
           },
           {
             component: <Button variant='primary' size='lg'>Waitlist</Button>,
-            modal: {
-              Comp: ContactDialog,
-              title: 'Join the Waitlist',
-              byline: 'Be the first to get access to LUX Validator.',
-              action: saveToListAction,
-              actionEnclusure: {
-                listId: 3211418,
-                reply: "You're on the LUX Validator Whitelist. Join the official LUX telegram to access the drop. https://t.me/luxdefichat"
-              }
-            }
+            modal: validatorWaitlistModal
           },
         ]
       }
@@ -133,20 +116,34 @@ export default {
           },
           {
             component: <Button variant='primary' size='lg'>Waitlist</Button>,
-            modal: {
-              Comp: ContactDialog,
-              title: 'Join the Waitlist',
-              byline: 'Be the first to get access to LUX Credit.',
-              action: saveToListAction,
-              actionEnclusure: {
-                listId: 33211417,
-                reply: "You're on the LUX Credit Whitelist. Join the official LUX telegram to access thedrop. https://t.me/luxdefichat"
-              }
-            }
+            modal: creditWaitlistModal
           },
         ]
       }
-    }
+    },
+    {
+      blockType: 'asset-banner',
+      title: 'LUX PASS',
+      contentBefore: (<>
+        <h6>FREE priority access to LUX events and NFT drops.</h6>
+        <p>Get priority access to the launch.</p>
+      </>),
+      media: passMedia,
+      ctas: {
+        blockType: 'cta',
+        items: [
+          {
+            title: "Learn More",
+            href: "/validator",
+            variant: 'outline'
+          },
+          {
+            component: <Button variant='primary' size='lg'>Waitlist</Button>,
+            modal: passWaitlistModal
+          },
+        ]
+      }
+    },
   ] as AssetBannerBlock[],
   bottom: {
     blockType: 'element',
