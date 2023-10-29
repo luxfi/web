@@ -36,12 +36,10 @@ export default [
         title: 'Lux Validator',
         href: '/validator',
       },
-      /*
       {
         title: 'Lux Pass',
         href: '/pass',
       },
-      */
     ] 
   },
   {
