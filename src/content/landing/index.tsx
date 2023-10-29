@@ -11,6 +11,7 @@ import silverMedia from '@/content/products/silver/video'
 import goldMedia from '@/content/products/gold/video'
 import coinMedia from '@/content/products/coin/video'
 import creditMedia from '@/content/products/credit/video'
+import validatorMedia from '@/content/products/validator/video'
 
 export default {
   assets: [
@@ -66,7 +67,7 @@ export default {
         items: [
           {
             title: "Learn More",
-            href: "/",
+            href: "/coin",
             variant: 'outline'
           },
           {
@@ -92,28 +93,13 @@ export default {
         <h6>FREE priority access to LUX events and NFT drops.</h6>
         <p>Get priority access to the launch.</p>
       </>),
-      media: {
-        blockType: 'video',
-        videoProps, 
-        image: '/assets/video/Lux-VALIDATOR-poster.jpg',
-        sources: [
-          '/assets/video/Lux-VALIDATOR-transcode.mp4', 
-          '/assets/video/Lux-VALIDATOR-transcode.webm'
-        ],
-          // Determin aspect ration from dims manually...
-          // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-        dim: {
-          // dims are 656x484, let's cut in half
-          width: 328,
-          height: 242
-        }
-      },
+      media: validatorMedia,
       ctas: {
         blockType: 'cta',
         items: [
           {
             title: "Learn More",
-            href: "/",
+            href: "/validator",
             variant: 'outline'
           },
           {

@@ -5,7 +5,7 @@ import silver from './products/silver'
 import gold from './products/gold'
 import coin from './products/coin'
 import credit from './products/credit'
-import validator from './products/silver'
+import validator from './products/validator'
 
 const products = {
   silver,
