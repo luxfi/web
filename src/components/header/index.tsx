@@ -11,16 +11,31 @@ import NavItems from '@/components/nav-items'
 
 import MobileNav from './mobile-nav'
 import UpperRightNav from "./upper-right-nav"
+import { ButtonVariants } from '@/primitives/button'
+
+<UpperRightNav className='hidden lg:flex' />
+
 
 const Header: React.FC = () => (
-  <header className="bg-background sticky top-0 border-b border-destructive">
-    <div className="hidden md:flex h-16 items-center justify-between px-2 lg:px-4 2xl:mx-auto max-w-screen-2xl">
+  <header className="bg-background sticky top-0">
+    <div className="hidden md:flex flex-row md:h-[80px] items-center justify-between px-[32px] 2xl:mx-auto max-w-screen-2xl">
+      <Logo size='md' className='hidden lg:flex' key='two'/>
       <Logo size='sm' className='hidden md:flex lg:hidden' key='one'/>
-      <Logo size='lg' className='hidden lg:flex' key='two'/>
-      <NavItems items={nav.all} className='hidden lg:flex gap-6 text' itemClassName='font-heading' key='three'/>
-      <NavItems items={nav.nav} className='hidden md:flex lg:hidden gap-4' itemClassName='text-sm font-heading'  key='four'/>
+      <NavItems 
+        items={nav.all} 
+        className='hidden lg:flex justify-between gap-[22px] text-[13px]/[13px] min-w-[667px]' 
+        itemClassName='font-heading h-[32px] tracking-[-0.3px]' 
+        itemClassNameFromVariant={(variant: ButtonVariants) => (variant === 'primary' ? 'min-w-[174px]' : '')}
+        key='three'
+      />
+      <NavItems 
+        items={nav.nav} 
+        className='hidden md:flex lg:hidden gap-4' 
+        itemClassName='text-sm font-heading'  
+        itemClassNameFromVariant={(variant: ButtonVariants) => (variant === 'link' ? 'text-muted-foreground' : '')}
+        key='four'
+      />
       <LinkItem item={nav.buttons[0]} size='sm' className='min-w-0 hidden md:flex lg:hidden' />
-      <UpperRightNav className='hidden lg:flex' />
     </div>
     <div className="flex md:hidden h-[44px] items-center justify-between px-2">
       <Logo size='sm' />

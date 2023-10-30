@@ -164,6 +164,7 @@ module.exports = {
       },
       secondary: {
         DEFAULT: "var(--secondary)",
+        hover: "var(--secondary-hover)",
         foreground: "var(--secondary-foreground)",
       },
       destructive: {
@@ -173,6 +174,10 @@ module.exports = {
       muted: {
         DEFAULT: "var(--muted)",
         foreground: "var(--muted-foreground)",
+      },
+      ['very-muted']: {
+        DEFAULT: "var(--very-muted)",
+        foreground: "var(--very-muted-foreground)",
       },
       nav: {
         DEFAULT: "var(--nav)",
@@ -831,7 +836,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1600px',
+      '2xl': '1500px', // to match other sites
     },
     scrollMargin: ({ theme }) => ({
       ...theme('spacing'),

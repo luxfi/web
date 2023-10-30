@@ -39,16 +39,17 @@ const NavItems: React.FC<{
           if (item.current) {
             extraClasses += ' pointer-events-none'
           }
-          if (itemClassNameFromVariant) {
-            extraClasses += ' ' +  itemClassNameFromVariant(variant) 
-          }
 
           return (
             <LinkItem 
               item={item}
               key={index}
-              size='lg'
-              className={extraClasses + ' ' + itemClassName} 
+              size='default'
+              className={
+                extraClasses + ' ' + 
+                itemClassName + ' ' + 
+                (itemClassNameFromVariant && itemClassNameFromVariant(variant))
+              } 
             />
           )
         })}

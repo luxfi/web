@@ -1,9 +1,12 @@
 import React  from 'react'
 
-import Footer from '@/components/footer'
-import ProductDetailBlockComponent from '@/components/block/product-detail-block'
-import { products } from '@/content'
 import type ProductDetailBlock from '@/content/types/product-detail-block'
+
+import Footer from '@/components/footer'
+import Main from '@/components/main'
+import ProductDetailBlockComponent from '@/components/block/product-detail-block'
+
+import { products } from '@/content'
 
 type Props = {
   params: {
@@ -40,9 +43,9 @@ const ProductPage = ({ params }: Props) => {
   }
 
   return (<>
-    <div className='flex flex-col justify-center items-center pb-6 pt-4'>
+    <Main className='md:flex-row md:gap-4'>
       <ProductDetailBlockComponent product={product}/>
-    </div>
+    </Main>
     <Footer />
   </>)
 }

@@ -27,16 +27,17 @@ const Logo: React.FC<{
     classes.icon = 'h-10 w-10 mr-4 color-inherit' + toAdd.icon
     classes.span = 'text-3xl' + toAdd.span
   }
+    // match lux.network
   else if (size === 'md') {
-    classes.icon = 'h-7 w-7 mr-2 color-inherit' + toAdd.icon
-    classes.span = 'text-xl' + toAdd.span
+    classes.icon = 'h-[32px] w-[32px] mr-[12px] color-inherit' + toAdd.icon
+    classes.span = 'text-[26px]/[26px] tracking-tighter' + toAdd.span
   }
   else {
     classes.icon = 'h-6 w-6 mr-2 color-inherit' + toAdd.icon
     classes.span = 'text-lg' + toAdd.span
   }
 
-  const spanClasses = 'inline-block font-bold font-headingWider ' + classes.span 
+  const spanClasses = 'inline-block font-bold font-heading ' + classes.span 
   const linkClasses = 'flex items-center text-primary hover:text-primary-hover ' + className
 
   return (
