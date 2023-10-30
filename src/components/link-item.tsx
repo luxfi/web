@@ -82,7 +82,7 @@ const LinkItem: React.FC<{
     <Link
       className={cn(buttonVariants({ 
           variant: variant ?  variant : (defVariant ? defVariant : 'link'), 
-          size: (!defVariant || defVariant.includes('ink') || variant?.includes('ink'))  ? 'link' 
+          size: (!defVariant || defVariant.includes('link') || variant?.includes('link'))  ? 'link' 
             : (size ? size : defSize)
         }), 
         className 

@@ -4,19 +4,14 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/util"
 
-const commonLinkClasses = "hover:text-primary text-foreground"
-
 const variant = {
-  primary: "bg-primary text-primary-foreground hover:bg-primary/90 font-heading not-typography",
+  primary: "bg-primary text-primary-foreground hover:bg-primary-hover font-heading not-typography",
   secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 font-heading not-typography",
   outline: "border border-primary hover:bg-accent hover:text-accent-foreground font-heading not-typography",
-  destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+  destructive: "bg-destructive text-destructive-foreground hover:bg-destructive-hover",
   ghost: "hover:bg-accent hover:text-accent-foreground",
-  link: commonLinkClasses,
-  emLink: commonLinkClasses + ' font-heading not-typography',
-  linkCurrent: commonLinkClasses + ' text-accent-foreground pointer-events-none',
-  emLinkCurrent: commonLinkClasses + ' font-heading not-typography text-accent-foreground',
-  emLinkBright: commonLinkClasses + ' font-heading not-typography text-accent-foreground hover:text-foreground',
+  link: "text-foreground hover:text-muted-foreground",
+  linkFG: "text-foreground hover:text-muted-foreground", // marker to style nav as regular link
 }
 
 const size = {
@@ -26,7 +21,6 @@ const size = {
   lg: "h-10 px-8 text-base rounded-lg min-w-[260px]",
   icon: "h-10 w-10",
 }
-
 
 const buttonVariants = cva(
   "flex items-center justify-center rounded-md font-medium transition-colors " +
@@ -47,10 +41,9 @@ const buttonVariants = cva(
 type ButtonVariants = keyof typeof variant
 type ButtonSizes = keyof typeof size
 
-interface ButtonProps
-  extends 
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> 
+interface ButtonProps extends
+  React.ButtonHTMLAttributes<HTMLButtonElement>, 
+  VariantProps<typeof buttonVariants> 
 {
   asChild?: boolean
 }
@@ -67,9 +60,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     )
   }
 )
+
 Button.displayName = "Button"
-
-
 
 export { 
   Button as default, 

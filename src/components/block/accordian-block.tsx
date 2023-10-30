@@ -17,14 +17,14 @@ const AccordianBlockComponent: React.FC<{
   accordian,
   className=''
 }) => (
-  <Accordion type="single" collapsible className={'w-full border border-border-accented rounded-xl ' + className}>
+  <Accordion type="single" collapsible className={'w-full border border-border-accented rounded-xl overflow-hidden' + className}>
     {accordian.items.map((item, index) => (
-    <AccordionItem className='border-border-accented last:border-0' value={`value-${index}`} key={index}>
+    <AccordionItem className='border-border-accented last:border-0 last:rounded-xl overflow-hidden' value={`value-${index}`} key={index}>
       <AccordionTrigger className='px-4 hover:no-underline' >
-        <h6 className='font-medium text-lg text-card-foreground'>{item.trigger}</h6>
+        <h6 className='not-typography font-inter font-medium text-lg text-card-foreground'>{item.trigger}</h6>
       </AccordionTrigger>
       <AccordionContent className='p-4 border-t border-border-accented bg-accent'>
-      <ApplyTypography className='flex flex-col justify-start items-start'>
+      <ApplyTypography className='flex flex-col justify-start items-start '>
       {(typeof item.content === 'string') ? (
           <p>{item.content}</p>
         ) : item.content }

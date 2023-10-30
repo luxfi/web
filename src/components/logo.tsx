@@ -36,8 +36,8 @@ const Logo: React.FC<{
     classes.span = 'text-lg' + toAdd.span
   }
 
-  const spanClasses = 'inline-block font-bold text-accent-foreground font-headingWider ' + classes.span 
-  const linkClasses = 'flex items-center text-accent-foreground hover:text-foreground ' + className
+  const spanClasses = 'inline-block font-bold font-headingWider ' + classes.span 
+  const linkClasses = 'flex items-center text-primary hover:text-primary-hover ' + className
 
   return (
     <Link href={href} className={linkClasses} >

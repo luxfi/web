@@ -33,6 +33,7 @@ interface LinkItemDef {
   variant?: ButtonVariants
   size?: ButtonSizes
   icon?: React.ReactNode
+  current?: boolean
 
     // If 'modal' is not provided, 'component' is simply rendered. Otherwise...
   component?: React.ReactNode 

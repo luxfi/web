@@ -1,10 +1,12 @@
 const commonTags = {
+  maxWidth: 'initial',
+  color: "var(--foreground)",
   p: {
     margin: 0,
     alignSelf: 'flex-start',
     fontSize: '1.1rem',
     lineHeight: 1.4,
-    fontWeight: 500
+    fontWeight: 400
   },
   ol: {
     margin: 0,
@@ -14,15 +16,13 @@ const commonTags = {
   ul: {
     margin: 0,
     listStylePosition: 'outside',
-    //listStyleType: 'disc',
     listStyleImage: "url('/assets/img/lux-icon-for-bullet-list--18x16.png')",
   },
-
   a: {
-    textDecoration: 'none',
+    textDecoration: 'underline',
     '&:hover': {
       opacity: 0.6,
-      textDecoration: 'underline',
+      //textDecoration: 'underline',
     }
   },
   img: {
@@ -30,11 +30,9 @@ const commonTags = {
   },
 }
 
-
 export default (theme) => ({
   DEFAULT: {
     css: {
-      maxWidth: 'initial',
       ...commonTags,
       h1: {
         fontSize: theme('fontSize[3xl]'),
@@ -82,7 +80,6 @@ export default (theme) => ({
   },
   md: {
     css: {
-      maxWidth: 'initial',
       ...commonTags,
       h1: {
         fontSize: theme('fontSize[4xl]'),
@@ -126,7 +123,6 @@ export default (theme) => ({
   },
   lg: {
     css: {
-      maxWidth: 'initial',
       ...commonTags,
       h1: {
         fontSize: theme('fontSize[6xl]'),

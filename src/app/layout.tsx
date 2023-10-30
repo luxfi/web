@@ -35,15 +35,15 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
       {/* https://stackoverflow.com/a/75716588/11645689 */}
       <base target="_blank" />
     </head>
+    <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
     <body className={cn('min-h-screen bg-background font-sans antialiased overflow-x-hidden', inter.variable )}>
-      <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
         <div className="relative flex min-h-screen flex-col">
           <Header />
           {children}
         </div>
         <TailwindIndicator />
-      </ThemeProvider>
     </body>
+    </ThemeProvider>
   </html>
 )
 

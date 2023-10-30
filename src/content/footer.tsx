@@ -8,13 +8,14 @@ const SOC_ICON_SIZE = 18
 export default [
   {
     blockType: 'cta',
+    type: 'nav',
     items: [
       {
         title: 'Market',
         href: "https://app.lux.market/",
         external: true,
         newTab: false,
-        variant: 'emLinkBright'
+        variant: 'linkFG'
       },
       {
         title: 'Lux Silver',
@@ -52,7 +53,7 @@ export default [
       {
         title: 'Network',
         href: "https://lux.network/",
-        variant: 'emLinkBright'
+        variant: 'linkFG'
       },
       {
         title: 'Apply for Beta',
@@ -76,7 +77,7 @@ export default [
       {
         title: 'Partners',
         href: "https://lux.partners/",
-        variant: 'emLinkBright',
+        variant: 'linkFG',
         external: true
       },
       {
@@ -119,7 +120,7 @@ export default [
     items: [
       {
         title: 'Community',
-        variant: 'emLinkBright',
+        variant: 'linkFG',
       },
       {
         title: 'Discord',
@@ -164,7 +165,7 @@ export default [
     items: [
       {
         title: 'Legal',
-        variant: 'emLinkBright',
+        variant: 'linkFG',
       },
       {
         title: 'Terms and Conditions',

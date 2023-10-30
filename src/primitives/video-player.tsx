@@ -9,7 +9,7 @@ interface VideoProps extends React.ComponentPropsWithoutRef<"video"> {
 
 const VideoPlayer = React.forwardRef<HTMLVideoElement, VideoProps>(
   ({sources, className='', ...rest}, ref) => (
-    <video ref={ref} {...rest} className={className}>
+    <video ref={ref} {...rest} className={className }>
       {sources.map((source, iindex) => (  
         <source key={iindex} src={source} />
       ))} 

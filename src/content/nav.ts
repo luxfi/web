@@ -5,33 +5,29 @@ const nav = [
     title: "Credit",
     href: "https://lux.credit",
     external: true,
-    variant: 'emLink',
     newTab: false,
   },
   {
     title: "Finance",
     href: "https://lux.finance",
     external: true,
-    variant: 'emLink',
     newTab: false,
   },
   {
     title: "Market",
     href: '/',
-    variant: 'emLinkCurrent'
+    current: true
   },
   {
     title: "Network",
     href: "https://lux.network",
     external: true,
-    variant: 'emLink',
     newTab: false,
   },
   {
     title: "Partners",
     href: "https://lux.partners",
     external: true,
-    variant: 'emLink',
     newTab: false,
   },
 ] as LinkItemDef[]

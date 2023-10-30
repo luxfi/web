@@ -1,9 +1,11 @@
 import React from 'react'
 
 import Logo from '@/components/logo'
+import NavItems from '@/components/nav-items'
 import { footer } from '@/content'
+import { ButtonVariants } from '@/primitives/button'
 
-import CTABlockComponent from './block/cta-block'
+//import CTABlockComponent from './block/cta-block'
 
 const Footer: React.FC = () => (
   <footer className='border-t mt-20'> 
@@ -18,10 +20,14 @@ const Footer: React.FC = () => (
         <Logo size='md' />
       </div>
       {footer.map((ctaBlock, index) => (
-      <div className='flex flex-col gap-4 justify-start w-fit items-start'>
-        <CTABlockComponent cta={ctaBlock} key={index + 1}/> 
-      </div>
-    ))}
+        <NavItems
+          as={(ctaBlock.type === 'nav') ? 'nav' : 'div'} 
+          className='flex flex-col gap-4 justify-start w-fit items-start' 
+          items={ctaBlock.items} 
+          key={index + 1}
+          itemClassNameFromVariant={(variant: ButtonVariants) => ( variant === 'linkFG' ? 'font-heading' : '')}
+        /> 
+      ))}
     </div>
   </footer>
 )
