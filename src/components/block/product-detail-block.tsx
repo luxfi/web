@@ -20,8 +20,8 @@ const ProductDetailBlockComponent: React.FC<{
 }> = ({
   product: p
 }) => (<>
-  <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-60'>
-    <MediaBlockComponent media={p.media} className='mx-auto'/>
+  <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-[150px] md:static'>
+    <MediaBlockComponent media={p.media} className='md:sticky top-10 mx-auto'/>
   </div>
   <div className='md:bg-scroll md:w-1/2 md:pt-20'>
     <ApplyTypography className='flex flex-col items-start'>

@@ -32,7 +32,7 @@ export default {
         autosize: true,
         colorTheme: 'dark',
         isTransparent: false,
-        trendLineColor: "hsl(266, 79%, 50%)",
+        trendLineColor: "rgb(114, 27, 228)",
         underLineColor: "rgba(255, 255, 255, 0.1)",
         dateRange: '60M',
         largeChartUrl: ''

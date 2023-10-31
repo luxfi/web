@@ -32,7 +32,9 @@ export default {
         locale: 'en',
         autosize: true,
         colorTheme: 'dark',
-        dateRange: '1Y'
+        trendLineColor: "rgb(114, 27, 228)",
+        underLineColor: "rgba(255, 255, 255, 0.1)",
+        dateRange: '60M',
       }}/>
     }
   },

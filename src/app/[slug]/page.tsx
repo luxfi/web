@@ -45,7 +45,7 @@ const ProductPage = ({ params }: Props) => {
   }
 
   return (<>
-    <Main className='md:flex-row md:gap-4'>
+    <Main className='md:flex-row md:gap-4 '>
       <ProductDetailBlockComponent product={product}/>
     </Main>
     <Footer />
