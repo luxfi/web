@@ -1,5 +1,7 @@
 import React  from 'react'
 
+import { notFound } from 'next/navigation'
+
 import type ProductDetailBlock from '@/content/types/product-detail-block'
 
 import Footer from '@/components/footer'
@@ -39,7 +41,7 @@ const ProductPage = ({ params }: Props) => {
 
   const product = products[params.slug] as ProductDetailBlock
   if (!product) {
-    return null
+    notFound()
   }
 
   return (<>
