@@ -25,13 +25,17 @@ export default {
       cardType: 'full-width',
       title: 'Market Spot Price / Oz',
       content: <MiniChart widgetProps={{
-        symbol: 'SILVER',
+        symbol: 'TVC:SILVER',
         width: '100%',
         height: '100%',
         locale: 'en',
         autosize: true,
         colorTheme: 'dark',
-        dateRange: '1Y'
+        isTransparent: false,
+        trendLineColor: "hsl(266, 79%, 50%)",
+        underLineColor: "rgba(255, 255, 255, 0.1)",
+        dateRange: '60M',
+        largeChartUrl: ''
       }}/>
     }
   },
@@ -45,7 +49,7 @@ export default {
       cardType: 'media-left',
       title: 'NEXT MINT',
       content: <>
-        <p>Available: 10,000,1000 oz</p>
+        <p>Available: 10,000,100 oz</p>
         <p>Price: $20 / oz</p>
         <p>Spot price:: ~$25 / oz</p>
       </>,
