@@ -3,6 +3,10 @@ interface ContactInfo {
   phone: string
 }
 
+type ContactInfoFields = keyof ContactInfo
+
+
 export {
-  type ContactInfo as default
+  type ContactInfo as default,
+  type ContactInfoFields
 }

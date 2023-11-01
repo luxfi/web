@@ -2,22 +2,22 @@
 
 import React, { useTransition } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm, SubmitHandler, type ControllerRenderProps } from 'react-hook-form'
 import * as z from 'zod'
 import validator from 'validator'
 
 import { Loader2 } from 'lucide-react'
 
+//import {  type ControllerRenderProps } from '@radix-ui/react-dialog'
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from '@/primitives/form'
 
-import type { ContactInfo  } from '@/content/types'
+import type { ContactInfo, ContactInfoFields } from '@/content/types'
 import type { SubmitServerAction } from '@/content/types/link-item-def'
 
 import Button from '@/primitives/button'
@@ -59,47 +59,38 @@ const ContactForm: React.FC<{
     })
   }
 
+  const MyFormItem: React.FC<{ 
+    field: ControllerRenderProps<ContactInfo, 'email'> | ControllerRenderProps<ContactInfo, 'phone'>  
+    placeholder: string
+  }> = ({
+    field,
+    placeholder
+  }) => (
+  <FormItem className="space-y-0" >
+    <FormControl>
+      <Input placeholder={placeholder} {...field} className="mt-0 text-foreground"/>
+    </FormControl>
+    <div className="flex flex-row justify-start items-stretch gap-2">
+      <FormMessage />
+    </div>
+  </FormItem>
+)
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onFormSubmit)} className="w-3/4">
+        <div className='flex flex-col justify-start items-stretch mt-4'>
         <FormField
           control={form.control}
           name='email'
-          render={({ field }) => (
-            <FormItem className="space-y-0" >
-              <div className="flex flex-row items-center gap-2">
-                <FormLabel className="text-right w-1/4 flex-none">Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="you@yourdomain.com" {...field} className="mt-0 grow"/>
-                </FormControl>
-              </div>
-              <div className="flex flex-row items-center gap-2">
-                <div className="text-right w-1/4 flex-none invisible">dummy</div>
-                <FormMessage className='grow'/>
-              </div>
-            </FormItem>
-          )}
+          render={({ field }) => ( <MyFormItem field={field} placeholder='email'/> )}
         />
         <FormField
           control={form.control}
           name='phone'
-          render={({ field }) => (
-            <FormItem className="space-y-0" >
-              <div className="flex flex-row items-center gap-2">
-                <FormLabel className="text-right w-1/4 flex-none">Phone</FormLabel>
-                <FormControl>
-                  <Input placeholder="999-999-9999" {...field} className="mt-0 flex-1"/>
-                </FormControl>
-              </div>
-              <div className="flex flex-row items-center gap-2">
-                <div className="text-right w-1/4 flex-none invisible">dummy</div>
-                <FormMessage className='flex-1'/>
-              </div>
-            </FormItem>
-          )}
+          render={({ field }) => ( <MyFormItem field={field} placeholder='phone'/> )}
         />
-        <div className='flex flex-row justify-center mt-4'>
-          <Button disabled={isPending} type='submit'>
+          <Button disabled={isPending} type='submit' className='bg-primary text-primary-foreground hover:bg-primary-hover'>
             {isPending ? (<>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Please wait
@@ -109,9 +100,8 @@ const ContactForm: React.FC<{
             )}
           </Button>
         </div>
-
       </form>
-      </Form>
+    </Form>
   )
 }
 

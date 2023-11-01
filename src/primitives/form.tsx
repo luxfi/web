@@ -4,9 +4,9 @@ import { Slot } from "@radix-ui/react-slot"
 
 import {
   Controller,
-  ControllerProps,
+  type ControllerProps,
   FieldPath,
-  FieldValues,
+  type FieldValues,
   FormProvider,
   useFormContext,
 } from "react-hook-form"
@@ -148,7 +148,7 @@ const FormMessage = React.forwardRef<
   const { error, formMessageId } = useFormField()
   const body = error ? String(error?.message) : children
 
-  const classes = 'text-xs font-medium ' + 
+  const classes = 'text-xs font-medium py-1 ' + 
                   (error ? 'text-destructive' : 'text-muted-foreground') + 
                   (body ? '' : ' invisible') // Hold space in the layout
 

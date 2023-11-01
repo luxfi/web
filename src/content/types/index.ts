@@ -2,7 +2,7 @@ import type AccordianBlock from './accordian-block'
 import type AssetBannerBlock from './asset-banner-block'
 import type Block from './block'
 import type CardBlock from './card-block'
-import type ContactInfo from './contact-info'
+import type { default as ContactInfo, ContactInfoFields} from './contact-info'
 import type CTABlock from './cta-block'
 import type ElementBlock from './element-block'
 import type HeadingBlock from './heading-block'
@@ -18,6 +18,7 @@ export {
    type Block,
    type CardBlock,
    type ContactInfo,
+   type ContactInfoFields,
    type CTABlock,
    type ElementBlock,
    type HeadingBlock,

@@ -26,18 +26,18 @@ const ContactDialog: React.FC<LinkModalProps> = ({
 }) => {
 
    return (
-    <Dialog open={open} onOpenChange={onOpenChange} >
+    <Dialog  open={open} onOpenChange={onOpenChange} >
       <DialogTrigger asChild>
         {trigger}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] p-0 gap-0">
-        <DialogHeader className='border-b bg-accent py-4'>
-          <DialogTitle className='text-4xl text-center'>{title}</DialogTitle>
-          {byline && (<DialogDescription className='text-center'>{byline} </DialogDescription>)}
+      <DialogContent className="sm:max-w-[500px] p-0 gap-0 light-theme">
+        <DialogHeader className='py-6  text-foreground'>
+          <DialogTitle className='text-4xl font-heading text-center text-inherit'>{title}</DialogTitle>
+          {byline && (<DialogDescription className='text-inherit text-xl text-center'>{byline} </DialogDescription>)}
         </DialogHeader>
-        <div className='p-8 border-2 rounded-e-lg flex flex-col justify-start items-center'>
+        <div className='p-8 rounded-e-lg flex flex-col justify-start items-center'>
           <ContactForm onSubmit={onSubmit} enclosure={submitEnclosure}/>
-          <div className='typography dark:typography-invert text-xs mt-4' >
+          <div className='text-muted-foreground text-xs mt-4' >
             <Disclaimer />
           </div>
         </div>

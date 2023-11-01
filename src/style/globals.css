@@ -4,97 +4,141 @@
 
 @layer base {
 
-  :root {
+  :root, .light, .light-theme {
     
-    --dk-fg-0: hsl(0 0% 100%);
-    --dk-fg-1: hsl(0 0% 85%);
-    --dk-fg-2: hsl(0 0% 70%);
-    --dk-fg-3: hsl(0 0% 55%);
-    --dk-fg-4: hsl(0 0% 35%);
+    --fg-0: hsl(0 0% 0%);
+    --fg-1: hsl(0 0% 20%);
+    --fg-2: hsl(0 0% 35%);
+    --fg-3: hsl(0 0% 50%);
+    --fg-4: hsl(0 0% 70%);
 
-    --dk-bg-inverted: var(--dk-fg-0);
-    --dk-bg-inverted-hover:  hsla(0, 0%, 100%, 0.85);
+    --bg-0: hsl(0 0% 100%);
+    --bg-1: hsl(0 0% 90%);
+    --bg-2: hsl(0 0% 75%);
+    --bg-3: hsl(0 0% 55%);
 
-    --dk-bg-3: hsl(0 0% 55%);
-    --dk-bg-2: hsl(0 0% 32%);
-    --dk-bg-1: hsl(0 0% 17%);
-    --dk-bg-0: hsl(0 0% 0%);
+    --bg-inverted: var(--fg-0);
+    --bg-inverted-hover:  hsla(0, 0%, 0%, 0.85);
 
-    --dk-fg-inverted: var(--dk-bg-0);
+    --fg-inverted: var(--bg-0);
 
-    --dk-2ndry-0: hsl(266, 79%, 40%);
-    --dk-2ndry-1: hsl(266, 79%, 50%);
-    --dk-2ndry-2: hsl(266, 79%, 60%);
-    --dk-2ndry-3: hsl(266, 79%, 70%);
+    --secondary-0: hsl(266, 79%, 80%);
+    --secondary-1: hsl(266, 79%, 70%);
+    --secondary-2: hsl(266, 79%, 60%);
+    --secondary-3: hsl(266, 79%, 50%);
 
-    --background: hsl(0 0% 100%);
-    --foreground: hsl(240 10% 3.9%);
-    --card: hsl(0 0% 100%);
-    --card-foreground: hsl(240 10% 3.9%);
-    --popover: hsl(0 0% 100%);
-    --popover-foreground: hsl(240 10% 3.9%);
-    --primary: hsl(240 5.9% 10%);
-    --primary-hover: hsl(240 3.8% 46.1%);
-    --primary-foreground: hsl(0 0% 98%);
-    --secondary: hsl(240 4.8% 95.9%);
-    --secondary-foreground: hsl(240 5.9% 10%);
-    --muted: hsl(240 4.8% 95.9%);
-    --muted-foreground: hsl(240 3.8% 46.1%);
-    --accent: hsl(240 4.8% 95.9%);
-    --accent-foreground: hsl(240 5.9% 10%);
-    --destructive: hsl(0 84.2% 60.2%);
-    --destructive-foreground: hsl(0 0% 98%);
-    --border: hsl(240 5.9% 90%);
-    --input: hsl(240 5.9% 90%);
-    --ring: hsl(240 5.9% 10%);
+    --background: var(--bg-0);
+    --foreground: var(--fg-0);
 
-     --radius: 0.5rem;
+    --card: var(--bg-0);
+    --card-foreground: var(--fg-0);
+
+    --popover: var(--bg-1);
+    --popover-foreground: var(--fg-0);
+
+    --primary: var(--bg-inverted);
+    --primary-hover: var(--bg-inverted-hover);
+    --primary-foreground: var(--fg-inverted);
+
+    --secondary: var(--secondary-0);
+    --secondary-hover: var(--secondary-2);
+    --secondary-foreground: var(--fg-0);
+
+    --nav: var(--fg-4);
+    --nav-current: var(--fg-0);
+    --nav-hover: var(--fg-0);
+
+    --muted: var(--bg-2);
+    --muted-foreground:var(--fg-2);
+
+    --very-muted: var(--bg-3);
+    --very-muted-foreground:var(--fg-4);
+
+    --accent: var(--bg-1);
+    --accent-foreground: var(--fg-0);
+
+    --destructive: hsl(0 62.8% 45%);
+    --destructive-hover: hsl(0 62.8% 25%);
+    --destructive-foreground: hsl(0 0% 100%);
+
+
+    --border: var(--bg-2);
+    --border-accented: var(--fg-0);
+    --input: var(--bg-1);
+    --ring: var(--fg-1);
+
+    --radius: 0.5rem;
   }
  
-  .dark {
+  .dark, .dark-theme {
 
-    --background: var(--dk-bg-0);
-    --foreground: var(--dk-fg-0);
+    --fg-0: hsl(0 0% 100%);
+    --fg-1: hsl(0 0% 85%);
+    --fg-2: hsl(0 0% 70%);
+    --fg-3: hsl(0 0% 55%);
+    --fg-4: hsl(0 0% 35%);
 
-    --card: var(--dk-bg-0);
-    --card-foreground: var(--dk-fg-0);
+    --bg-inverted: var(--fg-0);
+    --bg-inverted-hover:  hsla(0, 0%, 100%, 0.85);
 
-    --popover: var(--dk-bg-1);
-    --popover-foreground: var(--dk-fg-0);
+    --bg-3: hsl(0 0% 55%);
+    --bg-2: hsl(0 0% 32%);
+    --bg-1: hsl(0 0% 17%);
+    --bg-0: hsl(0 0% 0%);
 
-    --primary: var(--dk-bg-inverted);
-    --primary-hover: var(--dk-bg-inverted-hover);
-    --primary-foreground: var(--dk-fg-inverted);
+    --fg-inverted: var(--bg-0);
 
-    --secondary: var(--dk-2ndry-0);
-    --secondary-hover: var(--dk-2ndry-2);
-    --secondary-foreground: var(--dk-fg-0);
+    --secondary-0: hsl(266, 79%, 40%);
+    --secondary-1: hsl(266, 79%, 50%);
+    --secondary-2: hsl(266, 79%, 60%);
+    --secondary-3: hsl(266, 79%, 70%);
 
-    --nav: var(--dk-fg-4);
-    --nav-current: var(--dk-fg-0);
-    --nav-hover: var(--dk-fg-0);
 
-    --muted: var(--dk-bg-2);
-    --muted-foreground:var(--dk-fg-2);
+    --background: var(--bg-0);
+    --foreground: var(--fg-0);
 
-    --very-muted: var(--dk-bg-3);
-    --very-muted-foreground:var(--dk-fg-4);
+    --card: var(--bg-0);
+    --card-foreground: var(--fg-0);
 
-    --accent: var(--dk-bg-1);
-    --accent-foreground: var(--dk-fg-0);
+    --popover: var(--bg-1);
+    --popover-foreground: var(--fg-0);
+
+    --primary: var(--bg-inverted);
+    --primary-hover: var(--bg-inverted-hover);
+    --primary-foreground: var(--fg-inverted);
+
+    --secondary: var(--secondary-0);
+    --secondary-hover: var(--secondary-2);
+    --secondary-foreground: var(--fg-0);
+
+    --nav: var(--fg-4);
+    --nav-current: var(--fg-0);
+    --nav-hover: var(--fg-0);
+
+    --muted: var(--bg-2);
+    --muted-foreground:var(--fg-2);
+
+    --very-muted: var(--bg-3);
+    --very-muted-foreground:var(--fg-4);
+
+    --accent: var(--bg-1);
+    --accent-foreground: var(--fg-0);
 
     --destructive: hsl(0 62.8% 30.6%);
     --destructive-hover: hsl(0 62.8% 40.6%);
     --destructive-foreground: hsl(0 0% 100%);
 
-    --border: var(--dk-bg-2);
-    --border-accented: var(--dk-fg-0);
-    --input: var(--dk-bg-1);
-    --ring: var(--dk-fg-1);
+    --border: var(--bg-2);
+    --border-accented: var(--fg-0);
+    --input: var(--bg-1);
+    --ring: var(--fg-1);
 
     --radius: 0.5rem;
   }
 }
+
+
+
 @layer base {
   * {
     @apply border-border;
