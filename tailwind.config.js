@@ -1,5 +1,6 @@
-const typoPluginExtends = require('./src/style/typo-plugin-extends')
-const colors = require('./src/style/colors')
+const typoPluginConf = require('./src/style/typogrpahy-plugin.tailwind')
+const colors = require('./src/style/colors.tailwind')
+const fontFamily = require('./src/style/fonts.tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
   content: ["src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      typography: typoPluginExtends,
+      typography: typoPluginConf,
     },
     accentColor: ({ theme }) => ({
       ...theme('colors'),
@@ -287,41 +288,7 @@ module.exports = {
       0: '0',
       DEFAULT: '1',
     },
-    fontFamily: {
-      sans: [
-        'var(--font-inter)',
-        // Do not provide an array of fallbacks.
-        // there's a bug in Next where they get listed out in this order so the 
-        // last one cascades!
-        /*
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"', */
-      ],
-      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: [
-        'ui-monospace',
-        'SFMono-Regular',
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        '"Liberation Mono"',
-        '"Courier New"',
-        'monospace',
-      ],
-      heading: ['var(--font-druk-text-wide)']
-    },
+    fontFamily,
     fontSize: {
       xs: ['0.8rem', { lineHeight: '1rem' }],
       sm: ['0.9rem', { lineHeight: '1.2rem' }],
