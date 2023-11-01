@@ -1,4 +1,4 @@
-const typoPluginConf = require('./src/style/typogrpahy-plugin.tailwind')
+const typoPluginConf = require('./src/style/typography-plugin.tailwind')
 const colors = require('./src/style/colors.tailwind')
 const fontFamily = require('./src/style/fonts.tailwind')
 
