@@ -1,9 +1,10 @@
-const commonTags = {
+const commonTags = (theme) => ({
   maxWidth: 'initial',
   color: "var(--foreground)",
   p: {
     margin: 0,
     alignSelf: 'flex-start',
+    fontFamily: theme('fontFamily.sans'),
     fontSize: '1.1rem',
     lineHeight: 1.4,
     fontWeight: 400
@@ -11,14 +12,17 @@ const commonTags = {
   ol: {
     margin: 0,
     alignSelf: 'flex-start',
+    fontFamily: theme('fontFamily.sans'),
     
   },
   ul: {
     margin: 0,
     listStylePosition: 'outside',
     listStyleImage: "url('/assets/img/lux-icon-for-bullet-list--18x16.png')",
+    fontFamily: theme('fontFamily.sans'),
   },
   a: {
+    fontFamily: theme('fontFamily.sans'),
     textDecoration: 'underline',
     '&:hover': {
       opacity: 0.6,
@@ -28,7 +32,7 @@ const commonTags = {
   img: {
     margin: 0
   },
-}
+})
 
 export default (theme) => ({
   DEFAULT: {

@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   },
 }
 
+const bodyClasses =
+'min-h-screen bg-background fg-foreground antialiased overflow-x-hidden ' + 
+`${inter.variable} ${drukTextWide.variable} font-sans` 
+
+
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
   <html lang="en" suppressHydrationWarning>
     <head >
@@ -34,7 +39,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
       <base target="_blank" />
     </head>
     <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-    <body className={cn('min-h-screen bg-background font-sans antialiased overflow-x-hidden', inter.variable, drukTextWide.variable )}>
+    <body className={bodyClasses}>
         <div className="relative flex min-h-screen flex-col">
           <Header />
           {children}

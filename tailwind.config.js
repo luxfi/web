@@ -1,4 +1,5 @@
 const typoPluginExtends = require('./src/style/typo-plugin-extends')
+const colors = require('./src/style/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -142,58 +143,7 @@ module.exports = {
       200: '2',
     },
     caretColor: ({ theme }) => theme('colors'),
-    colors: ({ colors }) => ({
-      inherit: colors.inherit,
-      current: colors.current,
-      transparent: colors.transparent,
-      border: {
-        DEFAULT: "var(--border)",
-        accented: "var(--border-accented)",
-      },
-      input: "var(--input)",
-      ring: "var(--ring)",
-      background: "var(--background)", 
-      foreground: "var(--foreground)",
-      primary: {
-        DEFAULT: "var(--primary)",
-        hover: "var(--primary-hover)",
-        foreground: "var(--primary-foreground)",
-      },
-      secondary: {
-        DEFAULT: "var(--secondary)",
-        hover: "var(--secondary-hover)",
-        foreground: "var(--secondary-foreground)",
-      },
-      destructive: {
-        DEFAULT: "var(--destructive)",
-        foreground: "var(--destructive-foreground)",
-      },
-      muted: {
-        DEFAULT: "var(--muted)",
-        foreground: "var(--muted-foreground)",
-      },
-      ['very-muted']: {
-        DEFAULT: "var(--very-muted)",
-        foreground: "var(--very-muted-foreground)",
-      },
-      nav: {
-        DEFAULT: "var(--nav)",
-        hover: "var(--nav-hover)",
-        current: "var(--nav-current)",
-      },
-      accent: {
-        DEFAULT: "var(--accent)",
-        foreground: "var(--accent-foreground)",
-      },
-      popover: {
-        DEFAULT: "var(--popover)",
-        foreground: "var(--popover-foreground)",
-      },
-      card: {
-        DEFAULT: "var(--card)",
-        foreground: "var(--card-foreground)",
-      },
-    }),
+    colors,
     columns: {
       auto: 'auto',
       1: '1',
@@ -340,6 +290,10 @@ module.exports = {
     fontFamily: {
       sans: [
         'var(--font-inter)',
+        // Do not provide an array of fallbacks.
+        // there's a bug in Next where they get listed out in this order so the 
+        // last one cascades!
+        /*
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -353,7 +307,7 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+        '"Noto Color Emoji"', */
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
