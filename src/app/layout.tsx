@@ -3,8 +3,7 @@ import { Metadata } from "next"
 
 import TailwindIndicator from "@/primitives/tailwind-indicator"
 import ThemeProvider from "@/context-providers/theme-provider"
-import { inter, drukTextWide } from "@/style/fonts" // need to import this somewhere so it gets added to global.css compile
-import { cn } from "@/util"
+import { inter, drukTextWide } from "@/style/nextFonts"
 
 import Header from "@/components/header"
 
@@ -26,11 +25,16 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 }
-
+/*
+  These '.variable' fields are actually css classnames that define the actual
+  css variables and make them availbale in scope.  This MUST
+  be done at a high-level tak like this for the tailwind font classes to work.
+  
+  (not to be confused with the css var itself.  This field should be named something else!)
+*/
 const bodyClasses =
-'min-h-screen bg-background fg-foreground antialiased overflow-x-hidden ' + 
-`${inter.variable} ${drukTextWide.variable} font-sans` 
-
+  'min-h-screen bg-background fg-foreground antialiased overflow-x-hidden ' + 
+  `${inter.variable} ${drukTextWide.variable} font-sans` 
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
   <html lang="en" suppressHydrationWarning>
@@ -45,10 +49,9 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
           {children}
         </div>
         <TailwindIndicator />
-        
     </body>
     </ThemeProvider>
   </html>
 )
-// <div className={cn('hidden', drukTextWide.variable)} />
+
 export default RootLayout

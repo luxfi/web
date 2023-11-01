@@ -1,6 +1,7 @@
 const typoPluginConf = require('./src/style/typography-plugin.tailwind')
 const colors = require('./src/style/colors.tailwind')
-const fontFamily = require('./src/style/fonts.tailwind')
+const { fontFamily, fontSize } = require('./src/style/fonts.tailwind')
+const screens = require('./src/style/screens.tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -289,21 +290,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily,
-    fontSize: {
-      xs: ['0.8rem', { lineHeight: '1rem' }],
-      sm: ['0.9rem', { lineHeight: '1.2rem' }],
-      base: ['1rem', { lineHeight: '1.5rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.25rem', { lineHeight: '1.75rem' }],
-      '2xl': ['1.5rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-      '5xl': ['3rem', { lineHeight: '1' }],
-      '6xl': ['3.75rem', { lineHeight: '1' }],
-      '7xl': ['4.5rem', { lineHeight: '1' }],
-      '8xl': ['6rem', { lineHeight: '1' }],
-      '9xl': ['8rem', { lineHeight: '1' }],
-    },
+    fontSize,
     fontWeight: {
       thin: '100',
       extralight: '200',
@@ -747,14 +734,7 @@ module.exports = {
       125: '1.25',
       150: '1.5',
     },
-    screens: {
-      xs: '400px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1500px', // to match other sites
-    },
+    screens,
     scrollMargin: ({ theme }) => ({
       ...theme('spacing'),
     }),
@@ -959,11 +939,7 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    require('@tailwindcss/typography')(
-      {
-        className: 'typography'
-      }
-    ),
+    require('@tailwindcss/typography')({ className: 'typography' }),
     require('@tailwindcss/container-queries'),
   ],
 }
