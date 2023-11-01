@@ -58,21 +58,21 @@ export default (theme) => ({
       h4: {
         fontSize: theme('fontSize.lg'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 800,
         textAlign: 'center'
       },
       h5: {
         fontSize: theme('fontSize.lg'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 600,
         textAlign: 'center'
       },
       h6: {
         fontSize: theme('fontSize.lg'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 400,
         textAlign: 'center'
       },
@@ -102,20 +102,20 @@ export default (theme) => ({
       h4: {
         fontSize: theme('fontSize.xl'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 700
       },
       h5: {
         fontSize: theme('fontSize.lg'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 700,
         textTransform: 'uppercase',
       },
       h6: {
         fontSize: theme('fontSize.lg'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 800,
         //textTransform: 'uppercase',
       },
@@ -151,7 +151,7 @@ export default (theme) => ({
       h4: {
         fontSize: theme('fontSize[3xl]'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 700,
         textAlign: 'center',
         lineHeight: 1.0,
@@ -159,14 +159,14 @@ export default (theme) => ({
       h5: {
         fontSize: theme('fontSize[2xl]'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 800,
         textAlign: 'center',
       },
       h6: {
         fontSize: theme('fontSize.xl'),  
         margin: 0,
-        fontFamily: theme('fontFamily.inter'),
+        fontFamily: theme('fontFamily.sans'),
         fontWeight: 800,
         textAlign: 'center',
         lineHeight: 1.1,

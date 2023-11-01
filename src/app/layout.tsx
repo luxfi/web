@@ -3,14 +3,12 @@ import { Metadata } from "next"
 
 import TailwindIndicator from "@/primitives/tailwind-indicator"
 import ThemeProvider from "@/context-providers/theme-provider"
+import { inter, drukTextWide } from "@/style/fonts" // need to import this somewhere so it gets added to global.css compile
 import { cn } from "@/util"
-import { inter } from "@/style/fonts"
 
 import Header from "@/components/header"
 
-import "@/style/typo.css"
 import "@/style/globals.css"
-
 
 export const metadata: Metadata = {
   title: {
@@ -36,15 +34,16 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) =>  (
       <base target="_blank" />
     </head>
     <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-    <body className={cn('min-h-screen bg-background font-sans antialiased overflow-x-hidden', inter.variable )}>
+    <body className={cn('min-h-screen bg-background font-sans antialiased overflow-x-hidden', inter.variable, drukTextWide.variable )}>
         <div className="relative flex min-h-screen flex-col">
           <Header />
           {children}
         </div>
         <TailwindIndicator />
+        
     </body>
     </ThemeProvider>
   </html>
 )
-
+// <div className={cn('hidden', drukTextWide.variable)} />
 export default RootLayout

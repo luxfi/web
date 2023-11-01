@@ -8,10 +8,10 @@ const variant = {
   primary: "bg-primary text-primary-foreground hover:bg-primary-hover font-heading not-typography",
   secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 font-heading not-typography",
   outline: "border border-primary hover:bg-accent hover:text-accent-foreground font-heading not-typography",
-  destructive: "bg-destructive text-destructive-foreground font-inter hover:bg-destructive-hover",
-  ghost: "hover:bg-accent hover:text-accent-foreground font-inter ",
-  link: "text-foreground hover:text-muted-foreground font-inter ",
-  linkFG: "text-foreground hover:text-muted-foreground font-inter ", // marker to style nav as regular link
+  destructive: "bg-destructive text-destructive-foreground font-sans hover:bg-destructive-hover",
+  ghost: "hover:bg-accent hover:text-accent-foreground font-sans ",
+  link: "text-foreground hover:text-muted-foreground font-sans ",
+  linkFG: "text-foreground hover:text-muted-foreground font-sans ", // marker to style nav as regular link
 }
 
 const size = {

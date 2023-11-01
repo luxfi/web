@@ -6,11 +6,9 @@ module.exports = {
   darkMode: ["class"],
   content: ["src/**/*.{ts,tsx}"],
   theme: {
-
     extend: {
       typography: typoPluginExtends,
     },
-
     accentColor: ({ theme }) => ({
       ...theme('colors'),
       auto: 'auto',
@@ -148,7 +146,6 @@ module.exports = {
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
-
       border: {
         DEFAULT: "var(--border)",
         accented: "var(--border-accented)",
@@ -341,8 +338,8 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
-      inter: ["var(--font-inter)"],
       sans: [
+        'var(--font-inter)',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -369,8 +366,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      headingWider: ["'Druk Wide'"],
-      heading: ["'Druk Text Wide'"]
+      heading: ['var(--font-druk-text-wide)']
     },
     fontSize: {
       xs: ['0.8rem', { lineHeight: '1rem' }],
@@ -1050,4 +1046,3 @@ module.exports = {
     require('@tailwindcss/container-queries'),
   ],
 }
-

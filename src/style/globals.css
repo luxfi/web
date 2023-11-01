@@ -93,7 +93,6 @@
     --secondary-2: hsl(266, 79%, 60%);
     --secondary-3: hsl(266, 79%, 70%);
 
-
     --background: var(--bg-0);
     --foreground: var(--fg-0);
 
@@ -136,8 +135,6 @@
     --radius: 0.5rem;
   }
 }
-
-
 
 @layer base {
   * {
