@@ -37,16 +37,16 @@ const Desktop: React.FC<{
     >
       {landing.banners.map((banner, index) => (
         <SwiperSlide key={index} className=''>
-          <ApplyTypography asTag='section' className={'w-full lg:pt-20 lg:gap-40 flex flex-col items-stretch justify-start self-stretch'} >
+          <ApplyTypography asTag='section' className={'w-full lg:pt-20 lg:gap-40 md:gap-20 md:pt-8 flex flex-col items-stretch justify-start self-stretch'} >
             <AssetBannerComponent asset={banner} grouping='titleAndMedia-cta' />
           </ApplyTypography>
         </SwiperSlide>
       ))}
         <SwiperSlide key='last' className='flex flex-col justify-start items-stretch' >
-          <ApplyTypography asTag='section' className='grow-0 w-full border-b md:pb-20 lg:pt-20 lg:gap-40 flex flex-col items-center justify-start self-stretch' >
+          <ApplyTypography asTag='section' className='grow-0 w-full border-b md:pb-6 lg:pt-20 lg:gap-40 flex flex-col items-center justify-start self-stretch' >
             {landing.bottom.element}
           </ApplyTypography>
-          <Footer className='grow max-w-screen-2xl w-full lg:mx-auto md:pt-16 border-t-0 flex flex-col justify-between'/>
+          <Footer className='grow max-w-screen-2xl w-full lg:mx-auto md:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
         </SwiperSlide>
     </Swiper>
   )
@@ -72,7 +72,7 @@ const TouchDevice: React.FC<{
           className={
             'mx-auto flex flex-col items-stretch w-full' +
             (
-            isTablet ? ' gap-2 h-full mt-0 justify-around pb-24' 
+            isTablet ? ' gap-2 h-full mt-0 justify-around lg:justify-start lg:gap-24 lg:pt-24 pb-24' 
               : 
             ' h-full py-16 justify-between '
           )} 
@@ -82,7 +82,7 @@ const TouchDevice: React.FC<{
       </SwiperSlide>
     )) }
       <SwiperSlide key='last' >
-        <ApplyTypography asTag='section' className='pt-[60px] h-full pb-6 mx-auto px-2 flex flex-col justify-around items-center' >
+        <ApplyTypography asTag='section' className='pt-[60px] h-full pb-6 mx-auto px-2 flex flex-col justify-around lg:justify-start lg:gap-[150px] lg:pt-[300px] items-center' >
           {landing.bottom.element}
         </ApplyTypography>
       </SwiperSlide>
