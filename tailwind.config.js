@@ -7,7 +7,7 @@ const screens = require('./src/style/screens.tailwind')
 module.exports = {
   presets: [],
   darkMode: ["class"],
-  content: ["src/**/*.{ts,tsx}"],
+  content: ["src/**/*.{ts,tsx,js}"],
   theme: {
     extend: {
       typography: typoPluginConf,

@@ -17,7 +17,7 @@ export default{
         variant: 'outline'
       },
       {
-        component: <Button variant='primary' size='lg'>Waitlist</Button>,
+        component: <Button variant='primary' size='default' className='w-1/2'>Waitlist</Button>,
         modal
       },
     ]

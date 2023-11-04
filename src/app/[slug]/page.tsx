@@ -22,10 +22,10 @@ export async function generateStaticParams() {
     'silver',
     'gold',
     'coin',
-    'uranium',
     'credit',
     'validator',
     'pass',
+    'uranium',
   ]
  
   return products.map((p) => ({

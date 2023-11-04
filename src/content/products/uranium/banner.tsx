@@ -6,7 +6,7 @@ import modal from './waitlist-modal'
 export default {
   blockType: 'asset-banner',
   title: 'LUX URANIUM',
-  byline: 'Own digital uranium, backed by the real thing.',
+  byline: <>Own digital uranium, <br className='sm:hidden'/>backed by the real thing.</>,
   media,
   ctas: {
     blockType: 'cta',
@@ -17,7 +17,7 @@ export default {
         variant: 'outline'
       },
       {
-        component: <Button variant='primary' size='lg'>Waitlist</Button>,
+        component: <Button variant='primary' size='default' className='w-1/2'>Waitlist</Button>,
         modal
       },
     ]

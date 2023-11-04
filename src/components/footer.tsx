@@ -29,18 +29,20 @@ const Footer: React.FC<{
       <div className='hidden lg:flex flex-col' key={0}>
         <Logo size='md' />
       </div>
-      {footer.map((ctaBlock, index) => (
+      {footer.map((ctaBlock, index) => {
+        const colSpan = ((index === footer.length - 1) && (footer.length % 2 === 1)) ? 'col-span-2 mx-auto items-center sm:col-span-1 sm:mx-0 sm:items-start' : ''
+        return (
         <NavItems
           items={ctaBlock.items} 
           as={(ctaBlock.type === 'nav') ? 'nav' : 'div'} 
-          className='flex flex-col gap-[12px] md:gap-[15px] justify-start w-fit items-start' 
+          className={'w-fit flex flex-col justify-start items-start gap-[12px] md:gap-[15px] ' + colSpan} 
           key={index + 1}
           itemClassName={'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-foreground'}
           itemClassNameFromVariant={(variant: ButtonVariants) => ( variant === 'linkFG' ? 
             'font-heading text-[15px]/[1.3] font-medium text-foreground tracking-normal' 
           : '')}
         /> 
-      ))}
+      )})}
     </div>
     <div className='text-sm text-center text-very-muted-foreground py-4'>
       <Copyright />

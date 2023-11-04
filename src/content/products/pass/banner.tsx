@@ -6,10 +6,11 @@ import modal from './waitlist-modal'
 export default    {
   blockType: 'asset-banner',
   title: 'LUX PASS',
-  contentBefore: (<>
-    <h6>FREE priority access to LUX events and NFT drops.</h6>
-    <p>Get priority access to the launch.</p>
-  </>),
+  contentBefore: (
+    <div className='text-center'>
+      FREE priority access to LUX events <br className='md:hidden'/>
+      and NFT drops. Priority access to the launch!
+    </div>),
   media,
   ctas: {
     blockType: 'cta',
@@ -20,7 +21,7 @@ export default    {
         variant: 'outline'
       },
       {
-        component: <Button variant='primary' size='lg'>Waitlist</Button>,
+        component: <Button variant='primary' size='default' className='w-1/2'>Waitlist</Button>,
         modal
       },
     ]

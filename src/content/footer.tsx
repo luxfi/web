@@ -29,10 +29,10 @@ export default [
         title: 'Lux Coin',
         href: '/coin',
       },
-      {
+      /*{
         title: 'Lux Uranium',
         href: '/uranium',
-      },
+      }*/,
       {
         title: 'Lux Credit',
         href: '/credit',
@@ -135,7 +135,7 @@ export default [
         icon: <SocialIcon network='telegram' size={SOC_ICON_SIZE} />
       },
       {
-        title: 'X (fm. Twitter)',
+        title: 'X (Twitter)',
         href: 'https://twitter.com/luxdefi',
         external: true,
         icon: <SocialIcon network='x' size={SOC_ICON_SIZE} />
