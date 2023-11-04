@@ -1,5 +1,7 @@
 import React from 'react'
 
+import LinkItem from '@/components/link-item'
+
 import type { AssetBannerBlock, ElementBlock } from '../types'
 
 import silver from '../products/silver/banner'
@@ -10,7 +12,6 @@ import credit from '../products/credit/banner'
 import pass from '../products/pass/banner'
 import uranium from '../products/uranium/banner'
 
-import BottomMDX from './landing-bottom.mdx'
 
 export default {
 
@@ -26,7 +27,24 @@ export default {
 
   bottom: {
     blockType: 'element',
-    element: <BottomMDX /> 
+    element: <>
+      <div>
+        <h5 >Join the global rush to own silver</h5>
+        <h2>THE SILVER RUSH IS HERE</h2>
+      </div>
+      <LinkItem 
+        item={{
+          title: 'Enter App',
+          href: 'https://app.lux.market',
+          external: true,
+          newTab: false,
+          variant: 'primary',
+        }}
+        size='lg'
+      />
+    </> 
   } as ElementBlock
 
 }
+
+// className='mt-32 lg:mt-4'

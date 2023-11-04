@@ -941,5 +941,6 @@ module.exports = {
     require("tailwindcss-animate"),
     require('@tailwindcss/typography')({ className: 'typography' }),
     require('@tailwindcss/container-queries'),
+    require('tailwindcss-interaction-media'),
   ],
 }

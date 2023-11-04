@@ -48,7 +48,8 @@ const ProductPage = ({ params }: Props) => {
     <Main className='md:flex-row md:gap-4 '>
       <ProductDetailBlockComponent product={product}/>
     </Main>
-    <Footer />
+    <div className='border-t'></div>
+    <Footer className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
   </>)
 }
 

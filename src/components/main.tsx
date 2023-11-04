@@ -5,10 +5,12 @@ const c = 'lg:max-w-[1200px] lg:mx-auto ' +
   'p-4 md:px-6 lg:px-8 '
 
 const Main: React.FC<
-  PropsWithChildren & { className?: string }
+  PropsWithChildren & { 
+    className?: string 
+  }
 > = ({
   children,
-  className=''
+  className='',
 }) => (
   <main className={c + className}>
     {children}

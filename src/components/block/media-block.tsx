@@ -10,7 +10,12 @@ const MediaBlockComponent: React.FC<{
   className
 }) => (
   media.blockType === 'video' ? (
-    <VideoPlayer className={className} sources={media.sources} {...media.dim} {...media.videoProps} />
+    <VideoPlayer 
+      className={className} 
+      sources={media.sources} 
+      {...media.dim} 
+      {...media.videoProps} 
+    />
   ) : (
     <p>image to do</p>
   )

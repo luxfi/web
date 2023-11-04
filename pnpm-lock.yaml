@@ -56,6 +56,9 @@ dependencies:
   react:
     specifier: ^18.2.0
     version: 18.2.0
+  react-device-detect:
+    specifier: ^2.2.3
+    version: 2.2.3(react-dom@18.2.0)(react@18.2.0)
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
@@ -68,6 +71,9 @@ dependencies:
   sharp:
     specifier: ^0.31.3
     version: 0.31.3
+  swiper:
+    specifier: ^11.0.3
+    version: 11.0.3
   tailwind-merge:
     specifier: ^1.13.2
     version: 1.13.2
@@ -77,6 +83,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.6
     version: 1.0.6(tailwindcss@3.3.2)
+  tailwindcss-interaction-media:
+    specifier: ^0.1.0
+    version: 0.1.0
   validator:
     specifier: ^13.11.0
     version: 13.11.0
@@ -2506,6 +2515,17 @@ packages:
       strip-json-comments: 2.0.1
     dev: false
 
+  /react-device-detect@2.2.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-buYY3qrCnQVlIFHrC5UcUoAj7iANs/+srdkwsnNjI7anr3Tt7UY6MqNxtMLlr0tMBied0O49UZVK8XKs3ZIiPw==}
+    peerDependencies:
+      react: '>= 0.14.0'
+      react-dom: '>= 0.14.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      ua-parser-js: 1.0.37
+    dev: false
+
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -2839,6 +2859,11 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
+  /swiper@11.0.3:
+    resolution: {integrity: sha512-MyV9ooQsriAe2EibeamqewLjgCfSvl2xoyratl6S3ln5BXDL4BzlO6mxcbLMCzQL6Z60b/u0AS/nKrepL0+TAg==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
+
   /tailwind-merge@1.13.2:
     resolution: {integrity: sha512-R2/nULkdg1VR/EL4RXg4dEohdoxNUJGLMnWIQnPKL+O9Twu7Cn3Rxi4dlXkDzZrEGtR+G+psSXFouWlpTyLhCQ==}
     dev: false
@@ -2849,6 +2874,10 @@ packages:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
       tailwindcss: 3.3.2
+    dev: false
+
+  /tailwindcss-interaction-media@0.1.0:
+    resolution: {integrity: sha512-3/o9Gc8sXqrUHp/7w4T+Zt46GubrO7BRmxJpB6BogJt0B33K5G1lOVe2q0Ro43Zkk51Tp2ED0zQ/wL5weO+yUw==}
     dev: false
 
   /tailwindcss@3.3.2:
@@ -2990,6 +3019,10 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /ua-parser-js@1.0.37:
+    resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
+    dev: false
 
   /unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}

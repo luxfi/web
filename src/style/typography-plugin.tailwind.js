@@ -37,7 +37,7 @@ const commonTags = (theme) => ({
 export default (theme) => ({
   DEFAULT: {
     css: {
-      ...commonTags,
+      ...commonTags(theme),
       h1: {
         fontSize: theme('fontSize[3xl]'),
         fontFamily: theme('fontFamily.heading'),
@@ -84,7 +84,7 @@ export default (theme) => ({
   },
   md: {
     css: {
-      ...commonTags,
+      ...commonTags(theme),
       h1: {
         fontSize: theme('fontSize[4xl]'),
         fontFamily: theme('fontFamily.heading'),
@@ -127,7 +127,7 @@ export default (theme) => ({
   },
   lg: {
     css: {
-      ...commonTags,
+      ...commonTags(theme),
       h1: {
         fontSize: theme('fontSize[6xl]'),
         fontFamily: theme('fontFamily.heading'),

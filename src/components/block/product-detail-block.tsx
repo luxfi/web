@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import ApplyTypography from '@/primitives/apply-typography'
 
@@ -19,7 +19,17 @@ const ProductDetailBlockComponent: React.FC<{
   product: ProductDetailBlock
 }> = ({
   product: p
-}) => (<>
+}) => {
+  
+  useEffect(() => {
+    document.body.classList.remove('overflow-y-hidden')
+    return () => {
+      document.body.classList.add('overflow-y-hidden')
+    }
+  }, [])
+
+
+  return (<>
   <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-[150px] md:static'>
     <MediaBlockComponent media={p.media} className='md:sticky top-10 mx-auto'/>
   </div>
@@ -33,7 +43,7 @@ const ProductDetailBlockComponent: React.FC<{
       {p.price && (<>
         <Spacer />
         <h3>{p.price.heading}</h3>
-        <div className='flex flex-col justify-start items-stretch self-stretch md:self-center md:grid md:grid-cols-2 gap-4 '>
+        <div className='flex flex-col justify-start items-stretch self-stretch w-full md:self-center md:grid md:grid-cols-2 gap-4 '>
           <StandardCard card={p.price.priceCard} />
           <StandardCard card={p.price.msCard} />
         </div>
@@ -49,8 +59,10 @@ const ProductDetailBlockComponent: React.FC<{
         }
         return <BlockRenderer block={block} key={index}/>
       })}
+      <Spacer />
     </ApplyTypography>
   </div>
 </>)
+}
 
 export default ProductDetailBlockComponent
