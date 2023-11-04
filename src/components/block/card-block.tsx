@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/primitives/card"
 
-import type { CardBlock } from '@/content/types'
+import type { CardBlock } from '@/types/blocks'
 
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'

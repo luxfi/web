@@ -1,4 +1,4 @@
-import type { LinkItemDef } from './types'
+import type { LinkItemDef } from '@/types/blocks'
 
 const nav = [
   {

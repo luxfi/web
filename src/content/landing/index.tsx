@@ -2,7 +2,7 @@ import React from 'react'
 
 import LinkItem from '@/components/link-item'
 
-import type { AssetBannerBlock, ElementBlock } from '../types'
+import type { AssetBannerBlock, ElementBlock } from '@/types/blocks'
 
 import silver from '../products/silver/banner'
 import gold from '../products/gold/banner'

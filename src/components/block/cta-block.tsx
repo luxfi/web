@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { type CTABlock } from '@/content/types'
+import { type CTABlock } from '@/types/blocks'
 import LinkItem from '@/components/link-item'
 
 const CtaBlockComponent: React.FC<{

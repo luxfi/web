@@ -1,5 +1,5 @@
 import React from 'react'
-import { type MediaBlock } from '@/content/types'
+import { type MediaBlock } from '@/types/blocks'
 import VideoPlayer from '@/primitives/video-player'
 
 const MediaBlockComponent: React.FC<{

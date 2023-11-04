@@ -1,4 +1,4 @@
-import { type MediaBlock } from '@/content/types'
+import { type MediaBlock } from '@/types/blocks'
 import { defaultVideoProps } from '@/util'
 
 export default  {

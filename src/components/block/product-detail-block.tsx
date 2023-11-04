@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 
 import ApplyTypography from '@/primitives/apply-typography'
 
-import type ProductDetailBlock from '@/content/types/product-detail-block'
+import type ProductDetailBlock from '@/types/blocks/product-detail-block'
 import MediaBlockComponent from './media-block'
 import AccordianBlockComponent from './accordian-block'
 import { StandardCard } from './card-block'

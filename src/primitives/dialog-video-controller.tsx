@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-import {type LinkModalProps} from '@/content/types/link-item-def'
+import {type LinkModalProps} from '@/types/blocks/link-item-def'
 
 const DialogVideoController: React.FC<{
   renderDialog: (props: Omit<LinkModalProps, 'trigger' | 'title' | 'byline'  | 'onSubmit' >) => React.ReactNode

@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/primitives/accordion"
 
-import { type AccordianBlock } from '@/content/types'
+import { type AccordianBlock } from '@/types/blocks'
 import ApplyTypography from '@/primitives/apply-typography'
 
 const AccordianBlockComponent: React.FC<{

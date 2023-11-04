@@ -1,6 +1,6 @@
 import Button from '@/primitives/button'
 
-import type * as C from '@/content/types'
+import type * as C from '@/types/blocks'
 import MiniChart from '@/components/mini-chart'
 
 import DescMDX from './desc.mdx'

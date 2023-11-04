@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 
-import type { LinkItemDef }  from '@/content/types/link-item-def'
+import { type LinkItemDef }  from '@/types/blocks/link-item-def'
 import { cn } from "@/util"
 import { buttonVariants, type ButtonSizes, type ButtonVariants } from '@/primitives/button'
 import DialogVideoController from '@/primitives/dialog-video-controller'
@@ -20,7 +20,7 @@ const LinkItem: React.FC<{
   className = ''
 } ) => {
 
-    // See notes in content/types/link-item-def
+    // See notes in types/blocks/link-item-def
   const { component, modal } = item
 
   if (component) {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeadingBlock } from '@/content/types'
+import { HeadingBlock } from '@/types/blocks'
 
 
 const HeadingBlockComponent: React.FC<{

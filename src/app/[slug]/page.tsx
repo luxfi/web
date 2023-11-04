@@ -2,7 +2,7 @@ import React  from 'react'
 
 import { notFound } from 'next/navigation'
 
-import type ProductDetailBlock from '@/content/types/product-detail-block'
+import type ProductDetailBlock from '@/types/blocks/product-detail-block'
 
 import Footer from '@/components/footer'
 import Main from '@/components/main'

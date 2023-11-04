@@ -11,7 +11,7 @@ import {
   DialogTrigger,
 } from "@/primitives/dialog"
 
-import type { LinkModalProps} from '@/content/types/link-item-def'
+import type { LinkModalProps} from '@/types/blocks/link-item-def'
 import ContactForm from './contact-form'
 import Disclaimer from './disclaimer.mdx'
 

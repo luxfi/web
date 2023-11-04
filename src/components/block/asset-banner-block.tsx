@@ -2,7 +2,7 @@
 'use client'
 import React, { useEffect, useState }  from 'react'
 
-import type { AssetBannerBlock } from '@/content/types'
+import type { AssetBannerBlock } from '@/types/blocks'
 import ApplyTypography from '@/primitives/apply-typography'
 
 import MediaBlockComponent from './media-block'

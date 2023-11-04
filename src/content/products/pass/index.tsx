@@ -1,4 +1,4 @@
-import type * as C from '@/content/types'
+import type * as C from '@/types/blocks'
 
 import Button from '@/primitives/button'
 

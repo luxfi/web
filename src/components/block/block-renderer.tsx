@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type * as B from '@/content/types'
+import type * as B from '@/types/blocks'
 
 import { StandardCard, MediaLeftCard } from '@/components/block/card-block'
 import HeadingBlockComponent from './heading-block'

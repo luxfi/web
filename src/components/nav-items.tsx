@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { type LinkItemDef }  from '@/content/types'
+import { type LinkItemDef }  from '@/types/blocks'
 import LinkItem from './link-item'
 import { ButtonVariants } from '@/primitives/button'
 

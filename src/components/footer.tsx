@@ -9,8 +9,6 @@ import Copyright from './copyright'
 
 import { footer } from '@/content'
 
-//import CTABlockComponent from './block/cta-block'
-
 const Footer: React.FC<{
   className?: string,
   noHorizPadding?: boolean

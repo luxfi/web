@@ -17,8 +17,8 @@ import {
   FormMessage,
 } from '@/primitives/form'
 
-import type { ContactInfo, ContactInfoFields } from '@/content/types'
-import type { SubmitServerAction } from '@/content/types/link-item-def'
+import type { ContactInfo, ContactInfoFields } from '@/types/blocks'
+import type { SubmitServerAction } from '@/types/blocks/link-item-def'
 
 import Button from '@/primitives/button'
 import Input from '@/primitives/input'

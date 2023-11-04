@@ -1,4 +1,4 @@
-import type * as C from '@/content/types'
+import type * as C from '@/types/blocks'
 
 //import MiniChart from '@/components/mini-chart'
 

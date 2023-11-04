@@ -1,5 +1,5 @@
 
-import { type CTABlock} from './types'
+import { type CTABlock} from '@/types/blocks'
 
 import SocialIcon from '@/primitives/social-icon'
 
