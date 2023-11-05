@@ -8,7 +8,7 @@ export default {
   media,
   cta: {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: "Learn More",
         href: "/uranium",

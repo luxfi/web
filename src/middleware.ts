@@ -8,7 +8,7 @@ export const middleware = async (request: NextRequest) => {
 
 
   const { nextUrl: url } = request
-  console.log(`\n=== from ${url.href} on a *${agent && agent.toUpperCase()}* device. ===\n`)
+  //console.log(`\n=== from ${url.href} on a *${agent && agent.toUpperCase()}* device. ===\n`)
 
   url.searchParams.set('agent', agent)
   return NextResponse.rewrite(url)

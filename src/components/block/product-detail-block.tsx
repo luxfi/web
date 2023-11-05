@@ -31,7 +31,7 @@ const ProductDetailBlockComponent: React.FC<{
         <Spacer />
         <h3>{p.price.heading}</h3>
         <div className='flex flex-col justify-start items-stretch self-stretch w-full md:self-center md:grid md:grid-cols-2 gap-4 '>
-          <StandardCard card={p.price.priceCard} />
+          <StandardCard card={p.price.priceCard} contentClassName='justify-center'/>
           <StandardCard card={p.price.msCard} />
         </div>
       </>)}

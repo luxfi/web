@@ -19,20 +19,20 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Uranium Price / lb',
-      content: <h5>USD 45</h5>,
+      content: <h4>USD 45</h4>,
     },
     msCard: {
       blockType: 'card',
       cardType: 'full-width',
       title: 'Market Spot Price / lb',
       content: <MiniChart widgetProps={{
-        symbol: 'COMEX:UX2!',
-        width: '100%',
-        height: '100%',
-        locale: 'en',
+        symbol: 'UX2!',
+        exchange: 'COMEX',
         autosize: true,
         colorTheme: 'dark',
-        dateRange: '1Y'
+        lineColor: "rgb(114, 27, 228)",
+        bottomGradientColor: "rgba(255, 255, 255, 0.1)",
+        dateRange: '60M',
       }}/>
     }
   },

@@ -1,5 +1,6 @@
 import type * as C from '@/types/blocks'
-//import MiniChart from '@/components/mini-chart'
+
+import MiniChart from '@/components/mini-chart'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
@@ -24,19 +25,15 @@ export default {
       blockType: 'card',
       cardType: 'full-width',
       title: 'Market Spot Price / Oz',
-      content: <></>/* <MiniChart widgetProps={{
-        symbol: 'TVC:SILVER',
-        width: '100%',
-        height: '100%',
-        locale: 'en',
+      content: <MiniChart widgetProps ={{
+        symbol: 'SILVER',
+        exchange: 'TVC',
         autosize: true,
         colorTheme: 'dark',
-        isTransparent: false,
-        trendLineColor: "rgb(114, 27, 228)",
-        underLineColor: "rgba(255, 255, 255, 0.1)",
+        lineColor: "rgb(114, 27, 228)",
+        bottomGradientColor: "rgba(255, 255, 255, 0.1)",
         dateRange: '60M',
-        largeChartUrl: ''
-      }}/> */
+      }}/> 
     }
   },
   blocks: [

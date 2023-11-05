@@ -19,7 +19,7 @@ export default {
     silver,
     gold,
     coin,
-    uranium,
+    //uranium,
     credit,
     validator,
     pass,

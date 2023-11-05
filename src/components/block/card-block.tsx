@@ -1,5 +1,7 @@
 import React from 'react'
 
+import type { CardBlock, VideoDimensions } from '@/types/blocks'
+
 import {
   Card,
   CardContent,
@@ -7,9 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/primitives/card"
-
-import type { CardBlock, VideoDimensions } from '@/types/blocks'
+} from '@/primitives/card'
 
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
