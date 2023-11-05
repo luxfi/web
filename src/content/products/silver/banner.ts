@@ -5,9 +5,9 @@ export default {
   title: 'LUX SILVER',
   byline: 'The Silver Rush is Here.',
   media,
-  ctas: {
+  cta: {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: "Learn More",
         href: "/silver",

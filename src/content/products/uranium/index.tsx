@@ -1,6 +1,5 @@
-import Button from '@/primitives/button'
-
 import type * as C from '@/types/blocks'
+
 import MiniChart from '@/components/mini-chart'
 
 import DescMDX from './desc.mdx'
@@ -51,20 +50,24 @@ export default {
         <p>NFT price: $45 / lb</p>
         <p>Market spot price:: ~$65 / lb</p>
       </>,
-      media: {...media,
-        dim: {
-            // 1/8 size
-          width: 70,
-          height: 74
-        }
-      },
+      media,
     } as C.CardBlock,
     {
       blockType: 'cta',
-      items: [{
-        component: <Button className='w-full -mt-2' variant='primary' size='lg'>Waitlist</Button>,
-        modal
-      }]
+      elements: [
+        {
+          text: 'Waitlist',
+          props: {
+            variant: 'primary',
+            size: 'lg', 
+            className: 'w-full -mt-2'  
+          },
+          action: {
+            type: 'modal',
+            def: modal
+          }
+        },
+      ]
     } as C.CTABlock,
 
   ] as C.Block[]

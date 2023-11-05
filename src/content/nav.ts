@@ -1,4 +1,4 @@
-import type { LinkItemDef } from '@/types/blocks'
+import type { LinkDef } from '@/types'
 
 const nav = [
   {
@@ -30,7 +30,7 @@ const nav = [
     external: true,
     newTab: false,
   },
-] as LinkItemDef[]
+] as LinkDef[]
 
 const buttons = [
   {
@@ -40,7 +40,7 @@ const buttons = [
     external: true,
     variant: 'primary',
   },
-] as LinkItemDef[]
+] as LinkDef[]
 
 const all = [...nav, ...buttons]
 

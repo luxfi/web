@@ -1,12 +1,9 @@
 'use client'
-import React, { useState } from 'react'
 
-import {type LinkModalProps} from '@/types/blocks/link-item-def'
+import React, { PropsWithChildren, useState } from 'react'
 
-const DialogVideoController: React.FC<{
-  renderDialog: (props: Omit<LinkModalProps, 'trigger' | 'title' | 'byline'  | 'onSubmit' >) => React.ReactNode
-}> = ({
-  renderDialog,
+const DialogVideoController: React.FC<PropsWithChildren> = ({
+  children,
 }) => {
 
   const [open, setOpen] = useState<boolean>(false)
@@ -25,13 +22,17 @@ const DialogVideoController: React.FC<{
     }) 
   }
 
-  return renderDialog({
-    open,
-    onOpenChange
-  }) as JSX.Element
+    // https://stackoverflow.com/a/49052730/11645689
+  const updatedChildren = React.Children.map(
+    children,
+    (child) => (React.cloneElement(
+      child as any, { open, onOpenChange }
+    ))
+  )
+
+  return (<>
+    {updatedChildren}
+  </>)
 }
 
-export {
-  DialogVideoController as default,
-  type LinkModalProps
-} 
+export default DialogVideoController

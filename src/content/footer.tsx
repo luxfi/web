@@ -9,7 +9,7 @@ export default [
   {
     blockType: 'cta',
     type: 'nav',
-    items: [
+    elements: [
       {
         title: 'Market',
         href: "https://app.lux.market/",
@@ -49,7 +49,7 @@ export default [
   },
   {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: 'Network',
         href: "https://lux.network/",
@@ -73,7 +73,7 @@ export default [
   },
   {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: 'Partners',
         href: "https://lux.partners/",
@@ -117,7 +117,7 @@ export default [
   },  
   {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: 'Community',
         variant: 'linkFG',
@@ -162,7 +162,7 @@ export default [
   },
   {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: 'Legal',
         variant: 'linkFG',

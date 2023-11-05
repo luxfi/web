@@ -8,7 +8,6 @@ import validator from 'validator'
 
 import { Loader2 } from 'lucide-react'
 
-//import {  type ControllerRenderProps } from '@radix-ui/react-dialog'
 import {
   Form,
   FormControl,
@@ -17,8 +16,8 @@ import {
   FormMessage,
 } from '@/primitives/form'
 
-import type { ContactInfo, ContactInfoFields } from '@/types/blocks'
-import type { SubmitServerAction } from '@/types/blocks/link-item-def'
+import type { ContactInfo } from '@/types/blocks'
+import type { SubmitServerAction } from '@/types/button-def'
 
 import Button from '@/primitives/button'
 import Input from '@/primitives/input'

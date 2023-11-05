@@ -13,7 +13,16 @@ export default  {
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
     // dims are 656x484, let's cut in half
-    width: 328,
-    height: 242
+    // ratio: 1.355
+
+    md: {
+      width: 328,
+      height: 242
+    },
+
+    lg: {
+      width: 400,
+      height: 295
+    },
   }
 } as MediaBlock

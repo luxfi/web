@@ -1,8 +1,5 @@
 import type * as C from '@/types/blocks'
 
-import Button from '@/primitives/button'
-
-
 import media from './video'
 import accordian from './accordian'
 import modal from './waitlist-modal'
@@ -16,10 +13,18 @@ export default {
   blocks: [
     {
       blockType: 'cta',
-      items: [
+      elements: [
         {
-          component: <Button className='w-full -mt-2' variant='primary' size='lg'>Waitlist</Button>,
-          modal,
+          text: 'Waitlist',
+          props: {
+            variant: 'primary',
+            size: 'default', 
+            className: 'w-1/2'  
+          },
+          action: {
+            type: 'modal',
+            def: modal
+          }
         },
       ]
     } as C.CTABlock

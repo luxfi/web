@@ -7,11 +7,11 @@ import type CTABlock from './cta-block'
 import type ElementBlock from './element-block'
 import type HeadingBlock from './heading-block'
 import type MediaBlock from './media-block'
+import {type ImageDimensions, type VideoDimensions} from './media-block'
 import type ProductDetailBlock from './product-detail-block'
 import type SpaceBlock from './space-block'
 import type SpecialBlock from './special-block'
 
-export * from './link-item-def'
 export { 
    type AccordianBlock, 
    type AssetBannerBlock, 
@@ -23,6 +23,8 @@ export {
    type ElementBlock,
    type HeadingBlock,
    type MediaBlock,
+   type ImageDimensions,
+   type VideoDimensions,
    type ProductDetailBlock,
    type SpaceBlock,
    type SpecialBlock,

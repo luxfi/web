@@ -1,5 +1,3 @@
-import Button from '@/primitives/button'
-
 import media from './video'
 import modal from './waitlist-modal'
 
@@ -8,7 +6,7 @@ export default {
   title: 'LUX URANIUM',
   byline: <>Own digital uranium, <br className='sm:hidden'/>backed by the real thing.</>,
   media,
-  ctas: {
+  cta: {
     blockType: 'cta',
     items: [
       {
@@ -17,8 +15,16 @@ export default {
         variant: 'outline'
       },
       {
-        component: <Button variant='primary' size='default' className='w-1/2'>Waitlist</Button>,
-        modal
+        text: 'Waitlist',
+        props: {
+          variant: 'primary',
+          size: 'default', 
+          className: 'w-1/2'  
+        },
+        action: {
+          type: 'modal',
+          def: modal
+        }
       },
     ]
   } 

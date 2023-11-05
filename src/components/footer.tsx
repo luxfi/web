@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { ButtonVariants } from '@/primitives/button'
+import { LinkDef } from '@/types'
 
+import { ButtonVariants } from '@/primitives/button'
 
 import Logo from './logo'
 import NavItems from './nav-items'
@@ -33,7 +34,7 @@ const Footer: React.FC<{
         const colSpan = ((index === footer.length - 1) && (footer.length % 2 === 1)) ? 'col-span-2 mx-auto items-center sm:col-span-1 sm:mx-0 sm:items-start' : ''
         return (
         <NavItems
-          items={ctaBlock.items} 
+          items={ctaBlock.elements as LinkDef[]} 
           as={(ctaBlock.type === 'nav') ? 'nav' : 'div'} 
           className={'w-fit flex flex-col justify-start items-start gap-[12px] md:gap-[15px] ' + colSpan} 
           key={index + 1}

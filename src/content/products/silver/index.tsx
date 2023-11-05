@@ -53,17 +53,11 @@ export default {
         <p>Price: $20 / oz</p>
         <p>Spot price:: ~$25 / oz</p>
       </>,
-      media: {...media,
-        dim: {
-            // quarter size
-          width: 50,
-          height: 82
-        }
-      },
+      media,
     } as C.CardBlock,
     {
       blockType: 'cta',
-      items: [{
+      elements: [{
         title: 'Buy Now',
         href: '/', // TOOD
         variant: 'primary'

@@ -1,6 +1,4 @@
-'use client'
-
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import ApplyTypography from '@/primitives/apply-typography'
 
@@ -14,28 +12,17 @@ const Spacer: React.FC = () => (
   <p className='invisible m-0 h-[1px]'>&nbsp;</p> // allow the surround vertical gaps to create the spacer effect
 )
 
-/* md:absolute  md:left-0 md:top-px-50 md:z-10 md:bg-background   */
 const ProductDetailBlockComponent: React.FC<{
   product: ProductDetailBlock
 }> = ({
   product: p
-}) => {
-  
-  useEffect(() => {
-    document.body.classList.remove('overflow-y-hidden')
-    return () => {
-      document.body.classList.add('overflow-y-hidden')
-    }
-  }, [])
-
-
-  return (<>
+}) => (<>
   <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-[150px] md:static'>
-    <MediaBlockComponent media={p.media} className='md:sticky top-10 mx-auto'/>
+    <MediaBlockComponent media={p.media} size='lg' className='md:sticky top-[250px] mt-[16px] mx-auto'/>
   </div>
-  <div className='md:bg-scroll md:w-1/2 md:pt-20'>
-    <ApplyTypography className='flex flex-col items-start'>
-      <h1 className='mb-8'>{p.title}</h1>
+  <div className='md:bg-scroll md:w-1/2 md:pt-[170px]'>
+    <ApplyTypography className='flex flex-col items-start md:w-[555px]'>
+      <h2 className='mb-8'>{p.title}</h2>
       {p.desc && (
         (typeof p.desc === 'string') ? (<p>{p.desc}</p>) : ('element' in p.desc ? p.desc.element : p.desc)
       )}
@@ -63,6 +50,5 @@ const ProductDetailBlockComponent: React.FC<{
     </ApplyTypography>
   </div>
 </>)
-}
 
 export default ProductDetailBlockComponent

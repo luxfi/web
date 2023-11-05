@@ -1,5 +1,28 @@
 import type Block from './block'
 
+
+type VideoDimensions = {               
+  sm?: {
+    width: number,
+    height: number
+  }, 
+
+  md: {
+    width: number,
+    height: number
+  }, 
+
+  lg: {
+    width: number,
+    height: number
+  } 
+}
+
+type ImageDimensions = {
+  width: number,
+  height: number
+}
+
 interface MediaBlock extends Block {
   blockType: 'video' | 'image'
   videoProps?: any,   // For example,
@@ -17,12 +40,11 @@ interface MediaBlock extends Block {
 
   image?: string,      // if image, image url. poster image if video 
   sources?: string[]
-  dim: {               // easier for spread op on props if we have only one.
-    width?: number,
-    height?: number
-  }
+  dim: VideoDimensions | ImageDimensions 
 }
 
 export {
-  type MediaBlock as default
+  type MediaBlock as default,
+  type VideoDimensions,
+  type ImageDimensions 
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { type LinkItemDef }  from '@/types/blocks'
-import LinkItem from './link-item'
+import type { LinkDef }  from '@/types'
+import LinkElement from './link-element'
 import { ButtonVariants } from '@/primitives/button'
 
 const NavItems: React.FC<{
-  items: LinkItemDef[]
+  items: LinkDef[]
   className?: string,
   as?: React.ElementType
   itemClassName?: string,
@@ -23,9 +23,9 @@ const NavItems: React.FC<{
 
           const variant = item.variant ?? 'link'
           let extraClasses = '' 
-          // note that linkFG (or any other variant of 'link') 
-          // will not get assigned these classes,
-          // and will remain styles is 'foreground' (hence the name)
+            // note that linkFG (or any other variant of 'link') 
+            // will not get assigned these classes,
+            // and will remain styles is 'foreground' (hence the name)
           if (variant === 'link') {
             
             extraClasses+= ' text-nav hover:text-nav-hover'
@@ -41,8 +41,8 @@ const NavItems: React.FC<{
           }
 
           return (
-            <LinkItem 
-              item={item}
+            <LinkElement 
+              def={item}
               key={index}
               size='default'
               className={

@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/primitives/card"
 
-import type { CardBlock } from '@/types/blocks'
+import type { CardBlock, VideoDimensions } from '@/types/blocks'
 
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
@@ -68,10 +68,10 @@ const MediaLeftCard: React.FC<{
     )}
     <CardContent className='flex flex-row justify-center items-stretch p-0 grow'>
       {card.media && (
-        <div className='px-6 py-3 box-content' style={{
-          width: card.media.dim.width
+        <div className='px-6 py-3 box-content grow-0'  style={{
+          width: (card.media.dim as VideoDimensions).sm!.width 
         }}>
-          <MediaBlockComponent media={card.media} />
+          <MediaBlockComponent media={card.media} size='sm' />
         </div>
       )}
       {card.content && (

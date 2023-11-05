@@ -1,47 +1,39 @@
 import React from 'react'
 
-import { useRouter } from 'next/navigation'
+import type { ButtonVariants } from '@/primitives/button'
 
-import type { ButtonVariants, ButtonSizes } from '@/primitives/button'
-
-import LinkItem from '@/components/link-item'
+import LinkElement from '@/components/link-element'
 import { nav } from '@/content'
 
+const elements = nav.all
+
 const MobileNav: React.FC<{
-  onAction: () => void,
   itemVariant?: ButtonVariants
   className?: string
   itemClassName?: string
+  onAction: () => void // for close functionality
 }> = ({
   onAction,
   className='',
   itemClassName='',
   itemVariant
-}) => {
-
-  const router = useRouter()
-
-  const items = nav.all
-  return (
-    items.length ? (
-      <nav className={className} >
-        {items.map((item, index) => (
-          <LinkItem 
-            item={item}
-            key={index}
-            size='lg'
-            className={itemClassName}
-            variant={itemVariant}
-            onClick = {() => {
-              //router.push(item.href!.toString())
-              onAction()
-            }} 
-          />
-        ))}
-      </nav>
-    ) 
-    : null
-  )
-}
+}) => (
+  
+  elements.length ? (
+    <nav className={className} >
+      {elements.map((el, index) => (
+        <LinkElement 
+          def={el}
+          key={index}
+          size='lg'
+          className={itemClassName}
+          variant={itemVariant}
+          onClick = {onAction} 
+        />
+      ))}
+    </nav>
+  ) 
+  : null
+)
 
 export default MobileNav

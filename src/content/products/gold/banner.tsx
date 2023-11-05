@@ -5,9 +5,9 @@ export default {
   title: 'LUX GOLD',
   byline: <>Responsibly manufactured, <br className='sm:hidden'/>ethically sourced.</>,
   media,
-  ctas: {
+  cta: {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: "Learn More",
         href: "/gold",

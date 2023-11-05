@@ -1,27 +1,27 @@
-import React from "react"
-import Link from "next/link"
+import React from 'react'
+import Link from 'next/link'
 
-import { type LinkItemDef }  from '@/types/blocks/link-item-def'
-import { cn } from "@/util"
+import type { LinkDef }  from '@/types'
 import { buttonVariants, type ButtonSizes, type ButtonVariants } from '@/primitives/button'
-import DialogVideoController from '@/primitives/dialog-video-controller'
+//import DialogVideoController from '@/primitives/dialog-video-controller'
+import { cn } from '@/util'
 
-const LinkItem: React.FC<{
-  item: LinkItemDef,
+const LinkElement: React.FC<{
+  def: LinkDef,
   variant? : ButtonVariants
   size?: ButtonSizes 
-  onClick?: () => void
+  onClick?: () => void // for UI changes in addition to link (eg, close menu)
   className?: string
 }> = ({ 
-  item,
+  def,
   size = 'lg',
   onClick,
   variant,
   className = ''
 } ) => {
 
-    // See notes in types/blocks/link-item-def
-  const { component, modal } = item
+    /*
+  const { component, modal } = def
 
   if (component) {
 
@@ -56,7 +56,7 @@ const LinkItem: React.FC<{
       // if no modal, then just render the component
     return component as React.ReactElement
   }
-
+*/
   const {
     href,
     external,
@@ -64,12 +64,12 @@ const LinkItem: React.FC<{
     variant: defVariant,
     size: defSize, 
     title
-  } = item
+  } = def
 
   const toSpread = {
     ...((href) ? { href } : { href: '#'}),
     ...((external) ?  { 
-      rel: "noreferrer",
+      rel: 'noreferrer',
         // As per comments in LinkItemDef
       target: (newTab !== undefined && (newTab === false)) ? '_self' : '_blank'
     } : {
@@ -77,6 +77,8 @@ const LinkItem: React.FC<{
     }),
     ...(onClick ? { onClick } : {})
   }
+
+  
 
   return (
     <Link
@@ -87,14 +89,14 @@ const LinkItem: React.FC<{
         }), 
         className 
           + (href ? '' : ' pointer-events-none')
-          + (item.icon ? ' color-foreground hover:color-muted-foreground' : '')
+          + (def.icon ? ' color-foreground hover:color-muted-foreground' : '')
       )}
       {...toSpread}
     >
-      {item.icon && (<div className='pr-1'>{item.icon}</div>)}
+      {def.icon && (<div className='pr-1'>{def.icon}</div>)}
       {title}
     </Link>
   )
 }
 
-export default LinkItem
+export default LinkElement

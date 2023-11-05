@@ -3,7 +3,6 @@ import type * as C from '@/types/blocks'
 //import MiniChart from '@/components/mini-chart'
 
 import media from './video'
-
 import accordian from './accordian'
 
 export default {
@@ -50,17 +49,11 @@ export default {
         <p>Price: $2000 / oz</p>
         <p>Spot price:: ~$2050 / oz</p>
       </>,
-      media: {...media,
-        dim: {
-            // quarter size
-          width: 55,
-          height: 82
-        }
-      },
+      media,
     } as C.CardBlock,
     {
       blockType: 'cta',
-      items: [{
+      elements: [{
         title: 'Buy Now',
         href: '/', // TOOD
         variant: 'primary'

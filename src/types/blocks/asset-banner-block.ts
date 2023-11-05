@@ -10,7 +10,7 @@ interface AssetBannerBlock extends Block {
   contentBefore?: React.ReactNode
   media?: MediaBlock
   contentAfter?: React.ReactNode
-  ctas?: CTABlock
+  cta?: CTABlock
 }
 
 export {

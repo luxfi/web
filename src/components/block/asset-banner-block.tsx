@@ -36,13 +36,13 @@ const AssetBannerBlockComponent: React.FC<{
       <div className={'self-center flex flex-col justify-start items-center ' + mediaClasses}>
         {asset.contentBefore && asset.contentBefore}
         {asset.media && (
-          <MediaBlockComponent className='self-center mt-6 not-typography' media={asset.media} />
+          <MediaBlockComponent className='self-center mt-6 not-typography' media={asset.media} size='lg'/>
         )}
         {asset.contentAfter && asset.contentAfter }
       </div>
-      {asset.ctas && (
+      {asset.cta && (
         <div className={'flex flex-row items-stretch gap-2 sm:gap-6 sm:justify-center ' + ctaClasses}>
-          <CTABlockComponent cta={asset.ctas} itemClassName={ctaItemClassName} itemSize={ctaItemSize} />
+          <CTABlockComponent cta={asset.cta} itemClassName={ctaItemClassName} itemSize={ctaItemSize} />
         </div>  
       )}
     </>)
@@ -60,9 +60,9 @@ const AssetBannerBlockComponent: React.FC<{
         )}
         {asset.contentAfter && asset.contentAfter }
       </div>
-      {asset.ctas && (
+      {asset.cta && (
         <div className={'flex flex-row items-stretch gap-2 sm:gap-6 sm:justify-center ' + ctaClasses}>
-          <CTABlockComponent cta={asset.ctas} itemClassName={ctaItemClassName} itemSize={ctaItemSize}  />
+          <CTABlockComponent cta={asset.cta} itemClassName={ctaItemClassName} itemSize={ctaItemSize}  />
         </div>  
       )}
     </>)
@@ -83,9 +83,9 @@ const AssetBannerBlockComponent: React.FC<{
       <MediaBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} media={asset.media} />
     )}
     {asset.contentAfter && (<div className={contentAfterClasses}>asset.contentAfter</div>)}
-    {asset.ctas && (
+    {asset.cta && (
       <div className={'flex flex-col gap-4 items-stretch sm:flex-row sm:gap-6 sm:justify-center ' + ctaClasses}>
-        <CTABlockComponent cta={asset.ctas} itemClassName={ctaItemClassName} itemSize={ctaItemSize} />
+        <CTABlockComponent cta={asset.cta} itemClassName={ctaItemClassName} itemSize={ctaItemSize} />
       </div>  
     )}
   </>)

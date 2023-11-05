@@ -1,5 +1,4 @@
 import type Block from './block'
-import type ElementBlock from './element-block'
 
 interface AccordianBlock extends Block {
   blockType: 'accordian'

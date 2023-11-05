@@ -12,17 +12,25 @@ export default    {
       and NFT drops. Priority access to the launch!
     </div>),
   media,
-  ctas: {
+  cta: {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: "Learn More",
         href: "/pass",
         variant: 'outline'
       },
       {
-        component: <Button variant='primary' size='default' className='w-1/2'>Waitlist</Button>,
-        modal
+        text: 'Waitlist',
+        props: {
+          variant: 'primary',
+          size: 'default', 
+          className: 'w-1/2'  
+        },
+        action: {
+          type: 'modal',
+          def: modal
+        }
       },
     ]
   }

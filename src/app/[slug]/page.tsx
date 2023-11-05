@@ -1,12 +1,16 @@
 import React  from 'react'
 
 import { notFound } from 'next/navigation'
+import dynamic from 'next/dynamic'
 
 import type ProductDetailBlock from '@/types/blocks/product-detail-block'
 
 import Footer from '@/components/footer'
 import Main from '@/components/main'
 import ProductDetailBlockComponent from '@/components/block/product-detail-block'
+ 
+const ScrollbarRestorer = dynamic(() => (import('../../components/main-scrollbar-restorer')))
+
 
 import { products } from '@/content'
 
@@ -50,6 +54,7 @@ const ProductPage = ({ params }: Props) => {
     </Main>
     <div className='border-t'></div>
     <Footer className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <ScrollbarRestorer />
   </>)
 }
 

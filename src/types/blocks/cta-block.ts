@@ -1,9 +1,9 @@
+import type { LinkDef, ButtonDef } from '@/types'
 import type Block from './block'
-import type { LinkItemDef } from './link-item-def'
 
 interface CTABlock extends Block {
   blockType: 'cta'
-  items: LinkItemDef[]
+  elements: (LinkDef | ButtonDef)[]
   type?: string // eg, 'nav' (hint to renderer)
 }
 

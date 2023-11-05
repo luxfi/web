@@ -8,17 +8,25 @@ export default {
   title: 'LUX VALIDATOR',
   byline: 'Run the chain.',
   media,
-  ctas: {
+  cta: {
     blockType: 'cta',
-    items: [
+    elements: [
       {
         title: "Learn More",
         href: "/validator",
         variant: 'outline'
       },
       {
-        component: <Button variant='primary' size='default' className='w-1/2'>Waitlist</Button>,
-        modal
+        text: 'Waitlist',
+        props: {
+          variant: 'primary',
+          size: 'default', 
+          className: 'w-1/2'  
+        },
+        action: {
+          type: 'modal',
+          def: modal
+        }
       },
     ]
   }

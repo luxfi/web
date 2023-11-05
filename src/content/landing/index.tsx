@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LinkItem from '@/components/link-item'
+import LinkElement from '@/components/link-element'
 
 import type { AssetBannerBlock, ElementBlock } from '@/types/blocks'
 
@@ -32,8 +32,8 @@ export default {
         <h5 >Join the global rush to own silver</h5>
         <h2>THE SILVER RUSH IS HERE</h2>
       </div>
-      <LinkItem 
-        item={{
+      <LinkElement 
+        def={{
           title: 'Enter App',
           href: 'https://app.lux.market',
           external: true,
@@ -46,5 +46,3 @@ export default {
   } as ElementBlock
 
 }
-
-// className='mt-32 lg:mt-4'

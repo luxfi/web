@@ -2,19 +2,16 @@
 
 import React from 'react'
 
-import { nav } from '@/content'
 import Logo from '@/components/logo'
-import LinkItem from '@/components/link-item'
+import LinkElement from '@/components/link-element'
 import Icons from '@/components/icons'
 import DrawerMenu from '@/components/drawer-menu'
 import NavItems from '@/components/nav-items'
-
-import MobileNav from './mobile-nav'
-import UpperRightNav from "./upper-right-nav"
 import { ButtonVariants } from '@/primitives/button'
 
-<UpperRightNav className='hidden lg:flex' />
+import MobileNav from './mobile-nav'
 
+import { nav } from '@/content'
 
 const Header: React.FC = () => (
   <header className="bg-background sticky top-0">
@@ -35,7 +32,7 @@ const Header: React.FC = () => (
         itemClassNameFromVariant={(variant: ButtonVariants) => (variant === 'link' ? 'text-muted-foreground' : '')}
         key='four'
       />
-      <LinkItem item={nav.buttons[0]} size='sm' className='min-w-0 hidden md:flex lg:hidden' />
+      <LinkElement def={nav.buttons[0] /* TODO unhack */} size='sm' className='min-w-0 hidden md:flex lg:hidden' />
     </div>
     <div className="flex md:hidden h-[44px] items-center justify-between px-2">
       <Logo size='sm' />

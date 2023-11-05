@@ -9,7 +9,22 @@ export default {
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
       // .61 aspect
-    width: 200,
-    height: 327
+    sm: {
+        // md * 1/4
+      width: 50,
+      height: 82
+    },
+
+    md: {
+      width: 200,
+      height: 327
+    },
+
+    lg: {
+      // match the general size of old site
+      width: 250,
+      height: 410,
+    }
+
   }
 } as MediaBlock
