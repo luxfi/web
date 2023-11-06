@@ -16,20 +16,13 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Gold Price / Oz',
-      content: <h5>USD 2000</h5>,
+      content: <h4>USD 2000</h4>,
     },
     msCard: {
       blockType: 'card',
       cardType: 'full-width',
       title: 'Market Spot Price / Oz',
-      content: <MiniChart widgetProps ={{
-        symbol: 'GOLD',
-        autosize: true,
-        colorTheme: 'dark',
-        lineColor: "rgb(114, 27, 228)",
-        bottomGradientColor: "rgba(255, 255, 255, 0.1)",
-        dateRange: '60M',
-      }}/>
+      content: <MiniChart symbol='GOLD' /> 
     }
   },
   blocks: [

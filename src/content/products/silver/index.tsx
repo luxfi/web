@@ -19,22 +19,14 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Silver Price / Oz',
-      content: <h5>USD 20</h5>,
+      content: <h4>USD 20</h4>,
     },
     msCard: {
       blockType: 'card',
       cardType: 'full-width',
       title: 'Market Spot Price / Oz',
-      content: <MiniChart widgetProps ={{
-        symbol: 'SILVER',
-        exchange: 'TVC',
-        autosize: true,
-        colorTheme: 'dark',
-        lineColor: "rgb(114, 27, 228)",
-        bottomGradientColor: "rgba(255, 255, 255, 0.1)",
-        dateRange: '60M',
-      }}/> 
-    }
+      content: <MiniChart symbol='SILVER' exchange='TVC' /> 
+    } 
   },
   blocks: [
     {

@@ -25,15 +25,7 @@ export default {
       blockType: 'card',
       cardType: 'full-width',
       title: 'Market Spot Price / lb',
-      content: <MiniChart widgetProps={{
-        symbol: 'UX2!',
-        exchange: 'COMEX',
-        autosize: true,
-        colorTheme: 'dark',
-        lineColor: "rgb(114, 27, 228)",
-        bottomGradientColor: "rgba(255, 255, 255, 0.1)",
-        dateRange: '60M',
-      }}/>
+      content: <MiniChart symbol='UX2!' exchange='COMEX' /> 
     }
   },
   blocks: [

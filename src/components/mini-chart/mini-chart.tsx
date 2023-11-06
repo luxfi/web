@@ -39,7 +39,9 @@ const MiniChart: React.FC<MiniChartProps> = ({
 
       const copyDiv = document.querySelector('.tradingview-widget-copyright')
       if (copyDiv) {
-        copyDiv.classList.remove('invisible')
+        setTimeout(() => {
+          copyDiv.classList.remove('invisible')
+        }, 1200) // from experimentation 
       }
 		}
 		const config = JSON.stringify({
