@@ -16,19 +16,14 @@ import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
 
 const getTypographySize = (s: string): TypographySize => {
-  console.log('TYPO1: ')
   const tokenArray = s.split(' ')
-  console.log('TYPO ARR: ', tokenArray)
   const sizeToken = tokenArray.find((tok) => (tok.startsWith('typography-')))
-  console.log('TYPO2: ', sizeToken)
   if (sizeToken) {
     const subTokenArray = sizeToken.split('-')
-    console.log('TYPO: ', subTokenArray[1])
     return subTokenArray[1] as TypographySize
   }
   return 'responsive'
 }
-
 
 const CardBlockComponent: React.FC<{
   block: Block

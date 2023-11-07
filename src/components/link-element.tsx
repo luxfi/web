@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import type { LinkDef }  from '@/types'
 import { buttonVariants, type ButtonSizes, type ButtonVariants } from '@/primitives/button'
-//import DialogVideoController from '@/primitives/dialog-video-controller'
 import { cn } from '@/util'
 
 const LinkElement: React.FC<{
@@ -20,43 +19,6 @@ const LinkElement: React.FC<{
   className = ''
 } ) => {
 
-    /*
-  const { component, modal } = def
-
-  if (component) {
-
-    if (modal) {
-
-      const {
-        Comp,
-        title,
-        props,
-        byline,
-        action,
-        actionEnclusure
-      } = modal
-
-      return (
-        <DialogVideoController 
-          renderDialog={({open, onOpenChange}) => (
-            <Comp 
-              open={open} 
-              onOpenChange={onOpenChange} 
-              trigger={component}
-              title={title}
-              byline={byline} 
-              onSubmit={action}
-              submitEnclosure={actionEnclusure}
-              {...props}
-            />
-          )} 
-        />
-      )
-    }
-      // if no modal, then just render the component
-    return component as React.ReactElement
-  }
-*/
   const {
     href,
     external,
@@ -77,8 +39,6 @@ const LinkElement: React.FC<{
     }),
     ...(onClick ? { onClick } : {})
   }
-
-  
 
   return (
     <Link
