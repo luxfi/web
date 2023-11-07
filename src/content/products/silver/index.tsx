@@ -1,4 +1,4 @@
-import type * as C from '@/types/blocks'
+import type * as C from '@/types/block'
 
 import MiniChart from '@/components/mini-chart'
 
@@ -23,7 +23,7 @@ export default {
     },
     msCard: {
       blockType: 'card',
-      cardType: 'full-width',
+      specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
       content: <MiniChart symbol='SILVER' exchange='TVC' /> 
     } 
@@ -35,7 +35,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'media-left',
+      specifiers: 'media-left',
       title: 'NEXT MINT',
       content: <>
         <p>Available: 10,000,100 oz</p>
@@ -49,7 +49,8 @@ export default {
       elements: [{
         title: 'Buy Now',
         href: '/', // TOOD
-        variant: 'primary'
+        variant: 'primary',
+        size: 'lg'
       }]
     } as C.CTABlock,
     {
@@ -61,7 +62,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'left-justify-content bg-card',
+      specifiers: 'left-justify-content bg-card',
       content: <YahooFinanceCard />,
       link: {
         title: 'View on Yahoo Finance',
@@ -78,7 +79,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'news',
+      specifiers: 'news',
       content: <SilverStockInvestorCard />,
       link: {
         title: 'Download PDF',

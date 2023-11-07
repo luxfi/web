@@ -18,9 +18,10 @@ type VideoDimensions = {
   } 
 }
 
+  // From Next
 type ImageDimensions = {
-  width: number,
-  height: number
+  width: number | `${number}`
+  height: number | `${number}`
 }
 
 interface MediaBlock extends Block {

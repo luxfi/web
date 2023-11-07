@@ -35,7 +35,7 @@ const Footer: React.FC<{
         return (
         <NavItems
           items={ctaBlock.elements as LinkDef[]} 
-          as={(ctaBlock.type === 'nav') ? 'nav' : 'div'} 
+          as={(ctaBlock.specifiers === 'nav') ? 'nav' : 'div'} 
           className={'w-fit flex flex-col justify-start items-start gap-[12px] md:gap-[15px] ' + colSpan} 
           key={index + 1}
           itemClassName={'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-foreground'}

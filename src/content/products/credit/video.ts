@@ -1,9 +1,9 @@
-import { type MediaBlock } from '@/types/blocks'
-import { defaultVideoProps } from '@/util'
+import { type MediaBlock } from '@/types/block'
+import { DEF_VIDEO_PROPS } from '@/util'
 
 export default  {
   blockType: 'video',
-  videoProps: defaultVideoProps,
+  videoProps: DEF_VIDEO_PROPS,
   image: '/assets/video/Lux-CARD-poster.jpg',
   sources: [
     '/assets/video/LUX-CARD-transcode.mp4', 

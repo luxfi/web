@@ -6,7 +6,7 @@ import { Scrollbar, Mousewheel } from 'swiper/modules'
 
 import ApplyTypography from '@/primitives/apply-typography'
 
-import AssetBannerComponent from '@/components/block/asset-banner-block'
+import BannerComponent from '@/components/block/banner-block'
 import Footer from '@/components/footer'
 
 import { landing } from '@/content'
@@ -38,8 +38,8 @@ const Desktop: React.FC<{
       {landing.banners.map((banner, index) => (
         <SwiperSlide key={index} className=''>
           <ApplyTypography asTag='section' className={'w-full lg:pt-20 lg:gap-40 md:gap-20 md:pt-8 flex flex-col items-center justify-start self-stretch'} >
-            <AssetBannerComponent 
-              asset={banner}
+            <BannerComponent 
+              block={banner}
               ctaItemClassName='w-1/2'
               groupingClasses={['', 'xs:w-full md:w-auto md:min-w-[500px]']}
 
@@ -80,8 +80,8 @@ const TouchDevice: React.FC<{
             'h-full justify-between ')
           } 
         >
-          <AssetBannerComponent 
-            asset={banner} 
+          <BannerComponent 
+            block={banner} 
             ctaItemClassName='w-1/2'
               // https://stackoverflow.com/questions/75229828/tailwinds-arbitrary-values-for-breakpoints-stopped-working-in-react-js
               // :aa I could not for the life of me get named bp's to work either in screens, or in extends as the docs suggest.  Dunno.

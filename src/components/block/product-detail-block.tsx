@@ -1,54 +1,72 @@
 import React from 'react'
 
+
+import type { Block, ProductDetailBlock} from '@/types/block'
+
 import ApplyTypography from '@/primitives/apply-typography'
 
-import type ProductDetailBlock from '@/types/blocks/product-detail-block'
 import MediaBlockComponent from './media-block'
 import AccordianBlockComponent from './accordian-block'
-import { StandardCard } from './card-block'
-import BlockRenderer from './block-renderer'
-
-const Spacer: React.FC = () => (
-  <p className='invisible m-0 h-[1px]'>&nbsp;</p> // allow the surround vertical gaps to create the spacer effect
-)
+import CardComponent  from './card-block'
+import BlockFactory from './block-factory'
+import Spacer from './space-block'
 
 const ProductDetailBlockComponent: React.FC<{
-  product: ProductDetailBlock
+  block: Block
 }> = ({
-  product: p
-}) => (<>
-  <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-[150px] md:static'>
-    <MediaBlockComponent media={p.media} size='lg' className='md:sticky top-[250px] mt-[16px] mx-auto'/>
-  </div>
-  <div className='md:bg-scroll md:w-1/2 md:pt-[170px]'>
-    <ApplyTypography className='flex flex-col items-start md:w-[555px]'>
-      <h2 className='mb-8'>{p.title}</h2>
-      {p.desc && (
-        (typeof p.desc === 'string') ? (<p>{p.desc}</p>) : ('element' in p.desc ? p.desc.element : p.desc)
-      )}
-      <AccordianBlockComponent accordian={p.accordian} className='mt-5'/>
-      {p.price && (<>
+  block
+}) => {
+
+  if (block.blockType !== 'product-detail') {
+    return <>product detail block required</>
+  }
+  const p = block as ProductDetailBlock
+
+  return (<>
+    <div className='mb-12 md:min-w-[400px] md:w-1/2 md:mt-[150px] md:static'>
+      <MediaBlockComponent block={p.media} size='lg' className='md:sticky top-[250px] mt-[16px] mx-auto'/>
+    </div>
+    <div className='md:bg-scroll md:w-1/2 md:pt-[170px]'>
+      <div className='md:w-[555px] flex flex-col items-start gap-4' >
+        <ApplyTypography className='flex flex-col justify-start items-start md:w-[555px]'>
+          <h2 className='mb-8'>{p.title}</h2>
+          {p.desc && (
+            (typeof p.desc === 'string') ? (<p>{p.desc}</p>) : ('element' in p.desc ? p.desc.element : p.desc)
+          )}
+        </ApplyTypography>
+        <AccordianBlockComponent block={p.accordian} className='mt-5'/>
+        {p.price && (<>
+          <Spacer />
+          <ApplyTypography >
+            <h3>{p.price.heading}</h3>
+          </ApplyTypography>
+          <div className='flex flex-col justify-start items-stretch self-stretch w-full md:self-center md:grid md:grid-cols-2 gap-4 '>
+            <CardComponent block={p.price.priceCard} contentClassName='justify-center'/>
+            <CardComponent block={p.price.msCard} />
+          </div>
+        </>)}
         <Spacer />
-        <h3>{p.price.heading}</h3>
-        <div className='flex flex-col justify-start items-stretch self-stretch w-full md:self-center md:grid md:grid-cols-2 gap-4 '>
-          <StandardCard card={p.price.priceCard} contentClassName='justify-center'/>
-          <StandardCard card={p.price.msCard} />
-        </div>
-      </>)}
-      <Spacer />
-      {p.blocks?.map((block, index) => {
-        if (block.blockType === 'cta') {
-          return (
-            <div className='grid grid-cols-1 gap-2 self-stretch md:flex md:flex-row md:justify-center' key={index}>
-              <BlockRenderer block={block} />
-            </div>
-          )
-        }
-        return <BlockRenderer block={block} key={index}/>
-      })}
-      <Spacer />
-    </ApplyTypography>
-  </div>
-</>)
+        {p.blocks?.map((block, index) => {
+          if (block.blockType === 'cta') {
+            return (
+              <div className='flex flex-col items-stretch gap-2 self-stretch sm:flex-row sm:justify-center' key={index}>
+                <BlockFactory block={block} />
+              </div>
+            )
+          }
+          else if (block.blockType === 'heading' || block.blockType === 'space' ) {
+            return (
+              <ApplyTypography key={index}>
+                <BlockFactory block={block} />
+              </ApplyTypography>
+            )
+          }
+          return <BlockFactory block={block} key={index}/>
+        })}
+        <Spacer />
+      </div>
+    </div>
+  </>)
+}
 
 export default ProductDetailBlockComponent

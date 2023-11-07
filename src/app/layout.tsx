@@ -25,6 +25,7 @@ const metadata: Metadata = {
   },
 }
 
+// Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
@@ -65,7 +66,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({
 )
 
 export {
-  RootLayout as default, 
+  RootLayout as default,
   metadata,
   viewport
-} 
+}

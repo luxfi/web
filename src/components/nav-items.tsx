@@ -14,7 +14,7 @@ const NavItems: React.FC<{
   items,
   className='', 
   itemClassName='',
-  as:Tag='nav',  
+  as : Tag='nav',  
   itemClassNameFromVariant 
 }) => ( 
     items.length ? (

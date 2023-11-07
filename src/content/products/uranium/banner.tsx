@@ -2,7 +2,7 @@ import media from './video'
 import modal from './waitlist-modal'
 
 export default {
-  blockType: 'asset-banner',
+  blockType: 'banner',
   title: 'LUX URANIUM',
   byline: <>Own digital uranium, <br className='sm:hidden'/>backed by the real thing.</>,
   media,

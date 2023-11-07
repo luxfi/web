@@ -3,7 +3,7 @@ import React  from 'react'
 import { notFound } from 'next/navigation'
 import dynamic from 'next/dynamic'
 
-import type ProductDetailBlock from '@/types/blocks/product-detail-block'
+import type ProductDetailBlock from '@/types/block/product-detail-block'
 
 import Footer from '@/components/footer'
 import Main from '@/components/main'
@@ -44,13 +44,14 @@ export async function generateMetadata({ params}: Props) {
 const ProductPage = ({ params }: Props) => {
 
   const product = products[params.slug] as ProductDetailBlock
+  
   if (!product) {
     notFound()
   }
 
   return (<>
     <Main className='md:flex-row md:gap-4 '>
-      <ProductDetailBlockComponent product={product}/>
+      <ProductDetailBlockComponent block={product}/>
     </Main>
     <div className='border-t'></div>
     <Footer className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />

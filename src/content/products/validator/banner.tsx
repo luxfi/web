@@ -4,7 +4,7 @@ import media from './video'
 import modal from './waitlist-modal'
 
 export default {
-  blockType: 'asset-banner',
+  blockType: 'banner',
   title: 'LUX VALIDATOR',
   byline: 'Run the chain.',
   media,

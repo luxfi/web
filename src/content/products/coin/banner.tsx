@@ -2,7 +2,7 @@ import media from './video'
 import modal from './waitlist-modal'
 
 export default {
-  blockType: 'asset-banner',
+  blockType: 'banner',
   title: 'LUX COIN',
   byline: <>Genesis Collection now available <br className='sm:hidden' /> on Open Sea.</>,
   media,

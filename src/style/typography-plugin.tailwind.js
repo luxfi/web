@@ -5,7 +5,8 @@ const commonTags = (theme) => ({
     margin: 0,
     alignSelf: 'flex-start',
     fontFamily: theme('fontFamily.sans'),
-    fontSize: '1.1rem',
+    fontSize: '1.1rem', /*(size === 'smallest') ? 
+      '0.8rem' : (size === 'sm') '1.1rem' */
     lineHeight: 1.4,
     fontWeight: 400
   },
@@ -13,7 +14,6 @@ const commonTags = (theme) => ({
     margin: 0,
     alignSelf: 'flex-start',
     fontFamily: theme('fontFamily.sans'),
-    
   },
   ul: {
     margin: 0,
@@ -28,9 +28,6 @@ const commonTags = (theme) => ({
       opacity: 0.6,
       //textDecoration: 'underline',
     }
-  },
-  img: {
-    margin: 0
   },
 })
 

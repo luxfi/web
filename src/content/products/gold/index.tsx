@@ -1,4 +1,4 @@
-import type * as C from '@/types/blocks'
+import type * as C from '@/types/block'
 
 import MiniChart from '@/components/mini-chart'
 
@@ -20,7 +20,7 @@ export default {
     },
     msCard: {
       blockType: 'card',
-      cardType: 'full-width',
+      specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
       content: <MiniChart symbol='GOLD' /> 
     }
@@ -32,7 +32,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      cardType: 'media-left',
+      specifiers: 'media-left',
       title: 'NEXT MINT',
       content: <>
         <p>Available: 1,000,100 oz</p>
@@ -46,7 +46,8 @@ export default {
       elements: [{
         title: 'Buy Now',
         href: '/', // TOOD
-        variant: 'primary'
+        variant: 'primary',
+        size: 'lg'
       }]
     } as C.CTABlock,
   ] as C.Block[]

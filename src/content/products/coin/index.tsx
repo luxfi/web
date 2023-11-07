@@ -1,4 +1,4 @@
-import type * as C from '@/types/blocks'
+import type * as C from '@/types/block'
 
 import media from './video'
 import accordian from './accordian'
@@ -18,8 +18,7 @@ export default {
           text: 'Waitlist',
           props: {
             variant: 'primary',
-            size: 'default', 
-            className: 'w-1/2'  
+            size: 'lg', 
           },
           action: {
             type: 'modal',

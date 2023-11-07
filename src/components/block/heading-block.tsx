@@ -1,38 +1,45 @@
 import React from 'react'
 
-import { HeadingBlock } from '@/types/blocks'
-
+import type { Block, HeadingBlock } from '@/types/block'
 
 const HeadingBlockComponent: React.FC<{
-  heading: HeadingBlock,
+  block: Block,
   className?: string
 }> = ({
-  heading,
+  block,
   className=''
 }) => {
-  if (heading.level === 0) {
-    return <p className={className}>{heading.heading}</p>
+
+  if (block.blockType !== 'heading') {
+    return <>heading block required</>
   }
-  else if (heading.level === 1) {
-    return <h1 className={className}>{heading.heading}</h1>
+  const heading = block as HeadingBlock
+
+  let Tag: React.ElementType = 'h3' // default 
+
+  switch (heading.level) {
+    case 0: {
+      Tag = 'p'
+    } break
+    case 1: {
+      Tag = 'h1'
+    } break
+    case 2: {
+      Tag = 'h2'
+    } break
+
+    case 4: {
+      Tag = 'h4'
+    } break
+    case 5: {
+      Tag = 'h5'
+    } break
+    case 6: {
+      Tag = 'h6'
+    } break
   }
-  else if (heading.level === 2) {
-    return <h2 className={className}>{heading.heading}</h2>
-  }
-  else if (heading.level === 3) {
-    return <h3 className={className}>{heading.heading}</h3>
-  }
-  else if (heading.level === 4) {
-    return <h4 className={className}>{heading.heading}</h4>
-  }
-  else if (heading.level === 5) {
-    return <h5 className={className}>{heading.heading}</h5>
-  }
-  else if (heading.level === 6) {
-    return <h6 className={className}>{heading.heading}</h6>
-  }
-  
-  return <h3 className={className}>{heading.heading}</h3>
+
+  return <Tag className={className}>{heading.heading}</Tag>
 }
 
 export default HeadingBlockComponent

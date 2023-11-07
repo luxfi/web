@@ -1,7 +1,7 @@
 import media from './video'
 
 export default {
-  blockType: 'asset-banner',
+  blockType: 'banner',
   title: 'LUX SILVER',
   byline: 'The Silver Rush is Here.',
   media,

@@ -1,4 +1,4 @@
-import type * as C from '@/types/blocks'
+import type * as C from '@/types/block'
 
 import media from './video'
 import accordian from './accordian'
@@ -19,7 +19,6 @@ export default {
           props: {
             variant: 'primary',
             size: 'lg', 
-            className: 'w-full -mt-2'  
           },
           action: {
             type: 'modal',

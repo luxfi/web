@@ -1,5 +1,5 @@
 
-import { type CTABlock} from '@/types/blocks'
+import { type CTABlock} from '@/types/block'
 
 import SocialIcon from '@/primitives/social-icon'
 
@@ -8,7 +8,7 @@ const SOC_ICON_SIZE = 18
 export default [
   {
     blockType: 'cta',
-    type: 'nav',
+    specifiers: 'nav',
     elements: [
       {
         title: 'Market',

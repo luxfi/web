@@ -1,21 +1,34 @@
 import React from 'react'
-import { type MediaBlock, type VideoDimensions /*, type ImageDimensions */ } from '@/types/blocks'
+
+import Image from 'next/image'
+
+import type { Block, MediaBlock, VideoDimensions, ImageDimensions } from '@/types/block'
 import VideoPlayer from '@/primitives/video-player'
 
 const MediaBlockComponent: React.FC<{
-  media: MediaBlock
+  block: Block
   className?: string
+  usePoster?: boolean
   size?: 'sm' | 'md' | 'lg'
 }> = ({
-  media,
-  className,
+  block,
+  className='',
+  usePoster=false,
   size='md'
 }) => {
   
+  if (block.blockType !== 'video' && block.blockType !== 'image') {
+    return <>media block required</>
+  }
+
+  const media = block as MediaBlock
+
   if (media.blockType === 'video') {
     const videoDims = media.dim as VideoDimensions
     const dim = (size === 'sm' && !videoDims.sm) ? videoDims.md : videoDims[size]
-    return (
+    return usePoster ? (
+      <Image src={media.image!} alt='image' {...dim} className={className}/>
+    ) : (
       <VideoPlayer 
         className={className} 
         sources={media.sources} 
@@ -25,8 +38,10 @@ const MediaBlockComponent: React.FC<{
     )
   }
 
+  const dim = media.dim as ImageDimensions
+
   return (
-    <p>TODO: Image in Media Block</p>
+    <Image src={media.image!} alt='image' {...dim} className={className}/>
   )
 }
 

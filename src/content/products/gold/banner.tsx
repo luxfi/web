@@ -1,7 +1,7 @@
 import media from './video'
 
 export default {
-  blockType: 'asset-banner',
+  blockType: 'banner',
   title: 'LUX GOLD',
   byline: <>Responsibly manufactured, <br className='sm:hidden'/>ethically sourced.</>,
   media,

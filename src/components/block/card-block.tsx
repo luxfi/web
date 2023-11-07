@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { CardBlock, VideoDimensions } from '@/types/blocks'
+import type { Block, CardBlock, VideoDimensions } from '@/types/block'
 
 import {
   Card,
@@ -10,88 +10,111 @@ import {
   CardHeader,
   CardTitle,
 } from '@/primitives/card'
+import ApplyTypography, { type TypographySize } from '@/primitives/apply-typography'
 
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
 
-const StandardCard: React.FC<{
-  card: CardBlock
+const getTypographySize = (s: string): TypographySize => {
+  console.log('TYPO1: ')
+  const tokenArray = s.split(' ')
+  console.log('TYPO ARR: ', tokenArray)
+  const sizeToken = tokenArray.find((tok) => (tok.startsWith('typography-')))
+  console.log('TYPO2: ', sizeToken)
+  if (sizeToken) {
+    const subTokenArray = sizeToken.split('-')
+    console.log('TYPO: ', subTokenArray[1])
+    return subTokenArray[1] as TypographySize
+  }
+  return 'responsive'
+}
+
+
+const CardBlockComponent: React.FC<{
+  block: Block
   className?: string
   contentClassName?: string
 }> = ({
-  card,
+  block,
   className='',
   contentClassName=''
-}) => (
-  <Card className={'flex flex-col self-stretch ' + (card.cardType?.includes('bg-card') ? 'bg-accent ' : ' ')+ className}>
-    {(card.title || card.byline) && (
-      <CardHeader>
-        {card.title && (<CardTitle className='not-typography text-center text-lg font-medium'>{card.title}</CardTitle>)}
-        {card.byline && (<CardDescription>{card.byline}</CardDescription>)}
-      </CardHeader>      
-    )}
-    <CardContent className={
-      'flex flex-col justify-start items-center ' + contentClassName + 
-      ((card.cardType === 'full-width') ? ' p-0' : '') + 
-      ((!card.cta) ? ' grow' : '')
-    }>
-      {card.media && (
-        <MediaBlockComponent media={card.media} />
-      )}
-      {card.content && (
-        (typeof card.content === 'string') ? (
-          <p>{card.content}</p>
-        ) : card.content 
-      )}
-    </CardContent>
-    {card.cta && (
-      <CardFooter className='grid grid-cols-1 gap-2 md:flex md:flex-row md:justify-center' >
-        <CTABlockComponent cta={card.cta} />
-      </CardFooter>
-    )}
-  </Card>  
-)
+}) => {
 
-const MediaLeftCard: React.FC<{
-  card: CardBlock
-  className?: string
-}> = ({
-  card,
-  className=''
-}) => (
-  <Card className={'flex flex-col self-stretch ' + className}>
-    {(card.title || card.byline) && (
-      <CardHeader>
-        {card.title && (<CardTitle className='not-typography text-center text-lg font-medium'>{card.title}</CardTitle>)}
-        {card.byline && (<CardDescription>{card.byline}</CardDescription>)}
-      </CardHeader>      
-    )}
-    <CardContent className='flex flex-row justify-center items-stretch p-0 grow'>
-      {card.media && (
-        <div className='px-6 py-3 box-content grow-0'  style={{
-          width: (card.media.dim as VideoDimensions).sm!.width 
-        }}>
-          <MediaBlockComponent media={card.media} size='sm' />
-        </div>
-      )}
-      {card.content && (
-        <div className='grow border-l p-6'>
-        {(typeof card.content === 'string') ? (
+  if (block.blockType !== 'card') {
+    return <>card block required</>
+  }
 
-          <p>{card.content}</p>
-        ) : card.content} 
-        </div>
-      )}
-    </CardContent>
-    {card.cta && (
-      <CardFooter className='grid grid-cols-1 gap-2 md:flex md:flex-row md:justify-center' >
-        <CTABlockComponent cta={card.cta} />
-      </CardFooter>
-    )}
-  </Card>  
-)
+  const card = block as CardBlock
 
-export {
-  StandardCard,
-  MediaLeftCard  
+  const disabledBorder = (card.specifiers?.includes('appear-disabled') ? ' border-very-muted-foreground' : '')
+  const disabledText = (card.specifiers?.includes('appear-disabled') ? ' text-very-muted-foreground' : '')
+  const cardBG = (card.specifiers?.includes('bg-card') ? ' bg-accent' : ' ')
+  const contentClasses = (card.specifiers?.includes('left-justify-content') ? ' items-start justify-start ' : ' ') + contentClassName
+
+  const typoSize: TypographySize = (card.specifiers) ? getTypographySize(card.specifiers) : 'responsive'
+
+  const ContentArea: React.FC = () => {
+    if (card.specifiers?.includes('media-left')) {
+      return (
+        <CardContent className={'flex flex-row justify-center items-stretch p-0 grow' + disabledBorder + cardBG + contentClasses}>
+        {card.media && (
+          <div className='p-6 box-content grow-0 not-typography'  style={{
+            width: (card.media.dim as VideoDimensions).sm!.width 
+          }}>
+            <MediaBlockComponent 
+              block={card.media} 
+              usePoster={card.specifiers?.includes('video-use-poster')} 
+              size='sm' 
+              className={card.specifiers?.includes('appear-disabled') ? 'opacity-[0.6]' : ''}
+            />
+          </div>
+        )}
+        {card.content && (
+          <ApplyTypography className={'grow border-l p-6 flex flex-col justify-center ' + disabledBorder} size={typoSize}>
+            <div className={disabledText} >
+            {(typeof card.content === 'string') ? (<p>{card.content}</p>) : card.content} 
+            </div>
+          </ApplyTypography>
+        )}
+        </CardContent>
+      )
+    }
+    return (
+      <CardContent className={
+        'flex flex-col justify-start items-center ' + cardBG + contentClassName + 
+        ((card.specifiers === 'full-width') ? ' p-0' : '') + 
+        ((!card.cta) ? ' grow' : '')
+      }>
+        <ApplyTypography size={typoSize}>
+          <div className={disabledText} >
+          {card.media && (
+            <MediaBlockComponent block={card.media} />
+          )}
+          {card.content && (
+            (typeof card.content === 'string') ? (<p>{card.content}</p>) : card.content
+          )}
+          </div>
+        </ApplyTypography>
+      </CardContent>
+    )
+  }
+
+  return (
+    <Card className={'flex flex-col self-stretch ' + disabledBorder + cardBG + className}>
+      {(card.title || card.byline) && (
+        <CardHeader className={disabledText}>
+          {card.title && (<CardTitle className='not-typography text-center text-lg font-medium'>{card.title}</CardTitle>)}
+          {card.byline && (<CardDescription>{card.byline}</CardDescription>)}
+        </CardHeader>      
+      )}
+      <ContentArea />
+      {card.cta && (
+        <CardFooter className='grid grid-cols-1 gap-2 md:flex md:flex-row md:justify-center' >
+          <CTABlockComponent block={card.cta} />
+        </CardFooter>
+      )}
+    </Card>  
+  )
 }
+
+export default CardBlockComponent

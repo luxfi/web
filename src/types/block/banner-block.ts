@@ -3,8 +3,8 @@ import type Block from './block'
 import type MediaBlock from './media-block'
 import type CTABlock from './cta-block'
 
-interface AssetBannerBlock extends Block {
-  blockType: 'asset-banner'
+interface BannerBlock extends Block {
+  blockType: 'banner'
   title: string
   byline?: string
   contentBefore?: React.ReactNode
@@ -14,5 +14,5 @@ interface AssetBannerBlock extends Block {
 }
 
 export {
-  type AssetBannerBlock as default
+  type BannerBlock as default
 }

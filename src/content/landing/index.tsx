@@ -2,7 +2,7 @@ import React from 'react'
 
 import LinkElement from '@/components/link-element'
 
-import type { AssetBannerBlock, ElementBlock } from '@/types/blocks'
+import type { BannerBlock, ElementBlock } from '@/types/block'
 
 import silver from '../products/silver/banner'
 import gold from '../products/gold/banner'
@@ -23,7 +23,7 @@ export default {
     credit,
     validator,
     pass,
-  ] as AssetBannerBlock[],
+  ] as BannerBlock[],
 
   bottom: {
     blockType: 'element',

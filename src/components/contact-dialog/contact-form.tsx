@@ -16,7 +16,7 @@ import {
   FormMessage,
 } from '@/primitives/form'
 
-import type { ContactInfo } from '@/types/blocks'
+import type { ContactInfo } from '@/types/block'
 import type { SubmitServerAction } from '@/types/button-def'
 
 import Button from '@/primitives/button'
