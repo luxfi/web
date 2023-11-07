@@ -12,21 +12,24 @@ import 'swiper/css'
 import 'swiper/css/scrollbar'
 import '@/style/globals.css'
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: {
     default: "Lux.market",
     template: `Lux.market - %s`,
   },
   description: "Your destination for all cool things.",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+}
+
+const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 }
 
 /*
@@ -61,4 +64,8 @@ const RootLayout: React.FC<PropsWithChildren> = ({
   </html>
 )
 
-export default RootLayout
+export {
+  RootLayout as default, 
+  metadata,
+  viewport
+} 
