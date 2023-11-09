@@ -12,6 +12,8 @@ import credit from '../products/credit/banner'
 import pass from '../products/pass/banner'
 import uranium from '../products/uranium/banner'
 
+import BottomMDX from './landing-bottom.mdx'
+
 
 export default {
 
@@ -27,22 +29,7 @@ export default {
 
   bottom: {
     blockType: 'element',
-    element: <>
-      <div>
-        <h5 >Join the global rush to own silver</h5>
-        <h2>THE SILVER RUSH IS HERE</h2>
-      </div>
-      <LinkElement 
-        def={{
-          title: 'Enter App',
-          href: 'https://app.lux.market',
-          external: true,
-          newTab: false,
-          variant: 'primary',
-        }}
-        size='lg'
-      />
-    </> 
+    element: <BottomMDX />
   } as ElementBlock
 
 }

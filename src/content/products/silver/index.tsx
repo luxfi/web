@@ -2,6 +2,8 @@ import type * as C from '@/types/block'
 
 import MiniChart from '@/components/mini-chart'
 
+import { markdown } from '@/util'
+
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
@@ -19,7 +21,7 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Silver Price / Oz',
-      content: <h4>USD 20</h4>,
+      content: <h4 className='font-heading text-3xl'>USD 20</h4>,
     },
     msCard: {
       blockType: 'card',
@@ -35,13 +37,15 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      specifiers: 'media-left',
+      specifiers: 'media-left heading-style-title',
       title: 'NEXT MINT',
-      content: <>
-        <p>Available: 10,000,100 oz</p>
-        <p>Price: $20 / oz</p>
-        <p>Spot price:: ~$25 / oz</p>
-      </>,
+      content: markdown(
+`Available: 10,000,100 oz 
+
+Price: $20 / oz 
+
+Spot price: ~$25 / oz`
+      ),
       media,
     } as C.CardBlock,
     {

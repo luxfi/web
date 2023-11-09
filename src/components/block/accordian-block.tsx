@@ -25,13 +25,16 @@ const AccordianBlockComponent: React.FC<{
   const accordian = block as AccordianBlock
 
   return (
-    <Accordion type="single" collapsible className={'w-full border border-border-accented rounded-xl overflow-hidden ' + className}>
+    <Accordion type="single" collapsible className={'w-full border rounded-xl overflow-hidden ' + className}>
       {accordian.items.map((item, index) => (
-      <AccordionItem className='border-border-accented last:border-0 last:rounded-xl overflow-hidden' value={`value-${index}`} key={index}>
-        <AccordionTrigger className='px-4 hover:no-underline' >
-          <h6 className='not-typography font-sans font-medium text-lg text-card-foreground'>{item.trigger}</h6>
+      <AccordionItem className='border-b last:border-0 overflow-hidden' value={`value-${index}`} key={index}>
+        <AccordionTrigger className='px-3 md:px-4 lg:px-6 hover:no-underline hover:bg-muted' >
+          <ApplyTypography>
+            {/* styles specific to accordion.  From old site */}
+            <h6 className='leading-[1.2] text-[1.05rem] font-semibold ' >{item.trigger}</h6>
+          </ApplyTypography>
         </AccordionTrigger>
-        <AccordionContent className='p-4 border-t border-border-accented bg-accent'>
+        <AccordionContent className='p-4 border-t bg-level-1'>
         <ApplyTypography className='flex flex-col justify-start items-start '>
           {(typeof item.content === 'string') ? (<p>{item.content}</p>) : item.content} 
         </ApplyTypography>

@@ -16,11 +16,7 @@ export default {
       },
       {
         text: 'Waitlist',
-        props: {
-          variant: 'primary',
-          size: 'default', 
-          className: 'w-1/2'  
-        },
+        props: { variant: 'primary' },
         action: {
           type: 'modal',
           def: modal

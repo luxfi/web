@@ -49,7 +49,7 @@ const LinkElement: React.FC<{
         }), 
         className 
           + (href ? '' : ' pointer-events-none')
-          + (def.icon ? ' color-foreground hover:color-muted-foreground' : '')
+          + (def.icon ? ' color-foreground hover:color-foreground-muted' : '')
       )}
       {...toSpread}
     >

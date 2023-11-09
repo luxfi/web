@@ -1,4 +1,3 @@
-const typoPluginConf = require('./src/style/typography-plugin.tailwind')
 const colors = require('./src/style/colors.tailwind')
 const { fontFamily, fontSize } = require('./src/style/fonts.tailwind')
 const screens = require('./src/style/screens.tailwind')
@@ -8,10 +7,17 @@ module.exports = {
   presets: [],
   darkMode: ["class"],
   content: ["src/**/*.{ts,tsx,js}"],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('./src/style/typo-plugin')({ className: 'typography', base: 16 }),
+    require('@tailwindcss/container-queries'),
+    require('tailwindcss-interaction-media'),
+  ],
   theme: {
-    extend: {
-      typography: typoPluginConf,
+    extend: 
+    {
     },
+
     accentColor: ({ theme }) => ({
       ...theme('colors'),
       auto: 'auto',
@@ -937,10 +943,4 @@ module.exports = {
       50: '50',
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require('@tailwindcss/typography')({ className: 'typography' }),
-    require('@tailwindcss/container-queries'),
-    require('tailwindcss-interaction-media'),
-  ],
 }

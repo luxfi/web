@@ -27,7 +27,7 @@ Help secure clean energy for this generation and the next.
     priceCard: {
       blockType: 'card',
       title: 'Lux Uranium Price / lb',
-      content: <h4>USD 45</h4>,
+      content: <h4 className='font-heading text-3xl'>USD 45</h4>,
     },
     msCard: {
       blockType: 'card',
@@ -43,17 +43,15 @@ Help secure clean energy for this generation and the next.
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      specifiers: 'media-left',
+      specifiers: 'media-left heading-style-title',
       title: 'UPCOMING DROP',
-      content: markdown(
-`
+      content: markdown(`
 Drop size: 500,100 lbs 
 
 NFT price: $45 / lb 
 
 Market spot price:: ~$65 / lb 
-`     
-      ),
+      `),
       media,
     } as C.CardBlock,
     {
@@ -77,17 +75,15 @@ Market spot price:: ~$65 / lb
     },
     {
       blockType: 'card',
-      specifiers: 'media-left appear-disabled video-use-poster',
+      specifiers: 'media-left appear-disabled video-use-poster heading-style-title',
       title: 'SOLD OUT',
-      content: markdown(
-`
+      content: markdown(`
 Drop size: 122,000 lbs 
 
 NFT price: $42 / lb 
 
 Market spot price: $52 / lb 
-`     
-      ),
+      `),
       media,
     } as C.CardBlock,
     {
@@ -104,7 +100,7 @@ Market spot price: $52 / lb
       elements: [
         {
           blockType: 'card',
-          specifiers: 'bg-card no-outer-border link-entire-show-in-footer typography-sm',
+          specifiers: 'bg-card no-outer-border link-entire-on-mobile typography-sm',
           media: {
             blockType: 'image',
             image: '/assets/img/press-cointelegraph-white-transparent.png',
@@ -120,11 +116,11 @@ Market spot price: $52 / lb
               href: 'https://cointelegraph.com/press-releases/billions-of-real-world-asset-backed-nfts-are-coming-to-enable-the-next-killer-web3-use-case'
             }]
           },
-          content: 'Asset-backed financial NFTs will be the driver of the next NFT&nbsp;killer use case, and we are excited to partner with Lux to pioneer this vision – Vera Labs CEO.',
+          content: 'Asset-backed financial NFTs will be the driver of the next NFT killer use case, and we are excited to partner with Lux to pioneer this vision – Vera Labs CEO.',
         } as C.CardBlock,
         {
           blockType: 'card',
-          specifiers: 'bg-card no-outer-border link-entire-show-in-footer',
+          specifiers: 'bg-card no-outer-border link-entire-on-mobile',
           media: {
             blockType: 'image',
             image: '/assets/img/press-cointelegraph-white-transparent.png',

@@ -38,14 +38,14 @@ const Footer: React.FC<{
           as={(ctaBlock.specifiers === 'nav') ? 'nav' : 'div'} 
           className={'w-fit flex flex-col justify-start items-start gap-[12px] md:gap-[15px] ' + colSpan} 
           key={index + 1}
-          itemClassName={'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-foreground'}
+          itemClassName={'text-[15px]/[1.1] font-normal tracking-[0.2px] text-foreground-muted'}
           itemClassNameFromVariant={(variant: ButtonVariants) => ( variant === 'linkFG' ? 
             'font-heading text-[15px]/[1.3] font-medium text-foreground tracking-normal' 
           : '')}
         /> 
       )})}
     </div>
-    <div className='text-sm text-center text-very-muted-foreground py-4'>
+    <div className='text-sm text-center text-foreground-very-muted py-4'>
       <Copyright />
     </div>
   </footer>

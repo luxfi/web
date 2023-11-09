@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react'
 
-type TypographySize = 'responsive' | 'sm' | 'md' | 'lg' // if t-shirt size, do *not* be responsive
+type TypographySize = 'responsive' | 'sm' | 'base' | 'lg' // if t-shirt size, do *not* be responsive
 
 const ApplyTypography: React.FC<
   PropsWithChildren & {
@@ -16,22 +16,24 @@ const ApplyTypography: React.FC<
 }) => {
 
   let typoClasses = 
-  'typography dark:typography-invert gap-3 ' + 
-  'md:typography-md dark:md:typography-invert-md md:gap-3 ' +
-  'lg:typography-lg dark:lg:typography-invert-lg lg:gap-4 '
+  'typography gap-3 ' +
+  'xs:typography-sm ' + 
+  'sm:typography-base sm:gap-4' +
+  'lg:typography-lg lg:gap-5 ' + 
+  'typography-headings:font-heading ' // only effects h1-h3 (in plugin)
 
   switch (size) {
     case 'sm': {
-      typoClasses = 'typography dark:typography-invert gap-3' 
+      typoClasses = 'typography-sm gap-3 typography-headings:font-heading '
     } break
-    case 'md': {
-      typoClasses = 'typography-md dark:typography-invert-md gap-3' 
+    case 'base': {
+      typoClasses = 'typography-base gap-4 typography-headings:font-heading '
     } break
     case 'lg': {
-      typoClasses = 'typography-lg dark:typography-invert-lg gap-4' 
+      typoClasses = 'typography-lg gap-5 typography-headings:font-heading '
     } break
   }
-
+  
   const Tag = asTag
   return (
     <Tag className={typoClasses + className}>
@@ -39,6 +41,7 @@ const ApplyTypography: React.FC<
     </Tag>
   )
 }
+
 export {
   type TypographySize,
   ApplyTypography as default

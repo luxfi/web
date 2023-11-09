@@ -2,51 +2,42 @@ export default ({ colors }) => ({
   inherit: colors.inherit,
   current: colors.current,
   transparent: colors.transparent,
-  border: {
-    DEFAULT: "var(--border)",
-    accented: "var(--border-accented)",
-  },
   input: "var(--input)",
   ring: "var(--ring)",
-  background: "var(--background)", 
-  foreground: "var(--foreground)",
+  background: 'var(--bg-0)',
+    // levels forward in z-index (a la Material Design)
+  level: {
+    DEFAULT: "var(--bg-0)",
+    '0': "var(--bg-0)", 
+    '1': "var(--bg-1)", 
+    '2': "var(--bg-2)", 
+    '3': "var(--bg-3)", 
+  },
+  foreground: {
+    accent: "var(--fg-0)",      // full contrast (darkTheme:white) : heading and links hover  
+    DEFAULT: "var(--fg-body)",  // body off-white (bright enough to contrast to bg-forward-1)
+    muted: "var(--fg-2)",       // de-emphasized: fine print
+    'more-muted': "var(--fg-3)",     // disabled 
+    'very-muted': "var(--fg-4)",     // very disabled ;) 
+    'fully-muted': "var(--fg-5)"     // disabled border 
+  },
   primary: {
     DEFAULT: "var(--primary)",
     hover: "var(--primary-hover)",
-    foreground: "var(--primary-foreground)",
+    fg: "var(--primary-fg)",
   },
   secondary: {
     DEFAULT: "var(--secondary)",
     hover: "var(--secondary-hover)",
-    foreground: "var(--secondary-foreground)",
+    fg: "var(--secondary-fg)",
   },
   destructive: {
     DEFAULT: "var(--destructive)",
-    foreground: "var(--destructive-foreground)",
-  },
-  muted: {
-    DEFAULT: "var(--muted)",
-    foreground: "var(--muted-foreground)",
-  },
-  ['very-muted']: {
-    DEFAULT: "var(--very-muted)",
-    foreground: "var(--very-muted-foreground)",
+    fg: "var(--destructive-fg)",
   },
   nav: {
     DEFAULT: "var(--nav)",
     hover: "var(--nav-hover)",
     current: "var(--nav-current)",
-  },
-  accent: {
-    DEFAULT: "var(--accent)",
-    foreground: "var(--accent-foreground)",
-  },
-  popover: {
-    DEFAULT: "var(--popover)",
-    foreground: "var(--popover-foreground)",
-  },
-  card: {
-    DEFAULT: "var(--card)",
-    foreground: "var(--card-foreground)",
   },
 })

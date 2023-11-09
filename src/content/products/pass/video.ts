@@ -12,11 +12,11 @@ export default  {
     // Determin aspect ration from dims manually...
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
-    // dims are 658x720, let's cut in half
+    // dims are 658x720, 
     // ratio: 0.914
     md: {
-      width: 329,
-      height: 360
+      width: 274,
+      height: 300 // otherwise it's too cramped on smaller phones
     },
 
     lg: {

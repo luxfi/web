@@ -32,7 +32,7 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      specifiers: 'media-left',
+      specifiers: 'media-left heading-style-title',
       title: 'NEXT MINT',
       content: <>
         <p>Available: 1,000,100 oz</p>

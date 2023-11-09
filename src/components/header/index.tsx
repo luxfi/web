@@ -29,7 +29,7 @@ const Header: React.FC = () => (
         items={nav.nav} 
         className='hidden md:flex lg:hidden gap-4' 
         itemClassName='text-sm font-heading'  
-        itemClassNameFromVariant={(variant: ButtonVariants) => (variant === 'link' ? 'text-muted-foreground' : '')}
+        itemClassNameFromVariant={(variant: ButtonVariants) => (variant === 'link' ? 'text-foreground-muted' : '')}
         key='four'
       />
       <LinkElement def={nav.buttons[0] /* TODO unhack */} size='sm' className='min-w-0 hidden md:flex lg:hidden' />

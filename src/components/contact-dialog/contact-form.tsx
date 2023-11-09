@@ -89,7 +89,7 @@ const ContactForm: React.FC<{
           name='phone'
           render={({ field }) => ( <MyFormItem field={field} placeholder='phone'/> )}
         />
-          <Button disabled={isPending} type='submit' className='bg-primary text-primary-foreground hover:bg-primary-hover'>
+          <Button disabled={isPending} type='submit' className='bg-primary text-primary-fg hover:bg-primary-hover'>
             {isPending ? (<>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Please wait

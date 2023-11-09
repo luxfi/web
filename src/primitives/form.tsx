@@ -134,7 +134,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn("text-sm text-foreground-muted", className)}
       {...props}
     />
   )
@@ -149,7 +149,7 @@ const FormMessage = React.forwardRef<
   const body = error ? String(error?.message) : children
 
   const classes = 'text-xs font-medium py-1 ' + 
-                  (error ? 'text-destructive' : 'text-muted-foreground') + 
+                  (error ? 'text-destructive' : 'text-foreground-muted') + 
                   (body ? '' : ' invisible') // Hold space in the layout
 
   return (

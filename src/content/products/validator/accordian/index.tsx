@@ -1,5 +1,5 @@
 import RunANodeMDX from './run-a-node.mdx'
-import ScareAndAppreciableMDX from './sarce-and-appreciable-asset.mdx'
+import ScarceAndAppreciableMDX from './scarce-and-appreciable-asset.mdx'
 
 export default {
   blockType: 'accordian',
@@ -14,7 +14,7 @@ export default {
     },
     {
       trigger: 'Scarce and appreciable asset',
-      content: <ScareAndAppreciableMDX />
+      content: <ScarceAndAppreciableMDX />
     },
     {
       trigger: 'LUX Coin already bonded',

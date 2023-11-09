@@ -38,7 +38,7 @@ const ContactDialog: React.FC<ButtonModalProps> = ({
       </DialogHeader>
       <div className='p-8 rounded-e-lg flex flex-col justify-start items-center'>
         <ContactForm onSubmit={action} enclosure={actionEnclosure}/>
-        <div className='text-muted-foreground text-xs mt-4' >
+        <div className='text-foreground-muted text-xs mt-4' >
           <Disclaimer />
         </div>
       </div>

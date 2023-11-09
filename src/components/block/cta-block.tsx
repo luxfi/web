@@ -43,6 +43,7 @@ const CtaBlockComponent: React.FC<{
           <ActionButton 
             def={def}
             key={index}
+            size={itemSize}
             className={itemClassName}
           />
         ) 

@@ -2,7 +2,6 @@
 import React  from 'react'
 
 import type { Block, BannerBlock } from '@/types/block'
-import { type ButtonSizes } from '@/primitives/button'
 
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
@@ -14,13 +13,11 @@ const BannerBlockComponent: React.FC<{
   grouping?: BannerGrouping,
   groupingClasses?: string[] // count should match number of siblings in the chosen grouping 
   ctaItemClassName?: string
-  ctaItemSize?: ButtonSizes
 }> = ({
   block,
   grouping = 'titleAndMedia-cta',
   groupingClasses=[],
   ctaItemClassName='',
-  ctaItemSize='default' 
 }) => {
 
   if (block.blockType !== 'banner') {
@@ -34,8 +31,8 @@ const BannerBlockComponent: React.FC<{
     const ctaClasses = (groupingClasses && groupingClasses[2]) ? groupingClasses[2] : ''
     return (<>
       <div className={titleClasses}>
-        <h2>{banner.title}</h2>
-        {banner.byline && (<h6>{banner.byline}</h6>)}
+        <h1>{banner.title}</h1>
+        {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
       <div className={'self-center flex flex-col justify-start items-center ' + mediaClasses}>
         {banner.contentBefore && banner.contentBefore}
@@ -46,7 +43,7 @@ const BannerBlockComponent: React.FC<{
       </div>
       {banner.cta && (
         <div className={'flex flex-row items-stretch gap-2 sm:gap-6 sm:justify-center ' + ctaClasses}>
-          <CTABlockComponent block={banner.cta} itemClassName={ctaItemClassName} itemSize={ctaItemSize} />
+          <CTABlockComponent block={banner.cta} itemClassName={ctaItemClassName} itemSize='lg'/>
         </div>  
       )}
     </>)
@@ -56,8 +53,8 @@ const BannerBlockComponent: React.FC<{
     const ctaClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
     return (<>
       <div className={'self-center flex flex-col justify-start items-center ' + titleAndMediaClasses} >
-        <h2>{banner.title}</h2>
-        {banner.byline && (<h6>{banner.byline}</h6>)}
+        <h1>{banner.title}</h1>
+        {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.contentBefore && banner.contentBefore}
         {banner.media && (
           <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} />
@@ -65,8 +62,8 @@ const BannerBlockComponent: React.FC<{
         {banner.contentAfter && banner.contentAfter }
       </div>
       {banner.cta && (
-        <div className={'flex flex-row items-stretch gap-2 sm:gap-6 sm:justify-center ' + ctaClasses}>
-          <CTABlockComponent block={banner.cta} itemClassName={ctaItemClassName} itemSize={ctaItemSize}  />
+        <div className={'flex flex-row items-stretch gap-2 sm:gap-6 justify-center ' + ctaClasses}>
+          <CTABlockComponent block={banner.cta} itemClassName={'xs:w-1/2 ' + ctaItemClassName} itemSize='lg'  />
         </div>  
       )}
     </>)
@@ -80,8 +77,8 @@ const BannerBlockComponent: React.FC<{
   const ctaClasses = (groupingClasses && groupingClasses[5]) ? groupingClasses[5] : ''
 
   return (<>
-    <h2 className={titleClasses}>{banner.title}</h2>
-    {banner.byline && (<h6 className={bylineClasses}>{banner.byline}</h6>)}
+    <h1 className={titleClasses}>{banner.title}</h1>
+    {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
     {banner.contentBefore && (<div className={contentBeforeClasses}>banner.contentBefore</div>)}
     {banner.media && (
       <MediaBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.media} />
@@ -89,7 +86,7 @@ const BannerBlockComponent: React.FC<{
     {banner.contentAfter && (<div className={contentAfterClasses}>banner.contentAfter</div>)}
     {banner.cta && (
       <div className={'flex flex-col gap-4 items-stretch sm:flex-row sm:gap-6 sm:justify-center ' + ctaClasses}>
-        <CTABlockComponent block={banner.cta} itemClassName={ctaItemClassName} itemSize={ctaItemSize} />
+        <CTABlockComponent block={banner.cta} itemClassName={ctaItemClassName} itemSize='lg' />
       </div>  
     )}
   </>)
