@@ -24,7 +24,6 @@ const Desktop: React.FC<{
     slidesPerView={1} 
     className={className + ' w-full h-[calc(100vh-80px)]'} 
     simulateTouch={false}
-    //spaceBetween={20}
     scrollbar={{
       hide: false,
       draggable: true,
@@ -38,7 +37,6 @@ const Desktop: React.FC<{
         <ApplyTypography asTag='section' className={'w-full lg:gap-40 md:gap-20 flex flex-col items-center justify-start self-stretch'} >
           <BannerComponent 
             block={banner}
-            //ctaItemClassName='w-1/2'
             groupingClasses={['', 'xs:w-full md:w-auto md:min-w-[500px]']}
           />
         </ApplyTypography>
@@ -78,8 +76,6 @@ const TouchDevice: React.FC<{
         >
           <BannerComponent 
             block={banner} 
-              // https://stackoverflow.com/questions/75229828/tailwinds-arbitrary-values-for-breakpoints-stopped-working-in-react-js
-              // :aa I could not for the life of me get named bp's to work either in screens, or in extends as the docs suggest.  Dunno.
             groupingClasses={[
               'md:mt-12', 
               'md:mt-32 md:w-[70%] lg:w-[60%] md:self-center']
@@ -88,7 +84,7 @@ const TouchDevice: React.FC<{
         </ApplyTypography>
       </SwiperSlide>
     )) }
-    {isTablet ? ( // lg:justify-start lg:gap-[150px] lg:pt-[300px]  <div style={{height: '1px'}} />
+    {isTablet ? ( 
       <SwiperSlide key='last' className='flex flex-col justify-between items-stretch gap-10'>
        
         <ApplyTypography asTag='section' className='grow mx-auto px-4 flex flex-col gap-10 justify-center items-center' >

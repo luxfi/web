@@ -45,7 +45,7 @@ export default {
       blockType: 'cta',
       elements: [{
         title: 'Buy Now',
-        href: '/', // TOOD
+        href: '/', // TODO
         variant: 'primary',
         size: 'lg'
       }]

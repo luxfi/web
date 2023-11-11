@@ -4,7 +4,7 @@ const castArray = require('lodash.castarray')
 const getStyles = require('../get-plugin-styles')
 const { commonTrailingPseudos } = require('./utils')
 
-let baseFontSize = 10 // TODO
+let baseFontSize = 16 
 
 const computed = {
   // Reserved for future "magic properties", for example:
