@@ -30,7 +30,7 @@ const YouTubeEmbed: React.FC<{
 
   const [showVideo, setShowVideo] = useState(false)
 
-    // autoplay: https://stackoverflow.com/a/45610557/11645689
+    // re autoplay: https://stackoverflow.com/a/45610557/11645689
   return (
     <div className={className}>
       {showVideo ? (

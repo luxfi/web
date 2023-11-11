@@ -14,15 +14,50 @@ import '@/style/globals.css'
 
 const metadata: Metadata = {
   title: {
-    default: "Lux.market",
-    template: `Lux.market - %s`,
+    default: "Lux Market",
+    template: `Lux Market - %s`,
   },
   description: "Your destination for all cool things.",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
+
+    // Generated from a 512 original create in GIMP
+    // at https://favicon.io/favicon-converter/
+
+    // Next API is poorly documented.
+    // cf: Next.js repo: packages/next/src/lib/metadata/types/metadata-interface.ts
+    // and metadata-types.ts 
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/assets/icon/favicon-16x16.png'   
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/assets/icon/favicon-32x32.png'   
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '192x192',
+      url: '/assets/icon/android-chrome-192x192.png'   
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '512x512',
+      url: '/assets/icon/android-chrome-512x512.png'   
+    },
+    {
+      rel: 'apple-touch-icon',
+      type: 'image/png',
+      sizes: '180x180',
+      url: '/assets/icon/apple-touch-icon.png'   
+    },
+  ]
+  ,
 }
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
