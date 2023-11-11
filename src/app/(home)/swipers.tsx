@@ -17,44 +17,41 @@ const Desktop: React.FC<{
   className?: string
 }> = ({
   className=''
-}) => {
-  
-  return  (
-    <Swiper 
-      direction='vertical' 
-      nested={true} 
-      slidesPerView={1} 
-      className={' w-full h-[calc(100vh-80px)]' + className} 
-      simulateTouch={false}
-      //spaceBetween={20}
-      scrollbar={{
-        hide: false,
-        draggable: true,
-        snapOnRelease: true
-      }}
-      mousewheel={true}
-      modules={[Scrollbar, Mousewheel]}
-    >
-      {landing.banners.map((banner, index) => (
-        <SwiperSlide key={index} className='p-4 lg:p-6'>
-          <ApplyTypography asTag='section' className={'w-full lg:gap-40 md:gap-20 flex flex-col items-center justify-start self-stretch'} >
-            <BannerComponent 
-              block={banner}
-              //ctaItemClassName='w-1/2'
-              groupingClasses={['', 'xs:w-full md:w-auto md:min-w-[500px]']}
-            />
-          </ApplyTypography>
-        </SwiperSlide>
-      ))}
-        <SwiperSlide key='last' className='flex flex-col justify-start items-stretch' >
-          <ApplyTypography asTag='section' className='grow w-full border-b flex flex-col items-center justify-start self-stretch sm:pb-6 lg:py-10 lg:gap-10 ' >
-            {landing.bottom.element}
-          </ApplyTypography>
-          <Footer className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
-        </SwiperSlide>
-    </Swiper>
-  )
-}
+}) => (
+  <Swiper 
+    direction='vertical' 
+    nested={true} 
+    slidesPerView={1} 
+    className={className + ' w-full h-[calc(100vh-80px)]'} 
+    simulateTouch={false}
+    //spaceBetween={20}
+    scrollbar={{
+      hide: false,
+      draggable: true,
+      snapOnRelease: true
+    }}
+    mousewheel={true}
+    modules={[Scrollbar, Mousewheel]}
+  >
+    {landing.banners.map((banner, index) => (
+      <SwiperSlide key={index} className='p-4 lg:p-6'>
+        <ApplyTypography asTag='section' className={'w-full lg:gap-40 md:gap-20 flex flex-col items-center justify-start self-stretch'} >
+          <BannerComponent 
+            block={banner}
+            //ctaItemClassName='w-1/2'
+            groupingClasses={['', 'xs:w-full md:w-auto md:min-w-[500px]']}
+          />
+        </ApplyTypography>
+      </SwiperSlide>
+    ))}
+      <SwiperSlide key='last' className='flex flex-col justify-start items-stretch' >
+        <ApplyTypography asTag='section' className='grow w-full border-b flex flex-col items-center justify-start self-stretch sm:pb-6 lg:py-10 lg:gap-10 ' >
+          {landing.bottom.element}
+        </ApplyTypography>
+        <Footer className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
+      </SwiperSlide>
+  </Swiper>
+)
 
 const TouchDevice: React.FC<{
   isTablet: boolean
@@ -67,16 +64,16 @@ const TouchDevice: React.FC<{
     direction='vertical' 
     nested={true} 
     slidesPerView={1} 
-    className={className + `h-[calc(100vh-${isTablet ? '80':'44'}px)] w-full`} 
+    className={className + (isTablet ? ' h-[calc(100vh-80px)]' : ' h-[calc(100vh-44px)]') + ' w-full'} 
   >
-    { [landing.banners[0]].map((banner, index) => (
+    {landing.banners.map((banner, index) => (
       <SwiperSlide key={index} className='p-4 xs:p-2'>
         <ApplyTypography 
           asTag='section' 
-          className={'w-full flex flex-col items-stretch' +
-            (isTablet ? ' gap-2 h-full mt-0 justify-around lg:justify-start lg:gap-24 lg:pt-24 pb-24' 
+          className={'w-full h-full flex flex-col items-stretch' +
+            (isTablet ? ' gap-2 mt-0 justify-around lg:justify-start lg:gap-24 lg:pt-24 pb-24' 
               : 
-            ' h-full justify-between pt-10 pb-20 ') // must have large space below for browser controls!
+            ' justify-between pt-10 pb-20') // must have large space below for browser controls!
           } 
         >
           <BannerComponent 
