@@ -28,7 +28,7 @@ const AccordianBlockComponent: React.FC<{
     <Accordion type="single" collapsible className={'w-full border rounded-xl overflow-hidden ' + className}>
       {accordian.items.map((item, index) => (
       <AccordionItem className='border-b last:border-0 overflow-hidden' value={`value-${index}`} key={index}>
-        <AccordionTrigger className='px-3 md:px-4 lg:px-6 hover:no-underline hover:bg-muted' >
+        <AccordionTrigger className='px-3 md:px-4 lg:px-6 hover:no-underline hover:bg-level-3' >
           <ApplyTypography>
             {/* styles specific to accordion.  From old site */}
             <h6 className='leading-[1.2] text-[1.05rem] font-semibold ' >{item.trigger}</h6>

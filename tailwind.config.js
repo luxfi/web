@@ -1,12 +1,14 @@
 const colors = require('./src/style/colors.tailwind')
 const { fontFamily, fontSize } = require('./src/style/fonts.tailwind')
 const screens = require('./src/style/screens.tailwind')
+const safelist = require('./src/style/safelist.tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [],
   darkMode: ["class"],
   content: ["src/**/*.{ts,tsx,js}"],
+  safelist,
   plugins: [
     require("tailwindcss-animate"),
     require('./src/style/typo-plugin')({ className: 'typography', base: 16 }),
@@ -14,9 +16,6 @@ module.exports = {
     require('tailwindcss-interaction-media'),
   ],
   theme: {
-    extend: 
-    {
-    },
 
     accentColor: ({ theme }) => ({
       ...theme('colors'),

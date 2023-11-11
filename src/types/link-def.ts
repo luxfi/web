@@ -14,6 +14,7 @@ interface LinkItemDef {
   variant?: ButtonVariants
   size?: ButtonSizes
   icon?: React.ReactNode
+  iconAfter?: boolean
   current?: boolean
 }
 

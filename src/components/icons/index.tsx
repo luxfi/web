@@ -3,12 +3,14 @@ import {
   Moon,
   SunMedium,
   Menu,
+  ArrowUpRight,
   type XIcon as LucideIcon,
 } from 'lucide-react'
 
 export { type LucideIcon as Icon } 
 
 import LuxLogo from './lux-logo'
+import YouTubeLogo from './youtube-logo'
 
 const GitHub: React.FC<LucideProps> = (props: LucideProps) => (
   <svg viewBox="0 0 438.549 438.549" {...props}>
@@ -24,5 +26,7 @@ export default {
   moon: Moon,
   logo: LuxLogo,
   burger: Menu,
-  gitHub: GitHub
+  gitHub: GitHub,
+  linkOut: ArrowUpRight,
+  youtube: YouTubeLogo,
 }

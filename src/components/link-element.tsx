@@ -10,13 +10,17 @@ const LinkElement: React.FC<{
   variant? : ButtonVariants
   size?: ButtonSizes 
   onClick?: () => void // for UI changes in addition to link (eg, close menu)
-  className?: string
+  className?: string,
+  icon?: React.ReactNode
+  iconAfter?: boolean
 }> = ({ 
   def,
   size = 'lg',
   onClick,
   variant,
-  className = ''
+  className = '',
+  icon,     // override
+  iconAfter // override
 } ) => {
 
   const {
@@ -40,21 +44,25 @@ const LinkElement: React.FC<{
     ...(onClick ? { onClick } : {})
   }
 
+  const iconn = (icon) ? icon : (def.icon) ? def.icon : undefined
+  const iconnAfter = (iconAfter) ? iconAfter : (def.iconAfter) ? def.iconAfter : false
+
   return (
     <Link
-      className={cn(buttonVariants({ 
-          variant: variant ?  variant : (defVariant ? defVariant : 'link'), 
-          size: (!defVariant || defVariant.includes('link') || variant?.includes('link'))  ? 'link' 
-            : (size ? size : defSize)
-        }), 
-        className 
-          + (href ? '' : ' pointer-events-none')
-          + (def.icon ? ' color-foreground hover:color-foreground-muted' : '')
-      )}
+      className={
+          cn(buttonVariants({ 
+            variant: variant ?  variant : (defVariant ? defVariant : 'link'), 
+            size: (!defVariant || defVariant.includes('link') || variant?.includes('link'))  ? 'link' 
+              : (size ? size : defSize)
+          }), 
+          (href ? '' : ' pointer-events-none') + 
+          className 
+        )}
       {...toSpread}
     >
-      {def.icon && (<div className='pr-1'>{def.icon}</div>)}
-      {title}
+      {iconn && !iconnAfter && (<div className='pr-1'>{iconn}</div>)}
+      <div>{title}</div>
+      {iconn && iconnAfter && (<div className='pl-1'>{iconn}</div>)}
     </Link>
   )
 }

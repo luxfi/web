@@ -7,11 +7,11 @@ import { cn } from "@/util"
 const variant = {
   primary: "bg-primary text-primary-fg hover:bg-primary-hover font-heading whitespace-nowrap not-typography",
   secondary: "bg-secondary text-secondary-fg hover:bg-secondary/80 font-heading whitespace-nowrap not-typography",
-  outline: "border border-primary hover:bg-level-1 hover:text-foreground-accent font-heading whitespace-nowrap not-typography",
+  outline: "border border-primary hover:bg-level-1 hover:text-accent font-heading whitespace-nowrap not-typography",
   destructive: "bg-destructive text-destructive-fg font-sans whitespace-nowrap hover:bg-destructive-hover",
-  ghost: "hover:bg-level-1 hover:text-foreground-accent whitespace-nowrap font-sans ",
-  link: "text-foreground hover:text-foreground-muted font-sans ",
-  linkFG: "text-foreground hover:text-foreground-muted font-sans ", // marker to style nav as regular link
+  ghost: "hover:bg-level-1 hover:text-accent whitespace-nowrap font-sans ",
+  link: "text-foreground hover:text-muted-1 font-sans ",
+  linkFG: "text-foreground hover:text-muted-1 font-sans ", // marker to style nav as regular link
 }
 
 const size = {

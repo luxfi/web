@@ -84,7 +84,7 @@ https://unpkg.com/tailwindcss@3.3.5/src/css/preflight.css
 
 @layer base {
   * {
-    @apply border-foreground-very-muted;
+    @apply border-muted-3;
   }
   html {
   }

@@ -81,12 +81,11 @@ const TouchDevice: React.FC<{
         >
           <BannerComponent 
             block={banner} 
-            //ctaItemClassName='w-1/2'
               // https://stackoverflow.com/questions/75229828/tailwinds-arbitrary-values-for-breakpoints-stopped-working-in-react-js
               // :aa I could not for the life of me get named bp's to work either in screens, or in extends as the docs suggest.  Dunno.
             groupingClasses={[
-              '[@media(min-height:780px)]:mt-12', 
-              '[@media(min-height:780px)]:mt-32 md:w-[70%] lg:w-[60%] md:self-center']
+              'md:mt-12', 
+              'md:mt-32 md:w-[70%] lg:w-[60%] md:self-center']
             }
           />
         </ApplyTypography>

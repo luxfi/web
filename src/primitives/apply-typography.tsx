@@ -15,22 +15,23 @@ const ApplyTypography: React.FC<
   size='responsive'
 }) => {
 
+    // responsive version by default
   let typoClasses = 
   'typography gap-3 ' +
   'xs:typography-sm ' + 
-  'sm:typography-base sm:gap-4' +
+  'sm:typography sm:gap-4' +
   'lg:typography-lg lg:gap-5 ' + 
   'typography-headings:font-heading ' // only effects h1-h3 (in plugin)
 
   switch (size) {
     case 'sm': {
-      typoClasses = 'typography-sm gap-3 typography-headings:font-heading '
+      typoClasses = 'typography typography-sm gap-3 typography-headings:font-heading typography-p:text-sm '
     } break
     case 'base': {
-      typoClasses = 'typography-base gap-4 typography-headings:font-heading '
+      typoClasses = 'typography gap-4 typography-headings:font-heading '
     } break
     case 'lg': {
-      typoClasses = 'typography-lg gap-5 typography-headings:font-heading '
+      typoClasses = 'typography typography-lg gap-5 typography-headings:font-heading typography-p:text-lg '
     } break
   }
   

@@ -3,9 +3,10 @@ import React from 'react'
 import Link from 'next/link'
 
 import Icons from '@/components/icons'
+import { type TShirtSize } from '@/types'
 
 const Logo: React.FC<{
-  size: 'sm' | 'md' | 'lg' 
+  size: TShirtSize
   logoOnly?: boolean
   href?: string
   className?: string

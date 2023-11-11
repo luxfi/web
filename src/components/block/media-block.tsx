@@ -2,6 +2,7 @@ import React from 'react'
 
 import Image from 'next/image'
 
+import { type TShirtSize } from '@/types'
 import type { Block, MediaBlock, VideoDimensions, ImageDimensions } from '@/types/block'
 import VideoPlayer from '@/primitives/video-player'
 
@@ -9,7 +10,7 @@ const MediaBlockComponent: React.FC<{
   block: Block
   className?: string
   usePoster?: boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: TShirtSize
 }> = ({
   block,
   className='',

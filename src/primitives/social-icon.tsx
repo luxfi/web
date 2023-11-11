@@ -18,7 +18,7 @@ const SocialIcon: React.FC<{
     network={network}
     as='div' 
       // This is set up so the enclosing element sets the color.
-      // For example, something like 'color-foreground hover:color-foreground-muted' 
+      // For example, something like 'color-foreground hover:color-muted-1' 
     className={'color-inherit ' + className}
     bgColor='transparent' 
     fgColor='currentColor'

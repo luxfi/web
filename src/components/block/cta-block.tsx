@@ -11,10 +11,14 @@ const CtaBlockComponent: React.FC<{
   block: Block,
   itemClassName?: string,
   itemSize?: ButtonSizes
+  renderLink?: (def: LinkDef, key: any) => JSX.Element
+  renderButton?: (def: ButtonDef, key: any) => JSX.Element
 }> = ({
   block,
   itemClassName='',
-  itemSize // do not provide default.  this is an override to the def
+  itemSize, // do not provide default.  this is an override to the def
+  renderLink,
+  renderButton
 }) => {
   
   if (block.blockType !== 'cta') {
@@ -28,7 +32,7 @@ const CtaBlockComponent: React.FC<{
     {elements.map((element, index) => {
       if ((element as any).title) {
         const def = element as LinkDef
-        return (
+        return renderLink ? renderLink(def, index) : (
           <LinkElement 
             def={def}
             key={index}
@@ -39,7 +43,7 @@ const CtaBlockComponent: React.FC<{
       } 
       else {
         const def = element as ButtonDef
-        return (
+        return renderButton ? renderButton(def, index) : (
           <ActionButton 
             def={def}
             key={index}

@@ -21,7 +21,7 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Silver Price / Oz',
-      content: <h4 className='font-heading text-3xl'>USD 20</h4>,
+      content: <h4 className='font-heading text-lg md:text-3xl'>USD 20</h4>,
     },
     msCard: {
       blockType: 'card',

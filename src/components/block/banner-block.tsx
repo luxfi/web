@@ -2,6 +2,7 @@
 import React  from 'react'
 
 import type { Block, BannerBlock } from '@/types/block'
+import { type TShirtSize } from '@/types'
 
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
@@ -10,7 +11,8 @@ type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'
 
 const BannerBlockComponent: React.FC<{
   block: Block,
-  grouping?: BannerGrouping,
+  videoSize?: TShirtSize
+  grouping?: BannerGrouping
   groupingClasses?: string[] // count should match number of siblings in the chosen grouping 
   ctaItemClassName?: string
 }> = ({
@@ -18,6 +20,7 @@ const BannerBlockComponent: React.FC<{
   grouping = 'titleAndMedia-cta',
   groupingClasses=[],
   ctaItemClassName='',
+  videoSize='lg'
 }) => {
 
   if (block.blockType !== 'banner') {
@@ -37,7 +40,7 @@ const BannerBlockComponent: React.FC<{
       <div className={'self-center flex flex-col justify-start items-center ' + mediaClasses}>
         {banner.contentBefore && banner.contentBefore}
         {banner.media && (
-          <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} size='lg'/>
+          <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} size={videoSize}/>
         )}
         {banner.contentAfter && banner.contentAfter }
       </div>
@@ -57,7 +60,7 @@ const BannerBlockComponent: React.FC<{
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.contentBefore && banner.contentBefore}
         {banner.media && (
-          <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} />
+          <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} size={videoSize}/>
         )}
         {banner.contentAfter && banner.contentAfter }
       </div>
@@ -81,7 +84,7 @@ const BannerBlockComponent: React.FC<{
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
     {banner.contentBefore && (<div className={contentBeforeClasses}>banner.contentBefore</div>)}
     {banner.media && (
-      <MediaBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.media} />
+      <MediaBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.media} size={videoSize}/>
     )}
     {banner.contentAfter && (<div className={contentAfterClasses}>banner.contentAfter</div>)}
     {banner.cta && (

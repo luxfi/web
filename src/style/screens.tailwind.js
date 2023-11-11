@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   xs: '0px',
   sm: '450px',
   md: '768px',
