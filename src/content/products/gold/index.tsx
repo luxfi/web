@@ -4,6 +4,7 @@ import MiniChart from '@/components/mini-chart'
 
 import media from './video'
 import accordian from './accordian'
+import { markdown } from '@/util'
 
 export default {
   blockType: 'product-detail',
@@ -32,13 +33,13 @@ export default {
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      specifiers: 'media-left heading-style-title',
+      specifiers: 'media-left content-left heading-style-title',
       title: 'NEXT MINT',
-      content: <>
-        <p>Available: 1,000,100 oz</p>
-        <p>Price: $2000 / oz</p>
-        <p>Spot price:: ~$2050 / oz</p>
-      </>,
+      content: markdown(`
+Available: 1,000,100 oz<br/>
+Price: $2000 / oz<br/>
+Spot price:: ~$2050 / oz
+      `),
       media,
     } as C.CardBlock,
     {

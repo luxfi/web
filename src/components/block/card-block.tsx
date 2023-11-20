@@ -75,7 +75,7 @@ const CardBlockComponent: React.FC<{
 
   const ghost = has('ghost') // no outer padding, no borders, larger title, all left-aligned bg is same (default)
 
-  const contentsAlign = has('content-left') ? 'items-start ' : 'items-center '
+  const contentclx = (has('content-left') ? 'items-start ' : 'items-center ') + contentClassName
   const disabledBorder = (has('appear-disabled' ) ? ' border-muted-4' : ' border-muted-3')
   const outerBorder = ((has('no-outer-border') || ghost) ? ' border-0' : '')
   const innerBorder = (ghost ? ' border-0' : '')
@@ -84,7 +84,6 @@ const CardBlockComponent: React.FC<{
   const disabledText = (has('appear-disabled') ? ' text-muted-2' : '')
   const disabledTypoText = (has('appear-disabled') ? ' typography-p:text-muted-2' : '')
   const bgclx = (has('bg-card') ? ' bg-level-1' : '')
-  const contentclx = (has('left-justify-content') ? ' items-start justify-start' : '') + contentClassName
   const titleclx = (has('heading-style-title') ? ' font-heading text-base leading-tight' : '') + 
     (ghost ? ' text-left md:text-xl' : '') 
   
@@ -94,7 +93,7 @@ const CardBlockComponent: React.FC<{
   const contentBefore = has('content-before')
   const iconInline = has('icon-inline')
   const contentOnHover = has('reveal-content-on-hover')
-  const smallIconDim = (contentOnHover && card.specifiers) ? getSmallIconDim(card.specifiers) : undefined
+  //const smallIconDim = (contentOnHover && card.specifiers) ? getSmallIconDim(card.specifiers) : undefined
   
   const Header: React.FC<{
     inContent?: boolean
@@ -140,7 +139,7 @@ const CardBlockComponent: React.FC<{
       </div>
     )}
     {card.content && (
-      <ApplyTypography className={'grow border-l flex flex-col justify-center ' + contentsAlign + disabledTypoText + paddingclx + disabledBorder} size={typoSize}>
+      <ApplyTypography className={'grow border-l flex flex-col justify-center '  + disabledTypoText + paddingclx + disabledBorder + contentclx} size={typoSize}>
         {(typeof card.content === 'string') ? (<p>{card.content}</p>) : card.content} 
       </ApplyTypography>
     )}
@@ -148,8 +147,7 @@ const CardBlockComponent: React.FC<{
   ) : ( // default layout
     <CardContent className={
       'grow typography flex flex-col justify-center ' + 
-      typoclx + contentsAlign + disabledTypoText + bgclx + paddingclx + (has('full-width') ? ' p-0 ' : ' ') +
-      contentClassName +
+      typoclx + disabledTypoText + bgclx + paddingclx + contentclx + (has('full-width') ? ' p-0 ' : ' ') +
       className
     }>
       {contentOnHover && (<Header inContent/>)}

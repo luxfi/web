@@ -14,7 +14,12 @@ export const DEF_VIDEO_PROPS = {
   playsInline: true
 }
 
-export const markdown = (s: string, options?: any): JSX.Element => (mdCompiler(s, options))
+export const markdown = (s: string, options?: any): JSX.Element => (
+  mdCompiler(s, {
+    wrapper: null,
+    ...options
+  })
+)
 
 export const round = (num: number): string  => (
   num

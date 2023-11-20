@@ -46,13 +46,11 @@ Help secure clean energy for this generation and the next.
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      specifiers: 'media-left heading-style-title',
+      specifiers: 'media-left content-left heading-style-title',
       title: 'UPCOMING DROP',
       content: markdown(`
-Drop size: 500,100 lbs 
-
-NFT price: $45 / lb 
-
+Drop size: 500,100 lbs<br/> 
+NFT price: $45 / lb<br/> 
 Market spot price:: ~$65 / lb 
       `),
       media,
@@ -78,13 +76,11 @@ Market spot price:: ~$65 / lb
     },
     {
       blockType: 'card',
-      specifiers: 'media-left appear-disabled video-use-poster heading-style-title',
+      specifiers: 'media-left content-left appear-disabled video-use-poster heading-style-title',
       title: 'SOLD OUT',
       content: markdown(`
-Drop size: 122,000 lbs 
-
-NFT price: $42 / lb 
-
+Drop size: 122,000 lbs<br/> 
+NFT price: $42 / lb<br/>  
 Market spot price: $52 / lb 
       `),
       media,
@@ -103,7 +99,7 @@ Market spot price: $52 / lb
       elements: [
         {
           blockType: 'card',
-          specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+          specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
             image: '/assets/img/press-cointelegraph-white-transparent.png',
@@ -129,7 +125,7 @@ Market spot price: $52 / lb
         } as C.CardBlock,
         {
           blockType: 'card',
-          specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+          specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
             image: '/assets/img/press-mining-white-p-500.png',
@@ -150,7 +146,7 @@ Market spot price: $52 / lb
         } as C.CardBlock,
         {
           blockType: 'card',
-          specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+          specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
             image: '/assets/img/press-globe-newswire-white.png',
@@ -171,7 +167,7 @@ Market spot price: $52 / lb
         } as C.CardBlock,
         {
           blockType: 'card',
-          specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+          specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
             image: '/assets/img/press-mining-weekly-white-p-500.png',
@@ -210,7 +206,7 @@ Market spot price: $52 / lb
     } as C.HeadingBlock,
     {
       blockType: 'card',
-      specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+      specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
         image: '/assets/img/press-ga.png',
@@ -231,7 +227,7 @@ Market spot price: $52 / lb
     } as C.CardBlock,
     {
       blockType: 'card',
-      specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+      specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
         image: '/assets/img/press-the-tomorrow-investor-white.png',
@@ -252,7 +248,7 @@ Market spot price: $52 / lb
     } as C.CardBlock,
     {
       blockType: 'card',
-      specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+      specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
         image: '/assets/img/press-us-doe.png',
@@ -273,7 +269,7 @@ Market spot price: $52 / lb
     } as C.CardBlock,
     {
       blockType: 'card',
-      specifiers: 'bg-card no-outer-border links-w-arrow typography-sm',
+      specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
         image: '/assets/img/press-wnn-white.png',
