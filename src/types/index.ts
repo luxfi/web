@@ -11,16 +11,18 @@ import { type Breakpoint, Breakpoints } from './breakpoints'
 
 import type TShirtSize from './t-shirt-size' 
 import type { TShirtDimensions, Dimensions } from './dimensions' 
+import type Icon from './icon'
 
 export {
   type ButtonDef,
+  type Dimensions,
   type SubmitServerAction,
   type ButtonModalProps,
   type ButtonModalDef,
   type LinkDef,
+  type Icon,
   type TShirtSize,
   type Breakpoint,
   type TShirtDimensions,
-  type Dimensions,
   Breakpoints
 }

@@ -1,7 +1,7 @@
 
 import { type CTABlock} from '@/types/block'
 
-import SocialIcon from '@/primitives/social-icon'
+import SocialIcon from '@/components/icons/social-icon'
 
 const SOC_ICON_SIZE = 18
 

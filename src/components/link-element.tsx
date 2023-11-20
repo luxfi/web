@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import type { LinkDef }  from '@/types'
+import type { LinkDef, Icon }  from '@/types'
 import { buttonVariants, type ButtonSizes, type ButtonVariants } from '@/primitives/button'
 import { cn } from '@/util'
 
@@ -11,7 +11,7 @@ const LinkElement: React.FC<{
   size?: ButtonSizes 
   onClick?: () => void // for UI changes in addition to link (eg, close menu)
   className?: string,
-  icon?: React.ReactNode
+  icon?: Icon // for title area
   iconAfter?: boolean
 }> = ({ 
   def,
@@ -44,8 +44,8 @@ const LinkElement: React.FC<{
     ...(onClick ? { onClick } : {})
   }
 
-  const iconn = (icon) ? icon : (def.icon) ? def.icon : undefined
-  const iconnAfter = (iconAfter) ? iconAfter : (def.iconAfter) ? def.iconAfter : false
+  const iicon = (icon) ? icon : (def.icon) ? def.icon : undefined
+  const iiconAfter = (iconAfter) ? iconAfter : (def.iconAfter) ? def.iconAfter : false
 
   return (
     <Link
@@ -60,9 +60,9 @@ const LinkElement: React.FC<{
         )}
       {...toSpread}
     >
-      {iconn && !iconnAfter && (<div className='pr-1'>{iconn}</div>)}
+      {iicon && !iiconAfter && (<div className='pr-1'>{iicon as React.ReactNode}</div>)}
       <div>{title}</div>
-      {iconn && iconnAfter && (<div className='pl-1'>{iconn}</div>)}
+      {iicon && iiconAfter && (<div className='pl-1'>{iicon as React.ReactNode}</div>)}
     </Link>
   )
 }

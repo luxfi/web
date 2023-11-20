@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { cn } from '@/util'
+import { getSpecifierData, getPrimaryStartingWith, getDim } from '@/util/specifier'
 
 import type { Block, CardBlock } from '@/types/block'
-import type { LinkDef, TShirtDimensions }  from '@/types'
+import type { Dimensions, LinkDef, TShirtDimensions }  from '@/types'
 
 import {
   Card,
@@ -13,6 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/primitives/card'
+
 import ApplyTypography, { type TypographySize } from '@/primitives/apply-typography'
 
 import Icons from '@/components/icons'
@@ -35,15 +36,25 @@ const ArrowLinkElement: React.FC<{
   />
 ) 
 
-const getTypographySize = (s: string): TypographySize => {
-  const tokenArray = s.split(' ')
-  const sizeToken = tokenArray.find((tok) => (tok.startsWith('typography-')))
-  if (sizeToken) {
-    const subTokenArray = sizeToken.split('-')
-    return subTokenArray[1] as TypographySize
-  }
-  return 'responsive'
-}
+const getTypographySize = (s: string): TypographySize => (
+  getSpecifierData<TypographySize>(
+    s,
+    (s: string) => (getPrimaryStartingWith(s, 'typography')),
+    (s: string): TypographySize | undefined => {
+      const subTokenArray = s.split('-')
+      return subTokenArray[subTokenArray.length - 1] as TypographySize
+    },
+    'responsive'
+  ) as TypographySize
+)
+
+const getSmallIconDim = (s: string): Dimensions | undefined => (
+  getSpecifierData<Dimensions>(
+    s,
+    (s: string) => (getPrimaryStartingWith(s, 'small-icon')),
+    getDim,
+  ) 
+)
 
 const CardBlockComponent: React.FC<{
   block: Block
@@ -81,10 +92,40 @@ const CardBlockComponent: React.FC<{
   const typoclx = (typoSize === 'sm') ? 'typography-sm typography-p:text-sm ' : (typoSize === 'lg') ? 'typography-lg ' : '' 
 
   const contentBefore = has('content-before')
+  const iconInline = has('icon-inline')
+  const contentOnHover = has('reveal-content-on-hover')
+  const smallIconDim = (contentOnHover && card.specifiers) ? getSmallIconDim(card.specifiers) : undefined
+  
+  const Header: React.FC<{
+    inContent?: boolean
+    className?: string
+  }> = ({
+    inContent=false,
+    className=''
+  }) => (
+    (card.title || card.byline || card.icon) ? (
+      <CardHeader className={'not-typography' + ' text-accent' + disabledText + paddingclx + innerBorder + className}>
+      <div className={(iconInline || inContent) ? 'flex flex-row justify-start items-end my-3' : ''}>        
+      {(card.icon && !card.iconAfter ) && (<div className={iconInline ? 'mr-1' : 'mb-2'}>{card.icon}</div>)}
+      {card.title && (
+        <CardTitle className={'text-center text-lg font-medium' + titleclx + (iconInline ? ' md:text-xl/none' : '') }>
+          {card.title}
+        </CardTitle>
+      )}
+      {(card.icon && card.iconAfter) && (<div className={iconInline ? 'ml-1' : 'my-1'}>{card.icon}</div>)}
+      </div>
+      {card.byline && (<CardDescription>{card.byline}</CardDescription>)}
+      </CardHeader>      
+    ) : null
+  )
 
-  const MediaAndContent: React.FC = () => ((has('media-left')) ? ( 
+  const MediaAndContent: React.FC<{
+    className?: string
+  }> = ({
+    className=''
+  }) => (has('media-left') ? ( 
     // media left layout
-    <CardContent className={'flex flex-row justify-start items-stretch p-0 grow ' + disabledBorder + bgclx + contentclx}>
+    <CardContent className={'flex flex-row justify-start items-stretch p-0 grow ' + disabledBorder + bgclx + contentclx + className}>
     {card.media && (
       <div className={'box-content grow-0 not-typography' + paddingclx} style={{
           // If this layout has been specified, assume the 'sm' variant is there.
@@ -108,8 +149,10 @@ const CardBlockComponent: React.FC<{
     <CardContent className={
       'grow typography flex flex-col justify-center ' + 
       typoclx + contentsAlign + disabledTypoText + bgclx + paddingclx + (has('full-width') ? ' p-0 ' : ' ') +
-      contentClassName 
+      contentClassName +
+      className
     }>
+      {contentOnHover && (<Header inContent/>)}
       {card.content && contentBefore && (
         (typeof card.content === 'string') ? (<p>{card.content}</p>) : card.content
       )}
@@ -140,17 +183,26 @@ const CardBlockComponent: React.FC<{
   )))
 
   return (
-    <Card className={'flex flex-col self-stretch ' + disabledBorder + outerBorder + bgclx + mainGap + className}>
-      {(card.title || card.byline) && (
-        <CardHeader className={'not-typography' + ' text-accent' + disabledText + paddingclx + innerBorder}>
-          {card.title && (<CardTitle className={'text-center text-lg font-medium' + titleclx}>{card.title}</CardTitle>)}
-          {card.byline && (<CardDescription>{card.byline}</CardDescription>)}
-        </CardHeader>      
-      )}
-      <MediaAndContent />
+    <Card className={
+      'flex flex-col self-stretch ' + 
+      (contentOnHover ? 'group relative' : '') + 
+      disabledBorder + 
+      outerBorder + 
+      bgclx + 
+      mainGap + 
+      className
+    }>
+      <Header className={(contentOnHover ? ' absolute top-[0px] left-[0px] w-full hidden ' : '')}/>
+      <MediaAndContent className={(contentOnHover ? 
+        ' bg-gradient-to-t from-secondary to-65%' + 
+        ' items-start justify-start rounded-lg p-4' + 
+        ' transition-opacity duration-500 ease-out opacity-100  ' : '')}/>
       <Footer />
     </Card>  
   )
 }
 
 export default CardBlockComponent
+
+//  group-hover:hidden
+// group-hover:opacity-100

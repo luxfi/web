@@ -1,6 +1,5 @@
-import * as React from 'react'
-
 import type { ButtonVariants, ButtonSizes } from '@/primitives/button'
+import type { Icon }  from '@/types'
 
 
 interface LinkItemDef {
@@ -13,7 +12,7 @@ interface LinkItemDef {
   disabled?: boolean
   variant?: ButtonVariants
   size?: ButtonSizes
-  icon?: React.ReactNode
+  icon?: Icon
   iconAfter?: boolean
   current?: boolean
 }
