@@ -1,23 +1,21 @@
-import React, { type PropsWithChildren } from "react"
-import { Metadata } from "next"
+import React, { type PropsWithChildren } from 'react'
+import { Metadata } from 'next'
 
-import TailwindIndicator from "@/primitives/tailwind-indicator"
-import ThemeProvider from "@/context-providers/theme-provider"
-import { inter, drukTextWide } from "@/style/nextFonts"
+import TailwindIndicator from '@/primitives/tailwind-indicator'
+//import ThemeProvider from '@/context-providers/theme-provider'
+import { inter, drukTextWide } from '@/style/nextFonts'
 
-import Header from "@/components/header"
+import Header from '@/components/header'
 
   // Need these here to ensure that tailwind is always last.
-import 'swiper/css'
-import 'swiper/css/scrollbar'
 import '@/style/globals.css'
 
 const metadata: Metadata = {
   title: {
-    default: "Lux Market",
+    default: 'Lux Market',
     template: `Lux Market - %s`,
   },
-  description: "Your destination for all cool things.",
+  description: 'Your destination for all cool things.',
 
     // Generated from a 512 original create in GIMP
     // at https://favicon.io/favicon-converter/
@@ -63,8 +61,8 @@ const metadata: Metadata = {
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 }
 
@@ -76,26 +74,24 @@ const viewport = {
   
   (not to be confused with the css var itself.  This field should be named something else!)
 */
-const bodyClasses =
-  'min-h-screen bg-background fg-foreground antialiased overflow-x-hidden overflow-y-hidden ' + 
+
+// overflow-y-hidden overflow-x-hidden ,-- cannot have these on body tag for scroll-snap on iOS
+const bodyClasses = 
+  'bg-background fg-foreground  ' + 
   `${inter.variable} ${drukTextWide.variable} font-sans` 
 
     // re <base />: https://stackoverflow.com/a/75716588/11645689 
 const RootLayout: React.FC<PropsWithChildren> = ({ 
   children,
 }) =>  (
-  <html lang="en" suppressHydrationWarning >
+  <html lang='en' suppressHydrationWarning className='dark'>
     <head >
-      <base target="_blank" />
+      <base target='_blank' />
     </head>
     <body className={bodyClasses}>
-      <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-        <div className="relative flex min-h-screen flex-col">
-          <Header />
-          {children}
-        </div>
-        <TailwindIndicator />
-      </ThemeProvider>
+      <Header />
+      {children}
+      <TailwindIndicator />
     </body>
   </html>
 )

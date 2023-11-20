@@ -15,13 +15,13 @@ export default  {
     // dims are 658x720, 
     // ratio: 0.914
     md: {
-      width: 274,
-      height: 300 // otherwise it's too cramped on smaller phones
+      w: 274,
+      h: 300 // otherwise it's too cramped on smaller phones
     },
 
     lg: {
-      width: 375,
-      height: 410
+      w: 375,
+      h: 410
     }
 
   }

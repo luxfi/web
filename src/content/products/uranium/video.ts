@@ -17,19 +17,19 @@ export default {
 
     sm: {
             // 1/8 size
-      width: 70,
-      height: 74
+      w: 70,
+      h: 74
     },
 
       // 1 / 2
     md: {
-      width: 279,
-      height: 298
+      w: 279,
+      h: 298
     },
 
     lg : {
-      width: 384,
-      height: 410
+      w: 384,
+      h: 410
     }
   }
 } as MediaBlock

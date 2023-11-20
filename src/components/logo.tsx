@@ -1,7 +1,7 @@
 import React from 'react'
-
 import Link from 'next/link'
 
+import { cn } from '@/util'
 import Icons from '@/components/icons'
 import { type TShirtSize } from '@/types'
 
@@ -44,7 +44,7 @@ const Logo: React.FC<{
   return (
     <Link href={href} className={linkClasses} >
       <Icons.logo className={classes.icon} />
-      <span className={spanClasses + ' text-inherit'}>LUX</span>
+      <span className={cn(spanClasses, ' text-inherit')}>LUX</span>
     </Link>
   )
 }

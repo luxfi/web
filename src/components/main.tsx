@@ -1,4 +1,5 @@
 import React, { type PropsWithChildren } from 'react'
+import { cn } from '@/util'
 
 const c = 'max-w-screen-2xl 2xl:w-[1500px] lg:mx-auto ' + 
   'flex flex-col justify-start items-stretch ' +
@@ -12,7 +13,7 @@ const Main: React.FC<
   children,
   className='',
 }) => (
-  <main className={c + className}>
+  <main className={cn(c, className)}>
     {children}
   </main>
 )

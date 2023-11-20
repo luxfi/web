@@ -1,11 +1,13 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
+import { cn } from '@/util'
+
 import type { ButtonDef, ButtonModalDef } from '@/types'
 import { ButtonSizes } from '@/primitives/button'
 
-  // The DVC must be rendered client-side since it accesses the DOM directly, etc.
-  // Note that there is no need for a loading UI since the dialog only opens
+  // The DVC must be rendered client-side since it accesses the DOM directly.
+  // There is no need for a loading UI since the dialog only opens
   // once it's been rendered and the user is already waiting.
 const DynamicDVC = dynamic(() => (import('../primitives/dialog-video-controller')))
 
@@ -28,7 +30,7 @@ const ActionButton: React.FC<{
           title={m.title}
           byline={m.byline}
           buttonText={def.text}
-          buttonProps={{...def.props, ...sizeToSpread, className: (def.props?.className ?? '') + className}}
+          buttonProps={{...def.props, ...sizeToSpread, className: cn((def.props?.className ?? ''), className)}}
           action={m.action}
           actionEnclosure={m.actionEnclosure}
           {...m.props}

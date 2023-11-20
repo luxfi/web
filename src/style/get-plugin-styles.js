@@ -88,14 +88,17 @@ const defaultCSS = {
   h1: {
     color: 'var(--tw-prose-headings)',
     fontWeight: '800',
+    textAlign: 'center'
   },
   h2: {
     color: 'var(--tw-prose-headings)',
     fontWeight: '700',
+    textAlign: 'center'
   },
   h3: {
     color: 'var(--tw-prose-headings)',
     fontWeight: '600',
+    textAlign: 'center'
   },
   h4: {
     color: 'var(--tw-prose-headings)',

@@ -1,28 +1,5 @@
+import type { Dimensions, TShirtDimensions } from '../dimensions'
 import type Block from './block'
-
-
-type VideoDimensions = {               
-  sm?: {
-    width: number,
-    height: number
-  }, 
-
-  md: {
-    width: number,
-    height: number
-  }, 
-
-  lg: {
-    width: number,
-    height: number
-  } 
-}
-
-  // From Next
-type ImageDimensions = {
-  width: number | `${number}`
-  height: number | `${number}`
-}
 
 interface MediaBlock extends Block {
   blockType: 'video' | 'image'
@@ -41,11 +18,9 @@ interface MediaBlock extends Block {
 
   image?: string,      // if image, image url. poster image if video 
   sources?: string[]
-  dim: VideoDimensions | ImageDimensions 
+  dim: TShirtDimensions | Dimensions 
 }
 
 export {
   type MediaBlock as default,
-  type VideoDimensions,
-  type ImageDimensions 
 }

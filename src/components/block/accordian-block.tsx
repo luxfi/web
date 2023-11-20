@@ -1,7 +1,8 @@
 import React from 'react'
 
-import type { Block, AccordianBlock } from '@/types/block'
+import { cn } from '@/util'
 
+import type { Block, AccordianBlock } from '@/types/block'
 import {
   Accordion,
   AccordionContent,
@@ -25,7 +26,7 @@ const AccordianBlockComponent: React.FC<{
   const accordian = block as AccordianBlock
 
   return (
-    <Accordion type="single" collapsible className={'w-full border rounded-xl overflow-hidden ' + className}>
+    <Accordion type="single" collapsible className={cn('w-full border rounded-xl overflow-hidden', className)}>
       {accordian.items.map((item, index) => (
       <AccordionItem className='border-b last:border-0 overflow-hidden' value={`value-${index}`} key={index}>
         <AccordionTrigger className='px-3 md:px-4 lg:px-6 hover:no-underline hover:bg-level-3' >

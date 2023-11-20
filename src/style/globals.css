@@ -85,9 +85,25 @@ https://unpkg.com/tailwindcss@3.3.5/src/css/preflight.css
 @layer base {
   * {
     @apply border-muted-3;
+    box-sizing: inherit;
   }
+
+  /*
+    using this approach: 
+    https://stackoverflow.com/a/76066443/11645689
+    see src/app/(home)/scroll-snap
+  */
+
   html {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    scrollbar-width: none;
   }
+
   body {
     font-feature-settings: "rlig" 1, "calt" 1;
       /* Match text on cards from old site */ 

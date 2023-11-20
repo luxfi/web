@@ -1,7 +1,8 @@
+'use client'
+
 import React from 'react'
 
 import type { ButtonVariants } from '@/primitives/button'
-
 import LinkElement from '@/components/link-element'
 import { nav } from '@/content'
 
@@ -11,7 +12,7 @@ const MobileNav: React.FC<{
   itemVariant?: ButtonVariants
   className?: string
   itemClassName?: string
-  onAction: () => void // for close functionality
+  onAction?: () => void // for close functionality
 }> = ({
   onAction,
   className='',
@@ -31,7 +32,7 @@ const MobileNav: React.FC<{
           onClick = {onAction} 
         />
       ))}
-    </nav>
+      </nav>
   ) 
   : null
 )

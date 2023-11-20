@@ -10,6 +10,7 @@ import type LinkDef from './link-def'
 import { type Breakpoint, Breakpoints } from './breakpoints'
 
 import type TShirtSize from './t-shirt-size' 
+import type { TShirtDimensions, Dimensions } from './dimensions' 
 
 export {
   type ButtonDef,
@@ -19,5 +20,7 @@ export {
   type LinkDef,
   type TShirtSize,
   type Breakpoint,
+  type TShirtDimensions,
+  type Dimensions,
   Breakpoints
 }

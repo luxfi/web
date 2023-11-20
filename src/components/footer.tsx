@@ -20,12 +20,12 @@ const Footer: React.FC<{
   <footer className={className}> 
     <div className={
       (noHorizPadding ? '' : 'lg:px-8 px-5 md:px-[32px] ') +
-      'grid grid-cols-2 gap-x-16 gap-y-8 ' +
+      'grid grid-cols-2 gap-x-16 gap-y-6 ' +
       'sm:grid-cols-3 ' + 
       'md:w-full md:mx-0 ' +
       'lg:flex lg:flex-row lg:justify-between lg:gap-8 lg:w-full' + 
       'max-w-screen-2xl ' + 
-      `lg:columns-${footer.length + 1}`
+      `lg:columns-${footer.length + 1}` // must safelist these!
     }>
       <div className='hidden lg:flex flex-col' key={0}>
         <Logo size='md' />
@@ -36,7 +36,7 @@ const Footer: React.FC<{
         <NavItems
           items={ctaBlock.elements as LinkDef[]} 
           as={(ctaBlock.specifiers === 'nav') ? 'nav' : 'div'} 
-          className={'w-fit flex flex-col justify-start items-start gap-[12px] md:gap-[15px] ' + colSpan} 
+          className={'w-fit flex flex-col justify-start items-start gap-[11px] sm:gap-[12px] md:gap-[15px] ' + colSpan} 
           key={index + 1}
           itemClassName={'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-1'}
           itemClassNameFromVariant={(variant: ButtonVariants) => ( variant === 'linkFG' ? 
@@ -45,7 +45,7 @@ const Footer: React.FC<{
         /> 
       )})}
     </div>
-    <div className='text-sm text-center text-muted-3 py-4'>
+    <div className='text-sm text-center text-muted-3'>
       <Copyright />
     </div>
   </footer>

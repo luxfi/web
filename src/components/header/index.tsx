@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 
 import Logo from '@/components/logo'
@@ -36,16 +34,13 @@ const Header: React.FC = () => (
     </div>
     <div className="flex md:hidden h-[44px] items-center justify-between px-2">
       <Logo size='sm' />
-      <DrawerMenu 
-        className='p-0'
-        trigger={ <Icons.burger className='h-7 w-7' /> }
-        Contents={MobileNav}
-        contentsProps={{
-          itemVariant: 'link',
-          className: 'pt-12',
-          itemClassName: 'px-8 text-xl h-14 justify-start border-b'
-        }}
-      />
+      <DrawerMenu className='p-0' triggerIcon='burger' triggerProps={{className: 'h-7 w-7'}}>
+        <MobileNav 
+          itemVariant='link' 
+          className='pt-12' 
+          itemClassName='px-8 text-xl h-14 justify-start border-b' 
+        />
+      </DrawerMenu>
     </div>
   </header>
 )

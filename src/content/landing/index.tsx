@@ -1,7 +1,5 @@
 import React from 'react'
 
-import LinkElement from '@/components/link-element'
-
 import type { BannerBlock, ElementBlock } from '@/types/block'
 
 import silver from '../products/silver/banner'

@@ -1,5 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 
+import { cn } from '@/util'
+
 type TypographySize = 'responsive' | 'sm' | 'base' | 'lg' // if t-shirt size, do *not* be responsive
 
 const ApplyTypography: React.FC<
@@ -19,7 +21,7 @@ const ApplyTypography: React.FC<
   let typoClasses = 
   'typography gap-3 ' +
   'xs:typography-sm ' + 
-  'sm:typography sm:gap-4' +
+  'sm:typography sm:gap-4 ' +
   'lg:typography-lg lg:gap-5 ' + 
   'typography-headings:font-heading ' // only effects h1-h3 (in plugin)
 
@@ -37,7 +39,7 @@ const ApplyTypography: React.FC<
   
   const Tag = asTag
   return (
-    <Tag className={typoClasses + className}>
+    <Tag className={cn(typoClasses, className)}>
       {children}
     </Tag>
   )

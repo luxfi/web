@@ -18,4 +18,10 @@ module.exports = [
   'lg:grid-cols-4',
   'lg:grid-cols-5',
   'lg:grid-cols-6',
+  'lg:columns-2',
+  'lg:columns-3',
+  'lg:columns-4',
+  'lg:columns-5',
+  'lg:columns-6',
+  'lg:columns-7',
 ]

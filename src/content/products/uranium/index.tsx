@@ -108,8 +108,8 @@ Market spot price: $52 / lb
             blockType: 'image',
             image: '/assets/img/press-cointelegraph-white-transparent.png',
             dim: {
-              width: 160,
-              height: 27
+              w: 160,
+              h: 27
             }
           },
           cta: {
@@ -134,8 +134,8 @@ Market spot price: $52 / lb
             blockType: 'image',
             image: '/assets/img/press-mining-white-p-500.png',
             dim: {
-              width: 90,
-              height: 21
+              w: 90,
+              h: 21
             }
           },
           cta: {
@@ -155,8 +155,8 @@ Market spot price: $52 / lb
             blockType: 'image',
             image: '/assets/img/press-globe-newswire-white.png',
             dim: {
-              width: 130,
-              height: 30
+              w: 130,
+              h: 30
             }
           },
           cta: {
@@ -176,8 +176,8 @@ Market spot price: $52 / lb
             blockType: 'image',
             image: '/assets/img/press-mining-weekly-white-p-500.png',
             dim: {
-              width: 130,
-              height: 24.5
+              w: 130,
+              h: 24.5
             }
           },
           cta: {
@@ -215,8 +215,8 @@ Market spot price: $52 / lb
         blockType: 'image',
         image: '/assets/img/press-ga.png',
         dim: {
-          width: 120,
-          height: 30
+          w: 120,
+          h: 30
         }
       },
       cta: {
@@ -236,8 +236,8 @@ Market spot price: $52 / lb
         blockType: 'image',
         image: '/assets/img/press-the-tomorrow-investor-white.png',
         dim: {
-          width: 150,
-          height: 16.5
+          w: 150,
+          h: 16.5
         }
       },
       cta: {
@@ -257,8 +257,8 @@ Market spot price: $52 / lb
         blockType: 'image',
         image: '/assets/img/press-us-doe.png',
         dim: {
-          width: 100,
-          height: 26.5
+          w: 100,
+          h: 26.5
         }
       },
       cta: {
@@ -278,8 +278,8 @@ Market spot price: $52 / lb
         blockType: 'image',
         image: '/assets/img/press-wnn-white.png',
         dim: {
-          width: 70,
-          height: 29.5
+          w: 70,
+          h: 29.5
         }
       },
       cta: {
@@ -309,7 +309,7 @@ Market spot price: $52 / lb
       title: 'Demand is outpacing supply.',
       media: { blockType: 'image',
         image: '/assets/img/uranium-overview-1.png',
-        dim: { width: 555, height: 308.5 }
+        dim: { w: 555, h: 308.5 }
       },
       content: 'Uranium production is expected to stagnate as producers aren\'t overly-incentivized until prices rise, all while nuclear demand is increasing.',
     } as C.CardBlock,
@@ -322,7 +322,7 @@ Market spot price: $52 / lb
       title: 'There is an emerging uranium bull run.',
       media: { blockType: 'image',
         image: '/assets/img/image-lux-uranium-bull-run.png',
-        dim: { width: 555, height: 318 }
+        dim: { w: 555, h: 318 }
       },
       content: 'Historically, uranium prices experience periods of exponential growth surrounding catalyst events, and now, non-utility buyers appear to be pushing spot prices up.',
     } as C.CardBlock,
@@ -335,7 +335,7 @@ Market spot price: $52 / lb
       title: 'Nuclear demand is high and growing.',
       media: { blockType: 'image',
         image: '/assets/img/image-lux-uranium-3.png',
-        dim: { width: 555, height: 374 }
+        dim: { w: 555, h: 374 }
       },
       content: 'Nuclear generation already accounts for 10% of the world\'s energy, over 150 reactors are being built or are planned, and global decarbonization goals are driving a major shift toward nuclear energy.',
     } as C.CardBlock,
@@ -348,7 +348,7 @@ Market spot price: $52 / lb
       title: 'The UN\'s 2050 Net Zero Goals can\'t be achieved without nuclear energy.',
       media: { blockType: 'image',
         image: '/assets/img/image-lux-uranium-4.png',
-        dim: { width: 555, height: 280 }
+        dim: { w: 555, h: 280 }
       },
       content: <UN2050MDX />
     } as C.CardBlock,

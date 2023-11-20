@@ -3,6 +3,7 @@ import React from 'react'
 import type { LinkDef }  from '@/types'
 import LinkElement from './link-element'
 import { ButtonVariants } from '@/primitives/button'
+import { cn } from '@/util'
 
 const NavItems: React.FC<{
   items: LinkDef[]
@@ -45,11 +46,11 @@ const NavItems: React.FC<{
               def={item}
               key={index}
               size='default'
-              className={
-                extraClasses + ' ' + 
-                itemClassName + ' ' + 
+              className={cn(
+                extraClasses,
+                itemClassName,  
                 (itemClassNameFromVariant && itemClassNameFromVariant(variant))
-              } 
+              )} 
             />
           )
         })}

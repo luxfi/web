@@ -8,7 +8,6 @@ import type ElementBlock from './element-block'
 import type GroupBlock from './group-block'
 import type HeadingBlock from './heading-block'
 import type MediaBlock from './media-block'
-import type { ImageDimensions, VideoDimensions} from './media-block'
 import type ProductDetailBlock from './product-detail-block'
 import type SpaceBlock from './space-block'
 import type SpecialBlock from './special-block'
@@ -25,8 +24,6 @@ export {
    type GroupBlock,
    type HeadingBlock,
    type MediaBlock,
-   type ImageDimensions,
-   type VideoDimensions,
    type ProductDetailBlock,
    type SpaceBlock,
    type SpecialBlock,

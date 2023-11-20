@@ -2,6 +2,7 @@ import React from 'react'
 
 import { SocialIcon as BaseSocialIcon } from 'react-social-icons'
 
+import { cn } from '@/util'
 import '@/style/social-svg.css'
 
 const SocialIcon: React.FC<{
@@ -19,7 +20,7 @@ const SocialIcon: React.FC<{
     as='div' 
       // This is set up so the enclosing element sets the color.
       // For example, something like 'color-foreground hover:color-muted-1' 
-    className={'color-inherit ' + className}
+    className={cn('color-inherit', className)}
     bgColor='transparent' 
     fgColor='currentColor'
     style={{height: size, width: size}} 

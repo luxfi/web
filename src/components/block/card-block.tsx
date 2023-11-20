@@ -1,9 +1,9 @@
 import React from 'react'
 
-import type { Block, CardBlock, VideoDimensions } from '@/types/block'
-import type { LinkDef }  from '@/types'
+import { cn } from '@/util'
 
-import Icons from '@/components/icons'
+import type { Block, CardBlock } from '@/types/block'
+import type { LinkDef, TShirtDimensions }  from '@/types'
 
 import {
   Card,
@@ -15,8 +15,9 @@ import {
 } from '@/primitives/card'
 import ApplyTypography, { type TypographySize } from '@/primitives/apply-typography'
 
-import LinkElement from '../link-element'
+import Icons from '@/components/icons'
 
+import LinkElement from '../link-element'
 import MediaBlockComponent from './media-block'
 import CTABlockComponent from './cta-block'
 
@@ -86,7 +87,8 @@ const CardBlockComponent: React.FC<{
     <CardContent className={'flex flex-row justify-start items-stretch p-0 grow ' + disabledBorder + bgclx + contentclx}>
     {card.media && (
       <div className={'box-content grow-0 not-typography' + paddingclx} style={{
-        width: (card.media.dim as VideoDimensions).sm!.width 
+          // If this layout has been specified, assume the 'sm' variant is there.
+        width: (card.media.dim as TShirtDimensions).sm!.w 
       }}>
         <MediaBlockComponent 
           block={card.media} 

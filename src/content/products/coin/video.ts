@@ -16,13 +16,13 @@ export default  {
     // ratio: 1.01
 
     md: {
-      width: 273,
-      height: 270
+      w: 273,
+      h: 270
     },
 
     lg: {
-      width: 415,
-      height: 410
+      w: 415,
+      h: 410
     }
   }
 } as MediaBlock

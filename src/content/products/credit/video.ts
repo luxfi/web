@@ -15,13 +15,13 @@ export default  {
     // dims are 758x588, let's cut in half
     // ratio: 1.29
     md: {
-      width: 379,
-      height: 294
+      w: 379,
+      h: 294
     },
 
     lg: {
-      width: 529,
-      height: 410
+      w: 529,
+      h: 410
     }
   }
 } as MediaBlock

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Desktop, TouchDevice } from './swipers'
+import { Desktop, TouchDevice } from './scroll-snap'
 
 type PageProps = {
   params: { slug: string };

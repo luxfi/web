@@ -3,6 +3,7 @@ import React from 'react'
 import type { Block, GroupBlock } from '@/types/block'
 import { type Breakpoint, Breakpoints } from '@/types'
 import BlockFactory from './block-factory'
+import { cn } from '@/util'
 
 // eg: 'layout-grid-2-starting-md'
 // see comments below regarding dynamic classes and the safelist
@@ -65,9 +66,9 @@ const GroupBlockComponent: React.FC<{
 
         // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
         // All variants in use MUST be in style/safelist.tailwind.js
-      const clazzName = 'grid xs:grid-cols-1 gap-2 sm:gap-3 ' + 
-        `${starting}:grid-cols-${columns} ` + 
-        className
+      const clazzName = cn('grid xs:grid-cols-1 gap-2 sm:gap-3',
+        `${starting}:grid-cols-${columns} `, 
+        className)
       return (
         <div className={clazzName}>
         {elements.map((block, index) => (

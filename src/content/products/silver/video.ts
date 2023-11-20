@@ -11,19 +11,19 @@ export default {
       // .61 aspect
     sm: {
         // md * 1/4
-      width: 50,
-      height: 82
+      w: 50,
+      h: 82
     },
 
     md: {
-      width: 200,
-      height: 327
+      w: 200,
+      h: 327
     },
 
     lg: {
       // match the general size of old site
-      width: 250,
-      height: 410,
+      w: 250,
+      h: 410,
     }
 
   }
