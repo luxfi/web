@@ -50,8 +50,10 @@ Spot price: ~$25 / oz`
     {
       blockType: 'cta',
       elements: [{
-        title: 'Buy Now',
-        href: '/', // TOOD
+        title: "Buy Now",
+        href: "https://lux.town",
+        external: true,
+        newTab: false,
         variant: 'primary',
         size: 'lg'
       }]

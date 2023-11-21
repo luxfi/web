@@ -10,7 +10,6 @@ import Main from '@/components/main'
 import ProductDetailBlockComponent from '@/components/block/product-detail-block'
  
 import { products } from '@/content'
-const ScrollbarRestorer = dynamic(() => (import('../../components/main-scrollbar-restorer')))
 
 type Props = {
   params: { slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator' | 'pass' | 'uranium' }
@@ -55,7 +54,6 @@ const ProductPage = ({ params, searchParams }: Props) => {
     </Main>
     <div className='border-t'></div>
     <Footer className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
-    <ScrollbarRestorer />
   </>)
 }
 

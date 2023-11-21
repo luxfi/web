@@ -1,4 +1,5 @@
 import media from './video'
+import { CTABlock } from '@/types/block'
 
 export default {
   blockType: 'banner',
@@ -15,9 +16,11 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "/",
+        href: "https://lux.town",
+        external: true,
+        newTab: false,
         variant: 'primary'
       },
     ]
-  } 
+  } as CTABlock
 }

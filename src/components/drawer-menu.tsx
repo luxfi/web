@@ -30,10 +30,10 @@ const DrawerMenu: React.FC<PropsWithChildren & {
 
   return (
     <Sheet open={open} onOpenChange={setOpen} >
-      <SheetTrigger >
+      <SheetTrigger>
         <Icon {...triggerProps} />
       </SheetTrigger>
-      <SheetContent side="right" className={className} onClick={onAction}>
+      <SheetContent side="right" className={className} closeButtonClass='text-inherit opacity-90' onClick={onAction}>
         {updatedChildren}
       </SheetContent>
     </Sheet>

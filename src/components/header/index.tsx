@@ -34,7 +34,13 @@ const Header: React.FC = () => (
     </div>
     <div className="flex md:hidden h-[44px] items-center justify-between px-2">
       <Logo size='sm' />
-      <DrawerMenu className='p-0' triggerIcon='burger' triggerProps={{className: 'h-7 w-7'}}>
+      <DrawerMenu 
+        className='p-0 text-primary' // ui has 'text-inherit', so need this for close buttons to appear.
+        triggerIcon='burger' 
+        triggerProps={{
+          className: 'h-7 w-7 text-primary'
+        }}
+      >
         <MobileNav 
           itemVariant='link' 
           className='pt-12' 

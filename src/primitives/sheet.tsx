@@ -53,10 +53,13 @@ interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {}
 
+const closeUIclx = 'rounded-sm opacity-70 ring-offset-background ' + 
+  'transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-secondary'
+
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
-  SheetContentProps
->(({ side = 'right', className, children, ...props }, ref) => (
+  SheetContentProps & { closeButtonClass? : string}
+>(({ side = 'right', className, children, closeButtonClass, ...props }, ref) => (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
@@ -65,11 +68,11 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className='absolute right-2 top-3 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-secondary'>
-        <ChevronRight className='h-7 w-7' />
+      <SheetPrimitive.Close className={cn(closeUIclx, 'absolute right-2 top-3 ', closeButtonClass)}>
+        <ChevronRight className='h-7 w-7 text-inherit' />
       </SheetPrimitive.Close>
-      <SheetPrimitive.Close className='absolute right-2 bottom-3 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-secondary'>
-        <ChevronRight className='h-7 w-7' />
+      <SheetPrimitive.Close className={cn(closeUIclx, 'absolute right-2 bottom-3 ', closeButtonClass)}>
+        <ChevronRight className='h-7 w-7 text-inherit' />
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
