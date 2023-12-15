@@ -18,7 +18,7 @@ const Header: React.FC = () => (
       <Logo size='sm' className='hidden md:flex lg:hidden' key='one'/>
       <NavItems 
         items={nav.all} 
-        className='hidden lg:flex justify-between gap-[22px] text-[13px]/[13px] min-w-[667px]' 
+        className='hidden lg:flex justify-between gap-[24px] text-[13px]/[13px] min-w-[690px]' 
         itemClassName='font-heading h-[32px] tracking-[-0.3px]' 
         itemClassNameFromVariant={(variant: ButtonVariants) => (variant === 'primary' ? 'min-w-[174px]' : '')}
         key='three'

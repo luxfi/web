@@ -2,6 +2,12 @@ import type { LinkDef } from '@/types'
 
 const nav = [
   {
+    title: "AI",
+    href: "https://lux.chat",
+    external: true,
+    newTab: false,
+  },
+  {
     title: "Credit",
     href: "https://lux.credit",
     external: true,
@@ -25,7 +31,7 @@ const nav = [
     newTab: false,
   },
   {
-    title: "Partners",
+    title: "Team",
     href: "https://lux.partners",
     external: true,
     newTab: false,
