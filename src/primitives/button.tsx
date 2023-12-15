@@ -7,9 +7,9 @@ import { cn } from "@/util"
 const variant = {
   primary: "bg-primary text-primary-fg hover:bg-primary-hover font-heading whitespace-nowrap not-typography",
   secondary: "bg-secondary text-secondary-fg hover:bg-secondary/80 font-heading whitespace-nowrap not-typography",
-  outline: "border border-primary hover:bg-level-1 hover:text-accent font-heading whitespace-nowrap not-typography",
+  outline: "text-foreground border border-primary hover:bg-level-1 hover:text-accent font-heading whitespace-nowrap not-typography",
   destructive: "bg-destructive text-destructive-fg font-sans whitespace-nowrap hover:bg-destructive-hover",
-  ghost: "hover:bg-level-1 hover:text-accent whitespace-nowrap font-sans ",
+  ghost: "text-foreground hover:bg-level-1 hover:text-accent whitespace-nowrap font-sans ",
   link: "text-foreground hover:text-muted-1 font-sans ",
   linkFG: "text-foreground hover:text-muted-1 font-sans ", // marker to style nav as regular link
 }
@@ -17,7 +17,7 @@ const variant = {
 const size = {
   link: '',
   sm: "h-9 px-3 rounded-md text-xs ",
-  default: "h-10 py-2 px-4 text-sm ",
+  default: "h-10 py-2 px-4 text-sm lg:min-w-[220px]",
   lg: "h-10 px-8 text-base rounded-lg min-w-[260px] lg:min-w-[300px] lg:h-10 xs:min-w-0 xs:text-sm",
   icon: "h-10 w-10",
 }

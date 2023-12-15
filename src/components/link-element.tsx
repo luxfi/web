@@ -15,7 +15,7 @@ const LinkElement: React.FC<{
   iconAfter?: boolean
 }> = ({ 
   def,
-  size = 'lg',
+  size = 'default',
   onClick,
   variant,
   className = '',

@@ -1,7 +1,5 @@
-import Button from '@/primitives/button'
-
 import media from './video'
-import modal from './waitlist-modal'
+import buyLink from './buy-link'
 
 export default {
   blockType: 'banner',
@@ -16,14 +14,7 @@ export default {
         href: "/validator",
         variant: 'outline'
       },
-      {
-        text: 'Waitlist',
-        props: { variant: 'primary' },
-        action: {
-          type: 'modal',
-          def: modal
-        }
-      },
+      buyLink,
     ]
   }
 }

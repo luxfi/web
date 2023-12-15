@@ -2,7 +2,7 @@ import type * as C from '@/types/block'
 
 import media from './video'
 import accordian from './accordian'
-import modal from './waitlist-modal'
+import buyLink from './buy-link'
 
 export default {
   blockType: 'product-detail',
@@ -14,17 +14,14 @@ export default {
     {
       blockType: 'cta',
       elements: [
+        buyLink,         
         {
-          text: 'Waitlist',
-          props: {
-            variant: 'primary',
-            size: 'lg', 
-          },
-          action: {
-            type: 'modal',
-            def: modal
-          }
-        },
+          href: 'https://docs.lux.network',
+          title: 'Read More',
+          external: true,
+          newTab: false,
+          variant: 'outline'
+        } 
       ]
     } as C.CTABlock
   ] as C.Block[]

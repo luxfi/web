@@ -30,8 +30,8 @@ const ProductDetailBlockComponent: React.FC<{
     </div>
     <div className='md:bg-scroll md:w-1/2 '>
       <div className='md:max-w-[555px] flex flex-col items-start gap-4' >
-        <ApplyTypography className='flex flex-col justify-start items-start '>
-          <h1>{p.title}</h1>
+        <ApplyTypography className='flex flex-col justify-start items-start typography-headings:text-left'>
+          <h1 className='text-left'>{p.title}</h1>
           {p.desc && (
             (typeof p.desc === 'string') ? (<h6>{p.desc}</h6>) : ('element' in p.desc ? p.desc.element : p.desc)
           )}
