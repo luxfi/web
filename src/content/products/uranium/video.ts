@@ -1,10 +1,10 @@
-import { type MediaBlock } from '@/types/block'
+import type { VideoBlock } from '@/types/block'
 import { DEF_VIDEO_PROPS } from '@/util'
 
 export default {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  image: '/assets/video/LUX-URANIUM-1000-LBS-poster.jpg',
+  poster: '/assets/video/LUX-URANIUM-1000-LBS-poster.jpg',
   sources: [
     '/assets/video/LUX-URANIUM-1000-LBS-transcode.mp4', 
     '/assets/video/LUX-URANIUM-1000-LBS-transcode.webm'
@@ -32,4 +32,4 @@ export default {
       h: 410
     }
   }
-} as MediaBlock
+} as VideoBlock

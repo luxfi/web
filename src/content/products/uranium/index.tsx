@@ -5,7 +5,7 @@ import MiniChart from '@/components/mini-chart'
 
 import { markdown } from '@/util'
 
-import media from './video'
+import video from './video'
 import accordian from './accordian'
 import modal from './waitlist-modal'
 
@@ -23,7 +23,7 @@ Get unprecedented access to uranium with 1:1 asset-backed Lux Uranium NFTs, sove
 Help secure clean energy for this generation and the next.
 `    
   ),
-  media,
+  video: {...video, sizing: { vh: 70 }},
   accordian,
   price: {
     heading: 'Price',
@@ -53,7 +53,7 @@ Drop size: 500,100 lbs<br/>
 NFT price: $45 / lb<br/> 
 Market spot price:: ~$65 / lb 
       `),
-      media,
+      video,
     } as C.CardBlock,
     {
       blockType: 'cta',
@@ -83,7 +83,7 @@ Drop size: 122,000 lbs<br/>
 NFT price: $42 / lb<br/>  
 Market spot price: $52 / lb 
       `),
-      media,
+      video,
     } as C.CardBlock,
     {
       blockType: 'space',

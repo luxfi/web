@@ -1,21 +1,20 @@
 import type * as C from '@/types/block'
 
 import MiniChart from '@/components/mini-chart'
-import Icons from '@/components/icons'
 
 import { markdown } from '@/util'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
-import media from './video'
+import video from './video'
 import accordian from './accordian'
 
 export default {
   blockType: 'product-detail',
   title: 'LUX SILVER',
   desc: 'Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.',
-  media,
+  video: {...video, sizing: { vh: 80}},
   accordian,
   price: {
     heading: 'Price',
@@ -45,14 +44,14 @@ export default {
 Price: $20 / oz<br/> 
 Spot price: ~$25 / oz`
       ),
-      media,
+      video,
     } as C.CardBlock,
     {
       blockType: 'cta',
       elements: [
         {
           title: "Buy Now",
-          href: "https://lux.town",
+          href: "https://opensea.io/collection/lux-silver-base-edition",
           external: true,
           newTab: false,
           variant: 'primary',

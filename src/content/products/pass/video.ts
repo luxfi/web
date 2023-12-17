@@ -1,10 +1,10 @@
-import { type MediaBlock } from '@/types/block'
+import type { VideoBlock } from '@/types/block'
 import { DEF_VIDEO_PROPS } from '@/util'
 
 export default  {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS,
-  image: '/assets/video/Lux-PASS-poster.jpg',
+  poster: '/assets/video/Lux-PASS-poster.jpg',
   sources: [
     '/assets/video/LUX-PASS-transcode.mp4', 
     '/assets/video/LUX-PASS-transcode.webm'
@@ -25,4 +25,4 @@ export default  {
     }
 
   }
-} as MediaBlock
+} as VideoBlock

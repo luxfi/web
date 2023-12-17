@@ -2,7 +2,7 @@ import React, { type PropsWithChildren } from 'react'
 import { Metadata } from 'next'
 
 import TailwindIndicator from '@/primitives/tailwind-indicator'
-//import ThemeProvider from '@/context-providers/theme-provider'
+//import DimensionsProvider from '@/context-providers/dimensions-provider'
 import { inter, drukTextWide } from '@/style/nextFonts'
 
 import Header from '@/components/header'

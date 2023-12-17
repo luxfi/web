@@ -4,7 +4,7 @@ import React  from 'react'
 import type { Block, BannerBlock } from '@/types/block'
 import { Dimensions, type TShirtSize } from '@/types'
 
-import MediaBlockComponent from './media-block'
+import VideoBlockComponent from './video-block'
 import CTABlockComponent from './cta-block'
 
 type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'
@@ -41,8 +41,8 @@ const BannerBlockComponent: React.FC<{
       </div>
       <div className={'self-center flex flex-col justify-start items-center ' + mediaClasses}>
         {banner.contentBefore && banner.contentBefore}
-        {banner.media && (
-          <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} size={videoSize} constraint={videoConstraint}/>
+        {banner.video && (
+          <VideoBlockComponent className='self-center mt-6 not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
         )}
         {banner.contentAfter && banner.contentAfter }
       </div>
@@ -61,8 +61,8 @@ const BannerBlockComponent: React.FC<{
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.contentBefore && banner.contentBefore}
-        {banner.media && (
-          <MediaBlockComponent className='self-center mt-6 not-typography' block={banner.media} size={videoSize} constraint={videoConstraint}/>
+        {banner.video && (
+          <VideoBlockComponent className='self-center mt-6 not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
         )}
         {banner.contentAfter && banner.contentAfter }
       </div>
@@ -85,8 +85,8 @@ const BannerBlockComponent: React.FC<{
     <h1 className={titleClasses}>{banner.title}</h1>
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
     {banner.contentBefore && (<div className={contentBeforeClasses}>banner.contentBefore</div>)}
-    {banner.media && (
-      <MediaBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.media} size={videoSize} constraint={videoConstraint}/>
+    {banner.video && (
+      <VideoBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
     )}
     {banner.contentAfter && (<div className={contentAfterClasses}>banner.contentAfter</div>)}
     {banner.cta && (

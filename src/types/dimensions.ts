@@ -4,7 +4,6 @@ type Dimensions = {
   h: number | `${number}`
 }
 
-
 type TShirtDimensions = {               
   sm?: Dimensions, 
   md: Dimensions, 

@@ -1,11 +1,11 @@
-import media from './video'
+import video from './video'
 import { CTABlock } from '@/types/block'
 
 export default {
   blockType: 'banner',
   title: 'LUX GOLD',
   byline: <>Responsibly manufactured, <br className='sm:hidden'/>ethically sourced.</>,
-  media,
+  video: {...video, sizing: { vh: 50}},
   cta: {
     blockType: 'cta',
     elements: [

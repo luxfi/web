@@ -1,6 +1,6 @@
 import type * as C from '@/types/block'
 
-import media from './video'
+import video from './video'
 import accordian from './accordian'
 import buyLink from './buy-link'
 
@@ -8,7 +8,7 @@ export default {
   blockType: 'product-detail',
   title: 'LUX VALIDATOR',
   desc: <p>Buy into the <a href="http://lux.network" target="_blank">Lux Network</a> in the most meaningful way by becoming a Lux Validator owner and earn <a href="/coin">LUX Coin</a> from every network transaction fee.</p>,
-  media,
+  video: {...video, sizing: { vh: 70 }},
   accordian,
   blocks: [
     {

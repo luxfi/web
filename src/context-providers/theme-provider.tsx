@@ -9,4 +9,3 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, ...props }) => 
 )
 
 export default ThemeProvider
-

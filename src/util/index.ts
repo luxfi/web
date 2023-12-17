@@ -2,6 +2,7 @@ import { compiler as mdCompiler } from 'markdown-to-jsx'
 
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import { Dimensions } from '@/types'
 
 export const cn = (...inputs: ClassValue[]) => (
   twMerge(clsx(inputs))  
@@ -39,4 +40,27 @@ export const hexToRgb = (hex: string): string => {
   const g = parseInt(hex.substring(2, 4), 16)
   const b = parseInt(hex.substring(4, 6), 16)
   return `${r} ${g} ${b}`
+}
+
+
+export const asNum = (n: number | `${number}`): number => (
+  (typeof n === 'number') ? n : parseInt(n, 10)  
+)
+
+  // https://stackoverflow.com/questions/3971841/how-to-resize-images-proportionally-keeping-the-aspect-ratio
+export const constrain = (dim: Dimensions, constraint: Dimensions): Dimensions => {
+  const c = {
+    w: asNum(constraint.w),
+    h: asNum(constraint.h)
+  }
+  const d = {
+    w: asNum(dim.w),
+    h: asNum(dim.h)
+  }
+
+  const ratio = Math.min(c.w / d.w, c.h / d.h)
+  return {
+    w: Math.round(d.w * ratio),
+    h: Math.round(d.h * ratio)
+  }
 }

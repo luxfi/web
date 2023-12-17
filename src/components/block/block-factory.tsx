@@ -6,7 +6,8 @@ import CardBlockComponent from './card-block'
 import HeadingBlockComponent from './heading-block'
 import CTABlockComponent from './cta-block'
 import SpaceBlockComponent from './space-block'
-import MediaBlockComponent from './media-block'
+import ImageBlockComponent from './image-block'
+import VideoBlockComponent from './video-block'
 import AccordianBlockComponent from './accordian-block'
 import GroupBlockComponent from './group-block'
 
@@ -34,9 +35,11 @@ const BlockFactory: React.FC<{
     case 'space': {
       return <SpaceBlockComponent block={block} className={className} />
     }
-    case 'video': 
+    case 'video': {
+      return <VideoBlockComponent block={block} className={className} />
+    }
     case 'image':  {
-      return <MediaBlockComponent block={block} className={className} />
+      return <ImageBlockComponent block={block} className={className} />
     }
     case 'accordian': {
       return <AccordianBlockComponent block={block} className={className} />

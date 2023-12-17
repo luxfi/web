@@ -1,13 +1,15 @@
-import { type MediaBlock } from '@/types/block'
+import type { VideoBlock } from '@/types/block'
 import { DEF_VIDEO_PROPS } from '@/util'
 
 export default  {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: DEF_VIDEO_PROPS,
+  poster: '/assets/video/luxgold-poster.jpg',
   sources: ['/assets/video/luxgold.mp4'],
     // From manually looking at aspect ratio
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
+      // 1282x1920
       // .67 ratio
     sm: {
         // 1/4 * md
@@ -25,4 +27,4 @@ export default  {
       h: 410
     }
   }
-} as MediaBlock
+} as VideoBlock

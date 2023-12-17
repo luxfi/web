@@ -1,6 +1,6 @@
 import React from 'react'
 import type Block from './block'
-import type MediaBlock from './media-block'
+import type VideoBlock from './video-block'
 import type CTABlock from './cta-block'
 
 interface BannerBlock extends Block {
@@ -8,7 +8,7 @@ interface BannerBlock extends Block {
   title: string
   byline?: string
   contentBefore?: React.ReactNode
-  media?: MediaBlock
+  video?: VideoBlock
   contentAfter?: React.ReactNode
   cta?: CTABlock
 }

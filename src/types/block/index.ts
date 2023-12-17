@@ -7,7 +7,8 @@ import type CTABlock from './cta-block'
 import type ElementBlock from './element-block'
 import type GroupBlock from './group-block'
 import type HeadingBlock from './heading-block'
-import type MediaBlock from './media-block'
+import type ImageBlock from './image-block'
+import type VideoBlock from './video-block'
 import type ProductDetailBlock from './product-detail-block'
 import type SpaceBlock from './space-block'
 import type SpecialBlock from './special-block'
@@ -23,7 +24,8 @@ export {
    type ElementBlock,
    type GroupBlock,
    type HeadingBlock,
-   type MediaBlock,
+   type ImageBlock,
+   type VideoBlock,
    type ProductDetailBlock,
    type SpaceBlock,
    type SpecialBlock,

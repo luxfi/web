@@ -1,6 +1,6 @@
 import type * as C from '@/types/block'
 
-import media from './video'
+import video from './video'
 import accordian from './accordian'
 import buyLink from './buy-link'
 
@@ -8,7 +8,8 @@ export default {
   blockType: 'product-detail',
   title: 'LUX COIN',
   desc: <p>One-time opportunity to get LUX Coin, the deflationary and supply-locked <a href="http://lux.network" target="_blank" >Lux Network</a> currency at pre-launch prices.</p>,
-  media,
+  video: {...video, sizing: { vh: 70}},
+
   accordian,
   blocks: [
     {

@@ -1,13 +1,11 @@
-import Button from '@/primitives/button'
-
-import media from './video'
+import video from './video'
 import modal from './waitlist-modal'
 
 export default{
   blockType: 'banner',
   title: 'LUX CREDIT',
   byline: 'Never sell your crypto again.',
-  media,
+  video: {...video, sizing: { vh: 50}},
   cta: {
     blockType: 'cta',
     elements: [

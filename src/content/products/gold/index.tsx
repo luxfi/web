@@ -2,7 +2,7 @@ import type * as C from '@/types/block'
 
 import MiniChart from '@/components/mini-chart'
 
-import media from './video'
+import video from './video'
 import accordian from './accordian'
 import { markdown } from '@/util'
 
@@ -10,7 +10,7 @@ export default {
   blockType: 'product-detail',
   title: 'LUX GOLD',
   desc: 'Experience unparalleled access to gold with 1:1 asset-backed Lux Gold NFTs, sovereign ownership of physical gold without management fees, and mine-direct discount pricing.',
-  media,
+  video: {...video, sizing: { vh: 80 }},
   accordian,
   price: {
     heading: 'Price',
@@ -40,14 +40,14 @@ Available: 1,000,100 oz<br/>
 Price: $2000 / oz<br/>
 Spot price:: ~$2050 / oz
       `),
-      media,
+      video,
     } as C.CardBlock,
     {
       blockType: 'cta',
       elements: [
         {
           title: 'Buy Now',
-          href: "https://lux.town",
+          href: "https://opensea.io/collection/lux-gold-base-edition",
           external: true,
           newTab: false,
         },

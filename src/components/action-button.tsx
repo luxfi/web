@@ -9,7 +9,8 @@ import { ButtonSizes } from '@/primitives/button'
   // The DVC must be rendered client-side since it accesses the DOM directly.
   // There is no need for a loading UI since the dialog only opens
   // once it's been rendered and the user is already waiting.
-const DynamicDVC = dynamic(() => (import('../primitives/dialog-video-controller')))
+  // https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading
+const DynamicDVC = dynamic(() => (import('../primitives/dialog-video-controller')), {ssr: false})
 
 const ActionButton: React.FC<{
   def: ButtonDef

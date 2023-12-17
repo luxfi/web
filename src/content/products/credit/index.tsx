@@ -1,6 +1,6 @@
 import type * as C from '@/types/block'
 
-import media from './video'
+import video from './video'
 import accordian from './accordian'
 import modal from './waitlist-modal'
 
@@ -8,7 +8,7 @@ export default {
   blockType: 'product-detail',
   title: 'LUX CREDIT',
   desc: 'Unlock a world of digital assets with the Lux Card, your gateway to seamless transactions and asset management in the Lux ecosystem.',
-  media,
+  video: {...video, sizing: { vh: 60 }},
   accordian,
   blocks: [
     {

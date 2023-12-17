@@ -5,7 +5,7 @@ import type { Block, ProductDetailBlock} from '@/types/block'
 
 import ApplyTypography from '@/primitives/apply-typography'
 
-import MediaBlockComponent from './media-block'
+import VideoBlockComponent from './video-block'
 import AccordianBlockComponent from './accordian-block'
 import CardComponent  from './card-block'
 import BlockFactory from './block-factory'
@@ -26,7 +26,7 @@ const ProductDetailBlockComponent: React.FC<{
 
   return (<>
     <div className='mb-12 md:min-w-[400px] md:w-1/2 md:static'>
-      <MediaBlockComponent block={p.media} size={videoSize} className='md:sticky md:top-[200px] lg:top-[300px] md:mt-0 mt-[16px] mx-auto'/>
+      <VideoBlockComponent block={p.video} size={videoSize} className='md:sticky md:mt-0 mt-[16px] mx-auto'/>
     </div>
     <div className='md:bg-scroll md:w-1/2 '>
       <div className='md:max-w-[555px] flex flex-col items-start gap-4' >

@@ -1,9 +1,9 @@
-import type { Dimensions, TShirtDimensions } from '../dimensions'
+import type { TShirtDimensions } from '../dimensions'
 import type Block from './block'
 
-interface MediaBlock extends Block {
-  blockType: 'video' | 'image'
-  videoProps?: any,   // For example,
+interface VideoBlock extends Block {
+  blockType: 'video'
+  videoProps?: any   // For example,
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       videoProps: {
         autoPlay: true, 
@@ -16,11 +16,12 @@ interface MediaBlock extends Block {
       NOTE: Must be camalCase as per React conventions! (playsinline => playsInline)
     ~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-  image?: string,      // if image, image url. poster image if video 
+  poster?: string      
   sources?: string[]
-  dim: TShirtDimensions | Dimensions 
+  dim: TShirtDimensions 
+  sizing?: any
 }
 
 export {
-  type MediaBlock as default,
+  type VideoBlock as default,
 }

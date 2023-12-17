@@ -1,7 +1,6 @@
 import React  from 'react'
 
 import { notFound } from 'next/navigation'
-import dynamic from 'next/dynamic'
 
 import type ProductDetailBlock from '@/types/block/product-detail-block'
 

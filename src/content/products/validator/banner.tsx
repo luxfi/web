@@ -1,11 +1,11 @@
-import media from './video'
+import video from './video'
 import buyLink from './buy-link'
 
 export default {
   blockType: 'banner',
   title: 'LUX VALIDATOR',
   byline: 'Run the chain.',
-  media,
+  video: {...video, sizing: { vh: 50}},
   cta: {
     blockType: 'cta',
     elements: [

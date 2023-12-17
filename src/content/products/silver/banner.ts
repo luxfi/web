@@ -1,11 +1,11 @@
 import { CTABlock } from '@/types/block'
-import media from './video'
+import video from './video'
 
 export default {
   blockType: 'banner',
   title: 'LUX SILVER',
   byline: 'The Silver Rush is Here.',
-  media,
+  video: {...video, sizing: { vh: 50}},
   cta: {
     blockType: 'cta',
     elements: [

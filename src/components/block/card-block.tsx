@@ -19,7 +19,8 @@ import ApplyTypography, { type TypographySize } from '@/primitives/apply-typogra
 import Icons from '@/components/icons'
 
 import LinkElement from '../link-element'
-import MediaBlockComponent from './media-block'
+import ImageBlockComponent from './image-block'
+import VideoBlockComponent from './video-block'
 import CTABlockComponent from './cta-block'
 
 const ArrowLinkElement: React.FC<{
@@ -127,10 +128,10 @@ const CardBlockComponent: React.FC<{
     <CardContent className={'flex flex-row justify-start items-stretch p-0 grow ' + disabledBorder + bgclx + contentclx + className}>
     {card.media && (
       <div className={'box-content grow-0 not-typography' + paddingclx} style={{
-          // If this layout has been specified, assume the 'sm' variant is there.
+          // If this layout has been specified, assume video, and that the 'sm' variant is there.
         width: (card.media.dim as TShirtDimensions).sm!.w 
       }}>
-        <MediaBlockComponent 
+        <VideoBlockComponent 
           block={card.media} 
           usePoster={has('video-use-poster')} 
           size='sm' 
@@ -154,9 +155,11 @@ const CardBlockComponent: React.FC<{
       {card.content && contentBefore && (
         (typeof card.content === 'string') ? (<p>{card.content}</p>) : card.content
       )}
-      {card.media && (
-        <MediaBlockComponent block={card.media} />
-      )}
+      {card.media && (card.media.blockType === 'image' ? (
+        <ImageBlockComponent block={card.media} />
+      ) : (
+        <VideoBlockComponent block={card.media} />
+      ))}
       {card.content && !contentBefore && (
         (typeof card.content === 'string') ? (<p>{card.content}</p>) : card.content
       )}
@@ -201,6 +204,3 @@ const CardBlockComponent: React.FC<{
 }
 
 export default CardBlockComponent
-
-//  group-hover:hidden
-// group-hover:opacity-100

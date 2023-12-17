@@ -4,7 +4,8 @@ import Icon from '../icon'
 
 import type CTABlock from './cta-block'
 import type Block from './block'
-import type MediaBlock from './media-block'
+import type ImageBlock from './image-block'
+import VideoBlock from './video-block'
 
 interface CardBlock extends Block {
   blockType: 'card'
@@ -13,7 +14,7 @@ interface CardBlock extends Block {
   byline?: string
   icon?: Icon // for title area
   iconAfter?: boolean
-  media?: MediaBlock
+  media?: ImageBlock | VideoBlock
   content?: React.ReactNode
   cta?: CTABlock
 }
