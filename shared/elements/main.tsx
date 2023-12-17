@@ -1,5 +1,5 @@
 import React, { type PropsWithChildren } from 'react'
-import { cn } from '@/util'
+import { cn } from '@luxdefi/ui'
 
 const c = 'max-w-screen-2xl 2xl:w-[1500px] lg:mx-auto ' + 
   'flex flex-col justify-start items-stretch ' +

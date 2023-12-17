@@ -1,3 +1,4 @@
+import React from 'react'
 import type Block from './block'
 
 interface AccordianBlock extends Block {

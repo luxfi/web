@@ -1,21 +1,20 @@
 'use client'
-
 import React from 'react'
 
-import type { ButtonModalProps} from '@/types'
+import type { ButtonModalProps} from '@luxdefi/ui'
 
 import {
+  Button,
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/primitives/dialog'
-import Button from '@/primitives/button'
+} from '@luxdefi/ui/primitives'
 
 import ContactForm from './contact-form'
-import Disclaimer from './disclaimer.mdx'
+import Disclaimer from './disclaimer'
 
 const ContactDialog: React.FC<ButtonModalProps> = ({
   open,

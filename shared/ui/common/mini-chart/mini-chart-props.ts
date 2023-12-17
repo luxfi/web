@@ -21,8 +21,11 @@ interface MiniChartBaseProps {
 	height?: number | string
 	locale?: string
 	colorTheme?: "light" | "dark"
+  // @ts-ignore // TODO
 	lineColor?: CSSProperties["color"]
+  // @ts-ignore // TODO
 	topGradientColor?: CSSProperties["color"]
+  // @ts-ignore // TODO
 	bottomGradientColor?: CSSProperties["color"]
 	isTransparent?: boolean
 	autosize?: boolean

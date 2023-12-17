@@ -1,8 +1,8 @@
 'use client'
 import React, { type PropsWithChildren } from 'react'
 
-import { Sheet, SheetContent, SheetTrigger } from '@/primitives/sheet'
-import Icons from '@/components/icons'
+import { Sheet, SheetContent, SheetTrigger } from '../primitives/sheet'
+import * as Icons from './icons'
 
 const DrawerMenu: React.FC<PropsWithChildren & {
   triggerIcon: keyof typeof Icons

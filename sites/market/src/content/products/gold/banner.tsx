@@ -1,5 +1,6 @@
+import { type CTABlock } from '@luxdefi/blocks/def'
+
 import video from './video'
-import { CTABlock } from '@/types/block'
 
 export default {
   blockType: 'banner',

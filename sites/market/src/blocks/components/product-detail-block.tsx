@@ -1,15 +1,18 @@
 import React from 'react'
 
-import { type TShirtSize } from '@/types'
-import type { Block, ProductDetailBlock} from '@/types/block'
+import { type TShirtSize } from '@luxdefi/ui/types'
+import type { Block} from '@luxdefi/blocks/def'
+import { ApplyTypography } from '@luxdefi/ui/primitives'
 
-import ApplyTypography from '@/primitives/apply-typography'
+import {
+  BlockFactory,
+  SpaceBlockComponent as Spacer,
+  CardBlockComponent as CardComponent,
+  AccordianBlockComponent,
+  VideoBlockComponent
+} from '@luxdefi/blocks/components'
 
-import VideoBlockComponent from './video-block'
-import AccordianBlockComponent from './accordian-block'
-import CardComponent  from './card-block'
-import BlockFactory from './block-factory'
-import Spacer from './space-block'
+import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 const ProductDetailBlockComponent: React.FC<{
   block: Block

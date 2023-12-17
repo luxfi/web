@@ -1,12 +1,11 @@
 'use client'
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 
 import Image from 'next/image'
 
-import type { Dimensions, TShirtSize, TShirtDimensions } from '@/types'
-import type { Block, VideoBlock } from '@/types/block'
-import VideoPlayer from '@/primitives/video-player'
-import { constrain, asNum } from '@/util'
+import type { Dimensions, TShirtSize, TShirtDimensions } from '@luxdefi/ui'
+import { constrain, asNum, VideoPlayer } from '@luxdefi/ui'
+import type { Block, VideoBlock } from '../def'
 
 const VideoBlockComponent: React.FC<{
   block: Block

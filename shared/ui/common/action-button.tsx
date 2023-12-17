@@ -1,10 +1,10 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { cn } from '@/util'
+import { cn } from '../util'
 
-import type { ButtonDef, ButtonModalDef } from '@/types'
-import { ButtonSizes } from '@/primitives/button'
+import type { ButtonDef, ButtonModalDef } from '../types'
+import { ButtonSizes } from '../primitives/button'
 
   // The DVC must be rendered client-side since it accesses the DOM directly.
   // There is no need for a loading UI since the dialog only opens

@@ -1,8 +1,8 @@
-import type * as C from '@/types/block'
+import type * as C from '@luxdefi/blocks/def'
+import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
-import MiniChart from '@/components/mini-chart'
-
-import { markdown } from '@/util'
+import { MiniChart } from '@luxdefi/ui/common'
+import { markdown } from '@luxdefi/ui/util'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
@@ -99,4 +99,4 @@ Spot price: ~$25 / oz`
       }
     } as C.CardBlock,
   ] as C.Block[]
-} as C.ProductDetailBlock
+} as ProductDetailBlock

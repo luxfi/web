@@ -1,4 +1,4 @@
-import type { Dimensions } from '../dimensions'
+import type { Dimensions } from '@luxdefi/ui'
 import type Block from './block'
 
 interface ImageBlock extends Block {

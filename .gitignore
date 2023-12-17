@@ -38,3 +38,5 @@ yarn-error.log*
 tsconfig.tsbuildinfo
 
 .vscode/
+
+**/dist

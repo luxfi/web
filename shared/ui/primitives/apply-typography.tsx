@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react'
 
-import { cn } from '@/util'
+import { cn } from '../util'
 
 type TypographySize = 'responsive' | 'sm' | 'base' | 'lg' // if t-shirt size, do *not* be responsive
 

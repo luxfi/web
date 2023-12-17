@@ -1,6 +1,5 @@
 'use server'
-
-import type { ContactInfo } from '@/types/block'
+import type { ContactInfo } from '@luxdefi/ui/types'
 
   // https://nextjs.org/docs/app/api-reference/functions/server-actions
   // https://github.com/orgs/react-hook-form/discussions/10757#discussioncomment-6672403

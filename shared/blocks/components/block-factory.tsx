@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type * as B from '@/types/block'
+import type * as B from '../def'
 
 import CardBlockComponent from './card-block'
 import HeadingBlockComponent from './heading-block'

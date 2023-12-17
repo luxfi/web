@@ -1,10 +1,11 @@
-import type * as C from '@/types/block'
+import type * as C from '@luxdefi/blocks/def'
 
-import MiniChart from '@/components/mini-chart'
+import { MiniChart } from '@luxdefi/ui/common'
+import { markdown } from '@luxdefi/ui/util'
 
+import ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'
 import accordian from './accordian'
-import { markdown } from '@/util'
 
 export default {
   blockType: 'product-detail',
@@ -61,6 +62,6 @@ Spot price:: ~$2050 / oz
       ]
     } as C.CTABlock,
   ] as C.Block[]
-} as C.ProductDetailBlock
+} as ProductDetailBlock
 
 

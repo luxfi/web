@@ -5,8 +5,7 @@ interface ContactInfo {
 
 type ContactInfoFields = keyof ContactInfo
 
-
 export {
-  type ContactInfo as default,
+  type ContactInfo,
   type ContactInfoFields
 }

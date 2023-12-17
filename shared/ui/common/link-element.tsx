@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
-import type { LinkDef, Icon }  from '@/types'
-import { buttonVariants, type ButtonSizes, type ButtonVariants } from '@/primitives/button'
-import { cn } from '@/util'
+import type { LinkDef, Icon }  from '../types'
+import { buttonVariants, type ButtonSizes, type ButtonVariants } from '../primitives/button'
+import { cn } from '../util'
 
 const LinkElement: React.FC<{
   def: LinkDef,

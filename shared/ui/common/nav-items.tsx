@@ -1,9 +1,10 @@
 import React from 'react'
 
-import type { LinkDef }  from '@/types'
+import type { LinkDef }  from '../types'
+import { ButtonVariants } from '../primitives/button'
+import { cn } from '../util'
+
 import LinkElement from './link-element'
-import { ButtonVariants } from '@/primitives/button'
-import { cn } from '@/util'
 
 const NavItems: React.FC<{
   items: LinkDef[]

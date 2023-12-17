@@ -1,4 +1,5 @@
-import type * as C from '@/types/block'
+import type * as C from '@luxdefi/blocks/def'
+import ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'
 import accordian from './accordian'
@@ -26,4 +27,4 @@ export default {
       ]
     } as C.CTABlock
   ]
-} as C.ProductDetailBlock
+} as ProductDetailBlock

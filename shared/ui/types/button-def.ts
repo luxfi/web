@@ -1,4 +1,4 @@
-import { type ButtonProps } from '@/primitives/button'
+import { type ButtonProps } from '../primitives/button'
 
 type SubmitServerAction = (data: any, enclosure?: any) => Promise<void>
 

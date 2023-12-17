@@ -1,5 +1,5 @@
-import type { VideoBlock } from '@/types/block'
-import { DEF_VIDEO_PROPS } from '@/util'
+import type { VideoBlock } from '@luxdefi/blocks/def'
+import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
 
 export default  {
   blockType: 'video',

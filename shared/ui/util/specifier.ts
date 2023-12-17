@@ -1,5 +1,5 @@
-import type { Dimensions, TShirtSize }  from '@/types'
-import type { TypographySize } from '@/primitives/apply-typography'
+import type { Dimensions, TShirtSize }  from '../types'
+import type { TypographySize } from '../primitives/apply-typography'
 
 export const getPrimaryStartingWith = (s: string, toFind: string) => {
   const tokenArray = s.split(' ')

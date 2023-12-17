@@ -1,14 +1,9 @@
 import React from 'react'
 
-import { LinkDef } from '@/types'
-
-import { ButtonVariants } from '@/primitives/button'
+import { ButtonVariants, Copyright, LinkDef, NavItems } from '@luxdefi/ui'
 
 import Logo from './logo'
-import NavItems from './nav-items'
-import Copyright from './copyright'
-
-import { footer } from '@/content'
+import footer from './footer-content'
 
 const Footer: React.FC<{
   className?: string,

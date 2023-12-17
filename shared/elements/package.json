@@ -1,0 +1,30 @@
+{
+  "name": "@luxdefi/elements",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Library that contains block defs and UI component implementations of the block fw",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "tc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
+    "@luxdefi/blocks": "workspace:*",
+    "@luxdefi/ui": "workspace:*",
+    "lucide-react": "^0.287.0",
+    "next": "^14.0.3",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
+    "validator": "^13.11.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/validator": "^13.11.5",
+    "typescript": "^5.2.2"
+  }
+}

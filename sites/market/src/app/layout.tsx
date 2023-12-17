@@ -1,14 +1,12 @@
 import React, { type PropsWithChildren } from 'react'
 import { Metadata } from 'next'
 
-import TailwindIndicator from '@/primitives/tailwind-indicator'
-//import DimensionsProvider from '@/context-providers/dimensions-provider'
-import { inter, drukTextWide } from '@/style/nextFonts'
-
-import Header from '@/components/header'
+import { TailwindIndicator } from '@luxdefi/ui/primitives'
+import { inter, drukTextWide } from '@luxdefi/ui/style/nextFonts'
+import { Header } from '@luxdefi/elements'
 
   // Need these here to ensure that tailwind is always last.
-import '@/style/globals.css'
+import '@luxdefi/ui/style/globals.css'
 
 const metadata: Metadata = {
   title: {
