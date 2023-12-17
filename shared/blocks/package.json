@@ -1,0 +1,22 @@
+{
+  "name": "@luxdefi/blocks",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Library that contains block defs and UI component implementations of the block fw",
+  "main": "lib",
+  "scripts": {
+    "build": "tsc",
+    "tc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@luxdefi/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "lux-shop",
+  "name": "@luxdefi/market",
   "version": "0.0.2",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "react-hook-form": "^7.47.0",
     "sharp": "^0.31.3",
     "tailwind-merge": "^1.13.2",
-    "validator": "^13.11.0",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.9",

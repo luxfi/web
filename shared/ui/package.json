@@ -2,8 +2,8 @@
   "name": "@luxdefi/ui",
   "version": "0.0.1",
   "private": true,
-  "description": "Library that contains common UI primatives, utilities, and shared UI elements",
-  "main": "lib",
+  "description": "Library that contains shared UI primitives, styles, and core types",
+  "main": "index.ts",
   "scripts": {
     "build": "tsc",
     "tc": "tsc --noEmit"

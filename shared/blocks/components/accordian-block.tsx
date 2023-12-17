@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { cn } from '@/util'
+import { cn } from '@luxdefi/ui'
 
 import type { Block, AccordianBlock } from '@/types/block'
 import {

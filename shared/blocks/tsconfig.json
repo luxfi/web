@@ -6,7 +6,5 @@
   "compilerOptions": {
     "declaration": true,
     "declarationMap": true,
-    "outDir": "lib",
-    //"preserveSymlinks": true,
   }
 }
