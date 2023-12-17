@@ -2,8 +2,8 @@ import React from 'react'
 
 import { SocialIcon as BaseSocialIcon } from 'react-social-icons'
 
-import { cn } from '@/util'
-import '@/style/social-svg.css'
+import { cn } from '../../util'
+import '../../style/social-svg.css'
 
 interface SocialIconProps {
     // one of these: https://github.com/couetilc/react-social-icons/tree/main/db

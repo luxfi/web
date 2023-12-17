@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-import { Dimensions } from '@/types'
+import { Dimensions } from '../types'
 
 interface VideoProps extends React.ComponentPropsWithoutRef<"video"> {
   sources: string[]

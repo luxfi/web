@@ -5,11 +5,11 @@ import type { Block, ProductDetailBlock} from '@/types/block'
 
 import ApplyTypography from '@/primitives/apply-typography'
 
-import VideoBlockComponent from './video-block'
-import AccordianBlockComponent from './accordian-block'
-import CardComponent  from './card-block'
-import BlockFactory from './block-factory'
-import Spacer from './space-block'
+import VideoBlockComponent from '../../../../../shared/blocks/components/video-block'
+import AccordianBlockComponent from '../../../../../shared/blocks/components/accordian-block'
+import CardComponent  from '../../../../../shared/blocks/components/card-block'
+import BlockFactory from '../../../../../shared/blocks/components/block-factory'
+import Spacer from '../../../../../shared/blocks/components/space-block'
 
 const ProductDetailBlockComponent: React.FC<{
   block: Block

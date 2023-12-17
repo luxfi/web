@@ -14,13 +14,13 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from '@/primitives/form'
+} from '../../primitives/form'
 
-import type { ContactInfo } from '@/types/block'
-import type { SubmitServerAction } from '@/types/button-def'
+import type ContactInfo from '../../types/contact-info'
+import type { SubmitServerAction } from '../../types/button-def'
 
-import Button from '@/primitives/button'
-import Input from '@/primitives/input'
+import Button from '../../primitives/button'
+import Input from '../../primitives/input'
 
 const ValidationSchema = z.object({
   email: z
@@ -53,6 +53,7 @@ const ContactForm: React.FC<{
 
   const onFormSubmit: SubmitHandler<ContactInfo> = (data) => {
     // https://github.com/orgs/react-hook-form/discussions/10757#discussioncomment-6672403
+    // @ts-ignore
     startTransition(async () => {
       await onSubmit(data, enclosure)
     })
@@ -82,11 +83,13 @@ const ContactForm: React.FC<{
         <FormField
           control={form.control}
           name='email'
+            // @ts-ignore
           render={({ field }) => ( <MyFormItem field={field} placeholder='email'/> )}
         />
         <FormField
           control={form.control}
           name='phone'
+            // @ts-ignore
           render={({ field }) => ( <MyFormItem field={field} placeholder='phone'/> )}
         />
           <Button disabled={isPending} type='submit' className='bg-primary text-primary-fg hover:bg-primary-hover'>

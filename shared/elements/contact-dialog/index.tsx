@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import type { ButtonModalProps} from '@/types'
+import type { ButtonModalProps} from '../../types'
 
 import {
   Dialog,
@@ -11,8 +11,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/primitives/dialog'
-import Button from '@/primitives/button'
+} from '../../primitives/dialog'
+import Button from '../../primitives/button'
 
 import ContactForm from './contact-form'
 import Disclaimer from './disclaimer.mdx'

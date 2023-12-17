@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { LinkDef } from '@/types'
+import { LinkDef } from '../types'
 
-import { ButtonVariants } from '@/primitives/button'
+import { ButtonVariants } from '../primitives/button'
 
-import Logo from './logo'
-import NavItems from './nav-items'
-import Copyright from './copyright'
+import Logo from '../../ui/common/logo'
+import NavItems from '../../ui/common/nav-items'
+import Copyright from '../../ui/common/copyright'
 
 import { footer } from '@/content'
 

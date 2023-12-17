@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-import Icons from '@/components/icons'
+import Icons from './icons'
 
 // Concept based on https://www.youtube.com/watch?v=lLqRchtjN00
 // (https://github.com/a-trost/fableton)

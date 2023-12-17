@@ -2,7 +2,7 @@ import { compiler as mdCompiler } from 'markdown-to-jsx'
 
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
-import { Dimensions } from '@/types'
+import { Dimensions } from '../types'
 
 export const cn = (...inputs: ClassValue[]) => (
   twMerge(clsx(inputs))  

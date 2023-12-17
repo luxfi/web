@@ -1,5 +1,5 @@
-import type { ButtonVariants, ButtonSizes } from '@/primitives/button'
-import type { Icon }  from '@/types'
+import type { ButtonVariants, ButtonSizes } from '../primitives/button'
+import type { Icon }  from '../types'
 
 
 interface LinkItemDef {
