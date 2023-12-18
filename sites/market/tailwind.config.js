@@ -12,6 +12,9 @@ module.exports = {
     //relative: true,
     files: [
       "src/**/*.{ts,tsx,js}",
+      '../../shared/ui/**/*.{ts,tsx,js}',
+      '../../shared/blocks/**/*.{ts,tsx,js}',
+      '../../shared/elements/**/*.{ts,tsx,js}'
       //path.join(path.dirname(require.resolve('@luxdefi/ui')), '**/*.{ts,tsx,js}'),
       //path.join(path.dirname(require.resolve('@luxdefi/blocks')), '**/*.{ts,tsx,js}'),
       //path.join(path.dirname(require.resolve('@luxdefi/elements')), '**/*.{ts,tsx,js}'),
