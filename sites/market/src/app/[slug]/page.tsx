@@ -1,13 +1,9 @@
 import React  from 'react'
-
 import { notFound } from 'next/navigation'
 
-import type ProductDetailBlock from '@/types/block/product-detail-block'
-
-import Footer from '@/components/footer'
-import Main from '@/components/main'
-import ProductDetailBlockComponent from '@/components/block/product-detail-block'
- 
+import { Footer, Main } from '@luxdefi/elements'
+import type ProductDetailBlock from '@/blocks/def/product-detail-block'
+import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
 import { products } from '@/content'
 
 type Props = {

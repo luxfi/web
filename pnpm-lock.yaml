@@ -208,6 +208,15 @@ importers:
       '@hookform/resolvers':
         specifier: ^3.3.2
         version: 3.3.2(react-hook-form@7.49.2)
+      '@luxdefi/blocks':
+        specifier: workspace:*
+        version: link:../../shared/blocks
+      '@luxdefi/elements':
+        specifier: workspace:*
+        version: link:../../shared/elements
+      '@luxdefi/ui':
+        specifier: workspace:*
+        version: link:../../shared/ui
       '@mdx-js/loader':
         specifier: ^2.3.0
         version: 2.3.0(webpack@5.89.0)

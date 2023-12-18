@@ -1,7 +1,7 @@
-const colors = require('./src/style/colors.tailwind')
-const { fontFamily, fontSize } = require('./src/style/fonts.tailwind')
-const screens = require('./src/style/screens.tailwind')
-const safelist = require('./src/style/safelist.tailwind')
+const colors = require('@luxdefi/ui/style/colors.tailwind')
+const { fontFamily, fontSize } = require('@luxdefi/ui/style/fonts.tailwind')
+const screens = require('@luxdefi/ui/style/screens.tailwind')
+const safelist = require('@luxdefi/ui/style/safelist.tailwind')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
   safelist,
   plugins: [
     require("tailwindcss-animate"),
-    require('./src/style/typo-plugin')({ className: 'typography', base: 16 }),
+    require('@luxdefi/ui/style/typo-plugin')({ className: 'typography', base: 16 }),
     require('@tailwindcss/container-queries'),
     require('tailwindcss-interaction-media'),
   ],

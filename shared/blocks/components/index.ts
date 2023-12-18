@@ -12,7 +12,7 @@ import SpaceBlock from './space-block'
 export { 
    AccordianBlock as AccordianBlockComponent, 
    BannerBlock as BannerBlockComponent, 
-   BlockFactory as BlockFactoryComponent,
+   BlockFactory,
    CardBlock as CardBlockComponent,
    CTABlock as CTABlockComponent,
    GroupBlock as GroupBlockComponent,

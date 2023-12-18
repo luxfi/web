@@ -1,8 +1,7 @@
 import React  from 'react'
 
-import Main from '@/components/main'
-import Footer from '@/components/footer'
-import ApplyTypography from '@/primitives/apply-typography'
+import { Main, Footer } from '@luxdefi/elements'
+import { ApplyTypography } from '@luxdefi/ui/primitives'
 import NotFoundMDX from '@/content/not-found.mdx'
 
 const NotFound: React.FC  = () => (<>

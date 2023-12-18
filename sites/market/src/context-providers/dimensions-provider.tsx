@@ -1,8 +1,13 @@
 "use client"
+import React, { 
+  useRef, 
+  type PropsWithChildren, 
+  useEffect, 
+  useLayoutEffect, 
+  useContext
+} from "react"
 
-import React, { useRef, type PropsWithChildren, useEffect, useLayoutEffect, useContext} from "react"
-
-import { type Dimensions } from "@/types"
+import { type Dimensions } from "@luxdefi/ui/types"
 
 interface DimensionsSource {
   getDim: () => Dimensions | undefined

@@ -1,7 +1,7 @@
 
-import { type CTABlock} from '@/types/block'
+import { type CTABlock} from '@luxdefi/blocks/def'
 
-import SocialIcon from '@/components/icons/social-icon'
+import { Icons } from '@luxdefi/ui/common'
 
 const SOC_ICON_SIZE = 18
 
@@ -126,37 +126,37 @@ export default [
         title: 'Discord',
         href: 'https://discord.gg/luxdefi',
         external: true,
-        icon: <SocialIcon network='discord' size={SOC_ICON_SIZE} />
+        icon: <Icons.SocialIcon network='discord' size={SOC_ICON_SIZE} />
       },
       {
         title: 'Telegram',
         href: 'https://t.me/luxdefi',
         external: true,
-        icon: <SocialIcon network='telegram' size={SOC_ICON_SIZE} />
+        icon: <Icons.SocialIcon network='telegram' size={SOC_ICON_SIZE} />
       },
       {
         title: 'X (Twitter)',
         href: 'https://twitter.com/luxdefi',
         external: true,
-        icon: <SocialIcon network='x' size={SOC_ICON_SIZE} />
+        icon: <Icons.SocialIcon network='x' size={SOC_ICON_SIZE} />
       },
       {
         title: 'Facebook',
         href: 'https://facebook.com/luxdefi',
         external: true,
-        icon: <SocialIcon network='facebook' size={SOC_ICON_SIZE + 2} />
+        icon: <Icons.SocialIcon network='facebook' size={SOC_ICON_SIZE + 2} />
       },
       {
         title: 'LinkedIn',
         href: 'https://linkedin.com/company/luxdefi',
         external: true,
-        icon: <SocialIcon network='linkedin' size={SOC_ICON_SIZE + 2} />
+        icon: <Icons.SocialIcon network='linkedin' size={SOC_ICON_SIZE + 2} />
       },
       {
         title: 'Instagram',
         href: 'https://instagram.com/luxdefi',
         external: true,
-        icon: <SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
+        icon: <Icons.SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
       },
     ] 
   },

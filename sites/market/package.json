@@ -26,7 +26,10 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
     "sharp": "^0.31.3",
-    "tailwind-merge": "^1.13.2"
+    "tailwind-merge": "^1.13.2",
+    "@luxdefi/ui": "workspace:*",
+    "@luxdefi/blocks": "workspace:*",
+    "@luxdefi/elements": "workspace:*"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.9",

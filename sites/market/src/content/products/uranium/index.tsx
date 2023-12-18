@@ -1,9 +1,8 @@
 
-import type * as C from '@/types/block'
-
-import MiniChart from '@/components/mini-chart'
-
-import { markdown } from '@/util'
+import type * as C from '@luxdefi/blocks/def'
+import { MiniChart } from '@luxdefi/ui/common'
+import { markdown } from '@luxdefi/ui/util'
+import ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'
 import accordian from './accordian'
@@ -351,4 +350,4 @@ Market spot price: $52 / lb
 
     
   ] as C.Block[]
-} as C.ProductDetailBlock
+} as ProductDetailBlock

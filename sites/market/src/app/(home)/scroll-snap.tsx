@@ -1,9 +1,9 @@
 import React from 'react'
 
-import ApplyTypography from '@/primitives/apply-typography'
+import { ApplyTypography } from '@luxdefi/ui'
 
-import BannerComponent from '@/components/block/banner-block'
-import Footer from '@/components/footer'
+import {BannerBlockComponent as BannerComponent}  from '@luxdefi/blocks'
+import { Footer } from '@luxdefi/elements'
 
 import { landing } from '@/content'
 
