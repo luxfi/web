@@ -8,7 +8,7 @@ import { Header } from '@luxdefi/elements'
 //import DimensionsProvider from '@/context-providers/dimensions-provider'
 
   // Need these here to ensure that tailwind is always last.
-import '@/style/globals.css'
+import '@luxdefi/ui/style/globals.css'
 
 const metadata: Metadata = {
   title: {
