@@ -11,6 +11,7 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "@luxdefi/ui": "workspace:*",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
@@ -21,7 +22,8 @@
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.9",
