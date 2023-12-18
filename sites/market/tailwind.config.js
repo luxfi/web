@@ -9,8 +9,8 @@ module.exports = {
   darkMode: ["class"],
   content: {
     files: [
-      "src/**/*.{ts,tsx,js}",
-      '../../shared/ui/**/*.{ts,tsx,js}',
+      "src/**/*.tsx",
+      '../../shared/ui/**/*.tsx',
     ]
   },
   safelist,
