@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { cn } from '@/util'
-import Icons from '@/components/icons'
-import { type TShirtSize } from '@/types'
+import { Icons, cn, type TShirtSize  } from '@luxdefi/ui'
 
 const Logo: React.FC<{
   size: TShirtSize

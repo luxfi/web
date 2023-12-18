@@ -1,4 +1,3 @@
-import nav from './nav'
 import landing from './landing'
 import footer from './footer'
 import silver from './products/silver'
@@ -20,7 +19,6 @@ const products = {
 }
 
 export {
-  nav,
   landing,
   footer,
   products

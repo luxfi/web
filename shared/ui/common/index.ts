@@ -1,4 +1,4 @@
-export { default as Icons } from './icons'
+export * as Icons from './icons'
 export { default as MiniChart } from './mini-chart'
 export { default as ActionButton } from './action-button'
 export { default as Copyright} from './copyright'

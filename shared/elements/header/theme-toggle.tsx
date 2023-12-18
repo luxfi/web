@@ -4,7 +4,7 @@ import React from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
-import Button from '@/primitives/button'
+import { Button } from '@luxdefi/ui'
 
 const ThemeToggle: React.FC = () => {
 

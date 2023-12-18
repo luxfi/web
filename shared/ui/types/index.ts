@@ -13,6 +13,11 @@ import type TShirtSize from './t-shirt-size'
 import type { TShirtDimensions, Dimensions } from './dimensions' 
 import type Icon from './icon'
 
+import {
+  type ContactInfo,
+  type ContactInfoFields 
+} from './contact-info'
+
 export {
   type ButtonDef,
   type Dimensions,
@@ -24,5 +29,8 @@ export {
   type TShirtSize,
   type Breakpoint,
   type TShirtDimensions,
-  Breakpoints
+  Breakpoints,
+  type ContactInfo,
+  type ContactInfoFields
 }
+

@@ -1,26 +1,34 @@
 import {
-  Moon,
-  SunMedium,
-  Menu,
-  ArrowUpRight,
+  Moon as moon,
+  SunMedium as sun,
+  Menu as burger,
+  ArrowUpRight as linkOut,
   type XIcon as LucideIcon,
 } from 'lucide-react'
 
-export { type LucideIcon as Icon } 
+import gitHub from './github'
+import logo from './lux-logo'
+import youtube from './youtube-logo'
+import secureDelivery from './secure-delivery'
 
-import GitHub from './github'
-import LuxLogo from './lux-logo'
-import YouTubeLogo from './youtube-logo'
-import SecureDelivery from './secure-delivery'
+import  {
+  type SocialIconProps,
+  default as SocialIcon 
+} from './social-icon'
+
+export { type LucideIcon as Icon, type SocialIconProps } 
 
 
-export default {
-  sun: SunMedium,
-  moon: Moon,
-  logo: LuxLogo,
-  burger: Menu,
-  gitHub: GitHub,
-  linkOut: ArrowUpRight,
-  youtube: YouTubeLogo,
-  secureDelivery : SecureDelivery
+export {
+  sun,
+  moon,
+  logo,
+  burger,
+  gitHub,
+  linkOut,
+  youtube,
+  secureDelivery,
+  SocialIcon,
 }
+
+

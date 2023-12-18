@@ -1,15 +1,11 @@
 import React from 'react'
 
-import Logo from '@/components/logo'
-import LinkElement from '@/components/link-element'
-import Icons from '@/components/icons'
-import DrawerMenu from '@/components/drawer-menu'
-import NavItems from '@/components/nav-items'
-import { ButtonVariants } from '@/primitives/button'
+import Logo from '../logo'
+import { ButtonVariants, LinkElement, DrawerMenu, NavItems }  from '@luxdefi/ui'
 
 import MobileNav from './mobile-nav'
 
-import { nav } from '@/content'
+import nav from '../nav-content'
 
 const Header: React.FC = () => (
   <header className="bg-background sticky z-10 top-0">

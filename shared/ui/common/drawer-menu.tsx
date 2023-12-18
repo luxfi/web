@@ -2,7 +2,7 @@
 import React, { type PropsWithChildren } from 'react'
 
 import { Sheet, SheetContent, SheetTrigger } from '../primitives/sheet'
-import Icons from './icons'
+import * as Icons from './icons'
 
 const DrawerMenu: React.FC<PropsWithChildren & {
   triggerIcon: keyof typeof Icons

@@ -1,10 +1,9 @@
 'use client'
-
 import React from 'react'
 
-import type { ButtonVariants } from '@/primitives/button'
-import LinkElement from '@/components/link-element'
-import { nav } from '@/content'
+import { ButtonVariants, LinkElement }  from '@luxdefi/ui'
+
+import nav from '../nav-content'
 
 const elements = nav.all
 

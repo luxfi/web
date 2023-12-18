@@ -4,23 +4,22 @@ import React, { useTransition } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, SubmitHandler, type ControllerRenderProps } from 'react-hook-form'
 import * as z from 'zod'
+  // @ts-ignore
 import validator from 'validator'
 
 import { Loader2 } from 'lucide-react'
 
 import {
+  Button,
+  Input,
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '../../primitives/form'
+} from '@luxdefi/ui/primitives'
 
-import type ContactInfo from '../../types/contact-info'
-import type { SubmitServerAction } from '../../types/button-def'
-
-import Button from '../../primitives/button'
-import Input from '../../primitives/input'
+import type { ContactInfo, SubmitServerAction } from '@luxdefi/ui/types'
 
 const ValidationSchema = z.object({
   email: z
