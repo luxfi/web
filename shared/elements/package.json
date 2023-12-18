@@ -12,12 +12,7 @@
     "@hookform/resolvers": "^3.3.2",
     "@luxdefi/blocks": "workspace:*",
     "@luxdefi/ui": "workspace:*",
-    "@mdx-js/loader": "^2.3.0",
-    "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.5.6",
     "lucide-react": "^0.287.0",
-    "next": "^14.0.3",
-    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
@@ -25,7 +20,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/mdx": "^2.0.9",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@types/validator": "^13.11.5",
