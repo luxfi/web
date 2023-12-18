@@ -1,9 +1,9 @@
 import React from 'react'
 
-import type { Block, GroupBlock } from '@/types/block'
-import { type Breakpoint, Breakpoints } from '@/types'
+import { type Breakpoint, Breakpoints, cn } from '@luxdefi/ui'
+
+import type { Block, GroupBlock } from '../def'
 import BlockFactory from './block-factory'
-import { cn } from '@/util'
 
 // eg: 'layout-grid-2-starting-md'
 // see comments below regarding dynamic classes and the safelist

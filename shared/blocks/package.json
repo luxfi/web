@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "description": "Library that contains block defs and UI component implementations of the block fw",
-  "main": "lib",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
+    "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@luxdefi/ui": "workspace:*"

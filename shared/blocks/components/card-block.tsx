@@ -1,24 +1,24 @@
 import React from 'react'
 
-import { getSpecifierData, getPrimaryStartingWith, getDim } from '@/util/specifier'
-
-import type { Block, CardBlock } from '@/types/block'
-import type { Dimensions, LinkDef, TShirtDimensions }  from '@/types'
-
+import type { Dimensions, LinkDef, TShirtDimensions, TypographySize } from  '@luxdefi/ui'
 import {
+  ApplyTypography,  
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/primitives/card'
+  getSpecifierData, 
+  getPrimaryStartingWith, 
+  getDim, 
+  Icons,
+  LinkElement
+} from '@luxdefi/ui'
 
-import ApplyTypography, { type TypographySize } from '@/primitives/apply-typography'
+import type { Block, CardBlock } from '../def'
 
-import Icons from '@/components/icons'
 
-import LinkElement from '../link-element'
 import ImageBlockComponent from './image-block'
 import VideoBlockComponent from './video-block'
 import CTABlockComponent from './cta-block'

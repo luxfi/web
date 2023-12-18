@@ -1,15 +1,15 @@
 import React from 'react'
 
-import { cn } from '@luxdefi/ui'
-
-import type { Block, AccordianBlock } from '@/types/block'
-import {
+import { 
+  cn,
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/primitives/accordion"
-import ApplyTypography from '@/primitives/apply-typography'
+  ApplyTypography
+} from '@luxdefi/ui'
+
+import type { Block, AccordianBlock } from '../def'
 
 const AccordianBlockComponent: React.FC<{
   block: Block

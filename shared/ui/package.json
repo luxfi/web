@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "description": "Library that contains shared UI primitives, styles, and core types",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "tc": "tsc --noEmit"
   },
   "dependencies": {

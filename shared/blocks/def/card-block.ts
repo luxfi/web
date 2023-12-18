@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Icon from '../icon'
+import { Icon } from '@luxdefi/ui'
 
 import type CTABlock from './cta-block'
 import type Block from './block'

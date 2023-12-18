@@ -2,9 +2,10 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import type { Dimensions } from '@/types'
-import type { Block, ImageBlock } from '@/types/block'
-import { constrain } from '@/util'
+import { constrain } from '@luxdefi/ui'
+import type { Dimensions } from '@luxdefi/ui'
+
+import type { Block, ImageBlock } from '../def'
 
 const ImageBlockComponent: React.FC<{
   block: Block

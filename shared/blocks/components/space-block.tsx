@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { Block, SpaceBlock } from '@/types/block'
+import type { Block, SpaceBlock } from '../def'
 
 const SpaceBlockComponent: React.FC<{
   block?: Block

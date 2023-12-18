@@ -1,8 +1,8 @@
 
 import React  from 'react'
 
-import type { Block, BannerBlock } from '@/types/block'
-import { Dimensions, type TShirtSize } from '@/types'
+import { Dimensions, type TShirtSize } from '@luxdefi/ui'
+import type { Block, BannerBlock } from '../def'
 
 import VideoBlockComponent from './video-block'
 import CTABlockComponent from './cta-block'
