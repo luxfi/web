@@ -14,7 +14,7 @@ import {
 } from '@luxdefi/ui/primitives'
 
 import ContactForm from './contact-form'
-import Disclaimer from './disclaimer.mdx'
+import Disclaimer from './disclaimer'
 
 const ContactDialog: React.FC<ButtonModalProps> = ({
   open,
