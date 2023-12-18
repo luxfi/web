@@ -2,12 +2,21 @@ const colors = require('@luxdefi/ui/style/colors.tailwind')
 const { fontFamily, fontSize } = require('@luxdefi/ui/style/fonts.tailwind')
 const screens = require('@luxdefi/ui/style/screens.tailwind')
 const safelist = require('@luxdefi/ui/style/safelist.tailwind')
+const path = require('path')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [],
   darkMode: ["class"],
-  content: ["src/**/*.{ts,tsx,js}"],
+  content: {
+    //relative: true,
+    files: [
+      "src/**/*.{ts,tsx,js}",
+      //path.join(path.dirname(require.resolve('@luxdefi/ui')), '**/*.{ts,tsx,js}'),
+      //path.join(path.dirname(require.resolve('@luxdefi/blocks')), '**/*.{ts,tsx,js}'),
+      //path.join(path.dirname(require.resolve('@luxdefi/elements')), '**/*.{ts,tsx,js}'),
+    ]
+  },
   safelist,
   plugins: [
     require("tailwindcss-animate"),
