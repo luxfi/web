@@ -227,6 +227,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@types/mdx':
+        specifier: ^2.0.9
+        version: 2.0.10
       '@types/node':
         specifier: ^17.0.45
         version: 17.0.45

@@ -5,8 +5,6 @@ import { TailwindIndicator } from '@luxdefi/ui/primitives'
 import { inter, drukTextWide } from '@luxdefi/ui/style/nextFonts'
 import { Header } from '@luxdefi/elements'
 
-//import DimensionsProvider from '@/context-providers/dimensions-provider'
-
   // Need these here to ensure that tailwind is always last.
 import '@luxdefi/ui/style/globals.css'
 
