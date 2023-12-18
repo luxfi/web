@@ -1,4 +1,4 @@
-import type { LinkDef } from '@luxdefi/ui'
+import type { LinkDef } from '../types'
 
 const nav = [
   {

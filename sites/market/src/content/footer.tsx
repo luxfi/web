@@ -1,5 +1,5 @@
 
-import { type CTABlock} from '@luxdefi/blocks/def'
+import { type CTABlock} from '@luxdefi/ui/blocks/def'
 
 import { Icons } from '@luxdefi/ui/common'
 

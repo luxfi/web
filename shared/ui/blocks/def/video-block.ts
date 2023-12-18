@@ -1,4 +1,4 @@
-import type { TShirtDimensions } from '@luxdefi/ui'
+import type { TShirtDimensions } from '../../types'
 import type Block from './block'
 
 interface VideoBlock extends Block {

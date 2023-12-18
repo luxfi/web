@@ -1,4 +1,4 @@
-import { ContactDialog } from '@luxdefi/elements'
+import { ContactDialog } from '@luxdefi/ui/common'
 import saveToListAction from '@/server-actions/save-to-waitlist'
 
 export default {

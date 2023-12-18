@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { ButtonVariants, Copyright, LinkDef, NavItems } from '@luxdefi/ui'
+import { ButtonVariants } from '../primitives'
+import type { LinkDef } from '../types'
+import { Copyright, NavItems } from '../common'
 
 import Logo from './logo'
 import footer from './footer-content'

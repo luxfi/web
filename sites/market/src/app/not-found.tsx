@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import { Main, Footer } from '@luxdefi/elements'
+import { Main, Footer } from '@luxdefi/ui/common'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 import NotFoundMDX from '@/content/not-found.mdx'
 

@@ -1,4 +1,4 @@
-import type * as C from '@luxdefi/blocks/def'
+import type * as C from '@luxdefi/ui/blocks/def'
 
 import { MiniChart } from '@luxdefi/ui/common'
 import { markdown } from '@luxdefi/ui/util'

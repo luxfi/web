@@ -1,8 +1,10 @@
-import type Block from '../../../../../shared/blocks/def/block'
-import type ElementBlock from '../../../../../shared/blocks/def/element-block'
-import type VideoBlock from '../../../../../shared/blocks/def/video-block'
-import type AccordianBlock from '../../../../../shared/blocks/def/accordian-block'
-import type CardBlock from '../../../../../shared/blocks/def/card-block'
+import {
+  Block,
+  ElementBlock,
+  VideoBlock,
+  AccordianBlock,
+  CardBlock
+} from  '@luxdefi/ui/blocks/def'
 
 interface ProductDetailBlock extends Block {
   blockType: 'product-detail'

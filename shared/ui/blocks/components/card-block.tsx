@@ -1,6 +1,7 @@
 import React from 'react'
 
-import type { Dimensions, LinkDef, TShirtDimensions, TypographySize } from  '@luxdefi/ui'
+import type { Dimensions, LinkDef, TShirtDimensions  } from  '../../types'
+
 import {
   ApplyTypography,  
   Card,
@@ -9,12 +10,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  type TypographySize
+} from '../../primitives'
+
+import {
+  Icons,
+  LinkElement
+} from '../../common'
+
+import {
   getSpecifierData, 
   getPrimaryStartingWith, 
   getDim, 
-  Icons,
-  LinkElement
-} from '@luxdefi/ui'
+} from '../../util/specifier'
 
 import type { Block, CardBlock } from '../def'
 

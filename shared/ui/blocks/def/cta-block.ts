@@ -1,4 +1,4 @@
-import type { LinkDef, ButtonDef } from '@luxdefi/ui'
+import type { LinkDef, ButtonDef } from '../../types'
 import type Block from './block'
 
 interface CTABlock extends Block {

@@ -3,9 +3,10 @@ import React, { useEffect, useLayoutEffect, useState } from 'react'
 
 import Image from 'next/image'
 
-import type { Dimensions, TShirtSize, TShirtDimensions } from '@luxdefi/ui'
-import { constrain, asNum, VideoPlayer } from '@luxdefi/ui'
+import type { Dimensions, TShirtSize, TShirtDimensions } from '../../types'
+import { constrain, asNum } from '../../util'
 import type { Block, VideoBlock } from '../def'
+import { VideoPlayer } from '../../primitives'
 
 const VideoBlockComponent: React.FC<{
   block: Block

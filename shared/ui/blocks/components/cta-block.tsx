@@ -1,7 +1,8 @@
 import React from 'react'
 
-import type { LinkDef, ButtonDef, ButtonSizes } from '@luxdefi/ui'
-import  { ActionButton, LinkElement } from '@luxdefi/ui'
+import type { LinkDef, ButtonDef} from '../../types'
+import type { ButtonSizes } from '../../primitives'
+import { ActionButton, LinkElement } from '../../common'
 import type { Block, CTABlock } from '../def'
 
 const CtaBlockComponent: React.FC<{

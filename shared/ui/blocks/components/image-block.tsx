@@ -2,8 +2,8 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import { constrain } from '@luxdefi/ui'
-import type { Dimensions } from '@luxdefi/ui'
+import { constrain } from '../../util'
+import type { Dimensions } from '../../types'
 
 import type { Block, ImageBlock } from '../def'
 
