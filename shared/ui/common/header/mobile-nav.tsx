@@ -1,7 +1,8 @@
 'use client'
 import React from 'react'
 
-import { ButtonVariants, LinkElement }  from '@luxdefi/ui'
+import { LinkElement }  from '../../common'
+import { ButtonVariants }  from '../../primitives'
 
 import nav from '../nav-content'
 

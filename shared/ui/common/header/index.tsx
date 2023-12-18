@@ -1,7 +1,8 @@
 import React from 'react'
 
 import Logo from '../logo'
-import { ButtonVariants, LinkElement, DrawerMenu, NavItems }  from '@luxdefi/ui'
+import { ButtonVariants } from '../../primitives'
+import { NavItems, LinkElement, DrawerMenu } from '../../common'
 
 import MobileNav from './mobile-nav'
 

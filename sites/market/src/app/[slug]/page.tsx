@@ -1,7 +1,7 @@
 import React  from 'react'
 import { notFound } from 'next/navigation'
 
-import { Footer, Main } from '@luxdefi/elements'
+import { Footer, Main } from '@luxdefi/ui/common'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
 import { products } from '@/content'

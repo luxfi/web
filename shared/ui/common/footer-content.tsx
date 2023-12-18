@@ -1,7 +1,7 @@
 
-import { type CTABlock} from '@luxdefi/blocks'
+import { type CTABlock} from '../blocks'
 
-import { Icons } from '@luxdefi/ui'
+import { Icons } from '../common'
 
 const SOC_ICON_SIZE = 18
 

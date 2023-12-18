@@ -1,4 +1,4 @@
-import { CTABlock } from '@luxdefi/blocks/def'
+import { CTABlock } from '@luxdefi/ui/blocks/def'
 import video from './video'
 
 export default {

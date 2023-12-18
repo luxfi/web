@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { type Breakpoint, Breakpoints, cn } from '@luxdefi/ui'
+import { type Breakpoint, Breakpoints} from '../../types'
+import { cn } from '../../util'
 
 import type { Block, GroupBlock } from '../def'
 import BlockFactory from './block-factory'

@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 import { TailwindIndicator } from '@luxdefi/ui/primitives'
 import { inter, drukTextWide } from '@luxdefi/ui/style/nextFonts'
-import { Header } from '@luxdefi/elements'
+import { Header } from '@luxdefi/ui/common'
 
   // Need these here to ensure that tailwind is always last.
 import '@luxdefi/ui/style/globals.css'

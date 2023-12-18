@@ -1,4 +1,4 @@
-import type * as C from '@luxdefi/blocks/def'
+import type * as C from '@luxdefi/ui/blocks/def'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'

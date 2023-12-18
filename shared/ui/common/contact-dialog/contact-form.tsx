@@ -18,9 +18,9 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from '@luxdefi/ui/primitives'
+} from '../../primitives'
 
-import type { ContactInfo, SubmitServerAction } from '@luxdefi/ui/types'
+import type { ContactInfo, SubmitServerAction } from '../../types'
 
 const ValidationSchema = z.object({
   email: z

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { type TShirtSize } from '@luxdefi/ui/types'
-import type { Block} from '@luxdefi/blocks/def'
+import type { Block} from '@luxdefi/ui/blocks/def'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 
 import {
@@ -10,7 +10,7 @@ import {
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
   VideoBlockComponent
-} from '@luxdefi/blocks/components'
+} from '@luxdefi/ui/blocks/components'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 

@@ -1,13 +1,14 @@
 import React from 'react'
 
 import { 
-  cn,
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
   ApplyTypography
-} from '@luxdefi/ui'
+} from '../../primitives'
+
+import { cn } from '../../util'
 
 import type { Block, AccordianBlock } from '../def'
 

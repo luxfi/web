@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-import type { ButtonModalProps} from '@luxdefi/ui'
+import type { ButtonModalProps} from '../../types'
 
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@luxdefi/ui/primitives'
+} from '../../primitives'
 
 import ContactForm from './contact-form'
 import Disclaimer from './disclaimer'
