@@ -30,6 +30,7 @@
     "next-themes": "^0.2.1",
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
     "react-social-icons": "^6.4.0",

@@ -1,6 +1,6 @@
 import type { LinkDef } from '../types'
 
-const nav = [
+const short = [
   {
     title: "AI",
     href: "https://lux.chat",
@@ -21,8 +21,9 @@ const nav = [
   },
   {
     title: "Market",
-    href: '/',
-    current: true
+    href: "https://lux.market",
+    external: true,
+    newTab: false,
   },
   {
     title: "Network",
@@ -38,7 +39,7 @@ const nav = [
   },
 ] as LinkDef[]
 
-const buttons = [
+const aux = [
   {
     title: "Enter App",
     href: "https://app.lux.market",
@@ -48,12 +49,10 @@ const buttons = [
   },
 ] as LinkDef[]
 
-const all = [...nav, ...buttons]
+const full = [...short, ...aux]
 
-const elements = {
-  all,
-  nav,
-  buttons
+export {
+  short,
+  aux,
+  full
 }
-
-export default elements

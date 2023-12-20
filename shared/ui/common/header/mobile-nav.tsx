@@ -3,26 +3,24 @@ import React from 'react'
 
 import { LinkElement }  from '../../common'
 import { ButtonVariants }  from '../../primitives'
-
-import nav from '../nav-content'
-
-const elements = nav.all
+import { SiteConf } from '../../types'
 
 const MobileNav: React.FC<{
+  conf: SiteConf
   itemVariant?: ButtonVariants
   className?: string
   itemClassName?: string
   onAction?: () => void // for close functionality
 }> = ({
+  conf,
   onAction,
   className='',
   itemClassName='',
   itemVariant
 }) => (
-  
-  elements.length ? (
+  conf.mainNav.full.length ? (
     <nav className={className} >
-      {elements.map((el, index) => (
+      {conf.mainNav.full.map((el, index) => (
         <LinkElement 
           def={el}
           key={index}

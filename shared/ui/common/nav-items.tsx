@@ -12,12 +12,14 @@ const NavItems: React.FC<{
   as?: React.ElementType
   itemClassName?: string,
   itemClassNameFromVariant?: (variant: ButtonVariants) => string
+  currentAs?: string
 }> = ({ 
   items,
   className='', 
   itemClassName='',
   as : Tag='nav',  
-  itemClassNameFromVariant 
+  itemClassNameFromVariant,
+  currentAs 
 }) => ( 
     items.length ? (
       <Tag className={className} >
@@ -31,14 +33,14 @@ const NavItems: React.FC<{
           if (variant === 'link') {
             
             extraClasses+= ' text-nav hover:text-nav-hover'
-            if (item.current) {
+            if (currentAs && currentAs === item.href) {
               extraClasses += ' text-nav-current'
             }
           } 
           else {
             extraClasses+= ' min-w-0'   
           }
-          if (item.current) {
+          if (currentAs && currentAs === item.href) {
             extraClasses += ' pointer-events-none'
           }
 
