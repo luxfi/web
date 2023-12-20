@@ -36,7 +36,7 @@ const LinkElement: React.FC<{
     ...((href) ? { href } : { href: '#'}),
     ...((external) ?  { 
       rel: 'noreferrer',
-        // As per comments in LinkItemDef
+        // As per comments in LinkDef
       target: (newTab !== undefined && (newTab === false)) ? '_self' : '_blank'
     } : {
       target: (newTab !== undefined && (newTab === true)) ? '_blank' : '_self' 

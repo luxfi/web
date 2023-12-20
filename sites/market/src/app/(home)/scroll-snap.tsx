@@ -7,6 +7,9 @@ import { BannerBlockComponent as BannerComponent }  from '@luxdefi/ui/blocks'
 
 import { landing } from '@/content'
 
+import conf from '../../conf/site'
+
+
 const MOBILE_VID_CONSTRAINT = {
   w: 300,
   h: 300
@@ -36,7 +39,7 @@ const Desktop: React.FC = () => (<>
     <ApplyTypography asTag='section' className={swipeInnerDesk + 'grow w-full border-b flex flex-col items-center justify-start self-stretch lg:gap-10'} >
       {landing.bottom.element}
     </ApplyTypography>
-    <Footer className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
+    <Footer conf={conf} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
   </div>
 </>)
 
@@ -76,7 +79,7 @@ const TouchDevice: React.FC<{
     </ApplyTypography>
   </div>
   <div key='lastest' className={swipeOuter}>
-    <Footer className={swipeInnerTouch + 'pl-[32px] pr-[24px] flex flex-col justify-between border-none'} noHorizPadding/>
+    <Footer conf={conf} className={swipeInnerTouch + 'pl-[32px] pr-[24px] flex flex-col justify-between border-none'} noHorizPadding/>
   </div>
 </>) 
 

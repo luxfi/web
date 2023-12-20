@@ -2,7 +2,7 @@ import type { ButtonVariants, ButtonSizes } from '../primitives/button'
 import type { Icon }  from '../types'
 
 
-interface LinkItemDef {
+interface LinkDef {
   title: string
   href?: string
     // external links get target='_blank' by default, unless newTab=false
@@ -14,9 +14,8 @@ interface LinkItemDef {
   size?: ButtonSizes
   icon?: Icon
   iconAfter?: boolean
-  current?: boolean
 }
 
 export {
-  type LinkItemDef as default
+  type LinkDef as default
 }

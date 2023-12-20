@@ -169,12 +169,12 @@ export default [
       },
       {
         title: 'Terms and Conditions',
-        href: '/assets/pdf/LUX-NFT-Terms-and-Conditions.pdf',
+        href: '/assets/standard-docs/LUX-NFT-Terms-and-Conditions.pdf',
         newTab: true,
       },
       {
         title: 'Privacy Policy',
-        href: '/assets/pdf/LUX-Privacy-Policy.pdf',
+        href: '/assets/standard-docs/LUX-Privacy-Policy.pdf',
         newTab: true,
       },
     ] 

@@ -73,6 +73,9 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      react-device-detect:
+        specifier: ^2.2.3
+        version: 2.2.3(react-dom@18.2.0)(react@18.2.0)
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
@@ -127,70 +130,6 @@ importers:
         version: 5.3.3
 
   sites/blank:
-    dependencies:
-      '@luxdefi/ui':
-        specifier: workspace:*
-        version: link:../../shared/ui
-      '@mdx-js/loader':
-        specifier: ^2.3.0
-        version: 2.3.0(webpack@5.89.0)
-      '@mdx-js/react':
-        specifier: ^2.3.0
-        version: 2.3.0(react@18.2.0)
-      '@next/mdx':
-        specifier: ^13.5.6
-        version: 13.5.6(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)
-      markdown-to-jsx:
-        specifier: ^7.3.2
-        version: 7.3.2(react@18.2.0)
-      next:
-        specifier: ^14.0.3
-        version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: ^0.2.1
-        version: 0.2.1(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
-      postcss-selector-parser:
-        specifier: ^6.0.13
-        version: 6.0.13
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-device-detect:
-        specifier: ^2.2.3
-        version: 2.2.3(react-dom@18.2.0)(react@18.2.0)
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@types/mdx':
-        specifier: ^2.0.9
-        version: 2.0.10
-      '@types/node':
-        specifier: ^17.0.45
-        version: 17.0.45
-      '@types/react':
-        specifier: ^18.2.14
-        version: 18.2.45
-      '@types/react-dom':
-        specifier: ^18.2.6
-        version: 18.2.18
-      autoprefixer:
-        specifier: ^10.4.14
-        version: 10.4.16(postcss@8.4.32)
-      postcss:
-        specifier: ^8.4.24
-        version: 8.4.32
-      postcss-import:
-        specifier: ^15.1.0
-        version: 15.1.0(postcss@8.4.32)
-      tailwindcss:
-        specifier: ^3.3.2
-        version: 3.3.6
-      typescript:
-        specifier: ^5.2.2
-        version: 5.3.3
-
-  sites/credit:
     dependencies:
       '@luxdefi/ui':
         specifier: workspace:*

@@ -1,16 +1,17 @@
 import React from 'react'
 
 import { ButtonVariants } from '../primitives'
-import type { LinkDef } from '../types'
+import type { LinkDef, SiteConf } from '../types'
 import { Copyright, NavItems } from '../common'
 
 import Logo from './logo'
-import footer from './footer-content'
 
 const Footer: React.FC<{
+  conf: SiteConf,
   className?: string,
   noHorizPadding?: boolean
 }> = ({
+  conf,
   className='',
   noHorizPadding=false
 }) => (
@@ -22,17 +23,18 @@ const Footer: React.FC<{
       'md:w-full md:mx-0 ' +
       'lg:flex lg:flex-row lg:justify-between lg:gap-8 lg:w-full' + 
       'max-w-screen-2xl ' + 
-      `lg:columns-${footer.length + 1}` // must safelist these!
+      `lg:columns-${conf.footer.length + 1}` // must safelist these! see tailwind docs
     }>
       <div className='hidden lg:flex flex-col' key={0}>
         <Logo size='md' />
       </div>
-      {footer.map((ctaBlock, index) => {
-        const colSpan = ((index === footer.length - 1) && (footer.length % 2 === 1)) ? 'col-span-2 mx-auto items-center sm:col-span-1 sm:mx-0 sm:items-start' : ''
+      {conf.footer.map((defs: LinkDef[], index, arr) => {
+        const colSpan = ((index === arr.length - 1) && (arr.length % 2 === 1)) ? 'col-span-2 mx-auto items-center sm:col-span-1 sm:mx-0 sm:items-start' : ''
         return (
         <NavItems
-          items={ctaBlock.elements as LinkDef[]} 
-          as={(ctaBlock.specifiers === 'nav') ? 'nav' : 'div'} 
+          items={defs} 
+          currentAs={conf.currentAs}
+          as='nav' 
           className={'w-fit flex flex-col justify-start items-start gap-[11px] sm:gap-[12px] md:gap-[15px] ' + colSpan} 
           key={index + 1}
           itemClassName={'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-1'}
