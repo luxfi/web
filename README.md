@@ -1,5 +1,5 @@
-# lux.shop
-Lux NFT marketing site.
+# mono
+LUX Sites monorepo.
 
 ## To run locally
 
