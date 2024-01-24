@@ -1,4 +1,4 @@
-# mono
+# sites
 LUX Sites monorepo.
 
 ## To run locally
