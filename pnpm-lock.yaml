@@ -133,8 +133,8 @@ importers:
   sites/market:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.1.50
-        version: 0.1.50(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)(@types/react-dom@18.2.18)(@types/react@18.2.45)(next-themes@0.2.1)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.1.55
+        version: 0.1.55(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)(@types/react-dom@18.2.18)(@types/react@18.2.45)(next-themes@0.2.1)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@mdx-js/react':
         specifier: ^2.3.0
         version: 2.3.0(react@18.2.0)
@@ -258,8 +258,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@luxdefi/ui@0.1.50(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)(@types/react-dom@18.2.18)(@types/react@18.2.45)(next-themes@0.2.1)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-gmGO5ySBA3bg4nNjmWP3fs+fEr9YMqRqKeKneVD7C4oZCi1nj0WvaJDBm30rippQubNPgwu0XaCCmfGzTSahmw==}
+  /@luxdefi/ui@0.1.55(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)(@types/react-dom@18.2.18)(@types/react@18.2.45)(next-themes@0.2.1)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-tB7gKZ0aZ+2urE2mcKNZ1s9mowGqz1Tq8bMvcUmX7uoKVhjO+/pT7+6rVXkziQYQ6sZKHe7Swro0Mb2kFrrcKA==}
     peerDependencies:
       next: ^14.0.4
       next-themes: ^0.2.1

@@ -42,7 +42,8 @@ export default {
       url: '/assets/lux-site-icons/apple-touch-icon.png'  
     },
   ],
-  manifest: '/site.webmanifest',
+  //manifest: '/site.webmanifest',
+  /*
   openGraph: {
     title: 'Lux Bridge Explorer - Explore your swaps',
     description: "Connect across EVM, Solana, Bitcoin, and other blockchains with Lux Network's advanced bridge technology. Experience secure and efficient cross-chain functionality.",
@@ -58,7 +59,7 @@ export default {
     images: 'https://explorer.bridge.lux.network/assets/img/opengraph-lux.jpg',
     site: '@luxdefi'
   },
-
+  */
   formatDetection: { telephone: false },
   other: {
     'msapplication-TileColor': '#000000'

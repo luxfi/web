@@ -15,11 +15,10 @@ import tailwindInteractionMediaPlugin from 'tailwindcss-interaction-media'
 export default {
   presets: [],
   darkMode: ["class"],
-  content: {
-    files: [
-      "src/**/*.tsx",
-    ]
-  },
+  content: [
+    'src/**/*.tsx',
+    './node_modules/@luxdefi/ui/**/*.{ts,tsx}'
+  ],
   safelist,
   plugins: [
     animatePlugin,
