@@ -1,4 +1,4 @@
-import {
+import type {
   Block,
   ElementBlock,
   VideoBlock,

@@ -1,5 +1,5 @@
 import type * as C from '@luxdefi/ui/blocks/def'
-import ProductDetailBlock from '@/blocks/def/product-detail-block'
+import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'
 import accordian from './accordian'

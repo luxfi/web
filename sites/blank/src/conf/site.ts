@@ -1,4 +1,4 @@
-import { LinkDef, SiteConf } from '@luxdefi/ui/types'
+import type { SiteConf } from '@luxdefi/ui/types'
 import { short, aux, full } from '@luxdefi/ui/conf/main-nav'
 import footer from '@luxdefi/ui/conf/footer'
 

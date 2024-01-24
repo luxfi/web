@@ -3,7 +3,7 @@ import type * as C from '@luxdefi/ui/blocks/def'
 import { MiniChart } from '@luxdefi/ui/common'
 import { markdown } from '@luxdefi/ui/util'
 
-import ProductDetailBlock from '@/blocks/def/product-detail-block'
+import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'
 import accordian from './accordian'
 

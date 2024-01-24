@@ -10,7 +10,8 @@
     "node_modules"
   ],
   "compilerOptions": {
-    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [

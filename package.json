@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@luxdefi/mono",
+  "name": "@luxdefi/sites-mono",
   "engines": {
     "pnpm": ">=8"
   },
