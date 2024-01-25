@@ -6,7 +6,7 @@ import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
 import { products } from '@/content'
 
-import conf from '../../conf/site'
+import siteDef from '../../siteDef'
 
 type Props = {
   params: { slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator' | 'pass' | 'uranium' }
@@ -50,7 +50,7 @@ const ProductPage = ({ params, searchParams }: Props) => {
       <ProductDetailBlockComponent block={product} videoSize={agent === 'phone' ? 'md' : undefined}/>
     </Main>
     <div className='border-t'></div>
-    <Footer conf={conf} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
   </>)
 }
 

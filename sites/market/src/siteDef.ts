@@ -1,6 +1,6 @@
-import type { SiteConf } from '@luxdefi/ui/types'
-import { short, aux, full } from '@luxdefi/ui/conf/main-nav'
-import footer from '@luxdefi/ui/conf/footer'
+import type { SiteDef } from '@luxdefi/ui/types'
+import { short, aux, full } from '@luxdefi/ui/siteDef/main-nav'
+import footer from '@luxdefi/ui/siteDef/footer'
 
 export default {
   title: 'Lux Market',
@@ -13,4 +13,4 @@ export default {
     full
   },
   footer  
-} as SiteConf
+} as SiteDef
