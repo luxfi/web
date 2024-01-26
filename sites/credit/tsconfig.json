@@ -10,13 +10,14 @@
     "node_modules"
   ],
   "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      // https://remarkablemark.org/blog/2023/06/30/react-types-reactnode-error/
+      "react": ["node_modules/@types/react"]
     },
     "plugins": [
       {

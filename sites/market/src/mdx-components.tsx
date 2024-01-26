@@ -1,3 +1,5 @@
+import type { AnchorHTMLAttributes } from 'react'
+
 import type { MDXComponents } from 'mdx/types'
 import { MDXLink } from '@luxdefi/ui/primitives'
  
@@ -10,8 +12,8 @@ import { MDXLink } from '@luxdefi/ui/primitives'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    a: (props) => (
-      <MDXLink {...props}/>
+    a: (props ) => (
+      <MDXLink {...props as AnchorHTMLAttributes<HTMLAnchorElement>}/>
     ),
     ...components,
   }
