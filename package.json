@@ -4,5 +4,10 @@
   "engines": {
     "pnpm": ">=8"
   },
-  "packageManager": "pnpm@8.11.0"
+  "packageManager": "pnpm@8.11.0",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "^18.2.48"
+    }
+  }
 }

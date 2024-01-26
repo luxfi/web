@@ -1,24 +1,32 @@
-const colors = require('@luxdefi/ui/style/colors.tailwind')
-const { fontFamily, fontSize } = require('@luxdefi/ui/style/fonts.tailwind')
-const screens = require('@luxdefi/ui/style/screens.tailwind')
-const safelist = require('@luxdefi/ui/style/safelist.tailwind')
+import {
+  colors, 
+  safelist, 
+  screens, 
+  fontFamily, 
+  fontSize, 
+  typographyPlugin
+} from '@luxdefi/ui/tailwind'
+
+import animatePlugin from 'tailwindcss-animate'
+import containerQueriesPlugin from '@tailwindcss/container-queries'
+import tailwindInteractionMediaPlugin from 'tailwindcss-interaction-media'
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   presets: [],
   darkMode: ["class"],
   content: {
     files: [
       "src/**/*.tsx",
-      '../../shared/ui/**/*.tsx',
+      './node_modules/@luxdefi/ui/**/*.{ts,tsx}'
     ]
   },
   safelist,
   plugins: [
-    require("tailwindcss-animate"),
-    require('@luxdefi/ui/style/typo-plugin')({ className: 'typography', base: 16 }),
-    require('@tailwindcss/container-queries'),
-    require('tailwindcss-interaction-media'),
+    animatePlugin,
+    typographyPlugin({ className: 'typography', base: 16 }),
+    containerQueriesPlugin,
+    tailwindInteractionMediaPlugin,
   ],
   theme: {
 
