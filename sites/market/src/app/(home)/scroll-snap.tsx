@@ -3,11 +3,11 @@ import React from 'react'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 import { Footer } from '@luxdefi/ui/common'
 
-import { BannerBlockComponent as BannerComponent }  from '@luxdefi/ui/blocks'
+import BannerComponent from '@/blocks/components/banner-block'
 
 import { landing } from '@/content'
 
-import siteDef from '../../siteDef'
+import siteDef from '@/siteDef'
 
 const MOBILE_VID_CONSTRAINT = {
   w: 300,
@@ -16,7 +16,7 @@ const MOBILE_VID_CONSTRAINT = {
 
   // using this approach: 
   // https://stackoverflow.com/a/76066443/11645689
-  // see also src/style/global.css
+  // @luxdefi/ui/style/global.css
 const swipeOuter = 'snap-start snap-always h-[100vh] '
   // 44+24=68, 80+24=104
 const swipeInner = 'pt-[68px] md:pt-[104px] pb-[24px] '
@@ -26,10 +26,22 @@ const swipeInnerTouch = swipeInner + 'h-[100svh] '
 const Desktop: React.FC = () => (<>
 {landing.banners.map((banner, index) => (
   <div key={index} className={swipeOuter + 'px-4 lg:px-6'}>
-    <ApplyTypography asTag='section' className={swipeInnerDesk + 'w-full lg:gap-40 md:gap-20 flex flex-col items-center justify-start self-stretch'} >
+    <ApplyTypography 
+      asTag='section' 
+      className={
+        swipeInnerDesk + 
+          // must use justify-between to trigger the 'grow' of the video (below)
+        'w-full h-full flex flex-col items-center justify-between self-stretch'
+      } 
+    >
       <BannerComponent 
         block={banner}
-        groupingClasses={['', 'xs:w-full md:w-auto md:min-w-[500px]']}
+        grouping='title-media-cta'
+        groupingClasses={[
+          'flex-none', // Title area
+          'grow', // video area
+          'flex-none xs:w-full md:w-auto md:min-w-[500px]' // cta area
+        ]}
       />
     </ApplyTypography>
   </div>
