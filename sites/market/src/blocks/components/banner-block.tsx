@@ -37,7 +37,7 @@ const BannerBlockComponent: React.FC<{
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
-      <div className={'self-center flex flex-col justify-start items-center ' + mediaClasses}>
+      <div className={'self-center flex flex-col justify-center items-center ' + mediaClasses}>
         {banner.contentBefore && banner.contentBefore}
         {banner.video && (
           <VideoBlockComponent className='self-center mt-6 not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
