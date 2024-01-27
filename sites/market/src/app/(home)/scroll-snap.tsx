@@ -3,11 +3,11 @@ import React from 'react'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 import { Footer } from '@luxdefi/ui/common'
 
-import { BannerBlockComponent as BannerComponent }  from '@luxdefi/ui/blocks'
+import BannerComponent from '@/blocks/components/banner-block'
 
 import { landing } from '@/content'
 
-import siteDef from '../../siteDef'
+import siteDef from '@/siteDef'
 
 const MOBILE_VID_CONSTRAINT = {
   w: 300,
