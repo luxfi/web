@@ -1,6 +1,10 @@
 import React  from 'react'
-import { Footer, Main } from '@luxdefi/ui/common'
+
+import { Footer, Header } from '@luxdefi/ui/common'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
+
+import VideoBannerComponent from '@/blocks/components/video-banner'
+
 
 /* for example, as slug
 type Props = {
@@ -10,13 +14,37 @@ type Props = {
 */ 
 import siteDef from '../siteDef'
 
+import tiles from '@/content'
+
+
+  // using this approach: 
+  // https://stackoverflow.com/a/76066443/11645689
+  // @luxdefi/ui/style/global.css
+const tileOuter = /*'snap-start snap-always'*/ 'h-[100vh] '
+  // 44+24=68, 80+24=104
+const tileInner = 'pt-[68px] md:pt-[80px] pb-[24px] '
+const tileInnerDesk = tileInner + 'h-full '
+const tileInnerTouch = tileInner + 'h-[100svh] '
+
 const UniversalPage = (/* { params, searchParams }: Props */) => (<>
-  <Main className='md:flex-row md:gap-4 '>
-    <ApplyTypography>
-      <h1>Empty Page</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <Header siteDef={siteDef} className='fixed bg-primary opacity-50 left-0 right-0'/>
+{tiles.map((banner, index) => (
+  <div key={index} className={tileOuter + ' px-4 lg:px-6'}>
+    <ApplyTypography 
+      asTag='section' 
+      className={
+        tileInnerDesk + 
+          // must use justify-between to trigger the 'grow' of the video (below)
+        'w-full h-full flex flex-row justify-center self-stretch'
+      } 
+    >
+      <VideoBannerComponent 
+        block={banner}
+        className='w-full h-full'
+      />
     </ApplyTypography>
-  </Main>
+  </div>
+))}
   <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
 </>)
 
