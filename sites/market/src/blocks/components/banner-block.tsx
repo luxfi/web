@@ -33,11 +33,11 @@ const BannerBlockComponent: React.FC<{
     const mediaClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
     const ctaClasses = (groupingClasses && groupingClasses[2]) ? groupingClasses[2] : ''
     return (<>
-      <div className={titleClasses}>
+      <div className={'text-center ' + titleClasses}>
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
-      <div className={'self-center flex flex-col justify-center items-center ' + mediaClasses}>
+      <div className={'self-center flex flex-col justify-center items-center text-center ' + mediaClasses}>
         {banner.contentBefore && banner.contentBefore}
         {banner.video && (
           <VideoBlockComponent className='self-center mt-6 not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
@@ -55,7 +55,7 @@ const BannerBlockComponent: React.FC<{
     const titleAndMediaClasses = (groupingClasses && groupingClasses[0]) ? groupingClasses[0] : ''
     const ctaClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
     return (<>
-      <div className={'self-center flex flex-col justify-start items-center ' + titleAndMediaClasses} >
+      <div className={'self-center flex flex-col justify-start items-center text-center ' + titleAndMediaClasses} >
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.contentBefore && banner.contentBefore}
@@ -80,13 +80,13 @@ const BannerBlockComponent: React.FC<{
   const ctaClasses = (groupingClasses && groupingClasses[5]) ? groupingClasses[5] : ''
 
   return (<>
-    <h1 className={titleClasses}>{banner.title}</h1>
+    <h1 className={'text-center ' + titleClasses}>{banner.title}</h1>
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
-    {banner.contentBefore && (<div className={contentBeforeClasses}>banner.contentBefore</div>)}
+    {banner.contentBefore && (<div className={'text-center ' + contentBeforeClasses}>banner.contentBefore</div>)}
     {banner.video && (
       <VideoBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
     )}
-    {banner.contentAfter && (<div className={contentAfterClasses}>banner.contentAfter</div>)}
+    {banner.contentAfter && (<div className={'text-center ' + contentAfterClasses}>banner.contentAfter</div>)}
     {banner.cta && (
       <div className={'flex flex-col gap-4 items-stretch sm:flex-row sm:gap-6 sm:justify-center ' + ctaClasses}>
         <CTABlockComponent block={banner.cta} itemClassName={ctaItemClassName} itemSize='lg' />
