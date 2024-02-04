@@ -5,6 +5,7 @@ interface BannerVideoBlock extends Block {
   video: VideoBlock
   specifiers?: string // render hints etc
   content: Block[]
+  contentRight?: Block[] // right column
 }
 
 export {

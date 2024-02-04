@@ -1,5 +1,5 @@
 import type BannerVideoBlock from '@/blocks/def/banner-video'
-import type { HeadingBlock } from '@luxdefi/ui/blocks'
+import type { HeadingBlock, CTABlock } from '@luxdefi/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
 
 export default [
@@ -9,8 +9,37 @@ export default [
     content: [
       {
         blockType: 'heading',
-        heading: 'This is the Coral tile',
-        byline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        heading: 'The new 1%',
+        level: 1,
+        byline: 'Never sell your crupto again with our self-paying credit card.',
+        bylineLevel: 6,
+        spaceBetween: 6,
+        spaceAfter: 4,
+      } as HeadingBlock,
+      {
+        blockType: 'cta',
+        specifiers: 'left',
+        elements: [
+          {
+            title: "View Benefits",
+            href: "/",
+            variant: 'outline',
+          },
+          {
+            title: "Sign Up",
+            href: "https://lux.town",
+            external: true,
+            newTab: false,
+            variant: 'primary',
+          },
+        ]
+          } as CTABlock
+    ],
+    contentRight: [
+      {
+        blockType: 'heading',
+        heading: 'test',
+        level: 0,
       } as HeadingBlock,
     ],
     video: {

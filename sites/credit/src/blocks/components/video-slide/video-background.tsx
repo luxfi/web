@@ -3,13 +3,14 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import { cn } from '@luxdefi/ui/util'
+import type { VideoBlock } from '@luxdefi/ui/blocks'
 
-const Video: React.FC<{
-  sources: string[],
+const VideoBG: React.FC<{
+  block: VideoBlock,
   className?: string,
   initialInView: boolean
 }> = ({
-  sources,
+  block,
   className='',
   initialInView
 }) => {
@@ -18,7 +19,7 @@ const Video: React.FC<{
     initialInView,
   })
 
-  return (
+  return block ? (
     <div ref={ref} className={cn('border border-destructive', className)}>
     {inView && (
         <video
@@ -32,13 +33,15 @@ const Video: React.FC<{
           objectFit: 'cover',
         }} 
       >
-        {sources.map((src, index) => (  
+        {block.sources?.map((src, index) => (  
           <source key={index} src={src} />
         ))} 
       </video>
     )}
     </div>
-  ) 
+  ) : (
+    <></>
+  )
 }
 
-export default Video
+export default VideoBG

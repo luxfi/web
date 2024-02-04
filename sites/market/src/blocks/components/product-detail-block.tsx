@@ -5,12 +5,13 @@ import type { Block} from '@luxdefi/ui/blocks/def'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 
 import {
-  BlockFactory,
+  ContentComponent,
   SpaceBlockComponent as Spacer,
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
-  VideoBlockComponent
-} from '@luxdefi/ui/blocks/components'
+  VideoBlockComponent,
+  BlocksComponent
+} from '@luxdefi/ui/blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
@@ -51,23 +52,7 @@ const ProductDetailBlockComponent: React.FC<{
           </div>
         </>)}
         <Spacer />
-        {p.blocks?.map((block, index) => {
-          if (block.blockType === 'cta') {
-            return (
-              <div className='flex flex-col items-stretch gap-2 self-stretch sm:flex-row sm:justify-center' key={index}>
-                <BlockFactory block={block} />
-              </div>
-            )
-          }
-          else if (block.blockType === 'heading' || block.blockType === 'space' ) {
-            return (
-              <ApplyTypography key={index}>
-                <BlockFactory block={block} />
-              </ApplyTypography>
-            )
-          }
-          return <BlockFactory block={block} key={index}/>
-        })}
+        <ContentComponent blocks={p.blocks} />
         <Spacer />
       </div>
     </div>
