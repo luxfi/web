@@ -9,7 +9,7 @@ import metadata from '../metadata'
 const RootLayout: React.FC<PropsWithChildren> = ({
   children
 }) => (
-  <RootLayoutCommon siteDef={siteDef}>
+  <RootLayoutCommon siteDef={siteDef} header={false}>
     {children}
   </RootLayoutCommon>
 )
