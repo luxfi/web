@@ -31,11 +31,11 @@ const BannerVideoComponent: React.FC<{
       return (
           // two equal columns, centered vertically
         <div className='z-10 absolute px-[15vw] top-0 bottom-0 left-0 right-0 flex flex-col justify-center align-stretch'>
-          <div className='grid grid-cols-2 gap-4'>
-            <div className='flex flex-col justify-start' key={1}>
+          <div className='grid grid-cols-2 gap-4 w-full h-full'>
+            <div className='flex flex-col justify-center' key={1}>
               <ContentComponent blocks={b.content} />
             </div>
-            <div className='flex flex-col justify-start' key={2}>
+            <div className='flex flex-col justify-center' key={2}>
               <ContentComponent blocks={b.contentRight} />
             </div>
           </div>  
