@@ -3,8 +3,7 @@ import React  from 'react'
 import { Footer, Header } from '@luxdefi/ui/common'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 
-import VideoBannerSlide from '@/blocks/components/video-slide/index'
-
+import VideoBannerSlide from '@/blocks/components/video-slide'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

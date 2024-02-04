@@ -1,5 +1,5 @@
 import type BannerVideoBlock from '@/blocks/def/banner-video'
-import type { HeadingBlock, CTABlock } from '@luxdefi/ui/blocks'
+import type { HeadingBlock, CTABlock, ImageBlock } from '@luxdefi/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
 
 export default [
@@ -36,11 +36,17 @@ export default [
           } as CTABlock
     ],
     contentRight: [
+        // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
       {
-        blockType: 'heading',
-        heading: 'test',
-        level: 0,
-      } as HeadingBlock,
+        blockType: 'image',
+        src: '/assets/img/cards-1483x1361.png',
+        props: {
+          alt: 'cards',
+          sizes: '900px',
+          fill: true,
+          objectFit: 'contain'
+        }
+      } as ImageBlock,
     ],
     video: {
       blockType: 'video',
