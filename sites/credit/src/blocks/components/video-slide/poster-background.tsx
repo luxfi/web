@@ -13,7 +13,7 @@ const Poster: React.FC<{
 }) => (
   block ? (
     <div 
-      className={cn('border border-accent relative', className)} 
+      className={cn('relative', className)} 
       style={{
         height: '100%',
         width: '100%',
