@@ -6,13 +6,17 @@ import { ApplyTypography } from '@luxdefi/ui/primitives'
 
 import {
   ContentComponent,
-  SpaceBlockComponent as Spacer,
+  SpaceBlockComponent,
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
   VideoBlockComponent,
 } from '@luxdefi/ui/blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
+
+const Spacer: React.FC = () => (
+  <SpaceBlockComponent block={{blockType: 'space'}} />
+)
 
 const ProductDetailBlockComponent: React.FC<{
   block: Block
