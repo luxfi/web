@@ -37,10 +37,11 @@ export default [
           },
         ]
       } as CTABlock,
+      { blockType: 'space'},
       {
         blockType: 'element',
         element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      }
+      },
     ],
     contentRight: [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
@@ -70,11 +71,11 @@ export default [
         blockType: 'element-table',
         elements: [
           [
-            {blockType: 'element', element: 'Cards'},
-            {blockType: 'element', element: 'Dark Cards'},
-            {blockType: 'element', element: 'Silver + Gold'},
-            {blockType: 'element', element: 'Hologram Cards'},
-            {blockType: 'element', element: 'Titanium Cards'},
+            {blockType: 'element', element: '(Card Image)'},
+            {blockType: 'element', element: '(Darker Cards)'},
+            {blockType: 'element', element: '(Silver + Gold)'},
+            {blockType: 'element', element: '(Hologram Cards)'},
+            {blockType: 'element', element: '(Titanium Cards)'},
           ],
           [
             {blockType: 'element', element: 'Level'},
@@ -131,9 +132,49 @@ export default [
     content: [
       {
         blockType: 'heading',
-        heading: 'This is the Fireworks tile',
-        byline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        heading: 'Direct Ownership of Digital Assets',
+        level: 1,
+        byline: 'Retain complete sovereignty over your digital assets, backed by the security and transparency inherent in Lux blockchain technology.',
+        bylineLevel: 6,
+        spaceBetween: 6,
+        spaceAfter: 4,
       } as HeadingBlock,
+      {
+        blockType: 'cta',
+        specifiers: 'left',
+        elements: [
+          {
+            title: "Compare Cards",
+            href: "/",
+            variant: 'outline',
+          },
+          {
+            title: "Reserve",
+            href: "https://lux.town",
+            external: true,
+            newTab: false,
+            variant: 'primary',
+          },
+        ]
+      } as CTABlock,
+      {
+        blockType: 'element',
+        element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      } as ElementBlock,
+      { blockType: 'space'}
+    ],
+    contentRight: [
+        // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
+      {
+        blockType: 'image',
+        src: '/assets/img/cards-1483x1361.png',
+        alt: 'cards',
+        props: {
+          sizes: '900px',
+          fill: true,
+          objectFit: 'contain'
+        }
+      } as ImageBlock,
     ],
     video: {
       blockType: 'video',
