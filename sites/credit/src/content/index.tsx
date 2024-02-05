@@ -11,7 +11,7 @@ export default [
         blockType: 'heading',
         heading: 'The new 1%',
         level: 1,
-        byline: 'Never sell your crupto again with our self-paying credit card.',
+        byline: 'Never sell your crypto again with our self-paying credit card.',
         bylineLevel: 6,
         spaceBetween: 6,
         spaceAfter: 4,
@@ -33,15 +33,19 @@ export default [
             variant: 'primary',
           },
         ]
-          } as CTABlock
+      } as CTABlock,
+      {
+        blockType: 'element',
+        element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      }
     ],
     contentRight: [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
       {
         blockType: 'image',
         src: '/assets/img/cards-1483x1361.png',
+        alt: 'cards',
         props: {
-          alt: 'cards',
           sizes: '900px',
           fill: true,
           objectFit: 'contain'

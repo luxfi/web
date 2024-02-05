@@ -10,7 +10,6 @@ import {
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
   VideoBlockComponent,
-  BlocksComponent
 } from '@luxdefi/ui/blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
@@ -36,9 +35,12 @@ const ProductDetailBlockComponent: React.FC<{
       <div className='md:max-w-[555px] flex flex-col items-start gap-4' >
         <ApplyTypography className='flex flex-col justify-start items-start typography-headings:text-left'>
           <h1 className='text-left'>{p.title}</h1>
-          {p.desc && (
-            (typeof p.desc === 'string') ? (<h6>{p.desc}</h6>) : ('element' in p.desc ? p.desc.element : p.desc)
-          )}
+          {p.desc && (typeof p.desc === 'string') ? (
+              <h6>{p.desc}</h6>
+            ) : (
+              p.desc
+            )
+          }
         </ApplyTypography>
         <AccordianBlockComponent block={p.accordian} className='mt-5'/>
         {p.price && (<>

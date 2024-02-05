@@ -1,6 +1,7 @@
+import type { ReactNode } from 'react'
+
 import type {
   Block,
-  ElementBlock,
   VideoBlock,
   AccordianBlock,
   CardBlock
@@ -9,7 +10,7 @@ import type {
 interface ProductDetailBlock extends Block {
   blockType: 'product-detail'
   title: string
-  desc?: ElementBlock | JSX.Element | string
+  desc?: ReactNode
   video: VideoBlock
   accordian: AccordianBlock
   price?: {
