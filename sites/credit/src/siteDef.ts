@@ -1,4 +1,4 @@
-import type { SiteDef } from '@luxdefi/ui/types'
+import type { SiteDef, LinkDef } from '@luxdefi/ui/types'
 import { short} from '@luxdefi/ui/siteDef/main-nav'
 import footer from '@luxdefi/ui/siteDef/footer'
 

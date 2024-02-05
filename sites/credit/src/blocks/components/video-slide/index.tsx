@@ -1,12 +1,15 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { type Block, ContentComponent } from '@luxdefi/ui/blocks'
+import { type Block, ContentComponent, registerBlockType } from '@luxdefi/ui/blocks'
 import { containsToken } from '@luxdefi/ui/util'
 import type BannerVideoBlock from '@/blocks/def/banner-video'
 
 import Poster from './poster-background'
+import ElementTable from '../element-table'
 const Video = dynamic(() => (import('./video-background')), {ssr: false, loading: () => (<></>)})
+
+registerBlockType('element-table', ElementTable)
 
 const BannerVideoComponent: React.FC<{
   block: Block
