@@ -11,7 +11,7 @@ export default [
         blockType: 'heading',
         heading: 'The new 1%',
         level: 1,
-        byline: 'Never sell your crupto again with our self-paying credit card.',
+        byline: 'Never sell your crypto again with our self-paying credit card.',
         bylineLevel: 6,
         spaceBetween: 6,
         spaceAfter: 4,
