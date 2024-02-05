@@ -1,13 +1,18 @@
 import type { SiteDef } from '@luxdefi/ui/types'
-import { short, aux, full } from '@luxdefi/ui/siteDef/main-nav'
+import mainElements from '@luxdefi/ui/siteDef/main-nav'
 import footer from '@luxdefi/ui/siteDef/footer'
 
 export default {
   currentAs: 'https://lux.market',
-  mainNav: {
-    short,
-    aux,
-    full
+  nav: {
+    elements: mainElements,
+    featuredCTA: {
+      title: "Enter App",
+      href: "https://app.lux.market",
+      newTab: false,
+      external: true,
+      variant: 'primary',
+    },
   },
   footer  
 } as SiteDef
