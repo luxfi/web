@@ -20,7 +20,7 @@ const VideoBG: React.FC<{
   })
 
   return block ? (
-    <div ref={ref} className={cn('border border-destructive', className)}>
+    <div ref={ref} className={className}>
     {inView && (
         <video
         autoPlay

@@ -26,7 +26,7 @@ import tiles from '@/content'
   const tileHeight = (agent === 'desktop') ? 'h-full ' : 'h-[100svh] '
 
   return (<>
-    <Header siteDef={siteDef} className='fixed bg-primary opacity-50 left-0 right-0'/>
+    <Header siteDef={siteDef} className='fixed left-0 right-0'/>
     {tiles.map((banner, index) => (
     <section key={`section-${index}`} className='snap-start snap-always h-[100vh]'>
       <ApplyTypography className={tileHeight + 'w-full flex flex-row justify-center self-stretch'} >
