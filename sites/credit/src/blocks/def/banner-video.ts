@@ -6,6 +6,7 @@ interface BannerVideoBlock extends Block {
   specifiers?: string // render hints etc
   content: Block[]
   contentRight?: Block[] // right column
+  mobileFavors?: 'left' | 'right'
 }
 
 export {

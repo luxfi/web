@@ -21,16 +21,16 @@ import tiles from '@/content'
   const Page = ({ searchParams }: Props ) => {
   
     // see src/middleware.ts
-  const agent = searchParams?.agent
+  const agent = searchParams?.agent as string
 
   const tileHeight = (agent === 'desktop') ? 'h-full ' : 'h-[100svh] '
 
   return (<>
-    <Header siteDef={siteDef} className='fixed left-0 right-0'/>
+    <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
     {tiles.map((banner, index) => (
-    <section key={`section-${index}`} className='snap-start snap-always h-[100vh]'>
+    <section key={`section-${index}`} className='snap-start snap-always h-[100vh] '>
       <ApplyTypography className={tileHeight + 'w-full flex flex-row justify-center self-stretch'} >
-        <VideoBannerSlide block={banner} initialInView={index === 0} />
+        <VideoBannerSlide block={banner} initialInView={index === 0} agent={agent}/>
       </ApplyTypography>
     </section>
     ))}
