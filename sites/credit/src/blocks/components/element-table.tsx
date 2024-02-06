@@ -1,7 +1,7 @@
 //'use client'
 import React from 'react'
 
-import type { BlockComponentProps } from '@luxdefi/ui/blocks'
+import type { BlockComponentProps, ElementBlock } from '@luxdefi/ui/blocks'
 import { cn } from '@luxdefi/ui/util'
 import type ElementTableBlock from '../def/element-table'
 
@@ -28,9 +28,9 @@ const ElementTableBlockComponent: React.FC<BlockComponentProps> = ({
 
 
   const Row: React.FC<{
-    columns: ElementBlock
+    columns: ElementBlock[]
     rowIndex: number
-    cellTag: 'td' | 'th'
+    cellTag?: 'td' | 'th'
   }> = ({
     columns,
     rowIndex,
