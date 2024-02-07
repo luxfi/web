@@ -1,13 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
 
-import type { HeadingBlock, CTABlock, ImageBlock, ElementBlock, VideoBlock } from '@luxdefi/ui/blocks'
+import type { 
+  CTABlock, 
+  HeadingBlock, 
+  ElementBlock, 
+  ImageBlock, 
+  ScreenfulBlock, 
+  VideoBlock
+} from '@luxdefi/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 
-import type BannerVideoBlock from '@/blocks/def/banner-video'
+//import type BannerVideoBlock from '@/blocks/def/banner-video'
 import type ElementTableBlock from '@/blocks/def/element-table'
-
 
 const CardImage: React.FC = () => (
   <Image src='/assets/img/cards-1483x1361.png' alt='cards' width={150} height={137.5} loading='lazy' />
@@ -23,10 +29,11 @@ const fireworks = {
 
 export default [
   {
-    blockType: 'banner-video',
-    specifiers: 'right top text-align-right',
-    mobileFavors: 'right',
-    content: [
+    blockType: 'screenful',
+    columnSpecifiers: ['right top text-align-right'],
+    mobileOrder: [1, 0], // mobile: card image on top
+    contentColumns: [
+    [
       {
         blockType: 'heading',
         heading: 'The new 1%',
@@ -38,7 +45,7 @@ export default [
       } as HeadingBlock,
       {
         blockType: 'cta',
-        specifiers: 'left 2-cols-on-mobile',
+        specifiers: 'right mobile-2-columns',
         elements: [
           {
             title: "View Benefits",
@@ -54,39 +61,35 @@ export default [
           },
         ]
       } as CTABlock,
-      { blockType: 'space'},
+      { blockType: 'space', level: 0},
       {
         blockType: 'element',
         element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       },
-    ],
-    contentRight: [
+    ], [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
       {
         blockType: 'image',
-        src: '/assets/img/cards-1483x1361.png',
+        src: '/assets/img/cards-1483x1074.png',
         alt: 'cards',
-        dim: {w: 1920, h: 1080},
+        dim: {w: 1483, h: 1074},
         fullWidthOnMobile: true,
         props: {
-          sizes: '900px',
-          fill: true,
-          objectFit: 'contain',
+          sizes: '900px, 440px', 
+          style: {
+            width: '100%',
+            height: 'auto'
+          }
         }
       } as ImageBlock,
-    ],
-    video: fireworks, /*{
-      blockType: 'video',
-      videoProps: DEF_VIDEO_PROPS, 
-      //poster: '/assets/video/coral-poster-comp.png',
-      //sources: ['/assets/video/coral-md.mp4'],
-      dim: {md: {w: 1920, h: 1080}},
-    }*/
-  },
+    ]],
+    banner: fireworks, 
+  } as ScreenfulBlock,
   {
-    blockType: 'banner-video',
-    specifiers: 'center top narrow-gutters constrain-to-lg',
-    content: [
+    blockType: 'screenful',
+    specifiers: 'narrow-gutters constrain-to-lg',
+    columnSpecifiers: ['center top'],
+    contentColumns: [[
       {
         blockType: 'element-table',
         elements: [
@@ -142,18 +145,29 @@ export default [
             <h5>Open the door to a universe of digital assets with the Lux Card, serving as your key to effortless transactions and proficient asset management within the Lux ecosystem.</h5>
           </ApplyTypography>
       }
-    ],
-    video: fireworks, /*{
-      blockType: 'video',
-      videoProps: DEF_VIDEO_PROPS, 
-      //poster: '/assets/video/card-reader-poster-comp.png',
-      //sources: ['/assets/video/card-reader-md.mp4'],
-      dim: {md: {w: 1920, h: 1080}},
-    } */
-  },
+    ]],
+    banner: fireworks, 
+  } as ScreenfulBlock,
   {
-    blockType: 'banner-video',
-    content: [
+    blockType: 'screenful',
+    contentColumns: [
+    [
+      {
+        blockType: 'image',
+        src: '/assets/img/cards-1483x1074.png',
+        alt: 'cards',
+        dim: {w: 1483, h: 1074},
+        fullWidthOnMobile: true,
+        props: {
+          sizes: '900px, 440px', 
+          style: {
+            width: '100%',
+            height: 'auto'
+          }
+        }
+      } as ImageBlock,
+    ],
+    [
       {
         blockType: 'heading',
         heading: 'Direct Ownership of Digital Assets',
@@ -165,7 +179,7 @@ export default [
       } as HeadingBlock,
       {
         blockType: 'cta',
-        specifiers: 'left 2-cols-on-mobile',
+        specifiers: 'left mobile-2-columns',
         elements: [
           {
             title: "Compare Cards",
@@ -186,34 +200,13 @@ export default [
         blockType: 'element',
         element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       } as ElementBlock,
-    ],
-    contentRight: [
-        // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
-      {
-        blockType: 'image',
-        src: '/assets/img/cards-1483x1361.png',
-        alt: 'cards',
-        dim: {w: 1920, h: 1080},
-        fullWidthOnMobile: true,
-        props: {
-          sizes: '900px',
-          fill: true,
-          objectFit: 'contain',
-        }
-      } as ImageBlock,
-    ],
-    video: fireworks, /*{
-      blockType: 'video',
-      videoProps: DEF_VIDEO_PROPS, 
-      poster: '/assets/video/fireworks-poster-comp.png',
-      sources: ['/assets/video/fireworks-md.mp4'],
-      dim: {md: {w: 1920, h: 1080}},
-    } */
-  },
+    ]],
+    banner: fireworks, 
+  } as ScreenfulBlock,
   {
-    blockType: 'banner-video',
-    specifiers: 'top left half-width',
-    content: [
+    blockType: 'screenful',
+    columnSpecifiers: ['top left', ''],
+    contentColumns: [[
       {
         blockType: 'heading',
         heading: 'Apply Pay',
@@ -224,7 +217,7 @@ export default [
         spaceBetween: 6,
         spaceAfter: 4,
       } as HeadingBlock,
-    ],
-    video: fireworks, 
-  }
-] as BannerVideoBlock[]
+    ], [/* intentially empty */]], 
+    banner: fireworks, 
+  } as ScreenfulBlock
+] as ScreenfulBlock[]

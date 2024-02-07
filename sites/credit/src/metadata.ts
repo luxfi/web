@@ -4,10 +4,10 @@ export default {
   metadataBase: new URL('https://lux.credit'),
   title: {
     default: 'Lux Credit',
-    template: '%s | Lux Market',
+    template: '%s | Lux Credit',
   },
   description: 'Explore your swaps',
-  applicationName: 'Lux Bridge Explorer',
+  applicationName: 'Lux Credit',
   authors: {name: 'Lux Dev team'},
   keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
   icons: [
@@ -64,6 +64,5 @@ export default {
   other: {
     'msapplication-TileColor': '#000000'
   },
-  asCurrent: 'foo'
 
-} as Metadata & { asCurrent: string }
+} as Metadata

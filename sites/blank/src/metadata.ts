@@ -64,6 +64,4 @@ export default {
   other: {
     'msapplication-TileColor': '#000000'
   },
-  asCurrent: 'foo'
-
-} as Metadata & { asCurrent: string }
+} as Metadata 

@@ -8,10 +8,12 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit"
+    "tc": "tsc --noEmit",
+    "ln:ui": "pnpm link -g @luxdefi/ui",
+    "ul:ui": "pnpm unlink -g @luxdefi/ui"
   },
   "dependencies": {
-    "@luxdefi/ui": "0.3.1",
+    "@luxdefi/ui": "0.3.2",
     "@next/mdx": "14.1.0",
     "markdown-to-jsx": "^7.3.2",
     "next": "14.1.0",
@@ -20,7 +22,6 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.6.0",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-interaction-media": "^0.1.0"
   },
