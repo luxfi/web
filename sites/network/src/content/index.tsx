@@ -1,12 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-
-import type { HeadingBlock, CTABlock, ImageBlock, ElementBlock, VideoBlock } from '@luxdefi/ui/blocks'
+import type { HeadingBlock, CTABlock, ElementBlock, VideoBlock } from '@luxdefi/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
-import { ApplyTypography } from '@luxdefi/ui/primitives'
 
-import type BannerVideoBlock from '@/blocks/def/banner-video'
-import type ElementTableBlock from '@/blocks/def/element-table'
+import type ScreenfulBlock from '@/blocks/def/screenful'
 
 
 const fireworks = {
@@ -19,9 +14,9 @@ const fireworks = {
 
 export default [
   {
-    blockType: 'banner-video',
-    specifiers: 'right top text-align-right',
-    content: [
+    blockType: 'screenful',
+    columnSpecifiers: ['left top text-align-left mobile-center-headings', ''],
+    contentColumns: [[
       {
         blockType: 'heading',
         heading: 'The new 1%',
@@ -33,7 +28,7 @@ export default [
       } as HeadingBlock,
       {
         blockType: 'cta',
-        specifiers: 'left 2-cols-on-mobile',
+        specifiers: 'left mobile-single-row',
         elements: [
           {
             title: "View Benefits",
@@ -54,12 +49,13 @@ export default [
         blockType: 'element',
         element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       },
-    ],
-    video: fireworks, 
-  },
+    ], []],
+    banner: fireworks, 
+  } as ScreenfulBlock,
   {
-    blockType: 'banner-video',
-    content: [
+    blockType: 'screenful',
+    columnSpecifiers: ['left top text-align-left mobile-center-headings'],
+    contentColumns: [[
       {
         blockType: 'heading',
         heading: 'Direct Ownership of Digital Assets',
@@ -71,7 +67,7 @@ export default [
       } as HeadingBlock,
       {
         blockType: 'cta',
-        specifiers: 'left 2-cols-on-mobile',
+        specifiers: 'left',
         elements: [
           {
             title: "Compare Cards",
@@ -92,24 +88,28 @@ export default [
         blockType: 'element',
         element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       } as ElementBlock,
-    ],
-    video: fireworks, 
-  },
+    ]],
+    banner: fireworks, 
+  } as ScreenfulBlock,
   {
-    blockType: 'banner-video',
-    specifiers: 'top left half-width',
-    content: [
-      {
-        blockType: 'heading',
-        heading: 'Apply Pay',
-        level: 1,
-        byline: 'Experience seamless Apple Wallet integration with Lux Credit. The card doubles as an events pass ' +
-          'and rewards card, complete with NFC support for seamless entry at elite Lux event and experiences.',
-        bylineLevel: 0,
-        spaceBetween: 6,
-        spaceAfter: 4,
-      } as HeadingBlock,
+    blockType: 'screenful',
+    contentColumns: [
+      [
+        {
+          blockType: 'heading',
+          heading: 'Apply Pay',
+          level: 1,
+          byline: 'Experience seamless Apple Wallet integration with Lux Credit. The card doubles as an events pass ' +
+            'and rewards card, complete with NFC support for seamless entry at elite Lux event and experiences.',
+          bylineLevel: 0,
+          spaceBetween: 6,
+          spaceAfter: 4,
+        } as HeadingBlock,
+      ],
+      [
+        // second column is empty
+      ]
     ],
-    video: fireworks, 
-  }
-] as BannerVideoBlock[]
+    banner: fireworks, 
+  } as ScreenfulBlock,
+] as ScreenfulBlock[]

@@ -3,7 +3,7 @@ import React  from 'react'
 import { Footer, Header } from '@luxdefi/ui/common'
 import { ApplyTypography } from '@luxdefi/ui/primitives'
 
-import VideoBannerSlide from '@/blocks/components/video-slide'
+import Screenful from '@/blocks/components/screenful'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -30,7 +30,7 @@ import tiles from '@/content'
     {tiles.map((banner, index) => (
     <section key={`section-${index}`} className='snap-start snap-always h-[100vh] '>
       <ApplyTypography className={tileHeight + 'w-full flex flex-row justify-center self-stretch'} >
-        <VideoBannerSlide block={banner} initialInView={index === 0} agent={agent}/>
+        <Screenful block={banner} initialInView={index === 0} agent={agent}/>
       </ApplyTypography>
     </section>
     ))}

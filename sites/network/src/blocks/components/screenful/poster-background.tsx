@@ -4,20 +4,20 @@ import type { VideoBlock } from '@luxdefi/ui/blocks'
 import { cn } from '@luxdefi/ui/util'
 
 const Poster: React.FC<{
-  block?: VideoBlock,
+  banner: VideoBlock | string | undefined,
   className?: string
 } & PropsWithChildren> = ({
   children,
-  block,
+  banner,
   className=''
 }) => (
-  block ? (
+  banner ? (
     <div 
       className={cn('relative', className)} 
       style={{
         height: '100%',
         width: '100%',
-        backgroundImage: `url(${block.poster!})`,
+        backgroundImage: `url(${(typeof banner === 'string') ? banner : banner.poster!})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }} 

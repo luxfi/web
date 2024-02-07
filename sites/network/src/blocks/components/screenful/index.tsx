@@ -1,17 +1,15 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { type Block, ContentComponent, registerBlockType } from '@luxdefi/ui/blocks'
-import { containsToken, cn } from '@luxdefi/ui/util'
-import type BannerVideoBlock from '@/blocks/def/banner-video'
+import type { Block } from '@luxdefi/ui/blocks'
+
+import type ScreenfulBlock from '@/blocks/def/screenful'
 
 import Poster from './poster-background'
-import ElementTable from '../element-table'
+import Content from './content'
 const Video = dynamic(() => (import('./video-background')), {ssr: false, loading: () => (<></>)})
 
-registerBlockType('element-table', ElementTable)
-
-const BannerVideoComponent: React.FC<{
+const ScreenfulComponent: React.FC<{
   block: Block
   agent?: string
   initialInView?: boolean
@@ -23,11 +21,12 @@ const BannerVideoComponent: React.FC<{
   className=''
 }) => {
 
-  if (block.blockType !== 'banner-video') {
-    return <>banner video block required</>
+  if (block.blockType !== 'screenful') {
+    return <>screenful block required</>
   }
+  const b = block as ScreenfulBlock 
 
-  const b = block as BannerVideoBlock 
+  /*
   const specified = (t: string) => (containsToken(b.specifiers, t))
 
   const Content: React.FC = () => {
@@ -128,17 +127,22 @@ const BannerVideoComponent: React.FC<{
       </div>
     )
   }
+<Content />
+*/
+  const contentclx = 'z-10 absolute left-0 right-0  top-0 bottom-0 xl:mx-auto max-w-screen-xl'
 
   return (
-    <Poster block={b.video} className={className} >
+    <Poster banner={b.banner} className={className} >
+      {b.banner && typeof b.banner === 'object' && (
       <Video 
-        block={b.video} 
+        block={b.banner} 
         className='z-0 absolute top-0 left-0 bottom-0 right-0' 
         initialInView={initialInView}
       />
-      <Content />
+      )}
+      <Content block={b} agent={agent} className={contentclx} />
     </Poster>
   )
 }
 
-export default BannerVideoComponent
+export default ScreenfulComponent
