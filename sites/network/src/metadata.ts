@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export default {
-  metadataBase: new URL('https://lux.credit'),
+  metadataBase: new URL('https://lux.network'),
   title: {
-    default: 'Lux Credit',
-    template: '%s | Lux Market',
+    default: 'Lux Network',
+    template: '%s | Lux Network',
   },
   description: 'Explore your swaps',
   applicationName: 'Lux Bridge Explorer',
@@ -64,6 +64,5 @@ export default {
   other: {
     'msapplication-TileColor': '#000000'
   },
-  asCurrent: 'foo'
 
-} as Metadata & { asCurrent: string }
+} as Metadata 

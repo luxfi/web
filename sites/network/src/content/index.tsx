@@ -1,8 +1,12 @@
-import type { HeadingBlock, CTABlock, ElementBlock, VideoBlock } from '@luxdefi/ui/blocks'
+import type { 
+  CTABlock, 
+  HeadingBlock, 
+  ElementBlock, 
+  ImageBlock, 
+  ScreenfulBlock, 
+  VideoBlock
+} from '@luxdefi/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
-
-import type ScreenfulBlock from '@/blocks/def/screenful'
-
 
 const fireworks = {
   blockType: 'video',
@@ -16,7 +20,9 @@ export default [
   {
     blockType: 'screenful',
     columnSpecifiers: ['left top text-align-left mobile-center-headings', ''],
-    contentColumns: [[
+    mobileOrder: [1, 0], // right column first on mobile
+    contentColumns: [
+    [
       {
         blockType: 'heading',
         heading: 'The new 1%',
@@ -28,7 +34,7 @@ export default [
       } as HeadingBlock,
       {
         blockType: 'cta',
-        specifiers: 'left mobile-single-row',
+        specifiers: 'left mobile-2-columns',
         elements: [
           {
             title: "View Benefits",
@@ -49,7 +55,22 @@ export default [
         blockType: 'element',
         element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       },
-    ], []],
+    ], [
+      {
+        blockType: 'image',
+        src: '/assets/img/cards-1483x1074.png',
+        alt: 'cards',
+        dim: {w: 1483, h: 1074},
+        fullWidthOnMobile: true,
+        props: {
+          sizes: '900px, 440px', 
+          style: {
+            width: '100%',
+            height: 'auto'
+          }
+        }
+      } as ImageBlock,
+    ]],
     banner: fireworks, 
   } as ScreenfulBlock,
   {
