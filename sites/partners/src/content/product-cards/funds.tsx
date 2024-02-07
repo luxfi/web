@@ -1,7 +1,5 @@
 import type * as C from '@luxdefi/ui/blocks/def'
 
-import type ProductDetailBlock from '@/blocks/def/product-detail-block'
-
 export default {
   blockType: 'product-card',
   badge: {
@@ -96,6 +94,6 @@ export default {
       ]
     } as C.CTABlock,
   ] as C.CTABlock[]
-} as ProductDetailBlock
+}
 
 
