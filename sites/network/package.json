@@ -9,7 +9,9 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit"
+    "tc": "tsc --noEmit",
+    "ln:ui": "pnpm link -g @luxdefi/ui",
+    "ul:ui": "pnpm unlink -g @luxdefi/ui"
   },
   "dependencies": {
     "@luxdefi/ui": "0.3.2",
