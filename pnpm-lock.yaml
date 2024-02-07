@@ -336,6 +336,79 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  sites/partners:
+    dependencies:
+      '@luxdefi/ui':
+        specifier: 0.3.1
+        version: 0.3.1(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+      '@next/mdx':
+        specifier: 14.1.0
+        version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
+      markdown-to-jsx:
+        specifier: ^7.3.2
+        version: 7.4.1(react@18.2.0)
+      next:
+        specifier: 14.1.0
+        version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
+      next-themes:
+        specifier: ^0.2.1
+        version: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
+      postcss-selector-parser:
+        specifier: ^6.0.13
+        version: 6.0.15
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-device-detect:
+        specifier: ^2.2.3
+        version: 2.2.3(react-dom@18.2.0)(react@18.2.0)
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      tailwind-merge:
+        specifier: ^2.2.0
+        version: 2.2.1
+      tailwindcss-interaction-media:
+        specifier: ^0.1.0
+        version: 0.1.0
+    devDependencies:
+      '@mdx-js/loader':
+        specifier: ^3.0.0
+        version: 3.0.0(webpack@5.90.1)
+      '@mdx-js/react':
+        specifier: ^3.0.0
+        version: 3.0.0(@types/react@18.2.54)(react@18.2.0)
+      '@tailwindcss/container-queries':
+        specifier: ^0.1.1
+        version: 0.1.1(tailwindcss@3.4.1)
+      '@types/mdx':
+        specifier: ^2.0.9
+        version: 2.0.11
+      '@types/react':
+        specifier: ^18.2.48
+        version: 18.2.54
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.2.18
+      autoprefixer:
+        specifier: ^10.4.14
+        version: 10.4.17(postcss@8.4.34)
+      postcss:
+        specifier: ^8.4.24
+        version: 8.4.34
+      postcss-import:
+        specifier: ^15.1.0
+        version: 15.1.0(postcss@8.4.34)
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.1
+      tailwindcss-animate:
+        specifier: ^1.0.6
+        version: 1.0.7(tailwindcss@3.4.1)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   sites/pay:
     dependencies:
       express:
