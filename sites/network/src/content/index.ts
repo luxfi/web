@@ -1,7 +1,8 @@
 import type { ScreenfulBlock } from '@luxdefi/ui/blocks'
 
-import power from './power-in-your-hands'
+import keyFeatures from './slides/key-features'
+import power from './slides/power-in-your-hands'
 
 export default [
-  power
+  keyFeatures
 ] as ScreenfulBlock[]
