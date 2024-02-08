@@ -29,31 +29,35 @@ export default {
         },
         {
           text: 'Scale to millions of transactions per second.',
-          icon: '/assets/img/icon-eth-475.png'
+          icon: '/assets/img/icon-speed-475.png'
         },
         {
           text: 'Wallet, Swap, Explore, Bridge, all in one place.',
-          icon: '/assets/img/icon-eth-475.png'
+          icon: '/assets/img/icon-apps-475.png'
         },
         {
           text: 'All-new Native Fiat Currency support.',
-          icon: '/assets/img/icon-eth-475.png'
+          icon: '/assets/img/icon-fiat-coins-475.png'
         },
         {
           text: 'Breakthrough privacy chain and bridge.',
-          icon: '/assets/img/icon-eth-475.png'
+          icon: '/assets/img/icon-security-shield-504.png'
         },
         {
-          text: 'Automated security with 24/7 monitoring.'
+          text: 'Automated security with 24/7 monitoring.',
+          icon: '/assets/img/icon-24-7-security-475.png'
         },
         {
-          text: 'Regulatory compliant from day one.'
+          text: 'Regulatory compliant from day one.',
+          icon: '/assets/img/icon-regulatory-compliant-475.png'
         },
         {
-          text: 'Tax advantaged trading.'
+          text: 'Tax advantaged trading.',
+          icon: <p className='font-serif text-[24px] leading-[28px] font-bold  h-[28px] pr-2'>0%</p>
         },
         {
-          text: 'Governed by a DAO.'
+          text: 'Governed by a DAO.',
+          icon: '/assets/img/icon-dao-475.png'
         },
       ] 
     } as BulletCardsBlock
