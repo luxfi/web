@@ -14,7 +14,7 @@ export default {
   blockType: 'screenful',
   columnSpecifiers: ['center top'],
   contentColumns: [[
-    {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}},
+    {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'},
     {blockType: 'space', level: 6},
     {blockType: 'bullet-cards',
       grid: {
