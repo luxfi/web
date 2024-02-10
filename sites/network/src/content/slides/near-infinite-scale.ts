@@ -34,19 +34,19 @@ export default {
         {blockType: 'enh-heading',
           heading: {text: '1/10th the cost of Ethereum transactions.', level: 4}, 
           byline: {text: bylines[0], level: 6}, 
-        },
+        } as EnhHeadingBlock,
         {blockType: 'enh-heading',
           heading: {text: '<1 second transaction time-to-finality.', level: 4}, 
           byline: {text: bylines[1], level: 6}, 
-        },
+        } as EnhHeadingBlock,
         {blockType: 'enh-heading',
           heading: {text: 'Unlimited transaction throughput.', level: 4}, 
           byline: {text: bylines[2], level: 6}, 
-        },
+        } as EnhHeadingBlock,
         {blockType: 'enh-heading',
           heading: {text: 'Fastest cross-chain transactions.', level: 4}, 
           byline: {text: bylines[3], level: 6}, 
-        },
+        } as EnhHeadingBlock,
       ] 
     } as GridBlock
   ]]

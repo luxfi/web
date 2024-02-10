@@ -14,7 +14,7 @@
     "ul:ui": "pnpm unlink -g @luxdefi/ui"
   },
   "dependencies": {
-    "@luxdefi/ui": "0.3.2",
+    "@luxdefi/ui": "0.4.6",
     "@next/mdx": "14.1.0",
     "markdown-to-jsx": "^7.3.2",
     "next": "14.1.0",
