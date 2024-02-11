@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 
   // these both have ok heights, so just render them
-import SVG_cdax from './svgs/logo-cdax.svg'
-import SVG_gda_capital from './svgs/logo-gda-capital.svg'
+import SVG_cdax from './svg/logo-cdax.svg'
+import SVG_gda_capital from './svg/logo-gda-capital.svg'
 
 const MF = 0.6 // mobile fraction
 
