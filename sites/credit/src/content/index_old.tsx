@@ -15,6 +15,8 @@ import { ApplyTypography } from '@luxdefi/ui/primitives'
 //import type BannerVideoBlock from '@/blocks/def/banner-video'
 import type ElementTableBlock from '@/blocks/def/element-table'
 
+import new1Percent from './slides/new-1-percent'
+
 const CardImage: React.FC = () => (
   <Image src='/assets/img/cards-1483x1361.png' alt='cards' width={150} height={137.5} loading='lazy' />
 )
@@ -28,63 +30,7 @@ const fireworks = {
 } as VideoBlock
 
 export default [
-  {
-    blockType: 'screenful',
-    columnSpecifiers: ['right top text-align-right'],
-    mobileOrder: [1, 0], // mobile: card image on top
-    contentColumns: [
-    [
-      {
-        blockType: 'heading',
-        heading: 'The new 1%',
-        level: 1,
-        byline: 'Never sell your crypto again with our self-paying credit card.',
-        bylineLevel: 6,
-        spaceBetween: 6,
-        spaceAfter: 4,
-      } as HeadingBlock,
-      {
-        blockType: 'cta',
-        specifiers: 'right mobile-2-columns',
-        elements: [
-          {
-            title: "View Benefits",
-            href: "/",
-            variant: 'outline',
-          },
-          {
-            title: "Sign Up",
-            href: "https://lux.town",
-            external: true,
-            newTab: false,
-            variant: 'primary',
-          },
-        ]
-      } as CTABlock,
-      { blockType: 'space', level: 0},
-      {
-        blockType: 'element',
-        element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      },
-    ], [
-        // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
-      {
-        blockType: 'image',
-        src: '/assets/img/cards-1483x1074.png',
-        alt: 'cards',
-        dim: {w: 1483, h: 1074},
-        fullWidthOnMobile: true,
-        props: {
-          sizes: '900px, 440px', 
-          style: {
-            width: '100%',
-            height: 'auto'
-          }
-        }
-      } as ImageBlock,
-    ]],
-    banner: fireworks, 
-  } as ScreenfulBlock,
+  new1Percent,
   {
     blockType: 'screenful',
     specifiers: 'narrow-gutters constrain-to-lg',
@@ -217,7 +163,7 @@ export default [
         spaceBetween: 6,
         spaceAfter: 4,
       } as HeadingBlock,
-    ], [/* intentially empty */]], 
+    ], []], 
     banner: fireworks, 
   } as ScreenfulBlock
 ] as ScreenfulBlock[]

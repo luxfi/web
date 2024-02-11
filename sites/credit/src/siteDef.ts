@@ -10,10 +10,9 @@ export default {
       title: "Reserve Lux Card",
       href: "https://app.lux.market",
       newTab: false,
-      external: true,
       variant: 'primary',
     },
   },
   footer  
-} as SiteDef
+} satisfies SiteDef
 
