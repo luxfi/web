@@ -20,6 +20,7 @@ const Page = ({ searchParams }: Props ) => {
 
   return (<>
     <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
+    
     {tiles.map((banner, index) => (
       <Screenful 
         block={banner} 
@@ -29,7 +30,7 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
-    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-[200px] lg:mx-auto ' />
   </>)
 }
 
