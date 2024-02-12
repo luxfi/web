@@ -51,6 +51,11 @@ export default   [
   },
   {
     title: '@luxdefi',
+    href: 'https://www.instagram.com/luxdefi',
+    icon: <Icons.SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
+  },
+  {
+    title: '@luxdefi',
     href: 'https://linkedin.com/company/luxdefi',
     icon: <Icons.SocialIcon network='linkedin' size={SOC_ICON_SIZE + 2} />
   },
