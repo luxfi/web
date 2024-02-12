@@ -5,6 +5,7 @@ export default [
     title: 'Company',
     href: "https://lux.partners/",
     variant: 'linkFG',
+    newTab: false,
   },
   {
     title: 'About',
@@ -17,19 +18,20 @@ export default [
   },
   {
     title: 'Careers',
-    href: 'https://docs.lux.network/about/v/lux-job-listings/',
+    href: 'https://docs.google.com/document/d/1SCt0Hg7EIs06TootKCA1am1xo4mcXoKF/edit#heading=h.30j0zll',
+    newTab: true,
+  },
+  {
+    title: 'Partnerships',
+    href: 'https://apply.lux.partners/',
     newTab: false,
   },
   {
-    title: 'Partner with us',
-    href: 'https://apply.lux.partners/',
-  },
-  {
     title: 'Press',
-    href: '/press',
+    href: 'mailto:ai@lux.partners?subject=%E2%96%BC%20Press',
   },
   {
-    title: 'Help & Support',
-    href: 'mailto:ai@lux.partners?subject=%E2%96%BC%20Lux%20Support',
+    title: 'Help',
+    href: 'mailto:ai@lux.partners?subject=%E2%96%BC%20Help',
   },
 ] satisfies LinkDef[]

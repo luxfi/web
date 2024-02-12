@@ -33,7 +33,7 @@ export default [
   { blockType: 'space', level: 0},
   {
     blockType: 'element',
-    element: <p className='text-xs italic'>No invite code? Request an invite <a href="https://apply.lux.partners">here</a>.</p>
+    element: <p className='text-xs italic'>No invite code? <a href="mailto:ai@lux.partners?subject=%E2%96%BC%20Lux%20Invite">Request an invite</a>.</p>
   },
   { blockType: 'space', level: 1},
 ]
