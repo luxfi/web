@@ -2,7 +2,7 @@ import type { LinkDef } from '@luxdefi/ui/types'
 
 export default [
   {
-    title: 'Products',
+    title: 'Ecosystem',
     href: '',
     variant: 'linkFG'
   },
@@ -15,7 +15,7 @@ export default [
     href: 'https://lux.market/gold',
   },
   {
-    title: 'Lux Credit',
+    title: 'Lux Credit Card',
     href: 'https://lux.credit',
   },
   {

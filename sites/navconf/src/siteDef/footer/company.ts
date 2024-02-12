@@ -12,17 +12,8 @@ export default [
     newTab: false,
   },
   {
-    title: 'Partner with Lux',
-    href: 'https://apply.lux.partners/',
-  },
-  {
-    title: 'Lux Fund',
-    href: 'https://lux.fund',
-    newTab: false,
-  },
-  {
-    title: 'Lux Support',
-    href: 'mailto:support@lux.partners?subject=%E2%96%BC%20Lux%20Support',
+    title: 'Brand & Press Kit',
+    href: 'https://drive.google.com/drive/folders/14OJtKLVakGY6883XO9yGbiHtlFxQUUm5?usp=share_link',
   },
   {
     title: 'Careers',
@@ -30,7 +21,16 @@ export default [
     newTab: false,
   },
   {
-    title: 'Press Kit',
-    href: 'https://drive.google.com/drive/folders/14OJtKLVakGY6883XO9yGbiHtlFxQUUm5?usp=share_link',
+    title: 'Partner with us',
+    href: 'https://apply.lux.partners/',
+  },
+  {
+    title: 'Our Funds',
+    href: 'https://lux.fund',
+    newTab: false,
+  },
+  {
+    title: 'Help & Support',
+    href: 'mailto:support@lux.partners?subject=%E2%96%BC%20Lux%20Support',
   },
 ] satisfies LinkDef[]

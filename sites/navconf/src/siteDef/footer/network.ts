@@ -23,6 +23,10 @@ export default [
     href: "https://safe.lux.network/",
   },
   {
+    title: 'Lux Validator',
+    href: "https://lux.market/validator/",
+  },
+  {
     title: 'Open Source',
     href: 'https://github.com/luxdefi',
   },
