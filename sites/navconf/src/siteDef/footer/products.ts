@@ -8,30 +8,29 @@ export default [
   },
   {
     title: 'Lux Silver',
-    href: '/silver',
+    href: 'https://lux.market/silver',
   },
   {
     title: 'Lux Gold',
-    href: '/gold',
+    href: 'https://lux.market/gold',
   },
-  {
-    title: 'Lux Coin',
-    href: '/coin',
-  },
-  /*{
-    title: 'Lux Uranium',
-    href: '/uranium',
-  },*/
   {
     title: 'Lux Credit',
-    href: '/credit',
+    href: 'https://lux.credit',
+  },
+    title: 'Lux Exchange',
+    href: 'https://lux.exchange',
   },
   {
-    title: 'Lux Validator',
-    href: '/validator',
+    title: 'Lux Finance',
+    href: 'https://lux.finance',
   },
   {
-    title: 'Lux Pass',
-    href: '/pass',
+    title: 'Lux Market',
+    href: 'https://lux.market',
+  },
+  {
+    title: 'Lux Network',
+    href: 'https://lux.network',
   },
 ] satisfies LinkDef[]
