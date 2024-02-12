@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export default {
   metadataBase: new URL('https://lux.credit'),
   title: {
-    default: "Zach's Domain",
+    default: "Zach's World",
     template: '%s | Zach',
   },
   description: 'Explain yourself',

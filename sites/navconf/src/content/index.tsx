@@ -8,9 +8,9 @@ export default [
   { blockType: 'space', level: 1},
   {
     blockType: 'heading',
-    heading: 'The new 1%',
+    heading: 'The new 99%',
     level: 1,
-    byline: 'Never sell your crypto again with our self-paying credit card.',
+    byline: 'Never pay your bills again because you have no money.',
     bylineLevel: 6,
     spaceBetween: 6,
     spaceAfter: 4,
@@ -20,12 +20,12 @@ export default [
     specifiers: 'left mobile-2-columns',
     elements: [
       {
-        title: "View Benefits",
+        title: "View Felony Charges",
         href: "/",
         variant: 'outline',
       },
       {
-        title: "Sign Up",
+        title: "Post Bail",
         href: "https://lux.town",
         newTab: false,
         variant: 'primary',
