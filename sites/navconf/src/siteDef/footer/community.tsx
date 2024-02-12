@@ -41,11 +41,6 @@ export default   [
 
   {
     title: '@luxdefi',
-    href: 'https://github.com/luxdefi',
-    icon: <Icons.SocialIcon network='github' size={SOC_ICON_SIZE + 2} />
-  },
-  {
-    title: '@luxdefi',
     href: 'https://twitter.com/luxdefi',
     icon: <Icons.SocialIcon network='x' size={SOC_ICON_SIZE} />
   },
@@ -53,11 +48,6 @@ export default   [
     title: '@luxdefi',
     href: 'https://facebook.com/luxdefi',
     icon: <Icons.SocialIcon network='facebook' size={SOC_ICON_SIZE + 2} />
-  },
-  {
-    title: '@luxdefi',
-    href: 'https://instagram.com/luxdefi',
-    icon: <Icons.SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
   },
   {
     title: '@luxdefi',

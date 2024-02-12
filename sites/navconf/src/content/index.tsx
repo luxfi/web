@@ -1,18 +1,16 @@
-import type { 
+import type {
   Block,
-  CTABlock, 
-  HeadingBlock, 
+  CTABlock,
+  HeadingBlock,
 } from '@luxdefi/ui/blocks'
 
 export default [
   { blockType: 'space', level: 1},
   {
     blockType: 'heading',
-    heading: 'Lorem ipsum dolor sit amet',
+    heading: 'Welcome to Lux Town',
     level: 1,
-    byline: 'Ut enim ad minim veniam, quis nostrud.',
-    bylineLevel: 6,
-    spaceBetween: 6,
+    spaceBetween: 4,
     spaceAfter: 4,
   } satisfies HeadingBlock,
   {
@@ -20,13 +18,13 @@ export default [
     specifiers: 'left mobile-2-columns',
     elements: [
       {
-        title: "Ullamco Laboris",
-        href: "/",
+        title: "Learn more",
+        href: "https://lux.chat/",
         variant: 'outline',
       },
       {
-        title: "Commodo",
-        href: "https://lux.town",
+        title: "Log in",
+        href: "/login",
         newTab: false,
         variant: 'primary',
       },
@@ -35,7 +33,7 @@ export default [
   { blockType: 'space', level: 0},
   {
     blockType: 'element',
-    element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    element: <p className='text-xs italic'>No invite code? Request an invite <a href="https://apply.lux.partners">here</a>.</p>
   },
   { blockType: 'space', level: 1},
-] 
+]
