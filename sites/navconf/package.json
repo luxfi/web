@@ -1,5 +1,5 @@
 {
-  "name": "@luxdefi/partners",
+  "name": "@luxdefi/credit",
   "version": "0.0.2",
   "private": true,
   "scripts": {
@@ -8,7 +8,9 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit"
+    "tc": "tsc --noEmit",
+    "ln:ui": "pnpm link -g @luxdefi/ui",
+    "ul:ui": "pnpm unlink -g @luxdefi/ui"
   },
   "dependencies": {
     "@luxdefi/ui": "0.4.11",
@@ -24,8 +26,9 @@
     "tailwindcss-interaction-media": "^0.1.0"
   },
   "devDependencies": {
-    "@mdx-js/react": "^3.0.0",
     "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "@types/mdx": "^2.0.9",
     "@types/react": "^18.2.48",
