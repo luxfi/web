@@ -47,7 +47,7 @@ export default {
       url: "https://en.wikipedia.org/wiki/Lisa_Gansky",
       image: {
         blockType: 'image',
-        src: '/assets/images/lisa-gansky-1.png',
+        src: '/assets/images/lisa-gansky.png',
         alt: 'Lisa Gansky',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,

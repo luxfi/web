@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Footer, Main } from "@luxdefi/ui/common"
+import { ChatWidget, Footer, Main } from "@luxdefi/ui/common"
 
 import Ecosystem from "@/blocks/components/ecosystem"
 import Intro from "@/blocks/components/intro"
@@ -29,8 +29,9 @@ const LandingPage = () => {
       </Main>
       <Footer
         siteDef={siteDef}
-        className="max-w-screen-2xl w-full pt-16 lg:mx-auto "
+        className="max-w-screen-2xl w-full pt-16 lg:mx-auto"
       />
+      <ChatWidget title='LUX' chatbotUrl='https://lux.chat/iframe' />
     </>
   )
 }
