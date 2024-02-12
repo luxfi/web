@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import { Footer, Header } from '@luxdefi/ui/common'
+import { Footer, Header, Main } from '@luxdefi/ui/common'
 
 import { ContentComponent as Content } from '@luxdefi/ui/blocks'
 
@@ -18,7 +18,10 @@ const Page = ({ searchParams }: Props ) => {
 
   return (<>
     <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
-      <Content blocks={blocks} agent={agent}/>
+      <Main className='pt-[56px] md:pt-[104px] max-w-screen-lg'>
+        <Content blocks={blocks} agent={agent}/>
+      </Main>
+      <div className='border-t'></div>
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
   </>)
 }

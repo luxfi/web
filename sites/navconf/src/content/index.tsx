@@ -1,9 +1,11 @@
 import type { 
+  Block,
   CTABlock, 
   HeadingBlock, 
 } from '@luxdefi/ui/blocks'
 
 export default [
+  { blockType: 'space', level: 1},
   {
     blockType: 'heading',
     heading: 'The new 1%',
@@ -15,7 +17,7 @@ export default [
   } satisfies HeadingBlock,
   {
     blockType: 'cta',
-    specifiers: 'right mobile-2-columns',
+    specifiers: 'left mobile-2-columns',
     elements: [
       {
         title: "View Benefits",
@@ -35,4 +37,5 @@ export default [
     blockType: 'element',
     element: <p className='text-xxs italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   },
-] satisfies Block[]
+  { blockType: 'space', level: 1},
+] 

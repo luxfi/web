@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 export default {
   metadataBase: new URL('https://lux.credit'),
   title: {
-    default: 'Lux Credit',
-    template: '%s | Lux Credit',
+    default: "Zach's Domain",
+    template: '%s | Zach',
   },
-  description: 'Explore your swaps',
+  description: 'Explain yourself',
   applicationName: 'Lux Credit',
   authors: {name: 'Lux Dev team'},
   keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",

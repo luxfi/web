@@ -13,10 +13,17 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": [ "./src/*" ],
+      "@/*": [
+        "./src/*"
+      ],
       // https://remarkablemark.org/blog/2023/06/30/react-types-reactnode-error/
-      "react": ["node_modules/@types/react"]
+      "react": ["node_modules/@types/react"],
+      "@luxdefi/ui": ["node_modules/@luxdefi/ui"]
     },
-    "plugins": [ { "name": "next" } ]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }
