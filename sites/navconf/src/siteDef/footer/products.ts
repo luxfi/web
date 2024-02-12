@@ -18,6 +18,7 @@ export default [
     title: 'Lux Credit',
     href: 'https://lux.credit',
   },
+  {
     title: 'Lux Exchange',
     href: 'https://lux.exchange',
   },
