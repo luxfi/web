@@ -8,9 +8,9 @@ export default [
   { blockType: 'space', level: 1},
   {
     blockType: 'heading',
-    heading: 'The new 99%',
+    heading: 'Lorem ipsum dolor sit amet',
     level: 1,
-    byline: 'Never pay your bills again because you have no money.',
+    byline: 'Ut enim ad minim veniam, quis nostrud.',
     bylineLevel: 6,
     spaceBetween: 6,
     spaceAfter: 4,
@@ -20,12 +20,12 @@ export default [
     specifiers: 'left mobile-2-columns',
     elements: [
       {
-        title: "View Felony Charges",
+        title: "Ullamco Laboris",
         href: "/",
         variant: 'outline',
       },
       {
-        title: "Post Bail",
+        title: "Commodo",
         href: "https://lux.town",
         newTab: false,
         variant: 'primary',

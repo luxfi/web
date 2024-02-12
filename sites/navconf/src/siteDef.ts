@@ -7,7 +7,7 @@ export default {
   nav: {
     elements: mainElements,
     featuredCTA: {
-      title: "Something Big",
+      title: "login",
       href: "https://lux.market",
       newTab: false,
       external: true,
