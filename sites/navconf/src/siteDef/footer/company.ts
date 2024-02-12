@@ -12,7 +12,7 @@ export default [
     newTab: false,
   },
   {
-    title: 'Brand & Press Kit',
+    title: 'Brand',
     href: 'https://drive.google.com/drive/folders/14OJtKLVakGY6883XO9yGbiHtlFxQUUm5?usp=share_link',
   },
   {
@@ -25,12 +25,11 @@ export default [
     href: 'https://apply.lux.partners/',
   },
   {
-    title: 'Our Funds',
-    href: 'https://lux.fund',
-    newTab: false,
+    title: 'Press',
+    href: '/press',
   },
   {
     title: 'Help & Support',
-    href: 'mailto:support@lux.partners?subject=%E2%96%BC%20Lux%20Support',
+    href: 'mailto:ai@lux.partners?subject=%E2%96%BC%20Lux%20Support',
   },
 ] satisfies LinkDef[]
