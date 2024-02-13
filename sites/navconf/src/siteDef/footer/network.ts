@@ -7,23 +7,27 @@ export default [
     variant: 'linkFG'
   },
   {
-    title: 'Bridge',
+    title: 'Lux Bridge',
     href: "https://bridge.lux.network/",
   },
   {
-    title: 'Explore',
+    title: 'Lux Explorer',
     href: "https://explore.lux.network/",
   },
   {
-    title: 'Wallet',
+    title: 'Lux Wallet',
     href: "https://wallet.lux.network/",
   },
   {
-    title: 'Safe',
-    href: "https://wafe.lux.network/",
+    title: 'Lux Safe',
+    href: "https://safe.lux.network/",
   },
   {
-    title: 'Github',
+    title: 'Lux Validator',
+    href: "https://lux.market/validator/",
+  },
+  {
+    title: 'Open Source',
     href: 'https://github.com/luxdefi',
   },
 ] satisfies LinkDef[]

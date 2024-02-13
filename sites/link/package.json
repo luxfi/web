@@ -1,19 +1,15 @@
 {
-  "name": "@luxdefi/credit",
+  "name": "@luxdefi/credit_",
   "homepage": "https://lux.credit",
   "version": "0.1.0",
   "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
   "license": "BSD-3-Clause",
   "private": true,
   "description": "Marketing site for Lux Credit Card",
-  "version": "1.0.0",
-  "description": "",
   "scripts": {
     "dev": "http-server ./webroot"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.1"
   }

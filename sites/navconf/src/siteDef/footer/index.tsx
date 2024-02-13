@@ -1,13 +1,13 @@
 import type { LinkDef } from '@luxdefi/ui/types'
 
-import products from './products'
+import ecosystem from './ecosystem'
 import network from './network'
 import company from './company'
 import community from './community'
 import legal from './legal'
 
 export default [
-  products,
+  ecosystem,
   network,
   company,
   community,
