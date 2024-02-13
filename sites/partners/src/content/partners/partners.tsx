@@ -7,7 +7,7 @@ export default {
   blockType: "partners",
   title: {
     blockType: "heading",
-    heading: "Partners",
+    heading: "Leadership",
     level: 3,
     byline: "We are finance and technology pioneers dedicated to building sound financial products that serve the enviroment, society and people.",
     bylineLevel: 0

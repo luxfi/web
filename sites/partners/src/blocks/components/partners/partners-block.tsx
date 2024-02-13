@@ -14,7 +14,7 @@ const PartnersBlockComponent: React.FC<{
   const partners = block as PartnersBlock
 
   return (
-    <div className="flex flex-col gap-24 mt-48 mx-auto">
+    <div className="flex flex-col gap-24 mt-48">
       <HeadingBlockComponent block={partners.title} className="typography-h3:text-2xl lg:typography-h3:text-3xl typography-p:text-xl text-center w-[90%] sm:w-[80%] mx-auto max-w-[550px] flex flex-col" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4">

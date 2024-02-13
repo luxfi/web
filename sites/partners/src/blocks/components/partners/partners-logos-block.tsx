@@ -13,7 +13,7 @@ const PartnersLogosBlockComponent: React.FC<{
   const parnters = block as PartnersLogosBlock
 
   return (
-    <div className="flex flex-col gap-24 mt-48 max-w-[1160px] w-full mx-auto">
+    <div className="flex flex-col gap-24 mt-48 w-full">
       <HeadingBlockComponent block={parnters.title} className="typography-h3:text-2xl lg:typography-h3:text-3xl text-center" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-between gap-4">
         {parnters.partners.map((partner, index) => (
