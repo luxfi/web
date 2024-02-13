@@ -1,9 +1,11 @@
 import type { 
+  Block,
   BulletCardsBlock,
   CTABlock, 
   EnhHeadingBlock, 
   ImageBlock, 
   ScreenfulBlock, 
+  SpaceBlock,
 } from '@luxdefi/ui/blocks'
 
 import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
@@ -28,8 +30,8 @@ export default {
   blockType: 'screenful',
   columnSpecifiers: ['center top'],
   contentColumns: [[
-    {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'},
-    {blockType: 'space', level: 6},
+    {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'} satisfies EnhHeadingBlock as Block,
+    {blockType: 'space', level: 6} satisfies SpaceBlock as Block,
     {blockType: 'bullet-cards',
       specifiers: 'border-muted-3',
       grid: {

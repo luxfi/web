@@ -24,8 +24,8 @@ export default {
     {blockType: 'enh-heading', 
       heading: {text: 'The new 1%', level: 1, mb: 6}, 
       byline: {text: 'Never sell your crypto again with our self paying credit card', level: 6}, 
-    } satisfies EnhHeadingBlock,
-    {blockType: 'space', level: 0} satisfies SpaceBlock,
+    } satisfies EnhHeadingBlock as Block,
+    {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
     {
       blockType: 'cta',
       specifiers: 'left mobile-2-columns',
@@ -41,12 +41,12 @@ export default {
           variant: 'primary',
         },
       ]
-    } satisfies CTABlock,
-    { blockType: 'space', level: 0},
+    } satisfies CTABlock as Block,
+    { blockType: 'space', level: 0} satisfies SpaceBlock as Block,
     {
       blockType: 'element',
       element: <p className='text-xxs italic'>{finePrint}</p>
-    } satisfies ElementBlock,
+    } satisfies ElementBlock as Block,
   ] , [
       // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
     {blockType: 'image',
@@ -61,9 +61,9 @@ export default {
           height: 'auto'
         }
       }
-    },
+    } satisfies ImageBlock as Block ,
     {blockType: 'element',
       element: <p className='w-full text-sm text-muted-1 !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Black Card</p>
-    } satisfies ElementBlock
+    } satisfies ElementBlock as Block
   ]], 
-} satisfies ScreenfulBlock
+} satisfies ScreenfulBlock as ScreenfulBlock

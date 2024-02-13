@@ -1,6 +1,7 @@
 import React  from 'react'
 
 import { Footer, Header } from '@luxdefi/ui/common'
+import { TailwindIndicator } from '@luxdefi/ui/primitives'
 import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@luxdefi/ui/blocks'
 
 import ElementTable from '@/blocks/components/element-table'
@@ -31,6 +32,7 @@ const Page = ({ searchParams }: Props ) => {
       />
     ))}
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-[200px] lg:mx-auto ' />
+    <TailwindIndicator />
   </>)
 }
 

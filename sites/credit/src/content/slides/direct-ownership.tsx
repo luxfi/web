@@ -62,6 +62,6 @@ export default {
     } satisfies ImageBlock,
     {blockType: 'element',
       element: <p className='w-full text-sm text-muted-1 !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Founder Card</p>
-    },
+    } as Block,
   ], ], 
-} satisfies ScreenfulBlock
+} as ScreenfulBlock
