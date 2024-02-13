@@ -10,6 +10,7 @@ import {
 import animatePlugin from 'tailwindcss-animate'
 import containerQueriesPlugin from '@tailwindcss/container-queries'
 import tailwindInteractionMediaPlugin from 'tailwindcss-interaction-media'
+import plugin from 'tailwindcss/plugin'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -27,6 +28,11 @@ export default {
     typographyPlugin({ className: 'typography', base: 16 }),
     containerQueriesPlugin,
     tailwindInteractionMediaPlugin,
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.fontsize-inherit': { 'font-size': 'inherit' },
+      });
+    }),
   ],
   theme: {
 

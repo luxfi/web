@@ -7,7 +7,7 @@ import type {
   ScreenfulBlock, 
 } from '@luxdefi/ui/blocks'
 
-import { COMMON_GRID_2_COL } from '@luxdefi/ui/blocks'
+import { COMMON_GRID_2_COL } from '@luxdefi/ui/types'
 
 import cells from './developer-ready-cards'
 

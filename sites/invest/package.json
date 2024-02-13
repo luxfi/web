@@ -7,11 +7,9 @@
   "private": true,
   "description": "Onboarding for investors",
   "scripts": {
-    "dev": "http-server ./webroot"
+    "dev": "http-server ./static-root"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.1"
   }
