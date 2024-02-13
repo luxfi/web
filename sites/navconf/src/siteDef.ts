@@ -1,19 +1,21 @@
 import type { SiteDef } from '@luxdefi/ui/types'
-import mainElements from './siteDef/main-nav'
-import footer from './siteDef/footer'
+//import mainElements from './siteDef/main-nav'
+//import footer from './siteDef/footer'
+
+import mainCommon from '@luxdefi/ui/siteDef/main-nav'
+import { default as commonFooterCols } from '@luxdefi/ui/siteDef/footer'
 
 export default {
   currentAs: 'https://lux.partners',
   nav: {
-    elements: mainElements,
-    featuredCTA: {
+    common: mainCommon,
+    featured: [{
       title: "Log in",
       href: "/login",
       newTab: false,
-      external: true,
       variant: 'primary',
-    },
+    }],
   },
-  footer
+  footer: commonFooterCols
 } as SiteDef
 

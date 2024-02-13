@@ -1,6 +1,6 @@
 import React  from 'react'
-import { Footer, Main } from '@luxdefi/ui/common'
-import { ApplyTypography } from '@luxdefi/ui/primitives'
+import { Footer } from '@luxdefi/ui/common'
+import { ApplyTypography, Main } from '@luxdefi/ui/primitives'
 
 /* for example, as slug
 type Props = {

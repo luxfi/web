@@ -14,8 +14,8 @@ importers:
   sites/blank:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.2.3
-        version: 0.2.3(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.2
+        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -53,6 +53,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.54)(react@18.2.0)
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.3.3)
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.1)
@@ -87,8 +90,8 @@ importers:
   sites/credit:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.3.2
-        version: 0.3.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.2
+        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -126,6 +129,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.54)(react@18.2.0)
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.3.3)
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.1)
@@ -178,8 +184,8 @@ importers:
   sites/market:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.3.1
-        version: 0.3.1(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.2
+        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -217,6 +223,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.54)(react@18.2.0)
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.3.3)
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.1)
@@ -257,8 +266,8 @@ importers:
   sites/navconf:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.4.11
-        version: 0.4.11(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.2
+        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -333,8 +342,8 @@ importers:
   sites/network:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.3.2
-        version: 0.3.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.2
+        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -372,6 +381,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.54)(react@18.2.0)
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.3.3)
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.1)
@@ -409,8 +421,8 @@ importers:
   sites/partners:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.4.11
-        version: 0.4.11(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.2
+        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -448,6 +460,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.54)(react@18.2.0)
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.3.3)
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.1)
@@ -1956,150 +1971,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@luxdefi/ui@0.2.3(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-vhMBWDRW4RhzigaRNl2WvPME19MAE+S2eqxebjvPQY2USCnuStN4TbvVI+2v6tqD08TTZGaYoeDUBaWeXgzpOA==}
-    peerDependencies:
-      '@next/mdx': ^14.1.0
-      next: ^14.1.0
-      next-themes: ^0.2.1
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      tailwind-merge: ^2.2.0
-      tailwindcss: ^3.4.1
-      tailwindcss-animate: ^1.0.6
-      tailwindcss-interaction-media: ^0.1.0
-    dependencies:
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
-      '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-label': 2.0.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.54)(react@18.2.0)
-      '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.0
-      lodash.castarray: 4.4.0
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lucide-react: 0.307.0(react@18.2.0)
-      markdown-to-jsx: 7.4.1(react@18.2.0)
-      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      next-themes: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
-      postcss-selector-parser: 6.0.15
-      react: 18.2.0
-      react-device-detect: 2.2.3(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.50.0(react@18.2.0)
-      react-social-icons: 6.10.0(react-dom@18.2.0)(react@18.2.0)
-      tailwind-merge: 2.2.1
-      tailwindcss: 3.4.1
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
-      tailwindcss-interaction-media: 0.1.0
-      validator: 13.11.0
-      zod: 3.21.4
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-    dev: false
-
-  /@luxdefi/ui@0.3.1(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-mpV6EK/6SrpUQCE023RZ0KlMsjlGqUydysoDfBAUi973Sn8aUCims6Flu4TTm8Gmn72v+0apOcbKEJruUZd2RA==}
-    peerDependencies:
-      '@next/mdx': ^14.1.0
-      next: ^14.1.0
-      next-themes: ^0.2.1
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      tailwind-merge: ^2.2.0
-      tailwindcss: ^3.4.1
-      tailwindcss-animate: ^1.0.6
-      tailwindcss-interaction-media: ^0.1.0
-    dependencies:
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
-      '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-label': 2.0.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.54)(react@18.2.0)
-      '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.0
-      lodash.castarray: 4.4.0
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lucide-react: 0.307.0(react@18.2.0)
-      markdown-to-jsx: 7.4.1(react@18.2.0)
-      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      next-themes: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
-      postcss-selector-parser: 6.0.15
-      react: 18.2.0
-      react-device-detect: 2.2.3(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.50.0(react@18.2.0)
-      react-social-icons: 6.10.0(react-dom@18.2.0)(react@18.2.0)
-      tailwind-merge: 2.2.1
-      tailwindcss: 3.4.1
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
-      tailwindcss-interaction-media: 0.1.0
-      validator: 13.11.0
-      zod: 3.21.4
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-    dev: false
-
-  /@luxdefi/ui@0.3.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-7fowkCeHRJCevCt3u9nf9GYQWP1dSHB+yWIQa+TR7uebEy6qtJV4yPlZ1tqBMvsQeW9nQOX924gBtR4ljl2i7w==}
-    peerDependencies:
-      '@next/mdx': ^14.1.0
-      next: ^14.1.0
-      next-themes: ^0.2.1
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      tailwind-merge: ^2.2.0
-      tailwindcss: ^3.4.1
-      tailwindcss-animate: ^1.0.6
-      tailwindcss-interaction-media: ^0.1.0
-    dependencies:
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
-      '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-label': 2.0.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.54)(react@18.2.0)
-      '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.0
-      lodash.castarray: 4.4.0
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lucide-react: 0.307.0(react@18.2.0)
-      markdown-to-jsx: 7.4.1(react@18.2.0)
-      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      next-themes: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
-      postcss-selector-parser: 6.0.15
-      react: 18.2.0
-      react-device-detect: 2.2.3(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.50.0(react@18.2.0)
-      react-intersection-observer: 9.7.0(react-dom@18.2.0)(react@18.2.0)
-      react-social-icons: 6.10.0(react-dom@18.2.0)(react@18.2.0)
-      tailwind-merge: 2.2.1
-      tailwindcss: 3.4.1
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
-      tailwindcss-interaction-media: 0.1.0
-      validator: 13.11.0
-      zod: 3.21.4
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-    dev: false
-
-  /@luxdefi/ui@0.4.11(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-5FzupkyXlGYqqrlrjHYikH8k9zhYWFXlGDtpMmU5nZ6sVGf801qTLLDbOTnSLwL15rkm3WUr3ITWO1vx+M+V6A==}
+  /@luxdefi/ui@0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-CdAJJhXMaH3FDUzlIiPFl6dOJwa3uifxAtPgTpw6WJZBv/MvbTo2DVOStZylgCnWxSvPbhQ7KIkZbQdBTm8WWg==}
     peerDependencies:
       '@next/mdx': ^14.1.0
       next: ^14.1.0

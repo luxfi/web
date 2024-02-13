@@ -1,6 +1,7 @@
 import React from "react"
 
-import { ChatWidget, Footer, Main } from "@luxdefi/ui/common"
+import { ChatWidget, Footer } from "@luxdefi/ui/common"
+import { Main } from '@luxdefi/ui/primitives'
 
 import Ecosystem from "@/blocks/components/ecosystem"
 import Intro from "@/blocks/components/intro"

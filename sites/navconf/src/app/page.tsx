@@ -1,6 +1,7 @@
 import React  from 'react'
 
-import { Footer, Header, Main } from '@luxdefi/ui/common'
+import { Footer, Header } from '@luxdefi/ui/common'
+import { TailwindIndicator, Main } from '@luxdefi/ui/primitives'
 
 import { ContentComponent as Content } from '@luxdefi/ui/blocks'
 
@@ -18,11 +19,12 @@ const Page = ({ searchParams }: Props ) => {
 
   return (<>
     <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
-      <Main className='pt-[56px] md:pt-[104px] max-w-screen-lg'>
+      <Main className='pt-[56px] md:pt-[104px] max-w-scree n-lg'>
         <Content blocks={blocks} agent={agent}/>
       </Main>
       <div className='border-t'></div>
-    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 2xl:mx-auto ' />
+    <TailwindIndicator />
   </>)
 }
 
