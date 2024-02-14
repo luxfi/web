@@ -17,7 +17,7 @@ const PartnerCardBlockComponent: React.FC<{
     <div className="bg-level-1 px-5 py-6 rounded-md flex flex-col gap-3 sm:gap-6">
       <a href={partnerCard.url} className="flex gap-5">
         <ImageBlockComponent block={partnerCard.image} className="rounded-full grayscale h-fit" />
-        <div className="flex flex-col my-auto">
+        <div className="flex flex-col my-auto w-full">
           <ApplyTypography className="typography-h3:text-lg typography-p:text-lg typography-p:text-primary-hover typography-h3:leading-tight typography-p:leading-tight typography-p:mt-1 font-medium">
             <h3>{partnerCard.name}</h3>
             <p>{partnerCard.title}</p>

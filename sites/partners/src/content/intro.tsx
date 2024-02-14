@@ -1,27 +1,34 @@
 import type * as C from "@luxdefi/ui/blocks/def"
 
 export default {
-  pretitle: {
-    blockType: "heading",
-    heading: "Lux Partners",
-    level: 3,
-  } as C.HeadingBlock,
-  title: {
-    blockType: "heading",
-    heading: "THE GOLD STANDARD",
-    level: 1,
-  } as C.HeadingBlock,
-  description: {
-    blockType: "heading",
-    heading:
-      "Lux Partners has established a new standard for quantum safe, real world assets, starting with gold and silver.",
-    level: 0,
-  } as C.HeadingBlock,
+  text: {
+    blockType: "enh-heading",
+    specifiers: 'center',
+    preheading: {
+      text: "Lux Partners",
+      level: 3
+    },
+    heading: {
+      text: "THE GOLD STANDARD",
+      level: 1
+    },
+    byline: {
+      text: "Lux Partners has established a new standard for quantum safe, real world assets, starting with gold and silver.",
+      level: 0
+    }
+  } as C.EnhHeadingBlock,
   cta: {
     blockType: 'cta',
     elements: [
       {
-        title: "Partner with LUX",
+        title: "Learn more",
+        href: "https://lux.chat",
+        external: true,
+        newTab: false,
+        variant: 'outline',
+      },
+      {
+        title: "Join us",
         href: "https://apply.lux.partners",
         external: true,
         newTab: false,

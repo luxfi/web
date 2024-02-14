@@ -18,7 +18,7 @@ import siteDef from "../siteDef"
 const LandingPage = () => {
   return (
     <>
-      <Main className="max-w-[1224px]">
+      <Main className='max-w-[1224px]'>
         <Intro />
         <Ecosystem />
         <Products />
@@ -30,9 +30,17 @@ const LandingPage = () => {
       </Main>
       <Footer
         siteDef={siteDef}
-        className="max-w-screen-2xl w-full pt-16 lg:mx-auto"
+        className='max-w-screen-2xl w-full pt-16 lg:mx-auto'
       />
-      <ChatWidget title='LUX' chatbotUrl='https://lux.chat/iframe' />
+      <ChatWidget
+        title='LUX'
+        subtitle='AI'
+        chatbotUrl='https://lux.chat/iframe'
+        suggestedQuestions={[
+          { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },
+          { heading: 'Lux Ecosystem', message: 'Tell me more about Lux ecosystem', icon: 'GlobalLineIcon' },
+        ]}
+      />
     </>
   )
 }
