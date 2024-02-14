@@ -31,7 +31,7 @@ export default {
   columnSpecifiers: ['center top'],
   contentColumns: [[
     {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'} satisfies EnhHeadingBlock as Block,
-    {blockType: 'space', level: 6} satisfies SpaceBlock as Block,
+    {blockType: 'space', sizes: {xs: 1}, test: false} satisfies SpaceBlock as Block,
     {blockType: 'bullet-cards',
       specifiers: 'border-muted-3',
       grid: {
@@ -41,54 +41,54 @@ export default {
       cards: [
         {
           text: 'Companion and Multi-User Cards',
-          icon: <SVG_companion_cards width={115 * .25} height={127 * .25}/>
+          icon: <SVG_companion_cards width={115 * .25} height={127 * .25} className='w-full h-auto'/>
         },
         {
           text: 'Use ZK Bridge to easily add any digital currency to your Lux Wallet',
-          icon: <SVG_bridge width={131 * .25} height={122 * .25}/>
+          icon: <SVG_bridge width={131 * .25} height={122 * .25} className='w-full h-auto'/>
         },
         {
           text: 'Send and receive funds globally with ease',
-          icon: <SVG_globally width={121 * .25} height={127 * .25}/>
+          icon: <SVG_globally width={121 * .25} height={127 * .25} className='w-full h-auto'/>
         },
 
         {
           text: 'Mobile wallet bank account with interest-earning potential',
-          icon: <SVG_mobile_wallet width={129 * .25} height={120 * .25}/>
+          icon: <SVG_mobile_wallet width={129 * .25} height={120 * .25} className='w-full h-auto'/>
         },
         {
           text: 'Cardholders may participate in governing Lux Network via DAO',
-          icon: <SVG_network width={123 * .25} height={105 * .25}/>
+          icon: <SVG_network width={123 * .25} height={105 * .25} className='w-full h-auto'/>
         },
         {
           text: 'Only credit card that lets you spend without selling your crypto',
-          icon: <SVG_spend_wo_selling width={116 * .25} height={81 * .25}/>
+          icon: <SVG_spend_wo_selling width={116 * .25} height={81 * .25} className='w-full h-auto'/>
         },
 
         {
           text: 'Quantum secure with anti-fraud measures supported by Visa',
-          icon: <SVG_quantum_security width={121 * .25} height={130 * .25}/>
+          icon: <SVG_quantum_security width={121 * .25} height={130 * .25} className='w-full h-auto'/>
         },
         {
           text: 'Elimenating the need for crypto-to-fiat swaps and reduced tax liabilities',
-          icon: <SVG_no_fiat width={137 * .22} height={137 * .22}/>
+          icon: <SVG_no_fiat width={137 * .22} height={137 * .22} className='w-full h-auto'/>
         },
         {
           text: 'Easy interface for managing, trading, and swapping assets',
-          icon: <SVG_snap width={64 * .50} height={80 * .50}/>
+          icon: <SVG_snap width={64 * .50} height={80 * .50} className='w-full h-auto'/>
         },
 
         {
           text: 'Premium wellness serves, luxury travel and experiences',
-          icon: <SVG_wellness width={128 * .30} height={160 * .30}/>
+          icon: <SVG_wellness width={128 * .30} height={160 * .30} className='w-full h-auto'/>
         },
         {
           text: 'Android Wallet, Android Wallet, and Google Wallet available',
-          icon: <SVG_wallets_available width={81 * .30} height={141 * .30}/>
+          icon: <SVG_wallets_available width={81 * .30} height={141 * .30} className='w-full h-auto'/>
         },
         {
           text: 'Self-Repaying Debt as your underlying assets increase in value',
-          icon: <SVG_self_repaying width={110 * .26} height={92 * .26}/>
+          icon: <SVG_self_repaying width={110 * .26} height={92 * .26} className='w-full h-auto'/>
         },
 
         

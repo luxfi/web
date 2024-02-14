@@ -6,8 +6,8 @@ import directOwnership from './slides/direct-ownership'
 import cashBack from './slides/cash-back'
 
 export default [
-  //new1Percent,
-  //keyFeatures,
+  new1Percent,
+  keyFeatures,
   directOwnership,
-  cashBack
+  //cashBack
 ] satisfies ScreenfulBlock[]

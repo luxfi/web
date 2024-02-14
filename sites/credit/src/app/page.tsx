@@ -14,6 +14,8 @@ type Props = {
 
 registerBlockType('element-table', ElementTable)
 
+// flex flex-col min-h-full 
+
 const Page = ({ searchParams }: Props ) => {
   
     // see src/middleware.ts
