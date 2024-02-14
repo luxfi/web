@@ -14,8 +14,8 @@ importers:
   sites/blank:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.5.2
-        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.10
+        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -40,12 +40,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
-      tailwindcss-interaction-media:
-        specifier: ^0.1.0
-        version: 0.1.0
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
@@ -56,9 +50,6 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.3.3)
-      '@tailwindcss/container-queries':
-        specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.1)
       '@types/mdx':
         specifier: ^2.0.9
         version: 2.0.11
@@ -80,9 +71,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
-      tailwindcss-animate:
-        specifier: ^1.0.6
-        version: 1.0.7(tailwindcss@3.4.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -90,8 +78,8 @@ importers:
   sites/credit:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.5.2
-        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.10
+        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -116,12 +104,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
-      tailwindcss-interaction-media:
-        specifier: ^0.1.0
-        version: 0.1.0
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
@@ -132,9 +114,6 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.3.3)
-      '@tailwindcss/container-queries':
-        specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.1)
       '@types/mdx':
         specifier: ^2.0.9
         version: 2.0.11
@@ -156,9 +135,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
-      tailwindcss-animate:
-        specifier: ^1.0.6
-        version: 1.0.7(tailwindcss@3.4.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -184,8 +160,8 @@ importers:
   sites/market:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.5.2
-        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.10
+        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -210,12 +186,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
-      tailwindcss-interaction-media:
-        specifier: ^0.1.0
-        version: 0.1.0
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
@@ -226,9 +196,6 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.3.3)
-      '@tailwindcss/container-queries':
-        specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.1)
       '@types/mdx':
         specifier: ^2.0.9
         version: 2.0.11
@@ -250,9 +217,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
-      tailwindcss-animate:
-        specifier: ^1.0.6
-        version: 1.0.7(tailwindcss@3.4.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -266,8 +230,8 @@ importers:
   sites/navconf:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.5.2
-        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.10
+        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -292,12 +256,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
-      tailwindcss-interaction-media:
-        specifier: ^0.1.0
-        version: 0.1.0
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
@@ -308,9 +266,6 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.3.3)
-      '@tailwindcss/container-queries':
-        specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.1)
       '@types/mdx':
         specifier: ^2.0.9
         version: 2.0.11
@@ -332,9 +287,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
-      tailwindcss-animate:
-        specifier: ^1.0.6
-        version: 1.0.7(tailwindcss@3.4.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -342,8 +294,8 @@ importers:
   sites/network:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.5.2
-        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.10
+        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -368,12 +320,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
-      tailwindcss-interaction-media:
-        specifier: ^0.1.0
-        version: 0.1.0
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
@@ -384,9 +330,6 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.3.3)
-      '@tailwindcss/container-queries':
-        specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.1)
       '@types/mdx':
         specifier: ^2.0.9
         version: 2.0.11
@@ -411,9 +354,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
-      tailwindcss-animate:
-        specifier: ^1.0.6
-        version: 1.0.7(tailwindcss@3.4.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -421,8 +361,8 @@ importers:
   sites/partners:
     dependencies:
       '@luxdefi/ui':
-        specifier: 0.5.2
-        version: 0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1)
+        specifier: 0.5.10
+        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -447,12 +387,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      tailwind-merge:
-        specifier: ^2.2.0
-        version: 2.2.1
-      tailwindcss-interaction-media:
-        specifier: ^0.1.0
-        version: 0.1.0
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
@@ -463,9 +397,6 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.3.3)
-      '@tailwindcss/container-queries':
-        specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.1)
       '@types/mdx':
         specifier: ^2.0.9
         version: 2.0.11
@@ -487,9 +418,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
-      tailwindcss-animate:
-        specifier: ^1.0.6
-        version: 1.0.7(tailwindcss@3.4.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1971,18 +1899,14 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@luxdefi/ui@0.5.2(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwind-merge@2.2.1)(tailwindcss-animate@1.0.7)(tailwindcss-interaction-media@0.1.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-CdAJJhXMaH3FDUzlIiPFl6dOJwa3uifxAtPgTpw6WJZBv/MvbTo2DVOStZylgCnWxSvPbhQ7KIkZbQdBTm8WWg==}
+  /@luxdefi/ui@0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-Tze6FUpRCp9stV2b4UsaTuS420VWYvAyfo3twxesvUZbfKCQEouo8EwfsBAZ8867IX4dFL4FoCdAuBgYurr1sw==}
     peerDependencies:
       '@next/mdx': ^14.1.0
       next: ^14.1.0
       next-themes: ^0.2.1
       react: ^18.2.0
       react-dom: ^18.2.0
-      tailwind-merge: ^2.2.0
-      tailwindcss: ^3.4.1
-      tailwindcss-animate: ^1.0.6
-      tailwindcss-interaction-media: ^0.1.0
     dependencies:
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
       '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -2021,7 +1945,6 @@ packages:
       react-intersection-observer: 9.7.0(react-dom@18.2.0)(react@18.2.0)
       react-social-icons: 6.10.0(react-dom@18.2.0)(react@18.2.0)
       tailwind-merge: 2.2.1
-      tailwindcss: 3.4.1
       tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
       tailwindcss-interaction-media: 0.1.0
       validator: 13.11.0
@@ -2030,6 +1953,7 @@ packages:
       - '@types/react'
       - '@types/react-dom'
       - date-fns
+      - tailwindcss
     dev: false
 
   /@mapbox/node-pre-gyp@1.0.11(supports-color@9.4.0):
@@ -4206,6 +4130,7 @@ packages:
       tailwindcss: '>=3.2.0'
     dependencies:
       tailwindcss: 3.4.1
+    dev: false
 
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -11778,6 +11703,7 @@ packages:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
       tailwindcss: 3.4.1
+    dev: false
 
   /tailwindcss-interaction-media@0.1.0:
     resolution: {integrity: sha512-3/o9Gc8sXqrUHp/7w4T+Zt46GubrO7BRmxJpB6BogJt0B33K5G1lOVe2q0Ro43Zkk51Tp2ED0zQ/wL5weO+yUw==}
