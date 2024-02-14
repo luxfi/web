@@ -7,8 +7,8 @@ export default {
   nav: {
     common,
     featured: [{
-      title: "Partner with LUX",
-      href: "https://apply.lux.partners",
+      title: "Log in",
+      href: "https://lux.chat/login",
       newTab: false,
       external: true,
       variant: 'primary',
