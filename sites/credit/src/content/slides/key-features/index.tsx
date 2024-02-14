@@ -6,9 +6,7 @@ import type {
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
-} from '@luxdefi/ui/blocks'
-
-import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
+} from '@hanzo/ui/blocks'
 
 import SVG_companion_cards from './svg/companion-cards-115x127.svg'
 import SVG_bridge from './svg/bridge-131x122.svg'

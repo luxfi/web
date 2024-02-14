@@ -1,8 +1,8 @@
 import React  from 'react'
 
-import { Footer, Header } from '@luxdefi/ui/common'
-import { TailwindIndicator } from '@luxdefi/ui/primitives'
-import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@luxdefi/ui/blocks'
+import { Footer, Header } from '@hanzo/ui/common'
+import { TailwindIndicator } from '@hanzo/ui/primitives'
+import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@hanzo/ui/blocks'
 
 import ElementTable from '@/blocks/components/element-table'
 import siteDef from '@/siteDef'

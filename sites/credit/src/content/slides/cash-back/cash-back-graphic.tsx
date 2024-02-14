@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { Dimensions } from '@luxdefi/ui/types'
+import type { Dimensions } from '@hanzo/ui/types'
 
 const CashBackGraphic: React.FC<{
   dim: Dimensions

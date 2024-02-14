@@ -1,8 +1,8 @@
 //'use client'
 import React from 'react'
 
-import type { BlockComponentProps, ElementBlock } from '@luxdefi/ui/blocks'
-import { cn } from '@luxdefi/ui/util'
+import type { BlockComponentProps, ElementBlock } from '@hanzo/ui/blocks'
+import { cn } from '@hanzo/ui/util'
 import type ElementTableBlock from '../def/element-table'
 
 const bgClassFromLocation = (row: number, column: number) => {

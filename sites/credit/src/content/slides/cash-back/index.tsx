@@ -7,9 +7,9 @@ import type {
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
-import { ApplyTypography } from '@luxdefi/ui/primitives'
+import { ApplyTypography } from '@hanzo/ui/primitives'
 
 import CashBackGraphic from './cash-back-graphic'
 import MDX_right from './right.mdx'

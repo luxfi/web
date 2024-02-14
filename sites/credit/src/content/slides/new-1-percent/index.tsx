@@ -7,7 +7,7 @@ import type {
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 import TrustLogos from './trust-logos'
 

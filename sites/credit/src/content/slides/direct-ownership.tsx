@@ -7,7 +7,7 @@ import type {
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 const byline = 'Retain complete sovereignty over your digital assets, backed by the security and transparency ' + 
   'inherent in Lux quantum safe blockchain technology.'

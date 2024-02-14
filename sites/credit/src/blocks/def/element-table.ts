@@ -1,4 +1,4 @@
-import type { Block, ElementBlock } from '@luxdefi/ui/blocks'
+import type { Block, ElementBlock } from '@hanzo/ui/blocks'
 
 interface ElementTableBlock extends Block {
   blockType: 'element-table'
