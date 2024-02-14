@@ -20,10 +20,8 @@
     "next-themes": "^0.2.1",
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.2.0",
-    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.2.0",
-    "tailwindcss-interaction-media": "^0.1.0"
+    "react-device-detect": "^2.2.3"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",
