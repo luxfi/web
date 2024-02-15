@@ -6,7 +6,7 @@ import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@hanzo/
 
 import ElementTable from '@/blocks/components/element-table'
 import siteDef from '@/siteDef'
-import tiles from '@/content'
+import { tiles}  from '@/content'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

@@ -30,7 +30,7 @@ export default {blockType: 'screenful',
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "View Benefits", href: "/", variant: 'outline' },
-          { title: "Reserve", href: "/", variant: 'primary' },
+          { title: "Reserve", href: "/black", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
       {blockType: 'space' } satisfies SpaceBlock as Block,

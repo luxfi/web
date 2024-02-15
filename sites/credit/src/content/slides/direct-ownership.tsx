@@ -28,7 +28,7 @@ export default {
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "Compare Cards", href: "/", variant: 'outline' },
-          { title: "Founder Card", href: "/", variant: 'primary' },
+          { title: "Founder Card", href: "/founder", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
       {blockType: 'space'} satisfies SpaceBlock as Block,
