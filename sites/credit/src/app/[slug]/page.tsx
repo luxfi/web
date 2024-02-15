@@ -6,8 +6,9 @@ import { Main } from '@hanzo/ui/primitives'
 import type { Block } from '@hanzo/ui/blocks'
 import { ContentComponent } from '@hanzo/ui/blocks'
 
-import { products } from '@/content'
+import CardDetail from './CardDetail'
 
+import { products } from '@/content'
 import siteDef from '@/siteDef'
 
 type Products = keyof typeof products
@@ -43,8 +44,12 @@ const ProductPage = ({ params, searchParams }: Props) => {
 
   return (<>
     <Header siteDef={siteDef} />
-    <Main className='md:flex-row md:gap-4 '>
-      <ContentComponent blocks={product} agent={agent}/>
+    <Main className=' '>
+      {product.blockType === 'card-detail' ? (
+        <CardDetail block={product} agent={agent} />
+      ) : (
+        <ContentComponent blocks={product} agent={agent}/>
+      )}
     </Main>
     <div className='border-t'></div>
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />

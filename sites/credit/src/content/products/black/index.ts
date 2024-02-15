@@ -1,15 +1,18 @@
 import type { 
-  Block,
+  Block, 
   CTABlock, 
-  HeadingBlock, 
-  EnhHeadingBlock, 
   ElementBlock, 
-  ImageBlock, 
-  ScreenfulBlock, 
-  SpaceBlock,
+  EnhHeadingBlock 
 } from '@hanzo/ui/blocks'
 
-export default {
-  blockType: 'enh-heading', 
-  heading: {text: 'Black Card Detail', level: 1, mb: 6}, 
-} satisfies EnhHeadingBlock as Block
+import type CardDetailBlock from '@/blocks/def/card-detail'
+
+export default {blockType: 'card-detail',
+  heading: {
+    blockType: 'enh-heading', 
+    heading: {text: 'Black Card Detail', level: 1, mb: 6}, 
+  } satisfies EnhHeadingBlock as EnhHeadingBlock,
+
+
+} satisfies CardDetailBlock as Block
+
