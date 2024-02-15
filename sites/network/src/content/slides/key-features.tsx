@@ -1,14 +1,6 @@
 import type { 
   BulletCardsBlock,
-  CTABlock, 
-  EnhHeadingBlock, 
-  ImageBlock, 
-  ScreenfulBlock, 
-} from '@luxdefi/ui/blocks'
-
-import fireworks from './fireworks-bg'
-
-import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
+} from '@hanzo/ui/blocks'
 
 export default {
   blockType: 'screenful',

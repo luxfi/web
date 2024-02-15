@@ -1,0 +1,26 @@
+import type {
+  ElementBlock,
+  EnhHeadingBlock,
+  ScreenfulBlock, 
+} from '@hanzo/ui/blocks'
+
+import { Button, Input } from '@hanzo/ui/primitives'
+
+export default {
+  blockType: 'screenful',
+  columnSpecifiers: ['center top text-align-left'],
+  contentColumns: [[
+    {blockType: 'enh-heading',
+      specifiers: 'center',
+      preheading: { text: 'Want exclusive access?', level: 3, mb: 8 },
+      heading: { text: '#WAGMI', level: 1 },
+    } as EnhHeadingBlock,
+    {blockType: 'space', level: 1},
+    {blockType: 'element',
+      element: <form className="flex gap-2">
+      <Input placeholder="Phone number" required />
+      <Button>I WANT IN</Button>
+    </form>
+    } as ElementBlock
+  ]],
+} as ScreenfulBlock

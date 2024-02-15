@@ -1,8 +1,8 @@
 import React  from 'react'
 
-import { Footer, Header } from '@luxdefi/ui/common'
+import { ChatWidget, Footer, Header } from '@hanzo/ui/common'
 
-import { ScreenfulBlockComponent as Screenful } from '@luxdefi/ui/blocks'
+import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -15,7 +15,7 @@ import tiles from '@/content'
 
   // Scroll Snap using this is the approach: 
   // https://stackoverflow.com/a/76066443/11645689
-  // see also styles on 'html' in @luxdefi/ui/style/global.css
+  // see also styles on 'html' in @hanzo/ui/style/global.css
 
   const Page = ({ searchParams }: Props ) => {
   
@@ -34,6 +34,14 @@ import tiles from '@/content'
       />
     ))}
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <ChatWidget
+      title='LUX'
+      subtitle='AI'
+      chatbotUrl='https://lux.chat/iframe'
+      suggestedQuestions={[
+        { heading: 'Lux network features', message: 'What are the key features of Lux network?', icon: 'ShieldFlashLineIcon' },
+      ]}
+    />
   </>)
 }
 
