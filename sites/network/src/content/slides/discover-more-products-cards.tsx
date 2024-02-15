@@ -1,12 +1,14 @@
-import type { 
-  Block,
-  CarteBlancheBlock,
-  EnhHeadingBlock,
-  GridBlock,
-  VideoBlock,
+import { 
+  VideoBlockComponent,
+  type Block,
+  type ElementBlock,
+  type EnhHeadingBlock,
+  type GridBlock,
+  type VideoBlock,
 } from '@hanzo/ui/blocks'
 import { COMMON_GRID_1_COL } from '@hanzo/ui/types'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import Link from 'next/link'
 
 const silverVideo = {
   blockType: 'video',
@@ -19,12 +21,12 @@ const silverVideo = {
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
     md: {
-      w: 270,
-      h: 210
+      w: 1172,
+      h: 1920
     },
     lg: {
-      w: 270,
-      h: 210
+      w: 1172,
+      h: 1920
     },
   },
   sizing: { vh: 30, mobile: {vw: 70} }
@@ -42,12 +44,12 @@ const creditVideo = {
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
     md: {
-      w: 270,
-      h: 210
+      w: 758,
+      h: 588
     },
     lg: {
-      w: 270,
-      h: 210
+      w: 758,
+      h: 588
     },
   },
   sizing: { vh: 30, mobile: {vw: 70} }
@@ -57,24 +59,24 @@ export default [
   {blockType: 'grid',
     grid: COMMON_GRID_1_COL,
     cells: [
-      {blockType: 'carte-blanche',
-        content: [silverVideo]
-      } as CarteBlancheBlock,
+      {blockType: 'element',
+        element: <Link href='http://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux'><VideoBlockComponent block={silverVideo}/></Link>
+      } as ElementBlock,
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'SILVER', level: 3},
+        heading: {text: 'SILVER', level: 4},
       } as EnhHeadingBlock,
     ]
   } as GridBlock,
   {blockType: 'grid',
   grid: COMMON_GRID_1_COL,
     cells: [
-      {blockType: 'carte-blanche',
-        content: [creditVideo]
-      } as CarteBlancheBlock,
+      {blockType: 'element',
+        element: <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux'><VideoBlockComponent block={creditVideo}/></Link>
+      } as ElementBlock,
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'CREDIT', level: 3},
+        heading: {text: 'CREDIT', level: 4},
       } as EnhHeadingBlock,
     ]
   } as GridBlock,

@@ -18,15 +18,15 @@ const validatorVideo = {
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
     md: {
-      w: 270,
-      h: 210
+      w: 656,
+      h: 484
     },
     lg: {
-      w: 270,
-      h: 210
+      w: 656,
+      h: 484
     },
   },
-  sizing: { vh: 30, mobile: {vw: 70} }
+  sizing: { vh: 25, mobile: {vw: 70} }
 } as VideoBlock
 
 const coinVideo = {
@@ -41,15 +41,15 @@ const coinVideo = {
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
     md: {
-      w: 270,
-      h: 210
+      w: 546,
+      h: 540
     },
     lg: {
-      w: 270,
-      h: 210
+      w: 546,
+      h: 540
     },
   },
-  sizing: { vh: 30, mobile: {vw: 70} }
+  sizing: { vh: 25, mobile: {vw: 70} }
 } as VideoBlock
 
 const bylines = [
@@ -59,7 +59,7 @@ const bylines = [
  // re images: https://nextjs.org/docs/pages/api-reference/components/image#responsive-image-with-aspect-ratio
 export default [
   {blockType: 'carte-blanche',
-    specifiers: 'big-padding no-inner-borders',
+    specifiers: 'big-padding-content',
     content: [validatorVideo,
       {blockType: 'enh-heading',
         specifiers: 'center',
@@ -78,12 +78,12 @@ export default [
     ]
   } as CarteBlancheBlock,
   {blockType: 'carte-blanche',
-    specifiers: 'big-padding no-inner-borders',
+    specifiers: 'big-padding-content',
     content: [coinVideo,
       {blockType: 'enh-heading',
         specifiers: 'center',
         heading: {text: 'COIN', level: 2, mb: 5},
-        byline: {text: bylines[0], level: 6}
+        byline: {text: bylines[1], level: 6}
       } as EnhHeadingBlock,
       {blockType: 'space', level: 0},
       {blockType: 'cta',
