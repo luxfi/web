@@ -30,7 +30,6 @@ export default {
           src: '/assets/img/image-zchain-p-500.png',
           alt: 'Lux Bridge',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
         {
           blockType: 'enh-heading',
@@ -43,7 +42,6 @@ export default {
           src: '/assets/img/image-lux-explore-p-500.png',
           alt: 'Lux Explorer',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
       ],
     } as GridBlock

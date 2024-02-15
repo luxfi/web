@@ -38,7 +38,6 @@ export default {
           src: '/assets/img/image-balance-gt-p-500.png',
           alt: 'Lux Wallet',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
         {
           blockType: 'enh-heading',
@@ -51,7 +50,6 @@ export default {
           src: '/assets/img/image-swap-gt-p-500.png',
           alt: 'Lux Swap',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
       ],
     } as GridBlock

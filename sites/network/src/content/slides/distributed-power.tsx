@@ -17,7 +17,7 @@ export default {
       blockType: 'grid',
       grid: {
         at: {
-          xs: { columns: 2, gap: 2 },
+          xs: { columns: 1, gap: 2 },
           md: { columns: 2, gap: 3 },
           lg: { columns: 2, gap: 6 }
         },
@@ -36,8 +36,7 @@ export default {
           blockType: 'image',
           src: '/assets/img/illustration-dao-purple-p-800.png',
           alt: 'Lux DAO',
-          dim: { h: 380, w: 300 },
-          props: { style: { width: 'auto', height: 'auto' } }
+          dim: { h: 300, w: 300 },
         } as ImageBlock,
       ],
     } as GridBlock,
