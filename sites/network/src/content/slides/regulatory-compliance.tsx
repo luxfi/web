@@ -25,9 +25,9 @@ export default {
           byline: { text: bylines[0], level: 6 },
         } as EnhHeadingBlock,
         {blockType: 'enh-heading',
-          icon: '/assets/img/icon-regulatory-compliant-475.png',
+          icon: <p className='font-serif text-[24px] leading-[28px] font-bold  h-[28px] pr-2'>0%</p>,
           iconSize: 40,
-          preheading: { text: '0% CAPITAL GAINS', level: 5, mb: 2 },
+          preheading: { text: 'CAPITAL GAINS', level: 5, mb: 2 },
           heading: { text: 'TAX EFFICIENT', level: 1 },
           byline: { text: bylines[1], level: 6 },
         } as EnhHeadingBlock

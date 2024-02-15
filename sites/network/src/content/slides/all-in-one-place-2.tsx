@@ -21,25 +21,29 @@ export default {
       cells: [
         {
           blockType: 'enh-heading',
+          specifiers: 'align-middle',
           heading: { text: 'LUX BRIDGE', level: 3, mb: 6 },
           byline: { text: bylines[0], level: 0 },
         } as EnhHeadingBlock,
         {
           blockType: 'image',
           src: '/assets/img/image-zchain-p-500.png',
+          alt: 'Lux Bridge',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 250 } }
+          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
         {
           blockType: 'enh-heading',
+          specifiers: 'align-middle',
           heading: { text: 'LUX EXPLORER', level: 3, mb: 6 },
           byline: { text: bylines[1], level: 0 },
         } as EnhHeadingBlock,
         {
           blockType: 'image',
           src: '/assets/img/image-lux-explore-p-500.png',
+          alt: 'Lux Explorer',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 250 } }
+          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
       ],
     } as GridBlock

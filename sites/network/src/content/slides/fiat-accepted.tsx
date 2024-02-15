@@ -58,7 +58,9 @@ export default {
         {
           blockType: 'image',
           src: '/assets/img/fiat-purple-p-800.png',
-          dim: { h: 380, w: 300 }
+          alt: 'Fiat Accepted',
+          dim: { h: 380, w: 300 },
+          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock
       ],
     } as GridBlock

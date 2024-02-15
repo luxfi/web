@@ -35,8 +35,9 @@ export default {
         {
           blockType: 'image',
           src: '/assets/img/illustration-dao-purple-p-800.png',
-          dim: { h: 300, w: 300 },
-          props: { style: { width: 'auto', height: 300 } }
+          alt: 'Lux DAO',
+          dim: { h: 380, w: 300 },
+          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
       ],
     } as GridBlock,

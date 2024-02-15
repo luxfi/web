@@ -29,25 +29,29 @@ export default {
       cells: [
         {
           blockType: 'enh-heading',
+          specifiers: 'align-middle',
           heading: { text: 'LUX WALLET', level: 3, mb: 6 },
           byline: { text: bylines[0], level: 0 },
         } as EnhHeadingBlock,
         {
           blockType: 'image',
           src: '/assets/img/image-balance-gt-p-500.png',
+          alt: 'Lux Wallet',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 250 } }
+          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
         {
           blockType: 'enh-heading',
+          specifiers: 'align-middle',
           heading: { text: 'LUX SWAP', level: 3, mb: 6 },
           byline: { text: bylines[1], level: 0 },
         } as EnhHeadingBlock,
         {
           blockType: 'image',
           src: '/assets/img/image-swap-gt-p-500.png',
+          alt: 'Lux Swap',
           dim: { h: 250, w: 420 },
-          props: { style: { width: 'auto', height: 250 } }
+          props: { style: { width: 'auto', height: 'auto' } }
         } as ImageBlock,
       ],
     } as GridBlock
