@@ -11,8 +11,9 @@ import type { ImageDef } from '@hanzo/ui/types'
 
 interface CardDetailBlock extends Block {
   blockType: 'card-detail'
-  heading: EnhHeadingBlock
-  image?: ImageDef
+  heading: string
+  material: string
+  image: ImageDef
   content?: ReactNode 
   initiation?: string
   annual?: string
