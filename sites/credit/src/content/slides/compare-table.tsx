@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { type PropsWithChildren } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { 
   ElementBlock, 
   ScreenfulBlock, 
@@ -8,7 +9,7 @@ import type {
   EnhHeadingBlock
 } from '@hanzo/ui/blocks'
 
-import { ApplyTypography } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
 
 import type ElementTableBlock from '@/blocks/def/element-table'
 
@@ -23,6 +24,29 @@ const CARDS = {
   sovereign : <Image src='/assets/img/cards-2-flat-tit-1593x1231.png' alt='cards' width={150} height={116} loading='lazy' />,
 }
 
+const CardButton : React.FC<{
+  product: keyof typeof CARDS
+  className?: string
+}> = ({
+  product,
+  className=''
+}) => (
+  <Link 
+    className={cn('relative w-full opacity-90 group-hover:opacity-100 ' + 
+      'rounded-2xl py-4 px-2  ' + 
+      'flex flex-col justify-center items-center', 
+      '!no-underline',
+      className
+    )} 
+    href={`/${product}`}
+  > 
+    {CARDS[product]}
+    <div className='font-sans text-muted-2 group-hover:text-muted-1 text-xxs'>
+       <span className='hidden md:inline'>click to reserve&nbsp;</span><span className='capitalize'>{product}</span>
+    </div>
+  </Link>
+)
+
 export default   {
   blockType: 'screenful',
   specifiers: 'narrow-gutters constrain-to-lg',
@@ -36,11 +60,11 @@ export default   {
     {blockType: 'element-table',
       elements: [
         [
-          {blockType: 'element', element: 'Cards'},
-          {blockType: 'element', element: CARDS.black},
-          {blockType: 'element', element: CARDS.elite},
-          {blockType: 'element', element: CARDS.founder},
-          {blockType: 'element', element: CARDS.sovereign},
+          {blockType: 'element', element: ''},
+          {blockType: 'element', element: <CardButton product='black' />},
+          {blockType: 'element', element: <CardButton product='elite' />},
+          {blockType: 'element', element: <CardButton product='founder' />},
+          {blockType: 'element', element: <CardButton product='sovereign' />},
         ],
         [
           {blockType: 'element', element: 'Level'},
