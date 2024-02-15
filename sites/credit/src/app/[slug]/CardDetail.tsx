@@ -5,6 +5,8 @@ import { EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
 
 import type CardDetailBlock from '@/blocks/def/card-detail'
 
+
+
 const CardDetail: React.FC<BlockComponentProps> = ({
   block,
   className='',
