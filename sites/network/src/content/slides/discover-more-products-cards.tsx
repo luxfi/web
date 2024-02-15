@@ -3,10 +3,9 @@ import {
   type Block,
   type ElementBlock,
   type EnhHeadingBlock,
-  type GridBlock,
   type VideoBlock,
+  type CarteBlancheBlock,
 } from '@hanzo/ui/blocks'
-import { COMMON_GRID_1_COL } from '@hanzo/ui/types'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 import Link from 'next/link'
 
@@ -56,28 +55,30 @@ const creditVideo = {
 } as VideoBlock
 
 export default [
-  {blockType: 'grid',
-    grid: COMMON_GRID_1_COL,
-    cells: [
+  {blockType: 'carte-blanche',
+    specifiers: 'no-outer-borders',
+    content: [
       {blockType: 'element',
         element: <Link href='http://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux'><VideoBlockComponent block={silverVideo}/></Link>
       } as ElementBlock,
+      {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'SILVER', level: 4},
+        heading: {text: 'SILVER', level: 3, mb: 5},
       } as EnhHeadingBlock,
     ]
-  } as GridBlock,
-  {blockType: 'grid',
-  grid: COMMON_GRID_1_COL,
-    cells: [
+  } as CarteBlancheBlock,
+  {blockType: 'carte-blanche',
+    specifiers: 'no-outer-borders',
+    content: [
       {blockType: 'element',
         element: <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux'><VideoBlockComponent block={creditVideo}/></Link>
       } as ElementBlock,
+      {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'CREDIT', level: 4},
+        heading: {text: 'CREDIT', level: 3, mb: 5},
       } as EnhHeadingBlock,
     ]
-  } as GridBlock,
+  } as CarteBlancheBlock,
 ] as Block[]
