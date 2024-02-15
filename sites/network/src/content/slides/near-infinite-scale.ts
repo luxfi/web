@@ -14,7 +14,7 @@ const bylines = [
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', 
       icon: '/assets/img/icon-speed-475.png',

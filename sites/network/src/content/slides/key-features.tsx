@@ -4,7 +4,7 @@ import type {
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'},
     {blockType: 'space', level: 6},

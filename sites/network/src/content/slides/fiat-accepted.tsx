@@ -11,7 +11,7 @@ const byline = 'Reach the mass market by accepting payments in Dollars, Euros, P
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {
       blockType: 'enh-heading',

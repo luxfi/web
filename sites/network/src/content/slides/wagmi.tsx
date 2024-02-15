@@ -8,7 +8,7 @@ import { Button, Input } from '@hanzo/ui/primitives'
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center vert-center'],
+  columnSpecifiers: ['center vert-center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading',
       specifiers: 'center',

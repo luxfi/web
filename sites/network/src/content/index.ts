@@ -5,13 +5,11 @@ import power from './slides/power-in-your-hands'
 import developerReady from './slides/developer-ready'
 import nearInfiniteScale from './slides/near-infinite-scale'
 import finallyPrivateDefi from './slides/finally-private-defi'
-import poweredBy from './slides/powered-by'
 import peakSecurity from './slides/peak-security'
 import fiatAccepted from './slides/fiat-accepted'
 import regulatoryCompliance from './slides/regulatory-compliance'
 import distributedPower from './slides/distributed-power'
-import allInOnePlace1 from './slides/all-in-one-place-1'
-import allInOnePlace2 from './slides/all-in-one-place-2'
+import allInOnePlace from './slides/all-in-one-place'
 import buildOnLux from './slides/build-on-lux'
 import runTheNetwork from './slides/run-the-network'
 import discoverMoreProducts from './slides/discover-more-products'
@@ -23,13 +21,11 @@ export default [
   developerReady,
   nearInfiniteScale,
   finallyPrivateDefi,
-  poweredBy,
   peakSecurity,
   fiatAccepted,
   regulatoryCompliance,
   distributedPower,
-  allInOnePlace1,
-  allInOnePlace2,
+  allInOnePlace,
   buildOnLux,
   runTheNetwork,
   discoverMoreProducts,

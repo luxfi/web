@@ -12,7 +12,7 @@ import cells from './build-on-lux-cards'
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top text-align-left'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [
   [
     {blockType: 'enh-heading',

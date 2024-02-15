@@ -12,11 +12,11 @@ const byline = 'Build and launch DeFi apps using pre-built smart contracts for f
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top text-align-left'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [
   [
     { blockType: 'enh-heading',
-      specifiers: 'mobile-heading-centered preheading-heading-font',
+      specifiers: 'preheading-heading-font',
       icon: '/assets/img/icon-eth-475.png',
       iconSize: 40,
       preheading: { text: 'EVM PLATFORM', level: 5, mb: 2 },
@@ -29,5 +29,4 @@ export default {
       cells,
     } as GridBlock
   ]],
-  //banner: fireworks, 
 } as ScreenfulBlock

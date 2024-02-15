@@ -7,7 +7,7 @@ import cells from './peak-security-cards'
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', 
       icon: '/assets/img/icon-24-7-security-475.png',

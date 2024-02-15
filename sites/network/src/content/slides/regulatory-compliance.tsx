@@ -11,7 +11,7 @@ const bylines = [
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {
       blockType: 'grid',

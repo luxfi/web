@@ -11,7 +11,7 @@ const byline = 'Lux DAO empowers users to directly impact the direction of the L
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {
       blockType: 'grid',

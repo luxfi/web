@@ -11,7 +11,7 @@ import cells from './run-the-network-cards'
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top text-align-left'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [
   [
     {blockType: 'enh-heading',

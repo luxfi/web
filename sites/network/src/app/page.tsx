@@ -29,7 +29,6 @@ import tiles from '@/content'
         block={banner} 
         initialInView={index === 0} 
         agent={agent}
-        snapTile
         key={`section-${index}`} 
       />
     ))}
