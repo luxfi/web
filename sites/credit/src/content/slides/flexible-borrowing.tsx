@@ -18,7 +18,7 @@ export default {
   contentColumns: [
     [
       {blockType: 'image',
-        src: '/assets/img/sov-cards-1593x1231.png',
+        src: '/assets/img/cards-2-flat-tit-1593x1231.png',
         alt: 'cards',
         dim: {w: 1593, h: 1231},
         fullWidthOnMobile: true,

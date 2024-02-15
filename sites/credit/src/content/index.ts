@@ -12,6 +12,6 @@ export default [
   keyFeatures,
   directOwnership,
   cashBack,
+  flexibleBorrowing,
   compareTable,
-  flexibleBorrowing
 ] satisfies ScreenfulBlock[]

@@ -12,12 +12,15 @@ import { ApplyTypography } from '@hanzo/ui/primitives'
 
 import type ElementTableBlock from '@/blocks/def/element-table'
 
+const textBelow = 'Open the door to a universe of digital assets with the Lux Card, serving as your key to effortless ' + 
+'transactions and proficient asset management within the Lux ecosystem.'
+
 
 const CARDS = {
   black : <Image src='/assets/img/cards-dual-black-1483x1361.png' alt='cards' width={150} height={137.5} loading='lazy' />,
-  elite : <Image src='/assets/img/cards-dual-black-1483x1361.png' alt='cards' width={150} height={137.5} loading='lazy' />,
-  founder : <Image src='/assets/img/dual-elite-cards-1475x1220.png' alt='cards' width={150} height={124} loading='lazy' />,
-  sovereign : <Image src='/assets/img/cards-dual-black-1483x1361.png' alt='cards' width={150} height={137.5} loading='lazy' />,
+  elite : <Image src='/assets/img/cards-dual-gd-sl-1485x1114.png' alt='cards' width={150} height={112.5} loading='lazy' />,
+  founder : <Image src='/assets/img/cards-dual-chr-psm-1475x1220.png' alt='cards' width={150} height={124} loading='lazy' />,
+  sovereign : <Image src='/assets/img/cards-2-flat-tit-1593x1231.png' alt='cards' width={150} height={116} loading='lazy' />,
 }
 
 export default   {
@@ -26,8 +29,11 @@ export default   {
   columnSpecifiers: ['center top'],
   contentColumns: [[
     {blockType: 'enh-heading', heading: {text: 'COMPARE CARDS', level: 3}, specifiers: 'center'} satisfies EnhHeadingBlock as Block,
-    {
-      blockType: 'element-table',
+    {blockType: 'element',
+      element: <h5 className='not-typography text-sm text-center font-normal md:text-base lg:font-bold lg:max-w-screen-md'>{textBelow}</h5>
+    } satisfies ElementBlock as Block,
+    {blockType: 'space'} satisfies SpaceBlock as Block,
+    {blockType: 'element-table',
       elements: [
         [
           {blockType: 'element', element: 'Cards'},
@@ -47,7 +53,7 @@ export default   {
           {blockType: 'element', element: 'Material'},
           {blockType: 'element', element: <p>Matte Carbon<br/><span className='font-normal'>or<br/></span>Stainless Steel</p>},
           {blockType: 'element', element: <p>24k Gold<br/><span className='font-normal'>or<br/></span>Sterling Silver</p>},
-          {blockType: 'element', element: <p>Hologram<br/><span className='font-normal'>or<br/></span>Translucent</p>},
+          {blockType: 'element', element: <p>Chrome<br/><span className='font-normal'>or<br/></span>Prismatic</p>},
           {blockType: 'element', element: <p>100% Reflective<br/>Titanium</p>},
         ],
         [
@@ -73,12 +79,6 @@ export default   {
         ],
       ]
     } satisfies ElementTableBlock as Block,
-    { blockType: 'space' } satisfies SpaceBlock as Block,
-    { blockType: 'element',
-      element: 
-        <ApplyTypography className='md:typography-h5:text-center max-w-screen-lg'>
-          <h5>Open the door to a universe of digital assets with the Lux Card, serving as your key to effortless transactions and proficient asset management within the Lux ecosystem.</h5>
-        </ApplyTypography>
-    } satisfies ElementBlock as Block
+    { blockType: 'space', sizes: { lg: 12 }} satisfies SpaceBlock as Block,
   ]],
 } satisfies ScreenfulBlock as ScreenfulBlock

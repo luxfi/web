@@ -22,33 +22,23 @@ export default {
       {blockType: 'enh-heading', 
         heading: {text: 'Direct Ownership of Digital Assets', level: 1, mb: 6}, 
         byline: {text: byline, level: 6}, 
-      } satisfies EnhHeadingBlock,
-      {blockType: 'space', level: 0} satisfies SpaceBlock,
-      {
-        blockType: 'cta',
+      } satisfies EnhHeadingBlock as Block,
+      {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
+      {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
-          {
-            title: "Compare Cards",
-            href: "/",
-            variant: 'outline',
-          },
-          {
-            title: "Founder Card",
-            href: "/",
-            variant: 'primary',
-          },
+          { title: "Compare Cards", href: "/", variant: 'outline' },
+          { title: "Founder Card", href: "/", variant: 'primary' },
         ]
-      } satisfies CTABlock,
-      { blockType: 'space', level: 0},
-      {
-        blockType: 'element',
+      } satisfies CTABlock as Block,
+      {blockType: 'space'} satisfies SpaceBlock as Block,
+      {blockType: 'element',
         element: <p className='text-xxs italic'>{finePrint}</p>
-      },
+      } satisfies ElementBlock as Block,
     ], 
-    [
+    [ 
     {blockType: 'image',
-      src: '/assets/img/dual-elite-cards-1475x1220.png',
+      src: '/assets/img/cards-dual-chr-psm-1475x1220.png',
       alt: 'cards',
       dim: {w: 1475, h: 1220},
       fullWidthOnMobile: true,
@@ -59,9 +49,9 @@ export default {
           height: 'auto'
         }
       }
-    } satisfies ImageBlock,
+    } satisfies ImageBlock as Block,
     {blockType: 'element',
       element: <p className='w-full text-sm text-muted-1 !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Founder Card</p>
     } as Block,
-  ], ], 
+  ]], 
 } as ScreenfulBlock
