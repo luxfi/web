@@ -15,7 +15,7 @@ const TrustLogosGrid: React.FC = () => (
   <div 
     className={
       'not-typography flex flex-row flex-wrap lg:flex-nowrap justify-center sm:px-[8vw] md:justify-between items-center ' + 
-      'mt-[5vh] lg:px-0 lg:mt-[8vh] gap-4 text-foreground w-full lg:mx-auto max-w-screen-lg'
+      'sm:mt-3 md:mt-[5vh] lg:px-0 lg:mt-[8vh] gap-4 text-foreground w-full lg:mx-auto max-w-screen-lg'
     }
   >
     <Image src='/assets/img/logos/logo_vera.png' width={138} height={37} alt='Vera logo' className={lgclx}/>
