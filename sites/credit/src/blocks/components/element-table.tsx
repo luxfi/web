@@ -36,7 +36,7 @@ const ElementTableBlockComponent: React.FC<BlockComponentProps> = ({
     <tr className='!border-0 '>
     {columns.map((tdElements, columnIndex) => ( 
       <th key={columnIndex} className={'!py-0 !px-1 relative ' +
-        ((columnIndex === 0) ? '' : 'w-1/4 group border-transparent border hover:border-muted-1 ') +
+        ((columnIndex === 0) ? '' : 'w-1/4 group border-transparent border hover:border-muted-1 active:border-accent ') +
         bgClassFromLocation(rowIndex, columnIndex)} 
       >
         {tdElements.element}
