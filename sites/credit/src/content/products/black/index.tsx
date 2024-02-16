@@ -9,7 +9,7 @@ const imageUrl = '/assets/img/black-flat-578x373.png'
 
 export default {blockType: 'card-detail',
   product : 'black',
-  material: 'Anodized Black Titanium',
+  material: 'Black Annodized Titanium',
   quantity: '',
   image: {
     src: imageUrl,

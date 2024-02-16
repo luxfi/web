@@ -35,7 +35,7 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
   }) => (
     <div className={className}>
       <h1 className='text-foreground font-heading text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>{getProductHeading(b.product)}</h1>
-      <h6 className='text-foreground italic text-sm'>{b.material}</h6>
+      <h6 className='text-muted text-sm'>{b.material}&nbsp;&nbsp;<span className='italic text-xs'>{b.quantity}</span></h6>
     </div>
   )
 
@@ -78,9 +78,9 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
   )
 
   const Fees: React.FC<{ className?:  string}> = ({className=''}) => (
-    <div className={cn('italic text-sm', className)}>
-      <span className='font-bold xs:text-foreground'>{b.initial}</span>&nbsp;Initiation Fee +<br/>
-      <span className='font-bold xs:text-foreground'>{b.annual}</span>&nbsp;Annually after<br/>
+    <div className={cn('text-sm text-foreground text-right', className)}>
+      <span className='font-bold'>{b.initial}</span><span>&nbsp;Initiation Fee</span><br/>
+      <span className='font-bold'>{b.annual}</span><span>&nbsp;Annually after</span>
     </div>
   )
 
