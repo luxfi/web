@@ -19,7 +19,7 @@ export default {
     {blockType: 'element',
       element: <form className="flex gap-2">
       <Input placeholder="Phone number" required />
-      <Button>I WANT IN</Button>
+      <Button type='submit' formTarget='_self'>I WANT IN</Button>
     </form>
     } as ElementBlock
   ]],
