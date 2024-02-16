@@ -42,8 +42,9 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     outerClx=""
   }) => (
     <div className={cn(
-      'flex flex-col items-end',
+      'md:flex md:flex-col md:items-end',
       'portrait:mr-4 portrait:flex portrait:flex-col portrait:items-end portrait:relative portrait:-top-6', 
+      'sm:mr-4 sm:flex sm:flex-col sm:items-end sm:relative sm:-top-6', 
       outerClx
     )}>
       <ImageBlockComponent 
@@ -58,8 +59,9 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         agent={agent}
         className={imageClx} 
       />
-      <h4 className={'font-sans font-medium text-muted text-base mr-4 relative -top-[7vh] self-end' + 
-        'portrait:hidden portrait:-top-2 portrait:text-xs portrait:font-sans portrait:mb-0'
+      <h4 className={'font-medium text-muted md:text-base mr-4 relative md:-top-pr-10 self-end ' + 
+        'portrait:-top-pr-5 portrait:text-xs portrait:mb-0 ' + 
+        'sm:-top-pr-5 sm:text-xs sm:mb-0'
       }>
         Lux {capitalize(b.product)}
       </h4>
@@ -84,13 +86,16 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     </div>
   )
 
-  const layoutClx = 'md:grid md:grid-cols-3 lg:grid-cols-2 md:gap-6 md:mb-[vh3] ' +
-    'portrait:grid-cols-1'
+  const layoutClx = 'grid md:grid-cols-3 lg:grid-cols-2 md:gap-6 md:mb-[vh3] ' +
+    'portrait:grid-cols-1 sm:grid-cols-1'
 
   return <div className={cn(layoutClx, className)}>
     <div className='md:col-span-2 lg:col-span-1'>
-      <div className='portrait:flex portrait:flex-row  portrait:justify-between'>
-      <div className='flex flex-row portrait:flex-col justify-between portrait:justify-start items-end portrait:items-start '>
+      <div className={'portrait:flex portrait:flex-row  portrait:justify-between ' + 
+      'sm:flex sm:flex-row sm:justify-between md:block'}>
+      <div className={'flex md:flex-row portrait:flex-col sm:flex-col md:justify-between portrait:justify-start ' + 
+        'sm:justify-start md:items-end portrait:items-start sm:items-start'
+      }>
         <Title />
         <Spacer className='landscape:hidden' />
         <Fees />
@@ -101,7 +106,7 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
       <Details />
     </div>
     <div className='flex flex-col md:justify-start justify-center items-center md:pt-10 lg:pt-0'>
-      <ImageArea outerClx='md:max-w-pr-75 portrait:hidden' />
+      <ImageArea outerClx='md:max-w-pr-75 portrait:hidden sm:hidden md:flex' />
       <LinkElement 
         def={{
           title: 'Reserve Now',
@@ -109,7 +114,7 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
           variant: 'primary',
           size: 'lg',
         }} 
-        className='md:text-sm md:min-w-0 md:h-9 portrait:mt-[2vh]'
+        className='md:text-sm md:min-w-0 md:h-9 portrait:mt-[2vh] sm:mt-[2vh] md:mt-0'
       />
     </div>
   </div>
