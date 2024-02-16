@@ -43,7 +43,7 @@ const ProductPage = ({ params, searchParams }: Props) => {
 
   return (<>
     <Header siteDef={siteDef} />
-    <Main className='max-w-screen-xl w-full pt-16 md:pt-2 lx:mx-auto'>
+    <Main className='max-w-screen-xl w-full pt-16 sm:pt-4 portrait:pt-4 lx:mx-auto'>
       {prodBlock.blockType === 'card-detail' ? (
         <CardDetail block={prodBlock} agent={agent} />
       ) : (
