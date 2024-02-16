@@ -1,23 +1,18 @@
 import type { ReactNode } from 'react'
 
-import type { 
-  Block, 
-  CTABlock, 
-  ElementBlock, 
-  EnhHeadingBlock 
-} from '@hanzo/ui/blocks'
+import type { Block } from '@hanzo/ui/blocks'
 
 import type { ImageDef } from '@hanzo/ui/types'
+import type { Product } from '@/types'
 
 interface CardDetailBlock extends Block {
   blockType: 'card-detail'
-  heading: string
+  product: Product
   material: string
   image: ImageDef
-  content?: ReactNode 
-  initiation?: string
-  annual?: string
-  cta?: CTABlock
+  detail: ReactNode 
+  initial: string
+  annual: string
 }
 
 export {

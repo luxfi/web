@@ -13,6 +13,9 @@ export default {
       variant: 'primary',
     }],
   },
-  footer  
-} satisfies SiteDef
+  footer,
+  ext: {
+    buyUrlBase : 'https://pay.lux.credit'
+  }  
+} satisfies SiteDef & { ext: any } as SiteDef
 

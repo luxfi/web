@@ -2,19 +2,18 @@ import React  from 'react'
 import { notFound } from 'next/navigation'
 
 import { Footer, Header } from '@hanzo/ui/common'
-import { Main } from '@hanzo/ui/primitives'
+import { Main, TailwindIndicator } from '@hanzo/ui/primitives'
 import type { Block } from '@hanzo/ui/blocks'
 import { ContentComponent } from '@hanzo/ui/blocks'
 
-import CardDetail from './CardDetail'
+import CardDetail from '@/blocks/components/card-detail'
 
 import { products } from '@/content'
+import type { Product } from '@/types'
 import siteDef from '@/siteDef'
 
-type Products = keyof typeof products
-
 type Props = {
-  params: { slug: Products }
+  params: { slug: Product }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
@@ -33,9 +32,9 @@ export async function generateMetadata({ params}: Props) {
 
 const ProductPage = ({ params, searchParams }: Props) => {
 
-  const product = products[params.slug] as Block
+  const prodBlock = products[params.slug] as Block
   
-  if (!product) {
+  if (!prodBlock) {
     notFound()
   }
 
@@ -44,15 +43,16 @@ const ProductPage = ({ params, searchParams }: Props) => {
 
   return (<>
     <Header siteDef={siteDef} />
-    <Main className=' '>
-      {product.blockType === 'card-detail' ? (
-        <CardDetail block={product} agent={agent} />
+    <Main className='max-w-screen-xl w-full pt-16 md:pt-2 lx:mx-auto'>
+      {prodBlock.blockType === 'card-detail' ? (
+        <CardDetail block={prodBlock} agent={agent} />
       ) : (
-        <ContentComponent blocks={product} agent={agent}/>
+        <ContentComponent blocks={prodBlock} agent={agent}/>
       )}
     </Main>
     <div className='border-t'></div>
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <TailwindIndicator />
   </>)
 }
 
