@@ -16,19 +16,8 @@ const silverVideo = {
   sources: [
     '/assets/video/luxsilver.mp4',
   ],
-    // Determin aspect ration from dims manually...
-    // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-  dim: {
-    md: {
-      w: 1172,
-      h: 1920
-    },
-    lg: {
-      w: 1172,
-      h: 1920
-    },
-  },
-  sizing: { vh: 30, mobile: {vw: 70} }
+  dim: {md: { w: 1172, h: 1920}, lg: {w: 1172, h: 1920}},
+  sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
 const creditVideo = {
@@ -39,19 +28,8 @@ const creditVideo = {
     '/assets/video/LUX-CARD-transcode.mp4', 
     '/assets/video/LUX-CARD-transcode.webm'
   ],
-    // Determin aspect ration from dims manually...
-    // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
-  dim: {
-    md: {
-      w: 758,
-      h: 588
-    },
-    lg: {
-      w: 758,
-      h: 588
-    },
-  },
-  sizing: { vh: 30, mobile: {vw: 70} }
+  dim: {md: { w: 758, h: 588}, lg: {w: 758, h: 588}},
+  sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
 export default [
