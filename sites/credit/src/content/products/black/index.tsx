@@ -1,9 +1,4 @@
-import type { 
-  Block, 
-  CTABlock, 
-  ElementBlock, 
-  EnhHeadingBlock 
-} from '@hanzo/ui/blocks'
+import type { Block } from '@hanzo/ui/blocks'
 
 import type { ImageDef } from '@hanzo/ui/types'
 
@@ -15,6 +10,7 @@ const imageUrl = '/assets/img/black-flat-578x373.png'
 export default {blockType: 'card-detail',
   product : 'black',
   material: 'Anodized Black Titanium',
+  quantity: '',
   image: {
     src: imageUrl,
     alt: 'Black Lux Card',

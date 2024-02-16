@@ -57,6 +57,7 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
       <ImageBlockComponent 
         block={{blockType: 'image',
           ...b.image,
+          alt: `Lux ${capitalize(b.product)} Card`,
           specifiers: '',
           props: { style: {
             width: '100%',
@@ -67,8 +68,8 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         className={imageClx} 
       />
       <h4 className={cn('font-medium text-muted md:text-sm mr-4 relative self-end ' + 
-        'portrait:text-xxs portrait:mb-0 portrait:mr-2 portrait:text-muted-2' + 
-        'sm:text-xxs sm:mb-0 sm:mr-2 sm:text-muted-2',
+        'landscape:text-sm portrait:mb-0 portrait:mr-2 portrait:text-muted-2 ' + 
+        'text-xxs sm:mb-0 sm:mr-2 sm:text-muted-2',
         labelClx)}
       >
         Lux {capitalize(b.product)}
@@ -125,10 +126,10 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
   return agent === 'phone' ? (
     <div className={cn(mobileLayoutClx, className)}>
       <Title phone />
-      <div className='flex flex-row justify-between items-end mt-1 ' style={{flexBasis: 'min-content'}}>
-        <div>
-        <Fees className='text-xs text-muted'/>
-        <ReserveButton size='sm' className='ml-1 mt-3'/>
+      <div className='flex flex-row justify-between items-stretch mt-3 ' style={{flexBasis: 'min-content'}}>
+        <div className='flex flex-col justify-between'>
+          <Fees className='text-xs text-muted'/>
+          <ReserveButton size='sm' className='ml-1 mt-3'/>
         </div>
         <ImageArea outerClx='max-w-28 portrait:mr-2' labelClx='portrait:hidden'/>
       </div>
@@ -137,23 +138,23 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
   ) : (
     <div className={cn(layoutClx, className)}>
       <div className='md:col-span-2 lg:col-span-1'>
-        <div className={'portrait:flex portrait:flex-row portrait:justify-between ' + 
+        <div className={'mb-3 portrait:flex portrait:flex-row portrait:justify-between ' + 
           'sm:flex sm:flex-row sm:justify-between md:block'}
         >
-          <div className={'flex md:flex-row portrait:flex-col sm:flex-col md:justify-between portrait:justify-start ' + 
-            'sm:justify-start md:items-end portrait:items-start sm:items-start'
+          <div className={'flex md:flex-row portrait:flex-col sm:flex-col ' + 
+            'sm:justify-between md:items-end portrait:items-start sm:items-start'
           }>
             <Title />
             <Spacer className='sm:h-2 landscape:md:h-2' />
-            <Fees />
+            <Fees className='ml-1' />
           </div>
-          <ImageArea outerClx='sm:max-w-32 landscape:md:hidden' />
+          <ImageArea outerClx='sm:max-w-28 landscape:md:hidden' labelClx='sm:hidden portrait:hidden' />
         </div>
-        <Spacer className='landscape:md:hidden' />
+        <Spacer className='landscape:hidden sm:hidden' />
         <Details className='md:mt-4'/>
       </div>
       <div className='flex flex-col justify-center items-center md:pt-10 '>
-        <ImageArea outerClx='md:max-w-pr-75 portrait:hidden sm:hidden md:flex' />
+        <ImageArea outerClx='2xl:max-w-pr-50 xl:max-w-pr-55 lg:max-w-pr-50 md:max-w-pr-70 portrait:hidden sm:hidden md:flex' />
         <ReserveButton size='lg' className='sm:text-sm !min-w-0 max-w-200 sm:h-9 portrait:mt-[2vh] sm:mt-[2vh] '/>
       </div>
     </div>

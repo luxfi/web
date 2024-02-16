@@ -9,6 +9,7 @@ interface CardDetailBlock extends Block {
   blockType: 'card-detail'
   product: Product
   material: string
+  quantity: string
   image: ImageDef
   detail: ReactNode 
   initial: string
