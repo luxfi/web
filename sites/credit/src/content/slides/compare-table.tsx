@@ -47,8 +47,8 @@ const CardButton : React.FC<{
   </Link>
 )
 
-export default   {
-  blockType: 'screenful',
+export default {blockType: 'screenful',
+  anchorId: 'compare',
   specifiers: 'narrow-gutters constrain-to-lg',
   columnSpecifiers: ['center top'],
   contentColumns: [[

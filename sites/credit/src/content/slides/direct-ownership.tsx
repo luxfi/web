@@ -27,7 +27,7 @@ export default {
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
-          { title: "Compare Cards", href: "/", variant: 'outline' },
+          { title: "Compare Cards", href: "/#compare", variant: 'outline' },
           { title: "Founder Card", href: "/founder", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,

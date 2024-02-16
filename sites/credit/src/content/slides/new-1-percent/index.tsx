@@ -29,7 +29,7 @@ export default {blockType: 'screenful',
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
-          { title: "View Benefits", href: "/", variant: 'outline' },
+          { title: "View Benefits", href: "/#compare", variant: 'outline' },
           { title: "Reserve", href: "/black", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,

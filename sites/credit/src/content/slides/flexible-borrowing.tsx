@@ -42,7 +42,7 @@ export default {blockType: 'screenful',
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
-          { title: "Compare Cards", href: "/", variant: 'outline' },
+          { title: "Compare Cards", href: "/#compare", variant: 'outline' },
           { title: "Sovereign Card", href: "/sovereign", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
