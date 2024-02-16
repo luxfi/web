@@ -42,7 +42,7 @@ export default [
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'SILVER', level: 3, mb: 5},
+        heading: {text: 'SILVER', level: 3},
       } as EnhHeadingBlock,
     ]
   } as CarteBlancheBlock,
@@ -55,7 +55,7 @@ export default [
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'CREDIT', level: 3, mb: 5},
+        heading: {text: 'CREDIT', level: 3},
       } as EnhHeadingBlock,
     ]
   } as CarteBlancheBlock,

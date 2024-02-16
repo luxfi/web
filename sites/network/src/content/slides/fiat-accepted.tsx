@@ -13,28 +13,23 @@ export default {
   blockType: 'screenful',
   columnSpecifiers: ['center vert-center'],
   contentColumns: [[
-    {
-      blockType: 'enh-heading',
+    {blockType: 'enh-heading',
       icon: '/assets/img/icon-fiat-coins.png',
       iconSize: 40,
       preheading: { text: 'NATIVE FIAT CURRENCY INTEGRATION', level: 5, mb: 2 },
       heading: { text: 'FIAT ACCEPTED', level: 1 },
     } as EnhHeadingBlock,
-    { blockType: 'space', level: 2 },
-    {
-      blockType: 'grid',
+    {blockType: 'space', level: 2},
+    {blockType: 'grid',
       grid: COMMON_GRID_2_COL,
       cells: [
-        {
-          blockType: 'grid',
+        {blockType: 'grid',
           grid: COMMON_GRID_1_COL,
           cells: [
-            {
-              blockType: 'element',
+            {blockType: 'element',
               element: <p>{byline}</p>,
             } as ElementBlock,
-            {
-              blockType: 'bullet-cards',
+            {blockType: 'bullet-cards',
               grid: COMMON_GRID_1_COL,
               specifiers: 'no-card-border',
               iconSize: 56,
@@ -55,8 +50,7 @@ export default {
             } as BulletCardsBlock
           ]
         } as GridBlock,
-        {
-          blockType: 'image',
+        {blockType: 'image',
           src: '/assets/img/fiat-purple-p-800.png',
           alt: 'Fiat Accepted',
           dim: { h: 380, w: 300 }

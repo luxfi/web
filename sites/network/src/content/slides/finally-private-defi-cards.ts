@@ -20,7 +20,7 @@ export default [
     }  as ImageBlock],
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
-      heading: { text: 'LUX BRIDGE', level: 3},
+      heading: { text: 'LUX BRIDGE', level: 3, mb: 4},
       byline: { text: bylines[0], level: 0}
     }
   } as CarteBlancheBlock,
@@ -34,7 +34,7 @@ export default [
     } as ImageBlock],
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
-      heading: { text: 'LUX ZCHAIN', level: 3},
+      heading: { text: 'LUX ZCHAIN', level: 3, mb: 4},
       byline: { text: bylines[1], level: 0}
     }
   } as CarteBlancheBlock,

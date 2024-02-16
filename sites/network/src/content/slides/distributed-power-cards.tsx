@@ -21,23 +21,19 @@ const bylines = [
 ]
 
 export default [
-  {
-    blockType: 'card',
+  {blockType: 'card',
     specifiers: 'content-top ghost',
     content: cardContent(headlines[0], bylines[0]),
   } as CardBlock,
-  {
-    blockType: 'card',
+  {blockType: 'card',
     specifiers: 'content-top ghost',
     content: cardContent(headlines[1], bylines[1]),
   } as CardBlock,
-  {
-    blockType: 'card',
+  {blockType: 'card',
     specifiers: 'content-top ghost',
     content: cardContent(headlines[2], bylines[2]),
   } as CardBlock,
-  {
-    blockType: 'card',
+  {blockType: 'card',
     specifiers: 'content-top ghost',
     content: cardContent(headlines[3], bylines[3]),
   } as CardBlock,
