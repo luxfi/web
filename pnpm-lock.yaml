@@ -77,9 +77,9 @@ importers:
 
   sites/credit:
     dependencies:
-      '@luxdefi/ui':
-        specifier: 0.5.10
-        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+      '@hanzo/ui':
+        specifier: 0.5.13
+        version: 0.5.13(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -1815,6 +1815,63 @@ packages:
 
   /@floating-ui/utils@0.2.1:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
+    dev: false
+
+  /@hanzo/ui@0.5.13(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-85xEo8cOv0VpKsEHXKmfHphSgcSVkB06uECy0LbboERc4jyfm37nvJA7noZsb22t72M8T6bgY+DAdz+TGKQ9DQ==}
+    peerDependencies:
+      '@next/mdx': ^14.1.0
+      next: ^14.1.0
+      next-themes: ^0.2.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
+      '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
+      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-icons': 1.3.0(react@18.2.0)
+      '@radix-ui/react-label': 2.0.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-popover': 1.0.7(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-progress': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-scroll-area': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-select': 2.0.0(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-separator': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.54)(react@18.2.0)
+      '@radix-ui/react-switch': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-tabs': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.1)
+      class-variance-authority: 0.7.0
+      clsx: 2.1.0
+      cmdk: 0.2.1(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      lucide-react: 0.307.0(react@18.2.0)
+      markdown-to-jsx: 7.4.1(react@18.2.0)
+      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
+      next-themes: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
+      postcss-selector-parser: 6.0.15
+      react: 18.2.0
+      react-day-picker: 8.10.0(date-fns@3.3.1)(react@18.2.0)
+      react-device-detect: 2.2.3(react-dom@18.2.0)(react@18.2.0)
+      react-dom: 18.2.0(react@18.2.0)
+      react-hook-form: 7.50.0(react@18.2.0)
+      react-intersection-observer: 9.7.0(react-dom@18.2.0)(react@18.2.0)
+      react-social-icons: 6.10.0(react-dom@18.2.0)(react@18.2.0)
+      tailwind-merge: 2.2.1
+      tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
+      tailwindcss-interaction-media: 0.1.0
+      validator: 13.11.0
+      zod: 3.21.4
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - date-fns
+      - tailwindcss
     dev: false
 
   /@hookform/resolvers@3.3.4(react-hook-form@7.50.0):

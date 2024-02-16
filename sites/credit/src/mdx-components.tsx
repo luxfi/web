@@ -1,5 +1,6 @@
 import type { MDXComponents } from 'mdx/types'
-import { MDXLink } from '@luxdefi/ui/primitives'
+import { MDXLink } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
  
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -12,6 +13,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     a: (props) => (
       <MDXLink {...props}/>
+    ),
+    hr: ({className, ...rest}) => (
+      <hr className={cn('w-5/6 h-[1px] text-current', className)} {...rest} />
     ),
     ...components,
   }

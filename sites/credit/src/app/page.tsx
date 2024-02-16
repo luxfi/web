@@ -1,11 +1,12 @@
 import React  from 'react'
 
-import { Footer, Header } from '@luxdefi/ui/common'
-import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@luxdefi/ui/blocks'
+import { Footer, Header } from '@hanzo/ui/common'
+import { TailwindIndicator } from '@hanzo/ui/primitives'
+import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@hanzo/ui/blocks'
 
 import ElementTable from '@/blocks/components/element-table'
 import siteDef from '@/siteDef'
-import tiles from '@/content'
+import { tiles}  from '@/content'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -20,6 +21,7 @@ const Page = ({ searchParams }: Props ) => {
 
   return (<>
     <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
+    
     {tiles.map((banner, index) => (
       <Screenful 
         block={banner} 
@@ -29,7 +31,8 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
-    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-[200px] lg:mx-auto ' />
+    <TailwindIndicator />
   </>)
 }
 

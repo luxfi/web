@@ -1,5 +1,5 @@
 {
-  "name": "@luxdefi/credit",
+  "name": "@hanzo/credit",
   "version": "0.0.2",
   "private": true,
   "scripts": {
@@ -9,11 +9,11 @@
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
     "tc": "tsc --noEmit",
-    "ln:ui": "pnpm link -g @luxdefi/ui",
-    "ul:ui": "pnpm unlink -g @luxdefi/ui"
+    "ln:ui": "pnpm link -g @hanzo/ui",
+    "ul:ui": "pnpm unlink -g @hanzo/ui"
   },
   "dependencies": {
-    "@luxdefi/ui": "0.5.10",
+    "@hanzo/ui": "0.5.13",
     "@next/mdx": "14.1.0",
     "markdown-to-jsx": "^7.3.2",
     "next": "14.1.0",
