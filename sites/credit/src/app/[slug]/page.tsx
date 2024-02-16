@@ -3,13 +3,11 @@ import { notFound } from 'next/navigation'
 
 import { Footer, Header } from '@hanzo/ui/common'
 import { Main, TailwindIndicator } from '@hanzo/ui/primitives'
-import type { Block } from '@hanzo/ui/blocks'
 import { ContentComponent } from '@hanzo/ui/blocks'
-
-import CardDetail from '@/blocks/components/card-detail'
+import CardDetailComponent from '@/blocks/components/card-detail'
 
 import { products } from '@/content'
-import type { Product } from '@/types'
+import type { CardDetail, Product } from '@/types'
 import siteDef from '@/siteDef'
 
 type Props = {
@@ -32,9 +30,9 @@ export async function generateMetadata({ params}: Props) {
 
 const ProductPage = ({ params, searchParams }: Props) => {
 
-  const prodBlock = products[params.slug] as Block
+  const card = products[params.slug] as CardDetail
   
-  if (!prodBlock) {
+  if (!card) {
     notFound()
   }
 
@@ -44,11 +42,7 @@ const ProductPage = ({ params, searchParams }: Props) => {
   return (<>
     <Header siteDef={siteDef} />
     <Main className='max-w-screen-xl w-full pt-16 sm:pt-4 portrait:pt-4 lx:mx-auto'>
-      {prodBlock.blockType === 'card-detail' ? (
-        <CardDetail block={prodBlock} agent={agent} />
-      ) : (
-        <ContentComponent blocks={prodBlock} agent={agent}/>
-      )}
+      <CardDetailComponent block={{blockType: 'card-detail', ...card}} agent={agent} />
     </Main>
     <div className='border-t'></div>
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />

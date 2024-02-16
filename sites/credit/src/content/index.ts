@@ -1,4 +1,6 @@
-import type { Block, ScreenfulBlock } from '@hanzo/ui/blocks'
+import type { ScreenfulBlock } from '@hanzo/ui/blocks'
+import type { CardDetail } from '@/types'
+
 
 import new1Percent from './slides/new-1-percent'
 import keyFeatures from './slides/key-features'
