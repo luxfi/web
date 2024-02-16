@@ -2,7 +2,7 @@ import type { CardDetail } from '@/types'
 import type { ImageDef } from '@hanzo/ui/types'
 
 import MDX_Content from './detail.mdx'
-const imageUrl = '/assets/img/gold-and-silver-angled-tight-900x884.png'
+const imageUrl = '/assets/img/gold-and-silver-angled-tight-900x770.png'
 
 export default {
   level : 'elite',
@@ -13,7 +13,7 @@ export default {
   run: 100000,
   image: {
     src: imageUrl,
-    dim: {w: 900, h: 884} 
+    dim: {w: 900, h: 770} 
   } satisfies ImageDef,
   detail: <MDX_Content />,
   fees: {

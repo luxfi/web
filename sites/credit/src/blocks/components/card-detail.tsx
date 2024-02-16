@@ -70,6 +70,13 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
       'sm:flex sm:flex-col sm:items-end sm:relative ', 
       outerClx
     )}>
+      <h4 className={cn('font-medium text-muted md:text-sm relative self-center ' + 
+        'landscape:text-sm portrait:mb-0  portrait:text-muted-2 ' + 
+        'text-xxs sm:mb-0 sm:text-muted-2',
+        labelClx)}
+      >
+        {capitalize(b.level)}&nbsp;Card
+      </h4>
       <ImageBlockComponent 
         block={{blockType: 'image',
           ...b.image,
@@ -83,13 +90,6 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         agent={agent}
         className={imageClx} 
       />
-      <h4 className={cn('font-medium text-muted md:text-sm mr-4 relative self-end ' + 
-        'landscape:text-sm portrait:mb-0 portrait:mr-2 portrait:text-muted-2 ' + 
-        'text-xxs sm:mb-0 sm:mr-2 sm:text-muted-2',
-        labelClx)}
-      >
-        Lux {capitalize(b.level)}
-      </h4>
     </div>
   )
 
