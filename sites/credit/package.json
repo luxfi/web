@@ -13,7 +13,7 @@
     "ul:ui": "pnpm unlink -g @hanzo/ui"
   },
   "dependencies": {
-    "@hanzo/ui": "0.5.11",
+    "@hanzo/ui": "0.5.13",
     "@next/mdx": "14.1.0",
     "markdown-to-jsx": "^7.3.2",
     "next": "14.1.0",
