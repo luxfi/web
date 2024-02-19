@@ -5,7 +5,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts",
-    "node_modules/@luxdefi/ui"
+    "node_modules/@hanzo/ui"
   ],
   "exclude": ["node_modules"],
   
@@ -16,7 +16,7 @@
       "@/*": ["./src/*"],
       // https://remarkablemark.org/blog/2023/06/30/react-types-reactnode-error/
       "react": ["node_modules/@types/react"],
-      "@luxdefi/ui": ["node_modules/@luxdefi/ui"]
+      "@hanzo/ui": ["node_modules/@hanzo/ui"]
     },
     "plugins": [{"name": "next"}]
   }

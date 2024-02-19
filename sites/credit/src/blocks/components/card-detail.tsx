@@ -10,6 +10,16 @@ import { getProductHeading } from '@/util'
 
 import siteDef from '@/siteDef'
 
+<<<<<<< HEAD
+=======
+const toUSD = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+})
+
+>>>>>>> site/credit
 const Spacer: React.FC<{ className?:  string}> = ({className=''}) => (
   <SpaceBlockComponent block={{blockType: 'space'}} className={className} />
 )
@@ -23,9 +33,22 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
   if (block.blockType !== 'card-detail') {
     return <>card detail block required</>
   }
+<<<<<<< HEAD
 
   const b = block as CardDetailBlock
   
+=======
+  const b = block as CardDetailBlock
+  
+  const Run: React.FC<{run: number}> = ({
+    run
+  }) => (
+    (run === -1) ? null : (
+      <span>&nbsp;&nbsp;<span className='italic text-xs'>{`1/${b.run.toLocaleString()}`}</span></span>
+    )
+  )
+
+>>>>>>> site/credit
   const Title: React.FC<{ 
     className?:  string
     phone?: boolean
@@ -34,8 +57,15 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     phone=false
   }) => (
     <div className={className}>
+<<<<<<< HEAD
       <h1 className='text-foreground font-heading text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>{getProductHeading(b.product)}</h1>
       <h6 className='text-muted text-sm'>{b.material}&nbsp;&nbsp;<span className='italic text-xs'>{b.quantity}</span></h6>
+=======
+      <h1 className='text-foreground font-heading text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
+        {getProductHeading(b.level)}
+      </h1>
+      <h6 className='text-muted text-sm'>{b.material.short}<Run run={b.run}/></h6>
+>>>>>>> site/credit
     </div>
   )
 
@@ -54,10 +84,24 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
       'sm:flex sm:flex-col sm:items-end sm:relative ', 
       outerClx
     )}>
+<<<<<<< HEAD
       <ImageBlockComponent 
         block={{blockType: 'image',
           ...b.image,
           alt: `Lux ${capitalize(b.product)} Card`,
+=======
+      <h4 className={cn('font-medium text-muted md:text-sm relative self-center ' + 
+        'landscape:text-sm portrait:mb-0  portrait:text-muted-2 ' + 
+        'text-xxs sm:mb-0 sm:text-muted-2',
+        labelClx)}
+      >
+        {capitalize(b.level)}&nbsp;Card
+      </h4>
+      <ImageBlockComponent 
+        block={{blockType: 'image',
+          ...b.image,
+          alt: `Lux ${capitalize(b.level)} Card`,
+>>>>>>> site/credit
           specifiers: '',
           props: { style: {
             width: '100%',
@@ -67,6 +111,7 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         agent={agent}
         className={imageClx} 
       />
+<<<<<<< HEAD
       <h4 className={cn('font-medium text-muted md:text-sm mr-4 relative self-end ' + 
         'landscape:text-sm portrait:mb-0 portrait:mr-2 portrait:text-muted-2 ' + 
         'text-xxs sm:mb-0 sm:mr-2 sm:text-muted-2',
@@ -74,13 +119,20 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
       >
         Lux {capitalize(b.product)}
       </h4>
+=======
+>>>>>>> site/credit
     </div>
   )
 
   const Fees: React.FC<{ className?:  string}> = ({className=''}) => (
     <div className={cn('text-sm text-foreground text-right', className)}>
+<<<<<<< HEAD
       <span className='font-bold'>{b.initial}</span><span>&nbsp;Initiation Fee</span><br/>
       <span className='font-bold'>{b.annual}</span><span>&nbsp;Annually after</span>
+=======
+      <span className='font-bold'>{toUSD.format(b.fees.initial)}</span><span>&nbsp;Initiation Fee</span><br/>
+      <span className='font-bold'>{toUSD.format(b.fees.annual)}</span><span>&nbsp;Annually after</span>
+>>>>>>> site/credit
     </div>
   )
 
@@ -94,7 +146,11 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     <LinkElement 
       def={{
         title: 'Reserve Now',
+<<<<<<< HEAD
         href: siteDef.ext!.buyUrlBase + `/${b.product}`,
+=======
+        href: siteDef.ext!.buyUrlBase + `/${b.level}`,
+>>>>>>> site/credit
         variant: 'primary',
         size,
       }} 
@@ -118,7 +174,11 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     </div>
   )
 
+<<<<<<< HEAD
   const layoutClx = 'grid md:grid-cols-3 lg:grid-cols-2 md:gap-6 md:mb-[vh3] ' +
+=======
+  const layoutClx = 'grid md:grid-cols-3 md:gap-6 md:mb-[vh3] ' +
+>>>>>>> site/credit
     'portrait:grid-cols-1 sm:grid-cols-1'
 
   const mobileLayoutClx = 'flex flex-col justify-start items-stretch'
@@ -137,7 +197,11 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     </div>
   ) : (
     <div className={cn(layoutClx, className)}>
+<<<<<<< HEAD
       <div className='md:col-span-2 lg:col-span-1'>
+=======
+      <div className='md:col-span-2'>
+>>>>>>> site/credit
         <div className={'mb-3 portrait:flex portrait:flex-row portrait:justify-between ' + 
           'sm:flex sm:flex-row sm:justify-between md:block'}
         >
@@ -154,7 +218,11 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         <Details className='md:mt-4'/>
       </div>
       <div className='flex flex-col justify-center items-center md:pt-10 '>
+<<<<<<< HEAD
         <ImageArea outerClx='2xl:max-w-pr-50 xl:max-w-pr-55 lg:max-w-pr-50 md:max-w-pr-70 portrait:hidden sm:hidden md:flex' />
+=======
+        <ImageArea outerClx='md:flex md:max-w-pr-70 portrait:hidden sm:hidden ' />
+>>>>>>> site/credit
         <ReserveButton size='lg' className='sm:text-sm !min-w-0 max-w-200 sm:h-9 portrait:mt-[2vh] sm:mt-[2vh] '/>
       </div>
     </div>

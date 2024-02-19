@@ -1,18 +1,10 @@
 import type { 
   BulletCardsBlock,
-  CTABlock, 
-  EnhHeadingBlock, 
-  ImageBlock, 
-  ScreenfulBlock, 
-} from '@luxdefi/ui/blocks'
-
-import fireworks from './fireworks-bg'
-
-import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
+} from '@hanzo/ui/blocks'
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'},
     {blockType: 'space', level: 6},
