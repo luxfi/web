@@ -63,17 +63,17 @@ const AuthUiComponent: React.FC<{redirectUrl?: string, getStartedUrl?: string}> 
   }
 
   return (
-    <ApplyTypography className='w-full text-primary-fg'>
-      <div className='w-full max-w-[30rem] mx-auto flex flex-col gap-4 text-center'>
+    <ApplyTypography className='w-full'>
+      <div className='w-full max-w-[30rem] mx-auto'>
       {user ? (
-        <>
+        <div className='flex flex-col text-center gap-4'>
           <h3>Welcome!</h3>
           <p>You are signed in as {user.email}</p>
           <div className='flex gap-4 items-center justify-center'>
             <Button onClick={() => signOut(auth)} variant='outline'>Sign Out</Button>
             {getStartedUrl && <Button variant='primary' onClick={() => router.push(getStartedUrl)}>GET STARTED</Button>}
           </div>
-        </>
+        </div>
       ) : (
         <AuthComponent redirectUrl={redirectUrl}/>
       )}
