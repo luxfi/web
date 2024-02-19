@@ -78,8 +78,8 @@ importers:
   sites/credit:
     dependencies:
       '@hanzo/ui':
-        specifier: 0.5.13
-        version: 0.5.13(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: 0.5.14
+        version: 0.5.14(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -2070,8 +2070,8 @@ packages:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: false
 
-  /@hanzo/ui@0.5.13(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-85xEo8cOv0VpKsEHXKmfHphSgcSVkB06uECy0LbboERc4jyfm37nvJA7noZsb22t72M8T6bgY+DAdz+TGKQ9DQ==}
+  /@hanzo/ui@0.5.14(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-LvtmqHoXfRwKHJutE8Lq8I8irCZezDbX1Vj9PAgOW3v2FdTGRTqMTH5D0uoLagPAdE8i0HfSKUPaVycL7ZQNpA==}
     peerDependencies:
       '@next/mdx': ^14.1.0
       next: ^14.1.0
