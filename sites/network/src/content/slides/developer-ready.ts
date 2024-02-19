@@ -1,13 +1,10 @@
-import type { 
-  CarteBlancheBlock,
-  CTABlock, 
+import type {
   EnhHeadingBlock,
-  GridBlock, 
-  ImageBlock, 
+  GridBlock,
   ScreenfulBlock, 
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
-import { COMMON_GRID_2_COL } from '@luxdefi/ui/types'
+import { COMMON_GRID_2_COL } from '@hanzo/ui/types'
 
 import cells from './developer-ready-cards'
 
@@ -15,11 +12,11 @@ const byline = 'Build and launch DeFi apps using pre-built smart contracts for f
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top text-align-left'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [
   [
     { blockType: 'enh-heading',
-      specifiers: 'mobile-heading-centered preheading-heading-font',
+      specifiers: 'preheading-heading-font',
       icon: '/assets/img/icon-eth-475.png',
       iconSize: 40,
       preheading: { text: 'EVM PLATFORM', level: 5, mb: 2 },
@@ -32,5 +29,4 @@ export default {
       cells,
     } as GridBlock
   ]],
-  //banner: fireworks, 
 } as ScreenfulBlock
