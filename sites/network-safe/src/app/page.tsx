@@ -15,8 +15,8 @@ const LandingPage = observer(() => {
   const [content, setContent] = useState<Block[]>([
     {blockType: 'enh-heading',
       specifiers: 'byline-center',
-      heading: { text: 'Welcome to Lux Network Safe.', mb: 6 },
-      byline: { text: 'The most trusted decentralized asset management and finance protocol.' },
+      heading: { text: 'Welcome to Lux Finance.', mb: 6 },
+      byline: { text: 'The only quantum safe and private protocol for decentralized finance.' },
     } as EnhHeadingBlock
   ])
 
@@ -26,13 +26,14 @@ const LandingPage = observer(() => {
         setContent([
           {blockType: 'enh-heading',
             specifiers: 'byline-center',
-            heading: { text: 'Welcome to Lux Network Safe.', mb: 6 },
-            byline: { text: 'The most trusted decentralized asset management and finance protocol.' },
+            heading: { text: 'Welcome to Lux Finance.', mb: 6 },
+            byline: { text: 'The only quantum safe and private protocol for decentralized finance.' },
           } as EnhHeadingBlock,
           {blockType: 'space', level: 1} as SpaceBlock,
           {blockType: 'enh-heading',
             specifiers: 'center',
-            heading: { text: 'Enter your access code', level: 5 },
+            heading: { text: `You are signed in as ${user.email}.`, level: 0 },
+            byline: { text: 'Enter your access code', level: 4 },
           } as EnhHeadingBlock,
           {blockType: 'element', element: <AccessCodeInput/>} as ElementBlock
         ])

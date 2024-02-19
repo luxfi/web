@@ -1,5 +1,5 @@
 {
-  "name": "@luxdefi/blank",
+  "name": "@luxdefi/network-wallet",
   "version": "0.0.2",
   "private": true,
   "scripts": {
