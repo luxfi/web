@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export default {
-  metadataBase: new URL('https://lux.credit'),
+  metadataBase: new URL('https://wallet.lux.network'),
   title: {
-    default: 'Wallet Lux Network',
-    template: '%s | Wallet Lux Network',
+    default: 'Lux Network Wallet',
+    template: '%s | Network Wallet',
   },
   description: 'Explore your swaps',
   applicationName: 'Lux Bridge Explorer',

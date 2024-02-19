@@ -6,16 +6,12 @@ import '@hanzo/ui/style/globals.css'
 import siteDef from '../siteDef'
 import metadata from '../metadata'
 
-import { AuthServiceProvider } from '@hanzo/auth-widget/service/auth'
-
 const RootLayout: React.FC<PropsWithChildren> = ({
   children
 }) => (
-  <AuthServiceProvider>
-    <RootLayoutCommon siteDef={siteDef}>
-      {children}
-    </RootLayoutCommon>
-  </AuthServiceProvider>
+  <RootLayoutCommon siteDef={siteDef}>
+    {children}
+  </RootLayoutCommon>
 )
 
 export {

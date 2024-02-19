@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export default {
-  metadataBase: new URL('https://lux.credit'),
+  metadataBase: new URL('https://lux.exchange'),
   title: {
     default: 'Lux Exchange',
     template: '%s | Lux Exchange',

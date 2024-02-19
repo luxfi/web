@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export default {
-  metadataBase: new URL('https://lux.credit'),
+  metadataBase: new URL('https://safe.lux.network'),
   title: {
-    default: 'Safe Lux Network',
-    template: '%s | Safe Lux Network',
+    default: 'Lux Network Safe',
+    template: '%s | Lux Network Safe',
   },
   description: 'Explore your swaps',
   applicationName: 'Lux Bridge Explorer',
