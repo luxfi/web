@@ -1,16 +1,41 @@
 {
-  "name": "@luxdefi/finance",
-  "homepage": "https://lux.finance",
-  "version": "0.1.0",
-  "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
-  "license": "BSD-3-Clause",
+  "name": "@luxdefi/blank",
+  "version": "0.0.2",
   "private": true,
-  "description": "Marketing site for Lux Safe and Lux Finance ecosystem",
   "scripts": {
-    "dev": "http-server ./static-root"
+    "stat": "http-server ./static-site",
+    "dev": "next dev",
+    "build": "next build",
+    "prod": "next start",
+    "cn": "rm -rf ./.next",
+    "clean": "rm -rf ./.next && rm -rf node_modules",
+    "tc": "tsc --noEmit",
+    "ln:ui": "pnpm link -g @hanzo/ui",
+    "ul:ui": "pnpm unlink -g @hanzo/ui"
   },
-  "keywords": [],
   "dependencies": {
+    "@hanzo/ui": "0.5.15",
+    "@next/mdx": "14.1.0",
+    "markdown-to-jsx": "^7.3.2",
+    "next": "14.1.0",
+    "next-themes": "^0.2.1",
+    "postcss-selector-parser": "^6.0.13",
+    "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@mdx-js/react": "^3.0.0",
+    "@mdx-js/loader": "^3.0.0",
+    "@svgr/webpack": "^8.1.0",
+    "@types/mdx": "^2.0.9",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   }
 }

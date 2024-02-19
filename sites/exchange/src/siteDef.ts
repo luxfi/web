@@ -4,7 +4,7 @@ import mainCommon from '@hanzo/ui/siteDef/main-nav'
 import {default as commonFooterCols} from '@hanzo/ui/siteDef/footer'
 
 export default {
-  currentAs: 'https://lux.blank',
+  currentAs: 'https://lux.exchange',
   nav: {
     common: mainCommon,
     featured: [{
