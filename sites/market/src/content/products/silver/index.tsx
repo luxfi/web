@@ -27,8 +27,8 @@ export default {
       blockType: 'card',
       specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
-      content: <MiniChart symbol='SILVER' exchange='TVC' /> 
-    } 
+      content: <MiniChart symbol='SILVER' exchange='TVC' />
+    }
   },
   blocks: [
     {
@@ -40,8 +40,8 @@ export default {
       specifiers: 'media-left content-left heading-style-title',
       title: 'NEXT MINT',
       content: markdown(
-`Available: 10,000,100 oz<br/> 
-Price: $20 / oz<br/> 
+`Available: 10,000,100 oz<br/>
+Price: $20 / oz<br/>
 Spot price: ~$25 / oz`
       ),
       video,
@@ -51,18 +51,18 @@ Spot price: ~$25 / oz`
       elements: [
         {
           title: "Buy Now",
-          href: "https://opensea.io/collection/lux-silver-base-edition",
+          href: "https://mint.lux.network/silver",
           external: true,
           newTab: false,
           variant: 'primary',
-        },         
+        },
         {
           href: 'https://docs.lux.network',
           title: 'Read More',
           external: true,
           newTab: false,
           variant: 'outline'
-        } 
+        }
       ]
     } as C.CTABlock,
     {

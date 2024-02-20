@@ -24,7 +24,7 @@ export default {
       blockType: 'card',
       specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
-      content: <MiniChart symbol='GOLD' /> 
+      content: <MiniChart symbol='GOLD' />
     }
   },
   blocks: [
@@ -48,7 +48,7 @@ Spot price:: ~$2050 / oz
       elements: [
         {
           title: 'Buy Now',
-          href: "https://opensea.io/collection/lux-gold-base-edition",
+          href: "https://mint.lux.network/gold",
           external: true,
           newTab: false,
         },
@@ -58,7 +58,7 @@ Spot price:: ~$2050 / oz
           external: true,
           newTab: false,
           variant: 'outline'
-        } 
+        }
       ]
     } as C.CTABlock,
   ] as C.Block[]
