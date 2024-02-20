@@ -1,5 +1,4 @@
 import video from './video'
-import modal from './waitlist-modal'
 
 export default{
   blockType: 'banner',
@@ -15,12 +14,11 @@ export default{
         variant: 'outline'
       },
       {
-        text: 'Waitlist',
-        props: { variant: 'primary' },
-        action: {
-          type: 'modal',
-          def: modal
-        }
+        title: "Buy Now",
+        href: "https://mint.lux.network/credit/black",
+        external: true,
+        newTab: false,
+        variant: 'primary'
       },
     ]
   }
