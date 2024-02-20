@@ -4,11 +4,11 @@ import type {
   EnhHeadingBlock, 
   ImageBlock, 
   ScreenfulBlock, 
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 import fireworks from './fireworks-bg'
 
-import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 export default {
   blockType: 'screenful',

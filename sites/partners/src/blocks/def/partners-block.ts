@@ -1,4 +1,4 @@
-import type { Block, HeadingBlock } from '@luxdefi/ui/blocks'
+import type { Block, HeadingBlock } from '@hanzo/ui/blocks'
 
 import type PartnerCardBlock from './partner-card-block'
 

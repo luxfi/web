@@ -4,7 +4,7 @@ import type {
   ImageBlock, 
   ScreenfulBlock,
   Block, 
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 const bylines = [
   'Deploying smart contracts on the Lux Proof of Stake Network is much more energy efficient compared to Proof of Work blockchains, which enables lower costs and increases scalability.',

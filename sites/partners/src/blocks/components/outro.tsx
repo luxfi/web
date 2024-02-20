@@ -1,7 +1,7 @@
 import React from "react"
 
-import { EnhHeadingBlockComponent } from "@luxdefi/ui/blocks"
-import CtaBlockComponent from "@luxdefi/ui/blocks/components/cta-block"
+import { EnhHeadingBlockComponent } from "@hanzo/ui/blocks"
+import CtaBlockComponent from "@hanzo/ui/blocks/components/cta-block"
 
 import outro from "@/content/outro"
 

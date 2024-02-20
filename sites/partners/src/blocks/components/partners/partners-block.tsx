@@ -1,6 +1,6 @@
 import React from "react"
 
-import { type Block, HeadingBlockComponent } from "@luxdefi/ui/blocks"
+import { type Block, HeadingBlockComponent } from "@hanzo/ui/blocks"
 
 import type PartnersBlock from "@/blocks/def/partners-block"
 import PartnerCardBlockComponent from "./partner-card-block"

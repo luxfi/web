@@ -1,7 +1,7 @@
-import type { SiteDef } from '@luxdefi/ui/types'
+import type { SiteDef } from '@hanzo/ui/types'
 
-import mainCommon from '@luxdefi/ui/siteDef/main-nav'
-import {default as commonFooterCols} from '@luxdefi/ui/siteDef/footer'
+import mainCommon from '@hanzo/ui/siteDef/main-nav'
+import {default as commonFooterCols} from '@hanzo/ui/siteDef/footer'
 
 export default {
   currentAs: 'https://lux.blank',

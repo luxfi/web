@@ -1,8 +1,8 @@
 
 import React  from 'react'
 
-import type { Dimensions, TShirtSize } from '@luxdefi/ui/types'
-import  { type Block, VideoBlockComponent, CTABlockComponent } from '@luxdefi/ui/blocks'
+import type { Dimensions, TShirtSize } from '@hanzo/ui/types'
+import  { type Block, VideoBlockComponent, CTABlockComponent } from '@hanzo/ui/blocks'
 import type BannerBlock from '@/blocks/def/banner-block'
 
 type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'

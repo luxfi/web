@@ -1,11 +1,11 @@
-import { config } from '@luxdefi/ui/tailwind'
+import { config } from '@hanzo/ui/tailwind'
 
 export default {
   presets: [config],
   content: {
     files: [
       "src/**/*.tsx",
-      './node_modules/@luxdefi/ui/**/*.{ts,tsx}'
+      './node_modules/@hanzo/ui/**/*.{ts,tsx}'
     ]
   },
 } 

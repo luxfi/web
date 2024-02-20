@@ -1,8 +1,8 @@
 import React from "react"
 
-import { type Block, CTABlockComponent, HeadingBlockComponent, ContentComponent } from "@luxdefi/ui/blocks"
-import Badge from "@luxdefi/ui/primitives/badge"
-import { ApplyTypography } from "@luxdefi/ui/primitives"
+import { type Block, CTABlockComponent, HeadingBlockComponent, ContentComponent } from "@hanzo/ui/blocks"
+import Badge from "@hanzo/ui/primitives/badge"
+import { ApplyTypography } from "@hanzo/ui/primitives"
 
 import type ProductCardContentBlock from "@/blocks/def/product-card-content-block"
 

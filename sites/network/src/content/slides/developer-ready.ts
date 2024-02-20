@@ -5,9 +5,9 @@ import type {
   GridBlock, 
   ImageBlock, 
   ScreenfulBlock, 
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
-import { COMMON_GRID_2_COL } from '@luxdefi/ui/types'
+import { COMMON_GRID_2_COL } from '@hanzo/ui/types'
 
 import cells from './developer-ready-cards'
 

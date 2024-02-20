@@ -1,4 +1,4 @@
-import type { Block, ImageBlock } from '@luxdefi/ui/blocks'
+import type { Block, ImageBlock } from '@hanzo/ui/blocks'
 
 interface PartnerCardBlock extends Block {
   blockType: 'partner-card'

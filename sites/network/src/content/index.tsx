@@ -5,8 +5,8 @@ import type {
   ImageBlock, 
   ScreenfulBlock, 
   VideoBlock
-} from '@luxdefi/ui/blocks'
-import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
+} from '@hanzo/ui/blocks'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const fireworks = {
   blockType: 'video',

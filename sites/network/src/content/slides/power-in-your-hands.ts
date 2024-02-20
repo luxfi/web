@@ -3,14 +3,14 @@ import type {
   EnhHeadingBlock, 
   ImageBlock, 
   ScreenfulBlock, 
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 import fireworks from './fireworks-bg'
 
 const byline = 'The only decentralized network of quantum safe blockchains providing institutional-grade, regulatory-compliant access to digital money and real-world assets.'
 
-import type { VideoBlock } from '@luxdefi/ui/blocks/def'
-import { DEF_VIDEO_PROPS } from '@luxdefi/ui/util'
+import type { VideoBlock } from '@hanzo/ui/blocks/def'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const video = {
   blockType: 'video',

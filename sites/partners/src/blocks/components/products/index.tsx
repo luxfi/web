@@ -1,7 +1,7 @@
 import React from "react"
 
-import { CardBlockComponent, ContentComponent, ImageBlockComponent } from "@luxdefi/ui/blocks"
-import { ApplyTypography } from "@luxdefi/ui/primitives"
+import { CardBlockComponent, ContentComponent, ImageBlockComponent } from "@hanzo/ui/blocks"
+import { ApplyTypography } from "@hanzo/ui/primitives"
 
 import productCards from "@/content/product-cards"
 

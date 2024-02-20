@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { type TShirtSize } from '@luxdefi/ui/types'
-import type { Block} from '@luxdefi/ui/blocks/def'
-import { ApplyTypography } from '@luxdefi/ui/primitives'
+import { type TShirtSize } from '@hanzo/ui/types'
+import type { Block} from '@hanzo/ui/blocks/def'
+import { ApplyTypography } from '@hanzo/ui/primitives'
 
 import {
   ContentComponent,
@@ -10,7 +10,7 @@ import {
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
   VideoBlockComponent,
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 

@@ -1,7 +1,7 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport } from '@luxdefi/ui/next/root-layout'
-import '@luxdefi/ui/style/globals.css'
+import { default as RootLayoutCommon, viewport } from '@hanzo/ui/next/root-layout'
+import '@hanzo/ui/style/globals.css'
 
 import siteDef from '../siteDef'
 import metadata from '../metadata'

@@ -1,8 +1,8 @@
-import type * as C from '@luxdefi/ui/blocks/def'
+import type * as C from '@hanzo/ui/blocks/def'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
-import { MiniChart } from '@luxdefi/ui/common'
-import { markdown } from '@luxdefi/ui/util'
+import { MiniChart } from '@hanzo/ui/common'
+import { markdown } from '@hanzo/ui/util'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'

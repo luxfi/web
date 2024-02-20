@@ -1,6 +1,6 @@
-import type { SiteDef } from '@luxdefi/ui/types'
-import common from '@luxdefi/ui/siteDef/main-nav'
-import footer from '@luxdefi/ui/siteDef/footer'
+import type { SiteDef } from '@hanzo/ui/types'
+import common from '@hanzo/ui/siteDef/main-nav'
+import footer from '@hanzo/ui/siteDef/footer'
 
 export default {
   currentAs: 'https://lux.partners',

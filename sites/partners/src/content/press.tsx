@@ -1,7 +1,7 @@
-import type * as C from "@luxdefi/ui/blocks/def"
+import type * as C from "@hanzo/ui/blocks/def"
 
 import type PressCardBlock from "@/blocks/def/press-card-block"
-import { ImageBlockComponent } from "@luxdefi/ui/blocks"
+import { ImageBlockComponent } from "@hanzo/ui/blocks"
 
 export default {
   blockType: "press",

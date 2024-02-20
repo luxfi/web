@@ -1,6 +1,6 @@
 import React from "react"
 
-import { HeadingBlockComponent } from "@luxdefi/ui/blocks"
+import { HeadingBlockComponent } from "@hanzo/ui/blocks"
 
 import press from "@/content/press"
 import PressCardBlockComponent from "./press-card-block"

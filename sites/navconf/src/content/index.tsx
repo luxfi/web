@@ -2,7 +2,7 @@ import type {
   Block,
   CTABlock,
   HeadingBlock,
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 export default [
   { blockType: 'space', level: 1},

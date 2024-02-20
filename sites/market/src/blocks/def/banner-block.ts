@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { Block, CTABlock, VideoBlock } from '@luxdefi/ui/blocks'
+import type { Block, CTABlock, VideoBlock } from '@hanzo/ui/blocks'
 
 interface BannerBlock extends Block {
   blockType: 'banner'

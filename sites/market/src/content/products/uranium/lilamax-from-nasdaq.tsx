@@ -2,7 +2,7 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import { YouTubeEmbed as YouTubeLazyLoad } from '@luxdefi/ui/primitives'
+import { YouTubeEmbed as YouTubeLazyLoad } from '@hanzo/ui/primitives'
 
 const Title: React.FC = () => (
   <div className='relative not-typography h-[30px] w-full overflow-hidden'>

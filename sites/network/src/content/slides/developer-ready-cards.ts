@@ -3,7 +3,7 @@ import type {
   CarteBlancheBlock,
   EnhHeadingBlock,
   ImageBlock, 
-} from '@luxdefi/ui/blocks'
+} from '@hanzo/ui/blocks'
 
 const bylines = [
   'Program using Solidity, Remix, Hardhat, and other familiar tools on the Lux EVM chain. Use ZChain to add security features and our network for regulated financial activities requiring the highest level of compliance.',

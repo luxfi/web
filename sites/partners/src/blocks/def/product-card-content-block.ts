@@ -1,4 +1,4 @@
-import type { Block, CTABlock, ElementBlock, HeadingBlock} from "@luxdefi/ui/blocks"
+import type { Block, CTABlock, ElementBlock, HeadingBlock} from "@hanzo/ui/blocks"
 
 interface ProductCardContentBlock extends Block {
   blockType: "product-card-content"

@@ -1,9 +1,9 @@
 import React  from 'react'
 
-import { Footer, Header } from '@luxdefi/ui/common'
-import { TailwindIndicator, Main } from '@luxdefi/ui/primitives'
+import { Footer, Header } from '@hanzo/ui/common'
+import { TailwindIndicator, Main } from '@hanzo/ui/primitives'
 
-import { ContentComponent as Content } from '@luxdefi/ui/blocks'
+import { ContentComponent as Content } from '@hanzo/ui/blocks'
 
 import siteDef from '@/siteDef'
 import blocks from '@/content'

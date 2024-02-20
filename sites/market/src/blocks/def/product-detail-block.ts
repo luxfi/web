@@ -5,7 +5,7 @@ import type {
   VideoBlock,
   AccordianBlock,
   CardBlock
-} from  '@luxdefi/ui/blocks/def'
+} from  '@hanzo/ui/blocks/def'
 
 interface ProductDetailBlock extends Block {
   blockType: 'product-detail'

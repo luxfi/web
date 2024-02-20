@@ -1,4 +1,4 @@
-import type { Block, HeadingBlock, ImageBlock } from '@luxdefi/ui/blocks'
+import type { Block, HeadingBlock, ImageBlock } from '@hanzo/ui/blocks'
 
 interface PartnersLogosBlock extends Block {
   blockType: 'partners-logos'

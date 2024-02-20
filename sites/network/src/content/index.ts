@@ -1,4 +1,4 @@
-import type { ScreenfulBlock } from '@luxdefi/ui/blocks'
+import type { ScreenfulBlock } from '@hanzo/ui/blocks'
 
 import keyFeatures from './slides/key-features'
 import power from './slides/power-in-your-hands'
