@@ -1,8 +1,6 @@
 import type { 
   GridBlock, 
-  EnhHeadingBlock, 
-  ImageBlock, 
-  ScreenfulBlock,
+  EnhHeadingBlock,
   Block, 
 } from '@hanzo/ui/blocks'
 
@@ -16,7 +14,7 @@ const bylines = [
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', 
       icon: '/assets/img/icon-speed-475.png',
@@ -47,7 +45,7 @@ export default {
         {blockType: 'enh-heading',
           heading: {text: 'Fastest cross-chain transactions.', level: 4}, 
           byline: {text: bylines[3], level: 6}, 
-        },
+        } as EnhHeadingBlock,
       ] 
     } as GridBlock
   ]]

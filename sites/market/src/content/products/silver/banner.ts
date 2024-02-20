@@ -16,7 +16,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "https://lux.town",
+        href: "https://mint.lux.network/silver",
         external: true,
         newTab: false,
         variant: 'primary'

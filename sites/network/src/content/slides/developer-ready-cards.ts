@@ -1,7 +1,6 @@
 import type { 
   Block,
   CarteBlancheBlock,
-  EnhHeadingBlock,
   ImageBlock, 
 } from '@hanzo/ui/blocks'
 

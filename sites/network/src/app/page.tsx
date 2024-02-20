@@ -29,11 +29,18 @@ import tiles from '@/content'
         block={banner} 
         initialInView={index === 0} 
         agent={agent}
-        snapTile
         key={`section-${index}`} 
       />
     ))}
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <ChatWidget
+      title='LUX'
+      subtitle='AI'
+      chatbotUrl='https://lux.chat/iframe'
+      suggestedQuestions={[
+        { heading: 'Lux network features', message: 'What are the key features of Lux network?', icon: 'ShieldFlashLineIcon' },
+      ]}
+    />
   </>)
 }
 

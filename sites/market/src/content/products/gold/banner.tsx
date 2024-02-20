@@ -17,7 +17,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "https://lux.town",
+        href: "https://mint.lux.network/gold",
         external: true,
         newTab: false,
         variant: 'primary'

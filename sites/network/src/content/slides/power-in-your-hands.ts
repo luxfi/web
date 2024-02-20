@@ -1,7 +1,6 @@
 import type { 
   CTABlock, 
   EnhHeadingBlock, 
-  ImageBlock, 
   ScreenfulBlock, 
 } from '@hanzo/ui/blocks'
 

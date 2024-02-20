@@ -3,12 +3,12 @@ import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'
 import accordian from './accordian'
-import modal from './waitlist-modal'
+//import modal from './waitlist-modal'
 
 export default {
   blockType: 'product-detail',
   title: 'LUX CREDIT',
-  desc: 'Unlock a world of digital assets with the Lux Card, your gateway to seamless transactions and asset management in the Lux ecosystem.',
+  desc: 'Unlock a world of DeFi with the Lux Credit Card, and spend while saving in the Lux ecosystem.',
   video: {...video, sizing: { vh: 60 }},
   accordian,
   blocks: [
@@ -16,15 +16,17 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          text: 'Waitlist',
-          props: {
-            variant: 'primary',
-            size: 'lg', 
-          },
-          action: {
-            type: 'modal',
-            def: modal
-          }
+          href: 'https://docs.lux.network',
+          title: 'Read More',
+          external: true,
+          newTab: false,
+          variant: 'outline'
+        },
+        {
+          title: 'Buy Now',
+          href: "https://mint.lux.network/credit/black",
+          external: true,
+          newTab: false,
         },
       ]
     } as C.CTABlock

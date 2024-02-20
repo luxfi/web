@@ -19,11 +19,11 @@ export default {
   banners: [
     silver,
     gold,
-    coin,
-    //uranium,
     credit,
     validator,
-    pass,
+    coin,
+    //uranium,
+    //pass,
   ] as BannerBlock[],
 
   bottom: {
