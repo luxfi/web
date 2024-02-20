@@ -1,4 +1,4 @@
-import type * as C from "@luxdefi/ui/blocks/def"
+import type * as C from "@hanzo/ui/blocks/def"
 
 import type PartnersBlock from "@/blocks/def/partners-block"
 import type PartnerCardBlock from "@/blocks/def/partner-card-block"

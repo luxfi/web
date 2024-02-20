@@ -1,6 +1,14 @@
 import type { 
   BulletCardsBlock,
+  CTABlock, 
+  EnhHeadingBlock, 
+  ImageBlock, 
+  ScreenfulBlock, 
 } from '@hanzo/ui/blocks'
+
+import fireworks from './fireworks-bg'
+
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 export default {
   blockType: 'screenful',

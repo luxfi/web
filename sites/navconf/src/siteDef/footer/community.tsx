@@ -1,5 +1,5 @@
-import type { LinkDef } from '@luxdefi/ui/types'
-import { Icons } from '@luxdefi/ui/common'
+import type { LinkDef } from '@hanzo/ui/types'
+import { Icons } from '@hanzo/ui/common'
 
   // @ts-ignore (will build in project that has @svgr support)
 import SVG_warp_logo from './svg/warpcast-logo.svg'

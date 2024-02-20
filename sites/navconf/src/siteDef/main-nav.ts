@@ -1,4 +1,4 @@
-import type LinkDef from '@luxdefi/ui/types/link-def'
+import type LinkDef from '@hanzo/ui/types/link-def'
 
 export default [
   {

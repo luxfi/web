@@ -1,10 +1,10 @@
 import React from "react"
 
-import { HeadingBlockComponent } from "@luxdefi/ui/blocks"
-import { ApplyTypography } from "@luxdefi/ui/primitives"
+import { HeadingBlockComponent } from "@hanzo/ui/blocks"
+import { ApplyTypography } from "@hanzo/ui/primitives"
 
 import ecosystem from "@/content/ecosystem"
-import CtaBlockComponent from "@luxdefi/ui/blocks/components/cta-block"
+import CtaBlockComponent from "@hanzo/ui/blocks/components/cta-block"
 
 const Ecosystem = () => {
   return (

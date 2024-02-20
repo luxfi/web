@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { ElementBlock } from '@luxdefi/ui/blocks'
+import type { ElementBlock } from '@hanzo/ui/blocks'
 import type BannerBlock from '@/blocks/def/banner-block'
 
 import silver from '../products/silver/banner'

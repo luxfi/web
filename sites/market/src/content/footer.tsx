@@ -1,7 +1,7 @@
 
-import { type CTABlock} from '@luxdefi/ui/blocks/def'
+import { type CTABlock} from '@hanzo/ui/blocks/def'
 
-import { Icons } from '@luxdefi/ui/common'
+import { Icons } from '@hanzo/ui/common'
 
 const SOC_ICON_SIZE = 18
 

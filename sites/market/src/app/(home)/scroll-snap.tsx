@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ApplyTypography } from '@luxdefi/ui/primitives'
-import { Footer } from '@luxdefi/ui/common'
+import { ApplyTypography } from '@hanzo/ui/primitives'
+import { Footer } from '@hanzo/ui/common'
 
 import BannerComponent from '@/blocks/components/banner-block'
 
@@ -16,7 +16,7 @@ const MOBILE_VID_CONSTRAINT = {
 
   // using this approach: 
   // https://stackoverflow.com/a/76066443/11645689
-  // @luxdefi/ui/style/global.css
+  // @hanzo/ui/style/global.css
 const swipeOuter = 'snap-start snap-always h-[100vh] '
   // 44+24=68, 80+24=104
 const swipeInner = 'pt-[68px] md:pt-[104px] pb-[24px] '

@@ -1,4 +1,4 @@
-import type * as C from "@luxdefi/ui/blocks/def"
+import type * as C from "@hanzo/ui/blocks/def"
 
 export default {
   text: {

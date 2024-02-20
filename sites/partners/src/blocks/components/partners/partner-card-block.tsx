@@ -1,7 +1,7 @@
 import React from "react"
 
-import { type Block, ImageBlockComponent } from "@luxdefi/ui/blocks"
-import { ApplyTypography } from "@luxdefi/ui/primitives"
+import { type Block, ImageBlockComponent } from "@hanzo/ui/blocks"
+import { ApplyTypography } from "@hanzo/ui/primitives"
 
 import type PartnerCardBlock from "@/blocks/def/partner-card-block"
 
