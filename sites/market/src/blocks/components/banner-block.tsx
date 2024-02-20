@@ -12,7 +12,7 @@ const BannerBlockComponent: React.FC<{
   videoSize?: TShirtSize
   videoConstraint?: Dimensions
   grouping?: BannerGrouping
-  groupingClasses?: string[] // count should match number of siblings in the chosen grouping 
+  groupingClasses?: string[] // count should match number of siblings in the chosen grouping
   ctaItemClassName?: string
 }> = ({
   block,
@@ -40,14 +40,14 @@ const BannerBlockComponent: React.FC<{
       <div className={'self-center flex flex-col justify-center items-center text-center ' + mediaClasses}>
         {banner.contentBefore && banner.contentBefore}
         {banner.video && (
-          <VideoBlockComponent className='self-center mt-6 not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
+          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
         )}
         {banner.contentAfter && banner.contentAfter }
       </div>
       {banner.cta && (
         <div className={'flex flex-row items-stretch gap-2 sm:gap-6 sm:justify-center ' + ctaClasses}>
           <CTABlockComponent block={banner.cta} className={ctaItemClassName} itemSize='lg'/>
-        </div>  
+        </div>
       )}
     </>)
   }
@@ -60,18 +60,18 @@ const BannerBlockComponent: React.FC<{
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.contentBefore && banner.contentBefore}
         {banner.video && (
-          <VideoBlockComponent className='self-center mt-6 not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
+          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
         )}
         {banner.contentAfter && banner.contentAfter }
       </div>
       {banner.cta && (
         <div className={'flex flex-row items-stretch gap-2 sm:gap-6 justify-center ' + ctaClasses}>
           <CTABlockComponent block={banner.cta} className={'xs:w-1/2 ' + ctaItemClassName} itemSize='lg'  />
-        </div>  
+        </div>
       )}
     </>)
   }
-  
+
   const titleClasses = (groupingClasses && groupingClasses[0]) ? groupingClasses[0] : ''
   const bylineClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
   const contentBeforeClasses = (groupingClasses && groupingClasses[2]) ? groupingClasses[2] : ''
@@ -84,13 +84,13 @@ const BannerBlockComponent: React.FC<{
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
     {banner.contentBefore && (<div className={'text-center ' + contentBeforeClasses}>banner.contentBefore</div>)}
     {banner.video && (
-      <VideoBlockComponent className={'self-center mt-6 not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
+      <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
     )}
     {banner.contentAfter && (<div className={'text-center ' + contentAfterClasses}>banner.contentAfter</div>)}
     {banner.cta && (
       <div className={'flex flex-col gap-4 items-stretch sm:flex-row sm:gap-6 sm:justify-center ' + ctaClasses}>
         <CTABlockComponent block={banner.cta} className={ctaItemClassName} itemSize='lg' />
-      </div>  
+      </div>
     )}
   </>)
 }
