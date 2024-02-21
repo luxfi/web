@@ -3,7 +3,7 @@ import type * as C from "@hanzo/ui/blocks/def"
 export default {
   text: {
     blockType: "enh-heading",
-    specifiers: 'center',
+    specifiers: 'center byline-center',
     preheading: {
       text: "Lux Partners",
       level: 3
