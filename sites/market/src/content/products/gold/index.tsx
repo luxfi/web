@@ -10,7 +10,7 @@ import accordian from './accordian'
 export default {
   blockType: 'product-detail',
   title: 'LUX GOLD',
-  desc: 'Experience unparalleled access to gold with 1:1 asset-backed Lux Gold NFTs, sovereign ownership of physical gold without management fees, and mine-direct discount pricing.',
+  desc: "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai. This extraordinary digital collectable is more than a token, —it's the future of hyper-liquid real-world assets. Lux Gold is a embodiment of timeless wealth, prestige, and the synthesis of tradition and innovation. Fully redeemable for physical gold, Lux Gold goes beyond traditional ownership to where gold's timelessness meets the dynamic opportunities of the digital era. It's a seamless gateway where digital ownership evolves into physical reality, enabling any cryptocurrency to fluently be transmuted to gold, and even earn additional yield by lending and providing liquidity in DeFi.",
   video: {...video, sizing: { vh: 80 }},
   accordian,
   price: {
