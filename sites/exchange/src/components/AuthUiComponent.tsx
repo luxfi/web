@@ -21,7 +21,7 @@ const AuthComponent: React.FC<{redirectUrl?: string}> = ({redirectUrl}) => {
 
   const config = {
     // link back to this page for password resets
-    continueUrl: document.location.href,
+    //continueUrl: //document.location.href,
     signInOptions: [
       "emailpassword", 
       "google.com",
