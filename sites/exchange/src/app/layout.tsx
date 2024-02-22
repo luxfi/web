@@ -1,12 +1,20 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport } from '@hanzo/ui/next/root-layout'
+import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/next/root-layout'
 import '@hanzo/ui/style/globals.css'
 import { AuthServiceProvider } from '@hanzo/auth/service/AuthContext'
 import { getCurrentUser, type UserRecord } from '@hanzo/auth/lib/firebase/firebase-admin'
 
 import siteDef from '../siteDef'
-import metadata from '../metadata'
+import _metadata from '../metadata'
+
+export const metadata = {
+  ..._metadata
+}
+
+export const viewport = {
+  ..._viewport
+}
 
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
@@ -24,6 +32,4 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
 
 export {
   RootLayout as default,
-  metadata,
-  viewport
 }
