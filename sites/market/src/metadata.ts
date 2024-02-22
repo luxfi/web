@@ -65,4 +65,4 @@ export default {
     'msapplication-TileColor': '#000000'
   }
 
-} as Metadata
+} satisfies Metadata
