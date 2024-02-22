@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-type Product = 'black' | 'elite' | 'founder' | 'sovereign'
-export {
-  type Product
-}
-=======
 import { type ReactNode } from 'react'
 import type { ImageDef } from '@hanzo/ui/types'
 
@@ -31,5 +25,3 @@ export {
 
 }
 
-
->>>>>>> site/credit
