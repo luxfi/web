@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import { Footer, Header } from '@hanzo/ui/common'
+import { Footer, Header, ChatWidget } from '@hanzo/ui/common'
 
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
