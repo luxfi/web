@@ -1,12 +1,13 @@
-import type { 
-  CTABlock, 
-  EnhHeadingBlock, 
-  ScreenfulBlock, 
+import { 
+  VideoBlockComponent,
+  type CTABlock, 
+  type EnhHeadingBlock, 
+  type ScreenfulBlock, 
 } from '@hanzo/ui/blocks'
 
 const byline = 'The only decentralized network of quantum safe blockchains providing institutional-grade, regulatory-compliant access to digital money and real-world assets.'
 
-import type { VideoBlock } from '@hanzo/ui/blocks/def'
+import type { ElementBlock, VideoBlock } from '@hanzo/ui/blocks/def'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const video = {
@@ -33,7 +34,7 @@ const video = {
       h: 295
     },
   },
-  sizing: { vh: 60, mobile: {vw: 70} }
+  sizing: { vh: 40, mobile: {vw: 50} }
 } as VideoBlock
 
 export default {
@@ -42,16 +43,16 @@ export default {
   mobileOrder: [1, 0], // right column first on mobile
   contentColumns: [
   [
-    {
-      blockType: 'enh-heading',
+    {blockType: 'element',
+      element: <h4 className='font-heading self-start !text-lg'>LUX Network</h4>,
+    } as ElementBlock,
+    {blockType: 'enh-heading',
       specifiers: 'mobile-center-headings',
-      preheading: { text: 'LUX Network' },
-      heading: { text: 'POWER IN YOUR HANDS', mb: 6 },
+      heading: { text: 'POWER IN YOUR HANDS', level: 1, mb: 4 },
       byline: { text: byline },
     } as EnhHeadingBlock,
-    { blockType: 'space', level: 0},
-    {
-      blockType: 'cta',
+    {blockType: 'space', level: 0},
+    {blockType: 'cta',
       specifiers: 'fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
       elements: [
         {
@@ -74,6 +75,14 @@ export default {
       ]
     } as CTABlock,
   ], [
-    video
+    video,
+    {blockType: 'element',
+      element: <>
+        <div className='absolute hidden md:flex top-pr-10 left-pr-50 w-[200px] h-[200px]'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-25 left-pr-5 md:top-pr-20 md:left-pr-80 w-[100px] h-[100px]'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-30 left-pr-75 md:top-pr-80 md:left-pr-60 w-[100px] h-[100px]'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-pr-70 left-pr-80 w-[150px] h-[150px]'><VideoBlockComponent block={video}/></div>
+      </>,
+    } as ElementBlock,
   ]],
 } as ScreenfulBlock
