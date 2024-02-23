@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@hanzo/ui": "0.5.22",
-    "@hanzo/auth": "^0.1.7",
+    "@hanzo/auth": "0.1.8",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "markdown-to-jsx": "^7.3.2",
