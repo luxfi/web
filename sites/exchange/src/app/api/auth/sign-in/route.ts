@@ -1,8 +1,7 @@
 import { cookies } from 'next/headers'
 import { NextRequest, NextResponse } from 'next/server'
 
-import { createSessionCookie } from '@hanzo/auth/lib/firebase/firebase-admin'
-import type { APIResponse } from '@hanzo/auth/lib/firebase/auth'
+import { type APIResponse, createSessionCookie } from '@hanzo/auth/server'
 
 export async function POST(request: NextRequest) {
   const reqBody = (await request.json()) as { idToken: string }

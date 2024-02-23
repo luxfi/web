@@ -7,7 +7,7 @@ import { Main } from '@hanzo/ui/primitives'
 import siteDef from '../siteDef'
 import { ScreenfulBlockComponent as Screenful, type EnhHeadingBlock, type ScreenfulBlock, type ElementBlock, type SpaceBlock, type Block } from '@hanzo/ui/blocks'
 import AccessCodeInput from '@/components/access-code-input'
-import { useCurrentUser } from '@hanzo/auth/service/AuthContext'
+import { useCurrentUser } from '@hanzo/auth'
 
 const Home = () => {
   const {user} = useCurrentUser()

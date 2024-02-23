@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
-import { revokeAllSessions } from '@hanzo/auth/lib/firebase/firebase-admin'
-import type { APIResponse } from '@hanzo/auth/lib/firebase/auth'
+import { revokeAllSessions, type APIResponse } from '@hanzo/auth/server'
 
 export async function GET() {
   const sessionCookie = cookies().get('__session')?.value
