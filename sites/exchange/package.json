@@ -10,21 +10,20 @@
     "clean": "rm -rf ./.next && rm -rf node_modules",
     "tc": "tsc --noEmit",
     "ln:ui": "pnpm link -g @hanzo/ui",
-    "ul:ui": "pnpm unlink -g @hanzo/ui"
+    "ul:ui": "pnpm unlink -g @hanzo/ui",
+    "ln:auth": "pnpm link -g @hanzo/auth",
+    "ul:auth": "pnpm unlink -g @hanzo/auth"
   },
   "dependencies": {
     "@hanzo/ui": "0.5.21",
+    "@hanzo/auth": "^0.1.7",
     "@next/mdx": "14.1.0",
-    "firebase": "^10.8.0",
-    "firebaseui-react": "^1.3.4",
     "markdown-to-jsx": "^7.3.2",
-    "mobx-react": "^9.1.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.2.0",
-    "react-device-detect": "^2.2.3",
-    "react-dom": "^18.2.0"
+    "react-device-detect": "^2.2.3"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",
