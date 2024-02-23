@@ -78,10 +78,10 @@ export default {
     video,
     {blockType: 'element',
       element: <>
-        <div className='absolute hidden md:flex top-pr-10 left-pr-50 w-[200px] h-[200px]'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-5 md:top-pr-20 md:left-pr-80 w-[100px] h-[100px]'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-30 left-pr-75 md:top-pr-80 md:left-pr-60 w-[100px] h-[100px]'><VideoBlockComponent block={video}/></div>
-        <div className='absolute hidden md:flex top-pr-70 left-pr-80 w-[150px] h-[150px]'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-pr-10 left-pr-50 w-[200px] h-[200px] -z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-25 left-pr-0 md:top-pr-20 md:left-pr-80 w-[100px] h-[100px] z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-30 left-pr-75 md:top-pr-80 md:left-pr-60 w-[100px] h-[100px] -z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-pr-70 left-pr-80 w-[150px] h-[150px] -z-10'><VideoBlockComponent block={video}/></div>
       </>,
     } as ElementBlock,
   ]],

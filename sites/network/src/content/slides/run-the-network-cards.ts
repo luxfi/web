@@ -15,7 +15,7 @@ const validatorVideo = {
     '/assets/video/Lux-VALIDATOR-transcode.webm'
   ],
   dim: {md: {w: 656, h: 484}, lg: {w: 656, h: 484}},
-  sizing: { vh: 25, mobile: {vw: 15} }
+  sizing: { vh: 25, mobile: {vw: 50} }
 } as VideoBlock
 
 const coinVideo = {
@@ -27,7 +27,7 @@ const coinVideo = {
     '/assets/video/LUX-COIN-transcode.webm'
   ],
     dim: {md: {w: 546, h: 540}, lg: {w: 546, h: 540}},
-    sizing: { vh: 25, mobile: {vw: 15} }
+    sizing: { vh: 25, mobile: {vw: 50} }
 } as VideoBlock
 
 const bylines = [
@@ -38,10 +38,10 @@ const bylines = [
 export default [
   {blockType: 'carte-blanche',
     specifiers: 'variant-mobile-content-left no-inner-borders big-padding-content',
-    topContent: [validatorVideo],
     content: [
+      validatorVideo,
       {blockType: 'enh-heading',
-        specifiers: 'center mobile-heading-left byline-center mobile-byline-left',
+        specifiers: 'center byline-center',
         heading: {text: 'VALIDATOR', level: 2, mb: 5},
         byline: {text: bylines[0], level: 6}
       } as EnhHeadingBlock,
@@ -57,11 +57,11 @@ export default [
     ]
   } as CarteBlancheBlock,
   {blockType: 'carte-blanche',
-    specifiers: 'variant-mobile-content-left no-inner-borders big-padding-content',
-    topContent: [coinVideo],
+    specifiers: 'no-inner-borders big-padding-content',
     content: [
+      coinVideo,
       {blockType: 'enh-heading',
-        specifiers: 'center mobile-heading-left byline-center mobile-byline-left',
+        specifiers: 'center byline-center',
         heading: {text: 'COIN', level: 2, mb: 5},
         byline: {text: bylines[1], level: 6}
       } as EnhHeadingBlock,

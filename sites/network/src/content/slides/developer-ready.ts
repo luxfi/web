@@ -16,7 +16,7 @@ export default {
   contentColumns: [
   [
     { blockType: 'enh-heading',
-      specifiers: 'preheading-heading-font',
+      specifiers: 'preheading-heading-font mobile-heading-typography-base',
       icon: '/assets/img/icon-eth-475.png',
       iconSize: 40,
       preheading: { text: 'EVM PLATFORM', level: 5, mb: 2 },
