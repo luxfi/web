@@ -431,8 +431,8 @@ importers:
   sites/network:
     dependencies:
       '@hanzo/ui':
-        specifier: 0.5.16
-        version: 0.5.16(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^0.5.22
+        version: 0.5.22(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -2733,8 +2733,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/ui@0.5.16(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-fz65JfIxYsc2PK+54v+sfp5teHYZEC3FUDDFctTBnU6h7zzoK1eSa/eSjkENu5zj9n4WJw+rk3ro93WhNILQXw==}
+  /@hanzo/ui@0.5.21(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-YYrWTbuNcLRAi0O2YbIqwn/bi+S7f4FD5gXnMwQBInBpFY+32dwj/RSIjTfvwXd3XwVTqf9tfkvp5wuydZ2Maw==}
     peerDependencies:
       '@next/mdx': ^14.1.0
       next: ^14.1.0
@@ -2744,6 +2744,7 @@ packages:
     dependencies:
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
       '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
+      '@next/third-parties': 14.1.0(next@14.1.0)(react@18.2.0)
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
@@ -2790,8 +2791,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/ui@0.5.21(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-YYrWTbuNcLRAi0O2YbIqwn/bi+S7f4FD5gXnMwQBInBpFY+32dwj/RSIjTfvwXd3XwVTqf9tfkvp5wuydZ2Maw==}
+  /@hanzo/ui@0.5.22(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-qazwF22YZzW2k+oppnJNX5qfXVxBjVENOhlc5F+xkRoFBWvOA6Rc0S3qW2cGESFS5wP/PPmuVf5OOoymYzAfyw==}
     peerDependencies:
       '@next/mdx': ^14.1.0
       next: ^14.1.0
