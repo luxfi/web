@@ -4,7 +4,7 @@ import type {
   ScreenfulBlock, 
 } from '@hanzo/ui/blocks'
 
-import { COMMON_GRID_2_COL } from '@hanzo/ui/types'
+import { type GridDef } from '@hanzo/ui/types'
 
 import cells from './discover-more-products-cards'
 
@@ -20,7 +20,14 @@ export default {
     } as EnhHeadingBlock,
     {blockType: 'space', level: 0},
     {blockType: 'grid',
-      grid: COMMON_GRID_2_COL,
+      grid: { 
+        at: { 
+          xs: {columns: 1, gap: 2}, 
+          md: {columns: 1, gap: 3}, 
+          lg: {columns: 3, gap: 6}
+        },  
+        mobile: {columns: 1, gap: 2}
+      } as GridDef,
       cells,
     } as GridBlock,
   ]],

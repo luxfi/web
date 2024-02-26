@@ -46,10 +46,12 @@ export default {
     {blockType: 'element',
       element: <h4 className='font-heading self-start !text-lg'>LUX Network</h4>,
     } as ElementBlock,
+    {blockType: 'element',
+      element: <h1 className='font-heading self-start !text-4xl sm:!text-6xl mb-6'>POWER IN YOUR HANDS</h1>,
+    } as ElementBlock,
     {blockType: 'enh-heading',
       specifiers: 'mobile-center-headings',
-      heading: { text: 'POWER IN YOUR HANDS', level: 1, mb: 4 },
-      byline: { text: byline },
+      heading: { text: byline, level: 6 },
     } as EnhHeadingBlock,
     {blockType: 'space', level: 0},
     {blockType: 'cta',
@@ -80,7 +82,7 @@ export default {
       element: <>
         <div className='absolute hidden md:flex top-pr-10 left-pr-50 w-[200px] h-[200px] -z-10'><VideoBlockComponent block={video}/></div>
         <div className='absolute top-pr-25 left-pr-0 md:top-pr-20 md:left-pr-80 w-[100px] h-[100px] z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-30 left-pr-75 md:top-pr-80 md:left-pr-60 w-[100px] h-[100px] -z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-30 left-pr-75 md:top-pr-80 md:left-pr-60 w-[100px] h-[100px] z-10'><VideoBlockComponent block={video}/></div>
         <div className='absolute hidden md:flex top-pr-70 left-pr-80 w-[150px] h-[150px] -z-10'><VideoBlockComponent block={video}/></div>
       </>,
     } as ElementBlock,

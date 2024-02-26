@@ -20,6 +20,17 @@ const silverVideo = {
   sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
+const goldVideo = {
+  blockType: 'video',
+  videoProps: DEF_VIDEO_PROPS, 
+  poster: '/assets/video/luxgold-poster.jpg',
+  sources: [
+    '/assets/video/luxgold.mp4',
+  ],
+  dim: {md: { w: 1282, h: 1920}, lg: {w: 1282, h: 1920}},
+  sizing: {vh: 30, mobile: {vw: 20}}
+} as VideoBlock
+
 const creditVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
@@ -37,7 +48,11 @@ export default [
     specifiers: 'no-outer-borders',
     content: [
       {blockType: 'element',
-        element: <Link href='http://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux'><VideoBlockComponent block={silverVideo}/></Link>
+        element: <>
+          <Link href='https://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux h-[350px]'>
+            <VideoBlockComponent block={silverVideo} className='h-full !my-0'/>
+          </Link>
+        </>
       } as ElementBlock,
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
@@ -50,7 +65,28 @@ export default [
     specifiers: 'no-outer-borders',
     content: [
       {blockType: 'element',
-        element: <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux'><VideoBlockComponent block={creditVideo}/></Link>
+        element: <>
+          <Link href='https://lux.market/gold' target='_blank' className='border rounded-md hover:border-primary-lux h-[350px]'>
+            <VideoBlockComponent block={goldVideo} className='h-full !my-0'/>
+          </Link>
+        </>
+      } as ElementBlock,
+      {blockType: 'space', level: 0},
+      {blockType: 'enh-heading',
+        specifiers: 'center',
+        heading: {text: 'GOLD', level: 3},
+      } as EnhHeadingBlock,
+    ]
+  } as CarteBlancheBlock,
+  {blockType: 'carte-blanche',
+    specifiers: 'no-outer-borders',
+    content: [
+      {blockType: 'element',
+        element: <>
+          <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[350px]'>
+            <VideoBlockComponent block={creditVideo} className='h-full !my-0'/>
+          </Link>
+        </>
       } as ElementBlock,
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
