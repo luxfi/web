@@ -431,8 +431,8 @@ importers:
   sites/network:
     dependencies:
       '@hanzo/ui':
-        specifier: ^0.5.22
-        version: 0.5.22(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^0.5.23
+        version: 0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -2791,8 +2791,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/ui@0.5.22(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-qazwF22YZzW2k+oppnJNX5qfXVxBjVENOhlc5F+xkRoFBWvOA6Rc0S3qW2cGESFS5wP/PPmuVf5OOoymYzAfyw==}
+  /@hanzo/ui@0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-xZkbFOhe2FKeq4WUBkaWYf35/W5ppASEw+3A4qhNlFHRcIYwN1gyun1/1LImQZHuLmrp49uXtxvsviwSfU11/A==}
     peerDependencies:
       '@next/mdx': ^14.1.0
       next: ^14.1.0
