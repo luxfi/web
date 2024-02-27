@@ -4,6 +4,7 @@ import type {
   EnhHeadingBlock,
   VideoBlock,
 } from '@hanzo/ui/blocks'
+import type { LinkDef } from '@hanzo/ui/types'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const validatorVideo = {
@@ -50,7 +51,8 @@ export default [
         elements: [
           {title: 'Learn more',
             href: 'https://lux.market/validator',
-            variant: 'outline'
+            variant: 'outline',
+            newTab: true
           }
         ]
       }
@@ -70,8 +72,9 @@ export default [
         elements: [
           {title: 'Learn more',
             href: 'https://lux.market/coin',
-            variant: 'outline'
-          }
+            variant: 'outline',
+            newTab: true
+          } as LinkDef
         ]
       }
     ]

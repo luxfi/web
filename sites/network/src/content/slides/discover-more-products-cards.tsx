@@ -49,7 +49,7 @@ export default [
     content: [
       {blockType: 'element',
         element: <>
-          <Link href='https://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux h-[350px]'>
+          <Link href='https://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
             <VideoBlockComponent block={silverVideo} className='h-full !my-0'/>
           </Link>
         </>
@@ -66,7 +66,7 @@ export default [
     content: [
       {blockType: 'element',
         element: <>
-          <Link href='https://lux.market/gold' target='_blank' className='border rounded-md hover:border-primary-lux h-[350px]'>
+          <Link href='https://lux.market/gold' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
             <VideoBlockComponent block={goldVideo} className='h-full !my-0'/>
           </Link>
         </>
@@ -83,7 +83,7 @@ export default [
     content: [
       {blockType: 'element',
         element: <>
-          <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[350px]'>
+          <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
             <VideoBlockComponent block={creditVideo} className='h-full !my-0'/>
           </Link>
         </>
