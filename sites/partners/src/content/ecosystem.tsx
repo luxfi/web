@@ -14,6 +14,7 @@ export default {
           {
             title: 'Lux Network',
             href: 'https://lux.network',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -26,6 +27,7 @@ export default {
           {
             title: 'Lux Fund',
             href: 'https://lux.fund',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -38,6 +40,7 @@ export default {
           {
             title: 'Lux Standard',
             href: 'https://github.com/luxdefi/standard',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -50,6 +53,7 @@ export default {
           {
             title: 'Lux AI',
             href: 'https://lux.chat',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -61,6 +65,7 @@ export default {
           {
             title: 'Lux Credit',
             href: 'https://lux.credit',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -72,6 +77,7 @@ export default {
           {
             title: 'Lux Finance',
             href: 'https://lux.finance',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -83,6 +89,7 @@ export default {
           {
             title: 'Lux Exchange',
             href: 'https://lux.exchange',
+            newTab: true
           }
         ]
       } as C.CTABlock,
@@ -94,6 +101,7 @@ export default {
           {
             title: 'Lux Market',
             href: 'https://lux.market',
+            newTab: true
           }
         ]
       } as C.CTABlock,

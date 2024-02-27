@@ -11,16 +11,17 @@ export default {
     blockType: 'element',
     element: <a href='https://lux.fund'><h1>LUX<br />FUND</h1></a>,
   } as C.ElementBlock,
-  byline: {
-    blockType: 'heading',
-    heading: 'Institutional and Private Client',
-    level: 6
-  } as C.HeadingBlock,
   description: {
-    blockType: 'heading',
-    heading: 'Fund of Funds managing tokenized real world assets (RWAs) on Lux Network, enabling global access to sound, regulated, and managed portfolios based in Luxembourg.',
-    level: 0,
-  } as C.HeadingBlock,
+    blockType: 'enh-heading',
+    heading: {
+      text: 'Institutional and Private Client',
+      level: 6
+    },
+    byline: {
+      text: 'Fund of Funds managing tokenized real world assets (RWAs) on Lux Network, enabling global access to sound, regulated, and managed portfolios based in Luxembourg.',
+      level: 0
+    }
+  } as C.EnhHeadingBlock,
   blocks: [
     {
       blockType: 'cta',

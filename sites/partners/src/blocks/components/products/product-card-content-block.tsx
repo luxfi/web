@@ -1,6 +1,6 @@
 import React from "react"
 
-import { type Block, CTABlockComponent, HeadingBlockComponent, ContentComponent } from "@hanzo/ui/blocks"
+import { type Block, CTABlockComponent, HeadingBlockComponent, ContentComponent, EnhHeadingBlockComponent } from "@hanzo/ui/blocks"
 import Badge from "@hanzo/ui/primitives/badge"
 import { ApplyTypography } from "@hanzo/ui/primitives"
 
@@ -24,9 +24,7 @@ const ProductCardContentBlockComponent: React.FC<{
         <ContentComponent blocks={card.title} />
       </ApplyTypography>
 
-      <HeadingBlockComponent block={card.byline} className="font-heading" />
-
-      <HeadingBlockComponent block={card.description} />
+      <EnhHeadingBlockComponent block={card.description} className="typography-h6:!font-nav"/>
 
       <div className="flex flex-col gap-1">
         {card.blocks.map((block, index) => (

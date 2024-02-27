@@ -86,7 +86,7 @@ export default {
       logo: {
         blockType: "element",
         element: (
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-fit mx-auto">
             <ImageBlockComponent
               block={
                 {

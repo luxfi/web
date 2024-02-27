@@ -31,7 +31,7 @@ export default {
       name: "Ari Lerner",
       title: "CTO",
       description: "Ari is a passionate software engineer, entrepreneur, and educator. With over 20 years of experience, he has co-founded successful companies like Fullstack.io and Fieldday. As a senior consultant at Amazon Web Services, Ari guides clients in application development and has extensive experience in technology. He is a respected author, having written over ten books on programming, and shares his insights at global tech conferences. His notable works include co-authoring D3 on AngularJS, Zero to Deep Learning, and Fullstack React, Native, & Vue.",
-      url: "https://www.linkedin.com/in/jacobfrankelprivateequity",
+      url: "https://www.linkedin.com/in/arilerner",
       image: {
         blockType: 'image',
         src: '/assets/images/ari-lerner.png',

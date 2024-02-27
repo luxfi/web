@@ -11,16 +11,17 @@ export default {
     blockType: 'element',
     element: <a href='https://lux.finance'><h1>LUX<br />FINANCE</h1></a>,
   } as C.ElementBlock,
-  byline: {
-    blockType: 'heading',
-    heading: 'Financial Sovereignty for All',
-    level: 6
-  } as C.HeadingBlock,
   description: {
-    blockType: 'heading',
-    heading: 'Digital Asset platform powered by Lux Network, a sovereign, decentralized network. Non-custodial, privacy preserving  applications based in the Isle of Man.',
-    level: 0,
-  } as C.HeadingBlock,
+    blockType: 'enh-heading',
+    heading: {
+      text: 'Financial Sovereignty for All',
+      level: 6
+    },
+    byline: {
+      text: 'Digital Asset platform powered by Lux Network, a sovereign, decentralized network. Non-custodial, privacy preserving  applications based in the Isle of Man.',
+      level: 0
+    }
+  } as C.EnhHeadingBlock,
   blocks: [
     {
       blockType: 'cta',

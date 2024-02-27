@@ -6,11 +6,13 @@ export default {
     specifiers: 'center byline-center',
     preheading: {
       text: "Lux Partners",
-      level: 3
+      level: 3,
+      mb: 4
     },
     heading: {
       text: "THE GOLD STANDARD",
-      level: 1
+      level: 1,
+      mb: 4
     },
     byline: {
       text: "Lux Partners has established a new standard for quantum safe, real world assets, starting with gold and silver.",
@@ -19,6 +21,7 @@ export default {
   } as C.EnhHeadingBlock,
   cta: {
     blockType: 'cta',
+    specifiers: 'mobile-2-columns',
     elements: [
       {
         title: "Learn more",

@@ -8,9 +8,9 @@ import intro from "@/content/intro"
 const Intro = () => {
   return (
     <div className="flex h-screen -mt-11 md:-mt-24">
-      <div className="flex flex-col text-center w-full md:w-3/5 m-auto gap-2">
+      <div className="flex flex-col text-center w-full max-w-[40rem] m-auto gap-8">
         <EnhHeadingBlockComponent block={intro.text} className="typography-h3:text-lg typography-h1:text-4xl sm:typography-h1:text-6xl typography-p:text-xl" />
-        <CtaBlockComponent block={intro.cta} className="mt-6 w-full sm:w-1/2 mx-auto" itemClasses="w-full" />
+        <CtaBlockComponent block={intro.cta} />
       </div>
     </div>
   )

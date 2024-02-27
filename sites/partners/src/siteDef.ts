@@ -7,7 +7,7 @@ export default {
   nav: {
     common,
     featured: [{
-      title: "Log in",
+      title: "Login",
       href: "https://lux.chat/login",
       newTab: false,
       external: true,
