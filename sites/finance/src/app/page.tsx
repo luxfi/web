@@ -13,9 +13,9 @@ const Home = () => {
   const {user} = useCurrentUser()
   const [content, setContent] = useState<Block[]>([
     {blockType: 'enh-heading',
-      specifiers: 'byline-center',
-      heading: { text: 'Welcome to Lux Finance.', mb: 6 },
-      byline: { text: 'The only quantum safe and private protocol for decentralized finance.' },
+      specifiers: 'byline-center center',
+      heading: { text: 'Member login', mb: 6 },
+      byline: { text: 'Please login to access this app. If you are an existing Lux member accessing this website for first time, please enter your invite code.' },
     } as EnhHeadingBlock
   ])
 
@@ -23,23 +23,22 @@ const Home = () => {
     if (user) {
       setContent([
         {blockType: 'enh-heading',
-          specifiers: 'byline-center',
-          heading: { text: 'Welcome to Lux Finance.', mb: 6 },
-          byline: { text: 'The only quantum safe and private protocol for decentralized finance.' },
+          specifiers: 'byline-center center',
+          heading: { text: 'Member login', mb: 6 },
+          byline: { text: 'Please login to access this app. If you are an existing Lux member accessing this website for first time, please enter your invite code.' },
         } as EnhHeadingBlock,
         {blockType: 'space', level: 1} as SpaceBlock,
         {blockType: 'enh-heading',
-          specifiers: 'center byline-center',
-          heading: { text: `You are signed in as ${user.email}.`, level: 0 },
-          byline: { text: 'Enter your access code', level: 4 },
-      } as EnhHeadingBlock,
+          specifiers: 'center',
+          heading: { text: 'Enter your invite code', level: 5 },
+        } as EnhHeadingBlock,
         {blockType: 'element', element: <AccessCodeInput/>} as ElementBlock
       ])
     }
   }, [user])
 
   return (<>
-    <Main className='md:flex-row md:gap-4 w-full'>
+    <Main className='md:flex-row md:gap-4 w-full max-w-[50rem]'>
       <Screenful
         block={{blockType: 'screenful',
           specifiers: 'center vert-center',
