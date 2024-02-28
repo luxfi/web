@@ -16,6 +16,7 @@ export const viewport = {
   ..._viewport
 }
 
+console.error(process.env.FIREBASE_PRIVATE_KEY)
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
 }) => {
