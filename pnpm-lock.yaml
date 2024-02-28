@@ -209,8 +209,8 @@ importers:
   sites/finance:
     dependencies:
       '@hanzo/auth':
-        specifier: 0.1.12
-        version: 0.1.12(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: 0.1.13
+        version: 0.1.13(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hanzo/ui':
         specifier: 0.5.23
         version: 0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
@@ -2656,6 +2656,31 @@ packages:
 
   /@hanzo/auth@0.1.12(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-xCe7PYO69GI72RCYGLEGLY8E0E+hTe9du89op+LMVWcpETIuTwUOhJdvcKqA2XYYIv2ODQRBbUycXdZt/eotLw==}
+    peerDependencies:
+      next: ^14.1.0
+      react: ^18.2.0
+    dependencies:
+      '@hanzo/ui': 0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+      firebase: 10.8.0
+      firebase-admin: 12.0.0
+      lucide-react: 0.336.0(react@18.2.0)
+      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+    transitivePeerDependencies:
+      - '@next/mdx'
+      - '@react-native-async-storage/async-storage'
+      - '@types/react'
+      - '@types/react-dom'
+      - date-fns
+      - encoding
+      - next-themes
+      - react-dom
+      - supports-color
+      - tailwindcss
+    dev: false
+
+  /@hanzo/auth@0.1.13(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-v1zddz6LhB+a5e9PZWe99wwLZu5RrbabNeH84UUBZtZLX0H/C6/fESjLJfw1W+YXjG4KM5bR6f9X3Vy9Cm0VMg==}
     peerDependencies:
       next: ^14.1.0
       react: ^18.2.0
