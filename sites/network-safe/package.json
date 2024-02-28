@@ -15,7 +15,7 @@
     "ul:auth": "pnpm unlink -g @hanzo/auth"
   },
   "dependencies": {
-    "@hanzo/auth": "0.1.11",
+    "@hanzo/auth": "0.1.12",
     "@hanzo/ui": "0.5.23",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
