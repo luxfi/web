@@ -4,15 +4,15 @@ import mainCommon from '@hanzo/ui/siteDef/main-nav'
 import {default as commonFooterCols} from '@hanzo/ui/siteDef/footer'
 
 export default {
-  currentAs: 'https://safe.lux.network',
+  currentAs: 'https://lux.finance',
   nav: {
     common: mainCommon,
-    featured: [{
-      title: "Log in",
-      href: "/login",
-      newTab: false,
-      variant: 'primary',
-    }],
+    // featured: [{
+    //   title: "Log in",
+    //   href: "/login",
+    //   newTab: false,
+    //   variant: 'primary',
+    // }],
   },
   footer: commonFooterCols
 } as SiteDef
