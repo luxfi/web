@@ -4,11 +4,17 @@ import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import { MiniChart } from '@hanzo/ui/common'
 import { markdown } from '@hanzo/ui/util'
 
+import { formatPrice } from '@/util'
+
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
 import video from './video'
 import accordian from './accordian'
+
+import siteDef from '@/siteDef'
+const globalAGPoz = siteDef.ext.globalAGPoz
+
 
 export default {
   blockType: 'product-detail',
@@ -21,7 +27,18 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Silver Price / Oz',
-      content: <h4 className='font-heading text-lg md:text-3xl'>USD 20</h4>,
+      content: <h4 className='font-heading text-lg md:text-3xl'>{formatPrice(globalAGPoz * 0.9, true)}</h4>,
+      cta: {
+        blockType: 'cta',
+        elements: [
+          {
+            title: "Buy Now",
+            href: "/buy/cat?lev1=AG&lev2=B",
+            size: 'default',
+            variant: 'primary',
+          },
+        ]
+      } as C.CTABlock, 
     },
     msCard: {
       blockType: 'card',
@@ -31,6 +48,7 @@ export default {
     }
   },
   blocks: [
+    /*
     {
       blockType: 'heading',
       heading: 'Editions'
@@ -46,25 +64,7 @@ Spot price: ~$25 / oz`
       ),
       video,
     } as C.CardBlock,
-    {
-      blockType: 'cta',
-      elements: [
-        {
-          title: "Buy Now",
-          href: "https://mint.lux.network/silver",
-          external: true,
-          newTab: false,
-          variant: 'primary',
-        },
-        {
-          href: 'https://docs.lux.network',
-          title: 'Read More',
-          external: true,
-          newTab: false,
-          variant: 'outline'
-        }
-      ]
-    } as C.CTABlock,
+    */
     {
       blockType: 'space'
     },

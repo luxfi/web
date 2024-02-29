@@ -17,7 +17,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "https://mint.lux.network/gold",
+        href: "/buy/cat?lev1=AU&lev2=B",
         external: true,
         newTab: false,
         variant: 'primary'

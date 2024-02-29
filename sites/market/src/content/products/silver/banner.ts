@@ -16,9 +16,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "https://mint.lux.network/silver",
-        external: true,
-        newTab: false,
+        href: "/buy/cat?lev1=AG&lev2=B",
         variant: 'primary'
       },
     ]
