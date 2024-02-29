@@ -4,7 +4,7 @@ import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import { MiniChart } from '@hanzo/ui/common'
 import { markdown } from '@hanzo/ui/util'
 
-import { formatPrice } from '@/util'
+import { formatPrice, bullionPrice1oz } from '@/util'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
@@ -12,8 +12,6 @@ import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 import video from './video'
 import accordian from './accordian'
 
-import siteDef from '@/siteDef'
-const globalAGPoz = siteDef.ext.globalAGPoz
 
 
 export default {
@@ -27,7 +25,7 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Silver Price / Oz',
-      content: <h4 className='font-heading text-lg md:text-3xl'>{formatPrice(globalAGPoz * 0.9, true)}</h4>,
+      content: <h4 className='font-heading text-lg md:text-3xl'>{formatPrice(bullionPrice1oz('ag'), true)}</h4>,
       cta: {
         blockType: 'cta',
         elements: [
