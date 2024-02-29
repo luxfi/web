@@ -5,7 +5,8 @@ export default {
   content: {
     files: [
       "src/**/*.tsx",
-      './node_modules/@hanzo/ui/**/*.{ts,tsx}'
+      './node_modules/@hanzo/ui/**/*.{ts,tsx}',
+      './node_modules/@hanzo/auth/**/*.{ts,tsx}'
     ]
   },
 } 

@@ -16,13 +16,15 @@
     "ul:auth": "pnpm unlink -g @hanzo/auth"
   },
   "dependencies": {
-    "@hanzo/ui": "0.5.23",
+    "@hanzo/auth": "^1.0.9",
+    "@hanzo/ui": "1.0.8",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "firebaseui-react": "^1.3.4",
     "http-server": "^14.1.1",
     "markdown-to-jsx": "^7.3.2",
     "mobx-react": "^9.1.0",
+    "mobx-react-lite": "^4.0.5",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "postcss-selector-parser": "^6.0.13",

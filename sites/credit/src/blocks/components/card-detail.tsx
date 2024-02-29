@@ -110,7 +110,7 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     <LinkElement 
       def={{
         title: 'Reserve Now',
-        href: siteDef.ext!.buyUrlBase + `/${b.level}`,
+        href: 'https://mint.lux.network/credit/black',
         variant: 'primary',
         size,
       }} 

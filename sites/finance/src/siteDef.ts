@@ -7,12 +7,7 @@ export default {
   currentAs: 'https://lux.finance',
   nav: {
     common: mainCommon,
-    // featured: [{
-    //   title: "Log in",
-    //   href: "/login",
-    //   newTab: false,
-    //   variant: 'primary',
-    // }],
+    auth: true,
   },
   footer: commonFooterCols
 } as SiteDef
