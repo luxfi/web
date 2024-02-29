@@ -12,6 +12,8 @@ export default {
   },
   footer, 
   ext: {
-    commerce
+    commerce,
+    globalAGPoz: 22.65,
+    globalAUPoz: 2048.00
   }
 } satisfies SiteDef
