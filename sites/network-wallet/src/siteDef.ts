@@ -7,12 +7,7 @@ export default {
   currentAs: 'https://wallet.lux.network',
   nav: {
     common: mainCommon,
-    featured: [{
-      title: "Log in",
-      href: "/login",
-      newTab: false,
-      variant: 'primary',
-    }],
+    auth: true,
   },
   footer: commonFooterCols
 } as SiteDef
