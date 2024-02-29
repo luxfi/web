@@ -11,6 +11,7 @@ import black from './products/black'
 import elite from './products/elite'
 import founder from './products/founder'
 import sovereign from './products/sovereign'
+import easySpending from './slides/easy-spending'
 
 const tiles = [
   new1Percent,
@@ -19,6 +20,7 @@ const tiles = [
   cashBack,
   flexibleBorrowing,
   compareTable,
+  easySpending
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
 const products = {
