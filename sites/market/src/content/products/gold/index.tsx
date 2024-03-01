@@ -3,15 +3,11 @@ import type * as C from '@hanzo/ui/blocks/def'
 import { MiniChart } from '@hanzo/ui/common'
 import { markdown } from '@hanzo/ui/util'
 
-import { formatPrice } from '@/util'
+import { formatPrice, bullionPrice1oz } from '@/util'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'
 import accordian from './accordian'
-
-import siteDef from '@/siteDef'
-const globalAUPoz = siteDef.ext.globalAUPoz
-
 
 export default {
   blockType: 'product-detail',
@@ -24,7 +20,7 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Gold Price / Oz',
-      content: <h4>{formatPrice(globalAUPoz * 0.99, true)}</h4>,
+      content: <h4>{formatPrice(bullionPrice1oz('au'), true)}</h4>,
       cta: {
         blockType: 'cta',
         elements: [

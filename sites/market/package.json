@@ -1,6 +1,6 @@
 {
   "name": "@luxdefi/market",
-  "version": "0.0.2",
+  "version": "1.0.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,11 +8,17 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit"
+    "tc": "tsc --noEmit",
+    "ln:ui": "pnpm link -g @hanzo/ui",
+    "ul:ui": "pnpm unlink -g @hanzo/ui",
+    "ln:auth": "pnpm link -g @hanzo/auth",
+    "ul:auth": "pnpm unlink -g @hanzo/auth",
+    "ln:comm": "pnpm link -g @hanzo/cart",
+    "ul:comm": "pnpm unlink -g @hanzo/cart"
   },
   "dependencies": {
     "@hanzo/auth": "^1.0.11",
-    "@hanzo/cart": "^0.5.8",
+    "@hanzo/cart": "^0.5.9",
     "@hanzo/ui": "^1.0.8",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
