@@ -309,8 +309,8 @@ importers:
         specifier: ^1.0.11
         version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
       '@hanzo/cart':
-        specifier: ^0.5.8
-        version: 0.5.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
+        specifier: ^0.5.9
+        version: 0.5.9(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
       '@hanzo/ui':
         specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
@@ -2967,8 +2967,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/cart@0.5.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-lRcd1vk/4BC4Z2w375iF1LKxNZregbObrUbit6u9VORHoDV3tJ0hMMFC7g0lncTMAhtAKt4WM/sUCqM9T71XvQ==}
+  /@hanzo/cart@0.5.9(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-y0xn2fH5PDsJ5HSbEuEwGikBN+DjhSZviZRtf51yghDpGrrs1kaGqj4f/xULM0ghhVJ1/yWvrEg8AAX7OYKvMw==}
     peerDependencies:
       next: ^14.1.0
       react: ^18.2.0
