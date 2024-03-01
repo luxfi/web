@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState, type PropsWithChildren, useRef } from 'react'
+import { autorun } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
 import {
@@ -9,8 +10,8 @@ import {
 } from 'next-usequerystate'
 
 import { cn } from '@hanzo/ui/util'
-import { Cart, FacetsWidget, CategoryView, ProductCard } from '@hanzo/cart/components'
 import { useCommerce } from '@hanzo/cart/service'
+import { Cart, FacetsWidget, CategoryView, ProductCard } from '@hanzo/cart/components'
 
 import siteDef from '@/siteDef'
 import CartDrawer from '@/components/cart-drawer'
@@ -32,7 +33,7 @@ const BuyPage: React.FC<Props> = observer(({
   const isProd = params.mode === 'prod'
   const mobile = (searchParams?.agent === 'phone')
 
-  const c = useCommerce() 
+  const cmmc = useCommerce() 
 
   const [loading, setLoading] = useState<boolean>(true)
   const [message, setMessage] = useState<string>('')
@@ -44,6 +45,8 @@ const BuyPage: React.FC<Props> = observer(({
   const [prodLevel1, setProdLevel1] = useQueryState('fac1', parseAsArrayOf(parseAsString).withDefault([]))
   const [prodLevel2, setProdLevel2] = useQueryState('fac2', parseAsArrayOf(parseAsString).withDefault([]))
 
+  const [skuParam, setSkuParma] = useQueryState('sku')
+
   const catModeRef = useRef<Category | undefined>(undefined)
 
     // For cat mode
@@ -54,7 +57,7 @@ const BuyPage: React.FC<Props> = observer(({
       if (catLevel1) { facets[1] = [catLevel1] }
       if (catLevel2) { facets[2] = [catLevel2] }
       if (catLevel1 && catLevel2) {
-        const categories = c.setFacets(facets)
+        const categories = cmmc.setFacets(facets)
         if (categories.length > 1) {
           console.error("CAT", categories.map((c) => (c.title)))
           throw new Error ( "CategoryContents: More than one specified Category should never be possible with this UI!")
@@ -74,10 +77,29 @@ const BuyPage: React.FC<Props> = observer(({
       const facets: FacetsValue = { }
       if (prodLevel1) { facets[1] = prodLevel1 }
       if (prodLevel2) { facets[2] = prodLevel2 }
-      c.setFacets(facets)
+      cmmc.setFacets(facets)
       setLoading(false)
     }, [prodLevel1 , prodLevel2])
     
+    
+    useEffect(() => {
+      
+      if (skuParam) {
+        cmmc.setCurrentItem(skuParam)
+      }
+      else {
+        if (catModeRef.current) {
+          cmmc.setCurrentItem(catModeRef.current.products[0].sku)
+        }
+      }
+
+      return autorun(() => {
+        if (cmmc.currentItem && cmmc.currentItem.sku !== skuParam) {
+          //console.log("CURRENT ITEM: ", cmmc.currentItem.sku)
+          setSkuParma(cmmc.currentItem.sku)
+        }
+      })
+    }, [skuParam, catModeRef.current])
 
   const FacetsDesc: React.FC<PropsWithChildren & {className?: string}> = ({
     children,
@@ -132,13 +154,13 @@ const BuyPage: React.FC<Props> = observer(({
         </div>
       ) : ( isCat ? (
         <CategoryView className='' mobile={mobile} category={catModeRef.current!}/>
-      ) : ( c.specifiedItems.length === 0 ? (
+      ) : ( cmmc.specifiedItems.length === 0 ? (
         <div className='flex flex-col items-center text-xl pt-8' >
           No results. Please select at least one option from each group above.
         </div> 
       ) : (
         <div className='flex flex-row px-4 sm:px-0 sm:grid sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:grow'>
-          {c.specifiedItems.map((item) => (<ProductCard item={item} key={item.sku} className='rounded-lg w-[40vw] sm:w-auto'/>))}
+          {cmmc.specifiedItems.map((item) => (<ProductCard item={item} key={item.sku} className='rounded-lg w-[40vw] sm:w-auto'/>))}
         </div> 
       )))} 
       </div>
