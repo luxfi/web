@@ -12,6 +12,7 @@ import { Toaster } from '@hanzo/ui/primitives'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
 import Header from '@/components/header'
+import { ChatWidget } from '@hanzo/ui/common'
 
 export const metadata = {
   ..._metadata
@@ -36,6 +37,11 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         <RootLayoutCommon siteDef={siteDef} header={false} >
           <Header siteDef={siteDef}/>
           {children}
+          <ChatWidget
+            title='LUX'
+            subtitle='AI'
+            chatbotUrl='https://lux.chat/iframe'
+          />
           <Toaster />
         </RootLayoutCommon>
       </CommerceServiceProvider>

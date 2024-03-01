@@ -14,8 +14,8 @@ importers:
   sites/blank:
     dependencies:
       '@hanzo/ui':
-        specifier: 0.5.10
-        version: 0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.8
+        version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -142,10 +142,10 @@ importers:
   sites/exchange:
     dependencies:
       '@hanzo/auth':
-        specifier: ^1.0.9
-        version: 1.0.10(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.11
+        version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hanzo/ui':
-        specifier: 1.0.8
+        specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
@@ -212,10 +212,10 @@ importers:
   sites/finance:
     dependencies:
       '@hanzo/auth':
-        specifier: ^1.0.9
-        version: 1.0.10(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.11
+        version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hanzo/ui':
-        specifier: 1.0.8
+        specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
@@ -476,8 +476,8 @@ importers:
   sites/network:
     dependencies:
       '@hanzo/ui':
-        specifier: ^0.5.23
-        version: 0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.8
+        version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -543,10 +543,10 @@ importers:
   sites/network-safe:
     dependencies:
       '@hanzo/auth':
-        specifier: ^1.0.9
-        version: 1.0.10(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.11
+        version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hanzo/ui':
-        specifier: 1.0.8
+        specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
@@ -619,10 +619,10 @@ importers:
   sites/network-wallet:
     dependencies:
       '@hanzo/auth':
-        specifier: ^1.0.9
-        version: 1.0.10(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.11
+        version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hanzo/ui':
-        specifier: 1.0.8
+        specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
@@ -695,8 +695,8 @@ importers:
   sites/partners:
     dependencies:
       '@hanzo/ui':
-        specifier: ^0.5.23
-        version: 0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: ^1.0.8
+        version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -2877,8 +2877,8 @@ packages:
       protobufjs: 7.2.6
       yargs: 17.7.2
 
-  /@hanzo/auth@1.0.10(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-r1p2PJUOIy4CLXBMVM12PXQWWHcd7O06PDFHt53Md6xp3FxSJkRyZ132mZatc7BDi6VGzRjVRjoh07och+tXbw==}
+  /@hanzo/auth@1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-0CEB6/oSWEtc8CiSg8bwW7VLhJukJN8ettnm496yTlRI892ihIKp66E6f0VmgGSJHkXs6uSxC00hBSlerbNw+Q==}
     peerDependencies:
       next: ^14.1.0
       react: ^18.2.0
@@ -2886,7 +2886,7 @@ packages:
       '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
-      firebase-admin: 12.0.0
+      firebase-admin: 12.0.0(supports-color@8.1.1)
       lucide-react: 0.336.0(react@18.2.0)
       mobx: 6.12.0
       mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
@@ -2907,7 +2907,7 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/auth@1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1):
+  /@hanzo/auth@1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-0CEB6/oSWEtc8CiSg8bwW7VLhJukJN8ettnm496yTlRI892ihIKp66E6f0VmgGSJHkXs6uSxC00hBSlerbNw+Q==}
     peerDependencies:
       next: ^14.1.0
@@ -2916,7 +2916,7 @@ packages:
       '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
-      firebase-admin: 12.0.0(supports-color@8.1.1)
+      firebase-admin: 12.0.0
       lucide-react: 0.336.0(react@18.2.0)
       mobx: 6.12.0
       mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
@@ -3044,64 +3044,6 @@ packages:
     dependencies:
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
       '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-icons': 1.3.0(react@18.2.0)
-      '@radix-ui/react-label': 2.0.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-popover': 1.0.7(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-progress': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-scroll-area': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-select': 2.0.0(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-separator': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.54)(react@18.2.0)
-      '@radix-ui/react-switch': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-tabs': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.0
-      cmdk: 0.2.1(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
-      lodash.castarray: 4.4.0
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lucide-react: 0.307.0(react@18.2.0)
-      markdown-to-jsx: 7.4.1(react@18.2.0)
-      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      next-themes: 0.2.1(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
-      postcss-selector-parser: 6.0.15
-      react: 18.2.0
-      react-day-picker: 8.10.0(date-fns@3.3.1)(react@18.2.0)
-      react-device-detect: 2.2.3(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.50.0(react@18.2.0)
-      react-intersection-observer: 9.7.0(react-dom@18.2.0)(react@18.2.0)
-      react-social-icons: 6.10.0(react-dom@18.2.0)(react@18.2.0)
-      tailwind-merge: 2.2.1
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
-      tailwindcss-interaction-media: 0.1.0
-      validator: 13.11.0
-      zod: 3.21.4
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-      - date-fns
-      - tailwindcss
-    dev: false
-
-  /@hanzo/ui@0.5.23(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-xZkbFOhe2FKeq4WUBkaWYf35/W5ppASEw+3A4qhNlFHRcIYwN1gyun1/1LImQZHuLmrp49uXtxvsviwSfU11/A==}
-    peerDependencies:
-      '@next/mdx': ^14.1.0
-      next: ^14.1.0
-      next-themes: ^0.2.1
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.0)
-      '@next/mdx': 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
-      '@next/third-parties': 14.1.0(next@14.1.0)(react@18.2.0)
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.54)(react-dom@18.2.0)(react@18.2.0)

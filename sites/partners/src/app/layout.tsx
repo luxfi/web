@@ -5,6 +5,7 @@ import '@hanzo/ui/style/globals.css'
 
 import siteDef from '../siteDef'
 import _metadata from '../metadata'
+import { ChatWidget } from '@hanzo/ui/common'
 
 export const metadata = {
   ..._metadata
@@ -19,6 +20,15 @@ const RootLayout: React.FC<PropsWithChildren> = ({
 }) => (
   <RootLayoutCommon siteDef={siteDef} >
     {children}
+    <ChatWidget
+      title='LUX'
+      subtitle='AI'
+      chatbotUrl='https://lux.chat/iframe'
+      suggestedQuestions={[
+        { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },
+        { heading: 'Lux Ecosystem', message: 'Tell me more about Lux ecosystem', icon: 'GlobalLineIcon' },
+      ]}
+    />
   </RootLayoutCommon>
 )
 

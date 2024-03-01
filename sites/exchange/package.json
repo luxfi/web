@@ -15,8 +15,8 @@
     "ul:auth": "pnpm unlink -g @hanzo/auth"
   },
   "dependencies": {
-    "@hanzo/auth": "^1.0.9",
-    "@hanzo/ui": "1.0.8",
+    "@hanzo/auth": "^1.0.11",
+    "@hanzo/ui": "^1.0.8",
     "@next/mdx": "14.1.0",
     "markdown-to-jsx": "^7.3.2",
     "mobx-react-lite": "^4.0.5",

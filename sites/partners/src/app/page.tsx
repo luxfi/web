@@ -1,6 +1,6 @@
 import React from "react"
 
-import { ChatWidget, Footer } from "@hanzo/ui/common"
+import { Footer } from "@hanzo/ui/common"
 import { Main } from '@hanzo/ui/primitives'
 
 import Ecosystem from "@/blocks/components/ecosystem"
@@ -31,15 +31,6 @@ const LandingPage = () => {
       <Footer
         siteDef={siteDef}
         className='max-w-screen-2xl w-full pt-16 lg:mx-auto'
-      />
-      <ChatWidget
-        title='LUX'
-        subtitle='AI'
-        chatbotUrl='https://lux.chat/iframe'
-        suggestedQuestions={[
-          { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },
-          { heading: 'Lux Ecosystem', message: 'Tell me more about Lux ecosystem', icon: 'GlobalLineIcon' },
-        ]}
       />
     </>
   )
