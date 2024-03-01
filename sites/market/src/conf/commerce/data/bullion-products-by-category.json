@@ -6,53 +6,53 @@
     "img": "/assets/img/cart/gold-bar-700x700.png",
     "products": [
       {
-        "id": "264db409-95ae-4de2-ab24-b1d549dbfa06",
+        "id": "0535d434-2498-4d05-bdd1-f07a50491218",
         "sku": "LXB-AU-B-1-OZ",
         "title": "Lux Gold, 1oz Minted Bar",
         "titleAsOption": "1oz",
         "categoryId": "LXB-AU-B",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 2027.52,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       },
       {
-        "id": "65b64e92-dbcb-4212-93fd-47ed80289e5b",
+        "id": "2e7e888e-b966-4365-9025-4de3e9e2a9f1",
         "sku": "LXB-AU-B-1-G",
         "title": "Lux Gold, 1g Minted Bar",
         "titleAsOption": "1g",
         "categoryId": "LXB-AU-B",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 71.5187216705762,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       },
       {
-        "id": "17f1adb2-80f9-4431-9ace-af5fabbcec80",
+        "id": "77eb6a98-e3e2-4067-ab85-677012177973",
         "sku": "LXB-AU-B-10-G",
         "title": "Lux Gold, 10g Minted Bar",
         "titleAsOption": "10g",
         "categoryId": "LXB-AU-B",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 715.187216705762,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       },
       {
-        "id": "2e665bd4-7228-4dc6-8461-d9ba000158ce",
+        "id": "d68a2854-03e3-4966-9a48-519130d86a49",
         "sku": "LXB-AU-B-100-G",
         "title": "Lux Gold, 100g Minted Bar",
         "titleAsOption": "100g",
         "categoryId": "LXB-AU-B",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 7151.872167057621,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       },
       {
-        "id": "c753cae0-5068-4a18-90ef-75a02ece1ae1",
+        "id": "01be1891-afa8-4264-a243-b476c805cfa6",
         "sku": "LXB-AU-B-400-OZ",
         "title": "Lux Gold, 400oz Minted Bar",
         "titleAsOption": "400oz",
         "categoryId": "LXB-AU-B",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 811008,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       }
     ]
@@ -64,13 +64,13 @@
     "img": "/assets/img/cart/gold-coin-700x700.png",
     "products": [
       {
-        "id": "930ab45c-148d-46b7-aa7f-c468831b2995",
+        "id": "478d08ea-c6e5-453e-b34f-31dfbdc96350",
         "sku": "LXB-AU-C-1-OZ",
         "title": "Lux Gold, 1oz Minted Coin",
         "titleAsOption": "1oz",
         "categoryId": "LXB-AU-C",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 1938,
+        "price": 0,
         "img": "/assets/img/cart/gold-coin-700x700.png"
       }
     ]
@@ -82,33 +82,33 @@
     "img": "/assets/img/cart/gold-bar-700x700.png",
     "products": [
       {
-        "id": "2f87590d-f159-4d1c-8af9-0701f6360252",
+        "id": "ea37f463-01ee-41d7-8ae1-d82632344823",
         "sku": "LXB-AU-CB-500-G",
         "title": "Lux Gold, 500g Cast Bar",
         "titleAsOption": "500g",
         "categoryId": "LXB-AU-CB",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 35759.3608352881,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       },
       {
-        "id": "05e91431-fea1-4da8-b48a-b25cd35f331d",
+        "id": "73e5911f-1bed-40e9-8156-7f783f37f06b",
         "sku": "LXB-AU-CB-1-KG",
         "title": "Lux Gold, 1kg Cast Bar",
         "titleAsOption": "1kg",
         "categoryId": "LXB-AU-CB",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 71518.7216705762,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       },
       {
-        "id": "da07528e-3681-4372-932a-3b775f75251a",
+        "id": "e6b67144-2796-4537-aac3-e68806a51292",
         "sku": "LXB-AU-CB-400-OZ",
         "title": "Lux Gold, 400oz Cast Bar",
         "titleAsOption": "400oz",
         "categoryId": "LXB-AU-CB",
         "desc": "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
-        "price": 811008,
+        "price": 0,
         "img": "/assets/img/cart/gold-bar-700x700.png"
       }
     ]
@@ -120,53 +120,53 @@
     "img": "/assets/img/cart/silver-bar-700x700.png",
     "products": [
       {
-        "id": "5a0fe5a1-3aab-4fd6-bf0b-3f6bdece858a",
+        "id": "3f010147-b607-44d8-b694-52015519ba64",
         "sku": "LXB-AG-B-1-OZ",
         "title": "Lux Silver, 1oz Minted Bar",
         "titleAsOption": "1oz",
         "categoryId": "LXB-AG-B",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 20.384999999999998,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       },
       {
-        "id": "c3a48c2f-4e42-4f58-b747-43b6d10964a8",
+        "id": "c82fabf9-680f-4919-911e-5e60f4c22a87",
         "sku": "LXB-AG-B-1-G",
         "title": "Lux Silver, 1g Minted Bar",
         "titleAsOption": "1g",
         "categoryId": "LXB-AG-B",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 0.7190603008871408,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       },
       {
-        "id": "79a6e211-0a63-449f-ae43-7452551d74c8",
+        "id": "0333a5ed-57f8-4257-96c9-9452bebfe160",
         "sku": "LXB-AG-B-10-G",
         "title": "Lux Silver, 10g Minted Bar",
         "titleAsOption": "10g",
         "categoryId": "LXB-AG-B",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 7.190603008871409,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       },
       {
-        "id": "e5e30749-51ce-4dd6-8ca1-42c773c1c16d",
+        "id": "800071e2-d0c0-4d71-b2ec-e560875a5dca",
         "sku": "LXB-AG-B-100-G",
         "title": "Lux Silver, 100g Minted Bar",
         "titleAsOption": "100g",
         "categoryId": "LXB-AG-B",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 71.90603008871409,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       },
       {
-        "id": "c35dbe71-d703-4013-9326-d6f2156c0097",
+        "id": "fa3ba971-f8cf-4b0a-93a8-c82d30fc4411",
         "sku": "LXB-AG-B-1-KG",
         "title": "Lux Silver, 1kg Minted Bar",
         "titleAsOption": "1kg",
         "categoryId": "LXB-AG-B",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 719.0603008871409,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       }
     ]
@@ -178,13 +178,13 @@
     "img": "/assets/img/cart/silver-coin-700x700.png",
     "products": [
       {
-        "id": "dd24e8b4-7576-457e-9bf3-f0aae06c42fa",
+        "id": "0e76f8e7-7ec3-4999-a375-f1c58ebc623f",
         "sku": "LXB-AG-C-1-OZ",
         "title": "Lux Silver, 1oz Minted Coin",
         "titleAsOption": "1oz",
         "categoryId": "LXB-AG-C",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 23.04,
+        "price": 0,
         "img": "/assets/img/cart/silver-coin-700x700.png"
       }
     ]
@@ -196,33 +196,33 @@
     "img": "/assets/img/cart/silver-bar-700x700.png",
     "products": [
       {
-        "id": "6ca2aa1c-c2d7-4174-96f8-37ed7d41bbe9",
+        "id": "4992f21f-cfb7-4fab-84f1-e51c96ef33a6",
         "sku": "LXB-AG-CB-500-G",
         "title": "Lux Silver, 500g Cast Bar",
         "titleAsOption": "500g",
         "categoryId": "LXB-AG-CB",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 359.53015044357045,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       },
       {
-        "id": "1b083e6a-1aa8-4ac9-8ebb-27bb3d11cf4b",
+        "id": "600e54cc-92e0-478a-a8f6-5d80776e0f8f",
         "sku": "LXB-AG-CB-1-KG",
         "title": "Lux Silver, 1kg Cast Bar",
         "titleAsOption": "1kg",
         "categoryId": "LXB-AG-CB",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 719.0603008871409,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       },
       {
-        "id": "bac65b43-0f67-4e19-826d-63ba1efdad4d",
+        "id": "61a7d11c-b577-4cbc-8dbd-65a74c9c4bd2",
         "sku": "LXB-AG-CB-1000-OZ",
         "title": "Lux Silver, 1000oz Cast Bar",
         "titleAsOption": "1000oz",
         "categoryId": "LXB-AG-CB",
         "desc": "Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.",
-        "price": 20385,
+        "price": 0,
         "img": "/assets/img/cart/silver-bar-700x700.png"
       }
     ]
