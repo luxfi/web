@@ -7,6 +7,7 @@ import {
   useQueryState,
   parseAsArrayOf,
   parseAsString,
+  parseAsBoolean,
 } from 'next-usequerystate'
 
 import { cn } from '@hanzo/ui/util'
@@ -45,61 +46,65 @@ const BuyPage: React.FC<Props> = observer(({
   const [prodLevel1, setProdLevel1] = useQueryState('fac1', parseAsArrayOf(parseAsString).withDefault([]))
   const [prodLevel2, setProdLevel2] = useQueryState('fac2', parseAsArrayOf(parseAsString).withDefault([]))
 
-  const [skuParam, setSkuParma] = useQueryState('sku')
+  const [skuParam, setSkuParam] = useQueryState('sku')
+  const [addParam, setAddParam] = useQueryState('add', 
+    parseAsBoolean.withDefault(false).withOptions({ clearOnDefault: true })
+  )
 
   const catModeRef = useRef<Category | undefined>(undefined)
 
     // For cat mode
-    useEffect(() => {
-      if (!isCat) return
-      setMessage('')
-      const facets: FacetsValue = { }
-      if (catLevel1) { facets[1] = [catLevel1] }
-      if (catLevel2) { facets[2] = [catLevel2] }
-      if (catLevel1 && catLevel2) {
-        const categories = cmmc.setFacets(facets)
-        if (categories.length > 1) {
-          console.error("CAT", categories.map((c) => (c.title)))
-          throw new Error ( "CategoryContents: More than one specified Category should never be possible with this UI!")
-        }
-        catModeRef.current = categories[0] 
+  useEffect(() => {
+    if (!isCat) return
+    setMessage('')
+    const facets: FacetsValue = { }
+    if (catLevel1) { facets[1] = [catLevel1] }
+    if (catLevel2) { facets[2] = [catLevel2] }
+    if (catLevel1 && catLevel2) {
+      const categories = cmmc.setFacets(facets)
+      if (categories.length > 1) {
+        console.error("CAT", categories.map((c) => (c.title)))
+        throw new Error ( "CategoryContents: More than one specified Category should never be possible with this UI!")
       }
-      else {
-        setMessage('Please select an option from each group above.')
-      }
-      setLoading(false)
-    }, [catLevel1 , catLevel2])
+      catModeRef.current = categories[0] 
+    }
+    else {
+      setMessage('Please select an option from each group above.')
+    }
+    setLoading(false)
+  }, [catLevel1 , catLevel2])
   
     // For prod mode
-    useEffect(() => {
-      if (!isProd) return
-      setMessage('')
-      const facets: FacetsValue = { }
-      if (prodLevel1) { facets[1] = prodLevel1 }
-      if (prodLevel2) { facets[2] = prodLevel2 }
-      cmmc.setFacets(facets)
-      setLoading(false)
-    }, [prodLevel1 , prodLevel2])
+  useEffect(() => {
+    if (!isProd) return
+    setMessage('')
+    const facets: FacetsValue = { }
+    if (prodLevel1) { facets[1] = prodLevel1 }
+    if (prodLevel2) { facets[2] = prodLevel2 }
+    cmmc.setFacets(facets)
+    setLoading(false)
+  }, [prodLevel1 , prodLevel2])
     
+  useEffect(() => {
     
-    useEffect(() => {
-      
-      if (skuParam) {
-        cmmc.setCurrentItem(skuParam)
+    if (skuParam) {
+      cmmc.setCurrentItem(skuParam)
+      if (addParam && cmmc.currentItem.quantity === 0) {
+        cmmc.currentItem.increment()  
+        setAddParam(false)
       }
-      else {
-        if (catModeRef.current) {
-          cmmc.setCurrentItem(catModeRef.current.products[0].sku)
-        }
-      }
+    }
+    else if (catModeRef.current) {
+      cmmc.setCurrentItem(catModeRef.current.products[0].sku)
+    }
 
-      return autorun(() => {
-        if (cmmc.currentItem && cmmc.currentItem.sku !== skuParam) {
-          //console.log("CURRENT ITEM: ", cmmc.currentItem.sku)
-          setSkuParma(cmmc.currentItem.sku)
-        }
-      })
-    }, [skuParam, catModeRef.current])
+    return autorun(() => {
+      if (cmmc.currentItem && cmmc.currentItem.sku !== skuParam) {
+        //console.log("CURRENT ITEM: ", cmmc.currentItem.sku)
+        setSkuParam(cmmc.currentItem.sku)
+      }
+    })
+  }, [skuParam, catModeRef.current])
 
   const FacetsDesc: React.FC<PropsWithChildren & {className?: string}> = ({
     children,
