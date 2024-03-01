@@ -1,7 +1,13 @@
 'use client'
-import React, { useEffect, useState, type PropsWithChildren, useRef } from 'react'
+import React, { 
+  useEffect, 
+  useState, 
+  useRef,
+  type PropsWithChildren
+} from 'react'
 import { autorun } from 'mobx'
 import { observer } from 'mobx-react-lite'
+import Link from 'next/link'
 
 import {
   useQueryState,
@@ -10,34 +16,31 @@ import {
   parseAsBoolean,
 } from 'next-usequerystate'
 
+import { Skeleton } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+
+import type { Category, FacetsValue } from '@hanzo/cart/types'
 import { useCommerce } from '@hanzo/cart/service'
 import { Cart, FacetsWidget, CategoryView, ProductCard } from '@hanzo/cart/components'
 
-import siteDef from '@/siteDef'
 import CartDrawer from '@/components/cart-drawer'
-import type { Category, FacetsValue } from '@hanzo/cart/types'
-import Link from 'next/link'
-import { Skeleton } from '@hanzo/ui/primitives'
+import siteDef from '@/siteDef'
 
 type Props = {
-  params: { mode: 'cat' | 'prod' }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
-const BuyPage: React.FC<Props> = observer(({
-  params,
-  searchParams
-}) => {
+const BuyPage: React.FC<Props> = observer(({ searchParams }) => {
 
-  const isCat = params.mode === 'cat'
-  const isProd = params.mode === 'prod'
-  const mobile = (searchParams?.agent === 'phone')
 
   const cmmc = useCommerce() 
 
   const [loading, setLoading] = useState<boolean>(true)
   const [message, setMessage] = useState<string>('')
+
+  const [modeParam, setModeParam] = useQueryState('mode', 
+    parseAsString.withDefault('cat').withOptions({ clearOnDefault: true })
+  )
 
   const [catLevel1, setCatLevel1] = useQueryState('lev1') // level 1 facet value (AG / AU)
   const [catLevel2, setCatLevel2] = useQueryState('lev2') // level 2 facet value (B / C / MB / GD)
@@ -51,11 +54,12 @@ const BuyPage: React.FC<Props> = observer(({
     parseAsBoolean.withDefault(false).withOptions({ clearOnDefault: true })
   )
 
+  const catMode = () => (!(modeParam && modeParam === 'prod') )
   const catModeRef = useRef<Category | undefined>(undefined)
-
+ 
     // For cat mode
   useEffect(() => {
-    if (!isCat) return
+    if (!catMode()) return
     setMessage('')
     const facets: FacetsValue = { }
     if (catLevel1) { facets[1] = [catLevel1] }
@@ -76,7 +80,7 @@ const BuyPage: React.FC<Props> = observer(({
   
     // For prod mode
   useEffect(() => {
-    if (!isProd) return
+    if (catMode()) return
     setMessage('')
     const facets: FacetsValue = { }
     if (prodLevel1) { facets[1] = prodLevel1 }
@@ -93,6 +97,9 @@ const BuyPage: React.FC<Props> = observer(({
         cmmc.currentItem.increment()  
         setAddParam(false)
       }
+      const tok = skuParam.split('-')
+      setCatLevel1(tok[1])
+      setCatLevel2(tok[2])
     }
     else if (catModeRef.current) {
       cmmc.setCurrentItem(catModeRef.current.products[0].sku)
@@ -106,14 +113,16 @@ const BuyPage: React.FC<Props> = observer(({
     })
   }, [skuParam, catModeRef.current])
 
+  const mobile = (searchParams?.agent === 'phone')
+
   const FacetsDesc: React.FC<PropsWithChildren & {className?: string}> = ({
     children,
     className=''
   }) => {
 
     const widgetClx = 'flex flex-row justify-between sm:gap-x-6 xs:gap-x-2 items-start'  
-    const facets1Clx = 'grid grid-cols-2 ' + (isCat ? 'gap-0 ' : 'gap-1 ') + (mobile ? '' : 'pr-6 ')
-    const facets2Clx = 'grid grid-cols-4 ' + (isCat ? 'gap-0 ' : 'gap-1 ')
+    const facets1Clx = 'grid grid-cols-2 ' + (catMode() ? 'gap-0 ' : 'gap-1 ') + (mobile ? '' : 'pr-6 ')
+    const facets2Clx = 'grid grid-cols-4 ' + (catMode() ? 'gap-0 ' : 'gap-1 ')
 
     const catMutators = [{val: catLevel1, set: setCatLevel1} , {val: catLevel2, set: setCatLevel2}]
     const prodMutators = [{val: prodLevel1, set: setProdLevel1} , {val: prodLevel2, set: setProdLevel2}]
@@ -122,10 +131,10 @@ const BuyPage: React.FC<Props> = observer(({
       <FacetsWidget
           // using neg margin to compensate for fw putting extra rt padding on shopping cart button
         className={cn(widgetClx, (mobile ? 'relative left-0 -mr-3':''), className)} 
-        multiple={isProd}
+        multiple={!catMode()}
         isMobile={mobile}
         facetClassNames={[facets1Clx, facets2Clx]}
-        mutators={isCat ? catMutators : prodMutators}
+        mutators={catMode() ? catMutators : prodMutators}
         facets={siteDef.ext.commerce.facets}
       >
         {children}
@@ -155,9 +164,9 @@ const BuyPage: React.FC<Props> = observer(({
       { message ? (
         <div className={cn('typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', className)} >
           <h5 className='text-accent text-center'>{message}</h5>
-          {isCat && (<h6 className='text-accent text-center'>Or, would you like to try a<br/><Link className='text-xl font-semibold ' href='/buy/prod'>more general search</Link>?</h6>)}
+          { catMode() && (<h6 className='text-accent text-center'>Or, would you like to try a<br/><Link className='text-xl font-semibold ' href='/buy/prod'>more general search</Link>?</h6>)}
         </div>
-      ) : ( isCat ? (
+      ) : ( catMode() ? (
         <CategoryView className='' mobile={mobile} category={catModeRef.current!}/>
       ) : ( cmmc.specifiedItems.length === 0 ? (
         <div className='flex flex-col items-center text-xl pt-8' >
