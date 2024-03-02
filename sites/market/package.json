@@ -13,16 +13,19 @@
     "ul:ui": "pnpm unlink -g @hanzo/ui",
     "ln:auth": "pnpm link -g @hanzo/auth",
     "ul:auth": "pnpm unlink -g @hanzo/auth",
-    "ln:comm": "pnpm link -g @hanzo/cart",
-    "ul:comm": "pnpm unlink -g @hanzo/cart"
+    "ln:cmmc": "pnpm link -g @hanzo/commerce",
+    "ul:cmmc": "pnpm unlink -g @hanzo/commerce",
+    "ln:all": "pnpm link -g @hanzo/ui && pnpm link -g @hanzo/auth && pnpm link -g @hanzo/commerce",
+    "ul:all": "pnpm unlink -g @hanzo/ui && pnpm unlink -g @hanzo/auth && pnpm unlink -g @hanzo/commerce"
   },
   "dependencies": {
     "@hanzo/auth": "^1.0.11",
-    "@hanzo/cart": "^0.5.9",
+    "@hanzo/commerce": "^1.0.9",
     "@hanzo/ui": "^1.0.8",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "ethers": "^6.11.1",
+    "firebase": "^10.8.0",
     "hanzo.js": "^2.5.13",
     "lucide-react": "^0.331.0",
     "markdown-to-jsx": "^7.3.2",

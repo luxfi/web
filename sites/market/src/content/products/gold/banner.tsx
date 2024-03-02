@@ -17,7 +17,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "/buy/cat?lev1=AU&lev2=B",
+        href: "/buy?sku=LXB-AU-B-1-OZ&add=true",
         external: true,
         newTab: false,
         variant: 'primary'

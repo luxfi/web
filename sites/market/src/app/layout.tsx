@@ -5,7 +5,7 @@ import '@hanzo/ui/style/globals.css'
 
 import siteDef from '../siteDef'
 import _metadata from '../metadata'
-import { CommerceServiceProvider } from '@hanzo/cart/service'
+import { CommerceServiceProvider } from '@hanzo/commerce/service'
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import { Toaster } from '@hanzo/ui/primitives'

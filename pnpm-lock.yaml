@@ -308,9 +308,9 @@ importers:
       '@hanzo/auth':
         specifier: ^1.0.11
         version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
-      '@hanzo/cart':
-        specifier: ^0.5.9
-        version: 0.5.9(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
+      '@hanzo/commerce':
+        specifier: ^1.0.9
+        version: 1.0.9(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
       '@hanzo/ui':
         specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
@@ -323,6 +323,9 @@ importers:
       ethers:
         specifier: ^6.11.1
         version: 6.11.1
+      firebase:
+        specifier: ^10.8.0
+        version: 10.8.0
       hanzo.js:
         specifier: ^2.5.13
         version: 2.5.13
@@ -774,9 +777,9 @@ importers:
 
   utilities/market-data-generator:
     devDependencies:
-      '@hanzo/cart':
-        specifier: ^0.5.9
-        version: 0.5.9(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)
+      '@hanzo/commerce':
+        specifier: ^1.0.8
+        version: 1.0.8(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
       '@types/node':
         specifier: ^20.11.24
         version: 20.11.24
@@ -789,9 +792,6 @@ importers:
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@20.11.24)(typescript@5.3.3)
-      types:
-        specifier: link:@hanzo/cart/types
-        version: link:@hanzo/cart/types
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -2967,42 +2967,14 @@ packages:
       - tailwindcss
     dev: true
 
-  /@hanzo/cart@0.5.9(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-y0xn2fH5PDsJ5HSbEuEwGikBN+DjhSZviZRtf51yghDpGrrs1kaGqj4f/xULM0ghhVJ1/yWvrEg8AAX7OYKvMw==}
+  /@hanzo/commerce@1.0.8(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
+    resolution: {integrity: sha512-qUOyE0GZ9+SDAFY8EbT9kCSmI/wbolkR9l67EuEQgJ76vcpS7AbNdlQ8pux8jwyG5lR/41BFjG0INUuPmfMTUw==}
     peerDependencies:
-      next: ^14.1.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-    dependencies:
-      '@hanzo/auth': 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
-      '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
-      akasha: 0.1.13
-      firebase: 10.8.0
-      lucide-react: 0.307.0(react@18.2.0)
-      midstream: 2.0.2
-      mobx: 6.12.0
-      mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
-      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-mobile-picker: 1.0.0(react-dom@18.2.0)(react@18.2.0)
-    transitivePeerDependencies:
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@types/react-dom'
-      - date-fns
-      - encoding
-      - next-themes
-      - react-hook-form
-      - react-native
-      - supports-color
-      - tailwindcss
-    dev: false
-
-  /@hanzo/cart@0.5.9(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-y0xn2fH5PDsJ5HSbEuEwGikBN+DjhSZviZRtf51yghDpGrrs1kaGqj4f/xULM0ghhVJ1/yWvrEg8AAX7OYKvMw==}
-    peerDependencies:
+      '@hanzo/auth': ^1.0.9
+      '@hanzo/ui': ^1.0.8
+      firebase: ^10.8.0
+      mobx: ^6.12.0
+      mobx-react-lite: ^4.0.5
       next: ^14.1.0
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -3010,10 +2982,8 @@ packages:
       '@hanzo/auth': 1.0.11(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
-      akasha: 0.1.13
       firebase: 10.8.0
       lucide-react: 0.307.0(react@18.2.0)
-      midstream: 2.0.2
       mobx: 6.12.0
       mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
       next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
@@ -3021,17 +2991,36 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       react-mobile-picker: 1.0.0(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@types/react-dom'
-      - date-fns
-      - encoding
-      - next-themes
       - react-hook-form
-      - react-native
-      - supports-color
-      - tailwindcss
     dev: true
+
+  /@hanzo/commerce@1.0.9(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
+    resolution: {integrity: sha512-AEhwLN68Dj6xV0NbawAy75vKBozY4fFUzY71+8HzTHt9hAvU/4KVIhsscApWcis3XjSnQ5TkOesVDuiE+YCwHA==}
+    peerDependencies:
+      '@hanzo/auth': ^1.0.9
+      '@hanzo/ui': ^1.0.8
+      firebase: ^10.8.0
+      mobx: ^6.12.0
+      mobx-react-lite: ^4.0.5
+      next: ^14.1.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      '@hanzo/auth': 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
+      '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
+      firebase: 10.8.0
+      lucide-react: 0.307.0(react@18.2.0)
+      mobx: 6.12.0
+      mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
+      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
+      next-usequerystate: 1.17.0(next@14.1.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-mobile-picker: 1.0.0(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - react-hook-form
+    dev: false
 
   /@hanzo/ui@0.5.10(@next/mdx@14.1.0)(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-CpWppADaa86P+1DER3VN6aQkzRim5ZuCmx5pL2OHgkChvH5NGAAsxAjVX1p4GTwRg/jJH8neWxh0opkFaTRbcw==}
@@ -6261,13 +6250,6 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /akasha@0.1.13:
-    resolution: {integrity: sha512-Ugtb0p7160QJN0i720+B/I6W+DLbLMaQoMeMTDlhKql+oAcVE7RNFQ2+ZyQ/SrKaVz/mITM5juT3cfgfzRZh9g==}
-    engines: {node: '>=4.0.0'}
-    dependencies:
-      es-cookies: 2.1.18
-      es-md5: 2.7.2
-
   /all-node-versions@8.0.0:
     resolution: {integrity: sha512-cF8ibgj23U7ai4qjSFzpeccwDXUlPFMzKe0Z6qf6gChR+9S0JMyzYz6oYz4n0nHi/FLH9BJIefsONsMH/WDM2w==}
     engines: {node: '>=10.17.0'}
@@ -8186,6 +8168,7 @@ packages:
     dependencies:
       es-is: 3.3.10
       es-object-assign: 4.1.4
+    dev: false
 
   /es-errors@1.3.0:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
@@ -8194,15 +8177,14 @@ packages:
   /es-hasown@0.1.1:
     resolution: {integrity: sha512-Fn1akAiVJaWPN6f1kqDYY3JmWqeffUQH1MZn/SHh2vAgJBgRsFbruIDJHjGrA+Rd0sYfz0ixDGtZwUtzrRPULw==}
     engines: {node: '>=4.0.0'}
+    dev: false
 
   /es-is@3.3.10:
     resolution: {integrity: sha512-xJHoQ6GM8ZdJm0J560ZPB3u/GrWkPd4OaGpPTl1jxdSby+O7BAuBeSHI/oYV/UgJT0fpihocs6ZA550k+vOvBg==}
     dependencies:
       es-hasown: 0.1.1
       es-tostring: 0.1.0
-
-  /es-md5@2.7.2:
-    resolution: {integrity: sha512-sVv3UfcN551eMa+OYKd1Or0OZC3Ei/7G6kaQJOrnT5j+w3WX8lWJmWReg72Z+bsehDHtRwR+pCYZGrbK75i06w==}
+    dev: false
 
   /es-module-lexer@1.4.1:
     resolution: {integrity: sha512-cXLGjP0c4T3flZJKQSuziYoq7MlT+rnvfZjfp7h+I7K9BNX54kP9nyWvdbwjQ4u1iWbOL4u96fgeZLToQlZC7w==}
@@ -8210,10 +8192,12 @@ packages:
   /es-object-assign@4.1.4:
     resolution: {integrity: sha512-Lux8FGW4FWAwFdJvR4wytwjQNo3EJwIkZZVo2zBOVmOxwrXTelFslbMTHOIwJd1ZDsM9emyBc39b15ldcmRF0A==}
     engines: {node: '>=0.10.0'}
+    dev: false
 
   /es-tostring@0.1.0:
     resolution: {integrity: sha512-CWdfVLbx5w5JJa4fmBiGUAMCer4Lg3dpwTbluL3RjOvTpAifLz4j2tSRmVm+WEv2ic/ngJmL/5oWho2Q4pPJTg==}
     engines: {node: '>=4.0.0'}
+    dev: false
 
   /es-xhr-promise@1.2.17:
     resolution: {integrity: sha512-tO2lT05Kcp/kO1RjYvmKfoQ7fSyyn849oWDWu6hNu/sr1mGEQwEjf9J+LaoVXRr8+0ltx1eRD40J9KkE8rF+LQ==}
@@ -11607,9 +11591,6 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
-
-  /midstream@2.0.2:
-    resolution: {integrity: sha512-kbG2QR2tQErDEWN7Z2YM9XYOrIKXOao0/ZKZminrmvKI/UoC8va6RAB1s0VupJah3/Yeh5aUQiKoda+dIhstjA==}
 
   /mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}

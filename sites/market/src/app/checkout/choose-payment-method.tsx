@@ -5,7 +5,7 @@ import { Button } from '@hanzo/ui/primitives'
 import { type EnhHeadingBlock, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
 
-import { Cart } from '@hanzo/cart/components'
+import { Cart } from '@hanzo/commerce/components'
 
 
 const ChoosePaymentMethod: React.FC<{

@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs'
 import { v4 as unique} from 'uuid'
-import type { Product, Category } from '@hanzo/cart/types'
+import type { Product, Category } from '@hanzo/commerce/types'
 
 import { type ItemImportData, type LevelImportData } from './types.ts'
 

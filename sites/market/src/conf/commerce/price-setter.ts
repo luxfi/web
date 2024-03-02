@@ -1,5 +1,5 @@
 import prices from '../prices'
-import type { Category } from '@hanzo/cart/types'
+import type { Category } from '@hanzo/commerce/types'
 
 export const TS = '-'  // token separator
 export const DEC = '_' // decimal substitute

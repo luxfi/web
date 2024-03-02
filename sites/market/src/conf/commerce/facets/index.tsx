@@ -1,4 +1,4 @@
-import type { FacetsDesc, FacetValueDesc } from '@hanzo/cart/types'
+import type { FacetsDesc, FacetValueDesc } from '@hanzo/commerce/types'
 
 import SVG_Bar from './img/bar.svg'
 import SVG_Coin from './img/coin.svg'

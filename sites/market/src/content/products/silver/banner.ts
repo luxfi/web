@@ -16,7 +16,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "/buy/cat?lev1=AG&lev2=B",
+        href: "/buy?sku=LXB-AG-B-1-OZ&add=true",
         variant: 'primary'
       },
     ]

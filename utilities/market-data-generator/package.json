@@ -12,12 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hanzo/cart": "^0.5.9",
+    "@hanzo/commerce": "^1.0.8",
     "@types/node": "^20.11.24",
     "@types/uuid": "^9.0.8",
     "fs": "0.0.1-security",
     "ts-node": "^10.9.2",
-    "types": "link:@hanzo/cart/types",
     "typescript": "5.3.3",
     "uuid": "^9.0.1"
   }
