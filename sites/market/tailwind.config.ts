@@ -6,7 +6,7 @@ export default {
     files: [
       "src/**/*.tsx",
       './node_modules/@hanzo/ui/**/*.{ts,tsx}',
-      './node_modules/@hanzo/cart/**/*.{ts,tsx}',
+      './node_modules/@hanzo/commerce/**/*.{ts,tsx}',
       './node_modules/@hanzo/auth/**/*.{ts,tsx}'
     ]
   },

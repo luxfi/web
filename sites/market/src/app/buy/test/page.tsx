@@ -10,14 +10,14 @@ import {
 } from 'next-usequerystate'
 
 import { cn } from '@hanzo/ui/util'
-import { formatPrice } from '@hanzo/cart/util'
+import { formatPrice } from '@hanzo/commerce/util'
 
-import { Cart, FacetTogglesWidget, CategoryAndItemWidget} from '@hanzo/cart/components'
-import { useCommerce } from '@hanzo/cart/service'
+import { Cart, FacetTogglesWidget, SelectCategoryAndItemWidget} from '@hanzo/commerce/components'
+import { useCommerce } from '@hanzo/commerce/service'
 
 import siteDef from '@/siteDef'
 import CartDrawer from '@/components/cart-drawer'
-import type { Category, FacetsValue, LineItem } from '@hanzo/cart/types'
+import type { Category, FacetsValue, LineItem } from '@hanzo/commerce/types'
 import Link from 'next/link'
 import { ApplyTypography, ListBox } from '@hanzo/ui/primitives'
 
@@ -47,8 +47,8 @@ const TestPage: React.FC<Props> = observer(({
         </ApplyTypography>
       </div>
       <div /* id='id='TEST_COL_2' */ className='flex flex-col justify-start gap-4 items-start pt-3'>
-        <CategoryAndItemWidget 
-          categoryLevel={2}
+        <SelectCategoryAndItemWidget 
+          categoryLevel={2} 
           parentLevelToken='AG'
           categoryLevelValues={L2_FACET_VALUES}
           className=''
