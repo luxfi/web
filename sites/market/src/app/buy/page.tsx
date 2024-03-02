@@ -1,6 +1,7 @@
 'use client'
 import React, { 
   useState, 
+  Suspense,
   type PropsWithChildren
 } from 'react'
 import { observer } from 'mobx-react-lite'
@@ -25,12 +26,16 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
+
+
 const BuyPage: React.FC<Props> = observer(({ searchParams }) => {
 
   const cmmc = useCommerce() 
 
   const [loading, setLoading] = useState<boolean>(true)
-  const { category, message, getMutator } = useSkuAndFacetParams(setLoading)
+    // https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    // useSeachParams is called by a library we use, shoudl be within in Suspence boundary
+  const { category, message, getMutator } = useSkuAndFacetParams(setLoading)  
 
   const mobile = (searchParams?.agent === 'phone')
 
@@ -128,4 +133,12 @@ const BuyPage: React.FC<Props> = observer(({ searchParams }) => {
   )
 }) 
 
-export default BuyPage
+const BuyPageWrapper: React.FC<Props> = ({ searchParams }) => (
+
+  <Suspense fallback={<Skeleton className='w-full h-[80vh]' />}>
+    <BuyPage searchParams={searchParams} />
+  </Suspense>
+)
+
+
+export default BuyPageWrapper
