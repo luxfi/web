@@ -29,9 +29,11 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
   const cmmc = useCommerce() 
 
   const [loading, setLoading] = useState<boolean>(true)
+
     // https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
-    // useSeachParams is called by a library we use, shoudl be within in Suspence boundary
-  const { category, message, getMutator } = useSkuAndFacetParams(setLoading)  
+    // useSeachParams is called by a library we use to impl this hook.
+    // So this component should always be within in Suspense boundary.
+  const { message, getMutator } = useSkuAndFacetParams(setLoading)  
 
   const mobile = (searchParams?.agent === 'phone')
 
@@ -72,24 +74,24 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     )
   }
 
-  const Stage: React.FC<{className?: string}> = ({
+  const Stage: React.FC<{className?: string}> = observer(({
     className=''
-  }) => ( message ? (
+  }) => ( message || !cmmc.specifiedCategories ? (
 
       <div className={cn('typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', className)} >
-        <h5 className='text-accent text-center'>{message}</h5>
+        <h5 className='text-accent text-center'>{message ?? 'Please select an options from each group above.'}</h5>
       </div>
     ) : (
       <SelectItemInCategoryView 
         className={className} 
         mobile={mobile} 
-        category={category!}
+        category={cmmc.specifiedCategories[0]}
         lineItemRef={cmmc /* ...conveniently. :) */ }
         handleItemSelected={cmmc.setCurrentItem.bind(cmmc)}
         isLoading={loading}
       />
     ) 
-  )
+  ))
 
   const cartColumnClx = 'hidden md:block min-w-[300px] ' +
     'lg:min-w-[340px] xl:min-w-[360px]'

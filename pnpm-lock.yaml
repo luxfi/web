@@ -306,11 +306,11 @@ importers:
   sites/market:
     dependencies:
       '@hanzo/auth':
-        specifier: ^1.0.11
-        version: 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
+        specifier: ^1.0.12
+        version: 1.0.12(@hanzo/ui@1.0.8)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.331.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: ^1.0.10
-        version: 1.0.10(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
+        specifier: ^1.0.12
+        version: 1.0.12(@hanzo/auth@1.0.12)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
       '@hanzo/ui':
         specifier: ^1.0.8
         version: 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
@@ -779,7 +779,7 @@ importers:
     devDependencies:
       '@hanzo/commerce':
         specifier: ^1.0.8
-        version: 1.0.8(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
+        version: 1.0.8(@hanzo/auth@1.0.12)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
       '@types/node':
         specifier: ^20.11.24
         version: 20.11.24
@@ -2877,36 +2877,6 @@ packages:
       protobufjs: 7.2.6
       yargs: 17.7.2
 
-  /@hanzo/auth@1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-0CEB6/oSWEtc8CiSg8bwW7VLhJukJN8ettnm496yTlRI892ihIKp66E6f0VmgGSJHkXs6uSxC00hBSlerbNw+Q==}
-    peerDependencies:
-      next: ^14.1.0
-      react: ^18.2.0
-    dependencies:
-      '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
-      firebase: 10.8.0
-      firebase-admin: 12.0.0(supports-color@8.1.1)
-      lucide-react: 0.336.0(react@18.2.0)
-      mobx: 6.12.0
-      mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
-      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-hook-form: 7.50.1(react@18.2.0)
-      zod: 3.21.4
-    transitivePeerDependencies:
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@types/react-dom'
-      - date-fns
-      - encoding
-      - next-themes
-      - react-dom
-      - react-native
-      - supports-color
-      - tailwindcss
-    dev: false
-
   /@hanzo/auth@1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-0CEB6/oSWEtc8CiSg8bwW7VLhJukJN8ettnm496yTlRI892ihIKp66E6f0VmgGSJHkXs6uSxC00hBSlerbNw+Q==}
     peerDependencies:
@@ -2937,11 +2907,49 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/auth@1.0.11(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-0CEB6/oSWEtc8CiSg8bwW7VLhJukJN8ettnm496yTlRI892ihIKp66E6f0VmgGSJHkXs6uSxC00hBSlerbNw+Q==}
+  /@hanzo/auth@1.0.12(@hanzo/ui@1.0.8)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.331.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
+    resolution: {integrity: sha512-p1AycGOys33/Ky8bCeCQNkHuyy0553wi813mVS56fUFCt4BJQx9rxoNWVnfXZJys6iM/TrGwfRU5H++9kCsIYA==}
     peerDependencies:
+      '@hanzo/ui': ^1.0.8
+      '@hookform/resolvers': ^3.3.4
+      firebase: ^10.8.0
+      lucide-react: ^0.336.0
+      mobx: ^6.12.0
+      mobx-react-lite: ^4.0.5
       next: ^14.1.0
       react: ^18.2.0
+      react-hook-form: ^7.50.1
+      zod: 3.21.4
+    dependencies:
+      '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
+      firebase: 10.8.0
+      firebase-admin: 12.0.0(supports-color@8.1.1)
+      lucide-react: 0.331.0(react@18.2.0)
+      mobx: 6.12.0
+      mobx-react-lite: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
+      next: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-hook-form: 7.50.1(react@18.2.0)
+      zod: 3.21.4
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: false
+
+  /@hanzo/auth@1.0.12(@hanzo/ui@1.0.8)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.336.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-p1AycGOys33/Ky8bCeCQNkHuyy0553wi813mVS56fUFCt4BJQx9rxoNWVnfXZJys6iM/TrGwfRU5H++9kCsIYA==}
+    peerDependencies:
+      '@hanzo/ui': ^1.0.8
+      '@hookform/resolvers': ^3.3.4
+      firebase: ^10.8.0
+      lucide-react: ^0.336.0
+      mobx: ^6.12.0
+      mobx-react-lite: ^4.0.5
+      next: ^14.1.0
+      react: ^18.2.0
+      react-hook-form: ^7.50.1
+      zod: 3.21.4
     dependencies:
       '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
@@ -2955,22 +2963,14 @@ packages:
       react-hook-form: 7.50.1(react@18.2.0)
       zod: 3.21.4
     transitivePeerDependencies:
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@types/react-dom'
-      - date-fns
       - encoding
-      - next-themes
-      - react-dom
-      - react-native
       - supports-color
-      - tailwindcss
     dev: true
 
-  /@hanzo/commerce@1.0.10(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
-    resolution: {integrity: sha512-oWYMa1cOGEHCAOjCae89vsU23OXZTfL9LC1N1T9J/UWatWmBldjNmP7/CaAQXdB9CRiamvu0Rlf/yh4NdHVDdA==}
+  /@hanzo/commerce@1.0.12(@hanzo/auth@1.0.12)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
+    resolution: {integrity: sha512-qw4tZiUL2wwf/3hkXR5W4oVYT/7yNpi7saMb48c2Z5zeZ/veJoLqtYvapQXIRmRv1dg7IFsfZJ377VK5lpSzFA==}
     peerDependencies:
-      '@hanzo/auth': ^1.0.9
+      '@hanzo/auth': ^1.0.12
       '@hanzo/ui': ^1.0.8
       firebase: ^10.8.0
       mobx: ^6.12.0
@@ -2979,7 +2979,7 @@ packages:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@hanzo/auth': 1.0.11(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(supports-color@8.1.1)(tailwindcss@3.4.1)
+      '@hanzo/auth': 1.0.12(@hanzo/ui@1.0.8)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.331.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
@@ -2995,7 +2995,7 @@ packages:
       - react-hook-form
     dev: false
 
-  /@hanzo/commerce@1.0.8(@hanzo/auth@1.0.11)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
+  /@hanzo/commerce@1.0.8(@hanzo/auth@1.0.12)(@hanzo/ui@1.0.8)(firebase@10.8.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
     resolution: {integrity: sha512-qUOyE0GZ9+SDAFY8EbT9kCSmI/wbolkR9l67EuEQgJ76vcpS7AbNdlQ8pux8jwyG5lR/41BFjG0INUuPmfMTUw==}
     peerDependencies:
       '@hanzo/auth': ^1.0.9
@@ -3007,7 +3007,7 @@ packages:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@hanzo/auth': 1.0.11(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+      '@hanzo/auth': 1.0.12(@hanzo/ui@1.0.8)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.336.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui': 1.0.8(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
