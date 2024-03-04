@@ -7,12 +7,16 @@ import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@hanzo/
 import ElementTable from '@/blocks/components/element-table'
 import siteDef from '@/siteDef'
 import { tiles}  from '@/content'
+import ReviewsBlockComponent from '@/blocks/components/reviews'
+import CarouselBlockComponent from '@/blocks/components/carousel'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 registerBlockType('element-table', ElementTable)
+registerBlockType('review', ReviewsBlockComponent)
+registerBlockType('carousel', CarouselBlockComponent)
 
 const Page = ({ searchParams }: Props ) => {
   

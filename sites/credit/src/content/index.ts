@@ -12,9 +12,11 @@ import elite from './products/elite'
 import founder from './products/founder'
 import sovereign from './products/sovereign'
 import easySpending from './slides/easy-spending'
+import reviewsAndBrowseCards from './slides/reviews-and-browse-cards'
 
 const tiles = [
   new1Percent,
+  reviewsAndBrowseCards,
   keyFeatures,
   directOwnership,
   cashBack,
