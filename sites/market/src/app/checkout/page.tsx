@@ -26,7 +26,7 @@ const CheckoutPage = () => {
   return (<>
     <Main className='gap-8 md:gap-14 flex flex-col justify-center'>
       {step === 0 ? (
-        <ChoosePaymentMethod paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} setStep={setStep}/>
+        <ChoosePaymentMethod setPaymentMethod={setPaymentMethod} setStep={setStep}/>
       ) : step === 1 ? (
         <>
           {paymentMethod === 'crypto' ? (

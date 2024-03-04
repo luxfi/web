@@ -35,7 +35,7 @@ const PayByBankTransfer: React.FC<{setStep: (step: number) => void}> = ({setStep
       } satisfies EnhHeadingBlock as Block}
     />
     <Tabs defaultValue="usd" className='w-full mx-auto max-w-[50rem]'>
-      <TabsList className="grid w-full grid-cols-2 w-full max-w-[15rem] mx-auto bg-level-2">
+      <TabsList className="grid w-full grid-cols-2 max-w-[15rem] mx-auto bg-level-2">
         <TabsTrigger value="usd">USD</TabsTrigger>
         <TabsTrigger value="eur">EUR/GBP</TabsTrigger>
       </TabsList>

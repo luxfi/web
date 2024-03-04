@@ -1,45 +1,42 @@
 'use client'
+
 import React from 'react'
 
 import { Button } from '@hanzo/ui/primitives'
 import { type EnhHeadingBlock, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
-import { cn } from '@hanzo/ui/util'
 
 import { Cart } from '@hanzo/commerce/components'
-
+import { useAuth } from '@hanzo/auth/service'
+import { useCommerce } from '@hanzo/commerce'
 
 const ChoosePaymentMethod: React.FC<{
-  paymentMethod?: 'crypto' | 'bank',
   setPaymentMethod: (paymentMethod: 'crypto' | 'bank') => void,
   setStep: (step: number) => void
 }> = ({
-  paymentMethod, 
   setPaymentMethod, 
   setStep
 }) => {
+  const auth = useAuth()
+  const cmmc = useCommerce()
+  
+  const continueStepper = (method: string) => {
+    if (auth.user) {
+      cmmc.createOrder(auth.user?.email, method)
+    }
+    setPaymentMethod(method as 'crypto' | 'bank')
+    setStep(1)
+  }
+
   return (<>
     <EnhHeadingBlockComponent block={{blockType: 'enh-heading',
       specifiers: 'center',
       heading: { text: `FINALIZE PAYMENT` },
     } as EnhHeadingBlock}/>
-    <div className='w-full flex gap-4 justify-center max-w-[35rem] h-[12rem] sm:h-[18rem] mx-auto'>
-      <Button
-        variant='outline'
-        className={cn('w-full h-full text-lg sm:text-3xl text-wrap', paymentMethod === 'crypto' ? 'border-foreground border-4' : '')}
-        onClick={() => setPaymentMethod('crypto')}
-      >
-        PAY WITH CRYPTO
-      </Button>
-      <Button
-        variant='outline'
-        className={cn('w-full h-full text-lg sm:text-3xl text-wrap', paymentMethod === 'bank' ? 'border-foreground border-4' : '')}
-        onClick={() => setPaymentMethod('bank')}
-      >
-        BANK TRANSFER
-      </Button>
-    </div>
     <Cart hideCheckout/>
-    <Button onClick={() => setStep(1)} disabled={!paymentMethod} className='mx-auto rounded-full w-full max-w-[15rem]'>Continue</Button>
+    <div className='flex gap-4'>
+      <Button onClick={() => continueStepper('crypto')} className='mx-auto rounded-full w-full max-w-[16rem]'>PAY WITH CRYPTO</Button>
+      <Button onClick={() => continueStepper('bank')} className='mx-auto rounded-full w-full max-w-[16rem]'>BANK TRANSFER</Button>
+    </div>
   </>)
 }
 
