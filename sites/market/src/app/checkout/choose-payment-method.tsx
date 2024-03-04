@@ -33,7 +33,7 @@ const ChoosePaymentMethod: React.FC<{
       heading: { text: `FINALIZE PAYMENT` },
     } as EnhHeadingBlock}/>
     <Cart hideCheckout/>
-    <div className='flex gap-4'>
+    <div className='flex flex-col sm:flex-row gap-4'>
       <Button onClick={() => continueStepper('crypto')} className='mx-auto rounded-full w-full max-w-[16rem]'>PAY WITH CRYPTO</Button>
       <Button onClick={() => continueStepper('bank')} className='mx-auto rounded-full w-full max-w-[16rem]'>BANK TRANSFER</Button>
     </div>
