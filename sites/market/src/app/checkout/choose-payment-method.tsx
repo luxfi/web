@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 import { Button } from '@hanzo/ui/primitives'
 import { type EnhHeadingBlock, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
 
@@ -11,17 +9,26 @@ import { useCommerce } from '@hanzo/commerce'
 
 const ChoosePaymentMethod: React.FC<{
   setPaymentMethod: (paymentMethod: 'crypto' | 'bank') => void,
-  setStep: (step: number) => void
+  setStep: (step: number) => void,
+  orderId?: string,
+  setOrderId: (orderId?: string) => void
 }> = ({
   setPaymentMethod, 
-  setStep
+  setStep,
+  orderId,
+  setOrderId
 }) => {
   const auth = useAuth()
   const cmmc = useCommerce()
   
-  const continueStepper = (method: string) => {
+  const continueStepper = async (method: string) => {
     if (auth.user) {
-      cmmc.createOrder(auth.user?.email, method)
+      if (!!orderId) {
+        await cmmc.updateOrder(orderId, auth.user.email, method)
+      } else {
+        const id = await cmmc.createOrder(auth.user.email, method)
+        setOrderId(id)
+      }
     }
     setPaymentMethod(method as 'crypto' | 'bank')
     setStep(1)
