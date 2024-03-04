@@ -21,7 +21,7 @@ const ChoosePaymentMethod: React.FC<{
   const auth = useAuth()
   const cmmc = useCommerce()
   
-  const continueStepper = async (method: string) => {
+  const selectPaymentMethod = async (method: string) => {
     if (auth.user) {
       if (!!orderId) {
         await cmmc.updateOrder(orderId, auth.user.email, method)
@@ -42,13 +42,13 @@ const ChoosePaymentMethod: React.FC<{
     <Cart hideCheckout/>
     <div className='flex flex-col sm:flex-row gap-4'>
       <Button
-        onClick={() => continueStepper('crypto')}
+        onClick={() => selectPaymentMethod('crypto')}
         className='mx-auto rounded-full w-full max-w-[16rem]'
       >
         PAY WITH CRYPTO
       </Button>
       <Button
-        onClick={() => continueStepper('bank')}
+        onClick={() => selectPaymentMethod('bank')}
         className='mx-auto rounded-full w-full max-w-[16rem]'
       >
         BANK TRANSFER
