@@ -2,8 +2,8 @@
 import React, { type PropsWithChildren } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Icons } from '@hanzo/commerce/components/Icons'
-import { useCommerce } from '@hanzo/commerce/service'
+import { Icons } from '@hanzo/commerce/components'
+import { useCommerce } from '@hanzo/commerce'
 
 import { DrawerMenu } from '@hanzo/ui/common'
 import { buttonVariants, Badge } from '@hanzo/ui/primitives'

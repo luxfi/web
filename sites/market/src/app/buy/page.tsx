@@ -9,8 +9,8 @@ import { observer } from 'mobx-react-lite'
 import { Skeleton } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import { useCommerce } from '@hanzo/commerce/service'
-import { useSkuAndFacetParams } from '@hanzo/commerce/util'
+import { useCommerce, useSkuAndFacetParams } from '@hanzo/commerce'
+
 import { 
   Cart, 
   SelectItemInCategoryView, 
@@ -67,7 +67,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
   }) => {
     return !loading ? (
       <Cart isMobile={mobile} className={className}>
-        <h4 className='text-center font-heading text-xl'>Lux Market Cart</h4>
+        <h4 className='text-center font-nav text-xl'>Your Cart</h4>
       </Cart>
     ) : (
       <div className={cn('h-40 bg-level-1 rounded-xl' , className)}/>
