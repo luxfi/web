@@ -41,8 +41,18 @@ const ChoosePaymentMethod: React.FC<{
     } as EnhHeadingBlock}/>
     <Cart hideCheckout/>
     <div className='flex flex-col sm:flex-row gap-4'>
-      <Button onClick={() => continueStepper('crypto')} className='mx-auto rounded-full w-full max-w-[16rem]'>PAY WITH CRYPTO</Button>
-      <Button onClick={() => continueStepper('bank')} className='mx-auto rounded-full w-full max-w-[16rem]'>BANK TRANSFER</Button>
+      <Button
+        onClick={() => continueStepper('crypto')}
+        className='mx-auto rounded-full w-full max-w-[16rem]'
+      >
+        PAY WITH CRYPTO
+      </Button>
+      <Button
+        onClick={() => continueStepper('bank')}
+        className='mx-auto rounded-full w-full max-w-[16rem]'
+      >
+        BANK TRANSFER
+      </Button>
     </div>
   </>)
 }
