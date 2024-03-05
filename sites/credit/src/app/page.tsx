@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import { Footer, Header } from '@hanzo/ui/common'
+import { Header } from '@hanzo/ui/common'
 import { TailwindIndicator } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@hanzo/ui/blocks'
 

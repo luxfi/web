@@ -23,13 +23,13 @@ const tiles = [
   reviews,
   browseCards,
   keyFeatures,
-  directOwnership,
   cashBack,
   roadmap1,
   roadmap2,
   flexibleBorrowing,
   compareTable,
   easySpending,
+  directOwnership,
   footer
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
