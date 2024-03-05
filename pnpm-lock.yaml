@@ -83,6 +83,9 @@ importers:
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
+      lucide-react:
+        specifier: ^0.331.0
+        version: 0.331.0(react@18.2.0)
       markdown-to-jsx:
         specifier: ^7.3.2
         version: 7.4.1(react@18.2.0)

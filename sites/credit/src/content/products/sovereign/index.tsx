@@ -2,7 +2,7 @@ import type { CardDetail } from '@/types'
 import type { ImageDef } from '@hanzo/ui/types'
 
 import MDX_Content from './detail.mdx'
-const imageUrl = '/assets/img/titanium-two-sides-900x517.png'
+const imageUrl = '/assets/img/cards-2-flat-tit-1593x1231.png'
 
 export default {
   level : 'sovereign',
@@ -13,7 +13,7 @@ export default {
   run: 1000,
   image: {
     src: imageUrl,
-    dim: {w: 900, h: 517} 
+    dim: {w: 1593, h: 1231} 
   } satisfies ImageDef,
   detail: <MDX_Content />,
   fees: {

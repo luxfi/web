@@ -13,6 +13,7 @@ const byline = 'Unlock the full potential of Lux Credit Card with zero staking r
 
 export default {
   blockType: 'screenful',
+  mobileOrder: [1, 0], // mobile: card image on top please
   columnSpecifiers: ['vert-center', 'vert-center'],
   contentColumns: [
     [
@@ -43,9 +44,9 @@ export default {
     ], 
     [ 
     {blockType: 'image',
-      src: '/assets/img/card-box.png',
+      src: '/assets/img/card-packaging-800x472.png',
       alt: 'cards',
-      dim: {w: 5123, h: 3550},
+      dim: {w: 800, h: 472},
       fullWidthOnMobile: true,
       props: {
         sizes: '900px, 440px', 
