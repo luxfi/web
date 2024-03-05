@@ -37,7 +37,6 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
-    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-[200px] lg:mx-auto ' />
     <TailwindIndicator />
   </>)
 }

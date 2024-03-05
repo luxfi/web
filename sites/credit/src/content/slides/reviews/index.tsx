@@ -1,7 +1,6 @@
-import type CardsCarouselBlock from '@/blocks/def/cards-carousel'
 import type ReviewsBlock from '@/blocks/def/reviews'
-import { type ScreenfulBlock, type Block } from '@hanzo/ui/blocks'
-import type { ImageDef } from '@hanzo/ui/types'
+import { type ScreenfulBlock, type Block, type SpaceBlock } from '@hanzo/ui/blocks'
+import TrustLogos from './trust-logos'
 
 const text = 'One of the most exciting layer one technologies in the Defi space. ' +
   'The team is already in talks with a number of different industries that they are ' + 
@@ -9,8 +8,12 @@ const text = 'One of the most exciting layer one technologies in the Defi space.
 
 export default {
   blockType: 'screenful',
-  columnSpecifiers: ['vert-center center'],
+  columnSpecifiers: ['vert-center center mobile-vert-center'],
   contentColumns: [[
+    {blockType: 'element',
+      element: <TrustLogos />
+    },
+    {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     {blockType: 'review',
       reviews: [
         {
@@ -33,23 +36,5 @@ export default {
         },
       ]
     } satisfies ReviewsBlock as Block,
-    {blockType: 'space', level: 2},
-    {blockType: 'cards-carousel',
-      defaultSlide: 1,
-      slides: [
-        {
-          title: 'ELITE CARD',
-          img: {blockType: 'image', src: '/assets/img/elite.png', dim: {h: 659, w: 455}, alt: 'Elite card'} as ImageDef,
-        },
-        {
-          title: 'BLACK CARD',
-          img: {blockType: 'image', src: '/assets/img/black.png', dim: {h: 659, w: 455}, alt: 'Black card'} as ImageDef,
-        },
-        {
-          title: 'FOUNDER CARD',
-          img: {blockType: 'image', src: '/assets/img/founder.png', dim: {h: 659, w: 455}, alt: 'Founder card'} as ImageDef,
-        },
-      ]
-    } as CardsCarouselBlock,
   ]], 
 } as ScreenfulBlock

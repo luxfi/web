@@ -1,15 +1,11 @@
 import type { 
   Block,
-  CTABlock, 
-  HeadingBlock, 
-  EnhHeadingBlock, 
+  CTABlock,
   ElementBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
-
-import TrustLogos from './trust-logos'
 
 const finePrint = 'Borrow up to 50% of all your digital assets when you pay with the Lux Credit Card, ' + 
  "the most premium and exclusive card membership program around, that doesn't ever use or effect your credit score."
@@ -18,7 +14,6 @@ export default {blockType: 'screenful',
 
   columnSpecifiers: ['vert-center', 'vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
-  footer: <TrustLogos />,
   contentColumns: [
     [
       {blockType: 'element',

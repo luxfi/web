@@ -12,13 +12,16 @@ import elite from './products/elite'
 import founder from './products/founder'
 import sovereign from './products/sovereign'
 import easySpending from './slides/easy-spending'
-import reviewsAndBrowseCards from './slides/reviews-and-browse-cards'
 import roadmap1 from './slides/roadmap/roadmap-1'
 import roadmap2 from './slides/roadmap/roadmap-2'
+import browseCards from './slides/browse-cards'
+import reviews from './slides/reviews'
+import footer from './slides/footer'
 
 const tiles = [
   new1Percent,
-  reviewsAndBrowseCards,
+  reviews,
+  browseCards,
   keyFeatures,
   directOwnership,
   cashBack,
@@ -26,7 +29,8 @@ const tiles = [
   roadmap2,
   flexibleBorrowing,
   compareTable,
-  easySpending
+  easySpending,
+  footer
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
 const products = {
