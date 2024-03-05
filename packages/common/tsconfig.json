@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.hanzo-modules.base.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+}
