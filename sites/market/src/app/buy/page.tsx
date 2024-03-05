@@ -9,8 +9,8 @@ import { observer } from 'mobx-react-lite'
 import { Skeleton } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import { useCommerce } from '@hanzo/commerce/service'
-import { useSkuAndFacetParams } from '@hanzo/commerce/util'
+import { useCommerce, useSyncSkuParamWithCurrentItem, type StringMutator } from '@hanzo/commerce'
+
 import { 
   Cart, 
   SelectItemInCategoryView, 
@@ -24,16 +24,49 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
+const CAT_LEVEL = 3
+
 const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
   const cmmc = useCommerce() 
 
+  const [message, setMessage] = useState<string | undefined>(undefined)
   const [loading, setLoading] = useState<boolean>(true)
+
+  const getMutator = (level: number): StringMutator => {
+
+    const setLevel = (value: string, level: number ): void  => {
+      const facets = cmmc.facetsValue
+      facets[level] = [value]
+      cmmc.setFacets(facets)
+    }
+  
+    const getLevelValueSafe = (level: number): string | null => {
+      const facets = cmmc.facetsValue
+      if (!(level in facets) || facets[level].length === 0 ) {
+        return null
+      }
+      return facets[level][0]
+    }
+
+    return {
+      get: () => (getLevelValueSafe(level)),
+      set: (v: string) => {setLevel(v, level)}
+    } satisfies StringMutator
+  } 
+
+  const mutators: StringMutator[] = []
+    // Note that level index has nothing to 
+    // do with the indeces of the mutators array
+    // passed to the FacetsWiddget. 
+  for (let i = 1; i < CAT_LEVEL; i++) {
+    mutators.push(getMutator(i))
+  } 
 
     // https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
     // useSeachParams is called by a library we use to impl this hook.
     // So this component should always be within in Suspense boundary.
-  const { message, getMutator } = useSkuAndFacetParams(setLoading)  
+  useSyncSkuParamWithCurrentItem(setMessage, setLoading)  
 
   const mobile = (searchParams?.agent === 'phone')
 
@@ -42,7 +75,8 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => {
 
-    const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start sm:gap-x-4 xs:gap-x-2 items-start'  
+    const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start ' + 
+      'sm:gap-x-4 xs:gap-x-2 items-start'  
     const facets1Clx = 'grid grid-cols-2 gap-0 '  + (mobile ? '' : '')
     const facets2Clx = 'grid grid-cols-3 gap-0 '
 
@@ -52,7 +86,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
         className={cn(widgetClx, (mobile ? 'relative left-0 -mr-3':''), className)} 
         isMobile={mobile}
         facetClassNames={[facets1Clx, facets2Clx]}
-        mutators={[getMutator(1), getMutator(2)] } 
+        mutators={mutators} 
         facets={siteDef.ext.commerce.facets}
       >
         {children}
@@ -67,7 +101,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
   }) => {
     return !loading ? (
       <Cart isMobile={mobile} className={className}>
-        <h4 className='text-center font-heading text-xl'>Lux Market Cart</h4>
+        <h4 className='text-center font-nav text-xl'>Your Cart</h4>
       </Cart>
     ) : (
       <div className={cn('h-40 bg-level-1 rounded-xl' , className)}/>
@@ -76,16 +110,19 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
   const Stage: React.FC<{className?: string}> = observer(({
     className=''
-  }) => ( message || !cmmc.specifiedCategories ? (
+  }) => ( message || !cmmc.specifiedCategories || cmmc.specifiedCategories.length === 0 ? (
 
-      <div className={cn('typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', className)} >
-        <h5 className='text-accent text-center'>{message ?? 'Please select an options from each group above.'}</h5>
+      <div className={cn(
+        'typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', 
+        className
+      )} >
+        <h5 className='text-accent text-center'>{message ?? ''}</h5>
       </div>
     ) : (
       <SelectItemInCategoryView 
         className={className} 
         mobile={mobile} 
-        category={cmmc.specifiedCategories[0]}
+        category={cmmc.specifiedCategories[0]} // the widget assumes this to be valid
         lineItemRef={cmmc /* ...conveniently. :) */ }
         handleItemSelected={cmmc.setCurrentItem.bind(cmmc)}
         isLoading={loading}
@@ -93,8 +130,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     ) 
   ))
 
-  const cartColumnClx = 'hidden md:block min-w-[300px] ' +
-    'lg:min-w-[340px] xl:min-w-[360px]'
+  const cartColumnClx = 'hidden md:block min-w-[300px] lg:min-w-[340px] xl:min-w-[360px]'
 
   return mobile ? (
     <div /* id='SCV_OUTERMOST' */ className='flex flex-col justify-start items-stretch relative w-full' >

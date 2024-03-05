@@ -8,6 +8,7 @@ export default {
   video: {...video, sizing: { vh: 50 }},
   cta: {
     blockType: 'cta',
+    specifiers: 'mobile-2-columns',
     elements: [
       {
         title: "Learn More",

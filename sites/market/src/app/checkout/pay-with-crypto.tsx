@@ -30,7 +30,7 @@ import {
 import { useAuth } from '@hanzo/auth/service'
 import { Ethereum as EthIconFromAuth }  from '@hanzo/auth/icons'
 
-import { useCommerce } from '@hanzo/commerce/service'
+import { useCommerce } from '@hanzo/commerce'
 import { formatPrice } from '@hanzo/commerce/util'
 
 import Eth from './icons/eth'

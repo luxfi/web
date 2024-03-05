@@ -1,45 +1,59 @@
 'use client'
-import React from 'react'
 
 import { Button } from '@hanzo/ui/primitives'
 import { type EnhHeadingBlock, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
-import { cn } from '@hanzo/ui/util'
 
 import { Cart } from '@hanzo/commerce/components'
-
+import { useAuth } from '@hanzo/auth/service'
+import { useCommerce } from '@hanzo/commerce'
 
 const ChoosePaymentMethod: React.FC<{
-  paymentMethod?: 'crypto' | 'bank',
   setPaymentMethod: (paymentMethod: 'crypto' | 'bank') => void,
-  setStep: (step: number) => void
+  setStep: (step: number) => void,
+  orderId?: string,
+  setOrderId: (orderId?: string) => void
 }> = ({
-  paymentMethod, 
   setPaymentMethod, 
-  setStep
+  setStep,
+  orderId,
+  setOrderId
 }) => {
+  const auth = useAuth()
+  const cmmc = useCommerce()
+  
+  const selectPaymentMethod = async (method: string) => {
+    if (auth.user) {
+      if (!!orderId) {
+        await cmmc.updateOrder(orderId, auth.user.email, method)
+      } else {
+        const id = await cmmc.createOrder(auth.user.email, method)
+        setOrderId(id)
+      }
+    }
+    setPaymentMethod(method as 'crypto' | 'bank')
+    setStep(1)
+  }
+
   return (<>
     <EnhHeadingBlockComponent block={{blockType: 'enh-heading',
       specifiers: 'center',
       heading: { text: `FINALIZE PAYMENT` },
     } as EnhHeadingBlock}/>
-    <div className='w-full flex gap-4 justify-center max-w-[35rem] h-[12rem] sm:h-[18rem] mx-auto'>
+    <Cart hideCheckout/>
+    <div className='flex flex-col sm:flex-row gap-4'>
       <Button
-        variant='outline'
-        className={cn('w-full h-full text-lg sm:text-3xl text-wrap', paymentMethod === 'crypto' ? 'border-foreground border-4' : '')}
-        onClick={() => setPaymentMethod('crypto')}
+        onClick={() => selectPaymentMethod('crypto')}
+        className='mx-auto rounded-full w-full max-w-[16rem]'
       >
         PAY WITH CRYPTO
       </Button>
       <Button
-        variant='outline'
-        className={cn('w-full h-full text-lg sm:text-3xl text-wrap', paymentMethod === 'bank' ? 'border-foreground border-4' : '')}
-        onClick={() => setPaymentMethod('bank')}
+        onClick={() => selectPaymentMethod('bank')}
+        className='mx-auto rounded-full w-full max-w-[16rem]'
       >
         BANK TRANSFER
       </Button>
     </div>
-    <Cart hideCheckout/>
-    <Button onClick={() => setStep(1)} disabled={!paymentMethod} className='mx-auto rounded-full w-full max-w-[15rem]'>Continue</Button>
   </>)
 }
 
