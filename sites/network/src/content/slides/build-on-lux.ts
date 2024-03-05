@@ -2,7 +2,7 @@ import type {
   CTABlock,
   EnhHeadingBlock,
   GridBlock,
-  ScreenfulBlock, 
+  ScreenfulBlock,
 } from '@hanzo/ui/blocks'
 
 import { COMMON_GRID_2_COL, type LinkDef } from '@hanzo/ui/types'
@@ -29,7 +29,7 @@ export default {
       elements: [
         {
           title: 'Start building',
-          href: 'https://beta.lux.network/',
+          href: 'https://lux.build/',
           external: true,
           newTab: false,
           variant: 'primary',
