@@ -46,9 +46,14 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
     }
   }
 
-  const getTranslateSlide = (slide: number) => {
+  const slideTranslate = (slide: number) => {
+    let startTranslate = 0
+    if (b.slides.length % 2 === 0) {
+      startTranslate = 50
+    }
     const multiplier = b.defaultSlide - slide
-    return `${multiplier < 0 ? '-' : ''}translate-x-[${Math.abs(multiplier) * 100}%]`
+    const translatePr = Math.abs(startTranslate + (multiplier * 100)) 
+    return `${multiplier < 0 ? '-' : ''}translate-x-[${translatePr}%]`
   }
   
   return (
@@ -57,7 +62,7 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
         {b.slides.map(({img}, index) => (
           <div
             key={index}
-            className={cn('flex duration-700 ease-in-out transition-all transform max-w-[50rem]', getTranslateSlide(slide))}
+            className={cn('flex duration-700 ease-in-out transition-all transform max-w-[50rem]', slideTranslate(slide))}
           >
             <ImageBlockComponent className='h-full max-h-[30rem]' block={img as ImageBlock}/>
           </div>
