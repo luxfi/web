@@ -21,10 +21,13 @@ export default {blockType: 'screenful',
   footer: <TrustLogos />,
   contentColumns: [
     [
-      {blockType: 'enh-heading', 
-        heading: { text: 'The new 1%', level: 1, mb: 6}, 
-        byline: { text: 'Never sell your crypto again with our self-paying credit card', level: 6 }, 
-      } satisfies EnhHeadingBlock as Block,
+      {blockType: 'element',
+        element: 
+          <div className='flex flex-col gap-4'>
+            <h4 className='flex gap-2 text-3xl md:text-6xl'>The new 1%</h4>
+            <h5 className='flex gap-2 md:text-3xl'>Never sell your crypto again with our self-paying credit card</h5>
+          </div>
+      } satisfies ElementBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
@@ -55,7 +58,7 @@ export default {blockType: 'screenful',
         }
       } satisfies ImageBlock as Block ,
       {blockType: 'element',
-        element: <p className='w-full text-sm text-muted-1 !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Black Card</p>
+        element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Black Card</p>
       } satisfies ElementBlock as Block
     ]
   ] 

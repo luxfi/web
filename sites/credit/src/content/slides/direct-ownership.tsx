@@ -1,7 +1,6 @@
 import type { 
   Block,
   CTABlock, 
-  HeadingBlock, 
   EnhHeadingBlock, 
   ElementBlock, 
   ImageBlock, 
@@ -16,6 +15,7 @@ const finePrint = 'Borrow up to 50% of all your digital assets when you pay with
 
 export default {
   blockType: 'screenful',
+  mobileOrder: [1, 0], // mobile: card image on top please
   columnSpecifiers: ['vert-center', 'vert-center'],
   contentColumns: [
     [
@@ -33,7 +33,7 @@ export default {
       } satisfies CTABlock as Block,
       {blockType: 'space'} satisfies SpaceBlock as Block,
       {blockType: 'element',
-        element: <p className='text-xxs italic'>{finePrint}</p>
+        element: <p className='text-xs italic'>{finePrint}</p>
       } satisfies ElementBlock as Block,
     ], 
     [ 
@@ -41,7 +41,6 @@ export default {
       src: '/assets/img/cards-dual-chr-psm-1475x1220.png',
       alt: 'cards',
       dim: {w: 1475, h: 1220},
-      fullWidthOnMobile: true,
       props: {
         sizes: '900px, 440px', 
         style: {
@@ -51,7 +50,7 @@ export default {
       }
     } satisfies ImageBlock as Block,
     {blockType: 'element',
-      element: <p className='w-full text-sm text-muted-1 !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Founder Card</p>
+      element: <p className='w-full text-xxs text-muted-2 !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[4vh] lg:-top-[4vh]'>Founder Card</p>
     } as Block,
   ]], 
 } as ScreenfulBlock
