@@ -66,7 +66,7 @@ const BannerBlockComponent: React.FC<{
       </div>
       {banner.cta && (
         <div className={'flex flex-row items-stretch gap-2 sm:gap-6 justify-center ' + ctaClasses}>
-          <CTABlockComponent block={banner.cta} className={'xs:w-1/2 ' + ctaItemClassName} itemSize='lg'  />
+          <CTABlockComponent block={banner.cta} className={ctaItemClassName} itemSize='lg'  />
         </div>
       )}
     </>)

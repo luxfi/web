@@ -16,6 +16,7 @@ import ChoosePaymentMethod from './choose-payment-method'
 const CheckoutPage = () => {
 
   const auth = useAuth()
+  const [orderId, setOrderId] = useState<string>()
   const [paymentMethod, setPaymentMethod] = useState<'crypto' | 'bank'>()
   const [step, setStep] = useState(0)
 
@@ -26,7 +27,12 @@ const CheckoutPage = () => {
   return (<>
     <Main className='gap-8 md:gap-14 flex flex-col justify-center'>
       {step === 0 ? (
-        <ChoosePaymentMethod paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} setStep={setStep}/>
+        <ChoosePaymentMethod
+          setPaymentMethod={setPaymentMethod}
+          setStep={setStep}
+          orderId={orderId}
+          setOrderId={setOrderId}
+        />
       ) : step === 1 ? (
         <>
           {paymentMethod === 'crypto' ? (
@@ -39,7 +45,7 @@ const CheckoutPage = () => {
         <ThankYou/>
       )}
     </Main>
-    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
+    <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto' />
   </>)
 }
 
