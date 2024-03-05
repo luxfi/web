@@ -29,7 +29,7 @@ export default {
     {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'} satisfies EnhHeadingBlock as Block,
     {blockType: 'space', sizes: {xs: 1}, test: false} satisfies SpaceBlock as Block,
     {blockType: 'bullet-cards',
-      specifiers: 'border-muted-3 mobile-text-xs',
+      specifiers: 'border-muted-3 mobile-small-text',
       grid: {
         at: { xs: 1, md: 2, lg: {columns: 3, gap: 6}, xl: {columns: 3, gap: 6} }, // must override each default
         mobile: 1

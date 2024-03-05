@@ -8,6 +8,7 @@ interface ReviewsBlock extends Block {
     title: string
     text: string
     author: string
+    href?: string
   }[]
 }
 
