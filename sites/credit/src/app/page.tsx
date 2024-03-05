@@ -8,7 +8,7 @@ import ElementTable from '@/blocks/components/element-table'
 import siteDef from '@/siteDef'
 import { tiles}  from '@/content'
 import ReviewsBlockComponent from '@/blocks/components/reviews'
-import CarouselBlockComponent from '@/blocks/components/carousel'
+import CardsCarouselBlockComponent from '@/blocks/components/cards-carousel'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -16,7 +16,7 @@ type Props = {
 
 registerBlockType('element-table', ElementTable)
 registerBlockType('review', ReviewsBlockComponent)
-registerBlockType('carousel', CarouselBlockComponent)
+registerBlockType('cards-carousel', CardsCarouselBlockComponent)
 
 const Page = ({ searchParams }: Props ) => {
   
