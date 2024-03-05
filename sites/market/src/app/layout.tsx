@@ -43,7 +43,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
           {children}
           <ChatWidget
             title='LUX'
-            subtitle='AI Chat'
+            subtitle='AI'
             chatbotUrl='https://lux.chat/iframe'
           />
           <Toaster />
