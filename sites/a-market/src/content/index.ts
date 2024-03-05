@@ -1,5 +1,4 @@
 import landing from './landing'
-import footer from './footer'
 import silver from './products/silver'
 import gold from './products/gold'
 import coin from './products/coin'
@@ -20,6 +19,5 @@ const products = {
 
 export {
   landing,
-  footer,
   products
 }

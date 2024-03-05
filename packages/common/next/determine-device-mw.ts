@@ -2,7 +2,7 @@ import { NextRequest, NextResponse, userAgent } from 'next/server'
 import { getSelectorsByUserAgent } from 'react-device-detect'
 
   // writed this way so they can be chained :)
-const determineDeviceMiddleware = async (request: NextRequest) => {
+const determineDeviceMW = async (request: NextRequest) => {
 
   const ua = userAgent(request)
   const { isMobileOnly, isTablet, isDesktop } = getSelectorsByUserAgent(ua.ua)
@@ -13,4 +13,4 @@ const determineDeviceMiddleware = async (request: NextRequest) => {
   return NextResponse.rewrite(url)
 }
 
-export default determineDeviceMiddleware
+export default determineDeviceMW

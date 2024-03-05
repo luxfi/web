@@ -1,16 +1,20 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/next/root-layout'
 import '@hanzo/ui/style/globals.css'
 
 import { Toaster } from '@hanzo/ui/primitives'
-import { ChatWidget } from '@hanzo/ui/common'
 
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
 import { CommerceServiceProvider } from '@hanzo/commerce'
+
+import { 
+  ChatWidget,
+  RootLayout as RootLayoutCommon, 
+  rootLayoutViewport 
+} from '@luxdefi/common'
 
 
 import siteDef from '../siteDef'
@@ -23,7 +27,7 @@ export const metadata = {
 }
 
 export const viewport = {
-  ..._viewport
+  ...rootLayoutViewport
 }
 
 const RootLayout: React.FC<PropsWithChildren> = async ({

@@ -11,6 +11,8 @@
   ],
   "exclude": [ "node_modules" ],
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {

@@ -7,7 +7,7 @@ import community from './community'
 import { legal, legalColumn } from './legal'
 
 
-const common = [
+const standard = [
   ecosystem,
   network,
   company,
@@ -21,6 +21,6 @@ export {
   community,
   legal, 
   legalColumn,
-  common as default
+  standard 
 }
 

@@ -7,6 +7,12 @@ export { default as Header } from './header'
 export * as Icons from './icons'
 export { default as Logo } from './logo'
 export { default as MiniChart } from './mini-chart'
+export { default as NotFound } from './not-found'
+export {
+  default as RootLayout,
+  viewport as rootLayoutViewport
+} from './root-layout'
+
 
 /*
 export { 

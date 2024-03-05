@@ -1,9 +1,9 @@
 import React  from 'react'
 
-import type { SiteDef } from '@hanzo/ui/types'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
-import Footer from '../components/footer'
+import type { SiteDef } from '../../site-def'
+import Footer from '../footer'
 
 import NotFoundMDX from './not-found-content.mdx'
 

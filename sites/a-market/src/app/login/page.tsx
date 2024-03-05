@@ -1,4 +1,4 @@
-import { Footer } from '@hanzo/ui/common'
+import { Footer } from '@luxdefi/common'
 import { Main } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful, type ElementBlock, type ScreenfulBlock } from '@hanzo/ui/blocks'
 import { LoginComponent as Login } from '@hanzo/auth/components'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ApplyTypography } from '@hanzo/ui/primitives'
-import { Footer } from '@hanzo/ui/common'
+import { Footer } from '@luxdefi/common'
 
 import BannerComponent from '@/blocks/components/banner-block'
 

@@ -19,6 +19,7 @@
     "ul:all": "pnpm unlink -g @hanzo/ui && pnpm unlink -g @hanzo/auth && pnpm unlink -g @hanzo/commerce"
   },
   "dependencies": {
+    "@luxdefi/common": "workspace:*",
     "@hanzo/auth": "^1.0.12",
     "@hanzo/ui": "^1.0.10",
     "@hanzo/commerce": "^1.1.2",
