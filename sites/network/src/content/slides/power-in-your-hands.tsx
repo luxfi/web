@@ -59,8 +59,7 @@ export default {
       elements: [
         {
           title: "Start Building",
-          href: "https://beta.lux.network",
-          external: true,
+          href: "https://lux.build",
           newTab: false,
           variant: 'primary',
         },
