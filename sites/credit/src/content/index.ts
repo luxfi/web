@@ -13,6 +13,8 @@ import founder from './products/founder'
 import sovereign from './products/sovereign'
 import easySpending from './slides/easy-spending'
 import reviewsAndBrowseCards from './slides/reviews-and-browse-cards'
+import roadmap1 from './slides/roadmap/roadmap-1'
+import roadmap2 from './slides/roadmap/roadmap-2'
 
 const tiles = [
   new1Percent,
@@ -20,6 +22,8 @@ const tiles = [
   keyFeatures,
   directOwnership,
   cashBack,
+  roadmap1,
+  roadmap2,
   flexibleBorrowing,
   compareTable,
   easySpending

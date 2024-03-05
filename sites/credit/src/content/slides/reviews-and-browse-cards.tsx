@@ -14,19 +14,19 @@ export default {
     {blockType: 'review',
       reviews: [
         {
-          image: {blockType: 'image', src: '/assets/img/reviews/antje-headshot-150x149.png', dim: {h: 150, w: 149}},
+          image: {blockType: 'image', src: '/assets/img/reviews/antje-headshot-150x149.png', dim: {h: 150, w: 149}, alt: 'Antje Worring'},
           title: 'Lux Card makes it super easy to shop and earn!',
           text: text,
           author: 'Antje Worring',     
         },
         {
-          image: {blockType: 'image', src: '/assets/img/reviews/antje-headshot-150x149.png', dim: {h: 150, w: 149}},
+          image: {blockType: 'image', src: '/assets/img/reviews/antje-headshot-150x149.png', dim: {h: 150, w: 149}, alt: 'Antje Worring'},
           title: 'Lux Card makes it super easy to shop and earn!',
           text: text,
           author: 'Antje Worring',     
         },
         {
-          image: {blockType: 'image', src: '/assets/img/reviews/antje-headshot-150x149.png', dim: {h: 150, w: 149}},
+          image: {blockType: 'image', src: '/assets/img/reviews/antje-headshot-150x149.png', dim: {h: 150, w: 149}, alt: 'Antje Worring'},
           title: 'Lux Card makes it super easy to shop and earn!',
           text: text,
           author: 'Antje Worring',     
@@ -39,15 +39,15 @@ export default {
       slides: [
         {
           title: 'ELITE CARD',
-          img: {blockType: 'image', src: '/assets/img/elite.png', dim: {h: 659, w: 455}} as ImageDef,
+          img: {blockType: 'image', src: '/assets/img/elite.png', dim: {h: 659, w: 455}, alt: 'Elite card'} as ImageDef,
         },
         {
           title: 'BLACK CARD',
-          img: {blockType: 'image', src: '/assets/img/black.png', dim: {h: 659, w: 455}} as ImageDef,
+          img: {blockType: 'image', src: '/assets/img/black.png', dim: {h: 659, w: 455}, alt: 'Black card'} as ImageDef,
         },
         {
           title: 'FOUNDER CARD',
-          img: {blockType: 'image', src: '/assets/img/founder.png', dim: {h: 659, w: 455}} as ImageDef,
+          img: {blockType: 'image', src: '/assets/img/founder.png', dim: {h: 659, w: 455}, alt: 'Founder card'} as ImageDef,
         },
       ]
     } as CardsCarouselBlock,

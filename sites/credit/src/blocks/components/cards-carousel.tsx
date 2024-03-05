@@ -48,7 +48,7 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
 
   const getTranslateSlide = (slide: number) => {
     const multiplier = b.defaultSlide - slide
-    return `${multiplier > 0 ? '' : '-'}translate-x-[${Math.abs(multiplier) * 100}%]`
+    return `${multiplier < 0 ? '-' : ''}translate-x-[${Math.abs(multiplier) * 100}%]`
   }
   
   return (
