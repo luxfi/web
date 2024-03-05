@@ -8,9 +8,8 @@ export default {
     common,
     featured: [{
       title: "Start Building",
-      href: "https://beta.lux.network",
+      href: "https://lux.build",
       newTab: false,
-      external: true,
       variant: 'primary',
       size: 'default'
     }],
