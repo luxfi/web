@@ -12,8 +12,7 @@ import elite from './products/elite'
 import founder from './products/founder'
 import sovereign from './products/sovereign'
 import easySpending from './slides/easy-spending'
-import roadmap1 from './slides/roadmap/roadmap-1'
-import roadmap2 from './slides/roadmap/roadmap-2'
+import roadmap from './slides/roadmap'
 import browseCards from './slides/browse-cards'
 import reviews from './slides/reviews'
 import footer from './slides/footer'
@@ -24,8 +23,7 @@ const tiles = [
   browseCards,
   keyFeatures,
   cashBack,
-  roadmap1,
-  roadmap2,
+  roadmap,
   flexibleBorrowing,
   compareTable,
   easySpending,

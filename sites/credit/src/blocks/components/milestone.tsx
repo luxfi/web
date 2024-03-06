@@ -15,7 +15,7 @@ const MilestoneBlockComponent: React.FC<BlockComponentProps> = ({
   const b = block as MilestoneBlock
 
   return (
-    <div className='flex gap-6 sm:gap-12 max-w-[50rem]'>
+    <div className='flex flex-col items-center sm:flex-row gap-2 sm:gap-12 max-w-[50rem]'>
       <div className='my-auto w-fit'>
         {b.icon}
       </div>
