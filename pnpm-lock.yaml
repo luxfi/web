@@ -75,8 +75,8 @@ importers:
         specifier: ^1.0.12
         version: 1.0.13(@hanzo/ui@1.0.12)(firebase@10.8.1)(lucide-react@0.344.0)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: ^1.1.6
-        version: 1.1.6(@hanzo/auth@1.0.13)(@hanzo/ui@1.0.12)(firebase@10.8.1)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
+        specifier: ^1.1.7
+        version: 1.1.7(@hanzo/auth@1.0.13)(@hanzo/ui@1.0.12)(firebase@10.8.1)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)
       '@hanzo/ui':
         specifier: ^1.0.12
         version: 1.0.12(@types/react-dom@18.2.18)(@types/react@18.2.54)(date-fns@3.3.1)(next-themes@0.2.1)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
@@ -3345,8 +3345,8 @@ packages:
       - react-hook-form
     dev: false
 
-  /@hanzo/commerce@1.1.6(@hanzo/auth@1.0.13)(@hanzo/ui@1.0.12)(firebase@10.8.1)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
-    resolution: {integrity: sha512-LgCKxCsnPSUeTD2VHi6PBdNRnKAJQXipe8/6xl0cgYILGMtvglyBXVZgoRoTyRnSbHf0vUvifiwsgvL6pLul4g==}
+  /@hanzo/commerce@1.1.7(@hanzo/auth@1.0.13)(@hanzo/ui@1.0.12)(firebase@10.8.1)(mobx-react-lite@4.0.5)(mobx@6.12.0)(next@14.1.0)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0):
+    resolution: {integrity: sha512-kYb1C6xpnV9oyFYyfjm0Orq3d48CB2QwuK/zIFZ6JBrgAG/PzwENjGm3KEfuJhne73w8+V7Y/XExvDXJhCH5XA==}
     peerDependencies:
       '@hanzo/auth': ^1.0.12
       '@hanzo/ui': ^1.0.12
