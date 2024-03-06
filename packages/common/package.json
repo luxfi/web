@@ -23,12 +23,16 @@
     "pub": "npm publish",
     "build": "tsc",
     "tc": "tsc",
+    "ln:ui": "pnpm link -g @hanzo/ui",
+    "ul:ui": "rm node_modules/@hanzo/ui",
     "clean": "rm -rf node_modules"
   },
   "exports": { 
     ".": "./components/index.ts",
     "./next": "./next/index.ts",
-    "./site-def": "./site-def/index.ts"
+    "./style/": "./style/",
+    "./site-def": "./site-def/index.ts",
+    "./tailwind": "./tailwind/index.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",

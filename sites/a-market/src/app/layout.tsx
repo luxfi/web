@@ -1,7 +1,5 @@
 import React, { type PropsWithChildren } from 'react'
 
-import '@hanzo/ui/style/globals.css'
-
 import { Toaster } from '@hanzo/ui/primitives'
 
 import { AuthServiceProvider } from '@hanzo/auth/service'
@@ -16,23 +14,18 @@ import {
   rootLayoutViewport 
 } from '@luxdefi/common'
 
+import Header from '@/components/header'
 
 import siteDef from '../siteDef'
 import _metadata from '../metadata'
 
-import Header from '@/components/header'
+import '@luxdefi/common/style/lux-global.css'
 
-export const metadata = {
-  ..._metadata
-}
+export const metadata = { ..._metadata }
+export const viewport = { ...rootLayoutViewport }
 
-export const viewport = {
-  ...rootLayoutViewport
-}
+const RootLayout: React.FC<PropsWithChildren> = async ({ children }) =>  {
 
-const RootLayout: React.FC<PropsWithChildren> = async ({
-  children
-}) =>  {
   const currentUser = await getUserServerSide()
 
   return (

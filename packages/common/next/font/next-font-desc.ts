@@ -1,4 +1,4 @@
-import type TwFontDesc from '@hanzo/ui/tailwind/tw-font-desc' // TODO
+import type { TwFontDesc } from '@hanzo/ui/tailwind' 
 
 // from next repo
 type NextFont = {

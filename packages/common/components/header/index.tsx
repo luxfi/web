@@ -1,9 +1,9 @@
 import React from 'react'
 
-import type { SiteDef } from '@hanzo/ui/types'
 import { NavItems } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
+import type { SiteDef } from '../../site-def'
 import { Icons, DrawerMenu, Logo } from '..'
 
 import MobileNav from './mobile-nav'

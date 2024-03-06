@@ -18,7 +18,6 @@ import  {
 
 export { type LucideIcon as Icon, type SocialIconProps } 
 
-
 export {
   sun,
   moon,

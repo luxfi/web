@@ -1,10 +1,10 @@
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
+import type { TwFontDesc } from '@hanzo/ui/tailwind' // TODO
 import type NextFontDesc from './next-font-desc'
-import type TwFontDesc from '@hanzo/ui/tailwind/tw-font-desc' // TODO
 
-import twFonts from '@hanzo/ui/tailwind/lux-tw-fonts' // TODO
+import twFonts from '../../tailwind/lux-tw-fonts' 
 
 /*
   Creating NextFontDesc's and TwFontDesc's has to be seperated because they are needed 
@@ -18,17 +18,17 @@ import twFonts from '@hanzo/ui/tailwind/lux-tw-fonts' // TODO
 const drukTextWide = localFont({
   src: [
     {
-      path: './fonts/DrukTextWide-Medium-Trial.otf',
+      path: './local/DrukTextWide-Medium-Trial.otf',
       weight: '500',
       style: 'normal'
     },
     {
-      path: './fonts/DrukTextWide-Bold-Trial.otf',
+      path: './local/DrukTextWide-Bold-Trial.otf',
       weight: '700',
       style: 'normal'
     },
     {
-      path: './fonts/DrukTextWide-Heavy-Trial.otf',
+      path: './local/DrukTextWide-Heavy-Trial.otf',
       weight: '800',
       style: 'normal',
     },
@@ -40,17 +40,17 @@ const drukTextWide = localFont({
 const drukWide = localFont({
   src: [
     {
-      path: './fonts/DrukWide-Medium-Trial.otf',
+      path: './local/DrukWide-Medium-Trial.otf',
       weight: '500',
       style: 'normal'
     },
     {
-      path: './fonts/DrukWide-Bold-Trial.otf',
+      path: './local/DrukWide-Bold-Trial.otf',
       weight: '700',
       style: 'normal'
     },
     {
-      path: './fonts/DrukWide-Heavy-Trial.otf',
+      path: './local/DrukWide-Heavy-Trial.otf',
       weight: '500',
       style: 'normal',
     },
@@ -89,6 +89,6 @@ export default [
       nextFont: el.font,
     })
   }
-) as NextFontDesc[]
+) satisfies NextFontDesc[]
 
 

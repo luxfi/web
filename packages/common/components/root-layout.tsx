@@ -5,7 +5,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 import Header from './header'
 import type SiteDef from '../site-def/site-def'
-import getAppRouterBodyFontClasses from '../next/get-app-router-font-classes'
+import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead, FacebookPixel } from '../next/analytics/pixel-analytics'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
@@ -41,7 +41,7 @@ const RootLayout: React.FC<PropsWithChildren & {
   siteDef,
   children,
 }) =>  (
-  <html lang='en' suppressHydrationWarning className='lux-dark-theme'>
+  <html lang='en' suppressHydrationWarning className='hanzo-ui-dark-theme'>
     <head >
       {/* https://stackoverflow.com/a/75716588/11645689 */ }
       <base target='_blank' />

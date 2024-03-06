@@ -1,10 +1,11 @@
 import React from 'react'
 
-import type { LinkDef, SiteDef } from '@hanzo/ui/types'
+import type { LinkDef } from '@hanzo/ui/types'
 import { NavItems } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import Copyright from './copyright'
+import type { SiteDef } from '../site-def'
 import { legal } from '../site-def/footer/legal'
 import Logo from './logo'
 
@@ -34,7 +35,7 @@ const Footer: React.FC<{
         <div className='hidden lg:flex flex-col' key={0}>
           <Logo size='md' />
         </div>
-        {footer.map((defs: LinkDef[], index) => {
+        {footer.map((defs: LinkDef[], index: number) => {
 
           const xsColSpanClx = ((index === footer.length - 1) && (footer.length % 2 === 1)) ? 
             'xs:col-span-2 xs:mx-auto md:col-span-1 md:mx-0 ' : ''
