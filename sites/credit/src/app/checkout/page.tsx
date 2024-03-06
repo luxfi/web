@@ -82,7 +82,10 @@ const CheckoutPage = () => {
     setStep(1)
   }
 
-  const onShippingFormSubmit = (values: z.infer<typeof shippingFormSchema>) => {
+  const onShippingFormSubmit = async (values: z.infer<typeof shippingFormSchema>) => {
+    if (auth.user) {
+      await cmmc.updateOrder(orderId, auth.user.email, paymentMethod, values)
+    }
     setStep(3)
   }
 
