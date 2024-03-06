@@ -43,7 +43,7 @@ export default {blockType: 'screenful',
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "Compare Cards", href: "/#compare", variant: 'outline' },
-          { title: "Sovereign Card", href: "/sovereign", variant: 'primary' },
+          { title: "Buy Sovereign Card", href: "/buy?sku=LXC-S-RT", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
     ] 

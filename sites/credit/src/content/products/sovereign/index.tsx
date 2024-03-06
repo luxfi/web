@@ -1,24 +1,31 @@
-import type { CardDetail } from '@/types'
-import type { ImageDef } from '@hanzo/ui/types'
+import type { Product } from '@hanzo/commerce/types'
+import type { CardCategory } from '@/types'
 
 import MDX_Content from './detail.mdx'
 const imageUrl = '/assets/img/cards-2-flat-tit-1593x1231.png'
 
 export default {
-  level : 'sovereign',
-  material: {
-    short: 'Reflective Titanium',
-    variants: ['100% Reflective Titanium']
-  },
-  run: 1000,
-  image: {
-    src: imageUrl,
-    dim: {w: 1593, h: 1231} 
-  } satisfies ImageDef,
-  detail: <MDX_Content />,
+  type : 'sovereign',
+  id: 'LXC-S',
+  material: 'Reflective Titanium',
+  title: 'Lux Sovereign Card',
+  img: imageUrl,
+  run: 10000,
   fees: {
     initial: 50000,
     annual: 5000 
-  }
-} satisfies CardDetail as CardDetail
+  },
+  detail: <MDX_Content />,
+  products: [
+    {
+      id: 'LXC-S-RT',
+      sku: 'LXC-S-RT',
+      categoryId: 'LXC-S',
+      title: 'Lux Sovereign Card, Reflective Titanium',
+      titleAsOption: 'Reflective Titanium',
+      price: 50000,
+      img: imageUrl,
+    } satisfies Product,
+    ]
+} satisfies CardCategory as CardCategory
 

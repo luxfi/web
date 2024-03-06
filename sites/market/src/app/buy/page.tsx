@@ -66,7 +66,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     // https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
     // useSeachParams is called by a library we use to impl this hook.
     // So this component should always be within in Suspense boundary.
-  useSyncSkuParamWithCurrentItem(setMessage, setLoading)  
+  useSyncSkuParamWithCurrentItem(CAT_LEVEL, setMessage, setLoading)  
 
   const mobile = (searchParams?.agent === 'phone')
 
