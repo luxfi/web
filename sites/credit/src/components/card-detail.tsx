@@ -1,14 +1,16 @@
 import React from 'react'
 
-import type { Block, BlockComponentProps, ImageBlock } from '@hanzo/ui/blocks'
+import type { ImageBlock, Block } from '@hanzo/ui/blocks'
+
 import { ImageBlockComponent, SpaceBlockComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography, LinkElement, type ButtonSizes } from '@hanzo/ui/primitives'
 import { cn, capitalize } from '@hanzo/ui/util'
 
-import type CardDetailBlock from '@/blocks/def/card-detail'
 import { getProductHeading } from '@/util'
+import type { Category, ObsLineItemRef } from '@hanzo/commerce/types'
+import { ProductSelectionRadioGroup } from '@hanzo/commerce/components'
+import type { CardCategory } from '@/types'
 
-import siteDef from '@/siteDef'
 
 const toUSD = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -21,22 +23,31 @@ const Spacer: React.FC<{ className?:  string}> = ({className=''}) => (
   <SpaceBlockComponent block={{blockType: 'space'}} className={className} />
 )
 
-const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
-  block,
+const CardDetailComponent: React.FC<{
+  category: Category
+  lineItemRef: ObsLineItemRef
+  handleItemSelected: (sku: string) => void 
+  className? : string
+  isLoading?: boolean
+  mobile?: boolean
+}> = ({
+  category,
+  lineItemRef,
+  handleItemSelected, 
   className='',
-  agent
+  isLoading=false,
+  mobile=false
 }) => {
 
-  if (block.blockType !== 'card-detail') {
-    return <>card detail block required</>
-  }
-  const b = block as CardDetailBlock
-  
+  const cc = category as CardCategory
+
+  const soleOption = !isLoading && category.products.length === 1
+
   const Run: React.FC<{run: number}> = ({
     run
   }) => (
     (run === -1) ? null : (
-      <span>&nbsp;&nbsp;<span className='italic text-xs'>{`1/${b.run.toLocaleString()}`}</span></span>
+      <span>&nbsp;&nbsp;<span className='italic text-xs'>{`1/${cc.run.toLocaleString()}`}</span></span>
     )
   )
 
@@ -48,10 +59,10 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
     phone=false
   }) => (
     <div className={className}>
-      <h1 className='text-foreground font-heading text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
-        {getProductHeading(b.level)}
+      <h1 className='text-foreground font-heading sm:text-lg md:text-xl lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
+        {getProductHeading(cc.type)}
       </h1>
-      <h6 className='text-muted text-sm'>{b.material.short}<Run run={b.run}/></h6>
+      <h6 className='text-muted text-sm'>{cc.material}<Run run={cc.run}/></h6>
     </div>
   )
 
@@ -75,48 +86,51 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         'text-xxs sm:mb-0 sm:text-muted-2',
         labelClx)}
       >
-        {capitalize(b.level)}&nbsp;Card
+        {capitalize(cc.type)}&nbsp;Card
       </h4>
       <ImageBlockComponent 
         block={{blockType: 'image',
-          ...b.image,
-          alt: `Lux ${capitalize(b.level)} Card`,
+          src: cc.img!,
+          dim: {w: 300, h: 400},
+          alt: cc.title,
           specifiers: '',
           props: { style: {
             width: '100%',
             height: 'auto',
           }}
         } satisfies ImageBlock as Block} 
-        agent={agent}
+        agent={mobile ? 'phone' : 'desktop'}
         className={imageClx} 
       />
+
+        <ProductSelectionRadioGroup 
+          products={cc.products}
+          selectedSku={lineItemRef.item?.sku ?? undefined}  
+          onValueChange={handleItemSelected}
+          groupClx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
+          itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
+          showPrice={false}
+        />      
+
     </div>
   )
+
+/*
+  lineItemRef: ObsLineItemRef
+  handleItemSelected: (sku: string) => void 
+  className? : string
+  isLoading?: boolean
+  mobile?: boolean
+*/
 
   const Fees: React.FC<{ className?:  string}> = ({className=''}) => (
-    <div className={cn('text-sm text-foreground text-right', className)}>
-      <span className='font-bold'>{toUSD.format(b.fees.initial)}</span><span>&nbsp;Initiation Fee</span><br/>
-      <span className='font-bold'>{toUSD.format(b.fees.annual)}</span><span>&nbsp;Annually after</span>
+    <div className={cn('text-sm text-foreground text-left md:text-right', className)}>
+      <span className='font-bold'>{toUSD.format(cc.fees.initial)}</span><span>&nbsp;Initiation Fee</span><br/>
+      <span className='font-bold'>{toUSD.format(cc.fees.annual)}</span><span>&nbsp;Annually after</span>
     </div>
   )
 
-  const ReserveButton: React.FC<{ 
-    size: ButtonSizes, 
-    className?:  string
-  }> = ({
-    size,
-    className=''
-  }) => (
-    <LinkElement 
-      def={{
-        title: 'Reserve Now',
-        href: 'https://mint.lux.network/credit/black',
-        variant: 'primary',
-        size,
-      }} 
-      className={className}
-    />
-  )
+
 
   const Details: React.FC<{ className?:  string}> = ({className=''}) => (
     <div className={cn('border border-muted-4 rounded-md flex flex-col', className)}>
@@ -128,53 +142,61 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         'typography-p:xs:text-sm typography-p:xs:portrait:text-sm xs:p-3 xs:portrait:gap-3 ',
         
       )}>
-        {b.detail}
+        {cc.detail}
       </ApplyTypography>
-      <ReserveButton size='sm' className='xs:flex sm:hidden xs:mx-auto self-center mb-3'/>
     </div>
   )
 
-  const layoutClx = 'grid md:grid-cols-3 md:gap-6 md:mb-[vh3] ' +
+  const layoutClx = 'flex flex-col md:gap-6 md:mb-[vh3] ' +
     'portrait:grid-cols-1 sm:grid-cols-1'
 
   const mobileLayoutClx = 'flex flex-col justify-start items-stretch'
 
-  return agent === 'phone' ? (
+  return mobile ? (
     <div className={cn(mobileLayoutClx, className)}>
       <Title phone />
       <div className='flex flex-row justify-between items-stretch mt-3 ' style={{flexBasis: 'min-content'}}>
         <div className='flex flex-col justify-between'>
           <Fees className='text-xs text-muted'/>
-          <ReserveButton size='sm' className='ml-1 mt-3'/>
         </div>
         <ImageArea outerClx='max-w-28 portrait:mr-2' labelClx='portrait:hidden'/>
       </div>
       <Details className='mt-3'/>
     </div>
   ) : (
-    <div className={cn(layoutClx, className)}>
-      <div className='md:col-span-2'>
-        <div className={'mb-3 portrait:flex portrait:flex-row portrait:justify-between ' + 
-          'sm:flex sm:flex-row sm:justify-between md:block'}
-        >
-          <div className={'flex md:flex-row portrait:flex-col sm:flex-col ' + 
-            'sm:justify-between md:items-end portrait:items-start sm:items-start'
-          }>
-            <Title />
-            <Spacer className='sm:h-2 landscape:md:h-2' />
-            <Fees className='ml-1' />
-          </div>
-          <ImageArea outerClx='sm:max-w-28 landscape:md:hidden' labelClx='sm:hidden portrait:hidden' />
-        </div>
-        <Spacer className='landscape:hidden sm:hidden' />
-        <Details className='md:mt-4'/>
+    <div id='OUTER' className={cn(layoutClx, className)}>
+      <div className={'flex md:flex-row portrait:flex-col sm:flex-col ' + 
+        'sm:justify-between md:items-end portrait:items-start sm:items-start'
+      }>
+        <Title />
+        <Spacer className='sm:h-2 landscape:md:h-2' />
+        <Fees className='ml-1' />
       </div>
-      <div className='flex flex-col justify-center items-center md:pt-10 '>
-        <ImageArea outerClx='md:flex md:max-w-pr-70 portrait:hidden sm:hidden ' />
-        <ReserveButton size='lg' className='sm:text-sm !min-w-0 max-w-200 sm:h-9 portrait:mt-[2vh] sm:mt-[2vh] '/>
+      <div className={'mb-3 flex flex-row justify-between ' + 
+        ''}
+      >
+        <ImageArea outerClx='w-pr-33 mr-6' labelClx='sm:hidden portrait:hidden' />
+        <Details className='w-pr-66'/>
       </div>
     </div>
   )
 }
 
-export default CardDetailBlockComponent
+/*
+      <div className='hidden flex flex-col justify-center items-center md:pt-10 '>
+        <ImageArea outerClx='md:flex md:max-w-pr-70 portrait:hidden sm:hidden ' />
+      </div>
+*/
+
+
+/*
+              <ProductSelectionRadioGroup 
+        products={category.products}
+        selectedSku={lineItemRef.item?.sku ?? undefined}  
+        onValueChange={handleItemSelected}
+        groupClx='grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
+        itemClx='flex flex-row gap-2 items-center'
+      />
+*/
+
+export default CardDetailComponent

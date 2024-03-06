@@ -38,7 +38,7 @@ export default {
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "Compare Cards", href: "/#compare", variant: 'outline' },
-          { title: "Reserve", href: "/black", variant: 'primary' },
+          { title: "Buy", href: "/buy?sku=LXC-B-ABT", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
     ], 
