@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@hanzo/auth": "^1.0.12",
-    "@hanzo/ui": "^1.0.11",
-    "@hanzo/commerce": "^1.1.3",
+    "@hanzo/ui": "^1.0.12",
+    "@hanzo/commerce": "^1.1.4",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",

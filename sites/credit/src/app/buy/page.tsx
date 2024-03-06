@@ -6,18 +6,20 @@ import React, {
 } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Skeleton } from '@hanzo/ui/primitives'
+import { Skeleton, type ButtonSizes, LinkElement } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import { useCommerce, useSyncSkuParamWithCurrentItem, type StringMutator } from '@hanzo/commerce'
 
 import { 
+  AddToCartWidget,
   Cart, 
-  SelectItemInCategoryView, 
-  FacetsWidget, 
+  FacetsWidget,
+  ProductSelectionRadioGroup, 
 } from '@hanzo/commerce/components'
 
 import CartDrawer from '@/components/cart-drawer'
+import CardDetail from '@/components/card-detail'
 import siteDef from '@/siteDef'
 
 type Props = {
@@ -75,19 +77,19 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => {
 
-    const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start ' + 
+    const widgetClx = 'flex flex-row justify-between w-pr-70 md:justify-start h-16 ' + 
       'sm:gap-x-4 xs:gap-x-2 items-start'  
-    const facets1Clx = 'grid grid-cols-2 gap-0 '  + (mobile ? '' : '')
-    const facets2Clx = 'grid grid-cols-3 gap-0 '
+    const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full '
 
     return !loading ? (
       <FacetsWidget
           // using neg margin to compensate for fw putting extra rt padding on shopping cart button
         className={cn(widgetClx, (mobile ? 'relative left-0 -mr-3':''), className)} 
         isMobile={mobile}
-        facetClassNames={[facets1Clx, facets2Clx]}
+        facetClassNames={[facets1Clx]}
         mutators={mutators} 
         facets={siteDef.ext.commerce.facets}
+        tabSize='hfull'
       >
         {children}
       </FacetsWidget>
@@ -108,6 +110,30 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     )
   }
 
+  const BuyButtonArea: React.FC<{ 
+    size: ButtonSizes, 
+    className?:  string
+  }> = ({
+    size,
+    className=''
+  }) => (
+    <div className={'self-center ml-3 grow' + className}>
+      {cmmc.specifiedCategories && cmmc.specifiedCategories.length > 0 && (
+        <ProductSelectionRadioGroup 
+          products={cmmc.specifiedCategories[0].products}
+          selectedSku={cmmc.currentItem?.sku ?? undefined}  
+          onValueChange={cmmc.setCurrentItem.bind(cmmc)}
+          groupClx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 md:hidden'
+          itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
+          showPrice={false}
+        />      
+      )}
+      {cmmc.currentItem && <AddToCartWidget size={size} item={cmmc.currentItem} className={'w-pr-70 mx-auto mt-3 min-w-fit'}/>}
+
+    </div> 
+
+  )
+
   const Stage: React.FC<{className?: string}> = observer(({
     className=''
   }) => ( message || !cmmc.specifiedCategories || cmmc.specifiedCategories.length === 0 ? (
@@ -119,14 +145,23 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
         <h5 className='text-accent text-center'>{message ?? ''}</h5>
       </div>
     ) : (
+      <CardDetail  
+        className={className} 
+        category={cmmc.specifiedCategories[0]} 
+        mobile={mobile} 
+        lineItemRef={cmmc  }
+        handleItemSelected={cmmc.setCurrentItem.bind(cmmc)}
+        isLoading={loading}
+    />
+    /*
       <SelectItemInCategoryView 
         className={className} 
         mobile={mobile} 
         category={cmmc.specifiedCategories[0]} // the widget assumes this to be valid
-        lineItemRef={cmmc /* ...conveniently. :) */ }
         handleItemSelected={cmmc.setCurrentItem.bind(cmmc)}
         isLoading={loading}
       />
+    */
     ) 
   ))
 
@@ -144,28 +179,26 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
       <Stage />
     </div>
   ) : (
-    <div /* id='SCV_OUTERMOST' */ className='flex flex-col justify-start items-stretch relative w-full' >
-      <div /* id='SCV_FACET_CONTAINER_COMPACT' */ className='lg:hidden py-2 bg-background w-full sticky top-[80px] sm:top-[44px] z-40 '>
-        <FacetsArea className='sm:w-full' >
-          <CartDrawer className='md:hidden pr-1 text-primary relative' buttonClassName='h-9' >
-            <Cart isMobile={mobile} className='p-0 border-none mt-12'/>
-          </CartDrawer>
-        </FacetsArea>   
-      </div>
       <div /* id='SCV_COL_CONTAINER' */ className='flex flex-row justify-start gap-6 items-stretch relative h-full pt-3'>
         <div /* id='SCV_STAGE_COL' */ className='grow flex flex-col h-full relative'>
-          <div /* id='SCV_FACET_CONTAINER_BIG' */ className='sticky top-[80px] z-30 bg-background pb-2 hidden lg:flex flex-col justify-start mb-6'>
-            <FacetsArea className='' />   
-          </div>
           <Stage />
+          <div /* id='SCV_FACET_CONTAINER_BIG' */ className='bg-background pb-2 flex flex-row justify-between '>
+            <BuyButtonArea size='sm' /> 
+            <FacetsArea className='' />  
+          </div>
         </div>
         <div /* id='SCV_CART_COLUMN' */ className={cn('z-30',  cartColumnClx)}>
           <StoreCart className='sticky z-30 top-[146px] lg:top-[80px]' />
         </div>
       </div> 
-    </div>
   )
 } 
+
+/*
+          <CartDrawer className='md:hidden pr-1 text-primary relative' buttonClassName='h-9' >
+            <Cart isMobile={mobile} className='p-0 border-none mt-12'/>
+          </CartDrawer>
+*/
 
 const BuyPageWrapper: React.FC<Props> = ({ searchParams }) => (
 

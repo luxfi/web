@@ -26,9 +26,11 @@ const CARDS = {
 
 const CardButton : React.FC<{
   product: keyof typeof CARDS
+  sku: string
   className?: string
 }> = ({
   product,
+  sku,
   className=''
 }) => (
   <Link 
@@ -38,11 +40,11 @@ const CardButton : React.FC<{
       '!no-underline',
       className
     )} 
-    href={`/${product}`}
+    href={`/buy?sku=${sku}`}
   > 
     {CARDS[product]}
     <div className='font-sans text-muted-2 group-hover:text-muted-1 text-xxs'>
-       <span className='hidden md:inline'>click to reserve&nbsp;</span><span className='capitalize'>{product}</span>
+       <span className='hidden md:inline'>click to buy&nbsp;</span><span className='capitalize'>{product}</span>
     </div>
   </Link>
 )
@@ -61,10 +63,10 @@ export default {blockType: 'screenful',
       elements: [
         [
           {blockType: 'element', element: ''},
-          {blockType: 'element', element: <CardButton product='black' />},
-          {blockType: 'element', element: <CardButton product='elite' />},
-          {blockType: 'element', element: <CardButton product='founder' />},
-          {blockType: 'element', element: <CardButton product='sovereign' />},
+          {blockType: 'element', element: <CardButton product='black' sku='LXC-B-ABT' />},
+          {blockType: 'element', element: <CardButton product='elite' sku='LXC-E-24G'/>},
+          {blockType: 'element', element: <CardButton product='founder' sku='LXC-F-CC'/>},
+          {blockType: 'element', element: <CardButton product='sovereign' sku='LXC-S-RT'/>},
         ],
         [
           {blockType: 'element', element: 'Level'},
