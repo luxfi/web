@@ -6,6 +6,7 @@ import { Header } from '@hanzo/ui/common'
 import { TailwindIndicator } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful, registerBlockType } from '@hanzo/ui/blocks'
 
+import { ChatWidget } from '@hanzo/ui/common'
 import ElementTable from '@/blocks/components/element-table'
 import siteDef from '@/siteDef'
 import { tiles}  from '@/content'
@@ -41,6 +42,12 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
+    <ChatWidget
+      title='LUX'
+      subtitle='AI'
+      chatbotUrl='https://lux.chat/iframe'
+    />
+
     <TailwindIndicator />
   </>)
 }

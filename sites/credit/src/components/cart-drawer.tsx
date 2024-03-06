@@ -11,12 +11,12 @@ import { cn } from '@hanzo/ui/util'
 
 const CartDrawer: React.FC<PropsWithChildren & {
   className?: string, 
-  buttonClassName?: string
+  buttonClx?: string
   isMobile?: boolean
 }> = ({
   children,
   className='',
-  buttonClassName='',
+  buttonClx='',
   isMobile=false
 }) => {
 
@@ -45,7 +45,7 @@ const CartDrawer: React.FC<PropsWithChildren & {
           height: isMobile ? '16px' : '24px',
         }}
         >
-          {c.cartItems.length}
+          {c.cartQuantity}
         </div>
       )}
         <Icons.shoppingCart className="h-4 w-4" aria-hidden="true" />
@@ -56,7 +56,7 @@ const CartDrawer: React.FC<PropsWithChildren & {
     <DrawerMenu 
       className={className}  
       propogate={false}
-      trigger={<CartButton className={'relative ' + buttonClassName} />}
+      trigger={<CartButton className={'relative ' + buttonClx} />}
     >
       {children}
     </DrawerMenu>

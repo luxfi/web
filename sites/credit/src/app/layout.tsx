@@ -4,7 +4,6 @@ import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/ne
 import '@hanzo/ui/style/globals.css'
 
 import { Toaster } from '@hanzo/ui/primitives'
-import { ChatWidget } from '@hanzo/ui/common'
 
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
@@ -38,11 +37,6 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
       >
         <RootLayoutCommon siteDef={siteDef} header={false} >
           {children}
-          <ChatWidget
-            title='LUX'
-            subtitle='AI'
-            chatbotUrl='https://lux.chat/iframe'
-          />
           <Toaster />
         </RootLayoutCommon>
       </CommerceServiceProvider>
@@ -50,4 +44,11 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
   )
 }
 
+/*
+          <ChatWidget
+            title='LUX'
+            subtitle='AI'
+            chatbotUrl='https://lux.chat/iframe'
+          />
+*/
 export default RootLayout

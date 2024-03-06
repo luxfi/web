@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Skeleton, type ButtonSizes, LinkElement } from '@hanzo/ui/primitives'
+import { Skeleton, type ButtonSizes } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import { useCommerce, useSyncSkuParamWithCurrentItem, type StringMutator } from '@hanzo/commerce'
@@ -19,8 +19,9 @@ import {
 } from '@hanzo/commerce/components'
 
 import CartDrawer from '@/components/cart-drawer'
-import CardDetail from '@/components/card-detail'
 import siteDef from '@/siteDef'
+
+import CardDetail from './card-detail'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -77,16 +78,18 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => {
 
-    const widgetClx = 'flex flex-row justify-between w-full sm:w-pr-70 items-center md:justify-start h-16 ' + 
-      'sm:gap-x-4 xs:gap-x-2 sm:items-start'  
-    const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full '
+    const widgetClx = 'bg-background flex flex-row justify-between w-full sm:w-pr-70 items-center md:justify-start ' + 
+      'sm:gap-x-4 xs:gap-x-2 sm:items-start ' + (mobile ? 'h-14 relative pb-3' : 'h-16')  
+
+    const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full ' + (mobile ? 'border rounded-lg' : '')  
 
     return !loading ? (
       <FacetsWidget
           // using neg margin to compensate for fw putting extra rt padding on shopping cart button
-        className={cn(widgetClx, (mobile ? 'relative left-0 -mr-3':''), className)} 
+        className={cn(widgetClx, className)} 
         isMobile={mobile}
-        facetClassNames={[facets1Clx]}
+        facetClx={[facets1Clx]}
+        facetItemClx={'border-r last:border-0'}
         mutators={mutators} 
         facets={siteDef.ext.commerce.facets}
         tabSize='hfull'
@@ -137,46 +140,37 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
   const Stage: React.FC<{className?: string}> = observer(({
     className=''
   }) => ( message || !cmmc.specifiedCategories || cmmc.specifiedCategories.length === 0 ? (
-
-      <div className={cn(
-        'typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', 
-        className
-      )} >
-        <h5 className='text-accent text-center'>{message ?? ''}</h5>
-      </div>
+    <div className={cn(
+      'typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', 
+      className
+    )} >
+      <h5 className='text-accent text-center'>{message ?? ''}</h5>
+    </div>
     ) : (
       <CardDetail  
         className={className} 
         category={cmmc.specifiedCategories[0]} 
         mobile={mobile} 
-        lineItemRef={cmmc  }
+        lineItemRef={cmmc}
         handleItemSelected={cmmc.setCurrentItem.bind(cmmc)}
         isLoading={loading}
-    />
-    /*
-      <SelectItemInCategoryView 
-        className={className} 
-        mobile={mobile} 
-        category={cmmc.specifiedCategories[0]} // the widget assumes this to be valid
-        handleItemSelected={cmmc.setCurrentItem.bind(cmmc)}
-        isLoading={loading}
-      />
-    */
+     />
     ) 
   ))
 
   const cartColumnClx = 'hidden md:block min-w-[300px] lg:min-w-[340px] xl:min-w-[360px]'
 
   return mobile ? (
-    <div /* id='SCV_OUTERMOST' */ className='flex flex-col justify-start items-stretch relative w-full' >
-      <div /* id='SCV_FACET_CONTAINER_COMPACT' */ className='py-2 bg-background w-full top-[44px]'>
-        <FacetsArea className='sm:w-full ' >
-          <CartDrawer isMobile={true} className='md:hidden pr-1 text-primary relative' buttonClassName='h-9' >
-            <Cart isMobile={true} className='p-0 border-none mt-12'/>
-          </CartDrawer>
-        </FacetsArea>   
-      </div>
+    <div /* id='SCV_COL_CONTAINER' */ className='flex flex-col justify-start items-stretch relative w-full' >
+      <CartDrawer 
+        isMobile={true} 
+        className='md:hidden pr-1 text-primary relative' 
+        buttonClx='fixed right-2 top-[48px] w-11 h-9 z-50' 
+      >
+        <Cart isMobile={true} className='p-0 border-none mt-12'/>
+      </CartDrawer>
       <Stage />
+      <FacetsArea className='sm:w-full sticky left-0 right-0 bottom-0' />
     </div>
   ) : (
       <div /* id='SCV_COL_CONTAINER' */ className='flex flex-row justify-start gap-6 items-stretch relative h-full pt-3'>
