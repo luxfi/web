@@ -24,7 +24,7 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
-const CAT_LEVEL = 3
+const CAT_LEVEL = 2
 
 const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
