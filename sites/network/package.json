@@ -16,12 +16,10 @@
   "dependencies": {
     "@hanzo/ui": "^1.0.10",
     "@next/mdx": "14.1.0",
-    "markdown-to-jsx": "^7.3.2",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.2.0",
-    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

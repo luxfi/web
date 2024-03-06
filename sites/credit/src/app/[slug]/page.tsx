@@ -6,11 +6,11 @@ import { Main, TailwindIndicator } from '@hanzo/ui/primitives'
 import CardDetailComponent from '@/blocks/components/card-detail'
 
 import { products } from '@/content'
-import type { CardDetail, Product } from '@/types'
+import type { CardCategory, CardType } from '@/types'
 import siteDef from '@/siteDef'
 
 type Props = {
-  params: { slug: Product }
+  params: { slug: CardType }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params}: Props) {
 
 const ProductPage = ({ params, searchParams }: Props) => {
 
-  const card = products[params.slug] as CardDetail
+  const card = products[params.slug] as CardCategory
   
   if (!card) {
     notFound()

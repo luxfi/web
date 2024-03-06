@@ -1,8 +1,8 @@
 
 import type { Block } from '@hanzo/ui/blocks'
-import type { CardDetail } from '@/types'
+import type { CardCategory } from '@/types'
 
-interface CardDetailBlock extends Block, CardDetail {
+interface CardDetailBlock extends Block, CardCategory {
   blockType: 'card-detail'
 }
 

@@ -49,9 +49,9 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
   }) => (
     <div className={className}>
       <h1 className='text-foreground font-heading text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
-        {getProductHeading(b.level)}
+        {getProductHeading(b.type)}
       </h1>
-      <h6 className='text-muted text-sm'>{b.material.short}<Run run={b.run}/></h6>
+      <h6 className='text-muted text-sm'>{b.material}<Run run={b.run}/></h6>
     </div>
   )
 
@@ -75,12 +75,13 @@ const CardDetailBlockComponent: React.FC<BlockComponentProps> = ({
         'text-xxs sm:mb-0 sm:text-muted-2',
         labelClx)}
       >
-        {capitalize(b.level)}&nbsp;Card
+        {capitalize(b.type)}&nbsp;Card
       </h4>
       <ImageBlockComponent 
         block={{blockType: 'image',
-          ...b.image,
-          alt: `Lux ${capitalize(b.level)} Card`,
+          src: b.img!,
+          dim: {w: 300, h: 400},
+          alt: b.title,
           specifiers: '',
           props: { style: {
             width: '100%',
