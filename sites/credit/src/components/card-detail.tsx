@@ -8,7 +8,7 @@ import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
 import type { Category, ObsLineItemRef } from '@hanzo/commerce/types'
-import { ProductSelectionRadioGroup } from '@hanzo/commerce/components'
+import { AddToCartWidget, ProductSelectionRadioGroup } from '@hanzo/commerce/components'
 import type { CardCategory } from '@/types'
 
 
@@ -77,7 +77,7 @@ const CardDetailComponent: React.FC<{
   }) => (
     <div className={cn(
       'md:flex md:flex-col md:items-end',
-      'portrait:mr-4 portrait:flex portrait:flex-col portrait:items-end portrait:relative ', 
+      'w-full sm:w-auto portrait:flex portrait:flex-col portrait:relative ', 
       'sm:flex sm:flex-col sm:items-end sm:relative ', 
       outerClx
     )}>
@@ -111,6 +111,7 @@ const CardDetailComponent: React.FC<{
           itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
           showPrice={false}
         />      
+        {lineItemRef.item && <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'md:hidden w-pr-70 mx-auto mt-3 min-w-fit'}/>}
 
     </div>
   )
@@ -150,7 +151,7 @@ const CardDetailComponent: React.FC<{
   const layoutClx = 'flex flex-col md:gap-6 md:mb-[vh3] ' +
     'portrait:grid-cols-1 sm:grid-cols-1'
 
-  const mobileLayoutClx = 'flex flex-col justify-start items-stretch'
+  const mobileLayoutClx = 'flex flex-col justify-start items-center'
 
   return mobile ? (
     <div className={cn(mobileLayoutClx, className)}>
@@ -159,8 +160,8 @@ const CardDetailComponent: React.FC<{
         <div className='flex flex-col justify-between'>
           <Fees className='text-xs text-muted'/>
         </div>
-        <ImageArea outerClx='max-w-28 portrait:mr-2' labelClx='portrait:hidden'/>
       </div>
+      <ImageArea outerClx='' labelClx='portrait:hidden'/>
       <Details className='mt-3'/>
     </div>
   ) : (

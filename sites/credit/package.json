@@ -16,10 +16,11 @@
   },
   "dependencies": {
     "@hanzo/auth": "^1.0.12",
+    "@hanzo/commerce": "^1.1.6",
     "@hanzo/ui": "^1.0.12",
-    "@hanzo/commerce": "^1.1.4",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
+    "ethers": "^6.11.1",
     "firebase": "^10.8.0",
     "lucide-react": "^0.344.0",
     "mobx": "^6.12.0",
@@ -34,7 +35,6 @@
     "react-hook-form": "7.50.1",
     "supports-color": "8.1.1",
     "zod": "3.21.4"
-
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",

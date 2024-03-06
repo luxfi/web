@@ -50,7 +50,7 @@ const PayWithCrypto: React.FC<{
       const newProvider = new ethers.BrowserProvider(window.ethereum)
       setProvider(newProvider)
       if (auth.user?.walletAddress) {
-        newProvider.getBalance(auth.user?.walletAddress).then((balance) => {
+        newProvider.getBalance(auth.user?.walletAddress).then((balance: any) => {
           setAvailableAmount(Number(balance)/(10**18))
         })
       }
@@ -90,7 +90,7 @@ const PayWithCrypto: React.FC<{
       const newProvider = new ethers.BrowserProvider(window.ethereum)
       setProvider(newProvider)
       if (auth.user?.walletAddress) {
-        newProvider.getBalance(auth.user?.walletAddress).then((balance) => {
+        newProvider.getBalance(auth.user?.walletAddress).then((balance: any) => {
           setAvailableAmount(Number(balance)/(10**18))
         })
       }

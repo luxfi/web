@@ -3,7 +3,7 @@ import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
 
 import MDX_Content from './detail.mdx'
-const imageUrl = '/assets/img/cards-dual-gd-sl-1485x1114.png'
+const imageUrl = '/assets/img/cards-dual-chr-psm-1475x1220.png'
 
 export default {
   type : 'founder',

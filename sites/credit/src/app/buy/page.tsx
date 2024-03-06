@@ -77,8 +77,8 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => {
 
-    const widgetClx = 'flex flex-row justify-between w-pr-70 md:justify-start h-16 ' + 
-      'sm:gap-x-4 xs:gap-x-2 items-start'  
+    const widgetClx = 'flex flex-row justify-between w-full sm:w-pr-70 items-center md:justify-start h-16 ' + 
+      'sm:gap-x-4 xs:gap-x-2 sm:items-start'  
     const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full '
 
     return !loading ? (
@@ -169,7 +169,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
   return mobile ? (
     <div /* id='SCV_OUTERMOST' */ className='flex flex-col justify-start items-stretch relative w-full' >
-      <div /* id='SCV_FACET_CONTAINER_COMPACT' */ className='py-2 bg-background w-full sticky top-[44px]'>
+      <div /* id='SCV_FACET_CONTAINER_COMPACT' */ className='py-2 bg-background w-full top-[44px]'>
         <FacetsArea className='sm:w-full ' >
           <CartDrawer isMobile={true} className='md:hidden pr-1 text-primary relative' buttonClassName='h-9' >
             <Cart isMobile={true} className='p-0 border-none mt-12'/>
