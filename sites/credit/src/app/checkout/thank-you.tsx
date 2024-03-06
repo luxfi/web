@@ -9,9 +9,9 @@ import {
 } from '@hanzo/ui/blocks'
 
 const WHILE_YOU_WAIT = (
-  <h5 className='mx-auto text-center'>
+  <h6 className='mx-auto text-center'>
   While you wait, we cordially invite you to join the <Link href='https://warpcast.com/~/channel/lux'>Lux Channel</Link> on <Link href='https://warpcast.com/~/invite-page/227706?id=fbc9ca91'>Warpcast</Link>.
-  </h5>
+  </h6>
 )
 
 const HEADING = 'Once your payment has been confirmed we will send additional information to your email.'
@@ -22,7 +22,7 @@ const ThankYou: React.FC = () =>  (
       contentColumns: [[
         {blockType: 'enh-heading',
         specifiers: 'center byline-center',
-        preheading: { text: 'Thank you for your purchase!', level: 3, mb: 10 },
+        preheading: { text: 'Thank you for your order!', level: 3, mb: 10 },
         heading: { text: HEADING, level: 5, mb: 10 },
       } as EnhHeadingBlock,
       {blockType: 'element',
