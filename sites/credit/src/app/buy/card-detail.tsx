@@ -51,51 +51,55 @@ const CardDetailComponent: React.FC<{
     )
   )
 
-  const Title: React.FC<{ 
+  const Fees: React.FC<{ className?:  string}> = ({className=''}) => (
+    <div className={cn('text-sm text-foreground text-left md:text-right', className)}>
+      <span className='font-bold'>{toUSD.format(cc.fees.initial)}</span><span>&nbsp;Initiation Fee</span><br/>
+      <span className='font-bold'>{toUSD.format(cc.fees.annual)}</span><span>&nbsp;Annually after</span>
+    </div>
+  )
+
+  const TitleArea: React.FC<{ 
     className?:  string
     phone?: boolean
   }> = ({
     className='',
     phone=false
   }) => (
-    <div className={className}>
-      <h1 className='text-foreground font-heading sm:text-lg md:text-xl lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
-        {getProductHeading(cc.type)}
-      </h1>
-      <h6 className='text-muted text-sm'>{cc.material}<Run run={cc.run}/></h6>
+    <div className={(phone ? 
+      'flex flex-col justify-start items-start ' 
+      :
+      'flex flex-row ' + 
+      'sm:justify-between sm:items-start md:items-end portrait:items-start ') +  
+      className
+    } >
+      <div className={phone ? '' : 'max-w-pr-60'}>
+        <h1 className='text-foreground font-heading xs:text-lg sm:text-base md:text-lg lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
+          {getProductHeading(cc.type)}
+        </h1>
+        <h6 className='text-muted text-sm'>{cc.material}<Run run={cc.run}/></h6>
+      </div>
+      <Fees className={phone ? 'text-xs text-mute d' : 'ml-4'}/>
     </div>
   )
 
   const ImageArea: React.FC<{ 
     imageClx?:  string
     outerClx?: string
-    labelClx?: string
     buttons?: boolean
   }> = ({
     imageClx="",
     outerClx="",
-    labelClx='',
     buttons=false
   }) => (
     <div className={cn(
       'w-full flex flex-row', 
-      'sm:w-auto sm:flex sm:flex-col sm:items-end sm:relative ', 
-      'md:flex md:flex-col md:items-end',
+      'sm:justify-between',
+      'lg:justify-start lg:flex lg:flex-col sm:items-end sm:relative ', 
+      //'md:flex md:flex-col md:items-end',
       outerClx
     )}>
-      <h4 className={cn('font-medium text-muted md:text-sm relative self-center ' + 
-        'landscape:text-sm portrait:mb-0  portrait:text-muted-2 ' + 
-        'text-xxs sm:mb-0 sm:text-muted-2',
-        labelClx)}
-      >
-        {capitalize(cc.type)}&nbsp;Card
-      </h4>
-      <div className={cn(
-          'w-pr-45 sm:w-auto',
-          imageClx
-        )}>
-      <ImageBlockComponent 
-        block={{blockType: 'image',
+      <div className={cn('xs:w-pr-45 sm:w-pr-33 lg:w-auto', imageClx )}>
+        <ImageBlockComponent block={{blockType: 'image',
           src: cc.img!,
           dim: {w: 300, h: 400},
           alt: cc.title,
@@ -103,18 +107,16 @@ const CardDetailComponent: React.FC<{
           props: { style: {
             width: '100%',
             height: 'auto',
-          }}
-        } satisfies ImageBlock as Block} 
-        agent={mobile ? 'phone' : 'desktop'}
-      />
+          }}} satisfies ImageBlock as Block} agent={mobile ? 'phone' : 'desktop'}
+        />
       </div>
       {buttons && (
-        <div className='w-pr-55 sm:w-auto self-center flex flex-col items-center ' >
+        <div className='xs:w-pr-55 sm:w-pr-40 lg:w-auto self-center flex flex-col items-center mt-3 ' >
           <ProductSelectionRadioGroup 
             products={cc.products}
             selectedSku={lineItemRef.item?.sku ?? undefined}  
             onValueChange={handleItemSelected}
-            groupClx='grid xs:grid-cols-1 sm:grid-cols-2 gap-0 gap-y-3 gap-x-8 mb-4'
+            groupClx='grid xs:grid-cols-1 lg:grid-cols-2 gap-0 gap-y-3 gap-x-8 mb-4'
             itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
             showPrice={false}
           />      
@@ -126,31 +128,17 @@ const CardDetailComponent: React.FC<{
     </div>
   )
 
-/*
-  lineItemRef: ObsLineItemRef
-  handleItemSelected: (sku: string) => void 
-  className? : string
-  isLoading?: boolean
-  mobile?: boolean
-*/
-
-  const Fees: React.FC<{ className?:  string}> = ({className=''}) => (
-    <div className={cn('text-sm text-foreground text-left md:text-right', className)}>
-      <span className='font-bold'>{toUSD.format(cc.fees.initial)}</span><span>&nbsp;Initiation Fee</span><br/>
-      <span className='font-bold'>{toUSD.format(cc.fees.annual)}</span><span>&nbsp;Annually after</span>
-    </div>
-  )
-
-
+// sm:border sm:border-muted-4 rounded-md 
+//       <ApplyTypography className={cn('sm:p-6 pb-2',
 
   const Details: React.FC<{ className?:  string}> = ({className=''}) => (
 
-    <div className={cn('sm:border sm:border-muted-4 rounded-md flex flex-col', className)}>
-      <ApplyTypography className={cn('sm:p-6 pb-2',
+    <div className={cn('flex flex-col', className)}>
+      <ApplyTypography className={cn(
         'sm:columns-2 gap-6 typography-p:text-muted typography-p:mb-1 typography-p:sm:mb-3',
         'typography-p:break-inside-avoid-column',
         'typography-p:font-normal typography-strong:font-800 typography-p:lg:text-sm typography-p:xl:text-base ',
-        'typography-p:portrait:text-sm typography-p:sm:text-sm portrait:gap-4 portrait:sm:p-4 sm:p-4',
+        'typography-p:portrait:text-sm typography-p:sm:text-sm portrait:gap-4 ',
         'typography-p:xs:text-sm typography-p:xs:portrait:text-sm xs:portrait:gap-3 ',
       )}>
         {cc.detail}
@@ -165,47 +153,19 @@ const CardDetailComponent: React.FC<{
 
   return mobile ? (
     <div className={cn(mobileLayoutClx, className)}>
-      <div className='flex flex-col justify-start items-start'>
-        <Title phone />
-        <Fees className='text-xs text-muted'/>
-      </div>
-      <ImageArea buttons outerClx='' labelClx='portrait:hidden'/>
+      <TitleArea phone className='' />
+      <ImageArea buttons outerClx='' />
       <Details className='mt-3'/>
     </div>
   ) : (
     <div id='OUTER' className={cn(layoutClx, className)}>
-      <div className={'flex md:flex-row portrait:flex-col sm:flex-col ' + 
-        'sm:justify-between md:items-end portrait:items-start sm:items-start'
-      }>
-        <Title />
-        <Spacer className='sm:h-2 landscape:md:h-2' />
-        <Fees className='ml-1' />
-      </div>
-      <div className={'mb-3 flex flex-row justify-between ' + 
-        ''}
-      >
-        <ImageArea outerClx='w-pr-33 mr-6' labelClx='sm:hidden portrait:hidden' />
-        <Details className='w-pr-66'/>
+      <TitleArea  className='mb-2' />
+      <div className='mb-3 flex flex-col lg:flex-row justify-between '>
+        <ImageArea buttons outerClx='lg:w-pr-33 mr-6 mb-3 lg:mb-0' />
+        <Details className='lg:w-pr-66'/>
       </div>
     </div>
   )
 }
-
-/*
-      <div className='hidden flex flex-col justify-center items-center md:pt-10 '>
-        <ImageArea outerClx='md:flex md:max-w-pr-70 portrait:hidden sm:hidden ' />
-      </div>
-*/
-
-
-/*
-              <ProductSelectionRadioGroup 
-        products={category.products}
-        selectedSku={lineItemRef.item?.sku ?? undefined}  
-        onValueChange={handleItemSelected}
-        groupClx='grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
-        itemClx='flex flex-row gap-2 items-center'
-      />
-*/
 
 export default CardDetailComponent

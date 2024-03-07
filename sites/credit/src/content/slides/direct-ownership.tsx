@@ -18,7 +18,7 @@ const finePrint = 'Borrow up to 50% of all your digital assets when you pay with
 const fireworks = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/video/fireworks-poster-comp.jpg',
+  poster: '/assets/video/fireworks-poster-comp.png',
   sources: [
     '/assets/video/fireworks-md.mp4',
   ],

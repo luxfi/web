@@ -33,6 +33,7 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-hook-form": "7.50.1",
+    "request": "^2.88.2",
     "supports-color": "8.1.1",
     "zod": "3.21.4"
   },
