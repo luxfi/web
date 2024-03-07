@@ -25,7 +25,7 @@ const InfoField: React.FC<{label: string, value: ReactNode, copyValue: string}> 
   )
 }
 
-const PayByBankTransfer: React.FC<{setStep: (step: number) => void}> = ({setStep}) => {
+const PayByBankTransfer: React.FC<{setCurrentStep: (step: number) => void}> = ({setCurrentStep}) => {
   return (<>
     <EnhHeadingBlockComponent 
       block={{blockType: 'enh-heading',
@@ -73,9 +73,9 @@ const PayByBankTransfer: React.FC<{setStep: (step: number) => void}> = ({setStep
         </div>
       </TabsContent>
     </Tabs>
-    <div className='flex gap-6 mt-8 mx-auto'>
-      <Button variant='outline' onClick={() => setStep(0)}>Back</Button>
-      <Button onClick={() => setStep(2)}>Continue</Button>
+    <div className='flex gap-4 items-center mt-6'>
+      <Button variant='outline' onClick={() => setCurrentStep(1)} className='mx-auto w-full'>Back</Button>
+      <Button onClick={() => setCurrentStep(3)} className='mx-auto w-full'>Continue</Button>
     </div>
   </>)
 }

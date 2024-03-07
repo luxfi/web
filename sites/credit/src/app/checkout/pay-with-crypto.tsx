@@ -29,9 +29,9 @@ import Btc from './icons/btc'
 import Usdt from './icons/usdt'
 
 const PayWithCrypto: React.FC<{
-  setStep: (step: number) => void
+  setCurrentStep: (currentStep: number) => void
 }> = observer(({
-  setStep
+  setCurrentStep
 }) => {
 
   const c = useCommerce()
@@ -115,7 +115,7 @@ const PayWithCrypto: React.FC<{
       })
       console.log({ ether, addr: process.env.NEXT_PUBLIC_ETH_PAYMENT_ADDRESS })
       console.log('tx', tx)
-      setStep(2)
+      setCurrentStep(3)
     } catch (err) {
       console.log(err)
       // :aa TODO string table
@@ -161,9 +161,9 @@ const PayWithCrypto: React.FC<{
   return (
     <div className='flex flex-col gap-6'>
       {payWidget}
-      <div className='flex gap-6 mt-8 mx-auto'>
-        <Button variant='outline' onClick={() => setStep(0)}>Back</Button>
-        <Button onClick={() => setStep(2)}>Continue</Button>
+      <div className='flex gap-4 items-center mt-6'>
+        <Button variant='outline' onClick={() => setCurrentStep(1)} className='mx-auto w-full'>Back</Button>
+        <Button onClick={() => setCurrentStep(3)} className='mx-auto w-full'>Continue (Pay later)</Button>
       </div>
     </div>
   )

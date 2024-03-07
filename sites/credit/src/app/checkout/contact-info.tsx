@@ -11,20 +11,24 @@ import {
 import { Input, Button } from '@hanzo/ui/primitives'
 import { User } from 'lucide-react'
 import { EnhHeadingBlockComponent, type EnhHeadingBlock } from '@hanzo/ui/blocks'
+import type { UseFormReturn } from 'react-hook-form'
  
-const PaymentInfo: React.FC<{
-  form: any,
-  selectPaymentMethod: any,
+const ContactInfo: React.FC<{
+  form: UseFormReturn<{
+    name: string;
+    email: string;
+  }, any, {
+    name: string;
+    email: string;
+  }>,
+  selectPaymentMethod: (method: 'crypto' | 'bank') => Promise<void>,
 }> = ({
   form,
   selectPaymentMethod,
 }) => {
-  const onSubmit = (data: any) => {
-  }
-
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='text-left'>
+      <form className='text-left'>
         <div className='flex flex-col gap-4'>
           <div className='flex gap-4 items-center'>
             <User />
@@ -60,19 +64,26 @@ const PaymentInfo: React.FC<{
               )}
             />
           </div>
-        </div>
-
-        <div className='flex gap-6 mt-8 w-full'>
-          <Button type='submit' onClick={() => selectPaymentMethod('crypto')} className='mx-auto'>
-            Pay with crypto
-          </Button>
-          <Button type='submit' onClick={() => selectPaymentMethod('bank')} className='mx-auto'>
-            Bank transfer
-          </Button>
+          <div className='flex gap-4 items-center'>
+            <Button
+              type='button'
+              onClick={() => selectPaymentMethod('crypto')}
+              className='mx-auto w-full'
+            >
+              Pay with crypto
+            </Button>
+            <Button
+              type='button'
+              onClick={() => selectPaymentMethod('bank')}
+              className='mx-auto w-full'
+            >
+              Bank transfer
+            </Button>
+          </div>
         </div>
       </form>
     </Form>
   )
 }
 
-export default PaymentInfo
+export default ContactInfo
