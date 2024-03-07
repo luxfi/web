@@ -13,8 +13,6 @@ import { cn } from '@hanzo/ui/util'
 
 import type ElementTableBlock from '@/blocks/def/element-table'
 
-import { products } from '../../conf/commerce/products'
-
 const textBelow = 'Open the door to a universe of digital assets with the Lux Card, serving as your key to effortless ' + 
 'transactions and proficient asset management within the Lux ecosystem.'
 
