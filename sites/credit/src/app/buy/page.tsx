@@ -141,7 +141,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => ( message || !cmmc.specifiedCategories || cmmc.specifiedCategories.length === 0 ? (
     <div className={cn(
-      'typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', 
+      'typography w-full overflow-hidden bg-level-1 h-[40vh] rounded-xl p-6 mb-4', 
       className
     )} >
       <h5 className='text-accent text-center'>{message ?? ''}</h5>
@@ -185,8 +185,8 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
           <Stage />
           <FacetsArea className='sticky left-0 right-0 bottom-0' />  
         </div>
-        <div /* id='SCV_CART_COLUMN' */ className={cn('z-30',  cartColumnClx)}>
-          <StoreCart className='sticky z-30 top-[146px] lg:top-[80px]' />
+        <div /* id='SCV_CART_COLUMN' */ className={cn(cartColumnClx)}>
+          <StoreCart className='sticky z-30 top-[146px] md:top-[80px]' />
         </div>
       </div> 
   )
