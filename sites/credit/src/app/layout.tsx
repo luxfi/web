@@ -10,6 +10,7 @@ import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
 import { CommerceServiceProvider } from '@hanzo/commerce'
+import Header from '@/components/header'
 
 
 import siteDef from '../siteDef'
@@ -36,6 +37,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         options={siteDef.ext.commerce.options}
       >
         <RootLayoutCommon siteDef={siteDef} header={false} >
+          <Header siteDef={siteDef}/>
           {children}
           <Toaster />
         </RootLayoutCommon>

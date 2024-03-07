@@ -1,8 +1,7 @@
 import type { ServiceOptions } from '@hanzo/commerce'
 
 import facets from './facets'
-
-import products from '@/content/products'
+import products from './products'
 
 export default {
   facets, 
