@@ -40,7 +40,7 @@ const CardButton : React.FC<{
       '!no-underline',
       className
     )} 
-    href={`/buy?sku=${sku}`}
+    href={`/buy?sku=${sku}&add=true`}
   > 
     {CARDS[product]}
     <div className='font-sans text-muted-2 group-hover:text-muted-1 text-xxs'>
