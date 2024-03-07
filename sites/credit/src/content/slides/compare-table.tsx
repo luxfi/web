@@ -13,6 +13,8 @@ import { cn } from '@hanzo/ui/util'
 
 import type ElementTableBlock from '@/blocks/def/element-table'
 
+import { products } from '../../conf/commerce/products'
+
 const textBelow = 'Open the door to a universe of digital assets with the Lux Card, serving as your key to effortless ' + 
 'transactions and proficient asset management within the Lux ecosystem.'
 
@@ -43,11 +45,13 @@ const CardButton : React.FC<{
     href={`/buy?sku=${sku}&add=true`}
   > 
     {CARDS[product]}
-    <div className='font-sans text-muted-2 group-hover:text-muted-1 text-xxs'>
-       <span className='hidden md:inline'>click to buy&nbsp;</span><span className='capitalize'>{product}</span>
+    <div className='font-sans text-muted-1 group-hover:text-muted-1 text-xxs'>
+       <span className='hidden md:inline'>click to buy&nbsp;</span>
     </div>
   </Link>
 )
+
+
 
 export default {blockType: 'screenful',
   anchorId: 'compare',
@@ -77,10 +81,10 @@ export default {blockType: 'screenful',
         ],
         [
           {blockType: 'element', element: 'Material'},
-          {blockType: 'element', element: <p>Matte Carbon<br/><span className='font-normal'>or<br/></span>Stainless Steel</p>},
+          {blockType: 'element', element: <p>Annodized Black<br/>Titanium</p>},
           {blockType: 'element', element: <p>24k Gold<br/><span className='font-normal'>or<br/></span>Sterling Silver</p>},
-          {blockType: 'element', element: <p>Chrome<br/><span className='font-normal'>or<br/></span>Prismatic</p>},
-          {blockType: 'element', element: <p>100% Reflective<br/>Titanium</p>},
+          {blockType: 'element', element: <p>Cool or Iridescent<br/>Chrome</p>},
+          {blockType: 'element', element: <p>Solid Reflective<br/>Titanium</p>},
         ],
         [
           {blockType: 'element', element: <p>Initiation<br/>Fee</p>},
