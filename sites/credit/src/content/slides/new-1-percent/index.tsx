@@ -28,7 +28,7 @@ export default {blockType: 'screenful',
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "View Benefits", href: "/#compare", variant: 'outline' },
-          { title: "Buy", href: "/buy?sku=LXC-B-ABT", variant: 'primary' },
+          { title: "Buy", href: "/buy?sku=LXC-B-ABT&add=true", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
       {blockType: 'space' } satisfies SpaceBlock as Block,
