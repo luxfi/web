@@ -1,7 +1,6 @@
 import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
 
-const imageUrl = '/assets/img/black-flat-578x373.png'
 import MDX_Content from './detail.mdx'
 
 export default {
@@ -9,7 +8,7 @@ export default {
   id: 'LXC-B',
   material: 'Annodized Black Titanium',
   title: 'Lux Black Card',
-  img: imageUrl,
+  img: '/assets/img/cards-dual-black-1483x1361.png',
   run: -1, // unlimited
   fees: {
     initial: 500,
@@ -24,7 +23,7 @@ export default {
       titleAsOption: 'Annodized Black Titanium',
       categoryId: 'LXC-B',
       price: 500,
-      img: imageUrl,
+      img: '/assets/img/cards-flat/black-f-700x441.png',
     } satisfies Product
   ]
 } satisfies CardCategory 

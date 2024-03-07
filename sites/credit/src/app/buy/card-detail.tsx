@@ -3,7 +3,7 @@ import React from 'react'
 import type { ImageBlock, Block } from '@hanzo/ui/blocks'
 
 import { ImageBlockComponent, SpaceBlockComponent } from '@hanzo/ui/blocks'
-import { ApplyTypography, LinkElement, type ButtonSizes } from '@hanzo/ui/primitives'
+import { ApplyTypography, LinkElement, Skeleton, type ButtonSizes } from '@hanzo/ui/primitives'
 import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
@@ -65,21 +65,25 @@ const CardDetailComponent: React.FC<{
     className='',
     phone=false
   }) => (
-    <div className={(phone ? 
-      'flex flex-col justify-start items-start ' 
-      :
-      'flex flex-row ' + 
-      'sm:justify-between sm:items-start md:items-end portrait:items-start ') +  
-      className
-    } >
-      <div className={phone ? '' : 'max-w-pr-60'}>
-        <h1 className='text-foreground font-heading xs:text-lg sm:text-base md:text-lg lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
-          {getProductHeading(cc.type)}
-        </h1>
-        <h6 className='text-muted text-sm'>{cc.material}<Run run={cc.run}/></h6>
+    isLoading ? (
+      <Skeleton className={cn('h-16 w-full', className)} />
+    ) : (
+      <div className={(phone ? 
+        'flex flex-col justify-start items-start ' 
+        :
+        'flex flex-row ' + 
+        'sm:justify-between sm:items-start md:items-end portrait:items-start ') +  
+        className
+      } >
+        <div className={phone ? '' : 'max-w-pr-60'}>
+          <h1 className='text-foreground font-heading xs:text-lg sm:text-base md:text-lg lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
+            {getProductHeading(cc.type)}
+          </h1>
+          <h6 className='text-muted text-sm'>{cc.material}<Run run={cc.run}/></h6>
+        </div>
+        <Fees className={phone ? 'text-xs text-mute d' : 'ml-4'}/>
       </div>
-      <Fees className={phone ? 'text-xs text-mute d' : 'ml-4'}/>
-    </div>
+    )
   )
 
   const ImageArea: React.FC<{ 
@@ -91,41 +95,45 @@ const CardDetailComponent: React.FC<{
     outerClx="",
     buttons=false
   }) => (
-    <div className={cn(
-      'w-full flex flex-row', 
-      'sm:justify-between',
-      'lg:justify-start lg:flex lg:flex-col sm:items-end sm:relative ', 
-      //'md:flex md:flex-col md:items-end',
-      outerClx
-    )}>
-      <div className={cn('xs:w-pr-45 sm:w-pr-33 lg:w-auto', imageClx )}>
-        <ImageBlockComponent block={{blockType: 'image',
-          src: cc.img!,
-          dim: {w: 300, h: 400},
-          alt: cc.title,
-          specifiers: '',
-          props: { style: {
-            width: '100%',
-            height: 'auto',
-          }}} satisfies ImageBlock as Block} agent={mobile ? 'phone' : 'desktop'}
-        />
-      </div>
-      {buttons && (
-        <div className='xs:w-pr-55 sm:w-pr-40 lg:w-auto self-center flex flex-col items-center mt-3 ' >
-          <ProductSelectionRadioGroup 
-            products={cc.products}
-            selectedSku={lineItemRef.item?.sku ?? undefined}  
-            onValueChange={handleItemSelected}
-            groupClx='grid xs:grid-cols-1 lg:grid-cols-2 gap-0 gap-y-3 gap-x-8 mb-4'
-            itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
-            showPrice={false}
-          />      
-          {lineItemRef.item && (
-            <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'min-w-pr-65'}/>)
-          }
+    isLoading ? (
+      <div className={cn('w-full h-[150px] bg-level-1', outerClx)}/>
+    ) : (
+      <div className={cn(
+        'w-full flex flex-row', 
+        'sm:justify-between',
+        'lg:justify-start lg:flex lg:flex-col sm:items-end sm:relative ', 
+        //'md:flex md:flex-col md:items-end',
+        outerClx
+      )}>
+        <div className={cn('xs:w-pr-45 sm:w-pr-33 lg:w-auto', imageClx )}>
+          <ImageBlockComponent block={{blockType: 'image',
+            src: cc.img!,
+            dim: {w: 300, h: 400},
+            alt: cc.title,
+            specifiers: '',
+            props: { style: {
+              width: '100%',
+              height: 'auto',
+            }}} satisfies ImageBlock as Block} agent={mobile ? 'phone' : 'desktop'}
+          />
         </div>
-      )}
-    </div>
+        {buttons && (
+          <div className='xs:w-pr-55 sm:w-pr-40 lg:w-auto self-center flex flex-col items-center mt-3 ' >
+            <ProductSelectionRadioGroup 
+              products={cc.products}
+              selectedSku={lineItemRef.item?.sku ?? undefined}  
+              onValueChange={handleItemSelected}
+              groupClx='grid xs:grid-cols-1 lg:grid-cols-2 gap-0 gap-y-3 gap-x-8 mb-4'
+              itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
+              showPrice={false}
+            />      
+            {lineItemRef.item && (
+              <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'min-w-pr-65'}/>)
+            }
+          </div>
+        )}
+      </div>
+    )
   )
 
 // sm:border sm:border-muted-4 rounded-md 
@@ -133,17 +141,21 @@ const CardDetailComponent: React.FC<{
 
   const Details: React.FC<{ className?:  string}> = ({className=''}) => (
 
-    <div className={cn('flex flex-col', className)}>
-      <ApplyTypography className={cn(
-        'sm:columns-2 gap-6 typography-p:text-muted typography-p:mb-1 typography-p:sm:mb-3',
-        'typography-p:break-inside-avoid-column',
-        'typography-p:font-normal typography-strong:font-800 typography-p:lg:text-sm typography-p:xl:text-base ',
-        'typography-p:portrait:text-sm typography-p:sm:text-sm portrait:gap-4 ',
-        'typography-p:xs:text-sm typography-p:xs:portrait:text-sm xs:portrait:gap-3 ',
-      )}>
-        {cc.detail}
-      </ApplyTypography>
-    </div>
+    isLoading ? (
+      <div className={cn('w-full h-[250px] bg-level-1 ', className)}/>
+    ) : (
+      <div className={cn('flex flex-col', className)}>
+        <ApplyTypography className={cn(
+          'sm:columns-2 gap-6 typography-p:text-muted typography-p:mb-1 typography-p:sm:mb-3',
+          'typography-p:break-inside-avoid-column',
+          'typography-p:font-normal typography-strong:font-800 typography-p:lg:text-sm typography-p:xl:text-base ',
+          'typography-p:portrait:text-sm typography-p:sm:text-sm portrait:gap-4 ',
+          'typography-p:xs:text-sm typography-p:xs:portrait:text-sm xs:portrait:gap-3 ',
+        )}>
+          {cc.detail}
+        </ApplyTypography>
+      </div>
+    )
   )
 
   const layoutClx = 'flex flex-col md:gap-6 md:mb-[vh3] ' +
