@@ -31,7 +31,6 @@ const Page = ({ searchParams }: Props ) => {
   const agent = searchParams?.agent as string
 
   return (<>
-    <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
     
     {tiles.map((banner, index) => (
       <Screenful 
