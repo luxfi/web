@@ -78,8 +78,8 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => {
 
-    const widgetClx = 'bg-background flex flex-row justify-between w-full sm:w-pr-70 items-center md:justify-start ' + 
-      'sm:gap-x-4 xs:gap-x-2 sm:items-start ' + (mobile ? 'h-14 relative pb-3' : 'h-16')  
+    const widgetClx = 'bg-background pt-3 flex flex-row justify-between w-full lg:w-pr-80 lg:self-end items-center md:justify-start ' + 
+      'sm:gap-x-4 xs:gap-x-2 sm:items-start ' + (mobile ? 'h-17 relative pb-3' : 'h-19')  
 
     const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full ' + (mobile ? 'border rounded-lg' : '')  
 
@@ -170,16 +170,20 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
         <Cart isMobile={true} className='p-0 border-none mt-12'/>
       </CartDrawer>
       <Stage />
-      <FacetsArea className='sm:w-full sticky left-0 right-0 bottom-0' />
+      <FacetsArea className='sticky left-0 right-0 bottom-0' />
     </div>
   ) : (
       <div /* id='SCV_COL_CONTAINER' */ className='flex flex-row justify-start gap-6 items-stretch relative h-full pt-3'>
+        <CartDrawer 
+          isMobile={true} 
+          className='md:hidden pr-1 text-primary relative' 
+          buttonClx='fixed right-4 top-[48px] w-11 h-9 z-50' 
+        >
+          <Cart isMobile={true} className='p-0 border-none mt-12'/>
+        </CartDrawer>
         <div /* id='SCV_STAGE_COL' */ className='grow flex flex-col h-full relative'>
           <Stage />
-          <div /* id='SCV_FACET_CONTAINER_BIG' */ className='bg-background pb-2 flex flex-row justify-between '>
-            <BuyButtonArea size='sm' /> 
-            <FacetsArea className='' />  
-          </div>
+          <FacetsArea className='sticky left-0 right-0 bottom-0' />  
         </div>
         <div /* id='SCV_CART_COLUMN' */ className={cn('z-30',  cartColumnClx)}>
           <StoreCart className='sticky z-30 top-[146px] lg:top-[80px]' />
@@ -187,12 +191,6 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
       </div> 
   )
 } 
-
-/*
-          <CartDrawer className='md:hidden pr-1 text-primary relative' buttonClassName='h-9' >
-            <Cart isMobile={mobile} className='p-0 border-none mt-12'/>
-          </CartDrawer>
-*/
 
 const BuyPageWrapper: React.FC<Props> = ({ searchParams }) => (
 
