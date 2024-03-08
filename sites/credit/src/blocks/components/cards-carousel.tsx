@@ -1,9 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 import { ImageBlockComponent, type BlockComponentProps, type ImageBlock } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
+
+
 import type CardsCarouselBlock from '../def/cards-carousel'
 import ArrowLeft from './icons/arrow-left'
 import ArrowRight from './icons/arrow-right'
@@ -53,18 +56,19 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
     }
     const multiplier = b.defaultSlide - slide
     const translatePr = Math.abs(startTranslate + (multiplier * 100)) 
-    return `${multiplier < 0 ? '-' : ''}translate-x-[${translatePr}%]`
+    return `${multiplier < 0 ? '-' : ''}${translatePr}%`
   }
-  
+
   return (
     <div className='w-full flex flex-col gap-10 items-center overflow-hidden'>
       <div className='flex overflow-hidden' onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
-        {b.slides.map(({img}, index) => (
+        {b.slides.map(({img, title}, index) => (
           <div
             key={index}
-            className={cn('flex duration-700 ease-in-out transition-all transform max-w-[50rem]', slideTranslate(slide))}
+            className='flex duration-700  ease-in-out transition-all transform max-w-[50rem]'
+            style={{ transform: `translateX(${slideTranslate(slide)})` }}
           >
-            <ImageBlockComponent className='h-full max-h-[30rem]' block={img as ImageBlock}/>
+            <Image src={img.src} width={img.dim.w} height={img.dim.h} alt={img.alt ?? title} />
           </div>
         ))}
       </div>
