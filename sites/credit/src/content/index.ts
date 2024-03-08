@@ -5,7 +5,6 @@ import keyFeatures from './slides/key-features'
 import directOwnership from './slides/direct-ownership'
 import cashBack from './slides/cash-back'
 import flexibleBorrowing from './slides/flexible-borrowing'
-import compareTable from './slides/compare-table'
 
 import easySpending from './slides/easy-spending'
 import roadmap from './slides/roadmap'
@@ -21,7 +20,6 @@ const tiles = [
   cashBack,
   roadmap,
   flexibleBorrowing,
-  compareTable,
   easySpending,
   directOwnership,
   footer
