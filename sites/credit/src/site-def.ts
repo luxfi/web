@@ -1,10 +1,9 @@
 import { footer, mainNav, type SiteDef  } from '@luxdefi/common/site-def'
 
 import commerce from '@/conf/commerce'
-import prices from '@/conf/prices'
 
 export default {
-  currentAs: 'https://lux.market',
+  currentAs: 'https://lux.credit',
   nav: {
     common: mainNav,
     auth: true, // TODO
@@ -12,6 +11,5 @@ export default {
   footer: footer.standard, 
   ext: {
     commerce,
-    prices,
   }
 } satisfies SiteDef

@@ -1,6 +1,9 @@
-import siteDef from '@/siteDef'
+import React from 'react'
+
+import { Footer } from '@luxdefi/common'
+
+import siteDef from '@/site-def'
 import type { ElementBlock, ScreenfulBlock } from '@hanzo/ui/blocks'
-import { Footer } from '@hanzo/ui/common'
 
 export default {blockType: 'screenful',
   columnSpecifiers: ['center bottom'],

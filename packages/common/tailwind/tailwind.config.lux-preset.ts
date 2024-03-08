@@ -1,9 +1,10 @@
-import { preset } from '@hanzo/ui/tailwind'
+import type { Config } from 'tailwindcss'
+import { preset } from '@hanzo/lc-ui/tailwind'
 import { fontFamily } from './fontFamily.tailwind.lux'
 
 export default {
   presets: [preset],
-  theme: {
-    fontFamily
-  }
-} 
+  content: [],
+  theme: { fontFamily }
+} satisfies Config
+

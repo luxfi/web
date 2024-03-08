@@ -1,4 +1,4 @@
-import type { LinkDef } from '@hanzo/ui/types'
+import type { LinkDef } from '@hanzo/lc-ui/types'
 
 export default [
   {

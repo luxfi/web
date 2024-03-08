@@ -3,7 +3,7 @@ import React from 'react'
 import { AuthWidget } from '@hanzo/auth/components'
 import type { SiteDef } from '@hanzo/ui/types'
 import { NavItems } from '@hanzo/ui/primitives'
-import { Icons, DrawerMenu, Logo } from '@hanzo/ui/common'
+import { Icons, DrawerMenu, Logo } from '@luxdefi/common'
 import { cn } from '@hanzo/ui/util'
 
 import MobileNav from './mobile-nav'

@@ -1,24 +1,26 @@
 'use client'
-
 import { useState }  from 'react'
 
-import { Footer } from '@hanzo/ui/common'
-import { Main, Separator } from '@hanzo/ui/primitives'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { useForm } from 'react-hook-form'
 
-import siteDef from '../../siteDef'
+import { Main, Separator } from '@hanzo/ui/primitives'
 import { EnhHeadingBlockComponent, type EnhHeadingBlock } from '@hanzo/ui/blocks'
-import { Cart } from '@hanzo/commerce/components'
 import { cn } from '@hanzo/ui/util'
+import { useAuth } from '@hanzo/auth/service'
+import { Cart } from '@hanzo/commerce/components'
+import { useCommerce } from '@hanzo/commerce'
+
+import { Footer } from '@luxdefi/common'
+
+import siteDef from '@/site-def'
+
 import PaymentInfo from './payment-info'
 import ShippingInfo from './shipping-info'
 import ThankYou from './thank-you'
-import { useAuth } from '@hanzo/auth/service'
 import PayWithCrypto from './pay-with-crypto'
 import PayByBankTransfer from './pay-by-bank-transfer'
-import { useCommerce } from '@hanzo/commerce'
 
 const paymentFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
