@@ -22,6 +22,7 @@ import CartDrawer from '@/components/cart-drawer'
 import siteDef from '@/siteDef'
 
 import CardDetail from './card-detail'
+import BackButton from '@/components/back-button'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -77,9 +78,9 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     children,
     className=''
   }) => {
-
-    const widgetClx = 'bg-background pt-3 flex flex-row justify-between w-full lg:w-pr-80 lg:self-end items-center md:justify-start ' + 
-      'sm:gap-x-4 xs:gap-x-2 sm:items-start ' + (mobile ? 'h-17 relative pb-3' : 'h-19')  
+// lg:w-pr-80 lg:self-end 
+    const widgetClx = 'bg-background pt-3 flex flex-row justify-between w-full items-center md:justify-start ' + 
+      'sm:gap-x-4 xs:gap-x-2 ' + (mobile ? 'h-17 relative pb-3' : 'h-19')  
 
     const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full ' + (mobile ? 'border rounded-lg' : '')  
 
@@ -93,6 +94,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
         mutators={mutators} 
         facets={siteDef.ext.commerce.facets}
         tabSize='hfull'
+        childrenAfter={false}
       >
         {children}
       </FacetsWidget>
@@ -141,7 +143,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => ( message || !cmmc.specifiedCategories || cmmc.specifiedCategories.length === 0 ? (
     <div className={cn(
-      'typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', 
+      'typography w-full overflow-hidden bg-level-1 h-[40vh] rounded-xl p-6 mb-4', 
       className
     )} >
       <h5 className='text-accent text-center'>{message ?? ''}</h5>
@@ -162,6 +164,13 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
   return mobile ? (
     <div /* id='SCV_COL_CONTAINER' */ className='flex flex-col justify-start items-stretch relative w-full' >
+      <BackButton
+        variant='outline'
+        size='lg'
+        iconClx='w-6 h-6 lg:w-7 lg:h-7'
+        className='z-50 w-9 h-9 fixed left-2 top-[48px]  px-1'
+      />
+
       <CartDrawer 
         isMobile={true} 
         className='md:hidden pr-1 text-primary relative' 
@@ -173,7 +182,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
       <FacetsArea className='sticky left-0 right-0 bottom-0' />
     </div>
   ) : (
-      <div /* id='SCV_COL_CONTAINER' */ className='flex flex-row justify-start gap-6 items-stretch relative h-full pt-3'>
+      <div /* id='SCV_COL_CONTAINER' */ className='flex flex-row justify-start gap-6 items-stretch relative h-full'>
         <CartDrawer 
           isMobile={true} 
           className='md:hidden pr-1 text-primary relative' 
@@ -183,10 +192,17 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
         </CartDrawer>
         <div /* id='SCV_STAGE_COL' */ className='grow flex flex-col h-full relative'>
           <Stage />
-          <FacetsArea className='sticky left-0 right-0 bottom-0' />  
+          <FacetsArea className='sticky left-0 right-0 bottom-0' >
+            <BackButton
+              variant='outline'
+              size='lg'
+              iconClx='w-6 h-6 lg:w-7 lg:h-7'
+              className='w-9 h-9 px-1 lg:min-w-0 lg:min-w-0'
+            />
+          </FacetsArea>  
         </div>
-        <div /* id='SCV_CART_COLUMN' */ className={cn('z-30',  cartColumnClx)}>
-          <StoreCart className='sticky z-30 top-[146px] lg:top-[80px]' />
+        <div /* id='SCV_CART_COLUMN' */ className={cn(cartColumnClx)}>
+          <StoreCart className='sticky z-30 top-[146px] md:top-[80px]' />
         </div>
       </div> 
   )

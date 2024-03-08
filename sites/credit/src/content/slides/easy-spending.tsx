@@ -22,6 +22,7 @@ export default {
         byline: {text: byline, level: 6}, 
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
+      /*
       {blockType: 'element',
         element: <div className='flex gap-2'>
           <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Black</Badge>
@@ -33,11 +34,12 @@ export default {
       {blockType: 'element',
         element: <p className='!text-xs italic text-muted-1'>Select Membership Tier</p>
       } satisfies ElementBlock as Block,
+      */
       {blockType: 'space'} satisfies SpaceBlock as Block,
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
-          { title: "Compare Cards", href: "/#compare", variant: 'outline' },
+          { title: "See Tiers", href: "/compare", variant: 'outline' },
           { title: "Buy", href: "/buy?sku=LXC-B-ABT&add=true", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,

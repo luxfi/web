@@ -2,6 +2,7 @@ import type {
   Block,
   CTABlock,
   ElementBlock, 
+  EnhHeadingBlock,
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
@@ -16,18 +17,16 @@ export default {blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
     [
-      {blockType: 'element',
-        element: 
-          <div className='flex flex-col gap-4'>
-            <h4 className='flex gap-2 text-3xl md:text-6xl'>The new 1%</h4>
-            <h5 className='flex gap-2 md:text-3xl'>Never sell your crypto again with our self-paying credit card</h5>
-          </div>
-      } satisfies ElementBlock as Block,
+      {blockType: 'enh-heading', 
+        heading: {text: 'The new 1%', level: 1}, 
+        byline: {text: 'Never sell your crypto again with our self-paying credit card', level: 6}, 
+        specifiers: 'left'
+      } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
-          { title: "View Benefits", href: "/#compare", variant: 'outline' },
+          { title: "Compare", href: "/compare", variant: 'outline' },
           { title: "Buy", href: "/buy?sku=LXC-B-ABT&add=true", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
@@ -39,16 +38,15 @@ export default {blockType: 'screenful',
     [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
       {blockType: 'image',
-        src: '/assets/img/cards-1483x1074.png',
+        src: '/assets/img/cards-dual-black-1483x1074.png',
         alt: 'cards',
         dim: {w: 1483, h: 1074},
-        //constraints: { lg: {w: 115, h: 'auto'}, xl: {w: '90%', h: 'auto'} }, // 115
-        fullWidthOnMobile: true,
         props: {
           sizes: '900px, 440px',
           style: {
             width: '100%',
-            height: 'auto'
+            height: 'auto',
+            maxWidth: '400px'
           }
         }
       } satisfies ImageBlock as Block ,

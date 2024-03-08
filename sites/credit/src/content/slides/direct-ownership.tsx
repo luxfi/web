@@ -19,9 +19,7 @@ const fireworks = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
   poster: '/assets/video/fireworks-poster-comp.png',
-  sources: [
-    '/assets/video/fireworks-md.mp4',
-  ],
+  sources: [ '/assets/video/fireworks-md.mp4'  ],
   dim: {md: {w: 656, h: 484}, lg: {w: 656, h: 484}},
   sizing: { vh: 25, mobile: {vw: 50} }
 } as VideoBlock
@@ -31,26 +29,24 @@ export default {
   mobileOrder: [1, 0], // mobile: card image on top please
   columnSpecifiers: ['vert-center', 'vert-center'],
   banner: fireworks,
-  contentColumns: [
-    [
-      {blockType: 'enh-heading', 
-        heading: {text: 'Direct Ownership of Digital Assets', level: 1, mb: 6}, 
-        byline: {text: byline, level: 6}, 
-      } satisfies EnhHeadingBlock as Block,
-      {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
-      {blockType: 'cta',
-        specifiers: 'left mobile-2-columns',
-        elements: [
-          { title: "Compare Cards", href: "/#compare", variant: 'outline' },
-          { title: "Buy Founder Card", href: "/buy?sku=LXC-F-CC&add=true", variant: 'primary' },
-        ]
-      } satisfies CTABlock as Block,
-      {blockType: 'space'} satisfies SpaceBlock as Block,
-      {blockType: 'element',
-        element: <p className='text-xs italic'>{finePrint}</p>
-      } satisfies ElementBlock as Block,
-    ], 
-    [ 
+  contentColumns: [[
+    {blockType: 'enh-heading', 
+      heading: {text: 'Direct Ownership of Digital Assets', level: 1, mb: 2}, 
+      byline: {text: byline, level: 6}, 
+    } satisfies EnhHeadingBlock as Block,
+    {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
+    {blockType: 'cta',
+      specifiers: 'left mobile-2-columns',
+      elements: [
+        { title: "Compare", href: "/compare", variant: 'outline' },
+        { title: "Buy", href: "/buy?sku=LXC-F-CC&add=true", variant: 'primary' },
+      ]
+    } satisfies CTABlock as Block,
+    {blockType: 'space'} satisfies SpaceBlock as Block,
+    {blockType: 'element',
+      element: <p className='text-xs italic'>{finePrint}</p>
+    } satisfies ElementBlock as Block,
+  ], [ 
     {blockType: 'image',
       src: '/assets/img/cards-2-flat-tit-1593x1231.png',
       alt: 'cards',

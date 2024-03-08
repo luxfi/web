@@ -14,9 +14,11 @@ export default {
   blockType: 'screenful',
   columnSpecifiers: ['center'],
   contentColumns: [[
+    {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     {blockType: 'element',
       element: <TrustLogos />
     },
+    {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     {blockType: 'carousel',
       specifiers: 'show-dots show-only-current-slide autostart-slideshow',

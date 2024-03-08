@@ -2,14 +2,13 @@ import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
 
 import MDX_Content from './detail.mdx'
-const imageUrl = '/assets/img/cards-dual-gd-sl-1485x1114.png'
 
 export default {
   type : 'elite',
   id: 'LXC-E',
   material: '24k Gold or Sterling Silver',
   title: 'Lux Elite Card',
-  img: imageUrl,
+  img: '/assets/img/cards-dual-gd-sl-1485x1114.png',
   run: 100000,
   fees: {
     initial: 1000,
@@ -24,7 +23,7 @@ export default {
       title: 'Lux Elite Card, 24k Gold',
       titleAsOption: '24k Gold',
       price: 500,
-      img: imageUrl,
+      img: '/assets/img/cards-flat/gold-f-700x442.png',
     } satisfies Product,
     {
       id: 'LXC-E-SS',
@@ -33,7 +32,7 @@ export default {
       title: 'Lux Elite Card, Sterling Silver',
       titleAsOption: 'Sterling Silver',
       price: 500,
-      img: imageUrl,
+      img: '/assets/img/cards-flat/silver-f-700x441.png',
     } satisfies Product,
   ]
 } satisfies CardCategory 
