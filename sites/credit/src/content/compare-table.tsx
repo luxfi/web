@@ -109,7 +109,7 @@ export default {blockType: 'screenful',
         ],
         [
           //{blockType: 'element', element: <p>Supply</p>},
-          {blockType: 'element', element: <p>Unlimited<br/>Supply</p>},
+          {blockType: 'element', element: <p className='whitespace-nowrap'>Not Limited</p>},
           {blockType: 'element', element: <p>Limited<br/><span className='font-normal'>1/100,000</span></p>},
           {blockType: 'element', element: <p>Limited<br/><span className='font-normal'>1/10,000</span></p>},
           {blockType: 'element', element: <p>Limited<br/><span className='font-normal'>1/1,000</span></p>},
