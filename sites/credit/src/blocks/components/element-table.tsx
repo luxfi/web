@@ -7,9 +7,13 @@ import type ElementTableBlock from '../def/element-table'
 
 const bgClassFromLocation = (row: number, column: number) => {
   if (row % 2 === 0 && column % 2 === 0) {
+
     return 'bg-background'
   }
   else if (row % 2 === 1 && column % 2 === 0 || row % 2 === 0 && column % 2 === 1 ) {
+    if (row === 0) {
+      return 'xs:bg-background sm:bg-level-1'
+    }
     return 'bg-level-1'
   }
   return 'bg-level-2'
@@ -33,13 +37,17 @@ const ElementTableBlockComponent: React.FC<BlockComponentProps> = ({
     columns,
     rowIndex,
   }) => (
-    <tr className='!border-0 '>
+      // https://stackoverflow.com/questions/3215553/make-a-div-fill-an-entire-table-cell
+    <tr className='!border-0 h-[1px]'>
     {columns.map((tdElements, columnIndex) => ( 
-      <th key={columnIndex} className={'!py-0 !px-1 relative ' +
-        ((columnIndex === 0) ? '' : 'w-1/4 group border-transparent border hover:border-muted-1 active:border-accent ') +
+      <th key={columnIndex} className={'!xs:py-2 !sm:py-1 !px-1 relative ' +
+        'w-1/4   ' +
         bgClassFromLocation(rowIndex, columnIndex)} 
+        style={{height: 'inherit'}}
       >
+        <div className='xs:flex xs:flex-col xs:justify-end sm:block w-full h-full group xs:border-muted-3 sm:border-transparent border hover:border-muted-1 active:border-accent rounded-xl'>
         {tdElements.element}
+        </div>
       </th> 
     ))}
     </tr>
@@ -56,8 +64,8 @@ const ElementTableBlockComponent: React.FC<BlockComponentProps> = ({
   }) => (
     <tr className='!border-0 '>
     {columns.map((tdElements, columnIndex) => ( 
-      <td key={columnIndex} className={'!px-3 !py-5 !align-middle !border-0 ' + bgClassFromLocation(rowIndex, columnIndex)} >
-        <div className='flex flex-col justify-center items-center text-center font-bold' >
+      <td key={columnIndex} className={'!px-2 !py-5 !align-middle !border-0 ' + bgClassFromLocation(rowIndex, columnIndex)} >
+        <div className='flex flex-col justify-center items-center text-center xs:font-normal sm:font-semibold' >
           {tdElements.element}
         </div> 
       </td> 

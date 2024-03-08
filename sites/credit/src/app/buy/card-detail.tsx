@@ -51,10 +51,16 @@ const CardDetailComponent: React.FC<{
     )
   )
 
-  const Fees: React.FC<{ className?:  string}> = ({className=''}) => (
-    <div className={cn('text-sm text-foreground text-left md:text-right', className)}>
-      <span className='font-bold'>{toUSD.format(cc.fees.initial)}</span><span>&nbsp;Initiation Fee</span><br/>
-      <span className='font-bold'>{toUSD.format(cc.fees.annual)}</span><span>&nbsp;Annually after</span>
+  const Fees: React.FC<{ 
+    className?:  string
+  }> = ({className=''}) => (
+    <div className={cn(
+      mobile ? 'flex flex-row justify-between w-full' : 'text-left md:text-right',
+      'text-sm text-foreground',
+     className)}>
+      <span className={'font-bold ' + (mobile ? 'block' : '')} >{toUSD.format(cc.fees.initial)}<span className='font-normal'>&nbsp;Initiation Fee</span></span>
+        <br className={mobile ? 'hidden' : ''} />
+      <span className={'font-bold ' + (mobile ? 'block' : '')}>{toUSD.format(cc.fees.annual)}<span className='font-normal'>&nbsp;Annually after</span></span>
     </div>
   )
 
@@ -75,13 +81,13 @@ const CardDetailComponent: React.FC<{
         'sm:justify-between sm:items-start md:items-end portrait:items-start ') +  
         className
       } >
-        <div className={phone ? '' : 'max-w-pr-60'}>
-          <h1 className='text-foreground font-heading xs:text-lg sm:text-base md:text-lg lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
+        <div className={phone ? 'flex flex-col items-center w-full' : 'max-w-pr-60'}>
+          <h1 className='px-10 sm:px-0 text-center sm:text-left text-foreground font-heading xs:text-lg sm:text-base md:text-lg lg:text-2xl font-bold' style={{lineHeight: phone ? 1 : 'initial'}}>
             {getProductHeading(cc.type)}
           </h1>
           <h6 className='text-muted text-sm'>{cc.material}<Run run={cc.run}/></h6>
         </div>
-        <Fees className={phone ? 'text-xs text-mute d' : 'ml-4'}/>
+        <Fees className={phone ? 'text-xs text-muted' : 'ml-4'}/>
       </div>
     )
   )
@@ -100,6 +106,7 @@ const CardDetailComponent: React.FC<{
     ) : (
       <div className={cn(
         'w-full flex flex-row', 
+        (cc.products.length === 1 ? 'justify-between' : 'justify-start'),
         'sm:justify-between',
         'lg:justify-start lg:flex lg:flex-col sm:items-end sm:relative ', 
         //'md:flex md:flex-col md:items-end',
@@ -118,7 +125,9 @@ const CardDetailComponent: React.FC<{
           />
         </div>
         {buttons && (
-          <div className='xs:w-pr-55 sm:w-pr-40 lg:w-auto self-center flex flex-col items-center mt-3 ' >
+          <div className={'xs:w-pr-55 sm:w-pr-40 lg:w-auto flex flex-col mt-3 ' +
+            (cc.products.length === 1 ? 'self-start sm:self-center items-end mt-5 mr-1' : 'self-center items-center')}
+          >
             <ProductSelectionRadioGroup 
               products={cc.products}
               selectedSku={lineItemRef.item?.sku ?? undefined}  
@@ -128,7 +137,7 @@ const CardDetailComponent: React.FC<{
               showPrice={false}
             />      
             {lineItemRef.item && (
-              <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'min-w-pr-65'}/>)
+              <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'min-w-pr-65 mt-0' }/>)
             }
           </div>
         )}
@@ -166,7 +175,7 @@ const CardDetailComponent: React.FC<{
   return mobile ? (
     <div className={cn(mobileLayoutClx, className)}>
       <TitleArea phone className='' />
-      <ImageArea buttons outerClx='' />
+      <ImageArea buttons outerClx='mt-2' />
       <Details className='mt-3'/>
     </div>
   ) : (

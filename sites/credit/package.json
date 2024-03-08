@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@hanzo/auth": "^1.0.12",
-    "@hanzo/commerce": "^1.1.8",
-    "@hanzo/ui": "^1.0.12",
+    "@hanzo/commerce": "^1.1.10",
+    "@hanzo/ui": "^1.0.13",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "ethers": "^6.11.1",
