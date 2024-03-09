@@ -1,15 +1,19 @@
 import type { ServiceOptions } from '@hanzo/commerce'
 
 import facets from './facets'
-import productsByCategory from './data/bullion-products-by-category.json'
+import bullionNoPrices from './data/bullion-products-by-category.json'
+import coin from './non-bullion/cn'
+import pass from './non-bullion/ps'
+import validator from './non-bullion/vl'
 
 import { visitCategory } from './price-setter'
+const bullionWPrices = bullionNoPrices.map((c) => (visitCategory(c)))
 
 export default {
   facets, 
-  productsByCategory: productsByCategory.map((c) => (visitCategory(c))),
+  productsByCategory: [...bullionWPrices, validator, coin, pass],
   options: {
-    levelZeroPrefix: 'LXB-',
+    levelZeroPrefix: 'LXM-',
     dbName: 'lux-commerce',
     ordersTable: 'orders'
   } satisfies ServiceOptions

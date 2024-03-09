@@ -1,24 +1,12 @@
-import type { FacetsDesc, FacetValueDesc } from '@hanzo/commerce/types'
+import type { FacetValueDesc } from '@hanzo/commerce/types'
 
 import SVG_Bar from './img/bar.svg'
 import SVG_Coin from './img/coin.svg'
 //import SVG_Multibar from './img/multibar.svg'
 import SVG_GD from './img/good-delivery.svg'
 
-const TYPE = [
-  {
-    value: 'AG',
-    label: 'Silver',
-    img: '/assets/img/cart/ui/facets/silver-swatch-200x200.png'
-  },
-  {
-    value: 'AU',
-    label: 'Gold',
-    img: '/assets/img/cart/ui/facets/gold-swatch-150x150.png'
-  },
-] satisfies FacetValueDesc[]
 
-const FORM = [
+const BULLION_FORM = [
   {
     value: 'B',
     label: 'Minted Bars',
@@ -47,10 +35,39 @@ const FORM = [
   },
 ] satisfies FacetValueDesc[]
 
-export default {
-  1: TYPE,
-  2: FORM
-} satisfies FacetsDesc as FacetsDesc
+
+export default [
+  {
+    value: 'AG',
+    label: 'Silver',
+    img: '/assets/img/cmmc/silver-bar-166x100.png'
+    imgAR: 1.66
+    sub: [...BULLION_FORM]
+  },
+  {
+    value: 'AU',
+    label: 'Gold',
+    img: '/assets/img/cmmc/gold-bar-166x100.png'
+    imgAR: 1.66
+    sub: [...BULLION_FORM]
+  },
+  {
+    value: 'VL',
+    label: 'Validator',
+    img: '/assets/img/cmmc/validator-100x100.png'
+  },
+  {
+    value: 'CN',
+    label: 'Coin',
+    img: '/assets/img/cmmc/coin-100x100.png'
+  },
+  {
+    value: 'PS',
+    label: 'Pass',
+    img: '/assets/img/cmmc/pass-100x100.png'
+  }
+] satisfies FacetValueDesc[]
+
 
 
 
