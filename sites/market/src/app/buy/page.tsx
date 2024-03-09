@@ -14,7 +14,7 @@ import { useCommerce, useSyncSkuParamWithCurrentItem, type StringMutator } from 
 import { 
   Cart, 
   SelectItemInCategoryView, 
-  FacetsWidget, 
+  FacetTogglesWidget, 
 } from '@hanzo/commerce/components'
 
 import CartDrawer from '@/components/cart-drawer'
@@ -75,22 +75,22 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     className=''
   }) => {
 
-    const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start ' + 
-      'sm:gap-x-4 xs:gap-x-2 items-start'  
-    const facets1Clx = 'grid grid-cols-2 gap-0 '  + (mobile ? '' : '')
-    const facets2Clx = 'grid grid-cols-3 gap-0 '
+    const facCount = siteDef.ext.commerce.rootFacet.sub!.length
 
+    const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start ' + 
+      'sm:gap-x-4 xs:gap-x-2 items-start' + (mobile ? 'relative left-0 -mr-3':'') 
+    const facets1Clx = 'grid gap-0 ' + `grid-cols-${facCount}` 
+    //const facets2Clx = 'grid grid-cols-3 gap-0 '
+//
     return !loading ? (
-      <FacetsWidget
+      <FacetTogglesWidget
           // using neg margin to compensate for fw putting extra rt padding on shopping cart button
-        className={cn(widgetClx, (mobile ? 'relative left-0 -mr-3':''), className)} 
+        className={facets1Clx} 
         isMobile={mobile}
-        facetClassNames={[facets1Clx, facets2Clx]}
-        mutators={mutators} 
-        facets={siteDef.ext.commerce.facets}
-      >
-        {children}
-      </FacetsWidget>
+        //c={[facets1Clx, facets2Clx]}
+        mutator={mutators[0]} 
+        facetValues={siteDef.ext.commerce.rootFacet.sub!}
+      />
     ) : (
       <Skeleton className={'h-12 ' + className} />
     )

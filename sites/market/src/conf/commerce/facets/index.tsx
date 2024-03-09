@@ -1,4 +1,5 @@
 import type { FacetValueDesc } from '@hanzo/commerce/types'
+import * as Icons from 'lucide-react'
 
 import SVG_Bar from './img/bar.svg'
 import SVG_Coin from './img/coin.svg'
@@ -36,37 +37,44 @@ const BULLION_FORM = [
 ] satisfies FacetValueDesc[]
 
 
-export default [
+const level1 = [
   {
     value: 'AG',
     label: 'Silver',
-    img: '/assets/img/cmmc/silver-bar-166x100.png'
-    imgAR: 1.66
+    img: '/assets/img/cmmc/silver-bar-ls-166x100.png',
+    imgAR: 1.66,
     sub: [...BULLION_FORM]
   },
   {
     value: 'AU',
     label: 'Gold',
-    img: '/assets/img/cmmc/gold-bar-166x100.png'
-    imgAR: 1.66
+    img: '/assets/img/cmmc/gold-bar-ls-166x100.png',
+    imgAR: 1.66,
     sub: [...BULLION_FORM]
   },
   {
     value: 'VL',
     label: 'Validator',
-    img: '/assets/img/cmmc/validator-100x100.png'
+    img: <Icons.Gem className='text-foreground h-4 w-4'/> //'/assets/img/cmmc/validator-100x100.png',
   },
   {
     value: 'CN',
     label: 'Coin',
-    img: '/assets/img/cmmc/coin-100x100.png'
+    img: '/assets/img/cmmc/lux-coin-446x446.png',
   },
   {
     value: 'PS',
     label: 'Pass',
-    img: '/assets/img/cmmc/pass-100x100.png'
+    img: '/assets/img/cmmc/pass-icon-539x686.png',
+    imgAR: 539 / 686
   }
 ] satisfies FacetValueDesc[]
+
+export default {
+  value: 'LXM',
+  label: '',
+  sub: level1
+}
 
 
 
