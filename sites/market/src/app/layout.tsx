@@ -15,7 +15,7 @@ import type { AuthServiceConf } from '@hanzo/auth/types'
 import { CommerceServiceProvider } from '@hanzo/commerce'
 import Header from '@/components/header'
 
-import siteDef from '../siteDef'
+import siteDef from '../site-def'
 import _metadata from '../metadata'
 
 import '@luxdefi/common/style/lux-global.css'

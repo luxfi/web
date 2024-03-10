@@ -1,11 +1,11 @@
-import type { SiteDef } from '@hanzo/ui/types'
-import common from '@hanzo/ui/siteDef/main-nav'
-import footer from '@hanzo/ui/siteDef/footer'
+import { footer, mainNav, type SiteDef  } from '@luxdefi/common/site-def'
 
 export default {
   currentAs: 'https://lux.network',
   nav: {
-    common,
+    common: mainNav,
+    auth: true, // TODO
+    /*
     featured: [{
       title: "Start Building",
       href: "https://lux.build",
@@ -13,7 +13,8 @@ export default {
       variant: 'primary',
       size: 'default'
     }],
+    */
   },
-  footer  
+  footer: footer.standard, 
 } satisfies SiteDef
 
