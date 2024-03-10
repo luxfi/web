@@ -1,4 +1,4 @@
-import { ContactDialog } from '@hanzo/ui/common'
+import { ContactDialog } from '@luxdefi/common'
 import saveToListAction from '@/server-actions/save-to-waitlist'
 
 export default {

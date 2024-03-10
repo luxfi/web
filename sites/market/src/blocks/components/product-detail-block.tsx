@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { type TShirtSize } from '@hanzo/ui/types'
-import type { Block} from '@hanzo/ui/blocks/def'
+import type { Block} from '@hanzo/ui/blocks'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 
 import {

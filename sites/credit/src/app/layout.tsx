@@ -2,7 +2,8 @@ import React, { type PropsWithChildren } from 'react'
 
 import { 
   RootLayout as RootLayoutCommon, 
-  rootLayoutViewport 
+  rootLayoutViewport,
+  ChatWidget
 } from '@luxdefi/common'
 
 import { Toaster } from '@hanzo/ui/primitives'
@@ -37,6 +38,11 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         <RootLayoutCommon siteDef={siteDef} header={false} >
           <Header siteDef={siteDef}/>
           {children}
+          <ChatWidget
+            title='LUX'
+            subtitle='AI'
+            chatbotUrl='https://lux.chat/iframe'
+          />
           <Toaster />
         </RootLayoutCommon>
       </CommerceServiceProvider>
@@ -44,11 +50,5 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
   )
 }
 
-/*
-          <ChatWidget
-            title='LUX'
-            subtitle='AI'
-            chatbotUrl='https://lux.chat/iframe'
-          />
-*/
+
 export default RootLayout
