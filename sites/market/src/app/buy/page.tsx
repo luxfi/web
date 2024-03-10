@@ -82,16 +82,15 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
   }) => {
 
     const facCount = siteDef.ext.commerce.rootFacet.sub!.length
-
     const subFacets = cmmc.getSpecifiedSubfacets(1)
 
     const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start ' + 
       'sm:gap-x-4 xs:gap-x-2 items-start' + (mobile ? 'relative left-0 -mr-3':'') 
-    const facets1Clx = 'grid gap-0 ' + `grid-cols-${facCount}` 
-    //const facets2Clx = 'grid grid-cols-3 gap-0 '
+    const facets1Clx = 'grid gap-0 ' + `grid-cols-${facCount}` + ' self-start xl:w-pr-70'
+    const facets2Clx = 'grid gap-0 ' + `grid-cols-${subFacets?.length}` + ' self-start xl:w-pr-55'
 //
     return !loading ? (
-      <div >
+      <div className='flex flex-col gap-y-2'>
         <FacetTogglesWidget
             // using neg margin to compensate for fw putting extra rt padding on shopping cart button
           className={facets1Clx} 
@@ -103,7 +102,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
         {!message && subFacets && (
           <FacetTogglesWidget
               // using neg margin to compensate for fw putting extra rt padding on shopping cart button
-            className={facets1Clx} 
+            className={facets2Clx} 
             isMobile={mobile}
             //c={[facets1Clx, facets2Clx]}
             mutator={mutators[1]} 
