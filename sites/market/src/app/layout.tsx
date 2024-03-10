@@ -1,30 +1,27 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/next/root-layout'
-import '@hanzo/ui/style/globals.css'
+import { 
+  RootLayout as RootLayoutCommon, 
+  rootLayoutViewport, 
+  ChatWidget
+} from '@luxdefi/common'
 
 import { Toaster } from '@hanzo/ui/primitives'
-import { ChatWidget } from '@hanzo/ui/common'
 
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
 import { CommerceServiceProvider } from '@hanzo/commerce'
-
-
-import siteDef from '../siteDef'
-import _metadata from '../metadata'
-
 import Header from '@/components/header'
 
-export const metadata = {
-  ..._metadata
-}
+import siteDef from '../site-def'
+import _metadata from '../metadata'
 
-export const viewport = {
-  ..._viewport
-}
+import '@luxdefi/common/style/lux-global.css'
+
+export const metadata = { ..._metadata }
+export const viewport = { ...rootLayoutViewport}
 
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children

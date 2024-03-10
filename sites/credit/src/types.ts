@@ -1,9 +1,7 @@
 import { type ReactNode } from 'react'
-import type { ImageDef } from '@hanzo/ui/types'
-import type { Category, Product } from '@hanzo/commerce/types'
+import type { Category } from '@hanzo/commerce/types'
 
 type CardType = 'black' | 'elite' | 'founder' | 'sovereign'
-
 
 interface CardCategory extends Category {
   type: CardType

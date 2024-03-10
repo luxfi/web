@@ -1,17 +1,17 @@
 import React  from 'react'
 
-import { Footer, Header } from '@hanzo/ui/common'
-
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
+import { Footer } from '@luxdefi/common'
+
+import Header from '@/components/header'
+import tiles from '@/content'
+
+import siteDef from '../site-def'
+
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
-
-import siteDef from '../siteDef'
-
-import tiles from '@/content'
-
 
   // Scroll Snap using this is the approach: 
   // https://stackoverflow.com/a/76066443/11645689

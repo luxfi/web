@@ -1,4 +1,5 @@
-import type { VideoBlock } from '@hanzo/ui/blocks/def'
+import type { VideoBlock } from '@hanzo/ui/blocks'
+
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 export default  {

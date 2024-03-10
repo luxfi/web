@@ -2,10 +2,10 @@
 
 import { useState }  from 'react'
 
-import { Footer } from '@hanzo/ui/common'
+import { Footer } from '@luxdefi/common'
 import { Main } from '@hanzo/ui/primitives'
 
-import siteDef from '../../siteDef'
+import siteDef from '../../site-def'
 import PayByBankTransfer from './pay-by-bank-transfer'
 import PayWithCrypto from './pay-with-crypto'
 import { useAuth } from '@hanzo/auth/service'

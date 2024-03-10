@@ -1,7 +1,10 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/next/root-layout'
-import '@hanzo/ui/style/globals.css'
+import { 
+  RootLayout as RootLayoutCommon, 
+  rootLayoutViewport,
+  ChatWidget
+} from '@luxdefi/common'
 
 import { Toaster } from '@hanzo/ui/primitives'
 
@@ -12,17 +15,13 @@ import type { AuthServiceConf } from '@hanzo/auth/types'
 import { CommerceServiceProvider } from '@hanzo/commerce'
 import Header from '@/components/header'
 
-
-import siteDef from '../siteDef'
+import siteDef from '../site-def'
 import _metadata from '../metadata'
 
-export const metadata = {
-  ..._metadata
-}
+import '@luxdefi/common/style/lux-global.css'
 
-export const viewport = {
-  ..._viewport
-}
+export const metadata = { ..._metadata }
+export const viewport = { ...rootLayoutViewport}
 
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
@@ -39,6 +38,11 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         <RootLayoutCommon siteDef={siteDef} header={false} >
           <Header siteDef={siteDef}/>
           {children}
+          <ChatWidget
+            title='LUX'
+            subtitle='AI'
+            chatbotUrl='https://lux.chat/iframe'
+          />
           <Toaster />
         </RootLayoutCommon>
       </CommerceServiceProvider>
@@ -46,11 +50,5 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
   )
 }
 
-/*
-          <ChatWidget
-            title='LUX'
-            subtitle='AI'
-            chatbotUrl='https://lux.chat/iframe'
-          />
-*/
+
 export default RootLayout

@@ -1,0 +1,1 @@
+export { default as determineDeviceMW } from './determine-device-mw'

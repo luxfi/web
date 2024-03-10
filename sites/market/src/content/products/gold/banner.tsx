@@ -1,4 +1,4 @@
-import { type CTABlock } from '@hanzo/ui/blocks/def'
+import { type CTABlock } from '@hanzo/ui/blocks'
 
 import video from './video'
 

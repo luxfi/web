@@ -1,0 +1,13 @@
+/* Note, preflight is applied first: 
+  https://unpkg.com/tailwindcss@3.3.5/src/css/preflight.css
+*/
+@import "tailwindcss/base";
+
+/* see https://stackoverflow.com/questions/69746121/using-nextjs-how-can-you-import-in-css-using-tailwind-css */
+@import "@hanzo/lc-ui/style/hanzo-common";
+@import "lux-colors";
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+

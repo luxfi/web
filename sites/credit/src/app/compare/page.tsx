@@ -5,7 +5,7 @@ import React  from 'react'
 import { TailwindIndicator, Main, } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
-import { ChatWidget } from '@hanzo/ui/common'
+import { ChatWidget } from '@luxdefi/common'
 
 import '@/blocks/registerComponents'
 

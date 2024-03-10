@@ -1,13 +1,13 @@
 import React  from 'react'
 import { notFound } from 'next/navigation'
 
-import { Footer } from '@hanzo/ui/common'
+import { Footer } from '@luxdefi/common'
 import { Main } from '@hanzo/ui/primitives'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
 import { products } from '@/content'
 
-import siteDef from '../../siteDef'
+import siteDef from '../../site-def'
 
 type Props = {
   params: { slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator' | 'pass' | 'uranium' }

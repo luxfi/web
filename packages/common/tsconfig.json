@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.hanzo-modules.base.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "node_modules/@hanzo/lc-ui",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+}

@@ -1,11 +1,8 @@
-'use client'
-
 import React  from 'react'
 
 import { TailwindIndicator } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
-import { ChatWidget } from '@hanzo/ui/common'
 import { tiles}  from '@/content'
 import '@/blocks/registerComponents'
 
@@ -30,12 +27,6 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
-    <ChatWidget
-      title='LUX'
-      subtitle='AI'
-      chatbotUrl='https://lux.chat/iframe'
-    />
-
     <TailwindIndicator />
   </>)
 }

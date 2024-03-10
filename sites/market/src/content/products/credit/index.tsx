@@ -1,4 +1,4 @@
-import type * as C from '@hanzo/ui/blocks/def'
+import type * as C from '@hanzo/ui/blocks'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'

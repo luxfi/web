@@ -1,36 +1,49 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/next/root-layout'
-import '@hanzo/ui/style/globals.css'
 
-import siteDef from '../siteDef'
+import { 
+  RootLayout as RootLayoutCommon, 
+  rootLayoutViewport,
+  ChatWidget
+} from '@luxdefi/common'
+
+import { Toaster } from '@hanzo/ui/primitives'
+
+import { AuthServiceProvider } from '@hanzo/auth/service'
+import { getUserServerSide } from '@hanzo/auth/server'
+import type { AuthServiceConf } from '@hanzo/auth/types'
+
+
+import siteDef from '../site-def'
 import _metadata from '../metadata'
-import { ChatWidget } from '@hanzo/ui/common'
 
-export const metadata = {
-  ..._metadata
-}
+export const metadata = { ..._metadata }
+export const viewport = { ...rootLayoutViewport}
 
-export const viewport = {
-  ..._viewport
-}
-
-const RootLayout: React.FC<PropsWithChildren> = ({
+const RootLayout: React.FC<PropsWithChildren> = async ({
   children
-}) => (
-  <RootLayoutCommon siteDef={siteDef} header={false}>
-    {children}
-    <ChatWidget
-      title='LUX'
-      subtitle='AI'
-      chatbotUrl='https://lux.chat/iframe'
-      suggestedQuestions={[
-        { heading: 'Lux network features', message: 'What are the key features of Lux network?', icon: 'ShieldFlashLineIcon' },
-      ]}
-    />
-  </RootLayoutCommon>
-)
+}) => {
 
-export {
-  RootLayout as default,
+  const currentUser = await getUserServerSide()
+
+  return(
+    <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
+      <RootLayoutCommon siteDef={siteDef} header={false}>
+        {children}
+        <ChatWidget
+          title='LUX'
+          subtitle='AI'
+          chatbotUrl='https://lux.chat/iframe'
+          suggestedQuestions={[{
+            heading: 'Lux network features', 
+            message: 'What are the key features of Lux network?', 
+            icon: 'ShieldFlashLineIcon' 
+          }]}
+        />
+        <Toaster />
+      </RootLayoutCommon>
+    </AuthServiceProvider>
+  )
 }
+
+export default RootLayout

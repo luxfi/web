@@ -19,7 +19,7 @@ import {
 } from '@hanzo/commerce/components'
 
 import CartDrawer from '@/components/cart-drawer'
-import siteDef from '@/siteDef'
+import siteDef from '@/site-def'
 
 import CardDetail from './card-detail'
 import BackButton from '@/components/back-button'
