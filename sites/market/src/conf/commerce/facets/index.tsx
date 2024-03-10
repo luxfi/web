@@ -41,15 +41,15 @@ const level1 = [
   {
     value: 'AG',
     label: 'Silver',
-    img: '/assets/img/cmmc/silver-bar-ls-166x100.png',
-    imgAR: 1.66,
+    img: '/assets/img/cmmc/silver-bar-pt-100x125.png',
+    imgAR: 1/1.25,
     sub: [...BULLION_FORM]
   },
   {
     value: 'AU',
     label: 'Gold',
-    img: '/assets/img/cmmc/gold-bar-ls-166x100.png',
-    imgAR: 1.66,
+    img: '/assets/img/cmmc/gold-bar-pt-100x125.png',
+    imgAR: 1/1.25,
     sub: [...BULLION_FORM]
   },
   {

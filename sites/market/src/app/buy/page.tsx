@@ -39,6 +39,12 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
       const facets = cmmc.facetsValue
       facets[level] = [value]
       cmmc.setFacets(facets)
+      const subFacets = cmmc.getSpecifiedSubfacets(level)
+      if (subFacets) {
+        const facets = cmmc.facetsValue
+        facets[level + 1] = [subFacets[0].value]
+        cmmc.setFacets(facets)
+      }
     }
   
     const getLevelValueSafe = (level: number): string | null => {
@@ -70,12 +76,14 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
   const mobile = (searchParams?.agent === 'phone')
 
-  const FacetsArea: React.FC<PropsWithChildren & {className?: string}> = ({
+  const FacetsArea: React.FC<PropsWithChildren & {className?: string}> = observer(({
     children,
     className=''
   }) => {
 
     const facCount = siteDef.ext.commerce.rootFacet.sub!.length
+
+    const subFacets = cmmc.getSpecifiedSubfacets(1)
 
     const widgetClx = 'flex flex-row justify-start md:justify-between lg:justify-start ' + 
       'sm:gap-x-4 xs:gap-x-2 items-start' + (mobile ? 'relative left-0 -mr-3':'') 
@@ -83,18 +91,30 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     //const facets2Clx = 'grid grid-cols-3 gap-0 '
 //
     return !loading ? (
-      <FacetTogglesWidget
-          // using neg margin to compensate for fw putting extra rt padding on shopping cart button
-        className={facets1Clx} 
-        isMobile={mobile}
-        //c={[facets1Clx, facets2Clx]}
-        mutator={mutators[0]} 
-        facetValues={siteDef.ext.commerce.rootFacet.sub!}
-      />
+      <div >
+        <FacetTogglesWidget
+            // using neg margin to compensate for fw putting extra rt padding on shopping cart button
+          className={facets1Clx} 
+          isMobile={mobile}
+          //c={[facets1Clx, facets2Clx]}
+          mutator={mutators[0]} 
+          facetValues={siteDef.ext.commerce.rootFacet.sub!}
+        />
+        {!message && subFacets && (
+          <FacetTogglesWidget
+              // using neg margin to compensate for fw putting extra rt padding on shopping cart button
+            className={facets1Clx} 
+            isMobile={mobile}
+            //c={[facets1Clx, facets2Clx]}
+            mutator={mutators[1]} 
+            facetValues={subFacets}
+          />
+        )}
+      </div>
     ) : (
       <Skeleton className={'h-12 ' + className} />
     )
-  }
+  })
   
   const StoreCart: React.FC<{className?: string}> = ({
     className=''
@@ -110,7 +130,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
 
   const Stage: React.FC<{className?: string}> = observer(({
     className=''
-  }) => ( message || !cmmc.specifiedCategories || cmmc.specifiedCategories.length === 0 ? (
+  }) => ( message || cmmc.specifiedCategories.length === 0 ? (
 
       <div className={cn(
         'typography lg:min-w-[400px] lg:max-w-[600px] overflow-hidden bg-level-1 h-[50vh] rounded-xl p-6', 
