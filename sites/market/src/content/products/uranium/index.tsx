@@ -1,7 +1,8 @@
-
-import type * as C from '@hanzo/ui/blocks/def'
-import { MiniChart } from '@hanzo/ui/common'
+import type * as C from '@hanzo/ui/blocks'
 import { markdown } from '@hanzo/ui/util'
+
+import { MiniChart } from '@luxdefi/common'
+
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'

@@ -18,7 +18,7 @@ import {
 } from '@hanzo/commerce/components'
 
 import CartDrawer from '@/components/cart-drawer'
-import siteDef from '@/siteDef'
+import siteDef from '@/site-def'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

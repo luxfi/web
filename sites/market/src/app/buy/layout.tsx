@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Footer } from '@hanzo/ui/common'
+import { Footer } from '@luxdefi/common'
 import { Main, TailwindIndicator } from '@hanzo/ui/primitives'
 
-import siteDef from '@/siteDef'
+import siteDef from '@/site-def'
 
 type LayoutProps = {
   children?: React.ReactNode
