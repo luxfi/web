@@ -14,7 +14,7 @@ interface ProductDetailBlock extends Block {
   video: VideoBlock
   accordian: AccordianBlock
   price?: {
-    heading: string
+    heading?: string
     priceCard: CardBlock
     msCard: CardBlock
   },

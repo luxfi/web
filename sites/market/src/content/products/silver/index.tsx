@@ -18,11 +18,11 @@ export default {
   video: {...video, sizing: { vh: 80}},
   accordian,
   price: {
-    heading: 'Price',
+    //heading: 'Price',
     priceCard: {
       blockType: 'card',
-      title: 'Lux Silver Price / Oz',
-      content: <h4 className='font-heading text-lg md:text-3xl'>{formatPrice(bullionPrice1oz('ag'), true)}</h4>,
+      title: 'Lux Silver Price (oz): ' + formatPrice(bullionPrice1oz('ag')),
+      content: <p>Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownersh</p>,
       cta: {
         blockType: 'cta',
         elements: [
