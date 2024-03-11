@@ -569,6 +569,15 @@ importers:
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
+      firebase:
+        specifier: ^10.8.0
+        version: 10.8.1
+      mobx:
+        specifier: ^6.12.0
+        version: 6.12.0
+      mobx-react-lite:
+        specifier: ^4.0.5
+        version: 4.0.5(mobx@6.12.0)(react-dom@18.2.0)(react@18.2.0)
       next:
         specifier: 14.1.0
         version: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
@@ -587,6 +596,9 @@ importers:
       supports-color:
         specifier: 8.1.1
         version: 8.1.1
+      zod:
+        specifier: 3.21.4
+        version: 3.21.4
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
