@@ -1,6 +1,5 @@
 import React, { type PropsWithChildren } from 'react'
 
-
 import { 
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport,
@@ -13,9 +12,10 @@ import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
-
 import siteDef from '../site-def'
 import _metadata from '../metadata'
+
+import '@luxdefi/common/style/lux-global.css'
 
 export const metadata = { ..._metadata }
 export const viewport = { ...rootLayoutViewport}
