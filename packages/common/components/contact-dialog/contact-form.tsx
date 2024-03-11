@@ -18,9 +18,9 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from '@hanzo/lc-ui/primitives'
+} from '@hanzo/ui/primitives'
 
-import type { ContactInfo, SubmitServerAction } from '@hanzo/lc-ui/types'
+import type { ContactInfo, SubmitServerAction } from '@hanzo/ui/types'
 
 const ValidationSchema = z.object({
   email: z

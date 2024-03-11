@@ -1,5 +1,5 @@
 import React from 'react'
-import type { LinkDef } from '@hanzo/lc-ui/types'
+import type { LinkDef } from '@hanzo/ui/types'
 
 interface SiteDef {
     /** url of this site.  All nav links in the system will show it in 'current' state */
@@ -20,8 +20,8 @@ interface SiteDef {
      * {
      *    footer[myColumn, ...commonColumnsFromUi]
      * }
-     * see: @hanzo/lc-ui/siteDef/footer (default export)
-     * or @hanzo/lc-ui/siteDef/footer/common
+     * see: @hanzo/ui/siteDef/footer (default export)
+     * or @hanzo/ui/siteDef/footer/common
      */
   footer: LinkDef[][]  
 

@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
-import type { TwFontDesc } from '@hanzo/lc-ui/tailwind' // TODO
+import type { TwFontDesc } from '@hanzo/ui/tailwind' // TODO
 import type NextFontDesc from './next-font-desc'
 
 import twFonts from '../../tailwind/lux-tw-fonts' 

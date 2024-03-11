@@ -3,7 +3,7 @@ import React, { type PropsWithChildren, type ReactNode } from 'react'
 
 import { X as LucideX} from 'lucide-react'
 
-import { Sheet, SheetContent, SheetTrigger } from '@hanzo/lc-ui/primitives'
+import { Sheet, SheetContent, SheetTrigger } from '@hanzo/ui/primitives'
 
 import Logo from './logo'
 

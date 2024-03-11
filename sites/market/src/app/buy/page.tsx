@@ -85,7 +85,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
           // using neg margin to compensate for fw putting extra rt padding on shopping cart button
         className={cn(widgetClx, (mobile ? 'relative left-0 -mr-3':''), className)} 
         isMobile={mobile}
-        facetClassNames={[facets1Clx, facets2Clx]}
+        facetClx={[facets1Clx, facets2Clx]}
         mutators={mutators} 
         facets={siteDef.ext.commerce.facets}
       >

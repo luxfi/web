@@ -7,7 +7,7 @@
   "packageManager": "pnpm@8.11.0",
   "pnpm": {
     "overrides": {
-      "@types/react": "^18.2.48"
+      "@types/react": "^18.2.64"
     }
   }
 }
