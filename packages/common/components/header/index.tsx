@@ -23,7 +23,7 @@ const Header: React.FC<{
   const navItemClx = 'font-nav h-8 !text-[13px]/[13px]'
 
   return (
-    <header className={cn('bg-background sticky z-10 top-0 ', className)} >
+    <header className={cn('bg-background sticky z-20 top-0 ', className)} >
       {/* md or larger */}
       <div className={
         'hidden md:flex flex-row md:h-[80px] items-center justify-between ' +
