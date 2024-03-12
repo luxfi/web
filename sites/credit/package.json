@@ -15,7 +15,7 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@hanzo/auth": "^1.0.12",
+    "@hanzo/auth": "^1.1.4",
     "@hanzo/commerce": "^1.2.2",
     "@hanzo/ui": "^2.5.1",
     "@hookform/resolvers": "^3.3.4",
