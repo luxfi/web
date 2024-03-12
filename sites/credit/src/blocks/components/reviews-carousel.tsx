@@ -51,7 +51,7 @@ const ReviewsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
 
   return (
     <Carousel
-      opts={{
+      options={{
         align: 'start',
         loop: autostartSlideshow,
       }}

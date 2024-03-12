@@ -1,5 +1,5 @@
 
-import type { Block } from '@hanzo/ui/blocks'
+import type { Block, CTABlock } from '@hanzo/ui/blocks'
 import type { ImageDef } from '@hanzo/ui/types'
 
 interface CardsCarouselBlock extends Block {
@@ -8,6 +8,8 @@ interface CardsCarouselBlock extends Block {
   defaultSlide: number
   slides: {
     title: string
+    byline: string
+    cta: CTABlock
     img: ImageDef
     selectId?: string
   }[]
