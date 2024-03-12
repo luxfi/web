@@ -2,19 +2,18 @@ import type {
   Block,
   CTABlock, 
   EnhHeadingBlock, 
-  ElementBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
-import Badge from '@hanzo/ui/primitives/badge'
 
 const byline = 'Unlock the full potential of Lux Credit Card with zero staking requirements and multiple card tiers.'
 
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
-  columnSpecifiers: ['vert-center', 'vert-center'],
+  specifiers: 'vert-center',
+  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [
     [
       {blockType: 'enh-heading', 
