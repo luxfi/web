@@ -63,7 +63,7 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
                   <h6 className='font-nav text-center text-sm sm:text-lg md:text-3xl'>{title}</h6>
                   <p>{byline}</p>
                 </div>
-                <CTABlockComponent block={cta} className='mx-auto'/>
+                <CTABlockComponent block={cta}/>
               </div>
             </CarouselItem>
           ))}
