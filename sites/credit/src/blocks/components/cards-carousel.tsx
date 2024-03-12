@@ -51,7 +51,7 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
         <CarouselContent>
           {b.slides.map(({img, title, byline, cta}, index) => (
             <CarouselItem key={index} className='basis-3/4 lg:basis-2/3' onClick={() => selectCard(index)}>
-              <div className='flex flex-col gap-4 items-center'>
+              <div className='flex flex-col gap-5 items-center'>
                 <Image
                   src={img.src}
                   width={img.dim.w}
@@ -60,7 +60,7 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
                   className={cn('mx-auto', current !== index ? 'cursor-pointer' : '')}
                 />
                 <div className='flex flex-col items-center'>
-                  <h6 className='font-nav text-center text-sm sm:text-lg md:text-3xl'>{title}</h6>
+                  <div className='font-heading text-center text-sm sm:text-lg md:text-3xl'>{title}</div>
                   <p>{byline}</p>
                 </div>
                 <CTABlockComponent block={cta}/>

@@ -2,14 +2,10 @@ import type {
   Block,
   CTABlock,
   ElementBlock, 
-  EnhHeadingBlock,
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
-
-const finePrint = 'Borrow up to 50% of all your digital assets when you pay with the Lux Credit Card, ' + 
- "the most premium and exclusive card membership program around, that doesn't ever use or effect your credit score."
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center',
@@ -17,12 +13,14 @@ export default {blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
     [
-      {blockType: 'enh-heading', 
-        heading: {text: 'The new 1%', level: 1}, 
-        byline: {text: 'Never sell your crypto again with our self-paying credit card', level: 6}, 
-        specifiers: 'left'
-      } satisfies EnhHeadingBlock as Block,
-      {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
+      {blockType: 'element',
+        element: 
+          <div className='flex flex-col gap-4'>
+            <h4 className='flex gap-2 text-4xl sm:text-5xl lg:text-[4.5rem]'>The new 1%</h4>
+            <p className='flex gap-2 sm:text-xl md:text-2xl lg:text-4xl'>Never sell your crypto again with our self-paying credit card</p>
+          </div>
+      } satisfies ElementBlock as Block,
+      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
         elements: [
@@ -30,10 +28,6 @@ export default {blockType: 'screenful',
           { title: "Buy", href: "/buy?sku=LXC-B-ABT&add=true", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
-      {blockType: 'space' } satisfies SpaceBlock as Block,
-      {blockType: 'element',
-        element: <p className='text-sm'>{finePrint}</p>
-      } satisfies ElementBlock as Block,
     ], 
     [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
