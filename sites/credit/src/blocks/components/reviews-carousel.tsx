@@ -1,11 +1,13 @@
 'use client'
 
+import { useRef } from 'react'
+import Autoplay from "embla-carousel-autoplay"
 import { type BlockComponentProps, type ImageBlock, ImageBlockComponent } from '@hanzo/ui/blocks'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
 
 import Link from 'next/link'
 import Quote from './icons/quote'
-import { cn } from '@hanzo/ui/util'
 import type { Review, ReviewsCarouselBlock } from '../def/reviews-carousel'
 
 const ReviewComponent: React.FC<{
@@ -49,11 +51,16 @@ const ReviewsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
 
   const autostartSlideshow = b.specifiers?.includes('autostart-slideshow')
 
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
+
   return (
     <Carousel
+      plugins={autostartSlideshow ? [plugin.current] : []}
       options={{
         align: 'start',
-        loop: autostartSlideshow,
+        loop: true,
       }}
       className='w-full max-w-[50rem]'
     >

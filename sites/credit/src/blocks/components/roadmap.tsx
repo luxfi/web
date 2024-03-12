@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import { type BlockComponentProps, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
-import type { Milestone, RoadmapBlock } from '../def/roadmap'
 import { cn } from '@hanzo/ui/util'
+import type { Milestone, RoadmapBlock } from '../def/roadmap'
 
 const MilestoneComponent: React.FC<{
   milestone: Milestone,
@@ -39,7 +39,7 @@ const RoadmapBlockComponent: React.FC<BlockComponentProps> = ({
 
   return (  
     <div
-      className='snap-y snap-always snap-mandatory h-full flex flex-col gap-30 overflow-y-auto pb-20 w-full items-center'
+      className='h-full flex flex-col gap-20 overflow-y-auto pb-20 w-full items-center'
       style={{scrollbarWidth: 'none'}}
     >
       <div className='flex flex-col gap-4 sm:gap-8 mx-auto max-w-[50rem] snap-start'>
