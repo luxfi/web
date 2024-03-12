@@ -1,7 +1,6 @@
 import React, { type PropsWithChildren } from 'react'
 
 import { 
-  Header,
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport, 
   ChatWidget
@@ -35,8 +34,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         productsByCategory={siteDef.ext.commerce.productsByCategory}
         options={siteDef.ext.commerce.options}
       >
-        <RootLayoutCommon siteDef={siteDef} header={false} >
-          <Header siteDef={siteDef}/>
+        <RootLayoutCommon siteDef={siteDef} >
           {children}
           <ChatWidget
             title='LUX'

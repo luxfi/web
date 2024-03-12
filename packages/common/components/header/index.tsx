@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { NavItems } from '@hanzo/ui/primitives'
-import { AuthWidget } from '@hanzo/auth/components'
 import { cn } from '@hanzo/ui/util'
+import { AuthWidget } from '@hanzo/auth/components'
 
 import type { SiteDef } from '../../site-def'
 import { Icons, DrawerMenu, Logo } from '..'

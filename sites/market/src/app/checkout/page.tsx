@@ -1,26 +1,28 @@
 'use client'
 
-import { useState }  from 'react'
+import React, { useState }  from 'react'
+import { redirect } from 'next/navigation'
+
 
 import { Footer } from '@luxdefi/common'
+
 import { Main } from '@hanzo/ui/primitives'
+import { useAuth } from '@hanzo/auth/service'
 
 import siteDef from '../../site-def'
 import PayByBankTransfer from './pay-by-bank-transfer'
 import PayWithCrypto from './pay-with-crypto'
-import { useAuth } from '@hanzo/auth/service'
-import { redirect } from 'next/navigation'
 import ThankYou from './thank-you'
 import ChoosePaymentMethod from './choose-payment-method'
 
-const CheckoutPage = () => {
+const CheckoutPage: React.FC = () => {
 
   const auth = useAuth()
   const [orderId, setOrderId] = useState<string>()
   const [paymentMethod, setPaymentMethod] = useState<'crypto' | 'bank'>()
   const [step, setStep] = useState(0)
 
-  if (!auth.loggedIn) {
+  if (!(auth.loggedIn)) {
     redirect('/login')
   }
 
