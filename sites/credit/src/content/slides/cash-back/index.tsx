@@ -22,12 +22,8 @@ export default {
   columnSpecifiers: ['vert-center', 'vert-center'],
   contentColumns: [[
     {blockType: 'element',
-      element: (<div className={'self-center xs:w-full sm:w-[420px] aspect-square md:aspect-auto overflow-hidden'}>
-        <CashBackGraphic dim={{w: AR * 600, h: 600}} className={
-          'relative block xs:-top-32 xs:w-pr-90 xs:mx-auto ' +
-          'sm:-top-24 sm:max-w-full md:max-h-full md:w-full ' + 
-          'md:-top-15 '
-        }/>
+      element: (<div className={'flex items-center justify-center self-center w-full aspect-square md:aspect-auto overflow-hidden'}>
+        <CashBackGraphic className='h-full max-h-[30rem] px-4'/>
       </div>)
     } satisfies ElementBlock as Block
   ] , [
