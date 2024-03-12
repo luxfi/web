@@ -25,7 +25,7 @@ import SVG_self_repaying from './svg/self-repaying-110x92.svg'
 export default {
   blockType: 'screenful',
   specifiers: 'vert-center',
-  columnSpecifiers: ['center top'],
+  columnSpecifiers: ['vert-center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', heading: {text: 'KEY FEATURES', level: 3}, specifiers: 'center'} satisfies EnhHeadingBlock as Block,
     {blockType: 'space', sizes: {xs: 1}, test: false} satisfies SpaceBlock as Block,

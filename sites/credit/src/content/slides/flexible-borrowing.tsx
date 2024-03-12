@@ -13,7 +13,7 @@ const byline = 'Lux Credit offers the uniqe facility to borrow up to 50% of your
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center', 'vert-center'],
+  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'image',
       src: '/assets/img/cards-2-flat-tit-1593x1231.png',
@@ -33,7 +33,7 @@ export default {blockType: 'screenful',
     } satisfies ElementBlock as Block,
   ], [
       {blockType: 'enh-heading', 
-        heading: {text: 'Flexible Borrowing Against Digital Assets', level: 1, mb: 2}, 
+        heading: {text: 'FLEXIBLE BORROWING AGAINST DIGITAL ASSETS', level: 1, mb: 2}, 
         byline: {text: byline, level: 6}, 
       } satisfies EnhHeadingBlock,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,

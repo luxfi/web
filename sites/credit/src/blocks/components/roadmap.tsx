@@ -26,6 +26,7 @@ const MilestoneComponent: React.FC<{
     </div>
   )
 }
+
 const RoadmapBlockComponent: React.FC<BlockComponentProps> = ({
   block,
   className=''
@@ -39,11 +40,11 @@ const RoadmapBlockComponent: React.FC<BlockComponentProps> = ({
 
   return (  
     <div
-      className='h-full flex flex-col gap-20 overflow-y-auto pb-20 w-full items-center'
+      className='h-full flex flex-col gap-20 overflow-y-auto pb-20 px-3 w-full items-center'
       style={{scrollbarWidth: 'none'}}
     >
       <div className='flex flex-col gap-4 sm:gap-8 mx-auto max-w-[50rem] snap-start'>
-        <h3 className='!text-2xl'>{b.title}</h3>
+        <h3 className='!text-2xl !text-center'>{b.title}</h3>
         <p>{b.description}</p>
       </div>
 

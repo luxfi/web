@@ -1,6 +1,8 @@
 import type CardsCarouselBlock from '@/blocks/def/cards-carousel'
-import { type CTABlock, type EnhHeadingBlock, type ScreenfulBlock, type SpaceBlock } from '@hanzo/ui/blocks'
+import { type CTABlock, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type SpaceBlock } from '@hanzo/ui/blocks'
 import type { ImageDef, LinkDef } from '@hanzo/ui/types'
+
+const byline = 'Borrow up to 50% of all your assets* when you pay with the Lux Credit Card, the most exclusive card membership program, that doesn\'t ever effect your credit score.'
 
 export default {
   blockType: 'screenful',
@@ -10,10 +12,14 @@ export default {
     {blockType: 'enh-heading',
       specifiers: 'center',
       heading: {
-        text: 'BROWSE CREDIT CARDS',
+        text: 'BROWSE CARDS',
         level: 3,
+        mb: 6
       },
     } as EnhHeadingBlock,
+    {blockType: 'element',
+      element: <p className='mx-auto max-w-[45rem] !text-center'>{byline}</p>,
+    } as ElementBlock,
     {blockType: 'space', level: 1} as SpaceBlock,
     {blockType: 'cards-carousel',
       defaultSlide: 1,

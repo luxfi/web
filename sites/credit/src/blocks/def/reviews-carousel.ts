@@ -1,8 +1,9 @@
 
-import type { Block, ImageBlock } from '@hanzo/ui/blocks'
+import type { Block } from '@hanzo/ui/blocks'
+import type { ImageDef } from '@hanzo/ui/types'
 
 interface Review {
-  image: ImageBlock
+  image: ImageDef
   title: string
   text: string
   author: string

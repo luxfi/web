@@ -18,7 +18,7 @@ export default {
   contentColumns: [[
     {blockType: 'roadmap',
       specifiers: 'vertical',
-      title: 'The Future is Lux',
+      title: 'THE FUTURE IS LUX',
       description: bylines[0],
       slides: [
         {blockType: 'milestone',

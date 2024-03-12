@@ -1,12 +1,7 @@
 import type { 
   Block,
-  CTABlock, 
-  HeadingBlock, 
-  EnhHeadingBlock, 
   ElementBlock, 
-  ImageBlock, 
   ScreenfulBlock, 
-  SpaceBlock,
 } from '@hanzo/ui/blocks'
 
 import { ApplyTypography } from '@hanzo/ui/primitives'
@@ -19,7 +14,7 @@ const AR = 0.94
 export default {
   blockType: 'screenful',
   specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center', 'vert-center'],
+  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'element',
       element: (<div className={'flex items-center justify-center self-center w-full aspect-square md:aspect-auto overflow-hidden'}>

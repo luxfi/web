@@ -13,7 +13,7 @@ export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
   specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center', 'vert-center'],
+  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [
     [
       {blockType: 'enh-heading', 

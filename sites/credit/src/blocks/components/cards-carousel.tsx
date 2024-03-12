@@ -30,7 +30,6 @@ const CardsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
     }
 
     api.on("select", () => {
-      console.log("current")
       setCurrent(api.selectedScrollSnap())
     })
   }, [api])

@@ -2,6 +2,7 @@ import type {
   Block,
   CTABlock,
   ElementBlock, 
+  EnhHeadingBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
@@ -9,17 +10,15 @@ import type {
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center', 'vert-center'],
+  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
     [
-      {blockType: 'element',
-        element: 
-          <div className='flex flex-col gap-4'>
-            <h4 className='flex gap-2 text-4xl sm:text-5xl lg:text-[4.5rem]'>The new 1%</h4>
-            <p className='flex gap-2 sm:text-xl md:text-2xl lg:text-4xl'>Never sell your crypto again with our self-paying credit card</p>
-          </div>
-      } satisfies ElementBlock as Block,
+      {blockType: 'enh-heading', 
+        heading: {text: 'THE NEW 1%', level: 1}, 
+        byline: {text: 'Never sell your crypto again with our self-paying credit card', level: 4}, 
+        specifiers: 'left'
+      } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
       {blockType: 'cta',
         specifiers: 'left mobile-2-columns',
@@ -32,9 +31,10 @@ export default {blockType: 'screenful',
     [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
       {blockType: 'image',
-        src: '/assets/img/cards-dual-black-1483x1074.png',
+        src: '/assets/img/card_black_750x640.png',
         alt: 'cards',
-        dim: {w: 1483, h: 1074},
+        fullWidthOnMobile: true,
+        dim: {w: 750, h: 640},
         props: {
           sizes: '900px, 440px',
           style: {
