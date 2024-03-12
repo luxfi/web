@@ -27,6 +27,7 @@ const fireworks = {
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
+  specifiers: 'vert-center',
   columnSpecifiers: ['vert-center', 'vert-center'],
   banner: fireworks,
   contentColumns: [[

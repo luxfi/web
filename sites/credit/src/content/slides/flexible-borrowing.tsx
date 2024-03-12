@@ -1,7 +1,6 @@
 import type { 
   Block,
   CTABlock, 
-  HeadingBlock, 
   EnhHeadingBlock, 
   ElementBlock, 
   ImageBlock, 
@@ -13,6 +12,7 @@ const byline = 'Lux Credit offers the uniqe facility to borrow up to 50% of your
   'limiting the need to cash out and pay capital gains.'
 
 export default {blockType: 'screenful',
+  specifiers: 'vert-center',
   columnSpecifiers: ['vert-center', 'vert-center'],
   contentColumns: [[
     {blockType: 'image',

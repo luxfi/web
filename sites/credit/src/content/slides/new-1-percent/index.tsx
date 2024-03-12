@@ -12,7 +12,7 @@ const finePrint = 'Borrow up to 50% of all your digital assets when you pay with
  "the most premium and exclusive card membership program around, that doesn't ever use or effect your credit score."
 
 export default {blockType: 'screenful',
-
+  specifiers: 'vert-center',
   columnSpecifiers: ['vert-center', 'vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
@@ -46,7 +46,6 @@ export default {blockType: 'screenful',
           style: {
             width: '100%',
             height: 'auto',
-            maxWidth: '400px'
           }
         }
       } satisfies ImageBlock as Block ,

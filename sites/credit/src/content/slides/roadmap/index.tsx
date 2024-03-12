@@ -1,10 +1,9 @@
-import { type ScreenfulBlock, type EnhHeadingBlock, type ElementBlock } from '@hanzo/ui/blocks'
+import { type ScreenfulBlock, type EnhHeadingBlock } from '@hanzo/ui/blocks'
 import SVG_crypto_native from './svg/crypto-native-card.svg'
 import SVG_elevated from './svg/elevated-experiences.svg'
 import SVG_hotels from './svg/launch-of-lux-hotels.svg'
 import SVG_multisigner from './svg/multisigner.svg'
-import type MilestoneBlock from '@/blocks/def/milestone'
-import type CarouselBlock from '@/blocks/def/carousel'
+import type { Milestone, RoadmapBlock } from '@/blocks/def/roadmap'
 
 const bylines = [
   'Enjoy complete asset sovereignty over digital assets kept in your quantum-proof Lux Wallet.',
@@ -14,20 +13,16 @@ const bylines = [
 
 export default {
   blockType: 'screenful',
+  specifiers: 'no-gutters',
   columnSpecifiers: ['vert-center center mobile-vert-center'],
   contentColumns: [[
-    {blockType: 'carousel',
-      specifiers: 'show-dots slides-horizontal-padding',
+    {blockType: 'roadmap',
+      specifiers: 'vertical',
+      title: 'The Future is Lux',
+      description: bylines[0],
       slides: [
-        {blockType: 'element',
-          element:
-            <div className='flex flex-col gap-8 max-w-[20rem] mx-auto'>
-              <h4 className='!text-4xl'>The Future is Lux</h4>
-              <p>{bylines[0]}</p>
-            </div>
-        } as ElementBlock,
         {blockType: 'milestone',
-          icon: <SVG_crypto_native className='w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem]'/>,
+          icon: <SVG_crypto_native className='w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem]'/>,
           text: {blockType: 'enh-heading',
             preheading: {
               text: '01',
@@ -43,9 +38,9 @@ export default {
               level: 0
             }
           } as EnhHeadingBlock,
-        } as MilestoneBlock,
+        } as Milestone,
         {blockType: 'milestone',
-          icon: <SVG_elevated className='w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem]'/>,
+          icon: <SVG_elevated className='w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem]'/>,
           text: {blockType: 'enh-heading',
             preheading: {
               text: '02',
@@ -61,9 +56,9 @@ export default {
               level: 0
             }
           } as EnhHeadingBlock,
-        } as MilestoneBlock,
+        } as Milestone,
         {blockType: 'milestone',
-          icon: <SVG_hotels className='w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem]'/>,
+          icon: <SVG_hotels className='w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem]'/>,
           text: {blockType: 'enh-heading',
             preheading: {
               text: '03',
@@ -79,9 +74,9 @@ export default {
               level: 0
             }
           } as EnhHeadingBlock,
-        } as MilestoneBlock,
+        } as Milestone,
         {blockType: 'milestone',
-          icon: <SVG_multisigner className='w-[5rem] h-[5rem] md:w-[10rem] md:h-[10rem]'/>,
+          icon: <SVG_multisigner className='w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem]'/>,
           text: {blockType: 'enh-heading',
             preheading: {
               text: '04',
@@ -97,8 +92,8 @@ export default {
               level: 0
             }
           } as EnhHeadingBlock,
-        } as MilestoneBlock
+        } as Milestone
       ]
-    } as CarouselBlock
+    } as RoadmapBlock
   ]], 
 } as ScreenfulBlock
