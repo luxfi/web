@@ -19,6 +19,9 @@ import _metadata from '../metadata'
 
 import '@luxdefi/common/style/lux-global.css'
 
+import Header from '@/components/header'
+//import { Header }  from '@luxdefi/common'
+
 export const metadata = { ..._metadata }
 export const viewport = { ...rootLayoutViewport}
 
@@ -34,7 +37,8 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         productsByCategory={siteDef.ext.commerce.productsByCategory}
         options={siteDef.ext.commerce.options}
       >
-        <RootLayoutCommon siteDef={siteDef} >
+        <RootLayoutCommon siteDef={siteDef} header={false}>
+          <Header siteDef={siteDef} />
           {children}
           <ChatWidget
             title='LUX'
