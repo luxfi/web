@@ -1,7 +1,7 @@
 import { footer, mainNav, type SiteDef  } from '@luxdefi/common/site-def'
 
 export default {
-  currentAs: 'https://lux.network',
+  currentAs: 'https://wallet.lux.network',
   nav: {
     common: mainNav,
     auth: true, 

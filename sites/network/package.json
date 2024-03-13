@@ -11,12 +11,14 @@
     "clean": "rm -rf ./.next && rm -rf node_modules",
     "tc": "tsc --noEmit",
     "ln:ui": "pnpm link -g @hanzo/ui",
-    "ul:ui": "pnpm unlink -g @hanzo/ui"
+    "ln:auth": "pnpm link -g @hanzo/auth",
+    "ls:all": "ls -l node_modules/@hanzo/",
+    "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@hanzo/auth": "^1.0.14",
-    "@hanzo/ui": "^1.0.15",
-    "@luxdefi/common": "1.0.0",
+    "@hanzo/auth": "1.2.0",
+    "@hanzo/ui": "2.0.5",
+    "@luxdefi/common": "1.1.0",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "mobx": "^6.12.0",

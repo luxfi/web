@@ -1,12 +1,13 @@
-import { config } from '@hanzo/ui/tailwind'
+import { preset } from '@luxdefi/common/tailwind'
 
 export default {
-  presets: [config],
+  presets: [preset],
   content: {
     files: [
-      "src/**/*.tsx",
+      'src/**/*.tsx',
       './node_modules/@hanzo/ui/**/*.{ts,tsx}',
-      './node_modules/@hanzo/auth/**/*.{ts,tsx}'
+      './node_modules/@hanzo/auth/**/*.{ts,tsx}',
+      './node_modules/@luxdefi/common/**/*.{ts,tsx}'
     ]
   },
 } 
