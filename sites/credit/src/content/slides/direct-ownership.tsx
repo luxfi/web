@@ -43,14 +43,11 @@ export default {
         { title: "Buy", href: "/buy?sku=LXC-F-CC&add=true", variant: 'primary' },
       ]
     } satisfies CTABlock as Block,
-    {blockType: 'space'} satisfies SpaceBlock as Block,
-    {blockType: 'element',
-      element: <p className='text-xs italic'>{finePrint}</p>
-    } satisfies ElementBlock as Block,
   ], [ 
     {blockType: 'image',
       src: '/assets/img/cards-2-flat-tit-1593x1231.png',
       alt: 'cards',
+      fullWidthOnMobile: true,
       dim: {w: 1593, h: 1231},
       props: {
         sizes: '900px, 440px', 
