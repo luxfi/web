@@ -10,7 +10,6 @@ import easySpending from './slides/easy-spending'
 import roadmap from './slides/roadmap'
 import browseCards from './slides/browse-cards'
 import reviews from './slides/reviews'
-import footer from './slides/footer'
 
 const tiles = [
   new1Percent,
@@ -21,8 +20,7 @@ const tiles = [
   roadmap,
   flexibleBorrowing,
   easySpending,
-  directOwnership,
-  footer
+  directOwnership
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
 
