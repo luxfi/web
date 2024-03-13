@@ -10,18 +10,12 @@
     "node_modules/@hanzo/commerce",
     "node_modules/@luxdefi/common"
   ],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": [ "node_modules" ],
   "compilerOptions": {
     "jsx": "preserve",
-    "module": "esnext",
-    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
+      "@/*": ["./src/*"],
       // https://remarkablemark.org/blog/2023/06/30/react-types-reactnode-error/
       "react": ["node_modules/@types/react"],
       "@hanzo/ui": ["node_modules/@hanzo/ui"],
@@ -29,10 +23,6 @@
       "@hanzo/commerce": ["node_modules/@hanzo/commerce"],
       "@luxdefi/common": ["node_modules/@luxdefi/common"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "plugins": [ { "name": "next" } ]
   }
 }

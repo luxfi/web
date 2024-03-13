@@ -1,10 +1,17 @@
 import React  from 'react'
 
-import { Footer } from '@hanzo/ui/common'
+import { 
+  ScreenfulBlockComponent as Screenful, 
+  type ElementBlock, 
+  type ScreenfulBlock 
+} from '@hanzo/ui/blocks'
 import { Main } from '@hanzo/ui/primitives'
-import siteDef from '@/siteDef'
-import { ScreenfulBlockComponent as Screenful, type ElementBlock, type ScreenfulBlock } from '@hanzo/ui/blocks'
+
 import { LoginComponent as Login } from '@hanzo/auth/components'
+
+import { Footer } from '@luxdefi/common'
+
+import siteDef from '@/site-def'
 
 const LoginPage = () => {
   return (<>

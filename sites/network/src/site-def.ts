@@ -4,16 +4,7 @@ export default {
   currentAs: 'https://lux.network',
   nav: {
     common: mainNav,
-    auth: true, // TODO
-    /*
-    featured: [{
-      title: "Start Building",
-      href: "https://lux.build",
-      newTab: false,
-      variant: 'primary',
-      size: 'default'
-    }],
-    */
+    auth: true, 
   },
   footer: footer.standard, 
 } satisfies SiteDef

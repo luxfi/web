@@ -1,5 +1,5 @@
 import React  from 'react'
-import { Footer } from '@hanzo/ui/common'
+import { Footer } from '@luxdefi/common'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
 /* for example, as slug
@@ -8,7 +8,7 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 */ 
-import siteDef from '../siteDef'
+import siteDef from '../site-def'
 
 const UniversalPage = (/* { params, searchParams }: Props */) => (<>
   <Main className='md:flex-row md:gap-4 '>

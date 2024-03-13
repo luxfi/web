@@ -1,10 +1,17 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport } from '@hanzo/ui/next/root-layout'
-import '@hanzo/ui/style/globals.css'
+import { 
+  RootLayout as RootLayoutCommon, 
+  rootLayoutViewport, 
+} from '@luxdefi/common'
 
-import siteDef from '../siteDef'
-import metadata from '../metadata'
+import siteDef from '../site-def'
+import _metadata from '../metadata'
+
+import '@luxdefi/common/style/lux-global.css'
+
+export const metadata = { ..._metadata }
+export const viewport = { ...rootLayoutViewport}
 
 const RootLayout: React.FC<PropsWithChildren> = ({
   children
@@ -14,8 +21,4 @@ const RootLayout: React.FC<PropsWithChildren> = ({
   </RootLayoutCommon>
 )
 
-export {
-  RootLayout as default,
-  metadata,
-  viewport
-}
+export default RootLayout

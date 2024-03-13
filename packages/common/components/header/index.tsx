@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { NavItems } from '@hanzo/lc-ui/primitives'
-import { cn } from '@hanzo/lc-ui/util'
+import { NavItems } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
+import { AuthWidget } from '@hanzo/auth/components'
 
 import type { SiteDef } from '../../site-def'
 import { Icons, DrawerMenu, Logo } from '..'
@@ -40,6 +41,7 @@ const Header: React.FC<{
             itemClx={navItemClx} 
             key='three'
           />
+          {siteDef.nav.auth && <AuthWidget/>}
           {siteDef.nav.cart}
         </div>
       </div>
@@ -48,6 +50,7 @@ const Header: React.FC<{
         <Logo size='sm' />
         <div className='flex gap-4'>
           {siteDef.nav.cart}
+          {siteDef.nav.auth && <AuthWidget/>}
           <DrawerMenu 
             className='p-0 text-primary' // ui has 'text-inherit', so need this for close buttons to appear.
             trigger={<Icons.burger className='h-7 w-7'/>}

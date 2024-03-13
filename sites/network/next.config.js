@@ -26,7 +26,6 @@ const nextConfig = {
   ],
   productionBrowserSourceMaps: true,
   webpack: svgrWebpackConfig // if we need others, set up a chain of calls. 
-  
 }
 
 module.exports = withMDX(nextConfig)

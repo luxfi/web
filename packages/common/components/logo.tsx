@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { type TShirtSize  } from '@hanzo/lc-ui/types'
-import { cn } from '@hanzo/lc-ui/util'
+import { type TShirtSize  } from '@hanzo/ui/types'
+import { cn } from '@hanzo/ui/util'
 
 import * as Icons from './icons'
 

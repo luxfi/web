@@ -1,14 +1,14 @@
 'use client'
-
+import React  from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Footer } from '@hanzo/ui/common'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
-
-import siteDef from '../siteDef'
-import AccessCodeInput from '@/components/access-code-input'
 import { LoginComponent } from '@hanzo/auth/components'
+
+import { AccessCodeInput, Footer } from '@luxdefi/common'
+
+import siteDef from '../site-def'
 
 const Home = observer(() => {
   const auth = useAuth()

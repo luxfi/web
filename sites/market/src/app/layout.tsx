@@ -13,7 +13,6 @@ import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
 import { CommerceServiceProvider } from '@hanzo/commerce'
-import Header from '@/components/header'
 
 import siteDef from '../site-def'
 import _metadata from '../metadata'
@@ -35,8 +34,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         productsByCategory={siteDef.ext.commerce.productsByCategory}
         options={siteDef.ext.commerce.options}
       >
-        <RootLayoutCommon siteDef={siteDef} header={false} >
-          <Header siteDef={siteDef}/>
+        <RootLayoutCommon siteDef={siteDef} >
           {children}
           <ChatWidget
             title='LUX'

@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { AuthWidget } from '@hanzo/auth/components'
-import type { SiteDef } from '@hanzo/ui/types'
 import { NavItems } from '@hanzo/ui/primitives'
-import { Icons, DrawerMenu, Logo } from '@luxdefi/common'
 import { cn } from '@hanzo/ui/util'
+import { AuthWidget } from '@hanzo/auth/components'
+
+//import type { SiteDef } from '../../site-def'
+import { type SiteDef  } from '@luxdefi/common/site-def'
+
+//import { Icons, DrawerMenu, Logo } from '..'
+import { Icons, DrawerMenu, Logo } from '@luxdefi/common'
 
 import MobileNav from './mobile-nav'
 

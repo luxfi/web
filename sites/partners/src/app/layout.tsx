@@ -1,19 +1,20 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { default as RootLayoutCommon, viewport as _viewport } from '@hanzo/ui/next/root-layout'
-import '@hanzo/ui/style/globals.css'
+import { 
+  RootLayout as RootLayoutCommon, 
+  rootLayoutViewport,
+  ChatWidget
+} from '@luxdefi/common'
 
-import siteDef from '../siteDef'
+import { Toaster } from '@hanzo/ui/primitives'
+
+import siteDef from '../site-def'
 import _metadata from '../metadata'
-import { ChatWidget } from '@hanzo/ui/common'
 
-export const metadata = {
-  ..._metadata
-}
+import '@luxdefi/common/style/lux-global.css'
 
-export const viewport = {
-  ..._viewport
-}
+export const metadata = { ..._metadata }
+export const viewport = { ...rootLayoutViewport}
 
 const RootLayout: React.FC<PropsWithChildren> = ({
   children
@@ -32,6 +33,4 @@ const RootLayout: React.FC<PropsWithChildren> = ({
   </RootLayoutCommon>
 )
 
-export {
-  RootLayout as default,
-}
+export default RootLayout

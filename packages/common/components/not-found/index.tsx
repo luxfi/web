@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import { ApplyTypography, Main } from '@hanzo/lc-ui/primitives'
+import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
 import type { SiteDef } from '../../site-def'
 import Footer from '../footer'
