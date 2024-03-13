@@ -2,14 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Autoplay from "embla-carousel-autoplay"
-import { type BlockComponentProps, ImageBlockComponent } from '@hanzo/ui/blocks'
+import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import Link from 'next/link'
 import Quote from './icons/quote'
-import type { Review, ReviewsCarouselBlock } from '../def/reviews-carousel'
 import type { CarouselApi } from '@hanzo/ui/primitives/carousel'
+import type { Review } from '@/types'
 
 const ReviewComponent: React.FC<{
   review: Review
@@ -39,19 +39,13 @@ const ReviewComponent: React.FC<{
   )
 }
 
-const ReviewsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
-  block,
-  className=''
+const ReviewsCarousel: React.FC<{
+  reviews: Review[]
+  autostart?: boolean
+}> = ({
+  reviews,
+  autostart
 }) => {
-  
-  if (block.blockType !== 'reviews-carousel') {
-    return <>reviews carousel block required</>
-  }
-
-  const b = block as ReviewsCarouselBlock
-
-  const autostartSlideshow = b.specifiers?.includes('autostart-slideshow')
-
   // TODO: add Autoplay to hanzo/ui
   const plugin = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
@@ -80,7 +74,7 @@ const ReviewsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
     <div className='w-full flex flex-col gap-6 sm:gap-10 items-center overflow-hidden'>
       <Carousel
         setApi={setApi}
-        plugins={autostartSlideshow ? [plugin.current] : []}
+        plugins={autostart ? [plugin.current] : []}
         options={{
           align: 'start',
           loop: true,
@@ -88,15 +82,15 @@ const ReviewsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
         className='w-full mx-auto max-w-[50rem]'
       >
         <CarouselContent>
-          {b.slides.map((slide, index) => (
+          {reviews.map((review: Review, index) => (
             <CarouselItem key={index}>
-              <ReviewComponent review={slide} />
+              <ReviewComponent review={review} />
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
       <div className='flex gap-2 justify-center'>
-        {b.slides.map((_, index) => (
+        {reviews.map((_, index) => (
           <div
             key={index}
             className={cn('w-3 h-3 rounded-full border border-foreground cursor-pointer', current === index ? 'bg-foreground' : '')}
@@ -108,4 +102,4 @@ const ReviewsCarouselBlockComponent: React.FC<BlockComponentProps> = ({
   )
 }
 
-export default ReviewsCarouselBlockComponent
+export default ReviewsCarousel
