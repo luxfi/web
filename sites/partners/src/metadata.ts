@@ -6,11 +6,11 @@ export default {
     default: "Lux Partners",
     template: "%s | Lux Partners",
   },
-  description: "Explore your swaps",
-  applicationName: "Lux Bridge Explorer",
-  authors: { name: "Lux Dev team" },
+  description: "Pioneer the future of finance with Lux Partners",
+  applicationName: "Lux Partners",
+  authors: { name: "Lux Partners Limited" },
   keywords:
-    "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
+    "Lux, Lux Partners, Lux DeFi, Lux Network, DeFi, Web3, Privacy, Quantum Security, Blockchain, Bridge, Multi-Chain, Ethereum, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
   icons: [
     {
       rel: "icon",
