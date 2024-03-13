@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { EnhHeadingBlockComponent, type EnhHeadingBlock } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
-import type { Milestone } from '@/types/roadmap'
+import type { Milestone } from '@/types'
 
 const MilestoneComponent: React.FC<{
   milestone: Milestone,
