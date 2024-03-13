@@ -2,12 +2,11 @@
 
 import { observer } from 'mobx-react-lite'
 
-import { Footer } from '@hanzo/ui/common'
+import { AccessCodeInput, Footer } from '@luxdefi/common'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
 
-import siteDef from '../siteDef'
-import AccessCodeInput from '@/components/access-code-input'
+import siteDef from '../site-def'
 import { LoginComponent } from '@hanzo/auth/components'
 
 const Home = observer(() => {

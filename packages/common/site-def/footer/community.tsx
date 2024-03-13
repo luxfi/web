@@ -1,4 +1,4 @@
-import type { LinkDef } from '@hanzo/lc-ui/types'
+import type { LinkDef } from '@hanzo/ui/types'
 import { Icons } from '../../components'
 
   // @ts-ignore (will build in project that has @svgr support)

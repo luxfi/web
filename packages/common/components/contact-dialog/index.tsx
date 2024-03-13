@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-import type { ButtonModalProps} from '@hanzo/lc-ui/types'
+import type { ButtonModalProps} from '@hanzo/ui/types'
 
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@hanzo/lc-ui/primitives'
+} from '@hanzo/ui/primitives'
 
 import ContactForm from './contact-form'
 import Disclaimer from './disclaimer'

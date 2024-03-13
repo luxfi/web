@@ -1,13 +1,11 @@
 import React  from 'react'
 
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
-import { Footer } from '@luxdefi/common'
+import { Footer, Header } from '@luxdefi/common'
 
-import Header from '@/components/header'
 import tiles from '@/content'
 
 import siteDef from '../site-def'
-
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import { preset } from '@hanzo/lc-ui/tailwind'
+import { preset } from '@hanzo/ui/tailwind'
 import { fontFamily } from './fontFamily.tailwind.lux'
 
 export default {

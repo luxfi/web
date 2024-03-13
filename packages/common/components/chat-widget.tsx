@@ -3,7 +3,7 @@ import React from 'react'
 
 import { X } from 'lucide-react'
 
-import { Button, Card } from '@hanzo/lc-ui/primitives'
+import { Button, Card } from '@hanzo/ui/primitives'
 
 import LuxLogo from './icons/lux-logo'
 

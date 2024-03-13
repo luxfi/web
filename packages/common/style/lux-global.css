@@ -4,7 +4,7 @@
 @import "tailwindcss/base";
 
 /* see https://stackoverflow.com/questions/69746121/using-nextjs-how-can-you-import-in-css-using-tailwind-css */
-@import "@hanzo/lc-ui/style/hanzo-common";
+@import "@hanzo/ui/style/hanzo-common";
 @import "lux-colors";
 
 @import "tailwindcss/components";

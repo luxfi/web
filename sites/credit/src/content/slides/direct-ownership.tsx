@@ -27,11 +27,12 @@ const fireworks = {
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
-  columnSpecifiers: ['vert-center', 'vert-center'],
+  specifiers: 'vert-center',
+  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   banner: fireworks,
   contentColumns: [[
     {blockType: 'enh-heading', 
-      heading: {text: 'Direct Ownership of Digital Assets', level: 1, mb: 2}, 
+      heading: {text: 'DIRECT OWNERSHIP OF DIGITAL ASSETS', level: 1, mb: 2}, 
       byline: {text: byline, level: 6}, 
     } satisfies EnhHeadingBlock as Block,
     {blockType: 'space', level: 0} satisfies SpaceBlock as Block,

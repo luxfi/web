@@ -2,7 +2,7 @@ import React from 'react'
 
 import { SocialIcon as BaseSocialIcon } from 'react-social-icons'
 
-import { cn } from '@hanzo/lc-ui/util'
+import { cn } from '@hanzo/ui/util'
 import './social-svg.css'
 
 interface SocialIconProps {

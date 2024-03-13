@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Footer } from "@hanzo/ui/common"
+import { Footer } from "@luxdefi/common"
 import { Main } from '@hanzo/ui/primitives'
 
 import Ecosystem from "@/blocks/components/ecosystem"
@@ -13,7 +13,7 @@ import Products from "@/blocks/components/products"
 import advisors from "@/content/partners/advisors"
 import logos from "@/content/partners/logos"
 import partners from "@/content/partners/partners"
-import siteDef from "../siteDef"
+import siteDef from "../site-def"
 
 const LandingPage = () => {
   return (

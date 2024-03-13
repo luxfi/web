@@ -15,7 +15,7 @@ import footer from './slides/footer'
 const tiles = [
   new1Percent,
   reviews,
-  //browseCards,
+  browseCards,
   keyFeatures,
   cashBack,
   roadmap,

@@ -1,9 +1,12 @@
 'use client'
 import React from 'react'
 
+import type { LinkDef } from '@hanzo/ui/types'
 import { LinkElement }  from '@hanzo/ui/primitives'
-import type { LinkDef, SiteDef } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
+
+// import type SiteDef from '../../site-def/site-def'
+import { type SiteDef  } from '@luxdefi/common/site-def'
 
 const MobileNav: React.FC<{
   siteDef: SiteDef
