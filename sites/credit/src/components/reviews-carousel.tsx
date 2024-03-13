@@ -7,7 +7,6 @@ import { Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import Link from 'next/link'
-import Quote from './icons/quote'
 import type { CarouselApi } from '@hanzo/ui/primitives/carousel'
 import type { Review } from '@/types'
 
@@ -19,22 +18,19 @@ const ReviewComponent: React.FC<{
   const {author, image, text, title, href} = review
 
   return (
-    <div className='flex gap-4 sm:gap-8 mx-auto px-4'>
-      <ImageBlockComponent block={{blockType: 'image', ...image}} className='w-20 h-20 rounded-full'/>
-      <div className='flex flex-col sm:gap-2'>
-        <div className={cn('flex gap-2 sm:gap-6', href ? 'cursor-pointer' : '')}>
-          <Quote className='h-6 sm:h-9'/>
-          {href ? (
-            <Link href={href} target='_blank' className='!no-underline'>
-              <h5>{title}</h5>
-            </Link>
-          ) : (
+    <div className='flex flex-col gap-2 sm:gap-3'>
+      <div className='flex gap-8 items-center'>
+        <ImageBlockComponent block={{blockType: 'image', ...image}} className='w-20 h-20 rounded-full mx-0'/>
+        {href ? (
+          <Link href={href} target='_blank' className='!no-underline'>
             <h5>{title}</h5>
-          )}
-        </div>
-        <p className='text-sm sm:text-base'>{text}</p>
-        <p>-{author}</p>
+          </Link>
+        ) : (
+          <h5>{title}</h5>
+        )}
       </div>
+      <p className='text-sm sm:text-base'>“{text}“</p>
+      <p>-{author}</p>
     </div>
   )
 }
@@ -79,7 +75,7 @@ const ReviewsCarousel: React.FC<{
           align: 'start',
           loop: true,
         }}
-        className='w-full mx-auto max-w-[50rem]'
+        className='w-full mx-auto max-w-[40rem]'
       >
         <CarouselContent>
           {reviews.map((review: Review, index) => (

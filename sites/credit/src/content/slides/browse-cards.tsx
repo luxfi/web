@@ -34,19 +34,19 @@ export default {
             {
               title: 'ELITE CARD',
               byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXC-E-24G', title: 'View Benefits', variant: 'outline', size: 'lg'} as LinkDef,
+              cta: {href: '/buy?sku=LXC-E-24G', title: 'View Benefits', variant: 'outline'} as LinkDef,
               img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}, alt: 'Elite card'} as ImageDef,
             },
             {
               title: 'FOUNDER CARD',
               byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXC-F-CC', title: 'View Benefits', variant: 'outline', size: 'lg'} as LinkDef,
+              cta: {href: '/buy?sku=LXC-F-CC', title: 'View Benefits', variant: 'outline'} as LinkDef,
               img: {src: '/assets/img/cards-flat/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Founder card'} as ImageDef,
             },
             {
               title: 'SOVEREIGN CARD',
               byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXC-S-RT', title: 'View Benefits', variant: 'outline', size: 'lg'} as LinkDef,
+              cta: {href: '/buy?sku=LXC-S-RT', title: 'View Benefits', variant: 'outline'} as LinkDef,
               img: {src: '/assets/img/cards-flat/titanium-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Sovereign card'} as ImageDef,
             },
           ]}

@@ -42,10 +42,10 @@ const CardComponent: React.FC<{
         className={cn('mx-auto', current !== index ? 'cursor-pointer' : '')}
       />
       <div className='flex flex-col items-center'>
-        <div className='font-heading text-center text-sm sm:text-lg md:text-3xl'>{title}</div>
-        <p>{byline}</p>
+        <div className='font-heading text-center text-xs sm:text-lg md:text-sm xl:text-base'>{title}</div>
+        <p className='text-sm'>{byline}</p>
       </div>
-      <CTABlockComponent block={{blockType: 'cta', elements: [cta]} as CTABlock}/>
+      <CTABlockComponent block={{blockType: 'cta', specifiers: 'fill', elements: [cta]} as CTABlock}/>
     </div>
 )
 }
@@ -83,7 +83,7 @@ const CardsCarousel: React.FC<{
       >
         <CarouselContent>
           {cards.map((card: Card, index) => (
-            <CarouselItem key={index} className='basis-3/4 md:basis-5/12' onClick={() => selectCard(index)}>
+            <CarouselItem key={index} className='basis-3/4 md:basis-pr-35 xl:basis-1/4 px-4' onClick={() => selectCard(index)}>
               <CardComponent card={card} current={current} index={index}/>
             </CarouselItem>
           ))}
