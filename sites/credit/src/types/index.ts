@@ -6,6 +6,6 @@ import type { CardCategory, CardType } from './card'
 export {
   type Review,
   type CardType,
-  type CardCategory
+  type CardCategory,
   type Milestone
 }
