@@ -1,13 +1,17 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Autoplay from "embla-carousel-autoplay"
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
-import { Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselAutoplayPlugin,
+  type CarouselApi
+} from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import Link from 'next/link'
-import type { CarouselApi } from '@hanzo/ui/primitives/carousel'
 import type { Review } from '@/types'
 
 const ReviewComponent: React.FC<{
@@ -42,9 +46,8 @@ const ReviewsCarousel: React.FC<{
   reviews,
   autostart
 }) => {
-  // TODO: add Autoplay to hanzo/ui
   const plugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
+    CarouselAutoplayPlugin({ delay: 5000, stopOnInteraction: true })
   )
 
   const [api, setApi] = useState<CarouselApi>()
