@@ -10,7 +10,6 @@ export default {
   ch: [
     {
       tok: 'AU',
-      titleToken: 'Lux Gold',
       label: 'Lux Gold',
       desc: "Forge your connection to the real world with Lux Gold, crafted with excellence in Dubai.",
       ch: [
@@ -42,7 +41,6 @@ export default {
     {
       tok: 'AG',
       desc: 'Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.',
-      titleToken: 'Lux Silver',
       label: 'Lux Silver',
       ch: [
         {

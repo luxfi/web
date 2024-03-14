@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hanzo/commerce": "^1.2.2",
+    "@hanzo/commerce": "2.0.0",
     "@types/node": "^20.11.24",
     "@types/uuid": "^9.0.8",
     "fs": "0.0.1-security",

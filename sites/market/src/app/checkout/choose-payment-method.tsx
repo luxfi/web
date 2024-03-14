@@ -3,7 +3,7 @@
 import { Button } from '@hanzo/ui/primitives'
 import { type EnhHeadingBlock, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
 
-import { Cart } from '@hanzo/commerce/components'
+import { CartPanel as Cart } from '@hanzo/commerce/components'
 import { useAuth } from '@hanzo/auth/service'
 import { useCommerce } from '@hanzo/commerce'
 
@@ -39,7 +39,7 @@ const ChoosePaymentMethod: React.FC<{
       specifiers: 'center',
       heading: { text: `FINALIZE PAYMENT` },
     } as EnhHeadingBlock}/>
-    <Cart hideCheckout/>
+    <Cart noCheckout/>
     <div className='flex flex-col sm:flex-row gap-4'>
       <Button
         onClick={() => selectPaymentMethod('crypto')}
