@@ -265,9 +265,6 @@ importers:
       request:
         specifier: ^2.88.2
         version: 2.88.2
-      square:
-        specifier: ^35.0.0
-        version: 35.0.0
       supports-color:
         specifier: 8.1.1
         version: 8.1.1
@@ -932,112 +929,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
-
-  /@apimatic/authentication-adapters@0.5.2:
-    resolution: {integrity: sha512-VDB63xhBSSKnMTjrXXk+ZxdBfHSYU8avYDnvGnhDWQ59Ij3N1G0gaqNcR8JV/M0MGCTgI+7ODSGsKWT8QC77dA==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      '@apimatic/core-interfaces': 0.2.3
-      '@apimatic/http-headers': 0.3.1
-      '@apimatic/http-query': 0.3.1
-      tslib: 2.6.2
-    dev: false
-
-  /@apimatic/axios-client-adapter@0.2.2:
-    resolution: {integrity: sha512-cbMd/CiIUmbtYpHjQgptptkeeWWko8MtuOI5rJfqxL/ElYI0ABSytdO5fuT4Q+hXQHQrkPRgL2z9yUMRoFEARg==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      '@apimatic/convert-to-stream': 0.1.0
-      '@apimatic/core-interfaces': 0.2.3
-      '@apimatic/file-wrapper': 0.3.1
-      '@apimatic/http-headers': 0.3.1
-      '@apimatic/http-query': 0.3.1
-      '@apimatic/json-bigint': 1.2.0
-      '@apimatic/schema': 0.7.6
-      axios: 0.21.4
-      detect-browser: 5.3.0
-      detect-node: 2.1.0
-      form-data: 3.0.1
-      lodash.flatmap: 4.5.0
-      tiny-warning: 1.0.3
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
-  /@apimatic/convert-to-stream@0.0.2:
-    resolution: {integrity: sha512-1DRg17ItExfMYsXwjt6WIjJSCgV5RGg3fHPLgYD44/YmiU+7suWj7YfPKKUqmNcnJ/AvMh4lG1+tHrfOT01zXw==}
-    engines: {node: '>=10.4.0'}
-    dev: false
-
-  /@apimatic/convert-to-stream@0.1.0:
-    resolution: {integrity: sha512-yVwPBnUhFD0X+veZ9KaVXBv/9svSB41GOp51Y5W+tMM316fXFQRC8jlc3XONRabQ2QWfwCz7iLtdABL41VXRcA==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dev: false
-
-  /@apimatic/core-interfaces@0.2.3:
-    resolution: {integrity: sha512-/R+UCnC8qSDwGbINhLq76jpt1VEP+owAn90xAXaZ9daahQPcLtLcvU0Jj6I4SNSSsBWcZ9bKYuTohQ8uRyzRkg==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      '@apimatic/file-wrapper': 0.3.1
-      tslib: 2.6.2
-    dev: false
-
-  /@apimatic/core@0.10.4:
-    resolution: {integrity: sha512-bcNC+UFmEFKIJnHxT1bpF7KDmJbEen4hrlw6x+n5KHvVX/SN4wINzwgVNK4dMqaZdKL4A2MVmyMswFnozvY+/w==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      '@apimatic/convert-to-stream': 0.0.2
-      '@apimatic/core-interfaces': 0.2.3
-      '@apimatic/file-wrapper': 0.3.1
-      '@apimatic/http-headers': 0.3.1
-      '@apimatic/http-query': 0.3.1
-      '@apimatic/json-bigint': 1.2.0
-      '@apimatic/schema': 0.7.6
-      axios: 0.21.4
-      detect-browser: 5.3.0
-      detect-node: 2.1.0
-      form-data: 3.0.1
-      json-ptr: 3.1.1
-      lodash.flatmap: 4.5.0
-      tiny-warning: 1.0.3
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
-  /@apimatic/file-wrapper@0.3.1:
-    resolution: {integrity: sha512-RUJe0fNO/b7vgH0jFjMgyRqBILNQ4kYZcZz8cxd3DODjKBT0R+jS6IU1KIDOTj2lJFdvPmIuPUOJbilKI2eAmA==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      tslib: 2.6.2
-    dev: false
-
-  /@apimatic/http-headers@0.3.1:
-    resolution: {integrity: sha512-q5cmRHbSnweet2FFW4NSTZaVPdmVZLJJTUFdMs3dJON+tw2WcH2bNprORi26DrYBE0Dz/4u1Fip5uqRvBYNULA==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      tslib: 2.6.2
-    dev: false
-
-  /@apimatic/http-query@0.3.1:
-    resolution: {integrity: sha512-YC/dFTX35Q3XWuVbTgEFsQVmpVJlmSrfhI7TBuiUTSlex0uPi3cBQejnLPq0+thpCbGifaL/J+bRbngBO3Kt3Q==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      '@apimatic/file-wrapper': 0.3.1
-      tslib: 2.6.2
-    dev: false
-
-  /@apimatic/json-bigint@1.2.0:
-    resolution: {integrity: sha512-+bmVzYMdZu0Ya5L+my4FXFUih54OvQA/qlZsFOYdOoostyUuB27UDrVWQs/WVCmS0ADdo5vTU0eeTrrBkHoySw==}
-    dev: false
-
-  /@apimatic/schema@0.7.6:
-    resolution: {integrity: sha512-0h2WPULh1lYa9nzNQufXL6JDRm2ykr57mSKneF7surtFiUYZ+bubskBxaP9YoH8zzrshPLBqs/R9TY0QhK5YJQ==}
-    engines: {node: '>=14.15.0 || >=16.0.0'}
-    dependencies:
-      tslib: 2.6.2
-    dev: false
 
   /@babel/code-frame@7.23.5:
     resolution: {integrity: sha512-CgH3s1a96LipHCmSUmYFPwY7MNx8C3avkq7i4Wl3cfa662ldtUe4VM1TPXX70pfmrlWTb6jLqTYrZyT2ZTJBgA==}
@@ -5925,10 +5816,6 @@ packages:
       form-data: 4.0.0
     dev: false
 
-  /@types/node@14.18.63:
-    resolution: {integrity: sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ==}
-    dev: false
-
   /@types/node@16.18.88:
     resolution: {integrity: sha512-Za3eRO5y0UWShynpsbNq/Dtqjc+g3GM9/PnrebiWiU4pYa5dOQbpCGuZ7ICqbiZ0JvLaZZ4eq7t5cSts2IEgkg==}
     dev: false
@@ -6695,14 +6582,6 @@ packages:
 
   /aws4@1.12.0:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
-    dev: false
-
-  /axios@0.21.4:
-    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
-    dependencies:
-      follow-redirects: 1.15.5(debug@4.3.4)
-    transitivePeerDependencies:
-      - debug
     dev: false
 
   /babel-plugin-polyfill-corejs2@0.4.10(@babel/core@7.24.0)(supports-color@8.1.1):
@@ -7983,10 +7862,6 @@ packages:
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
     dev: false
 
-  /detect-browser@5.3.0:
-    resolution: {integrity: sha512-53rsFbGdwMwlF7qvCt0ypLM5V5/Mbl0szB7GPN8y9NCcbknYOeVVXdrXEq+90IwAfrrzt6Hd+u2E2ntakICU8w==}
-    dev: false
-
   /detect-libc@2.0.2:
     resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
     engines: {node: '>=8'}
@@ -7994,10 +7869,6 @@ packages:
 
   /detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
-
-  /detect-node@2.1.0:
-    resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
-    dev: false
 
   /detective-amd@4.2.0:
     resolution: {integrity: sha512-RbuEJHz78A8nW7CklkqTzd8lDCN42En53dgEIsya0DilpkwslamSZDasLg8dJyxbw46OxhSQeY+C2btdSkCvQQ==}
@@ -9033,15 +8904,6 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-
-  /form-data@3.0.1:
-    resolution: {integrity: sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==}
-    engines: {node: '>= 6'}
-    dependencies:
-      asynckit: 0.4.0
-      combined-stream: 1.0.8
-      mime-types: 2.1.35
-    dev: false
 
   /form-data@4.0.0:
     resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
@@ -10466,10 +10328,6 @@ packages:
   /json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
 
-  /json-ptr@3.1.1:
-    resolution: {integrity: sha512-SiSJQ805W1sDUCD1+/t1/1BIrveq2Fe9HJqENxZmMCILmrPI7WhS/pePpIOx85v6/H2z1Vy7AI08GV2TzfXocg==}
-    dev: false
-
   /json-schema-traverse@0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
 
@@ -10781,10 +10639,6 @@ packages:
 
   /lodash.difference@4.5.0:
     resolution: {integrity: sha512-dS2j+W26TQ7taQBGN8Lbbq04ssV3emRw4NY58WErlTO29pIqS0HmoT5aJ9+TUQ1N3G+JOZSji4eugsWwGp9yPA==}
-    dev: false
-
-  /lodash.flatmap@4.5.0:
-    resolution: {integrity: sha512-/OcpcAGWlrZyoHGeHh3cAoa6nGdX6QYtmzNP84Jqol6UEQQ2gIaU3H+0eICcjcKGl0/XF8LWOujNn9lffsnaOg==}
     dev: false
 
   /lodash.flatten@4.4.0:
@@ -13926,20 +13780,6 @@ packages:
       through2: 2.0.5
     dev: false
 
-  /square@35.0.0:
-    resolution: {integrity: sha512-DuBD/CQOBaXgkNeLwkdKYYrhb0bIOeArmyNY76Y38RcVRHZX0exqxpa2ukU8/8s0eMh7j7paJ9twnMAZmu9cFA==}
-    engines: {node: '>=14.17.0'}
-    dependencies:
-      '@apimatic/authentication-adapters': 0.5.2
-      '@apimatic/axios-client-adapter': 0.2.2
-      '@apimatic/core': 0.10.4
-      '@apimatic/json-bigint': 1.2.0
-      '@apimatic/schema': 0.7.6
-      '@types/node': 14.18.63
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
   /sshpk@1.18.0:
     resolution: {integrity: sha512-2p2KJZTSqQ/I3+HX42EpYOa2l3f8Erv8MWKsy2I9uf4wA7yFIkXRffYdsx86y6z4vHtV8u7g+pPlr8/4ouAxsQ==}
     engines: {node: '>=0.10.0'}
@@ -14506,10 +14346,6 @@ packages:
   /timed-out@4.0.1:
     resolution: {integrity: sha512-G7r3AhovYtr5YKOWQkta8RKAPb+J9IsO4uVmzjl8AZwfhs8UcUwTiD6gcJYSgOtzyjvQKrKYn41syHbUWMkafA==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /tiny-warning@1.0.3:
-    resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
     dev: false
 
   /tmp-promise@3.0.3:
