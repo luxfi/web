@@ -30,12 +30,11 @@ const BuyItemCard: React.FC<{
   const cmmc = useCommerce()
   const levelRef = useRef<number>(-1)
 
-  let cat = cmmc.getCategory(skuPath) 
+  const cat = cmmc.getCategory(skuPath) 
   const facets = cat ? undefined : cmmc.getFacetValuesAtSkuPath(skuPath)
 
   useEffect(() => {
 
-    let catToUse = cat
     if (facets) {
       const toks = skuPath.split('-')
       const levelSpecified = toks.length - 1
@@ -43,25 +42,25 @@ const BuyItemCard: React.FC<{
       for (let level = 1; level <= levelSpecified; level++ ) {
         fsv[level] = [toks[level]]   
       } 
+      fsv[levelSpecified + 1] = [facets[0].value]
       levelRef.current = levelSpecified
       cmmc.setFacets(fsv)
-      catToUse = cmmc.specifiedCategories[0]
     }
-    const pathToCheck = facets ? catToUse!.id : skuPath
-    if (!cmmc.currentItem || cmmc.currentItem.categoryId !== pathToCheck) {
-      cmmc.setCurrentItem(catToUse!.products[0].sku)
-    }
-
     return autorun(() => {
       const cats = cmmc.specifiedCategories
-      console.log('CATS: ', cats.length)
-      if (cats.length > 0) {
-        console.log('FIRST: ', cats[0].id)
+        // Original cat was legit
+      if (cat && (cats.length === 0 || cats[0].id !== cat.id)) {
+        if (!cmmc.currentItem || cmmc.currentItem.categoryId !== cat.id) {
+          cmmc.setCurrentItem(cat.products[0].sku)
+        }
+      }
+      else if (cats.length > 0) {
+        if (!cmmc.currentItem || cmmc.currentItem.categoryId !== cats[0].id) {
+          cmmc.setCurrentItem(cats[0].products[0].sku)
+        }
       }
     })
-
   }, [cat, facets])
-
 
   return (
     <div className={className} >
@@ -69,7 +68,7 @@ const BuyItemCard: React.FC<{
       <FacetValuesWidget
         className={cn('grid gap-0 ' + `grid-cols-${facets.length}` + ' self-start ', '')} 
         isMobile={false}
-        mutator={getFacetValuesMutator(levelRef.current, cmmc)} 
+        mutator={getFacetValuesMutator(levelRef.current + 1, cmmc)} 
         facetValues={facets}
       />
     )}
