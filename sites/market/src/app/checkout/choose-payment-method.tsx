@@ -3,7 +3,7 @@
 import { Button } from '@hanzo/ui/primitives'
 import { type EnhHeadingBlock, EnhHeadingBlockComponent } from '@hanzo/ui/blocks'
 
-import { CartPanel as Cart } from '@hanzo/commerce/components'
+import { CartPanel as Cart } from '@hanzo/commerce'
 import { useAuth } from '@hanzo/auth/service'
 import { useCommerce } from '@hanzo/commerce'
 

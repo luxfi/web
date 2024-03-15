@@ -9,13 +9,14 @@ import { observer } from 'mobx-react-lite'
 import { Skeleton } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import { useCommerce, useSyncSkuParamWithCurrentItem, type StringMutator } from '@hanzo/commerce'
-
 import { 
+  useCommerce, 
+  useSyncSkuParamWithCurrentItem, 
+  getFacetValuesMutator,
   CartPanel as Cart, 
   SelectCategoryItemPanel as ItemPanel, 
   FacetValuesWidget, 
-} from '@hanzo/commerce/components'
+} from '@hanzo/commerce'
 
 import siteDef from '@/site-def'
 
@@ -39,42 +40,6 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
     // So this component should always be within in Suspense boundary.
   useSyncSkuParamWithCurrentItem(MAX_CAT_LEVEL, setMessage, setLoading)  
 
-  const getMutator = (level: number): StringMutator => {
-
-    const setLevel = (value: string, level: number ): void  => {
-      const facets = cmmc.facetsValue
-      facets[level] = [value]
-      cmmc.setFacets(facets)
-      const subFacets = cmmc.getFacetValuesSpecified(level)
-      if (subFacets) {
-        const facets = cmmc.facetsValue
-        facets[level + 1] = [subFacets[0].value]
-        cmmc.setFacets(facets)
-      }
-    }
-  
-    const getLevelValueSafe = (level: number): string | null => {
-      const facets = cmmc.facetsValue
-      if (!(level in facets) || facets[level].length === 0 ) {
-        return null
-      }
-      return facets[level][0]
-    }
-
-    return {
-      get: () => (getLevelValueSafe(level)),
-      set: (v: string) => {setLevel(v, level)}
-    } satisfies StringMutator
-  } 
-
-  const mutators: StringMutator[] = []
-    // Note that level index has nothing to 
-    // do with the indeces of the mutators array
-    // passed to the FacetsWiddget. 
-  for (let i = 1; i < MAX_CAT_LEVEL; i++) {
-    mutators.push(getMutator(i))
-  } 
-
   const mobile = (searchParams?.agent === 'phone')
 
   const FacetsArea: React.FC<{className?: string}> = observer(({
@@ -97,7 +62,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
           className={facets1Clx} 
           isMobile={mobile}
           //c={[facets1Clx, facets2Clx]}
-          mutator={mutators[0]} 
+          mutator={getFacetValuesMutator(1, cmmc)} 
           facetValues={siteDef.ext.commerce.rootFacet.sub!}
         />
         {!message && level2Facets && (
@@ -106,7 +71,7 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
             className={facets2Clx} 
             isMobile={mobile}
             //c={[facets1Clx, facets2Clx]}
-            mutator={mutators[1]} 
+            mutator={getFacetValuesMutator(2, cmmc)} 
             facetValues={level2Facets}
           />
         )}

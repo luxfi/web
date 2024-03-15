@@ -18,3 +18,4 @@ export {
   formatPrice,
   bullionPrice1oz
 }
+
