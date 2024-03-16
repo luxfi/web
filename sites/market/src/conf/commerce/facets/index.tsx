@@ -1,38 +1,25 @@
 import type { FacetValueDesc } from '@hanzo/commerce/types'
 import * as Icons from 'lucide-react'
 
-import SVG_Bar from './img/bar.svg'
-import SVG_Coin from './img/coin.svg'
-//import SVG_Multibar from './img/multibar.svg'
-import SVG_GD from './img/good-delivery.svg'
-
+import SVG_CastBar from './img/bar.svg'
+import SVG_Coin from './img/coin2.svg'
+import SVG_MintedBar from './img/minted-bar.svg'
 
 const BULLION_FORM = [
   {
     value: 'B',
     label: 'Minted Bars',
-    img: <SVG_Bar />,
-    imgAR: 1
+    img: <SVG_MintedBar height={18} />,
   },
   {
     value: 'C',
     label: 'Minted Coins',
-    img: <SVG_Coin />,
-    imgAR: 64/80
+    img: <SVG_Coin width={18} />,
   },
-  /*
-  {
-    value: 'MB',
-    label: 'Multibar',
-    img: <SVG_Multibar />,
-    imgAR: 128/160
-  },
-  */
   {
     value: 'CB',
     label: 'Cast Bars',
-    img: <SVG_GD />,
-    imgAR: 24/30
+    img: <SVG_CastBar width={22} />,
   },
 ] satisfies FacetValueDesc[]
 
