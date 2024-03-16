@@ -4,8 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 import { CTABlockComponent, type CTABlock, ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
 
-import { Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
-import type { CarouselApi } from '@hanzo/ui/primitives/carousel'
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import type { ImageDef, LinkDef } from '@hanzo/ui/types'
 
