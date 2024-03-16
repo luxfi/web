@@ -26,7 +26,7 @@ export default {
         elements: [
           {
             title: "Buy Now",
-            href: "/buy?sku=LXB-AU-B-1-OZ&add=true",
+            href: "/buy?sku=LXM-AU-B-1-OZ&add=true",
             size: 'default',
             variant: 'primary',
           },

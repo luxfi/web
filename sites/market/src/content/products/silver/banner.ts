@@ -17,7 +17,7 @@ export default {
       },
       {
         title: "Buy Now",
-        href: "/buy?sku=LXB-AG-B-1-OZ&add=true",
+        href: "/buy?sku=LXM-AG-B-1-OZ&add=true",
         variant: 'primary'
       },
     ]

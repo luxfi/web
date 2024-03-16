@@ -16,7 +16,7 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          href: 'https://docs.lux.network',
+          href: 'https://lux.credit',
           title: 'Read More',
           external: true,
           newTab: false,
@@ -24,9 +24,10 @@ export default {
         },
         {
           title: 'Buy Now',
-          href: "https://mint.lux.network/credit/black",
+          href: "https://lux.credit/buy?sku=LXM-CR-B-ABT",
           external: true,
           newTab: false,
+          variant: 'primary'
         },
       ]
     } as C.CTABlock
