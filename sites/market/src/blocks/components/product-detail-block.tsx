@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { type TShirtSize } from '@hanzo/ui/types'
-import type { Block} from '@hanzo/ui/blocks'
 import { ApplyTypography } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
 
 import {
+  type BlockComponentProps,
   ContentComponent,
   SpaceBlockComponent,
   CardBlockComponent as CardComponent,
@@ -18,12 +18,9 @@ const Spacer: React.FC = () => (
   <SpaceBlockComponent block={{blockType: 'space'}} />
 )
 
-const ProductDetailBlockComponent: React.FC<{
-  block: Block
-  videoSize?: TShirtSize
-}> = ({
+const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
+  agent,
   block,
-  videoSize='lg'
 }) => {
 
   if (block.blockType !== 'product-detail') {
@@ -31,13 +28,16 @@ const ProductDetailBlockComponent: React.FC<{
   }
   const p = block as ProductDetailBlock
 
-  return (<>
-    <div className='mb-12 md:min-w-[400px] md:w-1/2 md:static'>
-      <VideoBlockComponent block={p.video} size={videoSize} className='md:sticky md:top-[80px] md:mt-0 mt-[16px] mx-auto'/>
-    </div>
-    <div className='md:bg-scroll md:w-1/2 '>
-      <div className='md:max-w-[555px] flex flex-col items-start gap-4' >
-        <ApplyTypography className='flex flex-col justify-start items-start typography-headings:text-left'>
+  const videoSize = (agent === 'phone') ? 'md' : 'lg'
+  const mobile = (agent === 'phone')
+
+
+  const TitleArea: React.FC<{className?: string}> = ({
+    className=''
+  }) => {
+
+    return (
+        <ApplyTypography className={cn('typography-headings:text-left', className)}>
           <h1 className='text-left'>{p.title}</h1>
           {p.desc && (typeof p.desc === 'string') ? (
               <h6>{p.desc}</h6>
@@ -46,17 +46,31 @@ const ProductDetailBlockComponent: React.FC<{
             )
           }
         </ApplyTypography>
-        <AccordianBlockComponent block={p.accordian} className='mt-5'/>
+    )
+  }
+
+
+  return (<>
+    {mobile ? (<></>) : (
+      <div className='mb-12 md:min-w-[400px] md:w-1/2 md:static'>
+        <VideoBlockComponent block={p.video} size={videoSize} className='md:sticky md:top-[80px] md:mt-0 mt-[16px] mx-auto'/>
+      </div>
+    )}
+    <div className='md:bg-scroll md:w-1/2 '>
+      <div className='md:max-w-[555px] flex flex-col items-start gap-4' >
+        <TitleArea className='flex flex-col justify-start items-start ' />
         {p.price && (<>
-          <Spacer />
-          <ApplyTypography >
-            <h3>{p.price.heading}</h3>
-          </ApplyTypography>
+          {p.price.heading && (
+            <ApplyTypography >
+              <h3>{p.price.heading}</h3>
+            </ApplyTypography>
+          )}
           <div className='flex flex-col justify-start items-stretch self-stretch w-full lg:self-center lg:grid lg:grid-cols-2 gap-4 '>
             <CardComponent block={p.price.priceCard} />
             <CardComponent block={p.price.msCard} />
           </div>
         </>)}
+        <AccordianBlockComponent block={p.accordian} className='mt-5'/>
         <Spacer />
         <ContentComponent blocks={p.blocks} />
         <Spacer />

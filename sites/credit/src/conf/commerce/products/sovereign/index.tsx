@@ -5,7 +5,7 @@ import MDX_Content from './detail.mdx'
 
 export default {
   type : 'sovereign',
-  id: 'LXC-S',
+  id: 'LXM-CR-S',
   material: 'Reflective Titanium',
   title: 'Lux Sovereign Card',
   img: '/assets/img/cards-2-flat-tit-1593x1231.png',
@@ -17,9 +17,9 @@ export default {
   detail: <MDX_Content />,
   products: [
     {
-      id: 'LXC-S-RT',
-      sku: 'LXC-S-RT',
-      categoryId: 'LXC-S',
+      id: 'LXM-CR-S-RT',
+      sku: 'LXM-CR-S-RT',
+      categoryId: 'LXM-CR-S',
       title: 'Lux Sovereign Card, Reflective Titanium',
       titleAsOption: 'Reflective Titanium',
       price: 50000,

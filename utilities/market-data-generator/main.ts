@@ -30,23 +30,25 @@ const visitNode = (
   skuTokens: string[] = [], 
 ): void => {
 
-  const tToken = levelData.titleToken ?? levelData.label
+  const levelTitle = levelData.titleToken ?? levelData.label
+  const parentTitle = titleTokens.length > 0 ? titleTokens[titleTokens.length - 1] : undefined
+  titleTokens.push(levelTitle)   
+
     // otherwise extra comma if titleToken is '' at this level
-  if (tToken?.length > 0) {
-    titleTokens.push(tToken)   
-  }
+  //if (levelTitle?.length > 0) {
+  //}
 
   skuTokens.push(levelData.tok)
 
   if (levelData.ch.length > 0 && 'price' in levelData.ch[0]) {
 
-    const categoryTitle = titleTokens.join(', ')
+    //const categoryTitle = titleTokens.join(', ')
     const categoryId = skuTokens.join(TS)
 
       // Since we are at the leaf level,
       // these are valid for the entire array.
     const bullionForm = titleTokens.pop()
-    const previousTitle = titleTokens.join(', ')
+    const previousTitle = titleTokens.filter((el) => (el.length > 0)).join(', ')
 
         // from ItemImportData to hanzo/cart Product
     const hanzoProducts = (levelData.ch as ItemImportData[]).map(
@@ -71,7 +73,8 @@ const visitNode = (
       // from LevelImportData to hanzo Category
     categories.push({
       id: skuTokens.join(TS),
-      title: categoryTitle,
+      title: levelTitle,
+      parentTitle,
       desc: levelData.desc,
       img: levelData.img,
       products: hanzoProducts

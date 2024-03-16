@@ -5,7 +5,7 @@ import MDX_Content from './detail.mdx'
 
 export default {
   type: 'black',
-  id: 'LXC-B',
+  id: 'LXM-CR-B',
   material: 'Annodized Black Titanium',
   title: 'Lux Black Card',
   img: '/assets/img/cards-dual-black-1483x1361.png',
@@ -17,11 +17,11 @@ export default {
   detail: <MDX_Content />,
   products: [
     {
-      id: 'LXC-B-ABT',
-      sku: 'LXC-B-ABT',
+      id: 'LXM-CR-B-ABT',
+      sku: 'LXM-CR-B-ABT',
       title: 'Lux Black Card, Annodized Black Titanium',
       titleAsOption: 'Annodized Black Titanium',
-      categoryId: 'LXC-B',
+      categoryId: 'LXM-CR-B',
       price: 500,
       img: '/assets/img/cards-flat/black-f-700x441.png',
     } satisfies Product

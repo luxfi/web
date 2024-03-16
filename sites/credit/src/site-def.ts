@@ -6,7 +6,7 @@ export default {
   currentAs: 'https://lux.credit',
   nav: {
     common: mainNav,
-    auth: true, // TODO
+    auth: true, 
   },
   footer: footer.standard, 
   ext: {

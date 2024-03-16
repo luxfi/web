@@ -35,10 +35,19 @@ const MiniChart: React.FC<MiniChartProps> = ({
 		script.async = true
 		script.onload = async () => {
 			const iframe = containerRef.current?.querySelector('iframe')
-			if (iframe && iframe instanceof Element) iframe.style.colorScheme = 'normal'
+			if (iframe && iframe instanceof Element) {
+        iframe.style.colorScheme = 'normal'
+        setTimeout(() => {
+          const value = document.querySelector('#mini-symbol-overview-ticker')
+          console.log("TICKER: " + value)
+        }, 1200) // from experimentation 
+      
+
+      }
 
       const copyDiv = document.querySelector('.tradingview-widget-copyright')
       if (copyDiv) {
+        console.log("COPY: " + copyDiv)
         setTimeout(() => {
           copyDiv.classList.remove('invisible')
         }, 1200) // from experimentation 

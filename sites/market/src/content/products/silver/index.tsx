@@ -1,5 +1,8 @@
+import type { LinkDef } from '@hanzo/ui/types'
 import type * as C from '@hanzo/ui/blocks'
 import { MiniChart } from '@luxdefi/common'
+
+import { BuyItemButton } from '@hanzo/commerce'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import { formatPrice, bullionPrice1oz } from '@/util'
@@ -10,7 +13,6 @@ import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 import video from './video'
 import accordian from './accordian'
 
-
 export default {
   blockType: 'product-detail',
   title: 'LUX SILVER',
@@ -18,32 +20,24 @@ export default {
   video: {...video, sizing: { vh: 80}},
   accordian,
   price: {
-    heading: 'Price',
-    priceCard: {
-      blockType: 'card',
-      title: 'Lux Silver Price / Oz',
-      content: <h4 className='font-heading text-lg md:text-3xl'>{formatPrice(bullionPrice1oz('ag'), true)}</h4>,
-      cta: {
-        blockType: 'cta',
-        elements: [
-          {
-            title: "Buy Now",
-            href: "/buy?sku=LXB-AG-B-1-OZ&add=true",
-            size: 'default',
-            variant: 'primary',
-          },
-        ]
-      } as C.CTABlock, 
-    },
-    msCard: {
-      blockType: 'card',
+    priceCard: {blockType: 'card',
+      title: 'Lux Silver Price  / Oz', 
+      content: <div className='h-full flex flex-col justify-center gap-8'>
+        <h4 className='text-center  font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
+        <BuyItemButton skuPath='LXM-AG' popupClx='w-[340px]'>Buy</BuyItemButton>
+      </div>,
+    } satisfies C.CardBlock,
+    msCard: {blockType: 'card',
       specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
       content: <MiniChart symbol='SILVER' exchange='TVC' />
-    }
+    } satisfies C.CardBlock,
   },
-  blocks: [
-    /*
+  blocks: [ /*
+    {blockType: 'element',
+      element: <SelectProductButton categoryId='LXM-AG-B' popupClx='w-[280px]'>Buy</SelectProductButton>
+    } satisfies C.ElementBlock as C.Block,
+    
     {
       blockType: 'heading',
       heading: 'Editions'
@@ -66,32 +60,33 @@ Spot price: ~$25 / oz`
     {
       blockType: 'heading',
       heading: 'Lux Silver News'
-    } as C.HeadingBlock,
+    } satisfies C.HeadingBlock as C.Block,
     {
       blockType: 'card',
       specifiers: 'left-justify-content bg-card',
       content: <YahooFinanceCard />,
-      link: {
-        title: 'View on Yahoo Finance',
-        external: true,
-        href: 'https://finance.yahoo.com/news/viscount-mining-lux-partners-ltd-114500431.html'
-      }
-    } as C.CardBlock,
-    {
-      blockType: 'space'
-    },
+      cta: {blockType: 'cta',
+        elements: [{
+          title: 'View on Yahoo Finance',
+          href: 'https://finance.yahoo.com/news/viscount-mining-lux-partners-ltd-114500431.html'
+        } satisfies LinkDef]
+      } 
+    } satisfies C.CardBlock as C.Block,
+    { blockType: 'space' } as C.Block,
     {
       blockType: 'heading',
       heading: 'Silver Market News'
-    } as C.HeadingBlock,
+    } satisfies C.HeadingBlock as C.Block,
     {
       blockType: 'card',
       specifiers: 'news',
       content: <SilverStockInvestorCard />,
-      link: {
+      cta: {blockType: 'cta',
+        elements: [{
         title: 'Download PDF',
         href: '/assets/pdf/Silver-Stock-Investor.pdf'
-      }
-    } as C.CardBlock,
-  ] as C.Block[]
-} as ProductDetailBlock
+        } satisfies LinkDef]
+      } satisfies C.CTABlock 
+    } satisfies C.CardBlock as C.Block,
+  ] satisfies C.Block[]
+} satisfies ProductDetailBlock

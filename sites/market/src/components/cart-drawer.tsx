@@ -2,12 +2,11 @@
 import React, { type PropsWithChildren } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Icons } from '@hanzo/commerce/components'
-import { useCommerce } from '@hanzo/commerce'
-
-import { DrawerMenu } from '@luxdefi/common'
 import { buttonVariants, Badge } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+import { useCommerce, Icons } from '@hanzo/commerce'
+
+import { DrawerMenu } from '@luxdefi/common'
 
 const CartDrawer: React.FC<PropsWithChildren & {
   className?: string, 

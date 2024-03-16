@@ -1,3 +1,4 @@
+import type { AccordianBlock } from '@hanzo/ui/blocks'
 
 import LuxStandardMDX from './lux-standard-guar-backing.mdx'
 import HoldSecurelyMDX from './hold-securely.mdx'
@@ -23,4 +24,4 @@ export default {
       content: <SellStakeMDX />
     },
   ]
-}
+} satisfies AccordianBlock

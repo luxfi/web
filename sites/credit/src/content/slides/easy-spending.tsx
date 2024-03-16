@@ -39,7 +39,7 @@ export default {
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "See Tiers", href: "/compare", variant: 'outline' },
-          { title: "Buy", href: "/buy?sku=LXC-B-ABT&add=true", variant: 'primary' },
+          { title: "Buy", href: "/buy?sku=LXM-CR-B-ABT&add=true", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
     ], 

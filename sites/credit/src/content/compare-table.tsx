@@ -72,10 +72,10 @@ export default {blockType: 'screenful',
       elements: [
         [
          // {blockType: 'element', element: ''},
-          {blockType: 'element', element: <CardButton product='black' sku='LXC-B-ABT' />},
-          {blockType: 'element', element: <CardButton product='elite' sku='LXC-E-24G'/>},
-          {blockType: 'element', element: <CardButton product='founder' sku='LXC-F-CC'/>},
-          {blockType: 'element', element: <CardButton product='sovereign' sku='LXC-S-RT'/>},
+          {blockType: 'element', element: <CardButton product='black' sku='LXM-CR-B-ABT' />},
+          {blockType: 'element', element: <CardButton product='elite' sku='LXM-CR-E-24G'/>},
+          {blockType: 'element', element: <CardButton product='founder' sku='LXM-CR-F-CC'/>},
+          {blockType: 'element', element: <CardButton product='sovereign' sku='LXM-CR-S-RT'/>},
         ],
         /*
         [
