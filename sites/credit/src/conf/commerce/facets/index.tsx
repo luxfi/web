@@ -1,9 +1,4 @@
-import type { FacetsDesc, FacetValueDesc } from '@hanzo/commerce/types'
-
-import SVG_Bar from './img/bar.svg'
-import SVG_Coin from './img/coin.svg'
-//import SVG_Multibar from './img/multibar.svg'
-import SVG_GD from './img/good-delivery.svg'
+import type { FacetValueDesc } from '@hanzo/commerce/types'
 
 const BLACK_IMAGE = '/assets/img/cards-flat/black-f-700x441.png'
 const ELITE_IMAGE = '/assets/img/cards-flat/gold-f-700x442.png'
@@ -12,7 +7,7 @@ const SOVEREIGN_IMAGE = '/assets/img/cards-flat/titanium-f-700x441.png'
 
 const CC_AR = 1.58577251 // international spec for CC's and our images
 
-const TYPE = [
+const CARD_LEVELS = [
   {
     value: 'B',
     label: 'Black',
@@ -39,9 +34,22 @@ const TYPE = [
   },
 ] satisfies FacetValueDesc[]
 
+const level1 = [
+  {
+    value: 'CR',
+    label: 'Credit',
+    img: BLACK_IMAGE,
+    imgAR: CC_AR,
+    sub: [...CARD_LEVELS]
+  },
+]
+
 export default {
-  1: TYPE,
-} satisfies FacetsDesc as FacetsDesc
+  value: 'LXM',
+  label: '',
+  sub: level1
+}
+
 
 
 

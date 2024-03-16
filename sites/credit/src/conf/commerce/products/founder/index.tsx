@@ -6,7 +6,7 @@ import MDX_Content from './detail.mdx'
 
 export default {
   type : 'founder',
-  id: 'LXC-F',
+  id: 'LXM-CR-F',
   material: 'Cool or Iridescent Chrome',
   title: 'Lux Founder Card',
   img: '/assets/img/cards-dual-chr-psm-1475x1220.png',
@@ -18,18 +18,18 @@ export default {
   detail: <MDX_Content />,
   products: [
     {
-      id: 'LXC-F-CC',
-      sku: 'LXC-F-CC',
-      categoryId: 'LXC-F',
+      id: 'LXM-CR-F-CC',
+      sku: 'LXM-CR-F-CC',
+      categoryId: 'LXM-CR-F',
       title: 'Lux Founder Card, Cool Chrome',
       titleAsOption: 'Cool Chrome',
       price: 5000,
       img: '/assets/img/cards-flat/chrome-cool-f-700x441.png',
     } satisfies Product,
     {
-      id: 'LXC-F-IC',
-      sku: 'LXC-F-IC',
-      categoryId: 'LXC-F',
+      id: 'LXM-CR-F-IC',
+      sku: 'LXM-CR-F-IC',
+      categoryId: 'LXM-CR-F',
       title: 'Lux Founder Card, Iridescent Chrome',
       titleAsOption: 'Iridescent Chrome',
       price: 5000,

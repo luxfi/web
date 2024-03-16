@@ -1,9 +1,5 @@
 'use client'
-import React, { 
-  useState, 
-  Suspense,
-  type PropsWithChildren
-} from 'react'
+import React, { useState, Suspense } from 'react'
 import { observer } from 'mobx-react-lite'
 
 import { Skeleton } from '@hanzo/ui/primitives'
@@ -61,7 +57,6 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
             // using neg margin to compensate for fw putting extra rt padding on shopping cart button
           className={facets1Clx} 
           isMobile={mobile}
-          //c={[facets1Clx, facets2Clx]}
           mutator={getFacetValuesMutator(1, cmmc)} 
           facetValues={siteDef.ext.commerce.rootFacet.sub!}
         />

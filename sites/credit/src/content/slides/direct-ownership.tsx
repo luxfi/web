@@ -40,7 +40,7 @@ export default {
       specifiers: 'left mobile-2-columns',
       elements: [
         { title: "Compare", href: "/compare", variant: 'outline' },
-        { title: "Buy", href: "/buy?sku=LXC-F-CC&add=true", variant: 'primary' },
+        { title: "Buy", href: "/buy?sku=LXM-CR-F-CC&add=true", variant: 'primary' },
       ]
     } satisfies CTABlock as Block,
   ], [ 

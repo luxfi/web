@@ -8,7 +8,7 @@ import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
 import type { Category, ObsLineItemRef } from '@hanzo/commerce/types'
-import { AddToCartWidget, ProductSelectionRadioGroup } from '@hanzo/commerce/components'
+import { AddToCartWidget, CategoryItemRadioSelector } from '@hanzo/commerce'
 import type { CardCategory } from '@/types'
 
 
@@ -103,10 +103,10 @@ const CardDetailComponent: React.FC<{
         className={imageClx} 
       />
 
-        <ProductSelectionRadioGroup 
-          products={cc.products}
-          selectedSku={lineItemRef.item?.sku ?? undefined}  
-          onValueChange={handleItemSelected}
+        <CategoryItemRadioSelector 
+          category={cc}
+          selectedItemRef={lineItemRef}  
+          selectSku={handleItemSelected}
           groupClx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
           itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
           showPrice={false}

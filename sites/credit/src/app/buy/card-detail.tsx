@@ -7,8 +7,8 @@ import { ApplyTypography, LinkElement, Skeleton, type ButtonSizes } from '@hanzo
 import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
-import type { Category, ObsLineItemRef } from '@hanzo/commerce/types'
-import { AddToCartWidget, ProductSelectionRadioGroup } from '@hanzo/commerce/components'
+import type { Category, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
+import { AddToCartWidget, CategoryItemRadioSelector, formatPrice } from '@hanzo/commerce'
 import type { CardCategory } from '@/types'
 
 
@@ -92,6 +92,12 @@ const CardDetailComponent: React.FC<{
     )
   )
 
+  const SoleChoice: React.FC<{item: LineItem}> = ({
+    item
+  }) => (
+    <p className='text-center'><span>{item.titleAsOption}</span><br/><span>{formatPrice(item.price)}</span></p>
+  )
+
   const ImageArea: React.FC<{ 
     imageClx?:  string
     outerClx?: string
@@ -125,22 +131,26 @@ const CardDetailComponent: React.FC<{
           />
         </div>
         {buttons && (
-          <div className={'xs:w-pr-55 sm:w-pr-40 lg:w-auto flex flex-col mt-3 ' +
-            (cc.products.length === 1 ? 'self-start sm:self-center items-end mt-5 mr-1' : 'self-center items-center')}
-          >
-            <ProductSelectionRadioGroup 
-              products={cc.products}
-              selectedSku={lineItemRef.item?.sku ?? undefined}  
-              onValueChange={handleItemSelected}
-              groupClx='grid xs:grid-cols-1 lg:grid-cols-2 gap-0 gap-y-3 gap-x-8 mb-4'
-              itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
-              showPrice={false}
-            />      
-            {lineItemRef.item && (
-              <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'min-w-pr-65 mt-0' }/>)
-            }
-          </div>
-        )}
+        <div className={'xs:w-pr-55 sm:w-pr-40 lg:w-auto flex flex-col mt-3 ' +
+          (cc.products.length === 1 ? 'self-start sm:self-center items-end mt-5 mr-1' : 'self-center items-center')}
+        >
+        {(cc.products.length === 1) ? (
+          <SoleChoice item={cc.products[0] as LineItem} />
+        ) : (
+          <CategoryItemRadioSelector 
+            category={cc}
+            selectedItemRef={lineItemRef}  
+            selectSku={handleItemSelected}
+            groupClx='grid xs:grid-cols-1 lg:grid-cols-2 gap-0 gap-y-3 gap-x-8 mb-4'
+            itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
+            showPrice={false}
+          /> 
+        )}     
+        {lineItemRef.item && (
+          <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'min-w-pr-65 mt-0 self-center' }/>)
+        }
+        </div>
+      )}
       </div>
     )
   )

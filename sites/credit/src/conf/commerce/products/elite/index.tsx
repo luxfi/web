@@ -5,7 +5,7 @@ import MDX_Content from './detail.mdx'
 
 export default {
   type : 'elite',
-  id: 'LXC-E',
+  id: 'LXM-CR-E',
   material: '24k Gold or Sterling Silver',
   title: 'Lux Elite Card',
   img: '/assets/img/cards-dual-gd-sl-1485x1114.png',
@@ -17,18 +17,18 @@ export default {
   detail: <MDX_Content />,
   products: [
     {
-      id: 'LXC-E-24G',
-      sku: 'LXC-E-24G',
-      categoryId: 'LXC-E',
+      id: 'LXM-CR-E-24G',
+      sku: 'LXM-CR-E-24G',
+      categoryId: 'LXM-CR-E',
       title: 'Lux Elite Card, 24k Gold',
       titleAsOption: '24k Gold',
       price: 500,
       img: '/assets/img/cards-flat/gold-f-700x442.png',
     } satisfies Product,
     {
-      id: 'LXC-E-SS',
-      sku: 'LXC-E-SS',
-      categoryId: 'LXC-E',
+      id: 'LXM-CR-E-SS',
+      sku: 'LXM-CR-E-SS',
+      categoryId: 'LXM-CR-E',
       title: 'Lux Elite Card, Sterling Silver',
       titleAsOption: 'Sterling Silver',
       price: 500,

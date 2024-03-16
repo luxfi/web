@@ -11,10 +11,9 @@
     "clean:all": "pnpm clean:nm && pnpm clean:nxt && rm pnpm-lock.yaml"
   },
   "dependencies": {
-    "@hanzo/auth": "2.0.0",
-    "@hanzo/commerce": "2.0.0",
-    "@hanzo/ui": "3.0.0",
-    "@luxdefi/common": "2.0.0",
+    "@hanzo/auth": "2.0.2",
+    "@hanzo/commerce": "3.0.0",
+    "@hanzo/ui": "3.0.2",
     "@next/mdx": "^14.1.0",
     "firebase": "10.8.0",
     "lucide-react": "0.344.0",
@@ -33,10 +32,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "18.2.64",
-      "@hanzo/ui": "file:../../hanzoai/react-sdk/packages/ui",
-      "@hanzo/auth": "file:../../hanzoai/react-sdk/packages/auth",
-      "@hanzo/commerce": "file:../../hanzoai/react-sdk/packages/commerce"
+      "@types/react": "18.2.64"
    }
   }
 }

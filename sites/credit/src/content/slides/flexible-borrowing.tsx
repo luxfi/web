@@ -41,7 +41,7 @@ export default {blockType: 'screenful',
         specifiers: 'left mobile-2-columns',
         elements: [
           { title: "Compare", href: "/compare", variant: 'outline' },
-          { title: "Buy", href: "/buy?sku=LXC-S-RT&add=true", variant: 'primary' },
+          { title: "Buy", href: "/buy?sku=LXM-CR-S-RT&add=true", variant: 'primary' },
         ]
       } satisfies CTABlock as Block,
     ] 
