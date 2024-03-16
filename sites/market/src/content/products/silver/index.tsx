@@ -2,19 +2,16 @@ import type { LinkDef } from '@hanzo/ui/types'
 import type * as C from '@hanzo/ui/blocks'
 import { MiniChart } from '@luxdefi/common'
 
-import { SelectCategoryItemCard } from '@hanzo/commerce'
+import { BuyItemButton } from '@hanzo/commerce'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import { formatPrice, bullionPrice1oz } from '@/util'
-
-import BuyItemButton from '@/components/buy-item-button'
 
 import YahooFinanceCard from './yahoo-finance-card.mdx'
 import SilverStockInvestorCard from './silver-stock-investor-card.mdx'
 
 import video from './video'
 import accordian from './accordian'
-
 
 export default {
   blockType: 'product-detail',
@@ -26,7 +23,7 @@ export default {
     priceCard: {blockType: 'card',
       title: 'Lux Silver Price  / Oz', 
       content: <div className='h-full flex flex-col justify-center gap-8'>
-        <h4 className='text-center font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
+        <h4 className='text-center  font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
         <BuyItemButton skuPath='LXM-AG' popupClx='w-[320px]'>Buy</BuyItemButton>
       </div>,
     } satisfies C.CardBlock,
