@@ -18,8 +18,9 @@ const BagButton: React.FC<{
 
   const c = useCommerce()
 
-  if (hideIfEmpty && c.cartEmpty) {
-    return <div />
+    // undefined means context is not installed, ie commerce functions are not in use
+  if (!c || (hideIfEmpty && c.cartEmpty)) {
+    return <div /> // trigger code needs non-null 
   }
 
   return (
