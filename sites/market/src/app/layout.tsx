@@ -6,7 +6,7 @@ import {
   ChatWidget
 } from '@luxdefi/common'
 
-import { Toaster } from '@hanzo/ui/primitives'
+import { Toaster, BreakpointIndicator } from '@hanzo/ui/primitives'
 
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
@@ -42,6 +42,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
             chatbotUrl='https://lux.chat/iframe'
           />
           <Toaster />
+          <BreakpointIndicator />
         </RootLayoutCommon>
       </CommerceServiceProvider>
     </AuthServiceProvider>

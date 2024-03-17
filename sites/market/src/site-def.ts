@@ -7,7 +7,6 @@ export default {
   currentAs: 'https://lux.market',
   nav: {
     common: mainNav,
-    auth: true,
   },
   footer: footer.standard, 
   ext: {

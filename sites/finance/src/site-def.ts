@@ -4,7 +4,6 @@ export default {
   currentAs: 'https://lux.finance',
   nav: {
     common: mainNav,
-    auth: true,
   },
   footer: footer.standard 
 } satisfies SiteDef

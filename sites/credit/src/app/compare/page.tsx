@@ -2,7 +2,7 @@
 
 import React  from 'react'
 
-import { TailwindIndicator, Main, } from '@hanzo/ui/primitives'
+import { Main, } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
 import { ChatWidget } from '@luxdefi/common'
@@ -39,7 +39,6 @@ const Page = ({ searchParams }: Props ) => {
       subtitle='AI'
       chatbotUrl='https://lux.chat/iframe'
     />
-    <TailwindIndicator />
   </Main>)
 }
 
