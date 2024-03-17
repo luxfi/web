@@ -23,7 +23,7 @@ export default {
     priceCard: {blockType: 'card',
       title: 'Lux Silver Price  / Oz', 
       content: <div className='h-full flex flex-col justify-center gap-8'>
-        <h4 className='text-center  font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
+        <h4 className='text-center font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
         <BuyItemButton skuPath='LXM-AG' popupClx='w-[340px]'>Buy</BuyItemButton>
       </div>,
     } satisfies C.CardBlock,

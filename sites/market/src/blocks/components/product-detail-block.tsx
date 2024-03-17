@@ -34,21 +34,17 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
 
   const TitleArea: React.FC<{className?: string}> = ({
     className=''
-  }) => {
-
-    return (
-        <ApplyTypography className={cn('typography-headings:text-left', className)}>
-          <h1 className='text-left'>{p.title}</h1>
-          {p.desc && (typeof p.desc === 'string') ? (
-              <h6>{p.desc}</h6>
-            ) : (
-              p.desc
-            )
-          }
-        </ApplyTypography>
-    )
-  }
-
+  }) => (
+    <ApplyTypography className={cn('typography-headings:text-left', className)}>
+      <h1 className='text-left'>{p.title}</h1>
+      {p.desc && (typeof p.desc === 'string') ? (
+          <h6>{p.desc}</h6>
+        ) : (
+          p.desc
+        )
+      }
+    </ApplyTypography>
+  )
 
   return (<>
     {mobile ? (<></>) : (

@@ -16,7 +16,7 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@hanzo/auth": "2.0.2",
+    "@hanzo/auth": "2.0.3",
     "@hanzo/commerce": "3.0.1",
     "@hanzo/ui": "3.0.3",
     "@luxdefi/common": "2.2.0",
