@@ -32,7 +32,9 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "18.2.64"
+      "@types/react": "18.2.64",
+      "@hanzo/auth": "C:/Work/ACorp/lux/react-sdk/packages/auth",
+      "@hanzo/commerce": "C:/Work/ACorp/lux/react-sdk/packages/commerce"
    }
   }
 }
