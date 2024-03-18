@@ -1,7 +1,7 @@
 import type {
   EnhHeadingBlock,
   GridBlock,
-  ScreenfulBlock, 
+  ScreenfulBlock,
 } from '@hanzo/ui/blocks'
 
 import { COMMON_GRID_2_COL } from '@hanzo/ui/types'
@@ -24,4 +24,5 @@ export default {
       cells,
     } as GridBlock,
   ]],
+  anchorId: 'run-the-network',
 } as ScreenfulBlock
