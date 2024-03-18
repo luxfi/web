@@ -57,7 +57,8 @@ export default [
           {title: 'Buy',
             href: 'https://lux.market/buy?sku=LXM-VL-GN',
             variant: 'primary',
-          } as LinkDef
+            newTab: false
+          }
         ]
       }
     ]
