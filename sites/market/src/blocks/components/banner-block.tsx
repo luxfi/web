@@ -32,7 +32,11 @@ const BannerBlockComponent: React.FC<{
   const CTAs: React.FC<{className?: string}> = ({
     className=''
   }) => ((banner.skuPath || banner.learnLink) ? (
-    <div className={cn('flex flex-row justify-center items-center gap-4 sm:gap-6', className)}>
+    <div className={cn(
+      (banner.skuPath && banner.learnLink) ? 'grid grid-cols-2 gap-2' : 'flex flex-row',
+      'sm:flex sm:flex-row justify-center items-center sm:gap-4 lg:gap-6', 
+      className
+    )}>
     {banner.learnLink && (
       <LinkElement 
         def={{
