@@ -58,7 +58,7 @@ export default {
       elements: [
         {
           title: "Run the Chain",
-          href: "https://lux.build",
+          href: "https://lux.network/#run-the-network",
           newTab: false,
           variant: 'primary',
         },
@@ -76,7 +76,7 @@ export default {
       elements: [
         {
           title: "Learn More",
-          href: "https://github.com/luxdefi",
+          href: "https://docs.lux.network",
           variant: 'outline',
         },
         {
