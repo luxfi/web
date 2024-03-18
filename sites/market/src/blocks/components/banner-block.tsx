@@ -1,8 +1,11 @@
-
 import React  from 'react'
 
 import type { Dimensions, TShirtSize } from '@hanzo/ui/types'
-import  { type Block, VideoBlockComponent, CTABlockComponent } from '@hanzo/ui/blocks'
+import { cn } from '@hanzo/ui/util'
+import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
+import { type Block, VideoBlockComponent, CTABlockComponent } from '@hanzo/ui/blocks'
+import { BuyItemButton } from '@hanzo/commerce'
+
 import type BannerBlock from '@/blocks/def/banner-block'
 
 type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'
@@ -13,12 +16,10 @@ const BannerBlockComponent: React.FC<{
   videoConstraint?: Dimensions
   grouping?: BannerGrouping
   groupingClasses?: string[] // count should match number of siblings in the chosen grouping
-  ctaItemClassName?: string
 }> = ({
   block,
   grouping = 'titleAndMedia-cta',
   groupingClasses=[],
-  ctaItemClassName='',
   videoSize='md',
   videoConstraint
 }) => {
@@ -27,6 +28,42 @@ const BannerBlockComponent: React.FC<{
     return <>banner block required</>
   }
   const banner = block as BannerBlock
+
+  const CTAs: React.FC<{className?: string}> = ({
+    className=''
+  }) => ((banner.skuPath || banner.learnLink) ? (
+    <div className={cn(
+      (banner.skuPath && banner.learnLink) ? 'grid grid-cols-2 gap-2' : 'flex flex-row',
+      'sm:flex sm:flex-row justify-center items-center sm:gap-4 lg:gap-6', 
+      className
+    )}>
+    {banner.learnLink && (
+      <LinkElement 
+        def={{
+          href: banner.learnLink.href,
+          title: banner.learnLink.title ? banner.learnLink.title : 'Learn More'
+        }} 
+        className={cn(
+          buttonVariants({ 
+            variant: banner.skuPath ? 'outline' : 'primary', 
+            size: 'default', 
+            rounded: 'md' }),
+          'lg:min-w-[220px]  sm:min-w-[220px]'
+        )}
+      />
+    )}
+    {banner.skuPath && (
+      <BuyItemButton 
+        skuPath={banner.skuPath} 
+        popupClx='w-[340px]' 
+        size='default'
+        className='lg:min-w-[220px] sm:min-w-[220px]'
+      >
+        Buy
+      </BuyItemButton>
+    )}
+    </div>
+  ) : null)
 
   if (grouping === 'title-media-cta') {
     const titleClasses = (groupingClasses && groupingClasses[0]) ? groupingClasses[0] : ''
@@ -38,17 +75,11 @@ const BannerBlockComponent: React.FC<{
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
       <div className={'self-center flex flex-col justify-center items-center text-center ' + mediaClasses}>
-        {banner.contentBefore && banner.contentBefore}
         {banner.video && (
           <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
         )}
-        {banner.contentAfter && banner.contentAfter }
       </div>
-      {banner.cta && (
-        <div className={'flex flex-row items-stretch gap-2 sm:gap-6 sm:justify-center ' + ctaClasses}>
-          <CTABlockComponent block={banner.cta} className={ctaItemClassName} itemSize='lg'/>
-        </div>
-      )}
+      <CTAs className={ctaClasses}/>
     </>)
   }
   else if (grouping === 'titleAndMedia-cta') {
@@ -58,17 +89,11 @@ const BannerBlockComponent: React.FC<{
       <div className={'self-center flex flex-col justify-start items-center text-center ' + titleAndMediaClasses} >
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
-        {banner.contentBefore && banner.contentBefore}
         {banner.video && (
           <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
         )}
-        {banner.contentAfter && banner.contentAfter }
       </div>
-      {banner.cta && (
-        <div className={'flex flex-row items-stretch gap-2 sm:gap-6 justify-center ' + ctaClasses}>
-          <CTABlockComponent block={banner.cta} className={ctaItemClassName} itemSize='lg'  />
-        </div>
-      )}
+      <CTAs className={ctaClasses}/>
     </>)
   }
 
@@ -82,16 +107,10 @@ const BannerBlockComponent: React.FC<{
   return (<>
     <h1 className={'text-center ' + titleClasses}>{banner.title}</h1>
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
-    {banner.contentBefore && (<div className={'text-center ' + contentBeforeClasses}>banner.contentBefore</div>)}
     {banner.video && (
       <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
     )}
-    {banner.contentAfter && (<div className={'text-center ' + contentAfterClasses}>banner.contentAfter</div>)}
-    {banner.cta && (
-      <div className={'flex flex-col gap-4 items-stretch sm:flex-row sm:gap-6 sm:justify-center ' + ctaClasses}>
-        <CTABlockComponent block={banner.cta} className={ctaItemClassName} itemSize='lg' />
-      </div>
-    )}
+    <CTAs className={ctaClasses}/>
   </>)
 }
 

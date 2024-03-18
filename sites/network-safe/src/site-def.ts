@@ -4,7 +4,6 @@ export default {
   currentAs: 'https://safe.lux.network',
   nav: {
     common: mainNav,
-    auth: true, 
   },
   footer: footer.standard, 
 } satisfies SiteDef

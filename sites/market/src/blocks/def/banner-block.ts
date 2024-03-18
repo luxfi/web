@@ -1,15 +1,16 @@
 import React from 'react'
 
 import type { Block, CTABlock, VideoBlock } from '@hanzo/ui/blocks'
+import type { LinkDef } from '@hanzo/ui/types'
 
 interface BannerBlock extends Block {
   blockType: 'banner'
   title: string
-  byline?: string
-  contentBefore?: React.ReactNode
+  byline?: React.ReactNode
   video?: VideoBlock
-  contentAfter?: React.ReactNode
-  cta?: CTABlock
+  learnLink?: LinkDef
+  skuPath?: string
+  ext?: any
 }
 
 export {

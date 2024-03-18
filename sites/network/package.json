@@ -16,9 +16,10 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@hanzo/auth": "2.0.0",
-    "@hanzo/ui": "3.0.0",
-    "@luxdefi/common": "2.0.0",
+    "@hanzo/auth": "2.0.4",
+    "@hanzo/commerce": "4.0.0",
+    "@hanzo/ui": "3.0.4",
+    "@luxdefi/common": "3.0.0",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "mobx": "^6.12.0",

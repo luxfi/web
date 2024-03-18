@@ -11,9 +11,9 @@
     "clean:all": "pnpm clean:nm && pnpm clean:nxt && rm pnpm-lock.yaml"
   },
   "dependencies": {
-    "@hanzo/auth": "2.0.2",
-    "@hanzo/commerce": "3.0.0",
-    "@hanzo/ui": "3.0.2",
+    "@hanzo/auth": "2.0.4",
+    "@hanzo/commerce": "4.0.0",
+    "@hanzo/ui": "3.0.4",
     "@next/mdx": "^14.1.0",
     "firebase": "10.8.0",
     "lucide-react": "0.344.0",

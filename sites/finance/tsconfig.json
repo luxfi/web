@@ -7,6 +7,7 @@
     "src/**/*.tsx",
     "node_modules/@hanzo/ui",
     "node_modules/@hanzo/auth",
+    "node_modules/@hanzo/commerce",
     "node_modules/@luxdefi/common"
   ],
   "exclude": [ "node_modules" ],
@@ -19,6 +20,7 @@
       "react": ["node_modules/@types/react"],
       "@hanzo/ui": ["node_modules/@hanzo/ui"],
       "@hanzo/auth": ["node_modules/@hanzo/auth"],
+      "@hanzo/commerce": ["node_modules/@hanzo/commerce"],
       "@luxdefi/common": ["node_modules/@luxdefi/common"]
     },
     "plugins": [ { "name": "next" } ]

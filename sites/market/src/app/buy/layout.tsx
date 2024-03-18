@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Footer } from '@luxdefi/common'
-import { Main, TailwindIndicator } from '@hanzo/ui/primitives'
+import { Main } from '@hanzo/ui/primitives'
 
 import siteDef from '@/site-def'
 
@@ -28,7 +28,6 @@ const BuyPage = ({ children }: LayoutProps) => {
       {children}
     </Main>
     <Footer siteDef={siteDef} className='max-w-screen-2xl w-full pt-16 lg:mx-auto ' />
-    <TailwindIndicator />
   </>)
 }
 

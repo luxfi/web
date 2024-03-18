@@ -5,6 +5,8 @@ import SVG_CastBar from './img/bar.svg'
 import SVG_Coin from './img/coin2.svg'
 import SVG_MintedBar from './img/minted-bar.svg'
 
+import credit from './credit'
+
 const BULLION_FORM = [
   {
     value: 'B',
@@ -54,7 +56,8 @@ const level1 = [
     label: 'Pass',
     img: '/assets/img/cmmc/pass-icon-539x686.png',
     imgAR: 539 / 686
-  }
+  },
+  credit
 ] satisfies FacetValueDesc[]
 
 export default {

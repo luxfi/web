@@ -1,6 +1,5 @@
 import React  from 'react'
 
-import { TailwindIndicator } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
 import { tiles}  from '@/content'
@@ -26,7 +25,6 @@ const Page = ({ searchParams }: Props ) => {
       />
     ))}
     <FooterSlide agent={agent} />
-    <TailwindIndicator />
   </>)
 }
 

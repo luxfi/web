@@ -48,9 +48,6 @@ const BuyPage: React.FC<Props> = ({ searchParams }) => {
   const FacetsArea: React.FC<PropsWithChildren & {className?: string}> = ({
     className=''
   }) => {
-    const widgetClx = 'bg-background pt-3 flex flex-row justify-between w-full items-center md:justify-start ' + 
-      'sm:gap-x-4 xs:gap-x-2 ' + (mobile ? 'h-17 relative pb-3' : 'h-19')  
-
     const facets1Clx = 'grid grid-cols-4 w-full gap-0 h-full ' + (mobile ? 'border rounded-lg' : '')  
 
     return !loading ? (
