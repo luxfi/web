@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { ContentComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { Footer } from '@luxdefi/common'
 
@@ -48,7 +49,7 @@ const Desktop: React.FC = () => (<>
 ))}
   <div key='last' className={swipeOuter + 'swipe flex flex-col justify-start items-stretch'} >
     <ApplyTypography asTag='section' className={swipeInnerDesk + 'grow w-full border-b flex flex-col items-center justify-start self-stretch lg:gap-10'} >
-      {landing.bottom.element}
+      <ContentComponent blocks={landing.bottom}/>
     </ApplyTypography>
     <Footer siteDef={siteDef} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
   </div>
@@ -86,7 +87,7 @@ const TouchDevice: React.FC<{
       asTag='section' 
       className={swipeInnerTouch + 'pb-[180px] mx-auto px-2 flex flex-col gap-10 justify-center items-center'}  
     >
-      {landing.bottom.element}
+      <ContentComponent blocks={landing.bottom}/>
     </ApplyTypography>
   </div>
   <div key='lastest' className={swipeOuter}>

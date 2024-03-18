@@ -22,9 +22,9 @@ export default {
   price: {
     priceCard: {blockType: 'card',
       title: 'Lux Silver Price  / Oz', 
-      content: <div className='h-full flex flex-col justify-center gap-8'>
-        <h4 className='text-center  font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
-        <BuyItemButton skuPath='LXM-AG' popupClx='w-[340px]'>Buy</BuyItemButton>
+      content: <div className='h-full w-full flex flex-col justify-center items-center gap-8'>
+        <h4 className='text-center font-bold text-3xl'>{formatPrice(bullionPrice1oz('ag'))}</h4>
+        <BuyItemButton skuPath='LXM-AG' popupClx='w-[340px]' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyItemButton>
       </div>,
     } satisfies C.CardBlock,
     msCard: {blockType: 'card',

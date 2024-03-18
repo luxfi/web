@@ -22,6 +22,7 @@ const nextConfig = {
   transpilePackages: [
     '@hanzo/ui', 
     '@hanzo/auth', 
+    '@hanzo/commerce', 
     '@luxdefi/common'
   ],
   productionBrowserSourceMaps: true,
