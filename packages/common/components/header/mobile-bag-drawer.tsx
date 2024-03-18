@@ -1,8 +1,8 @@
 'use client'
-import React, { type ReactNode } from 'react'
+import React, { useState, type ReactNode } from 'react'
 
 import { X as LucideX} from 'lucide-react'
-import { Sheet, SheetContent, SheetTrigger } from '@hanzo/ui/primitives'
+import { Button } from '@hanzo/ui/primitives'
 
 import { cn } from '@hanzo/ui/util'
 import { CartPanel } from '@hanzo/commerce'
@@ -16,18 +16,23 @@ const MobileBagDrawer: React.FC<{
   trigger,
   className='',
 }) => {
+  const [open, setOpen] = useState<boolean>(false)
 
   return (
-    <Sheet  >
-      <SheetTrigger>
+    <>
+      <div onClick={() => setOpen(true)}>
         {trigger}
-      </SheetTrigger>
-      <SheetContent 
-        className={cn('min-h-[90vh] rounded-tl-xl rounded-tr-xl border-2', className)}
-        side="bottom" 
-        closeButtonClass='text-muted opacity-90' 
-        closeElement={<LucideX className='h-8 w-8 text-inherit'/>}
-      >
+      </div>
+      {open && 
+        <div
+          className='bg-background absolute top-0 left-0 w-screen h-screen overflow-hidden z-40' 
+          onClick={() => setOpen(false)}
+        />
+      }
+      <div className={cn('absolute z-50 p-3 overflow-hidden h-[calc(100vh-80px)] rounded-tl-xl rounded-tr-xl bg-background min-w-screen transition-all duration-300 ease-in-out left-0 border w-full', open ? 'top-20' : 'top-[100vh]')}>
+        <Button variant='ghost' onClick={() => setOpen(false)} className='absolute right-2 top-3'>
+          <LucideX className='h-8 w-8 text-inherit'/>
+        </Button>
         <CartPanel className='mt-4 border-none py-0 px-4'>
           <div className='flex items-center justify-center'>
             <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
@@ -35,8 +40,8 @@ const MobileBagDrawer: React.FC<{
           </div>
           <div className='h-[1px] w-full mb-4 mt-3 bg-muted-3'/>
         </CartPanel>
-      </SheetContent>
-    </Sheet>
+      </div>
+    </>
   )
 }
 
