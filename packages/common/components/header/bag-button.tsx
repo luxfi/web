@@ -24,7 +24,6 @@ const BagButton: React.FC<{
   }
 
   return (
-    // has to be a div masquerading as a button (asChild doesn't seem to work in shadcn)
     <div
       aria-label="Bag"
       role='button'
