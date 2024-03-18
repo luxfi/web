@@ -61,7 +61,7 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
               <h3>{p.price.heading}</h3>
             </ApplyTypography>
           )}
-          <div className='flex flex-col justify-start items-stretch self-stretch w-full lg:self-center lg:grid lg:grid-cols-2 gap-4 '>
+          <div className='flex flex-col justify-start items-stretch self-stretch w-full sm:self-center sm:grid sm:grid-cols-2 gap-4 '>
             <CardComponent block={p.price.priceCard} agent={agent} />
             <CardComponent block={p.price.msCard} agent={agent} />
           </div>

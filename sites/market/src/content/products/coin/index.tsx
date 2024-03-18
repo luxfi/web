@@ -3,7 +3,6 @@ import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
 import video from './video'
 import accordian from './accordian'
-import buyLink from './buy-link'
 import Link from 'next/link'
 
 export default {
@@ -11,21 +10,15 @@ export default {
   title: 'LUX COIN',
   desc: <p>One-time opportunity to get LUX Coin, the deflationary and supply-locked <Link href="http://lux.network">Lux Network</Link> currency at pre-launch prices.</p>,
   video: {...video, sizing: { vh: 70}},
-
   accordian,
   blocks: [
-    {
-      blockType: 'cta',
-      elements: [ 
-        {
+    {blockType: 'cta',
+      elements: [{
           href: 'https://docs.lux.network',
           title: 'Read More',
-          external: true,
           newTab: false,
           variant: 'outline'
-        },
-        buyLink
-      ]
-    } as C.CTABlock
+      }]
+    } satisfies C.CTABlock as C.Block,
   ]
 } as ProductDetailBlock

@@ -2,6 +2,7 @@ import type * as C from '@hanzo/ui/blocks'
 
 import { MiniChart } from '@luxdefi/common'
 import { markdown } from '@hanzo/ui/util'
+import { BuyItemButton } from '@hanzo/commerce'
 
 import { formatPrice, bullionPrice1oz } from '@/util'
 
@@ -16,31 +17,22 @@ export default {
   video: {...video, sizing: { vh: 80 }},
   accordian,
   price: {
-    heading: 'Price',
-    priceCard: {
-      blockType: 'card',
-      title: 'Lux Gold Price / Oz',
-      content: <h4>{formatPrice(bullionPrice1oz('au'), true)}</h4>,
-      cta: {
-        blockType: 'cta',
-        elements: [
-          {
-            title: "Buy Now",
-            href: "/buy?sku=LXM-AU-B-1-OZ&add=true",
-            size: 'default',
-            variant: 'primary',
-          },
-        ]
-      } as C.CTABlock, 
-    },
-    msCard: {
-      blockType: 'card',
+    priceCard: {blockType: 'card',
+      title: 'Lux Gold Price  / Oz', 
+      content: <div className='h-full w-full flex flex-col justify-center items-center gap-8'>
+        <h4 className='text-center font-bold text-3xl'>{formatPrice(bullionPrice1oz('au'))}</h4>
+        <BuyItemButton skuPath='LXM-AU' popupClx='w-[340px]' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyItemButton>
+      </div>,
+    } satisfies C.CardBlock,
+    msCard: {blockType: 'card',
       specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
       content: <MiniChart symbol='GOLD' />
-    }
+    } satisfies C.CardBlock,
   },
+
   blocks: [
+    /*
     {
       blockType: 'heading',
       heading: 'Editions'
@@ -74,6 +66,7 @@ Spot price:: ~$2050 / oz
         }
       ]
     } as C.CTABlock,
+    */
   ] as C.Block[]
 } as ProductDetailBlock
 

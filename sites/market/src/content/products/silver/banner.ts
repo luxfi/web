@@ -1,4 +1,4 @@
-import type { CTABlock } from '@hanzo/ui/blocks'
+import type BannerBlock from '@/blocks/def/banner-block'
 import video from './video'
 
 export default {
@@ -6,20 +6,6 @@ export default {
   title: 'LUX SILVER',
   byline: 'The Silver Rush is Here.',
   video: {...video, sizing: { vh: 50}},
-  cta: {
-    blockType: 'cta',
-    specifiers: 'mobile-2-columns',
-    elements: [
-      {
-        title: "Learn More",
-        href: "/silver",
-        variant: 'outline'
-      },
-      {
-        title: "Buy Now",
-        href: "/buy?sku=LXM-AG-B-1-OZ&add=true",
-        variant: 'primary'
-      },
-    ]
-  } as CTABlock
-}
+  learnLink: { href: "/silver" },
+  skuPath: 'LXM-AG'
+} satisfies BannerBlock
