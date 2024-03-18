@@ -17,6 +17,7 @@ import wagmi from './slides/wagmi'
 
 export default [
   power,
+  runTheNetwork,
   keyFeatures,
   developerReady,
   nearInfiniteScale,
@@ -27,7 +28,6 @@ export default [
   distributedPower,
   allInOnePlace,
   buildOnLux,
-  runTheNetwork,
   discoverMoreProducts,
   wagmi
 ] as ScreenfulBlock[];
