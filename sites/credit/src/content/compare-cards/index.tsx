@@ -5,10 +5,9 @@ import { SovereignKarmaRewards, SovereignLifestyleBenefits, SovereignRewards, So
 
 type Card = {
   img: string,
-  url: string,
   title: string,
   rarity?: string,
-  materials: { title: string, img: string }[],
+  materials: { title: string, img: string, url: string }[],
   annualFee: number,
   initiationFee: number,
   replacementFee: number,
@@ -23,11 +22,11 @@ type Card = {
 
 const black: Card = {
   img: '/assets/img/cards-flat/black-f-700x441.png',
-  url: '/buy?sku=LXM-CR-B-ABT',
   title: 'Lux Black Card',
   materials: [{
     title: 'Anodized Black Titanium',
-    img: '/assets/img/materials/black-card-anodized-black-titanium-100x99.png'
+    img: '/assets/img/materials/black-card-anodized-black-titanium-100x99.png',
+    url: '/buy?sku=LXM-CR-B-ABT'
   }],
   annualFee: 69,
   initiationFee: 999,
@@ -43,17 +42,18 @@ const black: Card = {
 
 const founder: Card = {
   img: '/assets/img/cards-flat/chrome-cool-f-700x441.png',
-  url: '/buy?sku=LXM-CR-F-CC',
   title: 'Lux Founder Card',
   rarity: '1/100,000',
   materials: [
     {
       title: 'Cool Chrome',
-      img: '/assets/img/materials/founder-card-cool-chrome-99x99.png'
+      img: '/assets/img/materials/founder-card-cool-chrome-99x99.png',
+      url: '/buy?sku=LXM-CR-F-CC'
     },
     {
       title: 'Iridescent Chrome',
-      img: '/assets/img/materials/founder-card-iridescent-chrome-99x99.png'
+      img: '/assets/img/materials/founder-card-iridescent-chrome-99x99.png',
+      url: '/buy?sku=LXM-CR-F-IC'
     }
   ],
   annualFee: 0,
@@ -70,17 +70,18 @@ const founder: Card = {
 
 const elite: Card = {
   img: '/assets/img/cards-flat/gold-f-700x442.png',
-  url: '/buy?sku=LXM-CR-E-24G',
   title: 'Lux Elite Card',
   rarity: '1/10,000',
   materials: [
     {
       title: '24k Gold',
-      img: '/assets/img/materials/elite-card-gold-100x99.png'
+      img: '/assets/img/materials/elite-card-gold-100x99.png',
+      url: '/buy?sku=LXM-CR-E-24G'
     },
     {
       title: 'Sterling Silver',
-      img: '/assets/img/materials/elite-card-silver-99x99.png'
+      img: '/assets/img/materials/elite-card-silver-99x99.png',
+      url: '/buy?sku=LXM-CR-E-SS'
     }
   ],
   annualFee: 200,
@@ -97,12 +98,12 @@ const elite: Card = {
 
 const sovereign: Card = {
   img: '/assets/img/cards-flat/titanium-f-700x441.png',
-  url: '/buy?sku=LXM-CR-S-RT',
   title: 'Lux Sovereign Card',
   rarity: '1/10,000',
   materials: [{
     title: 'Reflective Titanium',
-    img: '/assets/img/materials/sovereign-card-reflective-titanium-100x99.png'
+    img: '/assets/img/materials/sovereign-card-reflective-titanium-100x99.png',
+    url: '/buy?sku=LXM-CR-S-RT'
   }],
   annualFee: 14999,
   initiationFee: 49050,

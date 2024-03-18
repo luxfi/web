@@ -1,10 +1,10 @@
 'use client'
 
-import { ApplyTypography, Button, Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, Main } from '@hanzo/ui/primitives'
+import { ApplyTypography, Button, Dialog, DialogContent, DialogHeader, DialogOverlay, DialogTitle, DialogTrigger, Main } from '@hanzo/ui/primitives'
 import { useState, type PropsWithChildren, useEffect } from 'react'
 import { cards, type Card as CardInfo } from '../../content/compare-cards'
 import { Plus, X } from 'lucide-react'
-import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { ImageBlockComponent, type ImageBlock, CTABlockComponent, type CTABlock } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
 import Link from 'next/link'
 
@@ -38,7 +38,7 @@ const CardSelect: React.FC<{
           <div className='flex flex-col gap-5 text-center'>
             <Button
               variant='ghost'
-              className='flex rounded-xl border border-foreground items-center justify-center aspect-[1.6/1] w-full h-auto'
+              className='flex rounded-xl border border-foreground items-center justify-center aspect-[1.6/1] w-pr-80 mx-auto h-auto'
             >
               <div className='h-pr-40 aspect-square flex items-center justify-center rounded-full border border-foreground'>
                 <Plus className='h-pr-40 w-full aspect-square'/>
@@ -76,8 +76,8 @@ const CardSelect: React.FC<{
   }
 
   return (
-    <ApplyTypography key={key} className='flex flex-col gap-4 items-center'>
-      <div className='flex gap-2 items-center'>
+    <ApplyTypography key={key} className='flex flex-col gap-2 items-center'>
+      <div className='relative flex gap-2 items-center'>
         <ImageBlockComponent
           block={{blockType: 'image', 
               src: card.img, dim: {w: 700, h: 441 },
@@ -90,18 +90,18 @@ const CardSelect: React.FC<{
           variant='outline'
           size='icon'
           onClick={() => setSelectedCards(selectedCards.filter(c => c.title !== card.title))}
-          className='rounded-full'
+          className='absolute rounded-full -right-5'
         >
           <X/>
         </Button>
       </div>
-      <h4>{card.title}</h4>
+      <h5 className='font-nav'>{card.title}</h5>
       <div className='flex flex-col items-center'>
-        <div><span className='bold'>Annual Fee:</span> ${card.annualFee}</div>
-        <div><span className='bold'>Initiation Fee:</span> ${card.initiationFee}</div>
+        <div><span className='font-bold'>Annual Fee:</span> ${card.annualFee}</div>
+        <div><span className='font-bold'>Initiation Fee:</span> ${card.initiationFee}</div>
       </div>
       <div className='flex flex-col gap-2 items-center'>
-        <h4>Choose Your Design</h4>
+        <h5>Choose Your Design</h5>
         <div className='flex gap-4 justify-center'>
           {card.materials.map(({title, img}, i) => (
             <div
@@ -121,11 +121,17 @@ const CardSelect: React.FC<{
           ))}
         </div>
         <p className='text-xs'>{selectedMaterial?.title}</p>
-        <Button className='w-full'>Select Card</Button>
-        <Link href=''>Offer & Benefit Terms</Link>
-        <Link href=''>Rates and Fees</Link>
       </div>
-      
+      <CTABlockComponent
+        block={{blockType: 'cta',
+          specifiers: 'fill',
+          elements: [
+            {title: 'Select Card', variant: 'primary', href: selectedMaterial?.url ?? ''}
+          ]
+        } as CTABlock}
+      />
+      <Link href=''>Offer & Benefit Terms</Link>
+      <Link href=''>Rates and Fees</Link>
     </ApplyTypography>
   )
 }
@@ -183,8 +189,28 @@ const CompareCards: React.FC = () => {
       </>
     },
     {
-      title: 'Lifestyle Benefits',
-      description: 'Sustainable, mindful experiences to elevate the body, mind, and soul.',
+      title: 'What you earn?',
+      content: <>
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className='flex flex-col gap-6'>
+            {selectedCards[i] && selectedCards[i].rewards}
+          </div>
+        ))}
+      </>
+    },
+    {
+      title: 'Karma Rewards',
+      description: 'Karma Rewards, is our point reward system that can be used to pay for almost anything. You can also leverage it and earn even more by staking the Karma you have accrued in the Lux ecosystem. Plus you can even sell it to pay off your balance. ',
+      content: <>
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className='flex flex-col gap-6'>
+            {selectedCards[i] && selectedCards[i].karmaRewards}
+          </div>
+        ))}
+      </>
+    },
+    {
+      title: 'Exclusive Lux Benefits',
       content: <>
         {[...Array(3)].map((_, i) => (
           <div key={i} className='flex flex-col gap-6'>
@@ -194,24 +220,13 @@ const CompareCards: React.FC = () => {
       </>
     },
     {
-      title: 'Rewards',
-      description: 'Sustainable, mindful experiences to elevate the body, mind, and soul.',
-      content: <>
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className='flex flex-col gap-6'>
-            {selectedCards[i] && selectedCards[i].rewards}
-          </div>
-        ))}
-      </>
-    },
-    {
       title: 'Maximum Account Holders',
       description: 'Reward Based on average Deposit.',
       content: <>
         {[...Array(3)].map((_, i) => (
-          <div key={i} className='flex flex-col gap-6'>
-            {selectedCards[i] && selectedCards[i].rewards}
-          </div>
+          <ApplyTypography key={i} className='flex items-center justify-center'>
+            {selectedCards[i] && <h4>{selectedCards[i].maxAccountHolders}</h4>}
+          </ApplyTypography>
         ))}
       </>
     },
@@ -251,12 +266,12 @@ const CompareCards: React.FC = () => {
   ]
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col py-4'>
       <Main className='grid grid-cols-4 gap-16'>
-        <ApplyTypography className='flex flex-col gap-7'>
-          <h4 className='font-nav'>Compare</h4>
-          <p className='italic text-sm'>These offers may not be available if you leave this web page and return later.</p>
-        </ApplyTypography>
+        <RowHeading
+          title='Compare'
+          description='These offers may not be available if you leave this web page and return later.'
+        />
         {[...Array(3)].map((_, i) => (
           <CardSelect
             key={i}
