@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { CTABlockComponent, type CTABlock, ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { BuyItemButton } from '@hanzo/commerce'
 
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
@@ -11,7 +12,8 @@ import type { ImageDef, LinkDef } from '@hanzo/ui/types'
 type Card = {
   title: string
   byline: string
-  cta: LinkDef
+  skuPath: string
+  label?: string
   img: ImageDef
 }
 
@@ -24,7 +26,7 @@ const CardComponent: React.FC<{
   current,
   index
 }) => {
-  const {title, byline, cta, img} = card
+  const {title, byline, skuPath, label, img} = card
 
   return (
     <div className='flex flex-col gap-5 items-center'>
@@ -44,7 +46,15 @@ const CardComponent: React.FC<{
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
       </div>
-      <CTABlockComponent block={{blockType: 'cta', specifiers: 'fill', elements: [cta]} as CTABlock}/>
+      <BuyItemButton 
+        skuPath={skuPath} 
+        popupClx='w-[300px]' 
+        size='default'
+        className='lg:min-w-[180px] sm:min-w-[180px]'
+      >
+        {label ? label : 'Buy'}
+      </BuyItemButton>
+
     </div>
 )
 }

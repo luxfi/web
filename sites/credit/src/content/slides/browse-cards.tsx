@@ -27,26 +27,26 @@ export default {
           cards={[
             {
               title: 'BLACK CARD',
-              byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXM-CR-B-ABT', title: 'View Benefits', variant: 'outline'} as LinkDef,
+              byline: 'Black Titanium',
+              skuPath: 'LXM-CR-B',
               img: {src: '/assets/img/cards-flat/black-f-700x441.png', dim: {w: 700, h: 441 }, alt: 'Black card'} as ImageDef,
             },
             {
               title: 'ELITE CARD',
-              byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXM-CR-E-24G', title: 'View Benefits', variant: 'outline'} as LinkDef,
+              byline: '24k Gold or St. Silver',
+              skuPath: 'LXM-CR-E',
               img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}, alt: 'Elite card'} as ImageDef,
             },
             {
               title: 'FOUNDER CARD',
-              byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXM-CR-F-CC', title: 'View Benefits', variant: 'outline'} as LinkDef,
+              byline: 'Cool or Iridescent Chrome',
+              skuPath: 'LXM-CR-F',
               img: {src: '/assets/img/cards-flat/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Founder card'} as ImageDef,
             },
             {
               title: 'SOVEREIGN CARD',
-              byline: 'in Cool Chrome',
-              cta: {href: '/buy?sku=LXM-CR-S-RT', title: 'View Benefits', variant: 'outline'} as LinkDef,
+              byline: 'Reflective Titanium',
+              skuPath: 'LXM-CR-S',
               img: {src: '/assets/img/cards-flat/titanium-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Sovereign card'} as ImageDef,
             },
           ]}

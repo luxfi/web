@@ -1,11 +1,11 @@
 import type { 
   Block,
-  CTABlock, 
   EnhHeadingBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
+import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
 const byline = 'Unlock the full potential of Lux Credit Card with zero staking requirements and multiple card tiers.'
 
@@ -35,13 +35,11 @@ export default {
       } satisfies ElementBlock as Block,
       */
       {blockType: 'space'} satisfies SpaceBlock as Block,
-      {blockType: 'cta',
-        specifiers: 'left mobile-2-columns',
-        elements: [
-          { title: "See Tiers", href: "/compare", variant: 'outline' },
-          { title: "Buy", href: "/buy?sku=LXM-CR-B-ABT&add=true", variant: 'primary' },
-        ]
-      } satisfies CTABlock as Block,
+      {blockType: 'item-ctas',
+        otherLink: { title: "See Tiers", href: "/compare", variant: 'outline' },
+        skuPath: 'LXM-CR-B'
+      } satisfies ItemCTASBlock as Block,
+
     ], 
     [ 
     {blockType: 'image',

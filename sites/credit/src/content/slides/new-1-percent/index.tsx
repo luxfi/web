@@ -1,12 +1,12 @@
 import type { 
   Block,
-  CTABlock,
   ElementBlock, 
   EnhHeadingBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
+import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center',
@@ -20,13 +20,10 @@ export default {blockType: 'screenful',
         specifiers: 'left'
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
-      {blockType: 'cta',
-        specifiers: 'left mobile-2-columns',
-        elements: [
-          { title: "Compare", href: "/compare", variant: 'outline' },
-          { title: "Buy", href: "/buy?sku=LXM-CR-B-ABT&add=true", variant: 'primary' },
-        ]
-      } satisfies CTABlock as Block,
+      {blockType: 'item-ctas',
+        otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
+        skuPath: 'LXM-CR-B'
+      } satisfies ItemCTASBlock as Block,
     ], 
     [
         // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
