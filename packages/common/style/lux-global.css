@@ -11,3 +11,6 @@
 @import "tailwindcss/utilities";
 
 
+.loading-screen {
+  display: none;
+}
