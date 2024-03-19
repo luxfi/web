@@ -2,11 +2,11 @@ import type {
   Block,
   ElementBlock, 
   EnhHeadingBlock, 
-  ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
+import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center',
@@ -26,20 +26,9 @@ export default {blockType: 'screenful',
       } satisfies ItemCTASBlock as Block,
     ], 
     [
-        // https://nextjs.org/docs/app/api-reference/components/image#responsive-image-with-fill
-      {blockType: 'image',
-        src: '/assets/img/card_black_750x640.png',
-        alt: 'cards',
-        fullWidthOnMobile: true,
-        dim: {w: 750, h: 640},
-        props: {
-          sizes: '900px, 440px',
-          style: {
-            width: '100%',
-            height: 'auto',
-          }
-        }
-      } satisfies ImageBlock as Block ,
+      {blockType: 'element',
+        element: <SplinePlayer src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'/>
+      } satisfies ElementBlock as Block,
       {blockType: 'element',
         element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Black Card</p>
       } satisfies ElementBlock as Block
