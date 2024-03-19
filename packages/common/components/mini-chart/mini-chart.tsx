@@ -77,7 +77,7 @@ const MiniChart: React.FC<MiniChartProps> = ({
 		<div style={containerStyles} className='tradingview-widget-container h-[150px]' ref={containerRef} />
     <div className='tradingview-widget-copyright border-t w-full invisible'>
       <a href={`https://www.tradingview.com/symbols/${symbol}${exchange ? `/?exchange=${exchange}` : '' }`} rel="noopener" target="_blank">
-        <span className="text-[--hz-ui-secondary-2]">{symbol} quotes</span></a>&nbsp;by TradingView
+        <span className="text-[--hz-ui-primary]">{symbol} quotes</span></a>&nbsp;by TradingView
     </div>
   </>)
 }

@@ -45,7 +45,7 @@ const MobileHeader: React.FC<{
           )}
         </div>
         <div className='flex gap-0 '>
-          <MobileBagDrawer trigger={<BagButton className='text-secondary -mr-[3px]' />} />
+          <MobileBagDrawer trigger={<BagButton className='text-primary -mr-[3px]' />} />
           <MenuToggleButton 
             className='text-foreground' 
             open={menuOpen} 

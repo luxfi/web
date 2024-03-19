@@ -44,8 +44,8 @@ const BagButton: React.FC<{
       </div>
     )}
       <BagIcon width={26} height={30} className={
-        'relative -top-[3px] fill-secondary ' + 
-        'group-hover:fill-secondary-hover group-hover:scale-105 ' + 
+        'relative -top-[3px] fill-primary' + 
+        'group-hover:fill-primary-hover group-hover:scale-105 ' + 
         'transition-scale transition-duration-300'
       } aria-hidden="true" />
     </div>            
