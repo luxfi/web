@@ -16,10 +16,10 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@hanzo/auth": "2.2.0",
-    "@hanzo/commerce": "4.4.1",
-    "@hanzo/ui": "3.0.5",
-    "@luxdefi/common": "3.3.5",
+    "@hanzo/auth": "2.2.1",
+    "@hanzo/commerce": "4.4.2",
+    "@hanzo/ui": "3.0.6",
+    "@luxdefi/common": "3.3.6",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "ethers": "^6.11.1",
