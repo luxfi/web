@@ -229,6 +229,12 @@ importers:
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1)(@mdx-js/react@3.0.1)
+      '@splinetool/react-spline':
+        specifier: ^2.2.6
+        version: 2.2.6(@splinetool/runtime@1.0.68)(react-dom@18.2.0)(react@18.2.0)
+      '@splinetool/runtime':
+        specifier: ^1.0.68
+        version: 1.0.68
       ethers:
         specifier: ^6.11.1
         version: 6.11.1
@@ -999,8 +1005,8 @@ packages:
       '@apimatic/file-wrapper': 0.3.1
       tslib: 2.6.2
 
-  /@apimatic/core@0.10.4:
-    resolution: {integrity: sha512-bcNC+UFmEFKIJnHxT1bpF7KDmJbEen4hrlw6x+n5KHvVX/SN4wINzwgVNK4dMqaZdKL4A2MVmyMswFnozvY+/w==}
+  /@apimatic/core@0.10.5:
+    resolution: {integrity: sha512-pV5O7AkPdB2+yubQnnVy8b1BR+izr2aNkUWFh2qGfx5jRkvOQzTmfMuQtS/rBSgY718zpfCccDnkcMQ8KjrVmg==}
     engines: {node: '>=14.15.0 || >=16.0.0'}
     dependencies:
       '@apimatic/convert-to-stream': 0.0.2
@@ -1010,7 +1016,6 @@ packages:
       '@apimatic/http-query': 0.3.1
       '@apimatic/json-bigint': 1.2.0
       '@apimatic/schema': 0.7.6
-      axios: 0.21.4
       detect-browser: 5.3.0
       detect-node: 2.1.0
       form-data: 3.0.1
@@ -1018,8 +1023,6 @@ packages:
       lodash.flatmap: 4.5.0
       tiny-warning: 1.0.3
       tslib: 2.6.2
-    transitivePeerDependencies:
-      - debug
 
   /@apimatic/file-wrapper@0.3.1:
     resolution: {integrity: sha512-RUJe0fNO/b7vgH0jFjMgyRqBILNQ4kYZcZz8cxd3DODjKBT0R+jS6IU1KIDOTj2lJFdvPmIuPUOJbilKI2eAmA==}
@@ -2836,8 +2839,8 @@ packages:
   /@floating-ui/utils@0.2.1:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
 
-  /@google-cloud/firestore@7.3.1(supports-color@8.1.1):
-    resolution: {integrity: sha512-YluLZbJK3dHXq6Ns5URCtr6hjBiG+6EM17QSivjaozPYDsv1R9a9mkWPz+jCQrb6Ewz6mxp3zavu6DXxvmSWLA==}
+  /@google-cloud/firestore@7.4.0(supports-color@8.1.1):
+    resolution: {integrity: sha512-PRukAUgeBOZu/4pK9NXkAs8ur6QUpG6bBiwcnSO1qsh0FlR93gqU+VtkCx3EJM46S10jzMhHqpA0NoVbnUs5TQ==}
     engines: {node: '>=14.0.0'}
     requiresBuild: true
     dependencies:
@@ -2871,8 +2874,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@google-cloud/storage@7.8.0(supports-color@8.1.1):
-    resolution: {integrity: sha512-4q8rKdLp35z8msAtrhr0pbos7BeD8T0tr6rMbBINewp9cfrwj7ROIElVwBluU8fZ596OvwQcjb6QCyBzTmkMRQ==}
+  /@google-cloud/storage@7.9.0(supports-color@8.1.1):
+    resolution: {integrity: sha512-PlFl7g3r91NmXtZHXsSEfTZES5ysD3SSBWmX4iBdQ2TFH7tN/Vn/IhnVELCHtgh1vc+uYPZ7XvRYaqtDCdghIA==}
     engines: {node: '>=14'}
     requiresBuild: true
     dependencies:
@@ -2884,7 +2887,7 @@ packages:
       compressible: 2.0.18
       duplexify: 4.1.3
       ent: 2.2.0
-      fast-xml-parser: 4.3.5
+      fast-xml-parser: 4.3.6
       gaxios: 6.3.0(supports-color@8.1.1)
       google-auth-library: 9.7.0(supports-color@8.1.1)
       mime: 3.0.0
@@ -2898,8 +2901,8 @@ packages:
       - supports-color
     optional: true
 
-  /@grpc/grpc-js@1.10.2:
-    resolution: {integrity: sha512-lSbgu8iayAod8O0YcoXK3+bMFGThY2svtN35Zlm9VepsB3jfyIcoupKknEht7Kh9Q8ITjsp0J4KpYo9l4+FhNg==}
+  /@grpc/grpc-js@1.10.3:
+    resolution: {integrity: sha512-qiO9MNgYnwbvZ8MK0YLWbnGrNX3zTcj6/Ef7UHu5ZofER3e2nF3Y35GaPo9qNJJ/UJQKa4KL+z/F4Q8Q+uCdUQ==}
     engines: {node: '>=12.10.0'}
     requiresBuild: true
     dependencies:
@@ -5488,6 +5491,27 @@ packages:
       escape-string-regexp: 5.0.0
     dev: false
 
+  /@splinetool/react-spline@2.2.6(@splinetool/runtime@1.0.68)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-y9L2VEbnC6FNZZu8XMmWM9YTTTWal6kJVfP05Amf0QqDNzCSumKsJxZyGUODvuCmiAvy0PfIfEsiVKnSxvhsDw==}
+    peerDependencies:
+      '@splinetool/runtime': '*'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@splinetool/runtime': 1.0.68
+      lodash.debounce: 4.0.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-merge-refs: 2.1.1
+    dev: false
+
+  /@splinetool/runtime@1.0.68:
+    resolution: {integrity: sha512-TG7GIRg4DSuBlnL4LXQrCKnCJS1X6PAM8YC2SquGz1g1nvFHsDssvA35dQSvY+2BI5YhNqDxVUXpRzb85DcDpg==}
+    dependencies:
+      on-change: 4.0.2
+      semver-compare: 1.0.0
+    dev: false
+
   /@square/web-payments-sdk-types@1.54.9:
     resolution: {integrity: sha512-fZjGM3WqWrzoSNtnSZP19GLmxXqQ2JMA5eaAGF9V90L8Dq5UTILj5B21c6tzkNq/tMJ9cXHi1kUNGjOB+yDjjA==}
     dependencies:
@@ -5785,7 +5809,7 @@ packages:
     resolution: {integrity: sha512-oaYtiBirUOPQGSWNGPWnzyAFJ0BP3cwvN4oWZQY+zUBwpVIGsKUkpBpSztp74drYcjavs7SKFZ4DX1V2QeN8rg==}
     dependencies:
       '@types/node': 20.11.26
-      '@types/qs': 6.9.12
+      '@types/qs': 6.9.13
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
 
@@ -5794,7 +5818,7 @@ packages:
     dependencies:
       '@types/body-parser': 1.19.5
       '@types/express-serve-static-core': 4.17.43
-      '@types/qs': 6.9.12
+      '@types/qs': 6.9.13
       '@types/serve-static': 1.15.5
 
   /@types/facebook-pixel@0.0.30:
@@ -5930,8 +5954,8 @@ packages:
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
 
-  /@types/qs@6.9.12:
-    resolution: {integrity: sha512-bZcOkJ6uWrL0Qb2NAWKa7TBU+mJHPzhx9jjLL1KHF+XpzEcR7EXHvjbHlGtR/IsP1vyPrehuS6XqkmaePy//mg==}
+  /@types/qs@6.9.13:
+    resolution: {integrity: sha512-iLR+1vTTJ3p0QaOUq6ACbY1mzKTODFDT/XedZI8BksOotFmL4ForwDfRQ/DZeuTHR7/2i4lI1D203gdfxuqTlA==}
 
   /@types/range-parser@1.2.7:
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
@@ -8694,8 +8718,8 @@ packages:
     resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
     dev: false
 
-  /fast-xml-parser@4.3.5:
-    resolution: {integrity: sha512-sWvP1Pl8H03B8oFJpFR3HE31HUfwtX7Rlf9BNsvdpujD4n7WMhfmu8h9wOV2u+c1k0ZilTADhPqypzx2J690ZQ==}
+  /fast-xml-parser@4.3.6:
+    resolution: {integrity: sha512-M2SovcRxD4+vC493Uc2GZVcZaj66CCJhWurC4viynVSTvrpErCShNcDz1lAho6n9REQKvL/ll4A4/fw6Y9z8nw==}
     hasBin: true
     requiresBuild: true
     dependencies:
@@ -8903,8 +8927,8 @@ packages:
       node-forge: 1.3.1
       uuid: 9.0.1
     optionalDependencies:
-      '@google-cloud/firestore': 7.3.1(supports-color@8.1.1)
-      '@google-cloud/storage': 7.8.0(supports-color@8.1.1)
+      '@google-cloud/firestore': 7.4.0(supports-color@8.1.1)
+      '@google-cloud/storage': 7.9.0(supports-color@8.1.1)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -9404,7 +9428,7 @@ packages:
     engines: {node: '>=14'}
     requiresBuild: true
     dependencies:
-      '@grpc/grpc-js': 1.10.2
+      '@grpc/grpc-js': 1.10.3
       '@grpc/proto-loader': 0.7.10
       '@types/long': 4.0.2
       abort-controller: 3.0.0
@@ -10746,7 +10770,6 @@ packages:
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
-    dev: true
 
   /lodash.deburr@4.1.0:
     resolution: {integrity: sha512-m/M1U1f3ddMCs6Hq2tAsYThTBDaAKFDX3dwDo97GEYzamXi9SqUpjWi/Rrj/gf3X2n8ktwgZrlP1z6E3v/IExQ==}
@@ -12213,6 +12236,11 @@ packages:
     resolution: {integrity: sha512-hJmu9D+bNB40YpL9jYebQl4lsTW6yEHRTroJzNLqQJYHm7c+NQnJGfZmIWh8S3q3KoaxV1aLhV6B3+0N0/kyJg==}
     dev: false
 
+  /on-change@4.0.2:
+    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -13083,6 +13111,10 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
+  /react-merge-refs@2.1.1:
+    resolution: {integrity: sha512-jLQXJ/URln51zskhgppGJ2ub7b2WFKGq3cl3NYKtlHoTG+dN2q7EzWrn3hN3EgPsTMvpR9tpq5ijdp7YwFZkag==}
+    dev: false
+
   /react-mobile-picker@1.0.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-6xaEBdy4YzgCULRqKcYCa/T34OFRrxXQz8TYrTeRPjq8UEsuH023OpcajnxWbU4X9+kk0nbarorvMFsiaBmXHg==}
     peerDependencies:
@@ -13598,6 +13630,10 @@ packages:
       commander: 2.20.3
     dev: false
 
+  /semver-compare@1.0.0:
+    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
+    dev: false
+
   /semver-diff@3.1.1:
     resolution: {integrity: sha512-GX0Ix/CJcHyB8c4ykpHGIAvLyOwOobtM/8d+TQkAd81/bEjgPHrfba41Vpesr7jX/t8Uh+R3EX9eAS5be+jQYg==}
     engines: {node: '>=8'}
@@ -13919,7 +13955,7 @@ packages:
     dependencies:
       '@apimatic/authentication-adapters': 0.5.2
       '@apimatic/axios-client-adapter': 0.2.2
-      '@apimatic/core': 0.10.4
+      '@apimatic/core': 0.10.5
       '@apimatic/json-bigint': 1.2.0
       '@apimatic/schema': 0.7.6
       '@types/node': 14.18.63
