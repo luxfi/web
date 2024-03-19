@@ -35,7 +35,7 @@ const MobileHeader: React.FC<{
   return (<>
     <header className={cn('bg-background sticky z-50 top-0 left-0 w-full', className)} >
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
-      <div className="flex h-11 items-center justify-between pl-6 pr-4 ">
+      <div className="flex h-11 items-center justify-between pl-6 pr-4">
         <div className='relative h-full w-200 flex flex-row'>
           <Logo href='/' size='sm' className={'top-[3px] h-full'}/>
           {menuOpen && ( // This is **on top of** the logo (and visually fades in)
