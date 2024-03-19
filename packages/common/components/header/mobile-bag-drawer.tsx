@@ -25,15 +25,21 @@ const MobileBagDrawer: React.FC<{
       </div>
       {open && 
         <div
-          className='bg-background absolute top-0 left-0 w-screen h-screen overflow-hidden z-40' 
+          className='bg-background opacity-30 absolute top-0 left-0 w-screen h-screen overflow-hidden z-10' 
           onClick={() => setOpen(false)}
         />
       }
-      <div className={cn('absolute z-50 p-3 overflow-hidden h-[calc(100vh-80px)] rounded-tl-xl rounded-tr-xl bg-background min-w-screen transition-all duration-300 ease-in-out left-0 border w-full', open ? 'top-20' : 'top-[100vh]')}>
+      <div className={cn(
+        'absolute left-0 right-0 z-20 h-[80vh] overflow-hidden ' + 
+        'rounded-tl-xl rounded-tr-xl border-t-2 border-l border-r p-3 bg-background ' +
+        'flex flex-col items-center ' + 
+        'transition-top duration-300 ease-in-out ' + 
+        (open ? 'top-[20vh]' : 'top-[100vh]')
+      )}>
         <Button variant='ghost' onClick={() => setOpen(false)} className='absolute right-2 top-3'>
-          <LucideX className='h-8 w-8 text-inherit'/>
+          <LucideX className='h-8 w-8 text-inherit  '/>
         </Button>
-        <CartPanel className='mt-4 border-none py-0 px-4'>
+        <CartPanel className=' mt-4 border-none py-0 px-4 w-full sm:min-w-[350px] sm:max-w-[550px]'>
           <div className='flex items-center justify-center'>
             <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
             <p className='font-nav text-default'>Your Bag</p>

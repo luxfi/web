@@ -25,10 +25,10 @@ const DesktopHeader: React.FC<{
     // TODO move 13px into a size class and configure twMerge to recognize say, 'text-size-nav' 
     // (vs be beat out by 'text-color-nav')
   return (
-    <header className={cn('bg-background sticky z-20 top-0 border-b', className)} >
+    <header className={cn('bg-background sticky z-20 top-0  ', className)} >
       {/* md or larger */}
       <div className={
-        'flex flex-row h-[80px] items-center justify-between ' +
+        'flex flex-row h-[80px] items-center  justify-between ' +
         'px-[32px] w-full 2xl:mx-auto max-w-screen-2xl'
       }>
         <Logo size='md' href='/' className='hidden lg:flex' key='two'/>

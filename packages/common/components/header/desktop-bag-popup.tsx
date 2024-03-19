@@ -39,7 +39,7 @@ const DesktopBagPopup: React.FC<PropsWithChildren & {
       <PopoverTrigger className={triggerClx}>
         {trigger}
       </PopoverTrigger>
-      <PopoverContent className={cn('relative flex flex-col p-0 px-4 pb-4 pt-2', popupClx)}>
+      <PopoverContent sideOffset={28} className={cn('relative  flex flex-col p-0 px-4 pb-4 pt-2', popupClx)}>
         <PopoverClose className='absolute z-20 right-2 top-2 self-end hover:bg-level-3 text-muted hover:text-accent p-1 rounded-full'><X className='w-5 h-5'/></PopoverClose>
         <CartPanel className='mt-4 w-full border-none py-0 px-4'>
           <div className='flex items-center justify-center'>
