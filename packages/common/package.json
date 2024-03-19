@@ -1,6 +1,6 @@
 {
   "name": "@luxdefi/common",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -42,8 +42,8 @@
   },
   "peerDependencies": {
     "@hanzo/auth": "2.2.0",
-    "@hanzo/commerce": "4.3.2",
-    "@hanzo/ui": "3.0.4",
+    "@hanzo/commerce": "4.4.0",
+    "@hanzo/ui": "3.0.5",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "^0.344.0",
     "next": "14.1.3",

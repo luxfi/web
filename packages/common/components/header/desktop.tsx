@@ -42,7 +42,7 @@ const DesktopHeader: React.FC<{
             itemClx='font-nav h-8 !text-[13px]/[13px]'
             key='three'
           />
-          <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-secondary -mr-[3px] lg:min-w-0' />} />
+          <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
           <AuthWidget/>
         </div>
       </div>

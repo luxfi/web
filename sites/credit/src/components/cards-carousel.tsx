@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { CTABlockComponent, type CTABlock, ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
 import { BuyItemButton } from '@hanzo/commerce'
 
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import type { ImageDef, LinkDef } from '@hanzo/ui/types'
+import type { ImageDef } from '@hanzo/ui/types'
 
 type Card = {
   title: string

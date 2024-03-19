@@ -22,8 +22,8 @@ const ItemCTAsBlockComponent: React.FC<{
   
   return (ctas.skuPath || ctas.otherLink) ? (
     <div className={cn(
-      (ctas.skuPath && ctas.otherLink) ? 'grid grid-cols-2 gap-2' : 'flex flex-row',
-      'sm:flex sm:flex-row justify-center items-center sm:gap-4 lg:gap-6', 
+      (ctas.skuPath && ctas.otherLink) ? ' w-full sm:w-auto grid grid-cols-2 gap-2' : 'flex flex-row',
+      'sm:flex sm:flex-row justify-center items-center sm:gap-4 lg:gap-6 self-center', 
       className
     )}>
     {ctas.otherLink && (

@@ -33,7 +33,7 @@ export default {
             },
             {
               title: 'ELITE CARD',
-              byline: '24k Gold or St. Silver',
+              byline: '24k Gold or Sterling Silver',
               skuPath: 'LXM-CR-E',
               img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}, alt: 'Elite card'} as ImageDef,
             },
