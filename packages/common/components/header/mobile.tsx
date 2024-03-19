@@ -66,7 +66,7 @@ const MobileHeader: React.FC<{
             currentAs={currentAs}
             links={links}
             className='' 
-            commonItemClx='px-0 text-xl h-14 justify-start ' 
+            commonItemClx='px-0 text-xl h-16 justify-start ' 
           />
         )} 
       </div>
