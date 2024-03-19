@@ -1,12 +1,12 @@
 import type { 
   Block,
-  CTABlock, 
   EnhHeadingBlock, 
   ElementBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
 } from '@hanzo/ui/blocks'
+import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
 const byline = 'Lux Credit offers the uniqe facility to borrow up to 50% of your crypto assets, ' + 
   'limiting the need to cash out and pay capital gains.'
@@ -37,13 +37,10 @@ export default {blockType: 'screenful',
         byline: {text: byline, level: 6}, 
       } satisfies EnhHeadingBlock,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
-      {blockType: 'cta',
-        specifiers: 'left mobile-2-columns',
-        elements: [
-          { title: "Compare", href: "/compare", variant: 'outline' },
-          { title: "Buy", href: "/buy?sku=LXM-CR-S-RT&add=true", variant: 'primary' },
-        ]
-      } satisfies CTABlock as Block,
+      {blockType: 'item-ctas',
+        otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
+        skuPath: 'LXM-CR-S'
+      } satisfies ItemCTASBlock as Block,
     ] 
   ] 
 } as ScreenfulBlock

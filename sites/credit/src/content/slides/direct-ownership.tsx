@@ -1,14 +1,13 @@
 import type { 
   Block,
-  CTABlock, 
   EnhHeadingBlock, 
-  ElementBlock, 
   ImageBlock, 
   ScreenfulBlock, 
   SpaceBlock,
   VideoBlock,
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
 const byline = 'Retain complete sovereignty over your digital assets, backed by the security and transparency ' + 
   'inherent in Lux quantum safe blockchain technology.'
@@ -36,13 +35,10 @@ export default {
       byline: {text: byline, level: 6}, 
     } satisfies EnhHeadingBlock as Block,
     {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
-    {blockType: 'cta',
-      specifiers: 'left mobile-2-columns',
-      elements: [
-        { title: "Compare", href: "/compare", variant: 'outline' },
-        { title: "Buy", href: "/buy?sku=LXM-CR-F-CC&add=true", variant: 'primary' },
-      ]
-    } satisfies CTABlock as Block,
+    {blockType: 'item-ctas',
+      otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
+      skuPath: 'LXM-CR-F'
+    } satisfies ItemCTASBlock as Block,
   ], [ 
     {blockType: 'image',
       src: '/assets/img/cards-2-flat-tit-1593x1231.png',
