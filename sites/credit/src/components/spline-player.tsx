@@ -8,7 +8,7 @@ const SplinePlayer: React.FC<{
   src
 }) => {
   return (
-    <Spline scene={src} className='!w-full !h-full !aspect-[12/10]' />
+    <Spline scene={src} className='!w-full !h-full !aspect-[12/10] pointer-events-none' />
   )
 }
 
