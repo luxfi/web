@@ -55,7 +55,7 @@ export default [
             newTab: false
           },
           {title: 'Buy',
-            href: 'https://lux.market/buy?sku=LXM-VL-GN',
+            href: 'https://lux.market/validator',
             variant: 'primary',
             newTab: false
           }
@@ -81,7 +81,7 @@ export default [
             newTab: false
           } as LinkDef,
           {title: 'Buy',
-            href: 'https://lux.market/buy?sku=LXM-CN-10B',
+            href: 'https://lux.market/coin',
             variant: 'primary',
             newTab: false
           }
