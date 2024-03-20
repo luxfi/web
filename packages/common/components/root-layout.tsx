@@ -7,6 +7,7 @@ import type SiteDef from '../site-def/site-def'
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 import Scripts from './scripts'
+import { Toaster } from '@hanzo/ui/primitives'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
@@ -51,6 +52,7 @@ const RootLayout: React.FC<PropsWithChildren & {
       <Scripts/>
       {header && <Header siteDef={siteDef}/>}
       {children}
+      <Toaster position='top-center' duration={3000}/>
     </body>
   </html>
 )
