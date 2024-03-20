@@ -27,7 +27,11 @@ export default {blockType: 'screenful',
     ], 
     [
       {blockType: 'element',
-        element: <SplinePlayer src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'/>
+        element: 
+          <SplinePlayer
+            src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'
+            className='!aspect-[12/10]'
+          />
       } satisfies ElementBlock as Block,
       {blockType: 'element',
         element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Black Card</p>

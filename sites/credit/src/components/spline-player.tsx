@@ -1,14 +1,17 @@
 'use client'
 
-import Spline from '@splinetool/react-spline';
+import { cn } from '@hanzo/ui/util'
+import Spline from '@splinetool/react-spline'
 
 const SplinePlayer: React.FC<{
-  src: string
+  src: string,
+  className?: string
 }> = ({
-  src
+  src,
+  className
 }) => {
   return (
-    <Spline scene={src} className='!w-full !h-full !aspect-[12/10] pointer-events-none' />
+    <Spline scene={src} className={cn('!w-full !h-auto pointer-events-none', className)} />
   )
 }
 
