@@ -7,7 +7,8 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-  PopoverClose
+  PopoverClose,
+  ScrollArea
 } from "@hanzo/ui/primitives"
 
 import { cn } from '@hanzo/ui/util'
@@ -59,16 +60,18 @@ const DesktopBagPopup: React.FC<PropsWithChildren & {
         </PopoverTrigger>
         <PopoverContent sideOffset={28} className={cn('relative  flex flex-col p-0 px-4 pb-4 pt-2', popupClx)}>
           <PopoverClose className='absolute z-20 right-2 top-2 self-end hover:bg-level-3 text-muted hover:text-accent p-1 rounded-full'><X className='w-5 h-5'/></PopoverClose>
-          <CartPanel
-            className='mt-4 w-full border-none py-0 px-4'
-            onCheckoutOpen={() => setCheckoutOpen(true)}
-          >
-            <div className='flex items-center justify-center'>
-              <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
-              <p className='font-nav text-default'>Your Bag</p>
-            </div>
-            <div className='h-[1px] w-full mb-4 mt-3 bg-muted-3'/>
-          </CartPanel>
+          <ScrollArea className='mt-5'>
+            <CartPanel
+              className='mt-4 w-full border-none py-0 px-4 max-h-[70vh]'
+              onCheckoutOpen={() => setCheckoutOpen(true)}
+            >
+              <div className='flex items-center justify-center'>
+                <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
+                <p className='font-nav text-default'>Your Bag</p>
+              </div>
+              <div className='h-[1px] w-full mb-4 mt-3 bg-muted-3'/>
+            </CartPanel>
+          </ScrollArea>
         </PopoverContent>
       </Popover>
       <CheckoutPanel open={checkoutOpen} onCheckoutClose={() => setCheckoutOpen(false)}/>

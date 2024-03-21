@@ -1,4 +1,5 @@
 import type { Product, Category } from '@hanzo/commerce/types'
+import { passVideo } from '../videos'
 
 const PS_IMG = '/assets/img/cmmc/pass-800x800.png'
 
@@ -14,7 +15,8 @@ export default {
       titleAsOption: 'Lux Pass',
       categoryId: 'LXM-PS',
       price: 100,
-      img: PS_IMG
+      img: PS_IMG,
+      video: passVideo
     },
   ] satisfies Product[]
 } satisfies Category

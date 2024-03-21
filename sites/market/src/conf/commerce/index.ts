@@ -8,11 +8,27 @@ import validator from './non-bullion/vl'
 import credit from './credit'
 
 import { visitCategory } from './price-setter'
+import type { Category } from '@hanzo/commerce/types'
+import { goldVideo, silverVideo } from './videos'
+
+const addVideo = (c: Category): Category => {
+  for (let prod of c.products) {
+    if (c.parentTitle === 'Lux Gold') {
+      prod.video = goldVideo
+    }
+    if (c.parentTitle === 'Lux Silver') {
+      prod.video = silverVideo
+    }
+  }
+  return c
+}
+
 const bullionWPrices = bullionNoPrices.map((c) => (visitCategory(c)))
+const bullionWPricesAndVideos = bullionWPrices.map((c) => (addVideo(c)))
 
 export default {
   rootFacet, 
-  productsByCategory: [...bullionWPrices, validator, coin, pass, ...credit ],
+  productsByCategory: [...bullionWPricesAndVideos, validator, coin, pass, ...credit ],
   options: {
     dbName: 'lux-commerce',
     ordersTable: 'orders'
