@@ -1,8 +1,8 @@
 'use client'
 
-import { FacebookPixel } from '../next/analytics/pixel-analytics'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { useEffect } from 'react'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { FacebookPixel } from '../next/analytics'
 
 const Scripts = () => {
 

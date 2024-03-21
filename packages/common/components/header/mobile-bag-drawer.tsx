@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, type ReactNode } from 'react'
+import React, { useState, type ReactNode, useEffect } from 'react'
 
 import {
   Drawer,
@@ -8,9 +8,10 @@ import {
 } from '@hanzo/ui/primitives'
 
 import { cn } from '@hanzo/ui/util'
-import { CartPanel, CheckoutPanel } from '@hanzo/commerce'
+import { CartPanel, CheckoutPanel, useCommerce } from '@hanzo/commerce'
 
 import BagIcon from './bag-icon'
+import sendGAEvent from '../../next/analytics/google-analytics'
 
 const MobileBagDrawer: React.FC<{
   trigger: ReactNode
@@ -19,11 +20,29 @@ const MobileBagDrawer: React.FC<{
   trigger,
   className='',
 }) => {
+  const cmmc = useCommerce()
+
   const [bagOpen, setBagOpen] = useState<boolean>(false)
   const [checkoutOpen, setCheckoutOpen] = useState<boolean>(false)
   /* TODO: This is a hackish fix for bug with multiple dialog opened at the same time.
   *  Needs refactor with context or so.
   **/
+
+  useEffect(() => {
+    if (bagOpen) {
+      sendGAEvent('view_cart', {
+        items: cmmc.cartItems.map((item) => ({
+          item_id: item.sku,
+          item_name: item.title,
+          item_category: item.categoryId,
+          price: item.price,
+          quantity: item.quantity
+        })),
+        value: cmmc.cartTotal,
+        currency: 'USD',
+      })
+    }
+  }, [bagOpen])
 
   const onCheckoutOpen = () => {
     setBagOpen(false)
