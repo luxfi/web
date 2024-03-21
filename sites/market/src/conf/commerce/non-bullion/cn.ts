@@ -1,4 +1,5 @@
 import type { Product, Category } from '@hanzo/commerce/types'
+import { coinVideo } from '../videos'
 
 const CN_IMG = '/assets/img/cmmc/lux-coin-800x800.png'
 
@@ -20,7 +21,8 @@ export default {
       titleAsOption: '10B',
       categoryId: 'LXM-CN',
       price: 10 * B * COIN, // $11M
-      img: CN_IMG
+      img: CN_IMG,
+      video: coinVideo
     },
     {
       id: 'LXM-CN-1B',
@@ -29,7 +31,8 @@ export default {
       titleAsOption: '1B',
       categoryId: 'LXM-CN',
       price: B * COIN, // $1.1M
-      img: CN_IMG
+      img: CN_IMG,
+      video: coinVideo
     },
     {
       id: 'LXM-CN-100M',
@@ -38,7 +41,8 @@ export default {
       titleAsOption: '100M',
       categoryId: 'LXM-CN',
       price: 100 * M * COIN, // $110K
-      img: CN_IMG
+      img: CN_IMG,
+      video: coinVideo
     },
     {
       id: 'LXM-CN-10M',
@@ -47,7 +51,8 @@ export default {
       titleAsOption: '10M',
       categoryId: 'LXM-CN',
       price: 10 * M * COIN, // $11K
-      img: CN_IMG
+      img: CN_IMG,
+      video: coinVideo
     },
     {
       id: 'LXM-CN-1M',
@@ -56,7 +61,8 @@ export default {
       titleAsOption: '1M',
       categoryId: 'LXM-CN',
       price: M * COIN, // $1.1K
-      img: CN_IMG
+      img: CN_IMG,
+      video: coinVideo
     },
   ] satisfies Product[]
 } satisfies Category

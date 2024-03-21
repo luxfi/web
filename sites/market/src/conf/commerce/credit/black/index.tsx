@@ -24,6 +24,7 @@ export default {
       categoryId: 'LXM-CR-B',
       price: 500,
       img: '/assets/img/cards-flat/black-f-700x441.png',
+      animation: 'https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'
     } satisfies Product
   ]
 } satisfies CardCategory 
