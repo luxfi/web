@@ -1,6 +1,8 @@
 # www
 #### Shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation.
 
+▼ on the World Wide Web 🌏.
+
 ## ▼
 
 **Quantum-Safe Technologies**: Ensuring investment security against quantum threats, Lux Network fortifies digital finance's future.
