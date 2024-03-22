@@ -4,7 +4,7 @@
 
 #### Shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation.
 
-## ▼
+## Features
 
 **Quantum-Safe Technologies**: Ensuring investment security against quantum threats, Lux Network fortifies digital finance's future.
 
