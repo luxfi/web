@@ -1,7 +1,8 @@
 # www
-#### Shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation.
 
 ▼ on the World Wide Web 🌏.
+
+#### Shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation.
 
 ## ▼
 
