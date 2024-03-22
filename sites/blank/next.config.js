@@ -21,11 +21,12 @@ const nextConfig = {
     // https://stackoverflow.com/questions/72621835/how-to-fix-you-may-need-an-appropriate-loader-to-handle-this-file-type-current
   transpilePackages: [
     '@hanzo/ui', 
+    '@hanzo/auth', 
+    '@hanzo/commerce', 
     '@luxdefi/common'
   ],
   productionBrowserSourceMaps: true,
   webpack: svgrWebpackConfig // if we need others, set up a chain of calls. 
-   
 }
 
 module.exports = withMDX(nextConfig)
