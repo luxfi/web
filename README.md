@@ -1,5 +1,5 @@
 # www
-LUX, shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation.
+#### shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation
 
 ## LUX
 
