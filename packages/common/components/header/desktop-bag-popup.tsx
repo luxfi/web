@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 import { X } from 'lucide-react'
 
@@ -14,7 +15,6 @@ import {
 import { cn } from '@hanzo/ui/util'
 import { CartPanel, useCommerce } from '@hanzo/commerce'
 
-import CheckoutOverlay from './checkout-overlay'
 import BagIcon from './bag-icon'
 import sendGAEvent from '../../next/analytics/google-analytics'
 
@@ -30,7 +30,7 @@ const DesktopBagPopup: React.FC<{
   const cmmc = useCommerce()
 
   const [bagOpen, setBagOpen] = useState<boolean>(false)
-  const [checkoutOpen, setCheckoutOpen] = useState<boolean>(false)
+  const router = useRouter()
 
   useEffect(() => {
     if (bagOpen) {
@@ -49,7 +49,6 @@ const DesktopBagPopup: React.FC<{
   }, [bagOpen])
 
   return ( <>
-      <CheckoutOverlay open={checkoutOpen} close={() => setCheckoutOpen(false)}/>
       <Popover open={bagOpen} onOpenChange={setBagOpen}>
         <PopoverTrigger className={triggerClx}>
           {trigger}
@@ -59,7 +58,7 @@ const DesktopBagPopup: React.FC<{
           <ScrollArea className='mt-5'>
             <CartPanel
               className='mt-4 w-full border-none py-0 px-4 max-h-[70vh]'
-              handleCheckout={() => setCheckoutOpen(true)}
+              handleCheckout={() => {router.push('/checkout')}}
             >
               <div className='flex items-center justify-center'>
                 <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>

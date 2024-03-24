@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, type ReactNode, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 import {
   Drawer,
@@ -10,7 +11,6 @@ import {
 
 import { CartPanel, useCommerce } from '@hanzo/commerce'
 
-import CheckoutOverlay from './checkout-overlay'
 import BagIcon from './bag-icon'
 import sendGAEvent from '../../next/analytics/google-analytics'
 
@@ -24,7 +24,7 @@ const MobileBagDrawer: React.FC<{
   const cmmc = useCommerce()
 
   const [bagOpen, setBagOpen] = useState<boolean>(false)
-  const [checkoutOpen, setCheckoutOpen] = useState<boolean>(false)
+  const router = useRouter()
 
   useEffect(() => {
     if (bagOpen) {
@@ -42,18 +42,11 @@ const MobileBagDrawer: React.FC<{
     }
   }, [bagOpen])
 
-  const openCheckout = () => {
-    setBagOpen(false)
-    setCheckoutOpen(true)
+  const toCheckout = () => {
+    router.push('/checkout')
   }
 
-  const closeCheckout = () => {
-    setBagOpen(true)
-    setCheckoutOpen(false)
-  }
-
-  return (<>
-    <CheckoutOverlay open={checkoutOpen} close={closeCheckout}/>
+  return (
     <Drawer open={bagOpen} onOpenChange={setBagOpen}>
       <DrawerTrigger className={className}>
         {trigger}
@@ -65,7 +58,7 @@ const MobileBagDrawer: React.FC<{
               'mt-4 mb-8 border-none py-0 px-4 w-full ' +
               'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
             }
-            handleCheckout={openCheckout}
+            handleCheckout={toCheckout}
           >
             <div className='flex items-center justify-center'>
               <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
@@ -76,7 +69,6 @@ const MobileBagDrawer: React.FC<{
         </ScrollArea>
       </DrawerContent>
     </Drawer>
-    </>
   )
 }
 

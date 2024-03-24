@@ -4,14 +4,18 @@ import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
 import type { SiteDef } from '../../site-def'
 import Footer from '../footer'
+import Header from '../header'
 
 import NotFoundMDX from './not-found-content.mdx'
 
 const NotFound: React.FC<{
+  header?: boolean
   siteDef: SiteDef
 }>  = ({
+  header=false,
   siteDef
 }) => (<>
+  {header && <Header siteDef={siteDef}/>}
   <Main className='xs:h-[100svh] xs:px-8 sm:px-10 sm:h-[700px]'>
     <ApplyTypography className='mt-[200px] flex flex-col md:gap-8 '>
       <NotFoundMDX />

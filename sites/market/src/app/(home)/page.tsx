@@ -1,11 +1,14 @@
 import React from 'react'
 
 import { Desktop, TouchDevice } from './scroll-snap'
+import { Header } from '@luxdefi/common'
 
 type PageProps = {
   params: { slug: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }
+
+import siteDef from '@/site-def'
 
 const Page: React.FC<PageProps> = ({
   searchParams
@@ -14,12 +17,21 @@ const Page: React.FC<PageProps> = ({
   const agent = searchParams?.agent
 
   if (agent === 'desktop') {
-    return <Desktop />
+    return (<>
+      <Header siteDef={siteDef}/>
+      <Desktop />
+    </>)
   }
   else if (agent === 'tablet') {
-    return <TouchDevice isTablet={true} />
+    return (<>
+      <Header siteDef={siteDef}/>
+      <TouchDevice isTablet={true} />
+    </>)
   }
-  return <TouchDevice isTablet={false} />
+  return (<>
+    <Header siteDef={siteDef}/>
+    <TouchDevice isTablet={false} />
+  </>)
 }
 
 export default Page

@@ -23,7 +23,7 @@ const MobileHeader: React.FC<{
   className = ''
 }) => {
 
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [menuOpen, _setMenuOpen] = useState<boolean>(false)
   const [loginOpen, setLoginOpen] = useState<boolean>(false)
 
   const onLoginChanged = (loggedIn: boolean) => {
@@ -32,8 +32,15 @@ const MobileHeader: React.FC<{
     }
   }
 
+  const setMenuOpen = (open: boolean) => {
+    if (!open) {
+      setLoginOpen(false)
+    }
+    _setMenuOpen(open)
+  }
+
   return (<>
-    <header className={cn('bg-background sticky z-50 top-0 left-0 w-full', className)} >
+    <header className={cn('bg-background fixed z-10 top-0 left-0 w-full', className)} >
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
       <div className="flex h-11 items-center justify-between pl-6 pr-4">
         <div className='relative h-full w-200 flex flex-row'>
@@ -65,12 +72,12 @@ const MobileHeader: React.FC<{
         'flex flex-column p-6 pt-15 bg-background z-20 animate-mobile-menu-open' 
       }>
         {loginOpen ? (
-          <LoginComponent noHeading onLoginChanged={onLoginChanged}/>
+          <LoginComponent noHeading onLoginChanged={onLoginChanged} className='animate-in zoom-in-90' />
         ) : (
           <NavMenu 
             currentAs={currentAs}
             links={links}
-            className='' 
+            className='animate-in zoom-in-90' 
             commonItemClx='px-0 text-xl h-16 justify-start ' 
           />
         )} 
