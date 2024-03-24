@@ -227,7 +227,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 3.5.2
+        specifier: 3.5.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0

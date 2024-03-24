@@ -1,15 +1,25 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, type ReactNode, useEffect  } from 'react'
+import { useRouter } from 'next/navigation'
+
+import {
+  ScrollArea,
+} from '@hanzo/ui/primitives'
+
+import { CartPanel, useCommerce } from '@hanzo/commerce'
 
 import type { LinkDef } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 import { AuthWidget, LoginComponent } from '@hanzo/auth/components'
+
+import sendGAEvent from '../../next/analytics/google-analytics'
 
 import { Logo } from '..'
 
 import MenuToggleButton from './mobile-menu-toggle-button'
 import BagButton from './bag-button'
 import MobileBagDrawer from './mobile-bag-drawer'
+import BagIcon from './bag-icon'
 
 import NavMenu from './mobile-nav-menu'
 
@@ -23,20 +33,43 @@ const MobileHeader: React.FC<{
   className = ''
 }) => {
 
+  const cmmc = useCommerce()
   const [menuOpen, _setMenuOpen] = useState<boolean>(false)
-  const [loginOpen, setLoginOpen] = useState<boolean>(false)
+  const [menuPanel, setMenuPanel] = useState<'none' | 'login' | 'bag'>('none')
+  const router = useRouter()
+
+  useEffect(() => {
+    if (menuPanel === 'bag') {
+      sendGAEvent('view_cart', {
+        items: cmmc.cartItems.map((item) => ({
+          item_id: item.sku,
+          item_name: item.title,
+          item_category: item.categoryId,
+          price: item.price,
+          quantity: item.quantity
+        })),
+        value: cmmc.cartTotal,
+        currency: 'USD',
+      })
+    }
+  }, [menuPanel])
 
   const onLoginChanged = (loggedIn: boolean) => {
     if (loggedIn) {
-      setLoginOpen(false)
+      setMenuPanel('none')
     }
   }
 
   const setMenuOpen = (open: boolean) => {
     if (!open) {
-      setLoginOpen(false)
+      setMenuPanel('none')
     }
     _setMenuOpen(open)
+  }
+
+  const toCheckout = () => {
+    setMenuOpen(false)
+    router.push('/checkout')
   }
 
   return (<>
@@ -52,12 +85,16 @@ const MobileHeader: React.FC<{
               'flex flex-col justify-center ' +
               'bg-background animate-mobile-menu-open'
             }>
-              <AuthWidget className='' handleLogin={() => {setLoginOpen(true)}}/>
+              <AuthWidget className='' handleLogin={() => {setMenuPanel('login')}}/>
             </div>
           )}
         </div>
         <div className='flex gap-0 '>
-          <MobileBagDrawer trigger={<BagButton className='text-primary -mr-[3px]' />} />
+          { menuOpen ? (
+            <BagButton className='text-primary -mr-[3px]' onClick={() => {setMenuPanel('bag')}}/>
+          ) : (
+            <MobileBagDrawer trigger={<BagButton className='text-primary -mr-[3px]' />} />
+          ) }
           <MenuToggleButton 
             className='text-foreground' 
             open={menuOpen} 
@@ -67,12 +104,29 @@ const MobileHeader: React.FC<{
       </div>
     </header>
     {menuOpen && (
-      <div className={ // 
+      <div className={  
         'fixed top-0 left-0 w-full h-full ' + 
         'flex flex-column p-6 pt-15 bg-background z-40 animate-mobile-menu-open' 
       }>
-        {loginOpen ? (
-          <LoginComponent noHeading onLoginChanged={onLoginChanged} className='animate-in zoom-in-90' />
+      {menuPanel === 'login' ? (
+        <LoginComponent noHeading onLoginChanged={onLoginChanged} className='animate-in zoom-in-90' />
+      ) : ( 
+        menuPanel === 'bag' ? (
+          <ScrollArea className='w-full animate-in zoom-in-90'>
+            <CartPanel
+              className={
+                'mt-4 mb-8 border-none py-0 px-4 w-full ' +
+                'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
+              }
+              handleCheckout={toCheckout}
+            >
+              <div className='flex items-center justify-center'>
+                <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
+                <p className='font-nav text-default'>Your Bag</p>
+              </div>
+              <div className='h-[1px] w-full mb-4 mt-3 bg-muted-3'/>
+            </CartPanel>
+          </ScrollArea>
         ) : (
           <NavMenu 
             currentAs={currentAs}
@@ -80,9 +134,10 @@ const MobileHeader: React.FC<{
             className='animate-in zoom-in-90' 
             commonItemClx='px-0 text-xl h-16 justify-start ' 
           />
-        )} 
+        )
+      )} 
       </div>
-    )}
+    ) /* menuOpen */}
   </>)
 }
 
