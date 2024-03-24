@@ -1,11 +1,7 @@
-//'use client'
-
 import React  from 'react'
 
 import { Main, } from '@hanzo/ui/primitives'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
-
-import { ChatWidget } from '@luxdefi/common'
 
 import '@/blocks/registerComponents'
 
@@ -34,11 +30,6 @@ const Page = ({ searchParams }: Props ) => {
         agent={agent}
         className='min-h-0 h-auto'
         contentClx='min-h-0 '
-      />
-      <ChatWidget
-        title='LUX'
-        subtitle='AI'
-        chatbotUrl='https://lux.chat/iframe'
       />
     </Main>
   )

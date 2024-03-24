@@ -1,5 +1,5 @@
 'use client'
-import React, {type PropsWithChildren, useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { X } from 'lucide-react'
 
@@ -12,18 +12,17 @@ import {
 } from "@hanzo/ui/primitives"
 
 import { cn } from '@hanzo/ui/util'
-import { CartPanel, CheckoutPanel, useCommerce } from '@hanzo/commerce'
+import { CartPanel, useCommerce } from '@hanzo/commerce'
 
+import CheckoutOverlay from './checkout-overlay'
 import BagIcon from './bag-icon'
 import sendGAEvent from '../../next/analytics/google-analytics'
 
-const DesktopBagPopup: React.FC<PropsWithChildren & {
+const DesktopBagPopup: React.FC<{
   triggerClx?: string  
   popupClx?: string
   trigger: React.ReactNode
-
 }> = ({
-  children,
   triggerClx='',
   popupClx='',
   trigger
@@ -32,9 +31,6 @@ const DesktopBagPopup: React.FC<PropsWithChildren & {
 
   const [bagOpen, setBagOpen] = useState<boolean>(false)
   const [checkoutOpen, setCheckoutOpen] = useState<boolean>(false)
-  /* TODO: This is a hackish fix for bug with multiple dialog opened at the same time.
-  *  Needs refactor with context or so.
-  **/
 
   useEffect(() => {
     if (bagOpen) {
@@ -52,8 +48,8 @@ const DesktopBagPopup: React.FC<PropsWithChildren & {
     }
   }, [bagOpen])
 
-  return (
-    <>
+  return ( <>
+      <CheckoutOverlay open={checkoutOpen} close={() => setCheckoutOpen(false)}/>
       <Popover open={bagOpen} onOpenChange={setBagOpen}>
         <PopoverTrigger className={triggerClx}>
           {trigger}
@@ -63,7 +59,7 @@ const DesktopBagPopup: React.FC<PropsWithChildren & {
           <ScrollArea className='mt-5'>
             <CartPanel
               className='mt-4 w-full border-none py-0 px-4 max-h-[70vh]'
-              onCheckoutOpen={() => setCheckoutOpen(true)}
+              handleCheckout={() => setCheckoutOpen(true)}
             >
               <div className='flex items-center justify-center'>
                 <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
@@ -74,7 +70,6 @@ const DesktopBagPopup: React.FC<PropsWithChildren & {
           </ScrollArea>
         </PopoverContent>
       </Popover>
-      <CheckoutPanel open={checkoutOpen} onCheckoutClose={() => setCheckoutOpen(false)}/>
     </>
   )
 }

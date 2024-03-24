@@ -38,9 +38,14 @@ const MobileHeader: React.FC<{
       <div className="flex h-11 items-center justify-between pl-6 pr-4">
         <div className='relative h-full w-200 flex flex-row'>
           <Logo href='/' size='sm' className={'top-[3px] h-full'}/>
-          {menuOpen && ( // This is **on top of** the logo (and visually fades in)
-            <div className='absolute left-0 top-0 bottom-0 right-0 bg-background animate-mobile-menu-open flex flex-col justify-center'>
-              <AuthWidget className='' triggerLogin={() => {setLoginOpen(true)}}/>
+          {/* Not that key to the cross-fade effect 
+              is that this is **on top of** the logo. */}
+          {menuOpen && ( 
+            <div className={'absolute left-0 top-0 bottom-0 right-0 ' + 
+              'flex flex-col justify-center ' +
+              'bg-background animate-mobile-menu-open'
+            }>
+              <AuthWidget className='' handleLogin={() => {setLoginOpen(true)}}/>
             </div>
           )}
         </div>
@@ -60,7 +65,7 @@ const MobileHeader: React.FC<{
         'flex flex-column p-6 pt-15 bg-background z-20 animate-mobile-menu-open' 
       }>
         {loginOpen ? (
-          <LoginComponent hideHeader onLoginChanged={onLoginChanged}/>
+          <LoginComponent noHeading onLoginChanged={onLoginChanged}/>
         ) : (
           <NavMenu 
             currentAs={currentAs}
