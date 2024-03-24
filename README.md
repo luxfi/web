@@ -36,6 +36,7 @@ Install `pnpm` [like so](https://pnpm.io/installation)
 The usual scripts for a Next site, using `pnpm`
 ```
 pnpm install
+cd sites/<siteName>
 pnpm dev
 ```
 
@@ -43,15 +44,14 @@ Since "pnpm" is a finger twister, many people alias it to "pn". For example, wit
 
 ## Architecture
 
-- Next.js 14.1
+- Next.js 14
 - Radix UI Primitives
 - Tailwind CSS
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting.
 
-### Based on @hanzo/ui
+## Built on the hanzoai/react-sdk (@hanzo/ui, @hanzo/auth, @hanzo/commerce)
 
-- A React using Next 14.1, Tailwind and Radix
-- Pulls content from static json (in `/src/content`)
-- Lives [on GitHub here](https://github.com/hanzoai/ui)
+- A potent React framework using Next 14, Tailwind and Radix
+- Renders most content from simple 'Block' definitions (in `/src/content` )
+- Lives [on GitHub here](https://github.com/hanzoai/react-sdk)

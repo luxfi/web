@@ -1,7 +1,7 @@
 import React  from 'react'
 import { notFound } from 'next/navigation'
 
-import { Footer } from '@luxdefi/common'
+import { Footer, Header } from '@luxdefi/common'
 import { Main } from '@hanzo/ui/primitives'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
@@ -47,6 +47,7 @@ const ProductPage = ({ params, searchParams }: Props) => {
   const agent = searchParams?.agent
 
   return (<>
+    <Header siteDef={siteDef}/>
     <Main className='md:flex-row md:gap-4 '>
       <ProductDetailBlockComponent block={product} agent={agent as string}/>
     </Main>

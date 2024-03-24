@@ -32,7 +32,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         productsByCategory={siteDef.ext.commerce.productsByCategory}
         options={siteDef.ext.commerce.options}
       >
-        <RootLayoutCommon siteDef={siteDef}>
+        <RootLayoutCommon siteDef={siteDef} header={false}>
           {children}
           <ChatWidget
             title='LUX'
