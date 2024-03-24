@@ -109,10 +109,10 @@ const MobileHeader: React.FC<{
         'flex flex-column p-6 pt-15 bg-background z-40 animate-mobile-menu-open' 
       }>
       {menuPanel === 'login' ? (
-        <LoginComponent noHeading onLoginChanged={onLoginChanged} className='animate-in zoom-in-90' />
+        <LoginComponent noHeading onLoginChanged={onLoginChanged} className='sm:animate-in sm:zoom-in-90' />
       ) : ( 
         menuPanel === 'bag' ? (
-          <ScrollArea className='w-full animate-in zoom-in-90'>
+          <ScrollArea className='w-full sm:animate-in sm:zoom-in-90'>
             <CartPanel
               className={
                 'mt-4 mb-8 border-none py-0 px-4 w-full ' +
@@ -131,7 +131,7 @@ const MobileHeader: React.FC<{
           <NavMenu 
             currentAs={currentAs}
             links={links}
-            className='animate-in zoom-in-90' 
+            className='sm:animate-in sm:zoom-in-90' 
             commonItemClx='px-0 text-xl h-16 justify-start ' 
           />
         )
