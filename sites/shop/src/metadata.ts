@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export default {
   metadataBase: new URL('https://lux.market'),
   title: {
-    default: 'Lux Market',
-    template: '%s | Lux Market',
+    default: 'Lux Shop',
+    template: '%s | Lux Shop',
   },
-  description: 'Lux Market is the only quantum safe and private platform for real world assets (RWAs)',
-  applicationName: 'Lux Market',
+  description: 'Lux Shop is the only official store for Lux Partners Limited products like the Lux Validator, Lux Credit Card and Lux Pass.',
+  applicationName: 'Lux Shop',
   authors: {name: 'Lux Partners Limited'},
   keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
   icons: [
