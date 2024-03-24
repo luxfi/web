@@ -25,7 +25,7 @@
 - Use Wallet and Operate Lux Validators: [Lux Wallet](https://wallet.lux.network)
 - Bridge Assets into Lux Mainnet: [Lux Bridge](https://bridge.lux.network)
 - Explore Lux Mainnet: [Lux Explore](https://explore.lux.network)
-  Use Lux AI to learn more: [Lux AI](https://lux.chat)
+- Use Lux AI to learn more: [Lux AI](https://lux.chat)
   
 ## Dev: run locally
 
