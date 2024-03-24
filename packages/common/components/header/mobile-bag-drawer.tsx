@@ -52,21 +52,19 @@ const MobileBagDrawer: React.FC<{
         {trigger}
       </DrawerTrigger>
       <DrawerContent className='rounded-tl-xl rounded-tr-xl p-0 pt-3 overflow-hidden ' >
-        <ScrollArea>
-          <CartPanel
-            className={
-              'mt-4 mb-8 border-none py-0 px-4 w-full ' +
-              'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
-            }
-            handleCheckout={toCheckout}
-          >
-            <div className='flex items-center justify-center'>
-              <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
-              <p className='font-nav text-default'>Your Bag</p>
-            </div>
-            <div className='h-[1px] w-full mb-4 mt-3 bg-muted-3'/>
-          </CartPanel>
-        </ScrollArea>
+        <CartPanel
+          className={
+            'mt-4 mb-8 border-none py-0 px-4 w-full ' +
+            'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
+          }
+          handleCheckout={toCheckout}
+        >
+          <div className='flex items-center justify-center'>
+            <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
+            <p className='font-nav text-default'>Your Bag</p>
+          </div>
+          <div className='h-[1px] w-full mb-4 mt-3 bg-muted-3'/>
+        </CartPanel>
       </DrawerContent>
     </Drawer>
   )
