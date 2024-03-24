@@ -15,7 +15,7 @@ export default {blockType: 'screenful',
   contentColumns: [
     [
       {blockType: 'enh-heading', 
-        heading: {text: 'THE NEW 1%', level: 1}, 
+        heading: {text: 'THE NEW 2%', level: 1}, 
         byline: {text: 'Never sell your crypto again with our self-paying credit card', level: 4}, 
         specifiers: 'left'
       } satisfies EnhHeadingBlock as Block,

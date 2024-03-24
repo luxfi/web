@@ -51,7 +51,7 @@ const MobileBagDrawer: React.FC<{
       <DrawerTrigger className={className}>
         {trigger}
       </DrawerTrigger>
-      <DrawerContent className='rounded-tl-xl rounded-tr-xl p-0 pt-3 overflow-hidden' >
+      <DrawerContent className='rounded-tl-xl rounded-tr-xl p-0 pt-3 overflow-hidden ' >
         <ScrollArea>
           <CartPanel
             className={
