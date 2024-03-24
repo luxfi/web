@@ -40,7 +40,7 @@ const MobileHeader: React.FC<{
   }
 
   return (<>
-    <header className={cn('bg-background fixed z-10 top-0 left-0 w-full', className)} >
+    <header className={cn('bg-background sticky z-50 top-0 left-0 w-full', className)} >
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
       <div className="flex h-11 items-center justify-between pl-6 pr-4">
         <div className='relative h-full w-200 flex flex-row'>
@@ -69,7 +69,7 @@ const MobileHeader: React.FC<{
     {menuOpen && (
       <div className={ // 
         'fixed top-0 left-0 w-full h-full ' + 
-        'flex flex-column p-6 pt-15 bg-background z-20 animate-mobile-menu-open' 
+        'flex flex-column p-6 pt-15 bg-background z-40 animate-mobile-menu-open' 
       }>
         {loginOpen ? (
           <LoginComponent noHeading onLoginChanged={onLoginChanged} className='animate-in zoom-in-90' />
