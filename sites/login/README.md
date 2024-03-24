@@ -1,5 +1,5 @@
 # login
-Lux Network wide authentication and login page.
+Lux Login authentication and login page.
 
 ## To run locally
 
