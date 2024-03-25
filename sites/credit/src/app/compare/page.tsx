@@ -14,7 +14,7 @@ const Page = ({ searchParams }: Props ) => {
   const agent = searchParams?.agent as string
 
   return (
-    <CompareCards /> 
+    <CompareCards agent={agent}/> 
   )
 }
 
