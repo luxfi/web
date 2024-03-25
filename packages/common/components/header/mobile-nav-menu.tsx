@@ -33,9 +33,9 @@ const MobileNav: React.FC<{
         // will not get assigned these classes,
         // and will remain styles is 'foreground' (hence the name)
       if (variant === 'link') {
-        internalClx+= ' text-muted hover:text-foreground active:text-accent border-b rounded-none'
+        internalClx+= ' text-muted hover:text-foreground active:text-accent rounded-none'
         if (currentAs && currentAs === el.href) {
-          internalClx += ' text-accent border-accent'
+          internalClx += ' text-accent '
         }
       } 
       else {

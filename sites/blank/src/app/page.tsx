@@ -2,6 +2,7 @@ import React  from 'react'
 import { Footer } from '@luxdefi/common'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
+
 /* for example, as slug
 type Props = {
   params: { slug: string }

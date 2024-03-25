@@ -1,12 +1,13 @@
 import React, { type PropsWithChildren } from 'react'
 
 import type { Viewport } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 import Header from './header'
 import type SiteDef from '../site-def/site-def'
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
-import { FacebookPixelHead, FacebookPixel } from '../next/analytics/pixel-analytics'
+import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
+import Scripts from './scripts'
+import { Toaster } from '@hanzo/ui/primitives'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
@@ -30,7 +31,7 @@ const viewport = {
   We cannot have these on body tag for scroll-snap to work on iOS!
 */
 const bodyClasses = 
-  'bg-background text-foreground flex flex-col min-h-full ' + 
+  'bg-background text-foreground flex flex-col min-h-full loading-screen ' + 
   getAppRouterBodyFontClasses() 
     
 const RootLayout: React.FC<PropsWithChildren & { 
@@ -41,17 +42,22 @@ const RootLayout: React.FC<PropsWithChildren & {
   siteDef,
   children,
 }) =>  (
-  <html lang='en' suppressHydrationWarning className='hanzo-ui-dark-theme'>
+  <html lang='en' suppressHydrationWarning className='hanzo-ui-dark-theme' style={{backgroundColor: '#000'}}>
     <head >
       {/* https://stackoverflow.com/a/75716588/11645689 */ }
       <base target='_blank' />
       <FacebookPixelHead/>
     </head>
-    <body className={bodyClasses}>
-      <FacebookPixel />
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ''} />
+    <body className={bodyClasses} style={{
+      overflow: 'hidden',
+      paddingRight: '0 !important',
+      maxWidth: '100vw' 
+
+    }}>
+      <Scripts/>
       {header && <Header siteDef={siteDef}/>}
       {children}
+      <Toaster position='top-center' duration={3000}/>
     </body>
   </html>
 )

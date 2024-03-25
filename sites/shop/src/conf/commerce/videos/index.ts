@@ -1,0 +1,5 @@
+export { default as goldVideo } from './gold'
+export { default as silverVideo } from './silver'
+export { default as coinVideo } from './coin'
+export { default as passVideo } from './pass'
+export { default as validatorVideo } from './validator'

@@ -1,6 +1,6 @@
 {
   "name": "@hanzo/credit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,12 +15,14 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@hanzo/auth": "2.0.4",
-    "@hanzo/commerce": "4.0.0",
-    "@hanzo/ui": "3.0.4",
-    "@luxdefi/common": "3.0.0",
+    "@hanzo/auth": "2.3.2",
+    "@hanzo/commerce": "4.9.0",
+    "@hanzo/ui": "3.0.18",
     "@hookform/resolvers": "^3.3.4",
+    "@luxdefi/common": "3.5.18",
     "@next/mdx": "14.1.0",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.68",
     "ethers": "^6.11.1",
     "firebase": "^10.8.0",
     "lucide-react": "^0.344.0",
@@ -36,6 +38,7 @@
     "react-hook-form": "7.50.1",
     "request": "^2.88.2",
     "supports-color": "8.1.1",
+    "webpack-watch-files-plugin": "^1.2.1",
     "zod": "3.21.4"
   },
   "devDependencies": {

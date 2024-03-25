@@ -22,7 +22,7 @@ const Home = observer(() => {
             <AccessCodeInput/>
           </div>
         ) : (
-          <LoginComponent hideHeader className='max-w-[20rem] mx-auto' />
+          <LoginComponent noHeading className='max-w-[20rem] mx-auto' />
         )}
       </ApplyTypography>
     </Main>

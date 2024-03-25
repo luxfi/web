@@ -1,21 +1,21 @@
-import { 
+import {
   VideoBlockComponent,
-  type CTABlock, 
-  type EnhHeadingBlock, 
-  type ScreenfulBlock, 
+  type CTABlock,
+  type EnhHeadingBlock,
+  type ScreenfulBlock,
 } from '@hanzo/ui/blocks'
 
 const byline = 'The only decentralized network of quantum safe blockchains providing institutional-grade, regulatory-compliant access to digital money and real-world assets.'
 
-import type { ElementBlock, VideoBlock } from '@hanzo/ui/blocks/def'
+import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks/def'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const video = {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: {...DEF_VIDEO_PROPS, preload: 'auto'},
   poster: '/assets/video/Lux-VALIDATOR-poster.jpg',
   sources: [
-    '/assets/video/Lux-VALIDATOR-transcode.mp4', 
+    '/assets/video/Lux-VALIDATOR-transcode.mp4',
     '/assets/video/Lux-VALIDATOR-transcode.webm'
   ],
     // Determin aspect ration from dims manually...
@@ -34,7 +34,6 @@ const video = {
       h: 295
     },
   },
-  sizing: { vh: 40, mobile: {vw: 50} }
 } as VideoBlock
 
 export default {
@@ -55,21 +54,33 @@ export default {
     } as EnhHeadingBlock,
     {blockType: 'space', level: 0},
     {blockType: 'cta',
-      specifiers: 'fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
+      specifiers: 'fill mobile-odd-full-width',
       elements: [
         {
-          title: "Start Building",
-          href: "https://lux.build",
+          title: "Run the Chain",
+          href: "https://lux.network/#run-the-network",
           newTab: false,
           variant: 'primary',
         },
+      ]
+    } as CTABlock,
+    {blockType: 'space', sizes: {
+        xs: 2,
+        sm: 2,
+        md: 2,
+        lg: 2,
+        xl: 2
+      }} as SpaceBlock,
+    {blockType: 'cta',
+      specifiers: 'fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
+      elements: [
         {
-          title: "Github",
-          href: "https://github.com/luxdefi",
+          title: "Learn More",
+          href: "https://docs.lux.network",
           variant: 'outline',
         },
         {
-          title: "Whitepaper",
+          title: "Open Source",
           href: "https://github.com/luxdefi",
           variant: 'outline',
         },
@@ -79,10 +90,10 @@ export default {
     video,
     {blockType: 'element',
       element: <>
-        <div className='absolute hidden md:flex top-pr-10 left-pr-50 w-[200px] h-[200px] -z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-0 md:top-pr-20 md:left-pr-80 w-[80px] h-[80px] z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-75 md:top-pr-80 md:left-pr-60 w-[80px] h-[80px] z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute hidden md:flex top-pr-70 left-pr-80 w-[150px] h-[150px] -z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-[110px] left-pr-50 w-[200px] h-[200px] -z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-25 left-pr-0 md:top-[210px] md:left-pr-80 w-[80px] h-[80px] z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-25 left-pr-75 md:top-[665px] md:left-pr-57 w-[80px] h-[80px] z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-[610px] left-pr-80 w-[150px] h-[150px] -z-10'><VideoBlockComponent block={video}/></div>
       </>,
     } as ElementBlock,
   ]],

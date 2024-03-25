@@ -6,8 +6,6 @@ import {
   ChatWidget
 } from '@luxdefi/common'
 
-import { Toaster } from '@hanzo/ui/primitives'
-
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
@@ -34,14 +32,13 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         productsByCategory={siteDef.ext.commerce.productsByCategory}
         options={siteDef.ext.commerce.options}
       >
-        <RootLayoutCommon siteDef={siteDef}>
+        <RootLayoutCommon siteDef={siteDef} header={false}>
           {children}
           <ChatWidget
             title='LUX'
             subtitle='AI'
             chatbotUrl='https://lux.chat/iframe'
           />
-          <Toaster />
         </RootLayoutCommon>
       </CommerceServiceProvider>
     </AuthServiceProvider>

@@ -1,5 +1,7 @@
 const withMDX = require('@next/mdx')()
-const svgrWebpackConfig = require('./svgr.next.config')
+const svgrPluginConfig = require('./next-conf/svgr.next.config')
+const watchPluginConfig = require('./next-conf/watch.next.config')
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -26,7 +28,11 @@ const nextConfig = {
     '@luxdefi/common'
   ],
   productionBrowserSourceMaps: true,
-  webpack: svgrWebpackConfig // if we need others, set up a chain of calls. 
+  webpack: (config) => {
+    let conf = svgrPluginConfig(config)
+    //conf =  watchPluginConfig(conf) 
+    return conf
+  }
 }
 
 module.exports = withMDX(nextConfig)

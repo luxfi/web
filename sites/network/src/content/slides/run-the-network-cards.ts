@@ -1,4 +1,4 @@
-import type { 
+import type {
   Block,
   CarteBlancheBlock,
   EnhHeadingBlock,
@@ -9,10 +9,10 @@ import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const validatorVideo = {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: DEF_VIDEO_PROPS,
   poster: '/assets/video/Lux-VALIDATOR-poster.jpg',
   sources: [
-    '/assets/video/Lux-VALIDATOR-transcode.mp4', 
+    '/assets/video/Lux-VALIDATOR-transcode.mp4',
     '/assets/video/Lux-VALIDATOR-transcode.webm'
   ],
   dim: {md: {w: 656, h: 484}, lg: {w: 656, h: 484}},
@@ -21,10 +21,10 @@ const validatorVideo = {
 
 const coinVideo = {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: DEF_VIDEO_PROPS,
   poster: '/assets/video/LUX-COIN-poster.jpg',
   sources: [
-    '/assets/video/LUX-COIN-transcode.mp4', 
+    '/assets/video/LUX-COIN-transcode.mp4',
     '/assets/video/LUX-COIN-transcode.webm'
   ],
     dim: {md: {w: 546, h: 540}, lg: {w: 546, h: 540}},
@@ -52,7 +52,12 @@ export default [
           {title: 'Learn more',
             href: 'https://lux.market/validator',
             variant: 'outline',
-            newTab: true
+            newTab: false
+          },
+          {title: 'Buy',
+            href: 'https://lux.market/validator',
+            variant: 'primary',
+            newTab: false
           }
         ]
       }
@@ -73,8 +78,13 @@ export default [
           {title: 'Learn more',
             href: 'https://lux.market/coin',
             variant: 'outline',
-            newTab: true
-          } as LinkDef
+            newTab: false
+          } as LinkDef,
+          {title: 'Buy',
+            href: 'https://lux.market/coin',
+            variant: 'primary',
+            newTab: false
+          }
         ]
       }
     ]

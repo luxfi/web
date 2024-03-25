@@ -10,6 +10,8 @@ import type {
   EnhHeadingBlock
 } from '@hanzo/ui/blocks'
 
+import { BuyItemButtonWrapper } from '@hanzo/commerce'
+
 import { cn } from '@hanzo/ui/util'
 
 import type ElementTableBlock from '@/blocks/def/element-table'
@@ -31,29 +33,51 @@ function capitalize(str: string) {
 
 const CardButton : React.FC<{
   product: keyof typeof CARDS
-  sku: string
+  skuPath: string
   className?: string
 }> = ({
   product,
-  sku,
+  skuPath,
   className=''
 }) => (
-  <Link 
-    className={cn('relative w-full opacity-90 group-hover:opacity-100 ' + 
-      'rounded-2xl py-4 px-2 ' + 
-      'flex flex-col justify-center items-center', 
-      '!no-underline',
-      className
+  <BuyItemButtonWrapper 
+    skuPath={skuPath} 
+    desktopTrigger={(
+      <button 
+        className={cn('relative w-full opacity-90 group-hover:opacity-100  ' + 
+          'rounded-2xl py-4 px-2 ' + 
+          'hidden md:flex flex-col justify-center items-center', 
+          '!no-underline',
+          className
+        )} 
+      > 
+        {CARDS[product]}
+        <div className='font-sans group-hover:text-muted-1 text-center'>
+          <span className='text-foreground font-semibold'>{capitalize(product)}</span>
+          <br/>
+          <span className='hidden sm:inline text-muted-1 text-xxs whitespace-nowrap'>click to buy&nbsp;</span>
+        </div>
+      </button>
     )} 
-    href={`/buy?sku=${sku}&add=true`}
-  > 
-    {CARDS[product]}
-    <div className='font-sans group-hover:text-muted-1 text-center'>
-      <span className='text-foreground font-semibold'>{capitalize(product)}</span>
-      <br/>
-      <span className='hidden sm:inline text-muted-1 text-xxs whitespace-nowrap'>click to buy&nbsp;</span>
-    </div>
-  </Link>
+    mobileTrigger={(
+      <button 
+        className={cn('relative w-full opacity-90 group-hover:opacity-100 ' + 
+          'rounded-2xl py-4 px-2 ' + 
+          'flex md:hidden flex-col justify-center items-center', 
+          '!no-underline',
+          className
+        )} 
+      > 
+        {CARDS[product]}
+        <div className='font-sans group-hover:text-muted-1 text-center'>
+          <span className='text-foreground font-semibold'>{capitalize(product)}</span>
+          <br/>
+          <span className='hidden sm:inline text-muted-1 text-xxs whitespace-nowrap'>click to buy&nbsp;</span>
+        </div>
+      </button>
+    )} 
+  />
+    
 )
 
 // hidden md:inline
@@ -72,10 +96,10 @@ export default {blockType: 'screenful',
       elements: [
         [
          // {blockType: 'element', element: ''},
-          {blockType: 'element', element: <CardButton product='black' sku='LXM-CR-B-ABT' />},
-          {blockType: 'element', element: <CardButton product='elite' sku='LXM-CR-E-24G'/>},
-          {blockType: 'element', element: <CardButton product='founder' sku='LXM-CR-F-CC'/>},
-          {blockType: 'element', element: <CardButton product='sovereign' sku='LXM-CR-S-RT'/>},
+          {blockType: 'element', element: <CardButton product='black' skuPath='LXM-CR-B' />},
+          {blockType: 'element', element: <CardButton product='elite' skuPath='LXM-CR-E'/>},
+          {blockType: 'element', element: <CardButton product='founder' skuPath='LXM-CR-F'/>},
+          {blockType: 'element', element: <CardButton product='sovereign' skuPath='LXM-CR-S'/>},
         ],
         /*
         [
