@@ -48,7 +48,12 @@ const RootLayout: React.FC<PropsWithChildren & {
       <base target='_blank' />
       <FacebookPixelHead/>
     </head>
-    <body className={bodyClasses}>
+    <body className={bodyClasses} style={{
+      overflow: 'hidden',
+      paddingRight: '0 !important',
+      maxWidth: '100vw' 
+
+    }}>
       <Scripts/>
       {header && <Header siteDef={siteDef}/>}
       {children}
