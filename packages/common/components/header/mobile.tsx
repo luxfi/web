@@ -87,7 +87,7 @@ const MobileHeader: React.FC<{
   return (<>
     <header className={cn(
       'bg-background sticky z-50 top-0 left-0 w-full',
-      (bagDrawerOpen ? 'backdrop-blur' : ''),
+      //(bagDrawerOpen ? 'backdrop-blur' : ''),
       className
     )} >
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
