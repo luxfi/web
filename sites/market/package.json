@@ -19,7 +19,7 @@
     "@hanzo/auth": "2.3.2",
     "@hanzo/commerce": "4.9.0",
     "@hanzo/ui": "3.0.18",
-    "@luxdefi/common": "3.5.18",
+    "@luxdefi/common": "3.5.19",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "ethers": "^6.11.1",
