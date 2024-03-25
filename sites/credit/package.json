@@ -39,7 +39,11 @@
     "request": "^2.88.2",
     "supports-color": "8.1.1",
     "webpack-watch-files-plugin": "^1.2.1",
-    "zod": "3.21.4"
+    "zod": "3.21.4",
+    "@react-spring/web": "^9",
+    "@use-gesture/react": "^10",
+    "react-sheet-slide": "^1.3.0"
+
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",
