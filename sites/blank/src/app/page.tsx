@@ -2,6 +2,8 @@ import React  from 'react'
 import { Footer } from '@luxdefi/common'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
+import SheetTest from '@/components/sheet-test'
+
 /* for example, as slug
 type Props = {
   params: { slug: string }
@@ -12,6 +14,7 @@ import siteDef from '../site-def'
 
 const UniversalPage = (/* { params, searchParams }: Props */) => (<>
   <Main className='md:flex-row md:gap-4 '>
+    <SheetTest />
     <ApplyTypography>
       <h1>Empty Page</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

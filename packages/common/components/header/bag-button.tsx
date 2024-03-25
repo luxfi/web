@@ -11,9 +11,11 @@ import { useCommerce } from '@hanzo/commerce'
 const BagButton: React.FC<{
   hideIfEmpty?: boolean  
   className?: string
+  onClick?: () => void
 }> = observer(({
   hideIfEmpty=true,
-  className=''
+  className='',
+  onClick
 }) => {
 
   const c = useCommerce()
@@ -27,6 +29,7 @@ const BagButton: React.FC<{
     <div
       aria-label="Bag"
       role='button'
+      onClick={onClick}
       className={cn(
         buttonVariants({ variant: 'ghost', size: 'default', rounded: 'md' }), 
         'relative group p-0 aspect-square hover:bg-background',
