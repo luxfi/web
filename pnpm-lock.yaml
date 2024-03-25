@@ -156,7 +156,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -229,7 +229,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -338,7 +338,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -417,7 +417,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -511,8 +511,8 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.1
-        version: 3.5.1(@hanzo/auth@2.3.2)(@hanzo/commerce@4.9.0)(@hanzo/ui@3.0.18)(@hookform/resolvers@3.3.4)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.19
+        version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1)(@mdx-js/react@3.0.1)
@@ -596,7 +596,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -702,7 +702,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -787,7 +787,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -863,7 +863,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -939,7 +939,7 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.18
+        specifier: 3.5.19
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -1022,8 +1022,8 @@ importers:
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/ui
         version: file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 3.5.1
-        version: 3.5.1(@hanzo/auth@2.3.2)(@hanzo/commerce@4.9.0)(@hanzo/ui@3.0.18)(@hookform/resolvers@3.3.4)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.19
+        version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1)(@mdx-js/react@3.0.1)
@@ -1107,8 +1107,8 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 3.5.1
-        version: 3.5.1(@hanzo/auth@2.3.2)(@hanzo/commerce@4.9.0)(@hanzo/ui@3.0.18)(@hookform/resolvers@3.3.4)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.19
+        version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1)(@mdx-js/react@3.0.1)
@@ -3361,39 +3361,6 @@ packages:
     resolution: {integrity: sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==}
     requiresBuild: true
     optional: true
-
-  /@luxdefi/common@3.5.1(@hanzo/auth@2.3.2)(@hanzo/commerce@4.9.0)(@hanzo/ui@3.0.18)(@hookform/resolvers@3.3.4)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4):
-    resolution: {integrity: sha512-B2uAR90Tj99CmEHJCE/4qXAkBFHQ/GAvxtYekd9SHw8cPHeSXk/rAGwk/6Mm21niFtJznVkYCU/E1eug+Oh0Mw==}
-    peerDependencies:
-      '@hanzo/auth': 2.3.2
-      '@hanzo/commerce': file:/home/artem/dev/hanzoai/react-sdk/packages/commerce
-      '@hanzo/ui': file:/home/artem/dev/hanzoai/react-sdk/packages/ui
-      '@hookform/resolvers': ^3.3.2
-      lucide-react: ^0.344.0
-      next: 14.1.3
-      next-themes: ^0.2.1
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      react-hook-form: ^7.47.0
-      validator: ^13.11.0
-      zod: 3.21.4
-    dependencies:
-      '@hanzo/auth': 2.3.2(@hanzo/ui@3.0.18)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.6)(mobx@6.12.1)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
-      '@hanzo/commerce': file:../../hanzoai/react-sdk/packages/commerce(@hanzo/auth@2.3.2)(@hanzo/ui@3.0.18)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.6)(mobx-utils@6.0.8)(mobx@6.12.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
-      '@hanzo/ui': file:../../hanzoai/react-sdk/packages/ui(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.22)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.0-rc15)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.1)(validator@13.11.0)(zod@3.21.4)
-      '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
-      '@next/third-parties': 14.1.4(next@14.1.3)(react@18.2.0)
-      lucide-react: 0.344.0(react@18.2.0)
-      next: 14.1.3(@babel/core@7.24.3)(react-dom@18.2.0)(react@18.2.0)
-      next-themes: 0.2.1(next@14.1.3)(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-device-detect: 2.2.3(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.50.1(react@18.2.0)
-      react-social-icons: 6.15.0(react-dom@18.2.0)(react@18.2.0)
-      validator: 13.11.0
-      zod: 3.21.4
-    dev: false
 
   /@mapbox/node-pre-gyp@1.0.11(supports-color@8.1.1):
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}

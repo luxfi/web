@@ -86,7 +86,7 @@ const MobileHeader: React.FC<{
     // header element MUST be fixed, and NOT sticky.  Or else drawer breaks on mobile browsers
   return (<>
     <header className={cn(
-      (bagDrawerOpen) ? 'opacity-60' : '',
+      (bagDrawerOpen) ? 'opacity-60 ' : '',
       'bg-background fixed z-50 top-0 left-0 w-full', 
       className
     )}>
