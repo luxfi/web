@@ -83,9 +83,13 @@ const MobileHeader: React.FC<{
       setBagDrawerOpen(true)  
     }
   }
-
+    // header element MUST be fixed, and NOT sticky.  Or else drawer breaks on mobile browsers
   return (<>
-    <header className={cn('bg-background fixed z-50 top-0 left-0 w-full', className)} >
+    <header className={cn(
+      (bagDrawerOpen) ? 'backdrop-blur' : '',
+      'bg-background fixed z-50 top-0 left-0 w-full', 
+      className
+    )} >
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
       <div className="flex h-11 items-center justify-between pl-6 pr-4">
         <div className='relative h-full w-200 flex flex-row'>
