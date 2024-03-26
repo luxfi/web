@@ -5,7 +5,11 @@ import KarmaRewards from './karma-rewards.mdx'
 import type { Card } from '@/types/card'
 
 const card: Card = {
-  img: '/assets/img/cards-flat/titanium-f-700x428.png',
+  img: {
+    src: '/assets/img/cards-flat/titanium-f-700x428.png',
+    dim: {w: 700, h: 428 },
+    alt: 'Lux Sovereign Card'
+  },
   title: 'Lux Sovereign Card',
   rarity: '1/10,000',
   materials: [{

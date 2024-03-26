@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react'
 import type { Category } from '@hanzo/commerce/types'
+import type { ImageDef } from '@hanzo/ui/types'
 
 type CardType = 'black' | 'elite' | 'founder' | 'sovereign'
 
@@ -21,7 +22,7 @@ type CardMaterial = {
 }
 
 type Card = {
-  img: string,
+  img: ImageDef,
   title: string,
   rarity?: string,
   materials: CardMaterial[],

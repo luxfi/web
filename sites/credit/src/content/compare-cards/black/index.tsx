@@ -5,7 +5,11 @@ import KarmaRewards from './karma-rewards.mdx'
 import type { Card } from '@/types/card'
 
 const card: Card = {
-  img: '/assets/img/cards-flat/black-f-700x441.png',
+  img: {
+    src: '/assets/img/cards-flat/black-f-700x441.png',
+    dim: {w: 700, h: 441 },
+    alt: 'Lux Black Card'
+  },
   title: 'Lux Black Card',
   materials: [{
     title: 'Anodized Black Titanium',

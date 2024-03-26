@@ -1,6 +1,6 @@
 import { Plus } from 'lucide-react'
 
-import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
 import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
 
@@ -53,11 +53,7 @@ const SelectCard: React.FC<{
                 onClick={() => setSelectedCards([...selectedCards, cardChoice])}
               >
                 <ImageBlockComponent
-                  block={{blockType: 'image', 
-                      src: cardChoice.img, dim: {w: 700, h: 441 },
-                      alt: cardChoice.title
-                    } as ImageBlock
-                  }
+                  block={{blockType: 'image', ...cardChoice.img}}
                   className='w-12 h-auto m-0'
                 />
                 <h3 className='hover:opacity-80'>{cardChoice.title}</h3>

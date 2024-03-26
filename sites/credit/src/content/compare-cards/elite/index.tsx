@@ -5,7 +5,11 @@ import KarmaRewards from './karma-rewards.mdx'
 import type { Card } from '@/types/card'
 
 const card: Card = {
-  img: '/assets/img/cards-flat/gold-f-700x442.png',
+  img: {
+    src: '/assets/img/cards-flat/gold-f-700x442.png',
+    dim: {w: 700, h: 442 },
+    alt: 'Lux Elite Card'
+  },
   title: 'Lux Elite Card',
   rarity: '1/10,000',
   materials: [
