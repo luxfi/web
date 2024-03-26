@@ -3,7 +3,7 @@ import { type PropsWithChildren } from 'react'
 import { Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import RowHeading from './RowHeading'
+import RowHeading from './row-heading'
 
 const Row: React.FC<{
   key?: number | string,

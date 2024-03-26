@@ -3,174 +3,19 @@
 import { useState } from 'react'
 
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
-import { cn } from '@hanzo/ui/util'
-import { formatPrice } from '@hanzo/commerce'
 
 import type { Card } from '@/types/card'
-import SelectCard from './SelectCard'
-import CardHero from './CardHero'
-import Row from './Row'
-import RowHeading from './RowHeading'
+import SelectCard from './select-card'
+import CardHero from './card-hero'
+import RowHeading from './row-heading'
+import rowsContent from './rows-content'
+import Row from './row'
 
 const numCardsMobile = 2
 const numCardsDesktop = 3
 
-const MdxRowContent: React.FC<{
-  key: number | string
-  content?: React.ReactNode
-  hiddenOnMobile?: boolean
-  className?: string
-}> = ({
-  key,
-  content,
-  hiddenOnMobile,
-  className
-}) => {
-  return (
-    <ApplyTypography
-      key={key}
-      className={cn(
-        hiddenOnMobile ? 'hidden lg:flex' : 'flex',
-        'flex-col gap-2 lg:gap-4 lg:col-span-3 typography-p:text-sm md:typography-p:text-base',
-        className
-      )}
-    >
-      {content}
-    </ApplyTypography>
-  )
-}
-
-const DataRowContent: React.FC<{
-  key: number
-  content?: React.ReactNode
-  hiddenOnMobile?: boolean
-}> = ({
-  key,
-  content,
-  hiddenOnMobile
-}) => {
-  return (
-    <ApplyTypography
-      key={key}
-      className={cn(
-        hiddenOnMobile ? 'hidden lg:flex' : 'flex',
-        'items-center justify-center lg:col-span-3'
-      )}
-    >
-      {content && <h4>{content}</h4>}
-    </ApplyTypography>
-  )
-}
-
 const CompareCards = () => {
   const [selectedCards, setSelectedCards] = useState<Card[]>([])
-
-  const rows = [
-    {
-      title: 'Travel Benefits',
-      description: 'Sustainable, mindful experiences to elevate the body, mind, and soul.',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent
-            key={i}
-            content={selectedCards[i]?.travelBenefits}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'What you earn?',
-      description: 'Rewards are based on a percentage of your average available credit.',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent
-            key={i}
-            content={selectedCards[i]?.rewards}
-            hiddenOnMobile={i > numCardsMobile - 1}
-            className='justify-center'
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'Karma Rewards',
-      description: 'Karma Rewards, is our point reward system that can be used to pay for almost anything. You can also leverage it and earn even more by staking the Karma you have accrued in the Lux ecosystem. Plus you can even sell it to pay off your balance. ',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent
-            key={i}
-            content={selectedCards[i]?.karmaRewards}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'Exclusive Lux Benefits',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent
-            key={i}
-            content={selectedCards[i]?.lifestyleBenefits}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'Maximum Account Holders',
-      description: 'Reward Based on average Deposit.',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent
-            key={i}
-            content={selectedCards[i]?.maxAccountHolders}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'Annual Reward',
-      description: 'Reward Based on average Deposit.',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent
-            key={i}
-            content={selectedCards[i] ? `${selectedCards[i].rewardPct}%` : undefined}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'Lost Card Fee',
-      description: 'If you lose your card we can replace it and get it to you within 3 days, business days with expedited worldwide shipping.',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent
-            key={i}
-            content={selectedCards[i] ? formatPrice(selectedCards[i].replacementFee) : undefined}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    },
-    {
-      title: 'FX Rate',
-      description: 'Rate of exchange when traveling or paying in foreign currency.',
-      content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent
-            key={i}
-            content={selectedCards[i] ? `${selectedCards[i].fxRatePct}%` : undefined}
-            hiddenOnMobile={i > numCardsMobile - 1}
-          />
-        ))}
-      </>
-    }
-  ]
 
   return (
     <div className='flex flex-col py-4'>
@@ -209,7 +54,7 @@ const CompareCards = () => {
               <h3>Exclusive Lux Card Benefits</h3>
             </ApplyTypography>
           </Main>
-          {rows.map(({title, description, content}, i) => (
+          {rowsContent(selectedCards).map(({title, description, content}, i) => (
             <Row
               key={i}
               isOdd={i % 2 === 1}
@@ -225,4 +70,8 @@ const CompareCards = () => {
   )
 }
 
-export default CompareCards
+export {
+  CompareCards as default,
+  numCardsDesktop,
+  numCardsMobile
+}
