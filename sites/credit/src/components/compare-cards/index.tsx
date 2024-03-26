@@ -3,13 +3,13 @@
 import { useState } from 'react'
 
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
 
 import type { Card } from '@/types/card'
 import SelectCard from './select-card'
 import CardHero from './card-hero'
 import RowHeading from './row-heading'
 import rowsContent from './rows-content'
-import Row from './row'
 
 const numCardsMobile = 2
 const numCardsDesktop = 3
@@ -55,14 +55,12 @@ const CompareCards = () => {
             </ApplyTypography>
           </Main>
           {rowsContent(selectedCards).map(({title, description, content}, i) => (
-            <Row
-              key={i}
-              isOdd={i % 2 === 1}
-              title={title}
-              description={description}
-            >
-              {content}
-            </Row>
+            <div key={i} className={cn('py-4', i % 2 === 1 ? 'bg-muted-4' : '')}>
+              <Main className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 lg:gap-20'>
+                <RowHeading title={title} description={description}/>
+                {content}
+              </Main>
+            </div>
           ))}
         </>
       )}
