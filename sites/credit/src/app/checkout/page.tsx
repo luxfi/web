@@ -2,7 +2,7 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 
-import { Main } from '@hanzo/ui/primitives'
+import { BreakpointIndicator, Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { CheckoutPanel } from '@luxdefi/common'
 
@@ -22,6 +22,7 @@ const Page: React.FC = () => {
       'shadow-lg bg-background'
     )}>
       <CheckoutPanel close={handleCheckoutDone} className='w-full h-full' />
+      <BreakpointIndicator />
     </Main>
   )
 }

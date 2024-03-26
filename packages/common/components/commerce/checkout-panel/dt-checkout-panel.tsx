@@ -9,6 +9,7 @@ import * as Icons from '../../icons'
 import BagWithCarousel from './dt-bag-panel'
 import DesktopBagCarousel from './dt-bag-carousel'
 import CloseButton from './close-button'
+import { cn } from '@hanzo/ui/util'
 
 const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
   index: number
@@ -21,24 +22,21 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
   close,
   className='',
   children
-}) => {
-  
-  return ( //      <ScrollArea className='h-full w-full flex flex-col items-center justify-start px-6 pt-12 pb-9'>
+}) => ( //      <ScrollArea className='h-full w-full flex flex-col items-center justify-start px-6 pt-12 pb-9'>
 
-  <div id='CHECKOUT_PANEL'  className={className}>
+  <div id='CHECKOUT_PANEL'  className={cn('grid grid-cols-2',  className)}>
     <div className='w-full h-full bg-background flex flex-row items-start justify-end'>
-      <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start '>
+      <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start px-8 pt-0'>
         <CloseButton close={close} className='absolute top-6 left-3 w-auto h-auto rounded-full bg-level-1 hover:bg-level-2 hover:border-muted p-2' />
         <div className='flex items-center justify-center  h-30  '>
           <Icons.bag className='fill-foreground mr-2 relative -top-1 w-6 h-7'/>
           <p className='font-nav text-default'>Your Order</p>
         </div>
         <div className='w-full max-w-[550px] mx-auto'>
-          <DesktopBagCarousel className='h-[300px]'/>
-          <CartPanel 
-            className='w-full'
-            itemClx='mb-20' 
-          />
+          <DesktopBagCarousel className='h-[260px] w-[360px] lg:w-[420px] mx-auto -mt-8' constrainTo={{w: 250, h: 250}}/>
+          <ScrollArea className='h-[50vh] w-full pb-0' >
+            <CartPanel className='w-full border-none p-0 pr-3' itemClx='mb-3' totalClx='sticky bottom-0 p-1 bg-background border rounded-sm'/>
+          </ScrollArea>
         </div>
       </div>
     </div>
@@ -55,6 +53,5 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
     </ScrollArea>
   </div>
 )
-}
 
 export default DesktopCheckoutPanel
