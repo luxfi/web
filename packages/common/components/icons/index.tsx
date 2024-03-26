@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 
 import gitHub from './github'
+import bag from './bag-icon'
 import logo from './lux-logo'
 import youtube from './youtube-logo'
 import secureDelivery from './secure-delivery'
@@ -19,6 +20,7 @@ import  {
 export { type LucideIcon as Icon, type SocialIconProps } 
 
 export {
+  bag,
   sun,
   moon,
   logo,

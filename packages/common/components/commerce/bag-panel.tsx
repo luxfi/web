@@ -3,7 +3,7 @@ import React, { type PropsWithChildren } from 'react'
 
 import { CartPanel } from '@hanzo/commerce'
 
-import BagIcon from './bag-icon'
+import * as Icons from '../icons'
 
 const BagPanel: React.FC<PropsWithChildren & {
   className?: string
@@ -18,7 +18,7 @@ const BagPanel: React.FC<PropsWithChildren & {
     handleCheckout={handleCheckout}
   >
     <div className='flex items-center justify-center'>
-      <BagIcon width={32} height={32} className='fill-foreground mr-2 relative -top-1'/>
+      <Icons.bag className='fill-foreground mr-2 relative -top-1 w-8 h-8'/>
       <p className='font-nav text-default'>Your Bag</p>
       {children}
     </div>

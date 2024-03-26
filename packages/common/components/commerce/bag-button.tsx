@@ -4,9 +4,9 @@ import { observer } from 'mobx-react-lite'
 
 import { buttonVariants } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-
-import BagIcon from './bag-icon'
 import { useCommerce } from '@hanzo/commerce'
+
+import * as Icons from '../icons'
 
 const BagButton: React.FC<{
   hideIfEmpty?: boolean  
@@ -46,8 +46,8 @@ const BagButton: React.FC<{
         <div>{c.cartQuantity}</div>
       </div>
     )}
-      <BagIcon width={26} height={30} className={
-        'relative -top-[3px] fill-primary ' + 
+      <Icons.bag className={
+        'relative -top-[3px] fill-primary w-6 h-7 ' + 
         'group-hover:fill-primary-hover group-hover:scale-105 ' + 
         'transition-scale transition-duration-300'
       } aria-hidden="true" />
