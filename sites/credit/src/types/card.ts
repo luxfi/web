@@ -14,9 +14,33 @@ interface CardCategory extends Category {
   detail: ReactNode
 }
 
+type CardMaterial = {
+  title: string
+  img: string
+  url: string
+}
+
+type Card = {
+  img: string,
+  title: string,
+  rarity?: string,
+  materials: CardMaterial[],
+  annualFee: number,
+  initiationFee: number,
+  replacementFee: number,
+  rewardPct: number,
+  fxRatePct: number,
+  maxAccountHolders: number,
+  travelBenefits: React.ReactNode,
+  lifestyleBenefits: React.ReactNode,
+  rewards: React.ReactNode,
+  karmaRewards: React.ReactNode,
+}
 
 export {
-  type CardType,
-  type CardCategory
+  type Card,
+  type CardCategory,
+  type CardMaterial,
+  type CardType
 }
 

@@ -1,6 +1,8 @@
 import { type PropsWithChildren } from 'react'
+
 import { Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+
 import RowHeading from './RowHeading'
 
 const Row: React.FC<{
@@ -17,7 +19,7 @@ const Row: React.FC<{
 }) => {
   return (
     <div key={key} className={cn('py-4', isOdd ? 'bg-muted-4' : '')}>
-      <Main className='grid grid-cols-2 lg:grid-cols-11 gap-20'>
+      <Main className='grid grid-cols-2 lg:grid-cols-11 gap-6 sm:gap-8 lg:gap-20'>
         <RowHeading title={title} description={description}/>
         {children}
       </Main>

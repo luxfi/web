@@ -1,11 +1,30 @@
-import travelBenefits from './travel-benefits.mdx'
-import lifestyleBenefits from './lifestyle-benefits.mdx'
-import rewards from './rewards.mdx'
-import karmaRewards from './karma-rewards.mdx'
+import TravelBenefits from './travel-benefits.mdx'
+import LifestyleBenefits from './lifestyle-benefits.mdx'
+import Rewards from './rewards.mdx'
+import KarmaRewards from './karma-rewards.mdx'
+import type { Card } from '@/types/card'
+
+const card: Card = {
+  img: '/assets/img/cards-flat/titanium-f-700x441.png',
+  title: 'Lux Sovereign Card',
+  rarity: '1/10,000',
+  materials: [{
+    title: 'Reflective Titanium',
+    img: '/assets/img/materials/sovereign-card-reflective-titanium-100x99.png',
+    url: '/buy?sku=LXM-CR-S-RT'
+  }],
+  annualFee: 14999,
+  initiationFee: 49050,
+  replacementFee: 89,
+  rewardPct: 11,
+  fxRatePct: 0,
+  travelBenefits: <TravelBenefits/>,
+  lifestyleBenefits: <LifestyleBenefits/>,
+  rewards: <Rewards/>,
+  karmaRewards: <KarmaRewards/>,
+  maxAccountHolders: 10,
+}
 
 export {
-  travelBenefits as SovereignTravelBenefits,
-  lifestyleBenefits as SovereignLifestyleBenefits,
-  rewards as SovereignRewards,
-  karmaRewards as SovereignKarmaRewards
+  card as default,
 }

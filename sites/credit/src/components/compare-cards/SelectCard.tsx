@@ -1,23 +1,31 @@
-import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
-import { cards, type Card as CardInfo } from '../../content/compare-cards'
 import { Plus } from 'lucide-react'
+
 import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { cn } from '@hanzo/ui/util'
+import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
+
+import type { Card } from '@/types/card'
+import cards from '@/content/compare-cards'
 
 const SelectCard: React.FC<{
-  selectedCards: CardInfo[]
-  setSelectedCards: (cards: CardInfo[]) => void
+  key: number
+  selectedCards: Card[]
+  setSelectedCards: (cards: Card[]) => void
+  hiddenOnMobile?: boolean
 }> = ({
+  key,
   selectedCards,
-  setSelectedCards
+  setSelectedCards,
+  hiddenOnMobile
 }) => {
-  const cardAlreadySelected = (card: CardInfo) => {
+  const cardAlreadySelected = (card: Card) => {
     return selectedCards.map(({title}) => title).includes(card?.title)
   }
 
   return (
-    <Popover>
+    <Popover key={key}>
       <PopoverTrigger asChild>
-        <div className='flex flex-col lg:col-span-3 gap-5 text-center h-fit'>
+        <div className={cn(hiddenOnMobile ? 'hidden lg:flex' : 'flex', 'flex-col lg:col-span-3 gap-5 text-center h-fit')}>
           <Button
             variant='ghost'
             className='flex rounded-xl border border-foreground items-center justify-center aspect-[1.6/1] w-pr-80 mx-auto h-auto'
@@ -29,7 +37,7 @@ const SelectCard: React.FC<{
           <h4 className='text-xl cursor-pointer'>Add card</h4>
         </div>
       </PopoverTrigger>
-      <PopoverContent className='w-full max-w-80'>
+      <PopoverContent>
         <div className='flex flex-col gap-6'>
           <div className='space-y-2'>
             <h4 className='font-medium leading-none'>Lux cards</h4>
