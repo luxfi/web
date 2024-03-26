@@ -56,13 +56,12 @@ const CardHero: React.FC<{
         </div>
         <h6 className='font-nav text-xs'>{card.title}</h6>
       </div>
-      <div className='relative flex flex-col gap-2 items-center justify-end'>
+      <div className='relative flex flex-col gap-4 items-center justify-end'>
         <div className='flex flex-col items-center text-xxs sm:text-base'>
           <div><span className='font-bold'>Annual Fee:</span> {formatPrice(card.annualFee)}</div>
           <div><span className='font-bold'>Initiation Fee:</span> {formatPrice(card.initiationFee)}</div>
         </div>
         <div className='flex flex-col gap-2 items-center'>
-          <h5 className='hidden sm:block text-base'>Choose Your Design</h5>
           <div className='flex gap-4 justify-center'>
             {card.materials.map(({title, img}, i) => (
               <div
