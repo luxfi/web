@@ -17,12 +17,12 @@ interface CardCategory extends Category {
 
 type CardMaterial = {
   title: string
-  img: string
   sku: string
+  materialImg: ImageDef
+  cardImg: ImageDef
 }
 
 type Card = {
-  img: ImageDef,
   title: string,
   rarity?: string,
   materials: CardMaterial[],

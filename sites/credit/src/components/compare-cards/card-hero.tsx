@@ -42,7 +42,7 @@ const CardHero: React.FC<{
       <div className='flex flex-col gap-2 h-full justify-between'>
         <div className='relative flex gap-2 items-center'>
           <ImageBlockComponent
-            block={{blockType: 'image', ...card.img}}
+            block={{blockType: 'image', ...selectedMaterial.cardImg}}
             className='w-pr-80'
           />
           <Button
@@ -63,18 +63,14 @@ const CardHero: React.FC<{
         </div>
         <div className='flex flex-col gap-2 items-center'>
           <div className='flex gap-4 justify-center'>
-            {card.materials.map(({title, img}, i) => (
+            {card.materials.map(({title, materialImg}, i) => (
               <div
                 key={i}
                 className={cn('cursor-pointer rounded-full p-1', title === selectedMaterial?.title && 'outline outline-2 outline-foreground')}
                 onClick={() => setSelectedMaterial(card.materials[i])}
               >
                 <ImageBlockComponent
-                  block={{blockType: 'image', 
-                      src: img, dim: {w: 99, h: 99 },
-                      alt: title
-                    } as ImageBlock
-                  }
+                  block={{blockType: 'image', ...materialImg}}
                   className='h-10 w-10'
                 />
               </div>

@@ -8,7 +8,7 @@ import type { Card } from '@/types/card'
 import cards from '@/content/compare-cards'
 
 const SelectCard: React.FC<{
-  key: number
+  key: number | string
   selectedCards: Card[]
   setSelectedCards: (cards: Card[]) => void
   hiddenOnMobile?: boolean
@@ -53,7 +53,7 @@ const SelectCard: React.FC<{
                 onClick={() => setSelectedCards([...selectedCards, cardChoice])}
               >
                 <ImageBlockComponent
-                  block={{blockType: 'image', ...cardChoice.img}}
+                  block={{blockType: 'image', ...cardChoice.materials[0].cardImg}}
                   className='w-12 h-auto m-0'
                 />
                 <h3 className='hover:opacity-80'>{cardChoice.title}</h3>

@@ -5,18 +5,22 @@ import KarmaRewards from './karma-rewards.mdx'
 import type { Card } from '@/types/card'
 
 const card: Card = {
-  img: {
-    src: '/assets/img/cards-flat/black-f-700x441.png',
-    dim: {w: 700, h: 441 },
-    alt: 'Lux Black Card'
-  },
-  title: 'Lux Black Card',
+  title: 'Black Card',
   materials: [{
     title: 'Anodized Black Titanium',
-    img: '/assets/img/materials/black-card-anodized-black-titanium-100x99.png',
-    sku: 'LXM-CR-B-ABT'
+    sku: 'LXM-CR-B-ABT',
+    materialImg: {
+      src: '/assets/img/materials/black-card-anodized-black-titanium-100x99.png',
+      dim: {w: 100, h: 99 },
+      alt: 'Anodized Black Titanium'
+    },
+    cardImg: {
+      src: '/assets/img/cards-flat/black-f-700x441.png',
+      dim: {w: 700, h: 441 },
+      alt: 'Black Card Anodized Black Titanium'
+      },
   }],
-  annualFee: 69,
+  annualFee: 99,
   initiationFee: 999,
   replacementFee: 49,
   rewardPct: 7,

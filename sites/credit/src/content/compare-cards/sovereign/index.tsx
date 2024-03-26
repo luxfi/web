@@ -5,19 +5,23 @@ import KarmaRewards from './karma-rewards.mdx'
 import type { Card } from '@/types/card'
 
 const card: Card = {
-  img: {
-    src: '/assets/img/cards-flat/titanium-f-700x428.png',
-    dim: {w: 700, h: 428 },
-    alt: 'Lux Sovereign Card'
-  },
-  title: 'Lux Sovereign Card',
+  title: 'Sovereign Card',
   rarity: '1/10,000',
   materials: [{
     title: 'Reflective Titanium',
-    img: '/assets/img/materials/sovereign-card-reflective-titanium-100x99.png',
-    sku: 'LXM-CR-S-RT'
+    sku: 'LXM-CR-S-RT',
+    materialImg: {
+      src: '/assets/img/materials/sovereign-card-reflective-titanium-100x99.png',
+      dim: {w: 100, h: 99 },
+      alt: 'Reflective Titanium'
+    },
+    cardImg: {
+      src: '/assets/img/cards-flat/titanium-f-700x428.png',
+      dim: {w: 700, h: 428 },
+      alt: 'Sovereign Card Reflective Titanium'
+    },
   }],
-  annualFee: 14999,
+  annualFee: 4999,
   initiationFee: 49050,
   replacementFee: 89,
   rewardPct: 11,
