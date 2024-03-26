@@ -13,6 +13,9 @@ export {
   viewport as rootLayoutViewport
 } from './root-layout'
 
+export { default as CheckoutPanel } from './commerce/checkout-panel'
+
+
 /* PLEASE KEEP
 export { 
   default as HeadMetadata, 

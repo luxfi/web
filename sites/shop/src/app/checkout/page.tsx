@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 
 import { Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { CheckoutPanel } from '@hanzo/commerce'
+import { CheckoutPanel } from '@luxdefi/common'
 
 const Page: React.FC = () => {
 
