@@ -29,7 +29,7 @@ const MdxRowContent: React.FC<{
       key={key}
       className={cn(
         hiddenOnMobile ? 'hidden lg:flex' : 'flex',
-        'flex-col gap-6 lg:col-span-3 typography-p:text-sm md:typography-p:text-base justify-center'
+        'flex-col gap-2 lg:gap-4 lg:col-span-3 typography-p:text-sm md:typography-p:text-base justify-center'
       )}
     >
       {content}
@@ -68,7 +68,7 @@ const CompareCards = () => {
       description: 'Sustainable, mindful experiences to elevate the body, mind, and soul.',
       content: <>
         {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} content={selectedCards[i]?.travelBenefits} hiddenOnMobile={i > 1}/>
+          <MdxRowContent key={i} content={selectedCards[i]?.travelBenefits} hiddenOnMobile={i > numCardsMobile - 1}/>
         ))}
       </>
     },
@@ -77,7 +77,7 @@ const CompareCards = () => {
       description: 'Rewards are based on a percentage of your average available credit.',
       content: <>
         {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} content={selectedCards[i]?.rewards} hiddenOnMobile={i > 1}/>
+          <MdxRowContent key={i} content={selectedCards[i]?.rewards} hiddenOnMobile={i > numCardsMobile - 1}/>
         ))}
       </>
     },
@@ -86,7 +86,7 @@ const CompareCards = () => {
       description: 'Karma Rewards, is our point reward system that can be used to pay for almost anything. You can also leverage it and earn even more by staking the Karma you have accrued in the Lux ecosystem. Plus you can even sell it to pay off your balance. ',
       content: <>
         {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} content={selectedCards[i]?.karmaRewards} hiddenOnMobile={i > 1}/>
+          <MdxRowContent key={i} content={selectedCards[i]?.karmaRewards} hiddenOnMobile={i > numCardsMobile - 1}/>
         ))}
       </>
     },
@@ -94,7 +94,7 @@ const CompareCards = () => {
       title: 'Exclusive Lux Benefits',
       content: <>
         {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} content={selectedCards[i]?.lifestyleBenefits} hiddenOnMobile={i > 1}/>
+          <MdxRowContent key={i} content={selectedCards[i]?.lifestyleBenefits} hiddenOnMobile={i > numCardsMobile - 1}/>
         ))}
       </>
     },
@@ -103,7 +103,7 @@ const CompareCards = () => {
       description: 'Reward Based on average Deposit.',
       content: <>
         {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent key={i} content={selectedCards[i]?.maxAccountHolders} hiddenOnMobile={i > 1}/>
+          <DataRowContent key={i} content={selectedCards[i]?.maxAccountHolders} hiddenOnMobile={i > numCardsMobile - 1}/>
         ))}
       </>
     },
@@ -115,7 +115,7 @@ const CompareCards = () => {
           <DataRowContent
             key={i}
             content={selectedCards[i] ? `${selectedCards[i].rewardPct}%` : undefined}
-            hiddenOnMobile={i > 1}
+            hiddenOnMobile={i > numCardsMobile - 1}
           />
         ))}
       </>
@@ -128,7 +128,7 @@ const CompareCards = () => {
           <DataRowContent
             key={i}
             content={selectedCards[i] ? formatPrice(selectedCards[i].replacementFee) : undefined}
-            hiddenOnMobile={i > 1}
+            hiddenOnMobile={i > numCardsMobile - 1}
           />
         ))}
       </>
@@ -141,7 +141,7 @@ const CompareCards = () => {
           <DataRowContent
             key={i}
             content={selectedCards[i] ? `${selectedCards[i].fxRatePct}%` : undefined}
-            hiddenOnMobile={i > 1}
+            hiddenOnMobile={i > numCardsMobile - 1}
           />
         ))}
       </>
@@ -180,9 +180,9 @@ const CompareCards = () => {
       </Main>
       {selectedCards.length > 0 && (
         <>
-          <Main>
+          <Main className='flex lg:hidden'>
             <ApplyTypography className='flex justify-center w-full col-span-2 lg:col-span-11 mt-12 sm:mb-6 text-center'>
-              <h2>Exclusive Lux Card Benefits</h2>
+              <h3>Exclusive Lux Card Benefits</h3>
             </ApplyTypography>
           </Main>
           {rows.map(({title, description, content}, i) => (

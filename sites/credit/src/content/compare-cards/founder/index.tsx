@@ -25,11 +25,11 @@ const card: Card = {
   replacementFee: 49,
   rewardPct: 8,
   fxRatePct: 0.75,
+  maxAccountHolders: 3,
   travelBenefits: <TravelBenefits/>,
   lifestyleBenefits: <LifestyleBenefits/>,
   rewards: <Rewards/>,
   karmaRewards: <KarmaRewards/>,
-  maxAccountHolders: 3,
 }
 
 export {

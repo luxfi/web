@@ -11,7 +11,7 @@ import { formatPrice } from '@hanzo/commerce'
 import type { Card } from '@/types/card'
 
 const CardHero: React.FC<{
-  key: number
+  key: number | string
   card: Card
   selectedCards: Card[]
   setSelectedCards: (cards: Card[]) => void
@@ -32,7 +32,13 @@ const CardHero: React.FC<{
   }, [card])
 
   return (
-    <ApplyTypography key={key} className={cn(hiddenOnMobile ? 'hidden lg:flex' : 'flex', 'flex-col lg:col-span-3 gap-2 items-center text-center')}>
+    <ApplyTypography
+      key={key}
+      className={cn(
+        hiddenOnMobile ? 'hidden lg:flex' : 'flex',
+        'flex-col lg:col-span-3 gap-2 items-center text-center'
+      )}
+    >
       <div className='relative flex gap-2 items-center'>
         <ImageBlockComponent
           block={{blockType: 'image', 
