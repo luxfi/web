@@ -6,8 +6,8 @@ import { AuthWidget } from '@hanzo/auth/components'
 
 import { Logo } from '..'
 
-import DesktopBagPopup from './desktop-bag-popup'
-import BagButton from './bag-button'
+import DesktopBagPopup from '../commerce/desktop-bag-popup'
+import BagButton from '../commerce/bag-button'
 
 
 import type { LinkDef } from '@hanzo/ui/types'

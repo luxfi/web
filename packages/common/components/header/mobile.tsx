@@ -13,11 +13,11 @@ import sendGAEvent from '../../next/analytics/google-analytics'
 
 import { Logo } from '..'
 
-import MenuToggleButton from './mobile-menu-toggle-button'
-import BagButton from './bag-button'
-import MobileBagDrawer from './mobile-bag-drawer'
-import BagPanel from './bag-panel'
-import NavMenu from './mobile-nav-menu'
+import MenuToggleButton from '../commerce/mobile-menu-toggle-button'
+import BagButton from '../commerce/bag-button'
+import MobileBagDrawer from '../commerce/mobile-bag-drawer'
+import BagPanel from '../commerce/bag-panel'
+import NavMenu from '../commerce/mobile-nav-menu'
 
 const bagClx = 'mt-4 mb-8 border-none py-0 px-4 w-full ' +
     'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
