@@ -11,7 +11,7 @@ const card: Card = {
   materials: [{
     title: 'Reflective Titanium',
     img: '/assets/img/materials/sovereign-card-reflective-titanium-100x99.png',
-    url: '/buy?sku=LXM-CR-S-RT'
+    sku: 'LXM-CR-S-RT'
   }],
   annualFee: 14999,
   initiationFee: 49050,

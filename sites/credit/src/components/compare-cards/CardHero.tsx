@@ -6,7 +6,7 @@ import { X } from 'lucide-react'
 import { ImageBlockComponent, type ImageBlock, CTABlockComponent, type CTABlock } from '@hanzo/ui/blocks'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { formatPrice } from '@hanzo/commerce'
+import { BuyItemButton, formatPrice } from '@hanzo/commerce'
 
 import type { Card } from '@/types/card'
 
@@ -84,14 +84,13 @@ const CardHero: React.FC<{
         </div>
         <p className='text-xxs sm:text-xs'>{selectedMaterial?.title}</p>
       </div>
-      <CTABlockComponent
-        block={{blockType: 'cta',
-          specifiers: 'fill',
-          elements: [
-            {title: 'Select Card', variant: 'primary', href: selectedMaterial?.url ?? ''}
-          ]
-        } as CTABlock}
-      />
+      <BuyItemButton 
+        skuPath={selectedMaterial.sku} 
+        popupClx='w-[340px]' 
+        className='w-full max-w-72'
+      >
+        Buy
+      </BuyItemButton>
     </ApplyTypography>
   )
 }

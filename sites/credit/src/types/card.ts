@@ -17,7 +17,7 @@ interface CardCategory extends Category {
 type CardMaterial = {
   title: string
   img: string
-  url: string
+  sku: string
 }
 
 type Card = {

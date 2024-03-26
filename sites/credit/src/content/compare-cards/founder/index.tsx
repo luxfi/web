@@ -12,12 +12,12 @@ const card: Card = {
     {
       title: 'Cool Chrome',
       img: '/assets/img/materials/founder-card-cool-chrome-99x99.png',
-      url: '/buy?sku=LXM-CR-F-CC'
+      sku: 'LXM-CR-F-CC'
     },
     {
       title: 'Iridescent Chrome',
       img: '/assets/img/materials/founder-card-iridescent-chrome-99x99.png',
-      url: '/buy?sku=LXM-CR-F-IC'
+      sku: 'LXM-CR-F-IC'
     }
   ],
   annualFee: 0,

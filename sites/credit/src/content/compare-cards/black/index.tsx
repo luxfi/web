@@ -10,7 +10,7 @@ const card: Card = {
   materials: [{
     title: 'Anodized Black Titanium',
     img: '/assets/img/materials/black-card-anodized-black-titanium-100x99.png',
-    url: '/buy?sku=LXM-CR-B-ABT'
+    sku: 'LXM-CR-B-ABT'
   }],
   annualFee: 69,
   initiationFee: 999,

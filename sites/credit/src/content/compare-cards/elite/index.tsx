@@ -12,12 +12,12 @@ const card: Card = {
     {
       title: '24k Gold',
       img: '/assets/img/materials/elite-card-gold-100x99.png',
-      url: '/buy?sku=LXM-CR-E-24G'
+      sku: 'LXM-CR-E-24G'
     },
     {
       title: 'Sterling Silver',
       img: '/assets/img/materials/elite-card-silver-99x99.png',
-      url: '/buy?sku=LXM-CR-E-SS'
+      sku: 'LXM-CR-E-SS'
     }
   ],
   annualFee: 200,

@@ -25,10 +25,10 @@ const SelectCard: React.FC<{
   return (
     <Popover key={key}>
       <PopoverTrigger asChild>
-        <div className={cn(hiddenOnMobile ? 'hidden lg:flex' : 'flex', 'flex-col lg:col-span-3 gap-5 text-center h-fit')}>
+        <div className={cn(hiddenOnMobile ? 'hidden lg:flex' : 'flex', 'flex-col lg:col-span-3 gap-2 sm:gap-5 text-center h-fit')}>
           <Button
             variant='ghost'
-            className='flex rounded-xl border border-foreground items-center justify-center aspect-[1.6/1] w-pr-80 mx-auto h-auto'
+            className='flex rounded-xl border border-foreground items-center justify-center aspect-[1.6/1] w-pr-90 sm:w-pr-80 mx-auto h-auto'
           >
             <div className='h-pr-40 aspect-square flex items-center justify-center rounded-full border border-foreground'>
               <Plus className='h-pr-40 w-full aspect-square'/>
