@@ -1,4 +1,4 @@
-# www
+# web
 
 ▼ on the World Wide Web 🌏.
 
