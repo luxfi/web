@@ -9,7 +9,7 @@ import { CartAccordian } from '@hanzo/commerce'
 import * as Icons from '../../icons'
 import CloseButton from './close-button'
 
-const MobilePanel: React.FC<PropsWithChildren & {
+const MobileCheckoutPanel: React.FC<PropsWithChildren & {
   index: number
   stepNames: string[]
   close:() => void
@@ -42,4 +42,4 @@ const MobilePanel: React.FC<PropsWithChildren & {
   </div>
 )
 
-export default MobilePanel
+export default MobileCheckoutPanel

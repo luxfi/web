@@ -1,7 +1,7 @@
 'use client'
 import React, { useState }  from 'react'
 
-import { capitalize } from '@hanzo/ui/util'
+import { capitalize, cn } from '@hanzo/ui/util'
 
 import { useCommerce, ShippingStepForm, PaymentStepForm } from '@hanzo/commerce'
 import type { CheckoutStep } from '@hanzo/commerce/types'
@@ -26,8 +26,8 @@ const STEPS = [
 
 const STEP_NAMES = STEPS.map((s) => (s.label ? s.label : capitalize(s.name)))
 
-import DesktopCP from './desktop'
-import MobileCP from './mobile'
+import DesktopCP from './dt-checkout-panel'
+import MobileCP from './mb-checkout-panel'
 
 const CheckoutPanel: React.FC<{
   close: () => void
@@ -81,26 +81,24 @@ const CheckoutPanel: React.FC<{
 
   const StepToRender = STEPS[stepIndex].Comp  
 
-  return (
-    <div /* id='CHECKOUT_PANEL' */  className={className} >
-      <DesktopCP 
-        className='hidden md:flex h-full flex-row justify-center overflow-y-hidden' 
-        close={_close}
-        index={stepIndex}
-        stepNames={STEP_NAMES}
-      >
-        <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
-      </DesktopCP>
-      <MobileCP 
-        className='md:hidden h-full overflow-y-auto' 
-        close={_close}
-        index={stepIndex}
-        stepNames={STEP_NAMES}
-      >
-        <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
-      </MobileCP>
-    </div>
-  )
+  return (<>
+    <DesktopCP 
+      className={cn('h-full', className, 'hidden md:flex')} 
+      close={_close}
+      index={stepIndex}
+      stepNames={STEP_NAMES}
+    >
+      <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
+    </DesktopCP>
+    <MobileCP 
+      className={cn('h-full overflow-y-auto', className, 'md:hidden' )} 
+      close={_close}
+      index={stepIndex}
+      stepNames={STEP_NAMES}
+    >
+      <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
+    </MobileCP>
+  </>)
 }
 
 export default CheckoutPanel
