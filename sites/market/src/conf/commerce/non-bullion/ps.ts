@@ -16,7 +16,8 @@ export default {
       categoryId: 'LXM-PS',
       price: 100,
       img: PS_IMG,
-      video: passVideo
+      video: passVideo,
+      animation: 'https://prod.spline.design/Itggaf1iI7481mcU/scene.splinecode'
     },
   ] satisfies Product[]
 } satisfies Category
