@@ -1,35 +1,73 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 
-import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { BuyItemButton, formatPrice } from '@hanzo/commerce'
 
-import type { Card } from '@/types/card'
+import type { Card, CardMaterial } from '@/types/card'
+import type { CardWithSelectedMaterial } from '../index'
 
 const CardHero: React.FC<{
   key: number | string
   card: Card
-  selectedCards: Card[]
-  setSelectedCards: (cards: Card[]) => void
+  selectedCards: CardWithSelectedMaterial[]
+  setSelectedCards: (cards: CardWithSelectedMaterial[]) => void
   hiddenOnMobile?: boolean
+  condensed?: boolean
 }> = ({
   key,
   card,
   selectedCards,
   setSelectedCards,
-  hiddenOnMobile
+  hiddenOnMobile,
+  condensed
 }) => {
-  const [selectedMaterial, setSelectedMaterial] = useState(card?.materials[0])
 
-  useEffect(() => {
-    if (card) {
-      setSelectedMaterial(card.materials[0])
-    }
-  }, [card])
+  const changeCardMaterial = (card: Card, material: CardMaterial) => {
+    setSelectedCards(selectedCards.map(selectedCard => {
+      if (selectedCard.title === card.title) {
+        return {
+          ...selectedCard,
+          selectedMaterial: material
+        }
+      }
+      return selectedCard
+    }))
+  }
+
+  const selectedMaterial = selectedCards.find(c => c.title === card.title)?.selectedMaterial
+
+  if (!selectedMaterial) {
+    return null
+  }
+
+  if (condensed) {
+    return (
+      <div
+        className={cn(
+          hiddenOnMobile ? 'hidden lg:flex' : 'flex',
+          'flex-col gap-2 lg:col-span-3'
+        )}
+      >
+        <div className='flex gap-2 self-start items-center'>
+          <ImageBlockComponent
+            block={{blockType: 'image', ...selectedMaterial?.cardImg}}
+            className='h-8 w-auto'
+          />
+          <h6 className='font-nav text-xs xl:text-base'>{card.title}</h6>
+        </div>
+        <BuyItemButton 
+          skuPath={selectedMaterial.sku} 
+          popupClx='w-[340px]' 
+          className='w-full'
+          size='xs'
+        >
+          Add +
+        </BuyItemButton>
+      </div>
+    )
+  }
 
   return (
     <ApplyTypography
@@ -67,7 +105,7 @@ const CardHero: React.FC<{
               <div
                 key={i}
                 className={cn('cursor-pointer rounded-full p-1', title === selectedMaterial?.title && 'outline outline-2 outline-foreground')}
-                onClick={() => setSelectedMaterial(card.materials[i])}
+                onClick={() => changeCardMaterial(card, card.materials[i])}
               >
                 <ImageBlockComponent
                   block={{blockType: 'image', ...materialImg}}
@@ -83,7 +121,7 @@ const CardHero: React.FC<{
           popupClx='w-[340px]' 
           className='w-full max-w-72'
         >
-          Buy
+          Add +
         </BuyItemButton>
       </div>
     </ApplyTypography>
