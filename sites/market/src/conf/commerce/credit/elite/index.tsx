@@ -24,6 +24,7 @@ export default {
       titleAsOption: '24k Gold',
       price: 500,
       img: '/assets/img/cards-flat/gold-f-700x442.png',
+      animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
     } satisfies Product,
     {
       id: 'LXM-CR-E-SS',
@@ -33,6 +34,7 @@ export default {
       titleAsOption: 'Sterling Silver',
       price: 500,
       img: '/assets/img/cards-flat/silver-f-700x441.png',
+      animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
     } satisfies Product,
   ]
 } satisfies CardCategory 
