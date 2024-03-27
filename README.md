@@ -1,10 +1,10 @@
-# www
+# web
 
 ▼ on the World Wide Web 🌏.
 
-#### Shaping the future of finance and lifestyle, integrates blockchain, sustainability, security, and innovation.
+#### Decentralized network of blockchains designed for privacy and quantum security. 
 
-## Features
+## Lux Features
 
 **Quantum-Safe Technologies**: Ensuring security against quantum threats, Lux Network fortifies digital finance's future.
 
@@ -14,7 +14,7 @@
 
 **AI-Driven Lifestyle**: Lux AI enhances daily life, encouraging growth.
 
-## Ecosystem
+## Lux Ecosystem
 - Lux Partners Limited, our company: [Lux Partners](https://lux.partners)
 - Lux Network of blockchains: [Lux Network](https://lux.network)
 - Lux Credit Card: [Lux Credit](https://lux.credit)

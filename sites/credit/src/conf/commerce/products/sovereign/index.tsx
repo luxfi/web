@@ -24,6 +24,7 @@ export default {
       titleAsOption: 'Reflective Titanium',
       price: 50000,
       img: '/assets/img/cards-flat/titanium-f-700x441.png',
+      animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'
     } satisfies Product,
     ]
 } satisfies CardCategory as CardCategory

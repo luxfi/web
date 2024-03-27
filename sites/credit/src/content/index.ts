@@ -17,7 +17,7 @@ const tiles = [
   browseCards,
   keyFeatures,
   cashBack,
-  roadmap,
+  // roadmap,
   flexibleBorrowing,
   easySpending,
   directOwnership

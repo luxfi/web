@@ -25,6 +25,7 @@ export default {
       titleAsOption: 'Cool Chrome',
       price: 5000,
       img: '/assets/img/cards-flat/chrome-cool-f-700x441.png',
+      animation: 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode'
     } satisfies Product,
     {
       id: 'LXM-CR-F-IC',
@@ -34,6 +35,7 @@ export default {
       titleAsOption: 'Iridescent Chrome',
       price: 5000,
       img: '/assets/img/cards-flat/chrome-irid-f-700x441.png',
+      animation: 'https://prod.spline.design/O1mz-aE1mHafZXeX/scene.splinecode'
     } satisfies Product,
   ]
 
