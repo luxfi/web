@@ -26,7 +26,7 @@ const CompareCards = () => {
         <SelectCardRow selectedCards={selectedCards} setSelectedCards={setSelectedCards}/>
         {selectedCards.length > 0 && (
           <>
-            <Main>
+            <Main id='benefits'>
               <ApplyTypography className='flex justify-center w-full col-span-2 lg:col-span-11 mt-12 sm:mb-6 text-center'>
                 <h3>Exclusive Lux Card Benefits</h3>
               </ApplyTypography>

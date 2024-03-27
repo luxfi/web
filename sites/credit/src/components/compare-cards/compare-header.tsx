@@ -18,7 +18,10 @@ const CompareHeader: React.FC<{
 
   useEffect(() => {
     const onScroll = () => {
-      setShowHeader(window.scrollY > 300)
+      const element = document.getElementById('benefits')
+      if (element) {
+        setShowHeader(element.getBoundingClientRect().top < 0)
+      }
     }
 
     document.addEventListener('scroll', onScroll)
@@ -28,7 +31,7 @@ const CompareHeader: React.FC<{
   }, [])
   
   return (
-    <div className={cn(showHeader ? 'block' : 'hidden', 'fixed w-full bg-background mt-11 md:mt-20 z-10')}>
+    <div className={cn(showHeader ? 'opacity-100 top-0' : 'opacity-0 -top-30', 'fixed w-full bg-background mt-11 md:mt-20 transition-all')}>
       <SelectCardRow selectedCards={selectedCards} setSelectedCards={setSelectedCards} condensed/>
     </div>
   )
