@@ -4,23 +4,23 @@ import { useRouter } from 'next/navigation'
 
 import type { LinkDef } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
-import { ScrollArea } from '@hanzo/ui/primitives'
 
-import { useCommerce } from '@hanzo/commerce'
+import { CartPanel, useCommerce } from '@hanzo/commerce'
 import { AuthWidget, LoginComponent } from '@hanzo/auth/components'
 
 import sendGAEvent from '../../next/analytics/google-analytics'
+import * as Icons from '../icons'
 
 import { Logo } from '..'
 
-import MenuToggleButton from './mobile-menu-toggle-button'
-import BagButton from './bag-button'
-import MobileBagDrawer from './mobile-bag-drawer'
-import BagPanel from './bag-panel'
-import NavMenu from './mobile-nav-menu'
+import MenuToggleButton from '../commerce/mobile-menu-toggle-button'
+import BagButton from '../commerce/bag-button'
+import MobileBagDrawer from '../commerce/mobile-bag-drawer'
+import NavMenu from '../commerce/mobile-nav-menu'
 
 const bagClx = 'mt-4 mb-8 border-none py-0 px-4 w-full ' +
-    'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
+    'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh] ' + 
+    'sm:animate-in sm:zoom-in-90 '
 
 const MobileHeader: React.FC<{
   currentAs: string | undefined
@@ -111,7 +111,12 @@ const MobileHeader: React.FC<{
         </div>
       </div>
     </header>
-    <MobileBagDrawer open={bagDrawerOpen} setOpen={setBagDrawerOpen} handleCheckout={handleCheckout}/>
+    <MobileBagDrawer 
+      className=''
+      open={bagDrawerOpen} 
+      setOpen={setBagDrawerOpen} 
+      handleCheckout={handleCheckout}
+    />
     {menuOpen() && (
       <div className={  
         'fixed top-0 left-0 w-full h-full ' + 
@@ -121,9 +126,24 @@ const MobileHeader: React.FC<{
         <LoginComponent noHeading onLoginChanged={onLoginChanged} className='sm:animate-in sm:zoom-in-90' />
       ) : ( 
         menuState === 'bag' ? (
-          <ScrollArea className='w-full sm:animate-in sm:zoom-in-90'>
-            <BagPanel handleCheckout={handleCheckout} className={bagClx} />
-          </ScrollArea>
+
+          <CartPanel 
+            handleCheckout={() => {router.push('/checkout')}} 
+            className={bagClx}
+            listClx='rounded-sm'
+            scrollAfter={6}
+            scrollHeightClx='h-[80vh]'
+            itemClx='mt-2'
+            totalClx='sticky px-1 pr-2 border rounded-sm -bottom-[1px] bg-level-1'
+            buttonClx='max-w-[220px] flex-none'
+          >
+            <div className='flex flex-row items-center flex-none justify-center '>
+              <Icons.bag className='mr-2 relative w-4 h-5 fill-foreground ' />
+              <p className='font-nav text-foreground text-default'>Your Bag</p>
+            </div>
+            <div className='h-[1px] w-pr-80 bg-muted-3 mx-auto mt-1.5 flex-none'/>
+          </CartPanel>
+
         ) : ( /* menuState === 'nav' */
           <NavMenu 
             currentAs={currentAs}

@@ -2,26 +2,32 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { buttonVariants } from '@hanzo/ui/primitives'
+import { buttonVariants, type ButtonSizes } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-
-import BagIcon from './bag-icon'
 import { useCommerce } from '@hanzo/commerce'
 
+import * as Icons from '../icons'
+
 const BagButton: React.FC<{
-  hideIfEmpty?: boolean  
+  showIfEmpty?: boolean  
+  noHoverEffects?: boolean
+  size?: ButtonSizes
   className?: string
+  iconClx?: string
   onClick?: () => void
 }> = observer(({
-  hideIfEmpty=true,
+  showIfEmpty=false,
+  noHoverEffects=false,
+  size='default',
   className='',
+  iconClx='',
   onClick
 }) => {
 
   const c = useCommerce()
 
     // undefined means context is not installed, ie commerce functions are not in use
-  if (!c || (hideIfEmpty && c.cartEmpty)) {
+  if (!c || (!showIfEmpty && c.cartEmpty)) {
     return <div /> // trigger code needs non-null 
   }
 
@@ -31,8 +37,9 @@ const BagButton: React.FC<{
       role='button'
       onClick={onClick}
       className={cn(
-        buttonVariants({ variant: 'ghost', size: 'default', rounded: 'md' }), 
-        'relative group p-0 aspect-square hover:bg-background',
+        buttonVariants({ variant: 'ghost', size, rounded: 'md' }),
+          // Overides the bg change on hover --not a "hover effect" 
+        'relative group p-0 aspect-square hover:bg-background', 
         className
       )}
     >
@@ -46,11 +53,13 @@ const BagButton: React.FC<{
         <div>{c.cartQuantity}</div>
       </div>
     )}
-      <BagIcon width={26} height={30} className={
-        'relative -top-[3px] fill-primary ' + 
-        'group-hover:fill-primary-hover group-hover:scale-105 ' + 
-        'transition-scale transition-duration-300'
-      } aria-hidden="true" />
+      <Icons.bag className={cn(
+        'relative -top-[3px] fill-primary w-6 h-7 ',
+        iconClx,
+        (noHoverEffects ? '' : (
+          'group-hover:fill-primary-hover group-hover:scale-105 transition-scale transition-duration-300'
+        )) 
+      )} aria-hidden="true" />
     </div>            
   )
 })
