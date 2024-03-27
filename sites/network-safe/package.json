@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@hanzo/auth": "2.3.2",
-    "@hanzo/commerce": "4.9.0",
-    "@hanzo/ui": "3.0.18",
-    "@luxdefi/common": "3.5.19",
+    "@hanzo/commerce": "5.0.0",
+    "@hanzo/ui": "3.0.19",
+    "@luxdefi/common": "4.0.0",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "mobx-react": "^9.1.0",
