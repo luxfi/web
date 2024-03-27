@@ -6,7 +6,6 @@ import { AuthWidget } from '@hanzo/auth/components'
 import { CartPanel } from '@hanzo/commerce'
 
 import * as Icons from '../../icons'
-import BagWithCarousel from './dt-bag-panel'
 import DesktopBagCarousel from './dt-bag-carousel'
 import CloseButton from './close-button'
 import { cn } from '@hanzo/ui/util'
@@ -22,9 +21,9 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
   close,
   className='',
   children
-}) => ( //      <ScrollArea className='h-full w-full flex flex-col items-center justify-start px-6 pt-12 pb-9'>
+}) => ( 
 
-  <div id='CHECKOUT_PANEL'  className={cn('grid grid-cols-2',  className)}>
+  <div /* id='CHECKOUT_PANEL' */  className={cn('grid grid-cols-2',  className)}>
     <div className='w-full h-full bg-background flex flex-row items-start justify-end'>
       <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start px-8 pt-0'>
         <CloseButton close={close} className='absolute top-6 left-3 w-auto h-auto rounded-full bg-level-1 hover:bg-level-2 hover:border-muted p-2' />
@@ -34,9 +33,13 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
         </div>
         <div className='w-full max-w-[550px] mx-auto'>
           <DesktopBagCarousel className='h-[260px] w-[360px] lg:w-[420px] mx-auto -mt-8' constrainTo={{w: 250, h: 250}}/>
-          <ScrollArea className='h-[50vh] w-full pb-0' >
-            <CartPanel className='w-full border-none p-0 pr-3' itemClx='mb-3' totalClx='sticky bottom-0 p-1 bg-background border rounded-sm'/>
-          </ScrollArea>
+          <CartPanel 
+            className='w-full border-none p-0 pr-3' 
+            itemClx='mb-3' 
+            totalClx='sticky bottom-0 p-1 bg-background border rounded-sm'
+            scrollAfter={5}
+            scrollHeightClx='h-[50vh]'
+          />
         </div>
       </div>
     </div>

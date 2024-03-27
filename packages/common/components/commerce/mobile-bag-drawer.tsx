@@ -3,11 +3,9 @@ import React from 'react'
 
 import { Drawer, DrawerContent} from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+import { CartPanel } from '@hanzo/commerce'
 
-import BagPanel from './bag-panel'
-
-const bagClx = 'mt-4 mb-8 border-none py-0 px-4 w-full ' +
-  'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh]'
+import BagButton from './bag-button'
 
 const MobileBagDrawer: React.FC<{
   open: boolean,
@@ -19,12 +17,35 @@ const MobileBagDrawer: React.FC<{
   setOpen,
   handleCheckout,
   className='',
-}) => (
-  <Drawer open={open} onOpenChange={setOpen}>
-    <DrawerContent className={cn('rounded-tl-xl rounded-tr-xl p-0 pt-3 ', className)} >
-      <BagPanel handleCheckout={handleCheckout} className={bagClx}/>
-    </DrawerContent>
-  </Drawer>
-)
+}) => {
+  
+  return (
+    <Drawer open={open} onOpenChange={setOpen}>
+      <DrawerContent className={cn('rounded-t-xl z-20 mt-6 pb-12 h-auto', className)} >
+        <CartPanel 
+          handleCheckout={handleCheckout} 
+          className='mt-4 mb-4 border-none py-0 px-4 w-full '
+          listClx='rounded-sm'
+          scrollAfter={5}
+          itemClx='mt-2'
+          totalClx='sticky px-1 pr-2 border rounded-sm -bottom-[1px] bg-background'
+          buttonClx='max-w-[220px] flex-none'
+        >
+          <div className='flex flex-row items-center flex-none justify-center '>
+            <BagButton 
+              noHoverEffects 
+              showIfEmpty 
+              className=
+              'mr-2 relative w-6 h-7'
+              iconClx='fill-foreground '
+            />
+            <p className='font-nav text-foreground text-default'>Your Bag</p>
+          </div>
+          <div className='h-[1px] w-pr-80 bg-muted-3 mx-auto mt-1.5 flex-none'/>
+        </CartPanel>
+      </DrawerContent>
+    </Drawer>
+  )
+}
 
 export default MobileBagDrawer

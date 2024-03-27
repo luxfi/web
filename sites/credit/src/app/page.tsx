@@ -10,7 +10,6 @@ import FooterSlide from '@/components/footer-slide'
 
 import siteDef from '../site-def'
 
-
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }

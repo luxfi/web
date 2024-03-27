@@ -6,8 +6,8 @@ import { cn } from '@hanzo/ui/util'
 import { AuthWidget } from '@hanzo/auth/components'
 import { CartAccordian } from '@hanzo/commerce'
 
-import * as Icons from '../../icons'
 import CloseButton from './close-button'
+import BagButton from '../bag-button'
 
 const MobileCheckoutPanel: React.FC<PropsWithChildren & {
   index: number
@@ -35,7 +35,16 @@ const MobileCheckoutPanel: React.FC<PropsWithChildren & {
       <div className='w-10 h-10 flex items-center justify-center'><AuthWidget noLogin className=''/></div>
     </div>
     <CartAccordian 
-      icon={<Icons.bag className='relative -top-0.5 w-4 h-5 sm:w-6 sm:h-7 shrink-0 '/>} 
+      icon={
+        <BagButton 
+          noHoverEffects 
+          showIfEmpty 
+          size='sm'
+          className=
+          'mr-1 relative w-5 h-6 sm:w-6 sm:h-7 '
+          iconClx='fill-foreground '
+        />
+      } 
       className='flex items-center justify-center py-2 mt-2 w-full' 
     />
     {children}
