@@ -10,7 +10,7 @@ import type {
   EnhHeadingBlock
 } from '@hanzo/ui/blocks'
 
-import { BuyItemButtonWrapper } from '@hanzo/commerce'
+import { BuyTriggerWrapper } from '@hanzo/commerce'
 
 import { cn } from '@hanzo/ui/util'
 
@@ -40,30 +40,13 @@ const CardButton : React.FC<{
   skuPath,
   className=''
 }) => (
-  <BuyItemButtonWrapper 
+  <BuyTriggerWrapper 
     skuPath={skuPath} 
-    desktopTrigger={(
+    trigger={(
       <button 
         className={cn('relative w-full opacity-90 group-hover:opacity-100  ' + 
           'rounded-2xl py-4 px-2 ' + 
-          'hidden md:flex flex-col justify-center items-center', 
-          '!no-underline',
-          className
-        )} 
-      > 
-        {CARDS[product]}
-        <div className='font-sans group-hover:text-muted-1 text-center'>
-          <span className='text-foreground font-semibold'>{capitalize(product)}</span>
-          <br/>
-          <span className='hidden sm:inline text-muted-1 text-xxs whitespace-nowrap'>click to buy&nbsp;</span>
-        </div>
-      </button>
-    )} 
-    mobileTrigger={(
-      <button 
-        className={cn('relative w-full opacity-90 group-hover:opacity-100 ' + 
-          'rounded-2xl py-4 px-2 ' + 
-          'flex md:hidden flex-col justify-center items-center', 
+          'flex flex-col justify-center items-center', 
           '!no-underline',
           className
         )} 

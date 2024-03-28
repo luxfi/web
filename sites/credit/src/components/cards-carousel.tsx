@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
-import { BuyItemButton } from '@hanzo/commerce'
+import { BuyButton } from '@hanzo/commerce'
 
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
@@ -46,14 +46,14 @@ const CardComponent: React.FC<{
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
       </div>
-      <BuyItemButton 
+      <BuyButton 
         skuPath={skuPath} 
-        popupClx='w-[300px]' 
+        variant='outline'        
         size='default'
         className='lg:min-w-[180px] sm:min-w-[180px]'
       >
         {label ? label : 'Buy'}
-      </BuyItemButton>
+      </BuyButton>
 
     </div>
 )
