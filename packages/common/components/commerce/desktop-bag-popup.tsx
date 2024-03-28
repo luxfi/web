@@ -61,7 +61,7 @@ const DesktopBagPopup: React.FC<{
           scrollAfter={5}
           scrollHeightClx='h-[70vh]'
           itemClx='mt-3'
-          totalClx='sticky px-1 pr-2 border rounded-sm -bottom-[1px] bg-level-1'
+          totalClx='sticky px-1 pr-2 -bottom-[1px] bg-level-1'
           buttonClx='max-w-[220px] flex-none'
         >
           <div className='flex flex-row items-center flex-none justify-center '>

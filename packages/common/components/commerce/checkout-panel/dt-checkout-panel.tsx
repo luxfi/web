@@ -36,9 +36,11 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
           <CartPanel 
             className='w-full border-none p-0 pr-3' 
             itemClx='mb-3' 
-            totalClx='sticky bottom-0 p-1 bg-background border rounded-sm'
+            totalClx='sticky bottom-0 p-1 bg-background'
             scrollAfter={5}
             scrollHeightClx='h-[50vh]'
+            showPromoCode
+            showShipping
           />
         </div>
       </div>
