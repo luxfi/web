@@ -10,9 +10,11 @@ import type ItemCTAsBlock from '@/blocks/def/item-ctas'
 const ItemCTAsBlockComponent: React.FC<{
   block: Block
   className?: string
+  agent?: string
 }> = ({
   block,
-  className=''
+  className='',
+  agent
 }) => {
 
   if (block.blockType !== 'item-ctas') {
@@ -47,6 +49,7 @@ const ItemCTAsBlockComponent: React.FC<{
         size='default'
         variant='primary'
         className='lg:min-w-[220px] sm:min-w-[220px]'
+        mobile={agent !== 'desktop'}
       >
         {ctas.buyLabel ? ctas.buyLabel : 'Buy'}
       </BuyButton>

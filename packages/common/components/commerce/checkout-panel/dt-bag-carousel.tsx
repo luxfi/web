@@ -11,6 +11,7 @@ const DesktopBagCarousel: React.FC<{
 }> = observer(({
   constrainTo,
   className=''
+  
 }) => {
   const cmmc = useCommerce()
   return (
