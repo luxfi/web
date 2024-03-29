@@ -29,7 +29,7 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
         <CloseButton close={close} className='absolute top-6 left-3 w-auto h-auto rounded-full bg-level-1 hover:bg-level-2 hover:border-muted p-2' />
         <div className='flex items-center justify-center  h-30  '>
           <Icons.bag className='fill-foreground mr-2 relative -top-1 w-6 h-7'/>
-          <p className='font-nav text-default'>Your Order</p>
+          <p className='font-heading text-default'>Your Order</p>
         </div>
         <div className='w-full max-w-[550px] mx-auto'>
           <DesktopBagCarousel className='h-[260px] w-[360px] lg:w-[420px] mx-auto -mt-8' constrainTo={{w: 250, h: 250}}/>

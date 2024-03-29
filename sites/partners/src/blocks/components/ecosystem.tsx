@@ -23,7 +23,7 @@ const Ecosystem = () => {
             <div className='flex flex-col gap-6 mt-6 max-w-[500px] mx-auto'>
               {ecosystem.blocks.map((block, index) => (
                 <div key={`ecosystem-${index}`} className='flex flex-col gap-2 text-center'>
-                  <CtaBlockComponent block={block.title} className='typography-a:no-underline typography-a:font-nav typography-a:text-lg sm:typography-a:text-xl' />
+                  <CtaBlockComponent block={block.title} className='typography-a:no-underline typography-a:font-heading typography-a:text-lg sm:typography-a:text-xl' />
                   {block.description && <p className='sm:text-lg'>{block.description}</p>}
                 </div>
               ))}

@@ -2,7 +2,7 @@ import type * as C from "@hanzo/ui/blocks/def"
 
 export default {
   text: {blockType: 'element',
-    element: <div className="font-nav flex flex-col gap-10">
+    element: <div className="flex flex-col gap-10">
       <h3 className="text-lg md:text-2xl">We believe a sustainable future can only be forged through decentralized consensus.</h3>
       <h1 className="text-2xl md:text-5xl font-heading">JOIN US</h1>
     </div>

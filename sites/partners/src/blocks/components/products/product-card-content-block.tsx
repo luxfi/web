@@ -24,7 +24,7 @@ const ProductCardContentBlockComponent: React.FC<{
         <ContentComponent blocks={card.title} />
       </ApplyTypography>
 
-      <EnhHeadingBlockComponent block={card.description} className="typography-h6:!font-nav"/>
+      <EnhHeadingBlockComponent block={card.description} className="typography-h6:!font-heading"/>
 
       <div className="flex flex-col gap-1">
         {card.blocks.map((block, index) => (
