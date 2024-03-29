@@ -79,20 +79,21 @@ const CheckoutPanel: React.FC<{
     close()
   }
 
-  // Determine if mobile or desktop based on visibility of e
-  const desktopEl = useRef<HTMLDivElement>(null)
-  const [agent, setAgent] = useState<'mobile' | 'desktop' | undefined>()
+  // Determine if mobile or desktop based on visibility of desktopElement
+  // https://stackoverflow.com/a/21696585/11378853
+  const desktopElement = useRef<HTMLDivElement | null>(null)
+  const [layout, setLayout] = useState<'mobile' | 'desktop' | undefined>()
   useEffect(() => {
-    const checkAgent = () => {
-      setAgent(!!desktopEl.current?.offsetParent ? 'desktop' : 'mobile')
+    const checkLayout = () => {
+      setLayout(!!desktopElement.current?.offsetParent ? 'desktop' : 'mobile')
     }
 
-    // initial agent check
-    checkAgent()
+    // initial layout check
+    checkLayout()
     
-    window.addEventListener('resize', checkAgent)
+    window.addEventListener('resize', checkLayout)
     return () => {
-      window.removeEventListener('resize', checkAgent)
+      window.removeEventListener('resize', checkLayout)
     }
   }, [])
 
@@ -106,8 +107,8 @@ const CheckoutPanel: React.FC<{
       stepNames={STEP_NAMES}
     >
       {/* Element required to determine if DesktopCP is visible */}
-      <div ref={desktopEl}/>
-      {agent === 'desktop' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
+      <div ref={desktopElement}/>
+      {layout === 'desktop' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
     </DesktopCP>
     <MobileCP 
       className={cn('h-full overflow-y-auto', className, 'md:hidden' )} 
@@ -115,7 +116,7 @@ const CheckoutPanel: React.FC<{
       index={stepIndex}
       stepNames={STEP_NAMES}
     >
-      {agent === 'mobile' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
+      {layout === 'mobile' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
     </MobileCP>
   </>)
 }
