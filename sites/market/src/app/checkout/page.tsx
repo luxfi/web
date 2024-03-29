@@ -6,22 +6,29 @@ import { Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { CheckoutPanel } from '@luxdefi/common'
 
-const Page: React.FC = () => {
+type Props = {
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
 
+const Page = ({ searchParams }: Props) => {
   const router = useRouter()
 
   const handleCheckoutDone = () => {
     router.back()
   }
-  
+  // max-w-screen-2xl 2xl:w-[1500px] 
   return (
-    <Main  className={cn(
+    <Main id='CHECKOUT_MAIN' className={cn(
       '!px-0 !py-0',
-      'w-full h-[100vh] !max-w-none',
+      'w-full h-[100vh] max-w-full 2xl:w-full',
       'animate-in md:zoom-in-90',
       'shadow-lg bg-background'
     )}>
-      <CheckoutPanel close={handleCheckoutDone} className='w-full h-full' />
+      <CheckoutPanel
+        agent={searchParams?.agent as string}
+        close={handleCheckoutDone}
+        className='w-full h-full'
+      />
     </Main>
   )
 }
