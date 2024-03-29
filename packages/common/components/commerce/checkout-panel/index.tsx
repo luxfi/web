@@ -56,7 +56,7 @@ const CheckoutPanel: React.FC<{
       setStepIndex(STEPS.length - 1)
     } 
     else if (name === 'next') {
-      if (stepIndex < STEPS.length - 2) {
+      if (stepIndex <= STEPS.length - 2) {
         setStepIndex(stepIndex + 1)
       }
       else {
