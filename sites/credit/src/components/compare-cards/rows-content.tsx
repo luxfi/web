@@ -1,6 +1,6 @@
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { formatPrice } from '@hanzo/commerce'
+import { formatCurrencyValue } from '@hanzo/commerce'
 import type { Card } from '@/types/card'
 import { numCardsDesktop, numCardsMobile } from './index'
 
@@ -138,7 +138,7 @@ const rowsContent = (selectedCards: Card[]) => {
         {[...Array(numCardsDesktop)].map((_, i) => (
           <DataRowContent
             key={i}
-            content={selectedCards[i] ? formatPrice(selectedCards[i].replacementFee) : undefined}
+            content={selectedCards[i] ? formatCurrencyValue(selectedCards[i].replacementFee) : undefined}
             hiddenOnMobile={i > numCardsMobile - 1}
           />
         ))}

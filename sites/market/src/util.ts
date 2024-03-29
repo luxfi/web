@@ -2,7 +2,7 @@ import siteDef from '@/site-def'
 
 const PRICES = siteDef.ext.prices
 
-const formatPrice = (price: number, noDollarSign = false): string => {
+const formatCurrencyValue = (price: number, noDollarSign = false): string => {
   const v = price.toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -15,7 +15,7 @@ const bullionPrice1oz = (type_: keyof typeof PRICES): number => (
 )
 
 export {
-  formatPrice,
+  formatCurrencyValue,
   bullionPrice1oz
 }
 

@@ -3,7 +3,7 @@ import { X } from 'lucide-react'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { BuyItemButton, formatPrice } from '@hanzo/commerce'
+import { BuyItemButton, formatCurrencyValue } from '@hanzo/commerce'
 
 import type { Card, CardMaterial } from '@/types/card'
 import type { CardWithSelectedMaterial } from '../index'
@@ -96,8 +96,8 @@ const CardHero: React.FC<{
       </div>
       <div className='relative flex flex-col gap-4 items-center justify-end'>
         <div className='flex flex-col items-center text-xxs sm:text-base'>
-          <div><span className='font-bold'>Annual Fee:</span> {formatPrice(card.annualFee)}</div>
-          <div><span className='font-bold'>Initiation Fee:</span> {formatPrice(card.initiationFee)}</div>
+          <div><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
+          <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
         </div>
         <div className='flex flex-col gap-2 items-center'>
           <div className='flex gap-4 justify-center'>
