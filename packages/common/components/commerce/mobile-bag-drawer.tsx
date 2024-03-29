@@ -21,7 +21,7 @@ const MobileBagDrawer: React.FC<{
   
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerContent className={cn('rounded-t-xl z-20 mt-6 pb-12 h-auto', className)} >
+      <DrawerContent className={cn('rounded-t-xl z-[52] mt-6 pb-12 h-auto', className)}  overlayClx='z-[51]'>
         <CartPanel 
           handleCheckout={handleCheckout} 
           className='mt-4 mb-4 border-none py-0 px-4 w-full '
