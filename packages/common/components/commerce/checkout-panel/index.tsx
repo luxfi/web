@@ -105,6 +105,7 @@ const CheckoutPanel: React.FC<{
       index={stepIndex}
       stepNames={STEP_NAMES}
     >
+      {/* Element required to determine if DesktopCP is visible */}
       <div ref={desktopEl}/>
       {agent === 'desktop' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
     </DesktopCP>
