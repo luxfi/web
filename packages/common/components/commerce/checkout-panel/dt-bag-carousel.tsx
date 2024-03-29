@@ -18,7 +18,7 @@ const DesktopBagCarousel: React.FC<{
       items={cmmc.cartItems} 
       selectedItemRef={cmmc}
       selectSku={cmmc.setCurrentItem.bind(cmmc)}
-      className={className}
+      clx={className}
       ext={{
         options: {loop: true},  
         constrainTo,  

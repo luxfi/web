@@ -106,7 +106,7 @@ const CardDetailComponent: React.FC<{
           items={cc.products as LineItem[]}
           selectedItemRef={lineItemRef}  
           selectSku={handleItemSelected}
-          className='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
+          clx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
           itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
           showPrice={false}
         />      
