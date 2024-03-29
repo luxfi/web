@@ -30,9 +30,11 @@ import DesktopCP from './dt-checkout-panel'
 import MobileCP from './mb-checkout-panel'
 
 const CheckoutPanel: React.FC<{
+  agent: string,
   close: () => void
   className?: string
 }> = ({
+  agent,
   close,
   className=''
 }) => {
@@ -79,26 +81,31 @@ const CheckoutPanel: React.FC<{
     close()
   }
 
-  const StepToRender = STEPS[stepIndex].Comp  
+  const StepToRender = STEPS[stepIndex].Comp
 
-  return (<>
-    <DesktopCP 
-      className={cn('h-full', className, 'hidden md:flex')} 
-      close={_close}
-      index={stepIndex}
-      stepNames={STEP_NAMES}
-    >
-      <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
-    </DesktopCP>
+  if (agent === 'desktop') {
+    return (
+      <DesktopCP 
+        className={cn('h-full', className)} 
+        close={_close}
+        index={stepIndex}
+        stepNames={STEP_NAMES}
+      >
+        <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
+      </DesktopCP>
+    )
+  }
+
+  return (
     <MobileCP 
-      className={cn('h-full overflow-y-auto', className, 'md:hidden' )} 
+      className={cn('h-full overflow-y-auto', className)} 
       close={_close}
       index={stepIndex}
       stepNames={STEP_NAMES}
     >
       <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
     </MobileCP>
-  </>)
+  )
 }
 
 export default CheckoutPanel

@@ -6,8 +6,11 @@ import { Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { CheckoutPanel } from '@luxdefi/common'
 
-const Page: React.FC = () => {
+type Props = {
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
 
+const Page = ({ searchParams }: Props) => {
   const router = useRouter()
 
   const handleCheckoutDone = () => {
@@ -21,7 +24,11 @@ const Page: React.FC = () => {
       'animate-in md:zoom-in-90',
       'shadow-lg bg-background'
     )}>
-      <CheckoutPanel close={handleCheckoutDone} className='w-full h-full' />
+      <CheckoutPanel
+        agent={searchParams?.agent as string}
+        close={handleCheckoutDone}
+        className='w-full h-full'
+      />
     </Main>
   )
 }
