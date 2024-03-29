@@ -6,11 +6,7 @@ import { Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { CheckoutPanel } from '@luxdefi/common'
 
-type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined }
-}
-
-const Page = ({ searchParams }: Props) => {
+const Page = () => {
   const router = useRouter()
 
   const handleCheckoutDone = () => {
@@ -25,7 +21,6 @@ const Page = ({ searchParams }: Props) => {
       'shadow-lg bg-background'
     )}>
       <CheckoutPanel
-        agent={searchParams?.agent as string}
         close={handleCheckoutDone}
         className='w-full h-full'
       />

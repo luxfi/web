@@ -1,5 +1,5 @@
 'use client'
-import React, { useState }  from 'react'
+import React, { useEffect, useRef, useState }  from 'react'
 
 import { capitalize, cn } from '@hanzo/ui/util'
 
@@ -30,11 +30,9 @@ import DesktopCP from './dt-checkout-panel'
 import MobileCP from './mb-checkout-panel'
 
 const CheckoutPanel: React.FC<{
-  agent: string,
   close: () => void
   className?: string
 }> = ({
-  agent,
   close,
   className=''
 }) => {
@@ -81,31 +79,44 @@ const CheckoutPanel: React.FC<{
     close()
   }
 
+  // Determine if mobile or desktop based on visibility of e
+  const desktopEl = useRef<HTMLDivElement>(null)
+  const [agent, setAgent] = useState<'mobile' | 'desktop' | undefined>()
+  useEffect(() => {
+    const checkAgent = () => {
+      setAgent(!!desktopEl.current?.offsetParent ? 'desktop' : 'mobile')
+    }
+
+    // initial agent check
+    checkAgent()
+    
+    window.addEventListener('resize', checkAgent)
+    return () => {
+      window.removeEventListener('resize', checkAgent)
+    }
+  }, [])
+
   const StepToRender = STEPS[stepIndex].Comp
 
-  if (agent === 'desktop') {
-    return (
-      <DesktopCP 
-        className={cn('h-full', className)} 
-        close={_close}
-        index={stepIndex}
-        stepNames={STEP_NAMES}
-      >
-        <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
-      </DesktopCP>
-    )
-  }
-
-  return (
-    <MobileCP 
-      className={cn('h-full overflow-y-auto', className)} 
+  return (<>
+    <DesktopCP 
+      className={cn('h-full', className, 'hidden md:flex')} 
       close={_close}
       index={stepIndex}
       stepNames={STEP_NAMES}
     >
-      <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>
+      <div ref={desktopEl}/>
+      {agent === 'desktop' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
+    </DesktopCP>
+    <MobileCP 
+      className={cn('h-full overflow-y-auto', className, 'md:hidden' )} 
+      close={_close}
+      index={stepIndex}
+      stepNames={STEP_NAMES}
+    >
+      {agent === 'mobile' && <StepToRender onDone={() => {setStep('next')}} orderId={orderId} setOrderId={setOrderId}/>}
     </MobileCP>
-  )
+  </>)
 }
 
 export default CheckoutPanel
