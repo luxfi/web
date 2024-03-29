@@ -26,22 +26,24 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
 }) => ( 
 
   <div /* id='CHECKOUT_PANEL' */  className={cn('grid grid-cols-2',  className)}>
-    <ScrollArea className='w-full h-full bg-level-1 flex flex-row items-start justify-start overflow-y-auto min-h-screen'>
-      <div className='h-full w-full max-w-[750px] px-8 pt-0'>
-        <div className='h-full w-full max-w-[550px] mx-auto flex flex-col gap-3 justify-start min-h-screen'>
-          <div className='flex flex-col gap-3 h-30 justify-center'>
-            <CloseButton close={close} className='rounded-full p-2' />
-            <StepsIndicator currentStep={index} stepNames={stepNames}/>
+    <ScrollArea className='w-full h-full bg-level-1 flex flex-row items-start overflow-y-auto min-h-screen'>
+      <div className='h-full w-full flex justify-end'>
+        <div className='h-full w-full max-w-[750px] px-8 pt-0'>
+          <div className='h-full w-full max-w-[550px] mx-auto flex flex-col gap-3 justify-end min-h-screen'>
+            <div className='flex flex-col gap-3 h-30 justify-center'>
+              <CloseButton close={close} />
+              <StepsIndicator currentStep={index} stepNames={stepNames}/>
+            </div>
+            {children}
+            <LinksRow className='mt-auto mb-3' />
           </div>
-          {children}
-          <LinksRow className='mt-auto mb-3' />
         </div>
       </div>
     </ScrollArea>
-    <div className='w-full h-full bg-background flex flex-row items-start justify-end'>
+    <div className='w-full h-full bg-background flex flex-row items-start justify-start'>
       <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start px-8 pt-0'>
         <AuthWidget noLogin className='hidden md:flex absolute top-4 right-4 '/>
-        <div className='flex items-center justify-center  h-30  '>
+        <div className='flex items-center justify-center h-30'>
           <Icons.bag className='fill-foreground mr-2 relative -top-1 w-6 h-7'/>
           <p className='font-heading text-default'>Order Summary</p>
         </div>

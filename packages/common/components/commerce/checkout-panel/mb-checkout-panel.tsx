@@ -25,7 +25,7 @@ const MobileCheckoutPanel: React.FC<PropsWithChildren & {
 
   <div /* id='MOBILE_GRID' */ className={cn('bg-background flex flex-col justify-start px-4', className)}>
     <div className='sticky top-0 w-full flex flex-row justify-between items-center bg-background'>
-      <CloseButton close={close} className='rounded-full p-2' />
+      <CloseButton close={close} />
       <StepsIndicator currentStep={index} stepNames={stepNames}/>
   	  {/* Need wrapper div since 'noLogin' returns null if no logged in user */}
       <div className='w-10 h-10 flex items-center justify-center'><AuthWidget noLogin className=''/></div>
@@ -41,7 +41,7 @@ const MobileCheckoutPanel: React.FC<PropsWithChildren & {
           iconClx='fill-foreground '
         />
       } 
-      className='flex items-center justify-center py-2 mt-2 w-full' 
+      className='flex items-center justify-center py-2 w-full' 
     />
     {children}
     <LinksRow className='mt-auto mb-3 pt-2' />

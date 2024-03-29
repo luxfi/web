@@ -11,10 +11,12 @@ const Logo: React.FC<{
   logoOnly?: boolean
   href?: string
   className?: string
+  spanClassName?: string
 }> = ({
   size,
   href, // no default please!
   className='',
+  spanClassName,
   logoOnly=false
 }) => {
   let classes: any = {}
@@ -46,7 +48,8 @@ const Logo: React.FC<{
 
   const outerClasses = 'flex flex-row items-center ' + className
   const spanClasses = 'inline-block font-bold font-heading ' 
-    + (href ? 'hover:text-accent ' : 'cursor-default ') 
+    + spanClassName
+    + (href ? ' hover:text-accent ' : ' cursor-default ') 
     + classes.span 
 
   const Inner: React.FC = () => (<>

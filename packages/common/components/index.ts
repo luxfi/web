@@ -14,6 +14,7 @@ export {
 } from './root-layout'
 
 export { default as CheckoutPanel } from './commerce/checkout-panel'
+export { default as LoginPanel } from './auth/login-panel'
 
 
 /* PLEASE KEEP
