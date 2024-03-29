@@ -4,7 +4,7 @@ import { MiniChart } from '@luxdefi/common'
 import { markdown } from '@hanzo/ui/util'
 import { BuyItemButton } from '@hanzo/commerce'
 
-import { formatPrice, bullionPrice1oz } from '@/util'
+import { formatCurrencyValue, bullionPrice1oz } from '@/util'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'
@@ -20,7 +20,7 @@ export default {
     priceCard: {blockType: 'card',
       title: 'Lux Gold Price  / Oz', 
       content: <div className='h-full w-full flex flex-col justify-center items-center gap-8'>
-        <h4 className='text-center font-bold text-3xl'>{formatPrice(bullionPrice1oz('au'))}</h4>
+        <h4 className='text-center font-bold text-3xl'>{formatCurrencyValue(bullionPrice1oz('au'))}</h4>
         <BuyItemButton skuPath='LXM-AU' popupClx='w-[340px]' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyItemButton>
       </div>,
     } satisfies C.CardBlock,
