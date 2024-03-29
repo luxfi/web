@@ -6,13 +6,9 @@ import {
   ChatWidget
 } from '@luxdefi/common'
 
-import { Toaster } from '@hanzo/ui/primitives'
-
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
-
-import { CommerceServiceProvider } from '@hanzo/commerce'
 
 import siteDef from '../site-def'
 import _metadata from '../metadata'
