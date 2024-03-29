@@ -16,6 +16,8 @@ type Props = {
 const LoginPage = ({ searchParams }: Props) => (
   <Screenful 
     block={{blockType: 'screenful', 
+      specifiers: 'center',
+      columnSpecifiers: ['center vert-center mobile-vert-center'],
       contentColumns: [[
         {blockType: 'element', 
           element: (
@@ -23,12 +25,12 @@ const LoginPage = ({ searchParams }: Props) => (
               getStartedUrl='/' 
               returnToUrl='/' 
               redirectUrl={searchParams?.redirectUrl as string ?? undefined}
+              className='w-full max-w-sm'
             />
           )
         } satisfies ElementBlock as Block,
       ]]
-    } satisfies ScreenfulBlock as Block} 
-    className='w-full xs:w-full sm:max-w-[320px] sm:mx-auto'
+    } satisfies ScreenfulBlock as Block}
   />
 )
 

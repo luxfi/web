@@ -1,14 +1,13 @@
 import React, { Suspense, type PropsWithChildren } from 'react'
 
 import { Main } from '@hanzo/ui/primitives'
-import { Header, Footer } from '@luxdefi/common'
+import { Footer } from '@luxdefi/common'
 
 import siteDef from '../../site-def'
 
 const Layout: React.FC<PropsWithChildren> = async ({
   children
 }) => (<>
-  <Header siteDef={siteDef}/>
   <Main className='w-full'>
     <Suspense>{children}</Suspense>
   </Main>
