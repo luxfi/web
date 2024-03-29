@@ -3,6 +3,7 @@ import React from 'react'
 
 import { Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+
 import LuxLogo from '../../icons/lux-logo'
 
 const CloseButton: React.FC<{

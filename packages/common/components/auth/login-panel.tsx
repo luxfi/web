@@ -1,9 +1,9 @@
 import type { PropsWithChildren } from 'react'
 
 import { cn } from '@hanzo/ui/util'
+import { Button } from '@hanzo/ui/primitives'
 import Login from '@hanzo/auth/components/login'
 
-import { Button } from '@hanzo/ui/primitives'
 import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
 
