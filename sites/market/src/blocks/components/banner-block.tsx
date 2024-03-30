@@ -4,7 +4,7 @@ import type { Dimensions, TShirtSize } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
 import { type Block, VideoBlockComponent, CTABlockComponent } from '@hanzo/ui/blocks'
-import { BuyItemButton } from '@hanzo/commerce'
+import { BuyButton } from '@hanzo/commerce'
 
 import type BannerBlock from '@/blocks/def/banner-block'
 
@@ -53,14 +53,13 @@ const BannerBlockComponent: React.FC<{
       />
     )}
     {banner.skuPath && (
-      <BuyItemButton 
+      <BuyButton 
         skuPath={banner.skuPath} 
-        popupClx='w-[340px]' 
         size='default'
         className='lg:min-w-[220px] sm:min-w-[220px]'
       >
         Buy
-      </BuyItemButton>
+      </BuyButton>
     )}
     </div>
   ) : null)

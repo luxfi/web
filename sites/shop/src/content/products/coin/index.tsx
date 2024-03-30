@@ -5,7 +5,7 @@ import video from './video'
 import accordian from './accordian'
 import Link from 'next/link'
 
-import { BuyItemButton } from '@hanzo/commerce'
+import { BuyButton } from '@hanzo/commerce'
 
 export default {
   blockType: 'product-detail',
@@ -22,10 +22,10 @@ export default {
           variant: 'outline'
       }]
     } satisfies C.CTABlock as C.Block,
-    {blockType: 'element',
-      element: <div className='flex flex-col justify-center items-center gap-8'>
-        <BuyItemButton skuPath='LXM-CN' popupClx='w-[340px]' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyItemButton>
-      </div>,
-    } satisfies C.ElementBlock as C.Block,
+    {blockType: 'element', element: (
+      <div className='flex flex-col justify-center items-center gap-8'>
+        <BuyButton skuPath='LXM-CN' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyButton>
+      </div>
+    )} satisfies C.ElementBlock as C.Block,
   ]
 } as ProductDetailBlock

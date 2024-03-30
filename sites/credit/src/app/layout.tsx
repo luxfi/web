@@ -28,7 +28,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
   return (
     <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
       <CommerceServiceProvider 
-        rootFacet={siteDef.ext.commerce.rootFacet} 
+        rootNode={siteDef.ext.commerce.rootNode} 
         productsByCategory={siteDef.ext.commerce.productsByCategory}
         options={siteDef.ext.commerce.options}
       >

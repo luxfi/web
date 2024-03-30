@@ -3,7 +3,7 @@ import { X } from 'lucide-react'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { BuyItemButton, formatCurrencyValue } from '@hanzo/commerce'
+import { BuyButton, formatCurrencyValue } from '@hanzo/commerce'
 
 import type { Card, CardMaterial } from '@/types/card'
 import type { CardWithSelectedMaterial } from '../index'
@@ -57,14 +57,13 @@ const CardHero: React.FC<{
           />
           <h6 className='font-heading text-xs xl:text-base'>{card.title}</h6>
         </div>
-        <BuyItemButton 
+        <BuyButton 
           skuPath={selectedMaterial.sku} 
-          popupClx='w-[340px]' 
           className='w-full'
           size='xs'
         >
           Add +
-        </BuyItemButton>
+        </BuyButton>
       </div>
     )
   }
@@ -116,13 +115,12 @@ const CardHero: React.FC<{
           </div>
           <p className='text-xxs sm:text-xs'>{selectedMaterial?.title}</p>
         </div>
-        <BuyItemButton 
+        <BuyButton 
           skuPath={selectedMaterial.sku} 
-          popupClx='w-[340px]' 
           className='w-full max-w-72'
         >
           Add +
-        </BuyItemButton>
+        </BuyButton>
       </div>
     </ApplyTypography>
   )

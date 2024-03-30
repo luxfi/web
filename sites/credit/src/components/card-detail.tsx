@@ -7,8 +7,8 @@ import { ApplyTypography, LinkElement, type ButtonSizes } from '@hanzo/ui/primit
 import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
-import type { Category, ObsLineItemRef } from '@hanzo/commerce/types'
-import { AddToCartWidget, CategoryItemRadioSelector } from '@hanzo/commerce'
+import type { Category, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
+import { AddToCartWidget, RadioItemSelector } from '@hanzo/commerce'
 import type { CardCategory } from '@/types'
 
 
@@ -102,12 +102,11 @@ const CardDetailComponent: React.FC<{
         agent={mobile ? 'phone' : 'desktop'}
         className={imageClx} 
       />
-
-        <CategoryItemRadioSelector 
-          category={cc}
+        <RadioItemSelector 
+          items={cc.products as LineItem[]}
           selectedItemRef={lineItemRef}  
           selectSku={handleItemSelected}
-          groupClx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
+          clx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
           itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
           showPrice={false}
         />      

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import type * as C from '@hanzo/ui/blocks'
-import { BuyItemButton } from '@hanzo/commerce'
+import { BuyButton } from '@hanzo/commerce'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
@@ -15,19 +15,17 @@ export default {
   video: {...video, sizing: { vh: 70 }},
   accordian,
   blocks: [
-    {blockType: 'cta',
-      elements: [{
-          href: 'https://lux.network',
-          title: 'Read More',
-          newTab: false,
-          variant: 'outline'
-        }]
-    } as C.CTABlock,
-    {blockType: 'element',
-      element: <div className='flex flex-col justify-center items-center gap-8'>
-        <BuyItemButton skuPath='LXM-VL' popupClx='w-[340px]' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyItemButton>
-      </div>,
-    } satisfies C.ElementBlock as C.Block,
+    {blockType: 'cta',  elements: [{
+      href: 'https://lux.network',
+      title: 'Read More',
+      newTab: false,
+      variant: 'outline'
+    }]} as C.CTABlock,
+    {blockType: 'element', element: (
+      <div className='flex flex-col justify-center items-center gap-8'>
+        <BuyButton skuPath='LXM-VL' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyButton>
+      </div>
+    )} satisfies C.ElementBlock as C.Block,
       ] as C.Block[]
 } as ProductDetailBlock
 

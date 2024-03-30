@@ -3,16 +3,18 @@ import React  from 'react'
 import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
 import { type Block} from '@hanzo/ui/blocks'
-import { BuyItemButton } from '@hanzo/commerce'
+import { BuyButton } from '@hanzo/commerce'
   
 import type ItemCTAsBlock from '@/blocks/def/item-ctas'
 
 const ItemCTAsBlockComponent: React.FC<{
   block: Block
   className?: string
+  agent?: string
 }> = ({
   block,
-  className=''
+  className='',
+  agent
 }) => {
 
   if (block.blockType !== 'item-ctas') {
@@ -42,14 +44,15 @@ const ItemCTAsBlockComponent: React.FC<{
       />
     )}
     {ctas.skuPath && (
-      <BuyItemButton 
+      <BuyButton 
         skuPath={ctas.skuPath} 
-        popupClx='w-[340px]' 
         size='default'
+        variant='primary'
         className='lg:min-w-[220px] sm:min-w-[220px]'
+        mobile={agent !== 'desktop'}
       >
         {ctas.buyLabel ? ctas.buyLabel : 'Buy'}
-      </BuyItemButton>
+      </BuyButton>
     )}
     </div>
   ) : null

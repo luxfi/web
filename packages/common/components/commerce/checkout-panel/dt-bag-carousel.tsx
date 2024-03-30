@@ -2,7 +2,7 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { useCommerce, ItemCarousel } from '@hanzo/commerce'
+import { useCommerce, CarouselItemSelector, type CarouselItemSelectorPropsExt } from '@hanzo/commerce'
 import type { Dimensions } from '@hanzo/ui/types'
 
 const DesktopBagCarousel: React.FC<{
@@ -11,14 +11,20 @@ const DesktopBagCarousel: React.FC<{
 }> = observer(({
   constrainTo,
   className=''
+  
 }) => {
   const cmmc = useCommerce()
   return (
-    <ItemCarousel 
-      constrainTo={constrainTo}
+    <CarouselItemSelector 
       items={cmmc.cartItems} 
-      options={{loop: true}} 
-      className={className}
+      selectedItemRef={cmmc}
+      selectSku={cmmc.setCurrentItem.bind(cmmc)}
+      clx={className}
+      ext={{
+        options: {loop: true},  
+        constrainTo,  
+        noSelection: true
+      } satisfies CarouselItemSelectorPropsExt}
     />
   )
 })

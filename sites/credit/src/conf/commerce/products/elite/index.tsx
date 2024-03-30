@@ -3,6 +3,8 @@ import type { CardCategory } from '@/types'
 
 import MDX_Content from './detail.mdx'
 
+import CC_AR from '../../cc-aspect-ratio'
+
 export default {
   type : 'elite',
   id: 'LXM-CR-E',
@@ -24,6 +26,7 @@ export default {
       titleAsOption: '24k Gold',
       price: 500,
       img: '/assets/img/cards-flat/gold-f-700x442.png',
+      imgAR: CC_AR,
       animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
     } satisfies Product,
     {
@@ -34,6 +37,7 @@ export default {
       titleAsOption: 'Sterling Silver',
       price: 500,
       img: '/assets/img/cards-flat/silver-f-700x441.png',
+      imgAR: CC_AR,
       animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
     } satisfies Product,
   ]
