@@ -5,7 +5,7 @@ const ELITE_IMAGE = '/assets/img/cards-flat/gold-f-700x442.png'
 const FOUNDER_IMAGE = '/assets/img/cards-flat/chrome-cool-f-700x441.png'
 const SOVEREIGN_IMAGE = '/assets/img/cards-flat/titanium-f-700x441.png'
 
-const CC_AR = 1.58577251 // international spec for CC's and our images
+import CC_AR from '../cc-aspect-ratio'
 
 const CARD_LEVELS = [
   {

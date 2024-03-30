@@ -1,6 +1,7 @@
 
 import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
+import CC_AR from '../../cc-aspect-ratio'
 
 import MDX_Content from './detail.mdx'
 
@@ -25,6 +26,7 @@ export default {
       titleAsOption: 'Cool Chrome',
       price: 5000,
       img: '/assets/img/cards-flat/chrome-cool-f-700x441.png',
+      imgAR: CC_AR,
       animation: 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode'
     } satisfies Product,
     {
@@ -35,6 +37,7 @@ export default {
       titleAsOption: 'Iridescent Chrome',
       price: 5000,
       img: '/assets/img/cards-flat/chrome-irid-f-700x441.png',
+      imgAR: CC_AR,
       animation: 'https://prod.spline.design/O1mz-aE1mHafZXeX/scene.splinecode'
     } satisfies Product,
   ]

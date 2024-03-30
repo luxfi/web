@@ -1,5 +1,6 @@
 import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
+import CC_AR from '../../cc-aspect-ratio'
 
 import MDX_Content from './detail.mdx'
 
@@ -24,6 +25,7 @@ export default {
       categoryId: 'LXM-CR-B',
       price: 500,
       img: '/assets/img/cards-flat/black-f-700x441.png',
+      imgAR: CC_AR,
       animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
     } satisfies Product
   ]

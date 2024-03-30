@@ -1,5 +1,6 @@
 import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
+import CC_AR from '../../cc-aspect-ratio'
 
 import MDX_Content from './detail.mdx'
 
@@ -24,6 +25,7 @@ export default {
       titleAsOption: 'Reflective Titanium',
       price: 50000,
       img: '/assets/img/cards-flat/titanium-f-700x441.png',
+      imgAR: CC_AR,
       animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'
     } satisfies Product,
     ]
