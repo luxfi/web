@@ -7,7 +7,6 @@ import { cn } from '@hanzo/ui/util'
 import { CheckoutPanel } from '@luxdefi/common'
 
 const Page: React.FC = () => {
-
   const router = useRouter()
 
   const handleCheckoutDone = () => {
@@ -21,7 +20,7 @@ const Page: React.FC = () => {
       'animate-in md:zoom-in-90',
       'shadow-lg bg-background'
     )}>
-      <CheckoutPanel close={handleCheckoutDone} className='w-full h-full' />
+      <CheckoutPanel close={handleCheckoutDone} className='w-full h-full'/>
     </Main>
   )
 }

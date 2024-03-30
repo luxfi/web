@@ -7,7 +7,7 @@ import {
   type Block 
 } from '@hanzo/ui/blocks'
 
-import { LoginComponent as Login } from '@hanzo/auth/components'
+import { LoginPanel as Login } from '@hanzo/auth/components'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

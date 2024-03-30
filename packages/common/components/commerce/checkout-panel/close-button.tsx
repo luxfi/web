@@ -1,8 +1,10 @@
 'use client'
 import React from 'react'
 
-import { ChevronLeft } from 'lucide-react'
 import { Button } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
+
+import LuxLogo from '../../icons/lux-logo'
 
 const CloseButton: React.FC<{
   close: () => void
@@ -11,14 +13,14 @@ const CloseButton: React.FC<{
   close,
   className=''
 }) => (
-    <Button
-      variant='ghost'
-      size='icon'
-      onClick={close}
-      className={'group ' + className}
-    >
-      <ChevronLeft className='w-5 h-5 group-hover:scale-110 transition-scale transition-duration-300'/>
-    </Button>    
+  <Button
+    variant='ghost'
+    size='icon'
+    onClick={close}
+    className={cn('group rounded-full p-2', className)}
+  >
+    <LuxLogo className='w-5 h-5'/>
+  </Button>    
 )
 
 export default CloseButton

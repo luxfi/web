@@ -39,7 +39,7 @@ const MobileBagDrawer: React.FC<{
               'mr-2 relative w-6 h-7'
               iconClx='fill-foreground '
             />
-            <p className='font-nav text-foreground text-default'>Your Bag</p>
+            <p className='font-heading text-foreground text-default'>Your Bag</p>
           </div>
           <div className='h-[1px] w-pr-80 bg-muted-3 mx-auto mt-1.5 flex-none'/>
         </CartPanel>
