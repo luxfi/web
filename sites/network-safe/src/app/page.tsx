@@ -7,7 +7,7 @@ import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
 
 import siteDef from '../site-def'
-import { LoginComponent } from '@hanzo/auth/components'
+import { LoginPanel } from '@hanzo/auth/components'
 
 const Home = observer(() => {
   const auth = useAuth()
@@ -22,7 +22,7 @@ const Home = observer(() => {
             <AccessCodeInput/>
           </div>
         ) : (
-          <LoginComponent noHeading className='max-w-[20rem] mx-auto' />
+          <LoginPanel noHeading className='max-w-[20rem] mx-auto' />
         )}
       </ApplyTypography>
     </Main>

@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite'
 
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
-import { LoginComponent } from '@hanzo/auth/components'
+import { LoginPanel } from '@hanzo/auth/components'
 
 import { AccessCodeInput, Footer } from '@luxdefi/common'
 
@@ -23,7 +23,7 @@ const Home = observer(() => {
             <AccessCodeInput/>
           </div>
         ) : (
-          <LoginComponent noHeading className='max-w-[20rem] mx-auto' />
+          <LoginPanel noHeading className='max-w-[20rem] mx-auto' />
         )}
       </ApplyTypography>
     </Main>

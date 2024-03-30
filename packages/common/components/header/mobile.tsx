@@ -6,7 +6,7 @@ import type { LinkDef } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 
 import { CartPanel, useCommerce } from '@hanzo/commerce'
-import { AuthWidget, LoginComponent } from '@hanzo/auth/components'
+import { AuthWidget, LoginPanel } from '@hanzo/auth/components'
 
 import sendGAEvent from '../../next/analytics/google-analytics'
 import * as Icons from '../icons'
@@ -123,7 +123,7 @@ const MobileHeader: React.FC<{
         'flex flex-column p-6 pt-15 bg-background z-40 animate-mobile-menu-open' 
       }>
       {menuState === 'login' ? (
-        <LoginComponent noHeading onLoginChanged={onLoginChanged} className='sm:animate-in sm:zoom-in-90' />
+        <LoginPanel noHeading onLoginChanged={onLoginChanged} className='sm:animate-in sm:zoom-in-90' />
       ) : ( 
         menuState === 'bag' ? (
 
@@ -139,7 +139,7 @@ const MobileHeader: React.FC<{
           >
             <div className='flex flex-row items-center flex-none justify-center '>
               <Icons.bag className='mr-2 relative w-4 h-5 fill-foreground ' />
-              <p className='font-nav text-foreground text-default'>Your Bag</p>
+              <p className='font-heading text-foreground text-default'>Your Bag</p>
             </div>
             <div className='h-[1px] w-pr-80 bg-muted-3 mx-auto mt-1.5 flex-none'/>
           </CartPanel>

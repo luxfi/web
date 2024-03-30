@@ -55,7 +55,7 @@ const CardHero: React.FC<{
             block={{blockType: 'image', ...selectedMaterial?.cardImg}}
             className='h-8 w-auto'
           />
-          <h6 className='font-nav text-xs xl:text-base'>{card.title}</h6>
+          <h6 className='font-heading text-xs xl:text-base'>{card.title}</h6>
         </div>
         <BuyItemButton 
           skuPath={selectedMaterial.sku} 
@@ -92,7 +92,7 @@ const CardHero: React.FC<{
             <X className='w-4 h-4 sm:w-6 sm:h-6'/>
           </Button>
         </div>
-        <h6 className='font-nav text-xs'>{card.title}</h6>
+        <h6 className='font-heading text-xs'>{card.title}</h6>
       </div>
       <div className='relative flex flex-col gap-4 items-center justify-end'>
         <div className='flex flex-col items-center text-xxs sm:text-base'>

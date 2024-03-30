@@ -15,28 +15,6 @@ import twFonts from '../../tailwind/lux-tw-fonts'
 
 */
 
-const drukTextWide = localFont({
-  src: [
-    {
-      path: './local/DrukTextWide-Medium-Trial.otf',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: './local/DrukTextWide-Bold-Trial.otf',
-      weight: '700',
-      style: 'normal'
-    },
-    {
-      path: './local/DrukTextWide-Heavy-Trial.otf',
-      weight: '800',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-  variable: '--font-druk-text-wide' ,
-})
-
 const drukWide = localFont({
   src: [
     {
@@ -70,7 +48,7 @@ export default [
     twName: 'sans'
   },
   {
-    font: drukTextWide,
+    font: inter,
     twName: 'nav'
   },
   {
