@@ -1,10 +1,10 @@
 import type { ServiceOptions } from '@hanzo/commerce'
 
-import rootFacet from './facets'
+import rootNode from './facets'
 import products from './products'
 
 export default {
-  rootFacet, 
+  rootNode, 
   productsByCategory: products,
   options: {
     dbName: 'lux-commerce',
