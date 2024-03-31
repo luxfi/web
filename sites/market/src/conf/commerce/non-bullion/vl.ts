@@ -2,11 +2,12 @@ import type { Product, Category } from '@hanzo/commerce/types'
 import { validatorVideo } from '../videos'
 
 const VL_IMG = '/assets/img/cmmc/validator-800x800.png'
+const VL_IMG_DEF = {src: VL_IMG, dim: {w: 800, h: 800}}
 
 export default {
   id: 'LXM-VL',
   title: 'Lux Validator',
-  img: VL_IMG, 
+  img: VL_IMG_DEF, 
   products: [
     {
       id: 'LXM-VL-GN',
@@ -15,7 +16,7 @@ export default {
       titleAsOption: 'Genesis Validator',
       categoryId: 'LXM-VL',
       price: 1000000, // 1M
-      img: VL_IMG,
+      img: VL_IMG_DEF,
       video: validatorVideo
     },
     {
@@ -25,7 +26,7 @@ export default {
       titleAsOption: 'Validator',
       categoryId: 'LXM-VL',
       price: 100000, // 100K
-      img: VL_IMG,
+      img: VL_IMG_DEF,
       video: validatorVideo
     },
     {
@@ -35,7 +36,7 @@ export default {
       titleAsOption: 'Mini Validator',
       categoryId: 'LXM-VL',
       price: 10000, // 10K
-      img: VL_IMG,
+      img: VL_IMG_DEF,
       video: validatorVideo
     },
     {
@@ -45,7 +46,7 @@ export default {
       titleAsOption: 'Nano Validator',
       categoryId: 'LXM-VL',
       price: 1000, // 1K
-      img: VL_IMG,
+      img: VL_IMG_DEF,
       video: validatorVideo
     },
   ] satisfies Product[]

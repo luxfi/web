@@ -16,13 +16,13 @@ export default {
         {
           tok: 'B',
           label: 'Minted Bar',
-          img: 'AU_B',
+          imgCode: 'AU_B',
           ch: AU_B
         },
         {
           tok: 'C',
           label: 'Minted Coin',
-          img: 'AU_C',
+          imgCode: 'AU_C',
           ch: [
             {
               tok: '1-OZ',
@@ -33,7 +33,7 @@ export default {
         {
           tok: 'CB',
           label: 'Cast Bar',
-          img: 'AU_CB',
+          imgCode: 'AU_CB',
           ch: AU_CB
         }
       ]
@@ -46,13 +46,13 @@ export default {
         {
           tok: 'B',
           label: 'Minted Bar',
-          img: 'AG_B',
+          imgCode: 'AG_B',
           ch: AG_B
         }, 
         {
           tok: 'C',
           label: 'Minted Coin',
-          img: 'AG_C',
+          imgCode: 'AG_C',
           ch: [
             {
               tok: '1-OZ',
@@ -63,7 +63,7 @@ export default {
         {
           tok: 'CB',
           label: 'Cast Bar',
-          img: 'AG_CB',
+          imgCode: 'AG_CB',
           ch: AG_CB
         }
       ]

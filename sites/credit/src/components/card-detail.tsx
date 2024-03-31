@@ -90,8 +90,8 @@ const CardDetailComponent: React.FC<{
       </h4>
       <ImageBlockComponent 
         block={{blockType: 'image',
-          src: cc.img!,
-          dim: {w: 300, h: 400},
+          src: cc.img!.src,
+          dim: cc.img!.dim,
           alt: cc.title,
           specifiers: '',
           props: { style: {
@@ -100,6 +100,7 @@ const CardDetailComponent: React.FC<{
           }}
         } satisfies ImageBlock as Block} 
         agent={mobile ? 'phone' : 'desktop'}
+        constraintTo={{w:300, h:400}}
         className={imageClx} 
       />
         <RadioItemSelector 

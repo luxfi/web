@@ -2,11 +2,14 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { useCommerce, CarouselItemSelector, type CarouselItemSelectorPropsExt } from '@hanzo/commerce'
-import type { Dimensions } from '@hanzo/ui/types'
+import { 
+  useCommerce, 
+  CarouselItemSelector, 
+  type CarouselItemSelectorPropsExt 
+} from '@hanzo/commerce'
 
 const DesktopBagCarousel: React.FC<{
-  constrainTo: Dimensions
+  constrainTo: {w: number, h: number}
   className?: string
 }> = observer(({
   constrainTo,

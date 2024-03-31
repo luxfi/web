@@ -1,6 +1,5 @@
 import type { Product } from '@hanzo/commerce/types'
 import type { CardCategory } from '@/types'
-import CC_AR from '../../cc-aspect-ratio'
 
 import MDX_Content from './detail.mdx'
 
@@ -9,7 +8,7 @@ export default {
   id: 'LXM-CR-B',
   material: 'Annodized Black Titanium',
   title: 'Lux Black Card',
-  img: '/assets/img/cards-dual-black-1483x1361.png',
+  img: {src: '/assets/img/cards-dual-black-1483x1361.png', dim: {w: 1483, h: 1361}},
   run: -1, // unlimited
   fees: {
     initial: 500,
@@ -24,8 +23,7 @@ export default {
       titleAsOption: 'Annodized Black Titanium',
       categoryId: 'LXM-CR-B',
       price: 500,
-      img: '/assets/img/cards-flat/black-f-700x441.png',
-      imgAR: CC_AR,
+      img: {src: '/assets/img/cards-flat/black-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
     } satisfies Product
   ]

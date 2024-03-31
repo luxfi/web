@@ -1,5 +1,3 @@
-import type { Category } from '@hanzo/commerce/types'
-
 import black from './black'
 import elite from './elite'
 import founder from './founder'
@@ -10,4 +8,4 @@ export default [
   elite,
   founder,
   sovereign
-] as Category[]
+] 
