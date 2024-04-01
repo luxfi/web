@@ -6,7 +6,9 @@ export default {
   type : 'sovereign',
   id: 'LXM-CR-S',
   material: 'Reflective Titanium',
+  parentTitle: 'Lux Credit',
   title: 'Lux Sovereign Card',
+  titleShort: 'Sovereign',
   img: {src: '/assets/img/cards-2-flat-tit-1593x1231.png', dim: {w: 1593, h: 1231}},
   run: 10000,
   fees: {
@@ -19,8 +21,8 @@ export default {
       id: 'LXM-CR-S-RT',
       sku: 'LXM-CR-S-RT',
       categoryId: 'LXM-CR-S',
-      title: 'Lux Sovereign Card, Reflective Titanium',
-      titleAsOption: 'Reflective Titanium',
+      categoryTitle: 'Sovereign',
+      optionLabel: 'Reflective Titanium',
       price: 50000,
       img: {src: '/assets/img/cards-flat/titanium-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'

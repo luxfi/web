@@ -4,6 +4,6 @@ export const TS = '-'  // token separator
 export const DEC = '_' // decimal substitute
 
   // must have last '/'
-export const OUT_DIR = '../../sites/market/src/conf/commerce/data/'
-export const OUT_FN = 'bullion-products-by-category.json'
+export const OUT_DIR = '../../sites/market/src/conf/commerce/'
+export const OUT_FN = 'bullion-by-category.json'
 

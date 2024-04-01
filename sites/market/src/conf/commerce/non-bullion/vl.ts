@@ -12,8 +12,9 @@ export default {
     {
       id: 'LXM-VL-GN',
       sku: 'LXM-VL-GN',
-      title: 'Genesis Validator',
-      titleAsOption: 'Genesis Validator',
+      categoryTitle: 'Lux Validator',
+      fullTitle: 'Genesis Validator',
+      optionLabel: 'Genesis Validator',
       categoryId: 'LXM-VL',
       price: 1000000, // 1M
       img: VL_IMG_DEF,
@@ -22,8 +23,9 @@ export default {
     {
       id: 'LXM-VL-VL',
       sku: 'LXM-VL-VL',
-      title: 'Validator',
-      titleAsOption: 'Validator',
+      categoryTitle: 'Lux Validator',
+      fullTitle: 'Validator',
+      optionLabel: 'Validator',
       categoryId: 'LXM-VL',
       price: 100000, // 100K
       img: VL_IMG_DEF,
@@ -32,8 +34,9 @@ export default {
     {
       id: 'LXM-VL-MI',
       sku: 'LXM-VL-MI',
-      title: 'Mini Validator',
-      titleAsOption: 'Mini Validator',
+      categoryTitle: 'Lux Validator',
+      fullTitle: 'Mini Validator',
+      optionLabel: 'Mini Validator',
       categoryId: 'LXM-VL',
       price: 10000, // 10K
       img: VL_IMG_DEF,
@@ -42,8 +45,9 @@ export default {
     {
       id: 'LXM-VL-NA',
       sku: 'LXM-VL-NA',
-      title: 'Nano Validator',
-      titleAsOption: 'Nano Validator',
+      categoryTitle: 'Lux Validator',
+      fullTitle: 'Nano Validator',
+      optionLabel: 'Nano Validator',
       categoryId: 'LXM-VL',
       price: 1000, // 1K
       img: VL_IMG_DEF,

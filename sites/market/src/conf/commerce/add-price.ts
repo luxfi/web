@@ -36,7 +36,7 @@ const priceFromSKU = (
   return tree[type_][unit] * amount
 }
 
-export const visitCategory = (c: Category): Category => {
+export default (c: Category): Category => {
   for (let prod of c.products) {
     prod.price = priceFromSKU(prod.sku)
   }

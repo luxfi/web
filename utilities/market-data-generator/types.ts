@@ -1,6 +1,5 @@
 interface LeafImportData {
   tok: string
-  shortTitle?: string
   imgCode?: string
   desc?: string
 }

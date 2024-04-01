@@ -12,8 +12,9 @@ export default {
     {
       id: 'LXM-PS-PS',
       sku: 'LXM-PS-PS',
-      title: 'Lux Pass',
-      titleAsOption: 'Lux Pass',
+      fullTitle: 'Lux Pass',
+      categoryTitle: 'Lux Pass',
+      optionLabel: 'Lux Pass',
       categoryId: 'LXM-PS',
       price: 100,
       img: PS_IMG_DEF,

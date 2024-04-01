@@ -20,7 +20,7 @@ export default {
       id: 'LXM-CR-B-ABT',
       sku: 'LXM-CR-B-ABT',
       title: 'Lux Black Card, Annodized Black Titanium',
-      titleAsOption: 'Annodized Black Titanium',
+      optionLabel: 'Annodized Black Titanium',
       categoryId: 'LXM-CR-B',
       price: 500,
       img: '/assets/img/cards-flat/black-f-700x441.png',

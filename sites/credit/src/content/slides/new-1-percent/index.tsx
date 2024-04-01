@@ -22,8 +22,8 @@ export default {blockType: 'screenful',
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
-        skuPath: 'LXM-CR-B'
-//        skuPath: 'LXM-CR'
+        //skuPath: 'LXM-CR-B'
+        skuPath: 'LXM-CR'
       } satisfies ItemCTASBlock as Block,
     ], 
     [

@@ -59,9 +59,9 @@ const visitNode = (
         sku: [...skuTokens, prod.tok].join('-'), 
           // Desired result: "Lux Bullion, Gold, 1oz Minted Bar", ie,
           //  `<previous title tokens joined>, <amount> <form>`
-        title: `${previousTitle}, ${amountStrFromItemToken(prod.tok)} ${bullionForm}`,
-        titleAsOption: amountStrFromItemToken(prod.tok),
-        ...(prod.shortTitle ? {shortTitle: prod.shortTitle} : {}),
+        fullTitle: `${previousTitle}, ${amountStrFromItemToken(prod.tok)} ${bullionForm!}`,
+        optionLabel: amountStrFromItemToken(prod.tok),
+        categoryTitle: bullionForm!,
         categoryId: categoryId,
         desc: prod.desc ? prod.desc : levelData.desc,
         price: 0,
