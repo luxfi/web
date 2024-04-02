@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
@@ -10,6 +11,7 @@ import RowHeading from './row-heading'
 import rowsContent from './rows-content'
 import CompareHeader from './compare-header'
 import SelectCardRow from './select-card-row'
+import cards from '@/content/compare-cards'
 
 const numCardsMobile = 2
 const numCardsDesktop = 3
@@ -17,7 +19,22 @@ const numCardsDesktop = 3
 type CardWithSelectedMaterial = Card & { selectedMaterial: CardMaterial }
 
 const CompareCards = () => {
+  const searchParams = useSearchParams()
+
   const [selectedCards, setSelectedCards] = useState<CardWithSelectedMaterial[]>([])
+
+  useEffect(() => {
+    const cardSKUs = searchParams.get('cards')?.split(',')
+    if (cardSKUs) {
+      const predefinedCards = cardSKUs.map(sku => {
+        const card = cards.find(card => !!card.materials.find(material => material.sku === sku))
+        const material = card?.materials.find(material => material.sku === sku)
+
+        return {...card, selectedMaterial: material} as CardWithSelectedMaterial
+      })
+      setSelectedCards(predefinedCards)
+    }
+  }, [])
 
   return (
     <>

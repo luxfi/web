@@ -2,7 +2,9 @@ import TravelBenefits from './travel-benefits.mdx'
 import LifestyleBenefits from './lifestyle-benefits.mdx'
 import Rewards from './rewards.mdx'
 import KarmaRewards from './karma-rewards.mdx'
+import Preview from './preview.mdx'
 import type { Card } from '@/types/card'
+import { row1, row2 } from './quickview'
 
 const card: Card = {
   title: 'Founder Card',
@@ -47,6 +49,8 @@ const card: Card = {
   lifestyleBenefits: <LifestyleBenefits/>,
   rewards: <Rewards/>,
   karmaRewards: <KarmaRewards/>,
+  preview: <Preview/>,
+  quickview: { row1, row2 }
 }
 
 export {

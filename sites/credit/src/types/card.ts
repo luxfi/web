@@ -36,6 +36,11 @@ type Card = {
   lifestyleBenefits: React.ReactNode,
   rewards: React.ReactNode,
   karmaRewards: React.ReactNode,
+  preview: React.ReactNode,
+  quickview: {
+    row1: React.ReactNode[],
+    row2: React.ReactNode[]
+  }
 }
 
 export {
