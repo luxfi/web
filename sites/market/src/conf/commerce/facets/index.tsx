@@ -29,18 +29,16 @@ const BULLION_FORM = [
 const level1 = [
   {
     skuToken: 'AG',
-    label: 'Silver',
+    label: 'Lux Silver',
     img: '/assets/img/cmmc/silver-bar-pt-100x125.png',
     imgAR: 1/1.25,
-    subNodesLabel: 'Form',
     subNodes: [...BULLION_FORM]
   },
   {
     skuToken: 'AU',
-    label: 'Gold',
+    label: 'Lux Gold',
     img: '/assets/img/cmmc/gold-bar-pt-100x125.png',
     imgAR: 1/1.25,
-    subNodesLabel: 'Form',
     subNodes: [...BULLION_FORM]
   },
   {
