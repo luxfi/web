@@ -33,8 +33,8 @@ export default {
       animation: 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
     } satisfies Product,
     {
-      id: 'LXM-CR-B-BG',
-      sku: 'LXM-CR-B-BG',
+      id: 'LXM-CR-B-GM',
+      sku: 'LXM-CR-B-GM',
       categoryTitle: 'Black',
       optionLabel: 'Black Gunmetal',
       categoryId: 'LXM-CR-B',

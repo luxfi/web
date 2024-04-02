@@ -25,7 +25,7 @@ const card: Card = {
     },
     {
       title: 'Black Gunmetal',
-      sku: 'LXM-CR-B-BG',
+      sku: 'LXM-CR-B-GM',
       materialImg: {
         src: '/assets/img/materials/black-card-gunmetal-99x99.png',
         dim: {w: 99, h: 99 },
