@@ -1,20 +1,19 @@
-interface ItemImportData {
+interface LeafImportData {
   tok: string
-  shortTitle?: string
-  img?: string
+  imgCode?: string
   desc?: string
 }
 
-interface LevelImportData {
+interface NodeImportData {
   tok: string
   titleToken?: string
   label: string
-  img?: string
+  imgCode?: string
   desc?: string
-  ch: LevelImportData[] | ItemImportData[]
+  ch: NodeImportData[] | LeafImportData[]
 }
 
 export {
-  type ItemImportData,
-  type LevelImportData
+  type LeafImportData,
+  type NodeImportData
 }

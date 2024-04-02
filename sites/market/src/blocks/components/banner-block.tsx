@@ -13,7 +13,7 @@ type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'
 const BannerBlockComponent: React.FC<{
   block: Block,
   videoSize?: TShirtSize
-  videoConstraint?: Dimensions
+  videoConstraint?: {w: number, h: number}
   grouping?: BannerGrouping
   groupingClasses?: string[] // count should match number of siblings in the chosen grouping
 }> = ({
@@ -75,7 +75,7 @@ const BannerBlockComponent: React.FC<{
       </div>
       <div className={'self-center flex flex-col justify-center items-center text-center ' + mediaClasses}>
         {banner.video && (
-          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
+          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
         )}
       </div>
       <CTAs className={ctaClasses}/>
@@ -89,7 +89,7 @@ const BannerBlockComponent: React.FC<{
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.video && (
-          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
+          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
         )}
       </div>
       <CTAs className={ctaClasses}/>
@@ -107,7 +107,7 @@ const BannerBlockComponent: React.FC<{
     <h1 className={'text-center ' + titleClasses}>{banner.title}</h1>
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
     {banner.video && (
-      <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
+      <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
     )}
     <CTAs className={ctaClasses}/>
   </>)

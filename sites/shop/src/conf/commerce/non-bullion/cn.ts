@@ -18,7 +18,7 @@ export default {
       id: 'LXM-CN-10B',
       sku: 'LXM-CN-10B',
       title: 'Lux Coin, 10B',
-      titleAsOption: '10B',
+      optionLabel: '10B',
       categoryId: 'LXM-CN',
       price: 10 * B * COIN, // $11M
       img: CN_IMG,
@@ -28,7 +28,7 @@ export default {
       id: 'LXM-CN-1B',
       sku: 'LXM-CN-1B',
       title: 'Lux Coin, 1B',
-      titleAsOption: '1B',
+      optionLabel: '1B',
       categoryId: 'LXM-CN',
       price: B * COIN, // $1.1M
       img: CN_IMG,
@@ -38,7 +38,7 @@ export default {
       id: 'LXM-CN-100M',
       sku: 'LXM-CN-100M',
       title: 'Lux Coin, 100M',
-      titleAsOption: '100M',
+      optionLabel: '100M',
       categoryId: 'LXM-CN',
       price: 100 * M * COIN, // $110K
       img: CN_IMG,
@@ -48,7 +48,7 @@ export default {
       id: 'LXM-CN-10M',
       sku: 'LXM-CN-10M',
       title: 'Lux Coin, 10M',
-      titleAsOption: '10M',
+      optionLabel: '10M',
       categoryId: 'LXM-CN',
       price: 10 * M * COIN, // $11K
       img: CN_IMG,
@@ -58,7 +58,7 @@ export default {
       id: 'LXM-CN-1M',
       sku: 'LXM-CN-1M',
       title: 'Lux Coin, 1M',
-      titleAsOption: '1M',
+      optionLabel: '1M',
       categoryId: 'LXM-CN',
       price: M * COIN, // $1.1K
       img: CN_IMG,

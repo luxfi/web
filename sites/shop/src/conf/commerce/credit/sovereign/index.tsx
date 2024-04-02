@@ -21,7 +21,7 @@ export default {
       sku: 'LXM-CR-S-RT',
       categoryId: 'LXM-CR-S',
       title: 'Lux Sovereign Card, Reflective Titanium',
-      titleAsOption: 'Reflective Titanium',
+      optionLabel: 'Reflective Titanium',
       price: 50000,
       img: '/assets/img/cards-flat/titanium-f-700x441.png',
     } satisfies Product,

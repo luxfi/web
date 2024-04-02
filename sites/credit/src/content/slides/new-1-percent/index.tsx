@@ -23,7 +23,6 @@ export default {blockType: 'screenful',
       {blockType: 'item-ctas',
         otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
         skuPath: 'LXM-CR-B'
-        //skuPath: 'LXM-CR-E'
       } satisfies ItemCTASBlock as Block,
     ], 
     [

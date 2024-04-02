@@ -3,14 +3,14 @@ import type { CardCategory } from '@/types'
 
 import MDX_Content from './detail.mdx'
 
-import CC_AR from '../../cc-aspect-ratio'
-
 export default {
   type : 'elite',
   id: 'LXM-CR-E',
   material: '24k Gold or Sterling Silver',
+  parentTitle: 'Lux Credit',
   title: 'Lux Elite Card',
-  img: '/assets/img/cards-dual-gd-sl-1485x1114.png',
+  titleShort: 'Elite',
+  img: {src: '/assets/img/cards-dual-gd-sl-1485x1114.png', dim: {w: 1485, h: 1114}},
   run: 100000,
   fees: {
     initial: 1000,
@@ -22,22 +22,20 @@ export default {
       id: 'LXM-CR-E-24G',
       sku: 'LXM-CR-E-24G',
       categoryId: 'LXM-CR-E',
-      title: 'Lux Elite Card, 24k Gold',
-      titleAsOption: '24k Gold',
+      categoryTitle: 'Elite',
+      optionLabel: '24k Gold',
       price: 500,
-      img: '/assets/img/cards-flat/gold-f-700x442.png',
-      imgAR: CC_AR,
+      img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}},
       animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
     } satisfies Product,
     {
       id: 'LXM-CR-E-SS',
       sku: 'LXM-CR-E-SS',
       categoryId: 'LXM-CR-E',
-      title: 'Lux Elite Card, Sterling Silver',
-      titleAsOption: 'Sterling Silver',
+      categoryTitle: 'Elite',
+      optionLabel: 'Sterling Silver',
       price: 500,
-      img: '/assets/img/cards-flat/silver-f-700x441.png',
-      imgAR: CC_AR,
+      img: {src: '/assets/img/cards-flat/silver-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
     } satisfies Product,
   ]

@@ -55,6 +55,7 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
             totalClx='sticky bottom-0 p-1 bg-background'
             scrollAfter={5}
             scrollHeightClx='h-[50vh]'
+            selectItems
             showPromoCode
             showShipping
           />

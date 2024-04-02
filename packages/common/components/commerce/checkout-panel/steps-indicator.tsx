@@ -20,7 +20,7 @@ const StepsIndicator: React.FC<{
     <BreadcrumbList>
       {stepNames.map((name, i) => (
         <>
-          <BreadcrumbItem key={i}>
+          <BreadcrumbItem key={`item-${i}`}>
             <BreadcrumbLink className={cn(
                 currentStep >= i ? 'text-foreground hover:text-foreground' : 'hover:text-muted-2',
                 'text-xxs sm:text-sm'  
@@ -29,7 +29,7 @@ const StepsIndicator: React.FC<{
               {name}
             </BreadcrumbLink>
           </BreadcrumbItem>
-          {i !== stepNames.length - 1 && <BreadcrumbSeparator />}
+          {i !== stepNames.length - 1 && <BreadcrumbSeparator  key={`sep-${i}`}/>}
         </>
       ))}
     </BreadcrumbList>

@@ -90,8 +90,8 @@ const CardDetailComponent: React.FC<{
       </h4>
       <ImageBlockComponent 
         block={{blockType: 'image',
-          src: cc.img!,
-          dim: {w: 300, h: 400},
+          src: cc.img!.src,
+          dim: cc.img!.dim,
           alt: cc.title,
           specifiers: '',
           props: { style: {
@@ -100,15 +100,16 @@ const CardDetailComponent: React.FC<{
           }}
         } satisfies ImageBlock as Block} 
         agent={mobile ? 'phone' : 'desktop'}
+        constraintTo={{w:300, h:400}}
         className={imageClx} 
       />
         <RadioItemSelector 
           items={cc.products as LineItem[]}
           selectedItemRef={lineItemRef}  
+          scrollList={false}
           selectSku={handleItemSelected}
           clx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
           itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
-          showPrice={false}
         />      
         {lineItemRef.item && <AddToCartWidget size={'sm'} item={lineItemRef.item} className={'md:hidden w-pr-70 mx-auto mt-3 min-w-fit'}/>}
 
