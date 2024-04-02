@@ -26,7 +26,7 @@ const DesktopBagCarousel: React.FC<{
       ext={{
         options: {loop: true},  
         constrainTo,  
-        noSelection: true
+        imageOnly: true
       } satisfies CarouselItemSelectorPropsExt}
     />
   )
