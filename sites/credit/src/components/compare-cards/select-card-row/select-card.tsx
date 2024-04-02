@@ -46,12 +46,12 @@ const SelectCard: React.FC<{
             )}
           >
             <div className={cn(
-              'flex items-center justify-center rounded-full border border-foreground aspect-square',
+              'flex items-center justify-center aspect-square',
               condensed ? 'h-pr-90' : 'h-pr-70 sm:h-pr-40'
             )}>
               <Plus className={cn(
                 'w-full aspect-square',
-                condensed ? 'h-pr-70' : 'h-pr-70 sm:h-pr-40'
+                condensed ? 'h-pr-50' : 'h-pr-50 sm:h-pr-40'
               )}/>
             </div>
           </Button>
