@@ -16,13 +16,13 @@ export default {
   contentColumns: [[
     {blockType: 'element',
       element: (<div className={'flex items-center justify-center self-center w-full aspect-square md:aspect-auto overflow-hidden'}>
-        <CashBackGraphic className='h-full max-h-[30rem] p-4'/>
+        <CashBackGraphic className='h-full max-h-[30rem] py-3'/>
       </div>)
     } satisfies ElementBlock as Block
   ] , [
     {blockType: 'element',
       element: (
-        <ApplyTypography className='p-4'>
+        <ApplyTypography className='p-3'>
           <MDX_right />
         </ApplyTypography>
       )

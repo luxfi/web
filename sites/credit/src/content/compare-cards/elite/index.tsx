@@ -7,8 +7,8 @@ import type { Card } from '@/types/card'
 import { row1, row2 } from './quickview'
 
 const card: Card = {
+  category: 'elite',
   title: 'Elite Card',
-  rarity: '1/10,000',
   materials: [
     {
       title: '24k Gold',

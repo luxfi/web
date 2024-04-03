@@ -7,8 +7,8 @@ import type { Card } from '@/types/card'
 import { row1, row2 } from './quickview'
 
 const card: Card = {
+  category: 'founder',
   title: 'Founder Card',
-  rarity: '1/100,000',
   materials: [
     {
       title: 'Cool Chrome',

@@ -1,18 +1,11 @@
 import '@/blocks/registerComponents'
 import DesktopAllCards from '@/components/all-cards/desktop'
+import MobileAllCards from '@/components/all-cards/mobile'
 
-type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined }
-}
-
-const Page = ({ searchParams }: Props ) => {
-  
-    // see src/middleware.ts
-  const agent = searchParams?.agent as string
-
+const Page = () => {
   return (<>
     <DesktopAllCards clx='hidden md:flex'/>
-    {/* <MobileAllCards className='hidden md:flex'/> */}
+    <MobileAllCards clx='md:hidden'/>
   </>)
 }
 

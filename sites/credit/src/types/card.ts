@@ -23,8 +23,8 @@ type CardMaterial = {
 }
 
 type Card = {
+  category: string,
   title: string,
-  rarity?: string,
   materials: CardMaterial[],
   annualFee: number,
   initiationFee: number,

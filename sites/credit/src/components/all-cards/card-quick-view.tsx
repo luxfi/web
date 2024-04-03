@@ -35,7 +35,12 @@ const CardQuickView: React.FC<{
           </div>
         ))}
         <div className='flex flex-col gap-2'>
-          <Button variant='outline'>More Details</Button>
+          <Button
+            variant='outline'
+            onClick={() => router.push(`/cards/${card.category}?sku=${selectedMaterial.sku}`)}
+          >
+            More Details
+          </Button>
           <Button
             variant='outline'
             onClick={() => router.push(`/compare?cards=${selectedMaterial.sku}`)}

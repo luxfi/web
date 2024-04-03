@@ -4,7 +4,7 @@ import { cn } from '@hanzo/ui/util'
 import { Main } from '@hanzo/ui/primitives'
 
 import cards from '@/content/compare-cards'
-import CardPreview from './card-preview'
+import CardPreview from './desktop-card-preview'
 
 const DesktopAllCards: React.FC<{
   clx: string
