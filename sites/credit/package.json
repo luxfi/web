@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "@hanzo/auth": "2.3.4",
-    "@hanzo/commerce": "6.1.5",
-    "@hanzo/ui": "3.4.0",
+    "@hanzo/commerce": "6.1.6",
+    "@hanzo/ui": "3.4.1",
     "@hookform/resolvers": "^3.3.4",
-    "@luxdefi/common": "4.2.4",
+    "@luxdefi/common": "4.2.5",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.68",
