@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useSearchParams } from 'next/navigation'
 
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
@@ -18,13 +17,15 @@ const numCardsDesktop = 3
 
 type CardWithSelectedMaterial = Card & { selectedMaterial: CardMaterial }
 
-const CompareCards = () => {
-  const searchParams = useSearchParams()
-
+const CompareCards: React.FC<{
+  predefinedCards?: string
+}> = ({
+  predefinedCards
+}) => {
   const [selectedCards, setSelectedCards] = useState<CardWithSelectedMaterial[]>([])
 
   useEffect(() => {
-    const cardSKUs = searchParams.get('cards')?.split(',')
+    const cardSKUs = predefinedCards?.split(',')
     if (cardSKUs) {
       const predefinedCards = cardSKUs.map(sku => {
         const card = cards.find(card => !!card.materials.find(material => material.sku === sku))

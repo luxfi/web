@@ -4,9 +4,13 @@ import '@/blocks/registerComponents'
 
 import CompareCards from '@/components/compare-cards'
 
-const Page = () => {
+type Props = {
+  searchParams?: { [key: string]: string }
+}
+
+const Page = ({ searchParams }: Props) => {
   return (
-    <CompareCards/> 
+    <CompareCards predefinedCards={searchParams?.cards}/> 
   )
 }
 
