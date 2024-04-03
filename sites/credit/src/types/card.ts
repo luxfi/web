@@ -48,6 +48,11 @@ type Card = {
       multiplier: number,
       title: string,
       description: string
+    }[],
+    benefits: {
+      img: ImageDef,
+      title: string,
+      description: string
     }[]
   }
 }

@@ -12,6 +12,7 @@ import type { LineItem } from '@hanzo/commerce/types'
 
 import type { Card, CardMaterial } from '@/types/card'
 import SplinePlayer from '../spline-player'
+import Benefits from './benefits'
 
 const DesktopViewCardDetails: React.FC<{
   card: Card
@@ -19,7 +20,7 @@ const DesktopViewCardDetails: React.FC<{
   lineItem: LineItem
   selectedMaterial: CardMaterial
   setSelectedMaterial: (material: CardMaterial) => void
-  clx: string
+  clx?: string
 }> = ({
   card,
   setCard,
@@ -96,12 +97,13 @@ const DesktopViewCardDetails: React.FC<{
               {card.cardDetails.karma.map((reward, i) => (
                 <CardComponent key={i} className='flex flex-col gap-1 items-center p-3'>
                   <h4 className='!text-5xl'>{reward.multiplier}x</h4>
-                  <p className='text-xs'>KARMA POINTS</p>
-                  <h4>{reward.title}</h4>
-                  <p className='!text-center'>{reward.description}</p>
+                  <p className='!text-center text-xxs lg:text-xs'>KARMA POINTS</p>
+                  <h4 className='!text-center !text-base lg:!text-xl'>{reward.title}</h4>
+                  <p className='!text-center text-xs lg:text-sm'>{reward.description}</p>
                 </CardComponent>
               ))}
             </div>
+            <Benefits card={card} clx='mt-14'/>
           </div>
         </ApplyTypography>
       </div>
