@@ -13,10 +13,10 @@
     "ul:ui": "pnpm unlink -g @hanzo/ui"
   },
   "dependencies": {
-    "@hanzo/auth": "2.3.3",
-    "@hanzo/commerce": "6.1.4",
-    "@hanzo/ui": "3.3.0",
-    "@luxdefi/common": "4.2.3",
+    "@hanzo/auth": "2.3.4",
+    "@hanzo/commerce": "6.1.5",
+    "@hanzo/ui": "3.4.0",
+    "@luxdefi/common": "4.2.4",
     "@next/mdx": "14.1.0",
     "lucide-react": "^0.360.0",
     "next": "14.1.3",
