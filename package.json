@@ -33,6 +33,6 @@
   "pnpm": {
     "overrides": {
       "@types/react": "18.2.64"
-   }
+    }
   }
 }
