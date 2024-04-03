@@ -90,10 +90,10 @@ export default {
     video,
     {blockType: 'element',
       element: <>
-        <div className='absolute hidden md:flex top-[110px] left-pr-50 w-[200px] h-[200px] -z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-0 md:top-[210px] md:left-pr-80 w-[80px] h-[80px] z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-75 md:top-[665px] md:left-pr-57 w-[80px] h-[80px] z-10'><VideoBlockComponent block={video}/></div>
-        <div className='absolute hidden md:flex top-[610px] left-pr-80 w-[150px] h-[150px] -z-10'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-[110px] left-pr-50 w-[200px] h-[200px] z-below-content'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-25 left-pr-0 md:top-[210px] md:left-pr-80 w-[80px] h-[80px] z-above-content'><VideoBlockComponent block={video}/></div>
+        <div className='absolute top-pr-25 left-pr-75 md:top-[665px] md:left-pr-57 w-[80px] h-[80px] z-above-content'><VideoBlockComponent block={video}/></div>
+        <div className='absolute hidden md:flex top-[610px] left-pr-80 w-[150px] h-[150px] z-below-content'><VideoBlockComponent block={video}/></div>
       </>,
     } as ElementBlock,
   ]],

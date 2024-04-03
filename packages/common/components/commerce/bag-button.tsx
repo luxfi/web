@@ -45,7 +45,7 @@ const BagButton: React.FC<{
     >
     {!c.cartEmpty && (
       <div className={
-        'z-20 flex flex-col justify-center items-center  ' +
+        'z-above-content flex flex-col justify-center items-center  ' +
         'absolute left-0 right-0 top-0 bottom-0 ' + 
         'leading-none font-sans font-bold text-primary-fg text-accent text-xs ' 
       }>
