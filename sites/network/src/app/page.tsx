@@ -14,14 +14,13 @@ type Props = {
   // Scroll Snap using this is the approach: 
   // https://stackoverflow.com/a/76066443/11645689
   // see also styles on 'html' in @hanzo/ui/style/global.css
-
-  const Page = ({ searchParams }: Props ) => {
+const Page = ({ searchParams }: Props ) => {
   
     // see src/middleware.ts
   const agent = searchParams?.agent as string
 
   return (<>
-    <Header siteDef={siteDef} className='fixed left-0 right-0 z-50'/>
+    <Header siteDef={siteDef} />
     {tiles.map((banner, index) => (
       <Screenful 
         block={banner} 
