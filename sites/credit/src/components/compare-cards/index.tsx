@@ -11,7 +11,7 @@ import RowHeading from './row-heading'
 import rowsContent from './rows-content'
 import CompareHeader from './compare-header'
 import SelectCardRow from './select-card-row'
-import cards from '@/content/compare-cards'
+import cards from '@/content/cards'
 
 const numCardsMobile = 2
 const numCardsDesktop = 3
