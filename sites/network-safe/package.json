@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@hanzo/auth": "2.3.4",
-    "@hanzo/commerce": "6.1.5",
-    "@hanzo/ui": "3.4.0",
-    "@luxdefi/common": "4.2.4",
+    "@hanzo/commerce": "6.1.8",
+    "@hanzo/ui": "3.4.3",
+    "@luxdefi/common": "4.2.7",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "mobx-react": "^9.1.0",
@@ -39,7 +39,7 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.2",
     "typescript": "^5.3.3"
   }
 }

@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hanzo/commerce": "^6.1.5",
-    "@hanzo/ui": "3.4.0",
+    "@hanzo/commerce": "^6.1.8",
+    "@hanzo/ui": "3.4.3",
     "@types/node": "^20.11.24",
     "@types/uuid": "^9.0.8",
     "fs": "0.0.1-security",
