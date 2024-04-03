@@ -5,7 +5,7 @@ import { cn } from '@hanzo/ui/util'
 import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
 
 import type { Card } from '@/types/card'
-import cards from '@/content/compare-cards'
+import cards from '@/content/cards'
 import type { CardWithSelectedMaterial } from '../index'
 
 const SelectCard: React.FC<{

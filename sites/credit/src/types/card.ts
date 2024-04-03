@@ -20,6 +20,7 @@ type CardMaterial = {
   sku: string
   materialImg: ImageDef
   cardImg: ImageDef
+  animation: string
 }
 
 type Card = {
@@ -32,14 +33,22 @@ type Card = {
   rewardPct: number,
   fxRatePct: number,
   maxAccountHolders: number,
-  travelBenefits: React.ReactNode,
-  lifestyleBenefits: React.ReactNode,
-  rewards: React.ReactNode,
-  karmaRewards: React.ReactNode,
-  preview: React.ReactNode,
+  travelBenefits: ReactNode,
+  lifestyleBenefits: ReactNode,
+  rewards: ReactNode,
+  karmaRewards: ReactNode,
+  preview: ReactNode,
   quickview: {
-    row1: React.ReactNode[],
-    row2: React.ReactNode[]
+    row1: ReactNode[],
+    row2: ReactNode[]
+  },
+  cardDetails: {
+    description: ReactNode,
+    karma: {
+      multiplier: number,
+      title: string,
+      description: string
+    }[]
   }
 }
 

@@ -3,6 +3,7 @@ import LifestyleBenefits from './lifestyle-benefits.mdx'
 import Rewards from './rewards.mdx'
 import KarmaRewards from './karma-rewards.mdx'
 import Preview from './preview.mdx'
+import CardDetailsDescription from './card-details-description.mdx'
 import type { Card } from '@/types/card'
 import { row1, row2 } from './quickview'
 
@@ -23,6 +24,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
+      animation: 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
     },
     {
       title: 'Black Gunmetal',
@@ -36,8 +38,9 @@ const card: Card = {
         //TODO: Change this to the correct image
         src: '/assets/img/cards-flat/black-f-700x441.png',
         dim: {w: 700, h: 441 },
-        alt: 'Black Card Black Gunmetal'
+        alt: 'Black Card Black Gunmetal',
       },
+      animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
     }
   ],
   annualFee: 99,
@@ -51,6 +54,31 @@ const card: Card = {
   rewards: <Rewards/>,
   karmaRewards: <KarmaRewards/>,
   preview: <Preview/>,
+  cardDetails: {
+    description: <CardDetailsDescription/>,
+    karma: [
+      {
+        multiplier: 2,
+        title: 'Food & Dining',
+        description: 'Earn Karma Rewards at restaurants worldwide, plus takeout and delivery at home or while traveling.'
+      },
+      {
+        multiplier: 2,
+        title: 'Retail Stores',
+        description: 'Earn Karma Rewards at supermarkets and retail stores worldwide, on up to $25,000 per year in purchases.'
+      },
+      {
+        multiplier: 1,
+        title: 'Flights & Hotels',
+        description: 'Earn Karma Rewards on flights and hotels worldwide up to $100,000.'
+      },
+      {
+        multiplier: 1,
+        title: 'Every Purchase',
+        description: 'Earn Karma Rewards anytime you use your card in every country for anything you can purchase with your Lux card.'
+      }
+    ]
+  },
   quickview: { row1, row2 }
 }
 
