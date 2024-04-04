@@ -1,5 +1,3 @@
-'use client'
-
 import { cn } from '@hanzo/ui/util'
 import { Main } from '@hanzo/ui/primitives'
 

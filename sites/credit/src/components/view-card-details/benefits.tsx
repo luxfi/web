@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 
 import { cn } from '@hanzo/ui/util'
@@ -40,7 +42,11 @@ const BenefitCard: React.FC<{
       {style === 'accordion' ? (
         <Accordion type='single' collapsible className='w-full' value={open ? title : ''}>
           <AccordionItem value={title} className='border-none'>
-            <AccordionTrigger showChevron className='!no-underline px-3 h-14' onClick={() => setOpen(!open)}>
+            <AccordionTrigger
+              showChevron
+              className='!no-underline px-3 h-14'
+              onClick={() => setOpen(!open)}
+            >
               <h5 className='text-lg text-left'>{title}</h5>
             </AccordionTrigger>
             <AccordionContent className='px-3 pb-3'>{description}</AccordionContent>

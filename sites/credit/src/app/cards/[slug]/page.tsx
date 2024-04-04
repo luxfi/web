@@ -9,10 +9,10 @@ import DesktopViewCardDetails from "@/components/view-card-details/desktop"
 import MobileViewCardDetails from "@/components/view-card-details/mobile"
 import TabletViewCardDetails from "@/components/view-card-details/tablet"
 import cards from "@/content/cards"
-import type { Card, CardMaterial } from "@/types/card"
+import type { Card, CardMaterial, CardType } from "@/types/card"
 
 type Props = {
-  params: { slug: 'black' | 'elite' | 'founder' | 'sovereign' }
+  params: { slug: CardType }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 

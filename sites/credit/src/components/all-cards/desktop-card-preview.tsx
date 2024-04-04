@@ -4,15 +4,26 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ChevronDown } from 'lucide-react'
 
-import { AddToCartWidget, formatCurrencyValue, useCommerce } from '@hanzo/commerce'
+import {
+  AddToCartWidget,
+  formatCurrencyValue,
+  useCommerce
+} from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
-import { Accordion, AccordionContent, AccordionItem, ApplyTypography, Button } from '@hanzo/ui/primitives'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  ApplyTypography,
+  Button
+} from '@hanzo/ui/primitives'
 
 import type { Card, CardMaterial } from '@/types/card'
 import CardQuickView from './card-quick-view'
 import CardMaterialPicker from '../card-material-picker'
+import Link from 'next/link'
 
 const CardPreview: React.FC<{
   key: number | string
@@ -46,14 +57,16 @@ const CardPreview: React.FC<{
             block={{blockType: 'image', ...selectedMaterial.cardImg}}
             className='w-pr-80'
           />
-          <div className='flex flex-col gap-2 items-center'>
-            <CardMaterialPicker
-              materials={card.materials}
-              selectedMaterial={selectedMaterial}
-              onChange={setSelectedMaterial}
-            />
-          </div>
+          <CardMaterialPicker
+            materials={card.materials}
+            selectedMaterial={selectedMaterial}
+            onChange={setSelectedMaterial}
+          />
           {lineItem && <AddToCartWidget item={lineItem} className='w-fit'/>}
+          <div className='flex flex-col gap-2'>
+            <Link href=''>Offer & Benefit Terms</Link>
+            <Link href=''>Rates and Fees</Link>
+          </div>
         </div>
 
         <div className='flex flex-col gap-10 col-span-2'>

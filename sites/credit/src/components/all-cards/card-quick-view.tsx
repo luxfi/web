@@ -21,14 +21,14 @@ const CardQuickView: React.FC<{
   return (
     <ApplyTypography className={cn('flex flex-col !gap-12 py-6 typography-p:text-sm lg:typography-p:text-base', className)}>
       <h3>{card.title}</h3>
-      <div className='grid grid-cols-4 gap-4'>
+      <div className='grid grid-cols-4 gap-6'>
         {card.quickview.row1.map((row, i) => (
           <div key={i} className='flex flex-col gap-2'>
             {row}
           </div>
         ))}
       </div>
-      <div className='grid grid-cols-4 gap-4'>
+      <div className='grid grid-cols-4 gap-6'>
         {card.quickview.row2.map((row, i) => (
           <div key={i} className='flex flex-col gap-2'>
             {row}

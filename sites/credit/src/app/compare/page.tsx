@@ -9,8 +9,11 @@ type Props = {
 }
 
 const Page = ({ searchParams }: Props) => {
+  
+  const predefinedCards = searchParams?.cards
+
   return (
-    <CompareCards predefinedCards={searchParams?.cards}/> 
+    <CompareCards predefinedCards={predefinedCards}/> 
   )
 }
 
