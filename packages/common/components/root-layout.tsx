@@ -49,7 +49,8 @@ const RootLayout: React.FC<PropsWithChildren & {
       <FacebookPixelHead/>
     </head>
     <body className={bodyClasses} style={{
-      overflow: 'hidden',
+      // Not sure why these got added (by my check in)
+      // overflow: hidden here breaks scroll snap, see comment above
       paddingRight: '0 !important',
       maxWidth: '100vw' 
 

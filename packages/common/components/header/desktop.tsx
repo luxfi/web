@@ -25,7 +25,7 @@ const DesktopHeader: React.FC<{
     // TODO move 13px into a size class and configure twMerge to recognize say, 'text-size-nav' 
     // (vs be beat out by 'text-color-nav')
   return (
-    <header className={cn('bg-background sticky z-20 top-0  ', className)} >
+    <header className={cn('bg-background sticky z-header top-0  ', className)} >
       {/* md or larger */}
       <div className={
         'flex flex-row h-[80px] items-center  justify-between ' +

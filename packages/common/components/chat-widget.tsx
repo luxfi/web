@@ -48,7 +48,7 @@ const ChatWidget: React.FC<{
   return (<>
     <div className={
       'fixed bottom-0 sm:bottom-20 right-0 w-full h-full ' +
-      'sm:max-w-[400px] sm:max-h-[550px] sm:px-4 z-[51] ' +
+      'sm:max-w-[400px] sm:max-h-[550px] sm:px-4 z-above-floating ' +
       (showChatbot ? 'flex' : 'hidden')
     }>
       <Card className='flex flex-col h-full w-full'>
@@ -66,7 +66,7 @@ const ChatWidget: React.FC<{
       variant='outline'
       size='link'
       onClick={onClick}
-      className='fixed bottom-4 right-0 h-12 w-12 mx-4 rounded-full z-20'
+      className='fixed bottom-4 right-0 h-12 w-12 mx-4 rounded-full z-floating'
     >
       {showChatbot ? <X /> : <LuxLogo width={24} height={24} className='mt-2' />}
     </Button>

@@ -86,7 +86,7 @@ const MobileHeader: React.FC<{
     // header element MUST be fixed, and NOT sticky.  Or else drawer breaks on mobile browsers
   return (<>
     <header className={cn(
-      'bg-background fixed z-20 top-0 left-0 w-full', 
+      'bg-background fixed z-header top-0 left-0 w-full', 
       className
     )}>
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
@@ -119,7 +119,8 @@ const MobileHeader: React.FC<{
     {menuOpen() && (
       <div className={  
         'fixed top-0 left-0 w-full h-full ' + 
-        'flex flex-column p-6 pt-15 bg-background z-40 animate-mobile-menu-open' 
+          // z must below header itself
+        'flex flex-column p-6 pt-15 bg-background z-below-header animate-mobile-menu-open' 
       }>
       {menuState === 'login' ? (
         <LoginPanel noHeading onLoginChanged={onLoginChanged} className='sm:animate-in sm:zoom-in-90' />

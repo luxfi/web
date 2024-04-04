@@ -1,12 +1,13 @@
 'use client'
 
+import CarouselAutoplayPlugin from 'embla-carousel-autoplay'
+
 import { useEffect, useRef, useState } from 'react'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselAutoplayPlugin,
   type CarouselApi
 } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
@@ -46,39 +47,24 @@ const ReviewsCarousel: React.FC<{
   reviews,
   autostart
 }) => {
-  const plugin = useRef(
-    CarouselAutoplayPlugin({ delay: 5000, stopOnInteraction: true })
-  )
 
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
+  const [currentIndex, setCurrent] = useState<number>(0)
 
-  useEffect(() => {
-    if (!api) {
-      return
-    }
+  const apiRef = useRef<CarouselApi | undefined>(undefined)
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
-
-  const selectCard = (index: number) => {
-    if (api) {
-      api.scrollTo(index)
-    }
-  }
+  const setApi = (api: CarouselApi) => { apiRef.current = api}
+  const onSelect = (api: CarouselApi) => { setCurrent(api.selectedScrollSnap()) }
+  const scrollToCard = (index: number) => { apiRef.current?.scrollTo(index) }
 
   return (
     <div className='w-full flex flex-col gap-6 sm:gap-10 items-center overflow-hidden'>
       <Carousel
         setApi={setApi}
-        plugins={autostart ? [plugin.current] : []}
-        options={{
-          align: 'start',
-          loop: true,
-        }}
+          // safe to pass in this way, since Shadcn and Embla do that.
+        plugins={autostart ? [CarouselAutoplayPlugin({ delay: 5000, stopOnInteraction: true })] : []}
+        options={{ align: 'start', loop: true }}
         className='w-full mx-auto max-w-[40rem]'
+        onCarouselSelect={onSelect}
       >
         <CarouselContent>
           {reviews.map((review: Review, index) => (
@@ -92,8 +78,11 @@ const ReviewsCarousel: React.FC<{
         {reviews.map((_, index) => (
           <div
             key={index}
-            className={cn('w-3 h-3 rounded-full border border-foreground cursor-pointer', current === index ? 'bg-foreground' : '')}
-            onClick={() => selectCard(index)}
+            className={cn(
+              'w-3 h-3 rounded-full border border-foreground cursor-pointer', 
+              currentIndex === index ? 'bg-foreground' : ''
+            )}
+            onClick={() => scrollToCard(index)}
           />
         ))}
       </div>
