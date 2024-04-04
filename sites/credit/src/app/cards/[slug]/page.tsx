@@ -1,12 +1,15 @@
 'use client'
 
-import DesktopViewCardDetails from "@/components/view-card-details/desktop"
-import MobileViewCardDetails from "@/components/view-card-details/mobile"
-import cards from "@/content/cards"
-import type { Card, CardMaterial } from "@/types/card"
+import { useEffect, useState } from "react"
+
 import { useCommerce } from "@hanzo/commerce"
 import type { LineItem } from "@hanzo/commerce/types"
-import { useEffect, useState } from "react"
+
+import DesktopViewCardDetails from "@/components/view-card-details/desktop"
+import MobileViewCardDetails from "@/components/view-card-details/mobile"
+import TabletViewCardDetails from "@/components/view-card-details/tablet"
+import cards from "@/content/cards"
+import type { Card, CardMaterial } from "@/types/card"
 
 type Props = {
   params: { slug: 'black' | 'elite' | 'founder' | 'sovereign' }
@@ -40,6 +43,21 @@ const Page = ({ params, searchParams }: Props) => {
   }
 
   return (<>
+    <MobileViewCardDetails
+      clx='sm:hidden'
+      card={card}
+      lineItem={lineItem}
+      selectedMaterial={selectedMaterial}
+      setSelectedMaterial={setSelectedMaterial}
+    />
+    <TabletViewCardDetails
+      clx='hidden sm:flex md:hidden'
+      card={card}
+      setCard={setCard}
+      lineItem={lineItem}
+      selectedMaterial={selectedMaterial}
+      setSelectedMaterial={setSelectedMaterial}
+    />
     <DesktopViewCardDetails
       clx='hidden md:flex'
       card={card}
@@ -48,7 +66,6 @@ const Page = ({ params, searchParams }: Props) => {
       selectedMaterial={selectedMaterial}
       setSelectedMaterial={setSelectedMaterial}
     />
-    <MobileViewCardDetails clx='md:hidden'/>
   </>)
 }
 

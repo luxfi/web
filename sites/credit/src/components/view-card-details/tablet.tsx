@@ -15,7 +15,7 @@ import Benefits from './benefits'
 import CardMaterialPicker from '../card-material-picker'
 import MoreWaysToEarn from './more-ways-to-earn'
 
-const DesktopViewCardDetails: React.FC<{
+const TabletViewCardDetails: React.FC<{
   card: Card
   setCard: (card: Card) => void
   lineItem: LineItem
@@ -52,36 +52,42 @@ const DesktopViewCardDetails: React.FC<{
   }
 
   return (
-    <Main className={cn('flex flex-col gap-4', clx)}>
+    <Main className={cn('flex flex-col gap-4 pt-11', clx)}>
       <div className='flex gap-1 items-center cursor-pointer' onClick={() => router.push('/cards')}>
         <ChevronLeft/>
         <div>View All Cards</div>
       </div>
-      <ApplyTypography className='grid grid-cols-1 md:grid-cols-7'>
-        <div className='flex flex-col md:col-span-2 items-center gap-3'>
-          <h3 className='!text-2xl self-start'>{card.title}</h3>
-          <div className={cn(
-              'w-full transition-all duration-300',
-              showAnimation ? 'opacity-100' : 'opacity-0',
-            )}
-          >
-            <SplinePlayer src={currentAnimation} className='!aspect-[12/10]'/>
+      <ApplyTypography className='grid grid-flow-row'>
+        <div className={cn(
+            'w-full transition-all duration-300',
+            showAnimation ? 'opacity-100' : 'opacity-0',
+          )}
+        >
+          <SplinePlayer src={currentAnimation} className='!aspect-[12/10]'/>
+        </div>
+        <div className='grid grid-cols-4'>
+          <div className='flex flex-col justify-between col-span-2 gap-2'>
+            <h3 className='!text-2xl self-start'>{card.title}</h3>
+            <div className='flex flex-col text-sm'>
+              <div><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
+              <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
+            </div>
           </div>
-          <div className='flex flex-col gap-1 items-center'>
+          <div className='flex flex-col justify-end col-span-1 gap-2'>
             <CardMaterialPicker
               materials={card.materials}
               selectedMaterial={selectedMaterial}
               onChange={changeSelectedMaterial}
             />
-            <p className='text-xs'>{selectedMaterial?.title}</p>
+            <p className='text-xxs !text-center'>Choose Your Design</p>
           </div>
-          <div className='flex justify-center gap-3 text-sm w-full'>
-            <div><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
-            <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
+          <div className='flex flex-col justify-end col-span-1 gap-2'>
+            <h5 className='col-span-1 !text-sm !text-right'>{selectedMaterial.title}</h5>
+            <p className='text-xxs !text-right'>{card.rarity}</p>
           </div>
-          {lineItem && <AddToCartWidget item={lineItem} className='w-fit mx-auto'/>}
         </div>
-        <div className='flex flex-col gap-12 md:col-span-5'>
+        {lineItem && <AddToCartWidget item={lineItem} className='w-fit mx-auto'/>}
+        <div className='flex flex-col gap-12'>
           {card.cardDetails.intro.map(({title, description}, i) => (
             <div key={i} className='flex flex-col'>
               <h5>{title}</h5>
@@ -89,7 +95,7 @@ const DesktopViewCardDetails: React.FC<{
             </div>
           ))}
           <MoreWaysToEarn rewards={card.karmaRewards}/>
-          <Benefits card={card} showByline clx='mt-14'/>
+          <Benefits card={card} clx='mt-14'/>
         </div>
       </ApplyTypography>
     </Main>
@@ -97,5 +103,5 @@ const DesktopViewCardDetails: React.FC<{
 }
 
 export {
-  DesktopViewCardDetails as default
+  TabletViewCardDetails as default
 }

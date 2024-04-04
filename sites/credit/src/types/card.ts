@@ -24,34 +24,37 @@ type CardMaterial = {
 }
 
 type Card = {
-  category: string,
-  title: string,
-  materials: CardMaterial[],
-  annualFee: number,
-  initiationFee: number,
-  replacementFee: number,
-  rewardPct: number,
-  fxRatePct: number,
-  maxAccountHolders: number,
-  travelBenefits: ReactNode,
-  lifestyleBenefits: ReactNode,
-  rewards: ReactNode,
-  karmaRewards: ReactNode,
-  preview: ReactNode,
+  category: string
+  title: string
+  rarity: string
+  materials: CardMaterial[]
+  annualFee: number
+  initiationFee: number
+  replacementFee: number
+  rewardPct: number
+  fxRatePct: number
+  maxAccountHolders: number
+  travelBenefits: ReactNode
+  lifestyleBenefits: ReactNode
+  rewards: ReactNode
+  preview: ReactNode
+  karmaRewards: {
+    multiplier: number
+    title: string
+    description: string
+  }[]
   quickview: {
-    row1: ReactNode[],
+    row1: ReactNode[]
     row2: ReactNode[]
-  },
+  }
   cardDetails: {
-    description: ReactNode,
-    karma: {
-      multiplier: number,
-      title: string,
+    intro: {
+      title: string
       description: string
-    }[],
+    }[]
     benefits: {
-      img: ImageDef,
-      title: string,
+      img: ImageDef
+      title: string
       description: string
     }[]
   }

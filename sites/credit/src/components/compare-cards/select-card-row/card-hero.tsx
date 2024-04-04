@@ -9,6 +9,7 @@ import type { Card, CardMaterial } from '@/types/card'
 import type { CardWithSelectedMaterial } from '../index'
 import type { LineItem } from '@hanzo/commerce/types'
 import { useEffect, useState } from 'react'
+import CardMaterialPicker from '@/components/card-material-picker'
 
 const CardHero: React.FC<{
   key: number | string
@@ -28,7 +29,7 @@ const CardHero: React.FC<{
   const cmmc = useCommerce()
   const [lineItem, setLineItem] = useState<LineItem>()
 
-  const changeCardMaterial = (card: Card, material: CardMaterial) => {
+  const changeSelectedMaterial = (material: CardMaterial) => {
     setSelectedCards(selectedCards.map(selectedCard => {
       if (selectedCard.title === card.title) {
         return {
@@ -104,20 +105,11 @@ const CardHero: React.FC<{
           <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
         </div>
         <div className='flex flex-col gap-2 items-center'>
-          <div className='flex gap-4 justify-center'>
-            {card.materials.map(({title, materialImg}, i) => (
-              <div
-                key={i}
-                className={cn('cursor-pointer rounded-full p-1', title === selectedMaterial?.title && 'outline outline-2 outline-foreground')}
-                onClick={() => changeCardMaterial(card, card.materials[i])}
-              >
-                <ImageBlockComponent
-                  block={{blockType: 'image', ...materialImg}}
-                  className='h-10 w-10'
-                />
-              </div>
-            ))}
-          </div>
+          <CardMaterialPicker
+            materials={card.materials}
+            selectedMaterial={selectedMaterial}
+            onChange={changeSelectedMaterial}
+          />
           <p className='text-xxs sm:text-xs'>{selectedMaterial?.title}</p>
         </div>
         {lineItem && <AddToCartWidget item={lineItem}/>}

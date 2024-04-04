@@ -12,6 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, ApplyTypography, Button } f
 
 import type { Card, CardMaterial } from '@/types/card'
 import CardQuickView from './card-quick-view'
+import CardMaterialPicker from '../card-material-picker'
 
 const CardPreview: React.FC<{
   key: number | string
@@ -46,23 +47,11 @@ const CardPreview: React.FC<{
             className='w-pr-80'
           />
           <div className='flex flex-col gap-2 items-center'>
-            <div className='flex gap-4 justify-center'>
-              {card.materials.map(({title, materialImg}, i) => (
-                <div
-                  key={i}
-                  className={cn(
-                    'cursor-pointer rounded-full p-1',
-                    title === selectedMaterial?.title && 'outline outline-2 outline-foreground'
-                  )}
-                  onClick={() => setSelectedMaterial(card.materials[i])}
-                >
-                  <ImageBlockComponent
-                    block={{blockType: 'image', ...materialImg}}
-                    className='h-10 w-10'
-                  />
-                </div>
-              ))}
-            </div>
+            <CardMaterialPicker
+              materials={card.materials}
+              selectedMaterial={selectedMaterial}
+              onChange={setSelectedMaterial}
+            />
           </div>
           {lineItem && <AddToCartWidget item={lineItem} className='w-fit'/>}
         </div>
@@ -83,7 +72,12 @@ const CardPreview: React.FC<{
 
         <div className='flex flex-col gap-4 col-span-1'>
           <ApplyTypography className='flex flex-col !gap-2 typography-p:text-sm'>
-            {card.karmaRewards}
+            <p className='font-bold'>KARMA Rewards with every purchase.</p>
+            <div className='flex flex-col gap-2'>
+              {card.karmaRewards.map(({multiplier, description}, i) => (
+                <p key={i}><span className='font-bold'>{multiplier}X points</span> {description}</p>
+              ))}
+            </div>
           </ApplyTypography>
           <div className='flex flex-col-reverse xl:flex-row gap-2'>
             <Button
