@@ -52,7 +52,7 @@ const CardPreview: React.FC<{
   return (
     <div className='flex flex-col gap-10'>
       <div key={key} className='grid grid-cols-4 gap-10'>
-        <div className='flex flex-col gap-4 items-center col-span-1'>
+        <div className='flex flex-col gap-5 items-center col-span-1'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial.cardImg}}
             className='w-pr-80'
@@ -63,10 +63,10 @@ const CardPreview: React.FC<{
             onChange={setSelectedMaterial}
           />
           {lineItem && <AddToCartWidget item={lineItem} className='w-fit'/>}
-          <div className='flex flex-col gap-2'>
+          <ApplyTypography className='flex flex-col !gap-2 items-center'>
             <Link href=''>Offer & Benefit Terms</Link>
             <Link href=''>Rates and Fees</Link>
-          </div>
+          </ApplyTypography>
         </div>
 
         <div className='flex flex-col gap-10 col-span-2'>
