@@ -7,9 +7,9 @@ import { ApplyTypography, LinkElement, type ButtonSizes } from '@hanzo/ui/primit
 import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
-import type { Category, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
+import type { Family, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 import { AddToCartWidget, RadioItemSelector } from '@hanzo/commerce'
-import type { CardCategory } from '@/types'
+import type { CardFamily } from '@/types'
 
 
 const toUSD = new Intl.NumberFormat('en-US', {
@@ -24,14 +24,14 @@ const Spacer: React.FC<{ className?:  string}> = ({className=''}) => (
 )
 
 const CardDetailComponent: React.FC<{
-  category: Category
+  family: Family
   lineItemRef: ObsLineItemRef
   handleItemSelected: (sku: string) => void 
   className? : string
   isLoading?: boolean
   mobile?: boolean
 }> = ({
-  category,
+  family,
   lineItemRef,
   handleItemSelected, 
   className='',
@@ -39,9 +39,9 @@ const CardDetailComponent: React.FC<{
   mobile=false
 }) => {
 
-  const cc = category as CardCategory
+  const cc = family as CardFamily
 
-  const soleOption = !isLoading && category.products.length === 1
+  const soleOption = !isLoading && family.products.length === 1
 
   const Run: React.FC<{run: number}> = ({
     run
@@ -192,7 +192,7 @@ const CardDetailComponent: React.FC<{
 
 /*
               <ProductSelectionRadioGroup 
-        products={category.products}
+        products={family.products}
         selectedSku={lineItemRef.item?.sku ?? undefined}  
         onValueChange={handleItemSelected}
         groupClx='grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '

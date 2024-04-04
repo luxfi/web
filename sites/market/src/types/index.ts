@@ -1,7 +1,7 @@
 
-import type { CardCategory, CardType } from './card'
+import type { CardFamily, CardType } from './card'
 
 export {
   type CardType,
-  type CardCategory,
+  type CardFamily,
 }

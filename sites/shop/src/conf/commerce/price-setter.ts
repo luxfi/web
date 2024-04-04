@@ -1,5 +1,5 @@
 import prices from '../prices'
-import type { Category } from '@hanzo/commerce/types'
+import type { Family } from '@hanzo/commerce/types'
 
 export const TS = '-'  // token separator
 export const DEC = '_' // decimal substitute
@@ -36,7 +36,7 @@ const priceFromSKU = (
   return tree[type_][unit] * amount
 }
 
-export const visitCategory = (c: Category): Category => {
+export const visitFamily = (c: Family): Family => {
   for (let prod of c.products) {
     prod.price = priceFromSKU(prod.sku)
   }

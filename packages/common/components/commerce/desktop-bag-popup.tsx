@@ -37,7 +37,7 @@ const DesktopBagPopup: React.FC<{
         items: cmmc.cartItems.map((item) => ({
           item_id: item.sku,
           item_name: item.title,
-          item_category: item.categoryId,
+          item_category: item.familyId,
           price: item.price,
           quantity: item.quantity
         })),

@@ -1,5 +1,5 @@
 import type { Product } from '@hanzo/commerce/types'
-import type { CardCategory } from '@/types'
+import type { CardFamily } from '@/types'
 
 import MDX_Content from './detail.mdx'
 
@@ -19,12 +19,12 @@ export default {
     {
       id: 'LXM-CR-S-RT',
       sku: 'LXM-CR-S-RT',
-      categoryId: 'LXM-CR-S',
+      familyId: 'LXM-CR-S',
       title: 'Lux Sovereign Card, Reflective Titanium',
       optionLabel: 'Reflective Titanium',
       price: 50000,
       img: '/assets/img/cards-flat/titanium-f-700x441.png',
     } satisfies Product,
     ]
-} satisfies CardCategory as CardCategory
+} satisfies CardFamily as CardFamily
 

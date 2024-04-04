@@ -1,6 +1,6 @@
 
 import type { Product } from '@hanzo/commerce/types'
-import type { CardCategory } from '@/types'
+import type { CardFamily } from '@/types'
 
 import MDX_Content from './detail.mdx'
 
@@ -20,7 +20,7 @@ export default {
     {
       id: 'LXM-CR-F-CC',
       sku: 'LXM-CR-F-CC',
-      categoryId: 'LXM-CR-F',
+      familyId: 'LXM-CR-F',
       title: 'Lux Founder Card, Cool Chrome',
       optionLabel: 'Cool Chrome',
       price: 5000,
@@ -29,7 +29,7 @@ export default {
     {
       id: 'LXM-CR-F-IC',
       sku: 'LXM-CR-F-IC',
-      categoryId: 'LXM-CR-F',
+      familyId: 'LXM-CR-F',
       title: 'Lux Founder Card, Iridescent Chrome',
       optionLabel: 'Iridescent Chrome',
       price: 5000,
@@ -37,5 +37,5 @@ export default {
     } satisfies Product,
   ]
 
-} satisfies CardCategory as CardCategory
+} satisfies CardFamily as CardFamily
 

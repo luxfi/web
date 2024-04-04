@@ -35,7 +35,7 @@ export default {
   },
   blocks: [ /*
     {blockType: 'element',
-      element: <SelectProductButton categoryId='LXM-AG-B' popupClx='w-[280px]'>Buy</SelectProductButton>
+      element: <SelectProductButton familyId='LXM-AG-B' popupClx='w-[280px]'>Buy</SelectProductButton>
     } satisfies C.ElementBlock as C.Block,
     
     {

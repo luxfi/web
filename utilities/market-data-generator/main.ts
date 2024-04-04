@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs'
 import { v4 as unique} from 'uuid'
-import type { Product, Category } from '@hanzo/commerce/types'
+import type { Product, Family } from '@hanzo/commerce/types'
 
 import { type LeafImportData, type NodeImportData } from './types.ts'
 
@@ -14,7 +14,7 @@ import {
 
 import IMG from './IMG.ts' 
 
-const categories: Category[] = []
+const families: Family[] = []
 
 const amountStrFromItemToken = (t: string): string => {
   const tokens = t.split(TS)
@@ -34,16 +34,11 @@ const visitNode = (
   const parentTitle = titleTokens.length > 0 ? titleTokens[titleTokens.length - 1] : undefined
   titleTokens.push(levelTitle)   
 
-    // otherwise extra comma if titleToken is '' at this level
-  //if (levelTitle?.length > 0) {
-  //}
-
   skuTokens.push(levelData.tok)
 
   if (levelData.ch.length > 0 && 'price' in levelData.ch[0]) {
 
-    //const categoryTitle = titleTokens.join(', ')
-    const categoryId = skuTokens.join(TS)
+    const familyId = skuTokens.join(TS)
 
       // Since we are at the leaf level,
       // these are valid for the entire array.
@@ -61,8 +56,8 @@ const visitNode = (
           //  `<previous title tokens joined>, <amount> <form>`
         fullTitle: `${previousTitle}, ${amountStrFromItemToken(prod.tok)} ${bullionForm!}`,
         optionLabel: amountStrFromItemToken(prod.tok),
-        categoryTitle: bullionForm!,
-        categoryId: categoryId,
+        familyTitle: bullionForm!,
+        familyId: familyId,
         desc: prod.desc ? prod.desc : levelData.desc,
         price: 0,
           // @ts-ignore
@@ -70,8 +65,8 @@ const visitNode = (
       } satisfies Product)
     )
 
-      // from NodeImportData to hanzo Category
-    categories.push({
+      // from NodeImportData to hanzo Family
+    families.push({
       id: skuTokens.join(TS),
       title: levelTitle,
       parentTitle,
@@ -79,7 +74,7 @@ const visitNode = (
           // @ts-ignore
       img: IMG[levelData.imgCode],
       products: hanzoProducts
-    } satisfies Category)
+    } satisfies Family)
     
   }
   else if (levelData.ch.length > 0 && 'ch' in levelData.ch[0]) {
@@ -105,6 +100,6 @@ const visitNode = (
 
 visitNode(ROOT as unknown as NodeImportData)
 
-console.log(`Writing Categories with Products ${OUT_DIR + OUT_FN}...`)
-writeFileSync(OUT_DIR + OUT_FN, JSON.stringify(categories, null, 2))
+console.log(`Writing Family with their Products to ${OUT_DIR + OUT_FN}...`)
+writeFileSync(OUT_DIR + OUT_FN, JSON.stringify(families, null, 2))
 console.log('done')

@@ -5,7 +5,7 @@ import products from './products'
 
 export default {
   rootNode, 
-  productsByCategory: products,
+  productsByFamily: products,
   options: {
     dbName: 'lux-commerce',
     ordersTable: 'orders'

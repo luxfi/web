@@ -6,6 +6,7 @@
   "main": "main.ts",
   "scripts": {
     "COMMENT": "https://github.com/TypeStrong/ts-node/issues/1997",
+    "tc": "tsc --noEmit",
     "go": "node --no-warnings --loader ts-node/esm main.ts"
   },
   "keywords": [],

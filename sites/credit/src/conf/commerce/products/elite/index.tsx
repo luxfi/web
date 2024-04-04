@@ -1,5 +1,5 @@
 import type { Product } from '@hanzo/commerce/types'
-import type { CardCategory } from '@/types'
+import type { CardFamily } from '@/types'
 
 import MDX_Content from './detail.mdx'
 
@@ -21,8 +21,8 @@ export default {
     {
       id: 'LXM-CR-E-24G',
       sku: 'LXM-CR-E-24G',
-      categoryId: 'LXM-CR-E',
-      categoryTitle: 'Elite',
+      familyId: 'LXM-CR-E',
+      familyTitle: 'Elite',
       optionLabel: '24k Gold',
       price: 500,
       img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}},
@@ -31,13 +31,13 @@ export default {
     {
       id: 'LXM-CR-E-SS',
       sku: 'LXM-CR-E-SS',
-      categoryId: 'LXM-CR-E',
-      categoryTitle: 'Elite',
+      familyId: 'LXM-CR-E',
+      familyTitle: 'Elite',
       optionLabel: 'Sterling Silver',
       price: 500,
       img: {src: '/assets/img/cards-flat/silver-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
     } satisfies Product,
   ]
-} satisfies CardCategory 
+} satisfies CardFamily 
 
