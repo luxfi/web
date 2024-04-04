@@ -33,7 +33,10 @@ const BenefitCard: React.FC<{
 
   return (
     <CardComponent key={key} className='flex flex-col items-center h-full'>
-      <div className='cursor-pointer w-full' onClick={() => setOpen(!open)}>
+      <div
+        className={cn('w-full', style === 'accordion' ? 'cursor-pointer' : '')}
+        onClick={() => setOpen(!open)}
+      >
         <ImageBlockComponent
           block={{blockType: 'image', ...img}}
           className='w-full max-w-full border-b'
