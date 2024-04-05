@@ -1204,7 +1204,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  utilities/market-data-generator:
+  utilities/market-bullion-data-generator:
     devDependencies:
       '@hanzo/commerce':
         specifier: file:/home/artem/dev/hanzoai/react-sdk/packages/commerce

@@ -1,4 +1,4 @@
-import type { ProductTreeNode } from '@hanzo/commerce/types'
+import type { CategoryNode } from '@hanzo/commerce/types'
 import * as Icons from 'lucide-react'
 
 import SVG_CastBar from './img/bar.svg'
@@ -23,7 +23,7 @@ const BULLION_FORM = [
     label: 'Cast Bars',
     img: <SVG_CastBar width={22} />,
   },
-] satisfies ProductTreeNode[]
+] satisfies CategoryNode[]
 
 
 const level1 = [
@@ -58,7 +58,7 @@ const level1 = [
     imgAR: 539 / 686
   },
   credit
-] satisfies ProductTreeNode[]
+] satisfies CategoryNode[]
 
 export default {
   skuToken: 'LXM',

@@ -1,4 +1,4 @@
-import type { ProductTreeNode } from '@hanzo/commerce/types'
+import type { CategoryNode } from '@hanzo/commerce/types'
 
 const BLACK_IMAGE = '/assets/img/cards-flat/black-f-700x441.png'
 const ELITE_IMAGE = '/assets/img/cards-flat/gold-f-700x442.png'
@@ -32,7 +32,7 @@ const CARD_LEVELS = [
     img: SOVEREIGN_IMAGE,
     imgAR: CC_AR,
   },
-] satisfies ProductTreeNode[]
+] satisfies CategoryNode[]
 
 const level1 = [
   {
@@ -43,13 +43,13 @@ const level1 = [
     subNodesLabel: 'Level',
     subNodes: [...CARD_LEVELS]
   },
-]
+] satisfies CategoryNode[]
 
 export default {
   skuToken: 'LXM',
   label: '',
   subNodes: level1
-}
+} satisfies CategoryNode
 
 
 
