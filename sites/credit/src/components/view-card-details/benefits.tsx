@@ -32,7 +32,7 @@ const BenefitCard: React.FC<{
   const [open, setOpen] = useState<boolean>(false)
 
   return (
-    <CardComponent key={key} className='flex flex-col items-center h-full'>
+    <CardComponent key={key} className='flex flex-col items-center'>
       <div
         className={cn('w-full', style === 'accordion' ? 'cursor-pointer' : '')}
         onClick={() => setOpen(!open)}
@@ -94,7 +94,7 @@ const Benefits: React.FC<{
         )
       ))}
       {!!limit && !showMore && (
-        <span className='text-center underline' onClick={() => setShowMore(true)}>View More</span>
+        <span className='text-center underline cursor-pointer' onClick={() => setShowMore(true)}>View More</span>
       )}
     </div>
   )
