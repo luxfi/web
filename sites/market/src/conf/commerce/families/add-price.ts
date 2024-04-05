@@ -1,4 +1,4 @@
-import prices from '../prices'
+import prices from '../../prices'
 import type { Family } from '@hanzo/commerce/types'
 
 export const TS = '-'  // token separator

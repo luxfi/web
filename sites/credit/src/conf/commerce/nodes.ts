@@ -5,7 +5,7 @@ const ELITE_IMAGE = '/assets/img/cards-flat/gold-f-700x442.png'
 const FOUNDER_IMAGE = '/assets/img/cards-flat/chrome-cool-f-700x441.png'
 const SOVEREIGN_IMAGE = '/assets/img/cards-flat/titanium-f-700x441.png'
 
-import CC_AR from '../cc-aspect-ratio'
+import CC_AR from './cc-aspect-ratio'
 
 const CARD_LEVELS = [
   {
@@ -38,6 +38,7 @@ const level1 = [
   {
     skuToken: 'CR',
     label: 'Lux Credit',
+    terminal: true,
     img: BLACK_IMAGE,
     imgAR: CC_AR,
     subNodesLabel: 'Level',

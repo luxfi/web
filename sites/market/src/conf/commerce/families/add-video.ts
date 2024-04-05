@@ -1,6 +1,6 @@
 import type { Family } from '@hanzo/commerce/types'
 
-import { goldVideo, silverVideo } from './videos'
+import { goldVideo, silverVideo } from '../videos'
 
 export default (c: Family): Family => {
   for (let prod of c.products) {

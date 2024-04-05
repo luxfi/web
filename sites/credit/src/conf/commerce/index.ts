@@ -1,7 +1,7 @@
 import type { ServiceOptions } from '@hanzo/commerce'
 
-import rootNode from './facets'
-import products from './products'
+import rootNode from './nodes'
+import products from './families'
 
 export default {
   rootNode, 
