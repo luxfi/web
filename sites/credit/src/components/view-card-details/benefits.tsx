@@ -38,7 +38,7 @@ const BenefitCard: React.FC<{
       >
         <ImageBlockComponent
           block={{blockType: 'image', ...img}}
-          className='w-full max-w-full border-b'
+          className='w-full h-auto max-w-full border-b'
         />
       </div>
       {style === 'accordion' ? (
