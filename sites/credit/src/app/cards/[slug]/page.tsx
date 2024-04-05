@@ -39,7 +39,7 @@ const Page = ({ params, searchParams }: Props) => {
     }
   }, [selectedMaterial])
 
-  // Determine if mobile or desktop based on visibility of desktopElement
+  // Determine if mobile, tablet or desktop based on visibility of desktopElement
   // https://stackoverflow.com/a/21696585/11378853
   const desktopElement = useRef<HTMLDivElement | null>(null)
   const tabletElement = useRef<HTMLDivElement | null>(null)
@@ -67,7 +67,7 @@ const Page = ({ params, searchParams }: Props) => {
   const isCardSet = !!card && !!selectedMaterial && !!lineItem
 
   return (<>
-    <CardsBar selectedCard={card} clx='hidden sm:flex'/>
+    <CardsBar selectedCard={card} clx='fixed top-0 mt-11 md:mt-20'/>
     <div className="sm:hidden h-full min-h-screen">
       <div ref={mobileElement}></div>
       {layout === 'mobile' && isCardSet && (

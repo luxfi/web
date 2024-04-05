@@ -19,7 +19,7 @@ const CardsBar: React.FC<{
   const router = useRouter()
 
   return (
-    <div className={cn('fixed top-0 w-full bg-background mt-11 md:mt-20 transition-all', clx)}>
+    <div className={cn('hidden sm:flex w-full bg-background transition-all', clx)}>
       <Main className='grid grid-cols-4 w-full gap-4 px-2'>
         {cards.map((card, index) => (
           <Button
