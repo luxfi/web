@@ -1,14 +1,14 @@
 export default [
   { 
-    tok: '500-G',
+    tok: '500_G',
     price: 0
   },
   { 
-    tok: '1-KG',
+    tok: '1_KG',
     price: 0
   },
   { 
-    tok: '1000-OZ',
+    tok: '400_OZ',
     price: 0
   },
 ]

@@ -8,7 +8,7 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
-const Page = ({ searchParams }: Props ) => {
+const Page = async ({ searchParams }: Props ) => {
   
     // see src/middleware.ts
   const agent = searchParams?.agent as string

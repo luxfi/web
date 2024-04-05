@@ -2,24 +2,24 @@
   "name": "market-data-generator",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "main.ts",
+  "type": "module",
   "scripts": {
-    "COMMENT": "https://github.com/TypeStrong/ts-node/issues/1997",
+    "COMMENT": "ts-node sucks!  Just say NO!",
     "tc": "tsc --noEmit",
-    "go": "node --no-warnings --loader ts-node/esm main.ts"
+    "go": "vite-node main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hanzo/commerce": "^6.1.8",
+    "@hanzo/commerce": "^6.1.12",
     "@hanzo/ui": "3.4.3",
     "@types/node": "^20.11.24",
     "@types/uuid": "^9.0.8",
     "fs": "0.0.1-security",
-    "ts-node": "^10.9.2",
     "typescript": "5.3.3",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vite-node": "^1.4.0"
   }
 }

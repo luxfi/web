@@ -1,25 +1,19 @@
 import { writeFileSync } from 'fs'
 import { v4 as unique} from 'uuid'
-import type { Product, Family } from '@hanzo/commerce/types'
+
+import { type Product, type Family } from '@hanzo/commerce/types'
 
 import { type LeafImportData, type NodeImportData } from './types.ts'
 
-import { 
-  OUT_DIR, 
-  OUT_FN,
-  TS,
-  DEC,
-  ROOT
-} from './config.ts'
-
+import { OUT_DIR, OUT_FN, ROOT, SEP } from './config.ts'
 import IMG from './IMG.ts' 
 
 const families: Family[] = []
 
 const amountStrFromItemToken = (t: string): string => {
-  const tokens = t.split(TS)
-    // Must lower-case it becuase multibar tokens have an 'X' in them
-  const amount = (tokens[0].includes(DEC) ? tokens[0].split(DEC).join('.') : tokens[0]).toLowerCase()
+  const tokens = t.split(SEP.subTok)
+    // Must lower-case it because multibar tokens have an 'X' in them
+  const amount = (tokens[0].includes(SEP.decimal) ? tokens[0].split(SEP.decimal).join('.') : tokens[0]).toLowerCase()
   const unit = tokens[1].toLowerCase() // OZ -> oz
   return amount + unit
 }
@@ -38,7 +32,7 @@ const visitNode = (
 
   if (levelData.ch.length > 0 && 'price' in levelData.ch[0]) {
 
-    const familyId = skuTokens.join(TS)
+    const familyId = skuTokens.join(SEP.tok)
 
       // Since we are at the leaf level,
       // these are valid for the entire array.
@@ -67,7 +61,7 @@ const visitNode = (
 
       // from NodeImportData to hanzo Family
     families.push({
-      id: skuTokens.join(TS),
+      id: skuTokens.join(SEP.tok),
       title: levelTitle,
       parentTitle,
       desc: levelData.desc,

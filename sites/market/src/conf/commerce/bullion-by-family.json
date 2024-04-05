@@ -13,8 +13,8 @@
     },
     "products": [
       {
-        "id": "a12d7910-5df9-4b05-9859-fd0bfb985c7a",
-        "sku": "LXM-AU-B-1-OZ",
+        "id": "c4ef6e75-9510-4dd8-b110-01a3c6326bf8",
+        "sku": "LXM-AU-B-1_OZ",
         "fullTitle": "Lux Gold, 1oz Minted Bar",
         "optionLabel": "1oz",
         "familyTitle": "Minted Bar",
@@ -30,8 +30,8 @@
         }
       },
       {
-        "id": "f90d8099-181c-41fe-8966-a8f146ccdc25",
-        "sku": "LXM-AU-B-1-G",
+        "id": "49199549-dc0d-40b6-a511-93c0fa131f7a",
+        "sku": "LXM-AU-B-1_G",
         "fullTitle": "Lux Gold, 1g Minted Bar",
         "optionLabel": "1g",
         "familyTitle": "Minted Bar",
@@ -47,8 +47,8 @@
         }
       },
       {
-        "id": "d61024d1-8682-4b82-b30f-4b4a0114be27",
-        "sku": "LXM-AU-B-10-G",
+        "id": "3f59a110-4848-4895-8937-8a654e8ace22",
+        "sku": "LXM-AU-B-10_G",
         "fullTitle": "Lux Gold, 10g Minted Bar",
         "optionLabel": "10g",
         "familyTitle": "Minted Bar",
@@ -64,8 +64,8 @@
         }
       },
       {
-        "id": "ab316b98-d949-46ea-9b88-924ad05bcc4e",
-        "sku": "LXM-AU-B-100-G",
+        "id": "7b63feae-9c95-4e40-9651-4f5855de39c3",
+        "sku": "LXM-AU-B-100_G",
         "fullTitle": "Lux Gold, 100g Minted Bar",
         "optionLabel": "100g",
         "familyTitle": "Minted Bar",
@@ -81,8 +81,8 @@
         }
       },
       {
-        "id": "14ff574b-6141-4da2-a4b6-31ae8c6f29e3",
-        "sku": "LXM-AU-B-400-OZ",
+        "id": "4e8dd319-e978-446f-81e7-ed653f01ca5a",
+        "sku": "LXM-AU-B-400_OZ",
         "fullTitle": "Lux Gold, 400oz Minted Bar",
         "optionLabel": "400oz",
         "familyTitle": "Minted Bar",
@@ -113,8 +113,8 @@
     },
     "products": [
       {
-        "id": "7c945d2c-b083-4c9c-b326-5f12a8cc3eaa",
-        "sku": "LXM-AU-C-1-OZ",
+        "id": "678eb41f-33cd-4f0c-9b24-31ca0a04eaf4",
+        "sku": "LXM-AU-C-1_OZ",
         "fullTitle": "Lux Gold, 1oz Minted Coin",
         "optionLabel": "1oz",
         "familyTitle": "Minted Coin",
@@ -145,8 +145,8 @@
     },
     "products": [
       {
-        "id": "d41f1214-9ffb-46e0-97f8-34d3c5aa23ce",
-        "sku": "LXM-AU-CB-500-G",
+        "id": "816b5f02-7981-4153-90bc-587b847623a6",
+        "sku": "LXM-AU-CB-500_G",
         "fullTitle": "Lux Gold, 500g Cast Bar",
         "optionLabel": "500g",
         "familyTitle": "Cast Bar",
@@ -162,8 +162,8 @@
         }
       },
       {
-        "id": "0f49aabb-3fda-451e-89f3-6c552e157dd9",
-        "sku": "LXM-AU-CB-1-KG",
+        "id": "24710e53-f4c8-4699-ab5b-086d0520371f",
+        "sku": "LXM-AU-CB-1_KG",
         "fullTitle": "Lux Gold, 1kg Cast Bar",
         "optionLabel": "1kg",
         "familyTitle": "Cast Bar",
@@ -179,8 +179,8 @@
         }
       },
       {
-        "id": "1bc56d35-e2b0-4650-833b-bd27d278fe5f",
-        "sku": "LXM-AU-CB-400-OZ",
+        "id": "bd0cfc04-c634-4758-a915-094e48caa208",
+        "sku": "LXM-AU-CB-400_OZ",
         "fullTitle": "Lux Gold, 400oz Cast Bar",
         "optionLabel": "400oz",
         "familyTitle": "Cast Bar",
@@ -211,8 +211,8 @@
     },
     "products": [
       {
-        "id": "3ec8b37e-42ed-43ef-bfa4-750e91a113d4",
-        "sku": "LXM-AG-B-1-OZ",
+        "id": "19935253-3595-4566-b077-31aa0f6dd82e",
+        "sku": "LXM-AG-B-1_OZ",
         "fullTitle": "Lux Silver, 1oz Minted Bar",
         "optionLabel": "1oz",
         "familyTitle": "Minted Bar",
@@ -228,8 +228,8 @@
         }
       },
       {
-        "id": "197eaf4c-1c0a-4501-8f34-d68731397f7f",
-        "sku": "LXM-AG-B-1-G",
+        "id": "beb54193-9899-422d-9871-de0f41e45bc0",
+        "sku": "LXM-AG-B-1_G",
         "fullTitle": "Lux Silver, 1g Minted Bar",
         "optionLabel": "1g",
         "familyTitle": "Minted Bar",
@@ -245,8 +245,8 @@
         }
       },
       {
-        "id": "a90e3440-478d-4a7a-a4be-05633e3d09d0",
-        "sku": "LXM-AG-B-10-G",
+        "id": "6452fabc-cb2a-4c70-97e0-399a65326e4c",
+        "sku": "LXM-AG-B-10_G",
         "fullTitle": "Lux Silver, 10g Minted Bar",
         "optionLabel": "10g",
         "familyTitle": "Minted Bar",
@@ -262,8 +262,8 @@
         }
       },
       {
-        "id": "29b370b3-75c9-41e6-81e4-2381440afbd8",
-        "sku": "LXM-AG-B-100-G",
+        "id": "5eaeee49-9189-4e76-bbfb-ed3a90e44c08",
+        "sku": "LXM-AG-B-100_G",
         "fullTitle": "Lux Silver, 100g Minted Bar",
         "optionLabel": "100g",
         "familyTitle": "Minted Bar",
@@ -279,8 +279,8 @@
         }
       },
       {
-        "id": "5cfe2f86-524d-411a-bbb3-00c8efbf10ac",
-        "sku": "LXM-AG-B-1-KG",
+        "id": "bcbe9e6c-9a8f-4a3d-a81e-a61598af67d0",
+        "sku": "LXM-AG-B-1_KG",
         "fullTitle": "Lux Silver, 1kg Minted Bar",
         "optionLabel": "1kg",
         "familyTitle": "Minted Bar",
@@ -311,8 +311,8 @@
     },
     "products": [
       {
-        "id": "5328eee4-767b-4b46-a61b-46cf21fd5245",
-        "sku": "LXM-AG-C-1-OZ",
+        "id": "1e515149-97b8-4822-ac82-a72057b8843a",
+        "sku": "LXM-AG-C-1_OZ",
         "fullTitle": "Lux Silver, 1oz Minted Coin",
         "optionLabel": "1oz",
         "familyTitle": "Minted Coin",
@@ -343,8 +343,8 @@
     },
     "products": [
       {
-        "id": "e16d9092-6871-4908-a689-75539bf08378",
-        "sku": "LXM-AG-CB-500-G",
+        "id": "acebf448-f3b0-45df-be34-6b922726ae23",
+        "sku": "LXM-AG-CB-500_G",
         "fullTitle": "Lux Silver, 500g Cast Bar",
         "optionLabel": "500g",
         "familyTitle": "Cast Bar",
@@ -360,8 +360,8 @@
         }
       },
       {
-        "id": "f9a869fc-bf92-442b-91af-1c843888b5f5",
-        "sku": "LXM-AG-CB-1-KG",
+        "id": "9b165904-c974-4047-afd9-307bcdf0e0da",
+        "sku": "LXM-AG-CB-1_KG",
         "fullTitle": "Lux Silver, 1kg Cast Bar",
         "optionLabel": "1kg",
         "familyTitle": "Cast Bar",
@@ -377,8 +377,8 @@
         }
       },
       {
-        "id": "f5f679e9-0c01-4007-ab2a-a65c1a6b704d",
-        "sku": "LXM-AG-CB-1000-OZ",
+        "id": "b8875618-0681-46b5-b4e2-ffeb207ec579",
+        "sku": "LXM-AG-CB-1000_OZ",
         "fullTitle": "Lux Silver, 1000oz Cast Bar",
         "optionLabel": "1000oz",
         "familyTitle": "Cast Bar",

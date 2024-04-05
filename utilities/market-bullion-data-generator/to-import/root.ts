@@ -25,7 +25,7 @@ export default {
           imgCode: 'AU_C',
           ch: [
             {
-              tok: '1-OZ',
+              tok: '1_OZ',
               price: 0,
             }
           ]
@@ -55,7 +55,7 @@ export default {
           imgCode: 'AG_C',
           ch: [
             {
-              tok: '1-OZ',
+              tok: '1_OZ',
               price: 0,
             }
           ]
