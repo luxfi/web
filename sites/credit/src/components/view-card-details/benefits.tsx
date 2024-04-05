@@ -9,7 +9,6 @@ import {
   AccordionItem,
   AccordionTrigger,
   ApplyTypography,
-  Card as CardComponent
 } from '@hanzo/ui/primitives'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import type { ImageDef } from '@hanzo/ui/types'
@@ -32,7 +31,7 @@ const BenefitCard: React.FC<{
   const [open, setOpen] = useState<boolean>(false)
 
   return (
-    <CardComponent key={key} className='flex flex-col items-center'>
+    <div key={key} className='flex flex-col items-center border rounded-lg overflow-hidden'>
       <div
         className={cn('w-full', style === 'accordion' ? 'cursor-pointer' : '')}
         onClick={() => setOpen(!open)}
@@ -61,7 +60,7 @@ const BenefitCard: React.FC<{
           <p>{description}</p>
         </div>
       )}
-    </CardComponent>
+    </div>
   )
 }
 
