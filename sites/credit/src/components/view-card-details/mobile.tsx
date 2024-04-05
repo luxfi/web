@@ -97,7 +97,7 @@ const MobileViewCardDetails: React.FC<{
           ))}
         </Accordion>
         <MoreWaysToEarn rewards={card.karmaRewards} clx='pt-6'/>
-        <Benefits card={card} cardStyle='accordion' clx='mt-14'/>
+        <Benefits card={card} cardStyle='accordion' limit={4} clx='mt-14'/>
       </div>
     </Main>
   )

@@ -67,24 +67,35 @@ const BenefitCard: React.FC<{
 
 const Benefits: React.FC<{
   card: Card
+  limit?: number
   cardStyle?: 'default' | 'accordion'
   showByline?: boolean
   clx?: string
 }> = ({
   card,
+  limit,
   cardStyle,
   showByline,
   clx
 }) => {
+  const [showMore, setShowMore] = useState<boolean>(false)
+
   return (
     <div className={cn('grid grid-cols-1 sm:grid-cols-2 gap-6 items-center', clx)}>
       <ApplyTypography className='flex flex-col items-center sm:col-span-2 gap-2 text-center'>
         <h3 className='!text-lg sm:!text-2xl'>Unique Sovereign Card Benefits</h3>
-        {showByline && <p className='!text-sm sm:!text-lg'>An all access pass to elevated living and memorable moments.</p>}
+        {showByline && (
+          <p className='!text-sm sm:!text-lg'>An all access pass to elevated living and memorable moments.</p>
+        )}
       </ApplyTypography>
       {card.cardDetails.benefits.map(({img, title, description}, index) => (
-        <BenefitCard key={index} img={img} title={title} description={description} style={cardStyle}/>
+        (!limit || index < limit || showMore) && (
+          <BenefitCard key={index} img={img} title={title} description={description} style={cardStyle}/>
+        )
       ))}
+      {!!limit && !showMore && (
+        <span className='text-center underline' onClick={() => setShowMore(true)}>View More</span>
+      )}
     </div>
   )
 }
