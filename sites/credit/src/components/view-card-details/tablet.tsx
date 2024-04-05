@@ -17,14 +17,12 @@ import MoreWaysToEarn from './more-ways-to-earn'
 
 const TabletViewCardDetails: React.FC<{
   card: Card
-  setCard: (card: Card) => void
   lineItem: LineItem
   selectedMaterial: CardMaterial
   setSelectedMaterial: (material: CardMaterial) => void
   clx?: string
 }> = ({
   card,
-  setCard,
   lineItem,
   selectedMaterial,
   setSelectedMaterial,
@@ -52,7 +50,7 @@ const TabletViewCardDetails: React.FC<{
   }
 
   return (
-    <Main className={cn('flex flex-col gap-4 pt-11', clx)}>
+    <Main className={cn('flex flex-col gap-4 pt-11 mt-20', clx)}>
       <div className='flex gap-1 items-center cursor-pointer' onClick={() => router.push('/cards')}>
         <ChevronLeft/>
         <div>View All Cards</div>
