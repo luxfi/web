@@ -5,7 +5,7 @@ import { cn } from '@hanzo/ui/util'
 import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
 
 import type { Card } from '@/types/card'
-import cards from '@/content/compare-cards'
+import cards from '@/content/cards'
 import type { CardWithSelectedMaterial } from '../index'
 
 const SelectCard: React.FC<{
@@ -46,13 +46,11 @@ const SelectCard: React.FC<{
             )}
           >
             <div className={cn(
-              'flex items-center justify-center rounded-full border border-foreground aspect-square',
-              condensed ? 'h-pr-90' : 'h-pr-70 sm:h-pr-40'
-            )}>
-              <Plus className={cn(
-                'w-full aspect-square',
-                condensed ? 'h-pr-70' : 'h-pr-70 sm:h-pr-40'
-              )}/>
+                'flex rounded-full border border-foreground items-center justify-center aspect-square',
+                condensed ? 'h-pr-50' : 'h-pr-30'
+              )}
+            >
+              <Plus className='w-full aspect-square h-pr-50'/>
             </div>
           </Button>
           <h4 className={cn(

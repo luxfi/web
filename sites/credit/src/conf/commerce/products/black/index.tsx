@@ -25,7 +25,26 @@ export default {
       optionLabel: 'Annodized Black Titanium',
       categoryId: 'LXM-CR-B',
       price: 500,
-      img: {src: '/assets/img/cards-flat/black-f-700x441.png', dim: {w: 700, h: 441}},
+      img: {
+        src: '/assets/img/cards-flat/black-f-700x441.png',
+        dim: {w: 700, h: 441 },
+        alt: 'Black Card Annodized Black Titanium'
+      },
+      animation: 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
+    } satisfies Product,
+    {
+      id: 'LXM-CR-B-GM',
+      sku: 'LXM-CR-B-GM',
+      categoryTitle: 'Black',
+      optionLabel: 'Black Gunmetal',
+      categoryId: 'LXM-CR-B',
+      price: 500,
+      img: {
+        //TODO: Change this to the correct image
+        src: '/assets/img/cards-flat/black-f-700x441.png',
+        dim: {w: 700, h: 441 },
+        alt: 'Black Card Black Gunmetal'
+      },
       animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
     } satisfies Product
   ]

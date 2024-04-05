@@ -5,16 +5,15 @@ import '@/blocks/registerComponents'
 import CompareCards from '@/components/compare-cards'
 
 type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined }
+  searchParams?: { [key: string]: string }
 }
 
-const Page = ({ searchParams }: Props ) => {
+const Page = ({ searchParams }: Props) => {
   
-    // see src/middleware.ts
-  const agent = searchParams?.agent as string
+  const predefinedCards = searchParams?.cards
 
   return (
-    <CompareCards/> 
+    <CompareCards predefinedCards={predefinedCards}/> 
   )
 }
 
