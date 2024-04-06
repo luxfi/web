@@ -13,10 +13,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  Input
+  Input,
+  ScrollArea
 } from '@hanzo/ui/primitives'
-import { useCommerce } from '@hanzo/commerce'
+import { useCommerce, BuyButton } from '@hanzo/commerce'
 import { peekAtNodeDump } from '@hanzo/commerce/debug'
+import { useState } from 'react'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -30,9 +32,11 @@ const FormSchema = z.object({
 
 const InputForm: React.FC<{
   onSubmit: (data: z.infer<typeof FormSchema>) => void
+  onClear: (() => void) | undefined
   className?: string
 }> = ({
   onSubmit,
+  onClear,
   className
 }) => {
 
@@ -53,13 +57,16 @@ const InputForm: React.FC<{
             <FormItem>
               <FormLabel>sku path</FormLabel>
               <FormControl>
-                <Input placeholder='LXM-CR' {...field} className='border' />
+                <Input placeholder='eg, LXM-CR' {...field} className='border placeholder:text-muted-3' />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type='submit'>Submit</Button>
+        <div className={'grid gap-1 w-full min-w-0 ' + (onClear ? 'grid-cols-2': 'grid-cols-1')}>
+          <Button type='submit' className='shrink'>Submit</Button>
+          {onClear && <Button onClick={() => {form.reset(); onClear()}} className=''>Clear</Button>}
+        </div>
       </form>
     </Form>
   )
@@ -69,15 +76,38 @@ const Page = ({ searchParams }: Props ) => {
 
   const cmmc = useCommerce()
 
-  const onSubmit = (data: z.infer<typeof FormSchema>): void => {
+  const [skuPath, setSkuPath] = useState<string | undefined>(undefined)
+  const [json, setJSON] = useState<string | undefined>(undefined)
+
+  const handleSubmit = (data: z.infer<typeof FormSchema>): void => {
     console.log('SKU PATH: ' + data.skupath)
+    setSkuPath(data.skupath)
     const result = cmmc.peekAtNode(data.skupath)
-    peekAtNodeDump(result)
+    setJSON(peekAtNodeDump(result))
+  }
+
+  const handleClear = () => {
+    setSkuPath(undefined)
+    setJSON(undefined)
   }
 
   return (
     <Main className='w-full h-[90vh] pt-10'>
-      <InputForm onSubmit={onSubmit} className='mx-auto w-[400px] space-y-6'/>
+      <div className='w-[400px] mx-auto flex flex-col items-center gap-8'>
+        <InputForm 
+          onSubmit={handleSubmit} 
+          onClear={skuPath ? handleClear : undefined} 
+          className='flex flex-col items-stretch w-[250px] mx-auto'
+        />
+        <div className='w-full'>
+          <p className='text-muted text-center'>peek</p>
+          <ScrollArea className='border rounded h-[400px] w-full p-4 text-muted flex flex-col gap-2'>
+            {skuPath && <pre>SKU: {skuPath}</pre>}
+            {json && <pre>{json}</pre>}
+          </ScrollArea>
+        </div>
+        {skuPath && <BuyButton skuPath={skuPath} className='' >Buy</BuyButton>}
+      </div>
     </Main>
   )
 }
