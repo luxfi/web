@@ -4,7 +4,6 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 
-import { cn } from '@hanzo/ui/util'
 import {
   Main,
   Button,
@@ -17,6 +16,7 @@ import {
   Input
 } from '@hanzo/ui/primitives'
 import { useCommerce } from '@hanzo/commerce'
+import { peekAtNodeDump } from '@hanzo/commerce/debug'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -72,13 +72,7 @@ const Page = ({ searchParams }: Props ) => {
   const onSubmit = (data: z.infer<typeof FormSchema>): void => {
     console.log('SKU PATH: ' + data.skupath)
     const result = cmmc.peekAtNode(data.skupath)
-    const toDisplay = {
-      role: result.role,
-      family: result.family ? result.family.id : 'UNDEF',
-      families: result.families ? result.families.map((f) => (f.id)) : 'UNDEF',
-      node: result.node ? (result.node.skuToken + ': ' + result.node.label) : 'UNDEF'
-    }
-    console.log(toDisplay)
+    peekAtNodeDump(result)
   }
 
   return (
