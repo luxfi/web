@@ -5,7 +5,7 @@ import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
-import { CommerceServiceProvider, initSelectionUI } from '@hanzo/commerce'
+import { CommerceServiceProvider } from '@hanzo/commerce'
 
 import { 
   RootLayout as RootLayoutCommon, 
@@ -22,8 +22,6 @@ import _metadata from '../metadata'
 export const metadata = { ..._metadata }
 export const viewport = { ...rootLayoutViewport}
 
-initSelectionUI(selectionUISpecifiers)
-
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
 }) =>  {
@@ -35,6 +33,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
         rootNode={siteDef.ext.commerce.rootNode} 
         productsByFamily={siteDef.ext.commerce.productsByFamily}
         options={siteDef.ext.commerce.options}
+        uiSpecs={selectionUISpecifiers}
       >
         <RootLayoutCommon siteDef={siteDef} header={false}>
           {children}

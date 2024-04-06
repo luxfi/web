@@ -64,8 +64,8 @@ const InputForm: React.FC<{
           )}
         />
         <div className={'grid gap-1 w-full min-w-0 ' + (onClear ? 'grid-cols-2': 'grid-cols-1')}>
-          <Button type='submit' className='shrink'>Submit</Button>
-          {onClear && <Button onClick={() => {form.reset(); onClear()}} className=''>Clear</Button>}
+          <Button type='submit'>Submit</Button>
+          {onClear && <Button onClick={() => {form.reset(); onClear()}}>Clear</Button>}
         </div>
       </form>
     </Form>
@@ -80,7 +80,6 @@ const Page = ({ searchParams }: Props ) => {
   const [json, setJSON] = useState<string | undefined>(undefined)
 
   const handleSubmit = (data: z.infer<typeof FormSchema>): void => {
-    console.log('SKU PATH: ' + data.skupath)
     setSkuPath(data.skupath)
     const result = cmmc.peekAtNode(data.skupath)
     setJSON(peekAtNodeDump(result))
@@ -101,7 +100,7 @@ const Page = ({ searchParams }: Props ) => {
         />
         <div className='w-full'>
           <p className='text-muted text-center'>peek</p>
-          <ScrollArea className='border rounded h-[400px] w-full p-4 text-muted flex flex-col gap-2'>
+          <ScrollArea className='border rounded h-[300px] w-full p-4 text-muted flex flex-col gap-2'>
             {skuPath && <pre>SKU: {skuPath}</pre>}
             {json && <pre>{json}</pre>}
           </ScrollArea>
