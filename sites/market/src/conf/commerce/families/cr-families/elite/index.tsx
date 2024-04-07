@@ -2,6 +2,7 @@ import type { Product } from '@hanzo/commerce/types'
 import type { CardFamily } from '@/types'
 
 import MDX_Content from './detail.mdx'
+import m from './media'
 
 export default {
   type : 'elite',
@@ -10,7 +11,7 @@ export default {
   parentTitle: 'Lux Credit',
   title: 'Lux Elite Card',
   titleShort: 'Elite',
-  img: {src: '/assets/img/products/credit/families/cards-dual-gd-sl-1485x1114.png', dim: {w: 1485, h: 1114}},
+  ...m.spreadableImg('LXM-CR-E'),
   run: 100000,
   fees: {
     initial: 1000,
@@ -25,8 +26,8 @@ export default {
       familyTitle: 'Elite',
       optionLabel: '24k Gold',
       price: 500,
-      img: {src: '/assets/img/products/credit/product/gold-f-700x442.png', dim: {w: 700, h: 442}},
-      animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
+      ...m.spreadableOptionImg('LXM-CR-E-24G'),
+      ...m.mediaStack('LXM-CR-E-24G'),
     } satisfies Product,
     {
       id: 'LXM-CR-E-SS',
@@ -35,8 +36,8 @@ export default {
       familyTitle: 'Elite',
       optionLabel: 'Sterling Silver',
       price: 500,
-      img: {src: '/assets/img/products/credit/product/silver-f-700x441.png', dim: {w: 700, h: 441}},
-      animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
+      ...m.spreadableOptionImg('LXM-CR-E-SS'),
+      ...m.mediaStack('LXM-CR-E-SS'),
     } satisfies Product,
   ]
 } satisfies CardFamily 

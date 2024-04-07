@@ -1,5 +1,5 @@
 import type { Product, Family } from '@hanzo/commerce/types'
-import { coinVideo } from '../videos'
+import { coinVideo } from './ag-au-families/videos'
 
 const CN_IMG = '/assets/products/coin/lux-coin-800x800.png'
 const CN_IMG_DEF = {src: CN_IMG, dim: { w: 800, h: 800}}

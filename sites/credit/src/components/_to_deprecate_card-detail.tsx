@@ -8,7 +8,7 @@ import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'
 import type { Family, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
-import { AddToCartWidget, RadioItemSelector } from '@hanzo/commerce'
+import { AddToCartWidget, ButtonItemSelector } from '@hanzo/commerce'
 import type { CardFamily } from '@/types'
 
 
@@ -103,7 +103,7 @@ const CardDetailComponent: React.FC<{
         constraintTo={{w:300, h:400}}
         className={imageClx} 
       />
-        <RadioItemSelector 
+        <ButtonItemSelector 
           items={cc.products as LineItem[]}
           selectedItemRef={lineItemRef}  
           scrollList={false}

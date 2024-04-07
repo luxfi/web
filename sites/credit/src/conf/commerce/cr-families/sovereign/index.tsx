@@ -1,6 +1,8 @@
 import type { Product } from '@hanzo/commerce/types'
 import type { CardFamily } from '@/types'
+
 import MDX_Content from './detail.mdx'
+import m from './media'
 
 export default {
   type : 'sovereign',
@@ -9,7 +11,7 @@ export default {
   parentTitle: 'Lux Credit',
   title: 'Lux Sovereign Card',
   titleShort: 'Sovereign',
-  img: {src: '/assets/img/products/credit/families/cards-2-flat-tit-1593x1231.png', dim: {w: 1593, h: 1231}},
+  ...m.spreadableImg('LXM-CR-S'),
   run: 10000,
   fees: {
     initial: 50000,
@@ -24,8 +26,8 @@ export default {
       familyTitle: 'Sovereign',
       optionLabel: 'Reflective Titanium',
       price: 50000,
-      img: {src: '/assets/img/products/credit/product/titanium-f-700x441.png', dim: {w: 700, h: 441}},
-      animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'
+      ...m.spreadableOptionImg('LXM-CR-S-RT'),
+      ...m.mediaStack('LXM-CR-S-RT'),
     } satisfies Product,
     ]
 } satisfies CardFamily as CardFamily

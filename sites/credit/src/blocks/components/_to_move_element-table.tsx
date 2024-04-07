@@ -3,7 +3,7 @@ import React from 'react'
 
 import type { BlockComponentProps, ElementBlock } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
-import type ElementTableBlock from '../def/element-table'
+import type ElementTableBlock from '../def/_to_move_element-table'
 
 const bgClassFromLocation = (row: number, column: number) => {
   if (row % 2 === 0 && column % 2 === 0) {

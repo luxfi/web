@@ -14,7 +14,7 @@ import { BuyTriggerWrapper } from '@hanzo/commerce'
 
 import { cn } from '@hanzo/ui/util'
 
-import type ElementTableBlock from '@/blocks/def/element-table'
+import type ElementTableBlock from '@/blocks/def/_to_move_element-table'
 
 const textBelow = 'Open the door to a universe of digital assets with the Lux Card.'//, serving as your key to effortless ' + 
 //'transactions and proficient asset management within the Lux ecosystem.'

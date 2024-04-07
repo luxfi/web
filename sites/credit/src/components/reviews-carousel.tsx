@@ -2,7 +2,7 @@
 
 import CarouselAutoplayPlugin from 'embla-carousel-autoplay'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import {
   Carousel,
