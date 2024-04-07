@@ -1,5 +1,5 @@
 import type { Product, Family } from '@hanzo/commerce/types'
-import { validatorVideo } from './ag-au-families/videos'
+import { validatorVideo } from './videos'
 
 const VL_IMG = '/assets/products/validator/validator-800x800.png'
 const VL_IMG_DEF = {src: VL_IMG, dim: {w: 800, h: 800}}

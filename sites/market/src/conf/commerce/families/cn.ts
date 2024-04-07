@@ -1,8 +1,9 @@
 import type { Product, Family } from '@hanzo/commerce/types'
-import { coinVideo } from './ag-au-families/videos'
+import { coinVideo } from './videos'
+import type { ImageDef } from '@hanzo/ui/types'
 
 const CN_IMG = '/assets/products/coin/lux-coin-800x800.png'
-const CN_IMG_DEF = {src: CN_IMG, dim: { w: 800, h: 800}}
+const CN_IMG_DEF = {src: CN_IMG, dim: { w: 800, h: 800}} satisfies ImageDef
 
 const COIN = 0.00011
 
