@@ -1,7 +1,7 @@
 import type { Product, Family } from '@hanzo/commerce/types'
 import { coinVideo } from '../videos'
 
-const CN_IMG = '/assets/products/coin/lux-coin-800x800.png'
+const CN_IMG = '/assets/img/products/coin/lux-coin-800x800.png'
 
 const COIN = 0.00011
 

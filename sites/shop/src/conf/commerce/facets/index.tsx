@@ -30,31 +30,31 @@ const level1 = [
   {
     skuToken: 'AG',
     label: 'Silver',
-    img: '/assets/products/silver/silver-bar-pt-100x125.png',
+    img: '/assets/img/products/silver/silver-bar-pt-100x125.png',
     imgAR: 1/1.25,
     subNodes: [...BULLION_FORM]
   },
   {
     skuToken: 'AU',
     label: 'Gold',
-    img: '/assets/products/gold/gold-bar-pt-100x125.png',
+    img: '/assets/img/products/gold/gold-bar-pt-100x125.png',
     imgAR: 1/1.25,
     subNodes: [...BULLION_FORM]
   },
   {
     skuToken: 'VL',
     label: 'Validator',
-    img: <Icons.Gem className='text-foreground h-4 w-4'/> //'/assets/products/validator/validator-100x100.png',
+    img: <Icons.Gem className='text-foreground h-4 w-4'/> //'/assets/img/products/validator/validator-100x100.png',
   },
   {
     skuToken: 'CN',
     label: 'Coin',
-    img: '/assets/products/coin/lux-coin-446x446.png',
+    img: '/assets/img/products/coin/lux-coin-446x446.png',
   },
   {
     skuToken: 'PS',
     label: 'Pass',
-    img: '/assets/products/pass/pass-icon-539x686.png',
+    img: '/assets/img/products/pass/pass-icon-539x686.png',
     imgAR: 539 / 686
   },
   credit

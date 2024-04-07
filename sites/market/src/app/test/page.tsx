@@ -76,13 +76,14 @@ const Page = ({ searchParams }: Props ) => {
 
   const cmmc = useCommerce()
 
-  const [skuPath, setSkuPath] = useState<string | undefined>(undefined)
+  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-CN')
   const [json, setJSON] = useState<string | undefined>(undefined)
   const [error, setError] = useState<string | undefined>(undefined)
 
   const handleSubmit = (data: z.infer<typeof FormSchema>): void => {
-    setSkuPath(data.skupath)
-    const result = cmmc.peekDownPath(data.skupath)
+    const _skuPath = data.skupath.toUpperCase()
+    setSkuPath(_skuPath)
+    const result = cmmc.peekDownPath(_skuPath)
     if (typeof result === 'string') {
       setError(result)
       setJSON(undefined)

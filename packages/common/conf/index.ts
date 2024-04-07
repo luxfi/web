@@ -3,7 +3,7 @@ import type { SelectionUISpecifier } from '@hanzo/commerce/types'
 export const selectionUISpecifiers = {
 
   'LXM-CN': {
-    singleFamily: 'image-buttons'
+    singleFamily: 'buttons'
   },  
   'LXM-CR': {
     multiFamily: {
