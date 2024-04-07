@@ -26,6 +26,8 @@ export default {
       familyTitle: 'Founder',
       optionLabel: 'Cool Chrome',
       price: 5000,
+
+      //img: famMedia.img['LXM-CR-F-CC']
       img: {src: '/assets/img/products/credit/product/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode'
     } satisfies Product,
