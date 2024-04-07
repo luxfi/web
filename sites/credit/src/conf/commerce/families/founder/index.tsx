@@ -11,7 +11,7 @@ export default {
   parentTitle: 'Lux Credit',
   title: 'Lux Founder Card',
   titleShort: 'Founder',
-  img:  {src: '/assets/img/cards-dual-chr-psm-1475x1220.png', dim: {w: 1475, h: 1220}},
+  img:  {src: '/assets/img/products/credit/families/cards-dual-chr-psm-1475x1220.png', dim: {w: 1475, h: 1220}},
   run: 10000,
   fees: {
     initial: 5000,
@@ -26,7 +26,7 @@ export default {
       familyTitle: 'Founder',
       optionLabel: 'Cool Chrome',
       price: 5000,
-      img: {src: '/assets/img/cards-flat/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}},
+      img: {src: '/assets/img/products/credit/product/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode'
     } satisfies Product,
     {
@@ -36,7 +36,7 @@ export default {
       familyTitle: 'Founder',
       optionLabel: 'Iridescent Chrome',
       price: 5000,
-      img: {src: '/assets/img/cards-flat/chrome-irid-f-700x441.png', dim: {w: 700, h: 441}},
+      img: {src: '/assets/img/products/credit/product/chrome-irid-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/O1mz-aE1mHafZXeX/scene.splinecode'
     } satisfies Product,
   ]

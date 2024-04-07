@@ -10,7 +10,7 @@ export default {
   parentTitle: 'Lux Credit',
   title: 'Lux Black Card',
   titleShort: 'Black',
-  img: {src: '/assets/img/cards-dual-black-1483x1361.png', dim: {w: 1483, h: 1361}},
+  img: {src: '/assets/img/products/credit/families/cards-dual-black-1483x1361.png', dim: {w: 1483, h: 1361}},
   run: -1, // unlimited
   fees: {
     initial: 500,
@@ -25,7 +25,7 @@ export default {
       optionLabel: 'Annodized Black Titanium',
       familyId: 'LXM-CR-B',
       price: 500,
-      img: {src: '/assets/img/cards-flat/black-f-700x441.png', dim: {w: 700, h: 441}},
+      img: {src: '/assets/img/products/credit/product/black-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
     } satisfies Product
   ]

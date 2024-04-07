@@ -41,7 +41,7 @@ export default {
     } satisfies ItemCTASBlock as Block,
   ], [ 
     {blockType: 'image',
-      src: '/assets/img/cards-2-flat-tit-1593x1231.png',
+      src: '/assets/img/products/credit/families/cards-2-flat-tit-1593x1231.png',
       alt: 'cards',
       fullWidthOnMobile: true,
       dim: {w: 1593, h: 1231},

@@ -29,25 +29,25 @@ export default {
               title: 'BLACK CARD',
               byline: 'Black Titanium',
               skuPath: 'LXM-CR-B',
-              img: {src: '/assets/img/cards-flat/black-f-700x441.png', dim: {w: 700, h: 441 }, alt: 'Black card'} as ImageDef,
+              img: {src: '/assets/img/products/credit/product/black-f-700x441.png', dim: {w: 700, h: 441 }, alt: 'Black card'} as ImageDef,
             },
             {
               title: 'ELITE CARD',
               byline: '24k Gold or Sterling Silver',
               skuPath: 'LXM-CR-E',
-              img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}, alt: 'Elite card'} as ImageDef,
+              img: {src: '/assets/img/products/credit/product/gold-f-700x442.png', dim: {w: 700, h: 442}, alt: 'Elite card'} as ImageDef,
             },
             {
               title: 'FOUNDER CARD',
               byline: 'Cool or Iridescent Chrome',
               skuPath: 'LXM-CR-F',
-              img: {src: '/assets/img/cards-flat/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Founder card'} as ImageDef,
+              img: {src: '/assets/img/products/credit/product/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Founder card'} as ImageDef,
             },
             {
               title: 'SOVEREIGN CARD',
               byline: 'Reflective Titanium',
               skuPath: 'LXM-CR-S',
-              img: {src: '/assets/img/cards-flat/titanium-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Sovereign card'} as ImageDef,
+              img: {src: '/assets/img/products/credit/product/titanium-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Sovereign card'} as ImageDef,
             },
           ]}
         />

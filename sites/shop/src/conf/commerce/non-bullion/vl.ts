@@ -1,7 +1,7 @@
 import type { Product, Family } from '@hanzo/commerce/types'
 import { validatorVideo } from '../videos'
 
-const VL_IMG = '/assets/img/cmmc/validator-800x800.png'
+const VL_IMG = '/assets/products/validator/validator-800x800.png'
 
 export default {
   id: 'LXM-VL',

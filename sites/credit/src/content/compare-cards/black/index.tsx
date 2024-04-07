@@ -10,12 +10,12 @@ const card: Card = {
     title: 'Anodized Black Titanium',
     sku: 'LXM-CR-B-ABT',
     materialImg: {
-      src: '/assets/img/materials/black-card-anodized-black-titanium-100x99.png',
+      src: '/assets/img/products/credit/option/black-card-anodized-black-titanium-100x99.png',
       dim: {w: 100, h: 99 },
       alt: 'Anodized Black Titanium'
     },
     cardImg: {
-      src: '/assets/img/cards-flat/black-f-700x441.png',
+      src: '/assets/img/products/credit/product/black-f-700x441.png',
       dim: {w: 700, h: 441 },
       alt: 'Black Card Anodized Black Titanium'
       },

@@ -1,9 +1,9 @@
 import type { CategoryNode } from '@hanzo/commerce/types'
 
-const BLACK_IMAGE = '/assets/img/cards-flat/black-f-700x441.png'
-const ELITE_IMAGE = '/assets/img/cards-flat/gold-f-700x442.png'
-const FOUNDER_IMAGE = '/assets/img/cards-flat/chrome-cool-f-700x441.png'
-const SOVEREIGN_IMAGE = '/assets/img/cards-flat/titanium-f-700x441.png'
+const BLACK_IMAGE = '/assets/img/products/credit/product/black-f-700x441.png'
+const ELITE_IMAGE = '/assets/img/products/credit/product/gold-f-700x442.png'
+const FOUNDER_IMAGE = '/assets/img/products/credit/product/chrome-cool-f-700x441.png'
+const SOVEREIGN_IMAGE = '/assets/img/products/credit/product/titanium-f-700x441.png'
 
 import CC_AR from './cc-aspect-ratio'
 

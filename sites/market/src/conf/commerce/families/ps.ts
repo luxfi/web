@@ -1,7 +1,7 @@
 import type { Product, Family } from '@hanzo/commerce/types'
 import { passVideo } from '../videos'
 
-const PS_IMG = '/assets/img/cmmc/pass-800x800.png'
+const PS_IMG = '/assets/products/pass/pass-800x800.png'
 const PS_IMG_DEF = {src: PS_IMG, dim: {w: 800, h:800}}
 
 export default {

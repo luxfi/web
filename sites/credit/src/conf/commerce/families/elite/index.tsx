@@ -10,7 +10,7 @@ export default {
   parentTitle: 'Lux Credit',
   title: 'Lux Elite Card',
   titleShort: 'Elite',
-  img: {src: '/assets/img/cards-dual-gd-sl-1485x1114.png', dim: {w: 1485, h: 1114}},
+  img: {src: '/assets/img/products/credit/families/cards-dual-gd-sl-1485x1114.png', dim: {w: 1485, h: 1114}},
   run: 100000,
   fees: {
     initial: 1000,
@@ -25,7 +25,7 @@ export default {
       familyTitle: 'Elite',
       optionLabel: '24k Gold',
       price: 500,
-      img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}},
+      img: {src: '/assets/img/products/credit/product/gold-f-700x442.png', dim: {w: 700, h: 442}},
       animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
     } satisfies Product,
     {
@@ -35,7 +35,7 @@ export default {
       familyTitle: 'Elite',
       optionLabel: 'Sterling Silver',
       price: 500,
-      img: {src: '/assets/img/cards-flat/silver-f-700x441.png', dim: {w: 700, h: 441}},
+      img: {src: '/assets/img/products/credit/product/silver-f-700x441.png', dim: {w: 700, h: 441}},
       animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
     } satisfies Product,
   ]
