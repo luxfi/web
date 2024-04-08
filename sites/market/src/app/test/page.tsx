@@ -74,6 +74,9 @@ const InputForm: React.FC<{
 
 const Page = ({ searchParams }: Props ) => {
 
+  const agent = searchParams?.agent
+  const mobile = agent === 'phone'
+
   const cmmc = useCommerce()
 
   const [skuPath, setSkuPath] = useState<string | undefined>('LXM-CN')
@@ -115,7 +118,7 @@ const Page = ({ searchParams }: Props ) => {
             {json && <pre>{json}</pre>}
           </ScrollArea>
         </div>
-        {skuPath && <BuyButton skuPath={skuPath} className='' >Buy</BuyButton>}
+        {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}
       </div>
     </Main>
   )

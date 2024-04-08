@@ -3,12 +3,23 @@ import type { SelectionUISpecifier } from '@hanzo/commerce/types'
 export const selectionUISpecifiers = {
 
   'LXM-CN': {
-    singleFamily: 'buttons'
+    singleFamily: {
+      type: 'buttons',
+      options: {
+        imageButtons: true 
+      }
+    }
   },  
   'LXM-CR': {
     multiFamily: {
       family: 'carousel',
-      inSlide: 'horiz-image-buttons'
+      inSlide: {
+        type: 'buttons',
+        options: {
+          imageButtons: true,
+          horizButtons: true 
+        }
+      }
     }
   },
   
