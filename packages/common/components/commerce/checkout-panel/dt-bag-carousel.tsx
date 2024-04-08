@@ -21,7 +21,7 @@ const DesktopBagCarousel: React.FC<{
     <CarouselItemSelector 
       items={cmmc.cartItems} 
       selectedItemRef={cmmc}
-      scrollList={false} // ignored
+      scrollable={false} // ignored
       selectSku={cmmc.setCurrentItem.bind(cmmc)}
       clx={className}
       ext={{
