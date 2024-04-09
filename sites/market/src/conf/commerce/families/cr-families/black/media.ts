@@ -31,7 +31,7 @@ export default new ProductMediaAccessor({
     } satisfies ImageDef,
   },
   anim: {
-    'LXM-CR-B-ABT': 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode', 
+    'LXM-CR-B-ABT': 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode', 
     'LXM-CR-B-GM': 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
   }
 })
