@@ -54,7 +54,7 @@ const CardComponent: React.FC<{
         )}
       />
       <div className='flex flex-col items-center'>
-        <div className='font-heading text-center text-xs sm:text-lg md:text-sm xl:text-base'>{title}</div>
+        <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
       </div>
       {lineItem && <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>}
