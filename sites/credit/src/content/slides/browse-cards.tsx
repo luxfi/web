@@ -5,7 +5,7 @@ const byline = 'Borrow up to 50% of all your assets* when you pay with the Lux C
 
 export default {
   blockType: 'screenful',
-  specifiers: 'vert-center no-gutters full-width',
+  specifiers: 'vert-center no-gutters full-screen-width',
   columnSpecifiers: ['vert-center center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading',
