@@ -1,4 +1,4 @@
-/* Note, preflight is applied first: 
+/* Note, preflight is applied first:
   https://unpkg.com/tailwindcss@3.3.5/src/css/preflight.css
 */
 @import "tailwindcss/base";
@@ -11,9 +11,5 @@
 @import "tailwindcss/utilities";
 
 .nextjs-toast-errors-parent {
-  display: none;
-}
-
-.loading-screen {
   display: none;
 }

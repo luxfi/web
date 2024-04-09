@@ -19,10 +19,10 @@ const viewport = {
 
 /*
   These '.variable' fields are actually autogenerate css classnames that *define* the actual
-  css variables ('--<ugly-name>') that one asks for in the tailwind classes. 
+  css variables ('--<ugly-name>') that one asks for in the tailwind classes.
   They are what make them available in the global scope. So this MUST
   be done like this for the tailwind font classes to work.
-  
+
   (...not to be confused with the css var itself.  This field should be named something else!)
 */
 
@@ -30,14 +30,14 @@ const viewport = {
   re body: overflow-y-hidden overflow-x-hidden, h-full
   We cannot have these on body tag for scroll-snap to work on iOS!
 */
-const bodyClasses = 
-  'bg-background text-foreground flex flex-col min-h-full loading-screen ' + 
-  getAppRouterBodyFontClasses() 
-    
-const RootLayout: React.FC<PropsWithChildren & { 
-  siteDef: SiteDef 
+const bodyClasses =
+  'bg-background text-foreground flex flex-col min-h-full' +
+  getAppRouterBodyFontClasses()
+
+const RootLayout: React.FC<PropsWithChildren & {
+  siteDef: SiteDef
   header?: boolean
-}> = ({ 
+}> = ({
   header = true,
   siteDef,
   children,
@@ -52,7 +52,8 @@ const RootLayout: React.FC<PropsWithChildren & {
       // Not sure why these got added (by my check in)
       // overflow: hidden here breaks scroll snap, see comment above
       paddingRight: '0 !important',
-      maxWidth: '100vw' 
+      maxWidth: '100vw',
+      display: 'none',
 
     }}>
       <Scripts/>
