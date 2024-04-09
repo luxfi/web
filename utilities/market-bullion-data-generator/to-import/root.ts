@@ -8,6 +8,7 @@ export default {
   label: 'Root',
   titleToken: '',
   ch: [
+    /*
     {
       tok: 'AU',
       label: 'Lux Gold',
@@ -38,6 +39,7 @@ export default {
         }
       ]
     },
+    */
     {
       tok: 'AG',
       desc: 'Get unprecedented access to silver with 1:1 asset-backed Lux Silver NFTs, sovereign ownership of physical silver without management fees, and mine-direct discount pricing.',
@@ -49,6 +51,7 @@ export default {
           imgCode: 'AG_B',
           ch: AG_B
         }, 
+        /*
         {
           tok: 'C',
           label: 'Minted Coin',
@@ -66,6 +69,7 @@ export default {
           imgCode: 'AG_CB',
           ch: AG_CB
         }
+        */
       ]
     }
   ], 

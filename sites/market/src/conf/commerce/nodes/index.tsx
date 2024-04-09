@@ -33,8 +33,16 @@ const level1 = [
     terminal: true,
     img: '/assets/img/products/silver/silver-bar-pt-100x125.png',
     imgAR: 1/1.25,
-    subNodes: [...BULLION_FORM]
+    subNodes: [
+      //...BULLION_FORM
+      {
+        skuToken: 'B',
+        label: 'Minted Bars',
+        img: <SVG_MintedBar height={18} />,
+      }
+    ]
   },
+  /*
   {
     skuToken: 'AU',
     label: 'Lux Gold',
@@ -43,6 +51,7 @@ const level1 = [
     imgAR: 1/1.25,
     subNodes: [...BULLION_FORM]
   },
+  */
   {
     skuToken: 'VL',
     label: 'Validator',

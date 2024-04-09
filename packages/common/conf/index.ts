@@ -33,5 +33,17 @@ export const selectionUISpecifiers = {
       }
     }
   },
+  'LXM-AG': {
+    multiFamily: {
+      familySelector: 'carousel',
+      showParentTitle: true, 
+      slide: {
+        type: 'buttons',
+        options: {
+          title: 'long',
+        }
+      }
+    }
+  },
   
 } satisfies Record<string, SelectionUISpecifier>

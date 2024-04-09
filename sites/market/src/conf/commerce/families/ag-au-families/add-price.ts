@@ -1,8 +1,11 @@
 import prices from '../../../prices'
 import type { Family } from '@hanzo/commerce/types'
 
-export const TS = '-'  // token separator
-export const DEC = '_' // decimal substitute
+const sep = {
+  tok: '-',
+  subTok: '_',
+  decimal: '.'
+} 
 
 const G_PER_OZ = 28.3495
 
@@ -15,25 +18,27 @@ for (let key in prices) {
   }
 }
 
-// LXB-AU-B-1-OZ, LXB-AU-B-2_5-g
+// LXB-AU-B-1_OZ, LXB-AU-B-2.5_g
 const priceFromSKU = (
   sku: string
 ) => {
-  const tokens = sku.split(TS)
+  const tokens = sku.split(sep.tok)
   const type_ = tokens[1].toLowerCase()
-  const amountTok = tokens[tokens.length - 2]
-  let amount = amountTok.includes(DEC) ? parseFloat(amountTok.split(DEC).join('.')) : parseInt(amountTok)
-  let unit = tokens[tokens.length - 1].toLowerCase()
+
+  const quanAndUnit = tokens[tokens.length - 1]
+  const quanAndUnitToks = quanAndUnit.split(sep.subTok)
+  let quantity = quanAndUnitToks[0].includes(sep.decimal) ? parseFloat(quanAndUnitToks[0].split(sep.decimal).join('.')) : parseInt(quanAndUnitToks[0])
+  let unit = quanAndUnitToks[1].toLowerCase()
   if (unit === 'kg') {
-    amount *= 1000
+    quantity *= 1000
     unit = 'g'
   }
   else if (unit === 'lb') {
-    amount *= 16
+    quantity *= 16
     unit = 'oz'
   }
 
-  return tree[type_][unit] * amount
+  return tree[type_][unit] * quantity
 }
 
 export default (c: Family): Family => {
