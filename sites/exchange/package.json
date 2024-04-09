@@ -17,7 +17,7 @@
     "@hanzo/auth": "2.3.4",
     "@hanzo/commerce": "6.1.8",
     "@hanzo/ui": "3.4.4",
-    "@luxdefi/common": "4.2.7",
+    "@luxdefi/common": "4.2.8",
     "@next/mdx": "14.1.0",
     "mobx": "^6.12.0",
     "mobx-react-lite": "^4.0.5",
