@@ -33,6 +33,17 @@ export default {
       price: 500,
       ...m.spreadableOptionImg('LXM-CR-B-ABT'),
       ...m.mediaStack('LXM-CR-B-ABT'),
+    } satisfies Product,
+        {
+      id: 'LXM-CR-B-GM',
+      sku: 'LXM-CR-B-GM',
+      familyTitle: 'Black',
+      optionLabel: 'Black Gunmetal',
+      familyId: 'LXM-CR-B',
+      price: 500,
+      ...m.spreadableOptionImg('LXM-CR-B-GM'),
+      ...m.mediaStack('LXM-CR-B-GM'),
     } satisfies Product
+
   ]
 } satisfies CardFamily 
