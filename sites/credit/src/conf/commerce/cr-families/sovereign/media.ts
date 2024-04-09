@@ -13,6 +13,13 @@ export default new ProductMediaAccessor({
       dim: {w: 700, h: 441}
     } satisfies ImageDef,
   },
+  optionImg: {
+    'LXM-CR-S-RT': { 
+      src: '/assets/img/products/credit/option/sovereign-card-reflective-titanium-100x99.png', 
+      dim: {w: 100, h: 99},
+      rounded: 'full'
+    } satisfies ImageDef,
+  },
   anim: {
     'LXM-CR-S-RT': 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode',
   }

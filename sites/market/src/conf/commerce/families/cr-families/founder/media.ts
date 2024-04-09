@@ -16,6 +16,18 @@ export default new ProductMediaAccessor({
       dim: {w: 700, h: 441}
     } satisfies ImageDef,
   },
+  optionImg: {
+    'LXM-CR-F-CC': { 
+      src: '/assets/img/products/credit/option/founder-card-cool-chrome-99x99.png', 
+      dim: {w: 99, h: 99},
+      rounded: 'full'
+    } satisfies ImageDef,
+    'LXM-CR-F-IC': { 
+      src: '/assets/img/products/credit/option/founder-card-iridescent-chrome-99x99.png', 
+      dim: {w: 99, h: 99},
+      rounded: 'full'
+    } satisfies ImageDef,
+  },
 
   anim: {
     'LXM-CR-F-CC': 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode',

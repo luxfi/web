@@ -59,6 +59,16 @@ const level1 = [
     img: '/assets/img/products/pass/pass-icon-539x686.png',
     imgAR: 539 / 686
   },
+
+/////
+  {
+    skuToken: 'FC',
+    label: 'Foin',
+    img: '/assets/img/products/coin/lux-coin-446x446.png',
+  },
+/////
+
+
   credit
 ] satisfies CategoryNode[]
 

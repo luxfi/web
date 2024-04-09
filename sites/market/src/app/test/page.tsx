@@ -79,7 +79,7 @@ const Page = ({ searchParams }: Props ) => {
 
   const cmmc = useCommerce()
 
-  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-FC')
+  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-CR')
   const [json, setJSON] = useState<string | undefined>(undefined)
   const [error, setError] = useState<string | undefined>(undefined)
 

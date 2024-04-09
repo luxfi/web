@@ -13,6 +13,13 @@ export default new ProductMediaAccessor({
       dim: {w: 700, h: 441},
     } satisfies ImageDef,
   },
+  optionImg: {
+    'LXM-CR-B-ABT': { 
+      src: '/assets/img/products/credit/option/black-card-anodized-black-titanium-100x99.png', 
+      dim: {w: 100, h: 99},
+      rounded: 'full'
+    } satisfies ImageDef,
+  },
   anim: {
     'LXM-CR-B-ABT': 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode' 
   }

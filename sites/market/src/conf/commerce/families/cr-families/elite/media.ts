@@ -17,6 +17,19 @@ export default new ProductMediaAccessor({
       dim: {w: 700, h: 441}
     } satisfies ImageDef,
   },
+  optionImg: {
+    'LXM-CR-E-24G': { 
+      src: '/assets/img/products/credit/option/elite-card-gold-100x99.png', 
+      dim: {w: 100, h: 99},
+      rounded: 'full'
+    } satisfies ImageDef,
+    'LXM-CR-E-SS': { 
+      src: '/assets/img/products/credit/option/elite-card-silver-99x99.png', 
+      dim: {w: 99, h: 99},
+      rounded: 'full'
+    } satisfies ImageDef,
+  },
+
   anim: {
     'LXM-CR-E-24G': 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode',
     'LXM-CR-E-SS': 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'

@@ -1,8 +1,15 @@
 import type { Product } from '@hanzo/commerce/types'
-import type { CardFamily } from '@/types'
+import { formatCurrencyValue } from '@hanzo/commerce'
 
+import type { CardFamily } from '@/types'
 import MDX_Content from './detail.mdx'
 import m from './media'
+
+const fees = {
+  initial: 50000,
+  annual: 5000 
+}
+const byline = `${formatCurrencyValue(fees.initial)} initiation - ${formatCurrencyValue(fees.annual)} yearly`
 
 export default {
   type : 'sovereign',
@@ -13,10 +20,8 @@ export default {
   titleShort: 'Sovereign',
   ...m.spreadableImg('LXM-CR-S'),
   run: 10000,
-  fees: {
-    initial: 50000,
-    annual: 5000 
-  },
+  fees,
+  byline,
   detail: <MDX_Content />,
   products: [
     {

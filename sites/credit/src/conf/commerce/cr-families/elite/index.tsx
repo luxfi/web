@@ -1,8 +1,15 @@
 import type { Product } from '@hanzo/commerce/types'
 import type { CardFamily } from '@/types'
+import { formatCurrencyValue } from '@hanzo/commerce'
 
 import MDX_Content from './detail.mdx'
 import m from './media'
+
+const fees = {
+  initial: 1000,
+  annual: 1000 
+}
+const byline = `${formatCurrencyValue(fees.initial)} initiation - ${formatCurrencyValue(fees.annual)} yearly`
 
 export default {
   type : 'elite',
@@ -11,12 +18,10 @@ export default {
   parentTitle: 'Lux Credit',
   title: 'Lux Elite Card',
   titleShort: 'Elite',
+  byline,
   ...m.spreadableImg('LXM-CR-E'),
   run: 100000,
-  fees: {
-    initial: 1000,
-    annual: 1000 
-  },
+  fees,
   detail: <MDX_Content />,
   products: [
     {

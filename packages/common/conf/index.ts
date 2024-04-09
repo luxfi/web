@@ -10,14 +10,25 @@ export const selectionUISpecifiers = {
       }
     }
   },  
+  'LXM-FC': {
+    singleFamily: {
+      type: 'carousel',
+      options: {
+        showQuantity: true 
+      }
+    }
+  },  
   'LXM-CR': {
     multiFamily: {
-      family: 'carousel',
-      inSlide: {
+      familySelector: 'carousel',
+      showParentTitle: false, 
+      slide: {
         type: 'buttons',
         options: {
+          title: 'long',
+          showPrice: false,
           imageButtons: true,
-          horizButtons: true 
+          horizButtons: true,
         }
       }
     }
