@@ -3,10 +3,13 @@ import { X } from 'lucide-react'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { BuyButton, formatCurrencyValue } from '@hanzo/commerce'
+import { AddToCartWidget, formatCurrencyValue, useCommerce } from '@hanzo/commerce'
 
 import type { Card, CardMaterial } from '@/types/card'
 import type { CardWithSelectedMaterial } from '../index'
+import type { LineItem } from '@hanzo/commerce/types'
+import { useEffect, useState } from 'react'
+import CardMaterialPicker from '@/components/card-material-picker'
 
 const CardHero: React.FC<{
   key: number | string
@@ -23,8 +26,10 @@ const CardHero: React.FC<{
   hiddenOnMobile,
   condensed
 }) => {
+  const cmmc = useCommerce()
+  const [lineItem, setLineItem] = useState<LineItem>()
 
-  const changeCardMaterial = (card: Card, material: CardMaterial) => {
+  const changeSelectedMaterial = (material: CardMaterial) => {
     setSelectedCards(selectedCards.map(selectedCard => {
       if (selectedCard.title === card.title) {
         return {
@@ -38,6 +43,13 @@ const CardHero: React.FC<{
 
   const selectedMaterial = selectedCards.find(c => c.title === card.title)?.selectedMaterial
 
+  useEffect(() => {
+    if (selectedMaterial) {
+      cmmc.selectPath(selectedMaterial.sku)
+      setLineItem(cmmc.selectedItems.find(item => item.sku === selectedMaterial.sku))
+    }
+  }, [selectedMaterial])
+
   if (!selectedMaterial) {
     return null
   }
@@ -47,23 +59,17 @@ const CardHero: React.FC<{
       <div
         className={cn(
           hiddenOnMobile ? 'hidden lg:flex' : 'flex',
-          'flex-col gap-2 lg:col-span-3'
+          'flex-col gap-3 lg:col-span-3 items-center'
         )}
       >
-        <div className='flex gap-2 self-start items-center'>
+        <div className='flex gap-2 items-center'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial?.cardImg}}
             className='h-8 w-auto'
           />
           <h6 className='font-heading text-xs xl:text-base'>{card.title}</h6>
         </div>
-        <BuyButton 
-          skuPath={selectedMaterial.sku} 
-          className='w-full'
-          size='xs'
-        >
-          Add +
-        </BuyButton>
+        {lineItem && <AddToCartWidget item={lineItem} className='w-fit'/>}
       </div>
     )
   }
@@ -99,28 +105,14 @@ const CardHero: React.FC<{
           <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
         </div>
         <div className='flex flex-col gap-2 items-center'>
-          <div className='flex gap-4 justify-center'>
-            {card.materials.map(({title, materialImg}, i) => (
-              <div
-                key={i}
-                className={cn('cursor-pointer rounded-full p-1', title === selectedMaterial?.title && 'outline outline-2 outline-foreground')}
-                onClick={() => changeCardMaterial(card, card.materials[i])}
-              >
-                <ImageBlockComponent
-                  block={{blockType: 'image', ...materialImg}}
-                  className='h-10 w-10'
-                />
-              </div>
-            ))}
-          </div>
+          <CardMaterialPicker
+            materials={card.materials}
+            selectedMaterial={selectedMaterial}
+            onChange={changeSelectedMaterial}
+          />
           <p className='text-xxs sm:text-xs'>{selectedMaterial?.title}</p>
         </div>
-        <BuyButton 
-          skuPath={selectedMaterial.sku} 
-          className='w-full max-w-72'
-        >
-          Add +
-        </BuyButton>
+        {lineItem && <AddToCartWidget item={lineItem}/>}
       </div>
     </ApplyTypography>
   )

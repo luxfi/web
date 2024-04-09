@@ -2,24 +2,40 @@
 
 import { useState } from 'react'
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
 
-const AccessCodeInput = () => {
-  const [err, setErr] = useState(false)
-  const [loading, setLoading] = useState(false)
+const AccessCodeInput: React.FC<{
+  onSuccess?: () => void
+  onFail?: () => void
+  validCodes?: string[]
+  className?: string
+}> = ({
+  onSuccess,
+  onFail,
+  validCodes,
+  className
+}) => {
+  const [status, setStatus] = useState<'valid' | 'invalid' | 'checking' | undefined>()
 
   const checkAccessCode = (code: string) => {
-    setErr(false)
+    setStatus(undefined)
     if (code.length === 6) {
-      setLoading(true)
+      setStatus('checking')
       setTimeout(() => {
-        setErr(true)
-        setLoading(false)
+        if (validCodes?.includes(code) && onSuccess) {
+          setStatus('valid')
+          onSuccess()
+        }
+        else {
+          setStatus('invalid')
+          onFail && onFail()
+        }
       }, 1000)
     }
   }
 
   return (
-    <div className='flex flex-col gap-2 mx-auto w-full text-center items-center'>
+    <div className={cn('flex flex-col gap-2 mx-auto w-full text-center items-center', className)}>
       <InputOTP
         className='mx-auto'
         maxLength={6}
@@ -41,7 +57,12 @@ const AccessCodeInput = () => {
         )}
       />
       <p className='h-[3rem]'>
-        {loading ? 'Checking access code...' : err ? <span className='text-destructive'>Invalid access code!</span> : null}
+        {
+          status === 'checking' ? 'Checking access code...' :
+          status === 'invalid' ? <span className='text-destructive'>Invalid access code!</span> :
+          status === 'valid' ? <span>Access code is valid! Redirecting...</span> :
+          null
+        }
       </p>
     </div>
   )

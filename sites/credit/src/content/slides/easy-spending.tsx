@@ -36,7 +36,7 @@ export default {
       */
       {blockType: 'space'} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
-        otherLink: { title: "See Tiers", href: "/compare", variant: 'outline' },
+        otherLink: { title: "See Tiers", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
 

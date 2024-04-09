@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { 
   VideoBlockComponent,
   type Block,
@@ -7,7 +9,8 @@ import {
   type CarteBlancheBlock,
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
-import Link from 'next/link'
+
+import SplinePlayer from '@/components/spline-player'
 
 const silverVideo = {
   blockType: 'video',
@@ -28,18 +31,6 @@ const goldVideo = {
     '/assets/video/luxgold.mp4',
   ],
   dim: {md: { w: 1282, h: 1920}, lg: {w: 1282, h: 1920}},
-  sizing: {vh: 30, mobile: {vw: 20}}
-} as VideoBlock
-
-const creditVideo = {
-  blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/video/LUX-CARD-poster.jpg',
-  sources: [
-    '/assets/video/LUX-CARD-transcode.mp4', 
-    '/assets/video/LUX-CARD-transcode.webm'
-  ],
-  dim: {md: { w: 758, h: 588}, lg: {w: 758, h: 588}},
   sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
@@ -83,8 +74,8 @@ export default [
     content: [
       {blockType: 'element',
         element: <>
-          <Link href='https://lux.market/credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
-            <VideoBlockComponent block={creditVideo} className='h-full !my-0'/>
+          <Link href='https://lux.credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1 content-center'>
+            <SplinePlayer src='https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode' className='!aspect-[12/10]'/>
           </Link>
         </>
       } as ElementBlock,
