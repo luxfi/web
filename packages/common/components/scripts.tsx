@@ -7,7 +7,7 @@ import { FacebookPixel } from '../next/analytics'
 const Scripts = () => {
 
   useEffect(() => {
-    document.body.classList.remove('loading-screen')
+    document.body.style.display = 'block'
   }, [])
 
   return (
