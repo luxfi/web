@@ -4,7 +4,7 @@ import { cn } from '@hanzo/ui/util'
 import { ApplyTypography, Main, Separator } from '@hanzo/ui/primitives'
 
 import cards from '@/content/cards'
-import sovereign from '@/conf/commerce/products/sovereign'
+import sovereign from '@/conf/commerce/cr-families/sovereign'
 import CardPreview from './mobile-card-preview'
 import SplinePlayer from '../spline-player'
 

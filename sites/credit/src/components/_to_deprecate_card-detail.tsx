@@ -106,7 +106,7 @@ const CardDetailComponent: React.FC<{
         <ButtonItemSelector 
           items={cc.products as LineItem[]}
           selectedItemRef={lineItemRef}  
-          scrollList={false}
+          scrollable={false}
           selectSku={handleItemSelected}
           clx='xs:flex sm:grid grid-cols-2 gap-0 gap-y-3 gap-x-8 '
           itemClx='flex flex-row gap-2 items-center min-w-fit' // lg:whitespace-nowrap 
