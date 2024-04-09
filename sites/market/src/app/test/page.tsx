@@ -17,7 +17,7 @@ import {
   ScrollArea
 } from '@hanzo/ui/primitives'
 import { useCommerce, BuyButton } from '@hanzo/commerce'
-import { peekDownPathDump } from '@hanzo/commerce/debug'
+import { peekDump } from '@hanzo/commerce/debug'
 import { useState } from 'react'
 
 type Props = {
@@ -79,20 +79,20 @@ const Page = ({ searchParams }: Props ) => {
 
   const cmmc = useCommerce()
 
-  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-CN')
+  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-FC')
   const [json, setJSON] = useState<string | undefined>(undefined)
   const [error, setError] = useState<string | undefined>(undefined)
 
   const handleSubmit = (data: z.infer<typeof FormSchema>): void => {
     const _skuPath = data.skupath.toUpperCase()
     setSkuPath(_skuPath)
-    const result = cmmc.peekDownPath(_skuPath)
+    const result = cmmc.peek(_skuPath)
     if (typeof result === 'string') {
       setError(result)
       setJSON(undefined)
     }
     else {
-      setJSON(peekDownPathDump(result))
+      setJSON(peekDump(result))
       setError(undefined)
     }
   }

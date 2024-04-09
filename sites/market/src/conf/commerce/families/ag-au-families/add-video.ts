@@ -1,14 +1,14 @@
 import type { Family } from '@hanzo/commerce/types'
 
-import { goldVideo, silverVideo } from '../videos'
+import { gold, silver } from '../videos'
 
 export default (c: Family): Family => {
   for (let prod of c.products) {
     if (c.parentTitle === 'Lux Gold') {
-      prod.video = goldVideo
+      prod.video = gold
     }
     if (c.parentTitle === 'Lux Silver') {
-      prod.video = silverVideo
+      prod.video = silver
     }
   }
   return c
