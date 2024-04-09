@@ -44,7 +44,7 @@
   },
   "peerDependencies": {
     "@hanzo/auth": "2.3.4",
-    "@hanzo/commerce": "6.2.0",
+    "@hanzo/commerce": "6.2.1",
     "@hanzo/ui": "3.5.0",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "^0.344.0",

@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@hanzo/auth": "2.3.4",
-    "@hanzo/commerce": "6.2.0",
+    "@hanzo/commerce": "6.2.1",
     "@hanzo/ui": "3.5.0",
     "@luxdefi/common": "4.3.1",
     "@next/mdx": "14.1.0",
