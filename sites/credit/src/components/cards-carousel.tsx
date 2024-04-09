@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from 'react'
 
 import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
-import { BuyButton } from '@hanzo/commerce'
-
+import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import type { ImageDef } from '@hanzo/ui/types'
+import type { LineItem } from '@hanzo/commerce/types'
 
 type Card = {
   title: string
@@ -26,10 +26,18 @@ const CardComponent: React.FC<{
   current,
   index
 }) => {
-  const {title, byline, skuPath, label, img} = card
+  const {title, byline, skuPath, img} = card
+  
+  const cmmc = useCommerce()
+  const [lineItem, setLineItem] = useState<LineItem>()
+
+  useEffect(() => {
+    cmmc.selectPath(skuPath)
+    setLineItem(cmmc.selectedItems.find(item => item.sku === skuPath))
+  }, [])
 
   return (
-    <div className='flex flex-col gap-5 items-center'>
+    <div className='flex flex-col gap-5 items-center h-full'>
       <ImageBlockComponent
         block={{blockType: 'image',
           props: {
@@ -40,21 +48,16 @@ const CardComponent: React.FC<{
           },
           ...img
         } as ImageBlock}
-        className={cn('mx-auto', current !== index ? 'cursor-pointer' : '')}
+        className={cn(
+          'mx-auto aspect-[1.58577251]',
+          current !== index ? 'cursor-pointer' : ''
+        )}
       />
       <div className='flex flex-col items-center'>
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
       </div>
-      <BuyButton 
-        skuPath={skuPath} 
-        variant='outline'        
-        size='default'
-        className='lg:min-w-[180px] sm:min-w-[180px]'
-      >
-        {label ? label : 'Buy'}
-      </BuyButton>
-
+      {lineItem && <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>}
     </div>
 )
 }
@@ -84,21 +87,19 @@ const CardsCarousel: React.FC<{
   }
 
   return (
-    <div className='w-full flex flex-col gap-10 items-center overflow-hidden'>
-      <Carousel
-        setApi={setApi} 
-        options={{ align: 'center', loop: true }}
-        className='w-full'
-      >
-        <CarouselContent>
-          {cards.map((card: Card, index) => (
-            <CarouselItem key={index} className='basis-3/4 md:basis-pr-35 xl:basis-1/4 px-4' onClick={() => selectCard(index)}>
-              <CardComponent card={card} current={current} index={index}/>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
-    </div>
+    <Carousel
+      setApi={setApi} 
+      options={{ align: 'center', loop: true }}
+      className='w-full'
+    >
+      <CarouselContent>
+        {cards.map((card: Card, index) => (
+          <CarouselItem key={index} className='basis-3/4 md:basis-1/3 xl:basis-1/5' onClick={() => selectCard(index)}>
+            <CardComponent card={card} current={current} index={index}/>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   )
 }
 
