@@ -3,11 +3,9 @@ import React  from 'react'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 import { Header } from '@luxdefi/common'
 
-
 import { tiles}  from '@/content'
 import '@/blocks/registerComponents'
 import FooterSlide from '@/components/footer-slide'
-
 import siteDef from '../site-def'
 
 type Props = {

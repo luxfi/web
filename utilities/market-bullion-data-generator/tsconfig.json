@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "**/*.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "allowImportingTsExtensions":true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+  }
+}

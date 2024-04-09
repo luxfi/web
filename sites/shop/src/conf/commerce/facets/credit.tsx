@@ -1,9 +1,9 @@
-import type { ProductTreeNode } from '@hanzo/commerce/types'
+import type { CategoryNode } from '@hanzo/commerce/types'
 
-const BLACK_IMAGE = '/assets/img/cards-flat/black-f-700x441.png'
-const ELITE_IMAGE = '/assets/img/cards-flat/gold-f-700x442.png'
-const FOUNDER_IMAGE = '/assets/img/cards-flat/chrome-cool-f-700x441.png'
-const SOVEREIGN_IMAGE = '/assets/img/cards-flat/titanium-f-700x441.png'
+const BLACK_IMAGE = '/assets/img/products/credit/product/black-f-700x441.png'
+const ELITE_IMAGE = '/assets/img/products/credit/product/gold-f-700x442.png'
+const FOUNDER_IMAGE = '/assets/img/products/credit/product/chrome-cool-f-700x441.png'
+const SOVEREIGN_IMAGE = '/assets/img/products/credit/product/titanium-f-700x441.png'
 
 const CC_AR = 1.58577251 // international spec for CC's and our images
 
@@ -32,7 +32,7 @@ const CARD_LEVELS = [
     img: SOVEREIGN_IMAGE,
     imgAR: CC_AR,
   },
-] satisfies ProductTreeNode[]
+] satisfies CategoryNode[]
 
 export default {
     skuToken: 'CR',

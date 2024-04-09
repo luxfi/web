@@ -1,7 +1,7 @@
-import type { Product, Category } from '@hanzo/commerce/types'
+import type { Product, Family } from '@hanzo/commerce/types'
 import { validatorVideo } from '../videos'
 
-const VL_IMG = '/assets/img/cmmc/validator-800x800.png'
+const VL_IMG = '/assets/img/products/validator/validator-800x800.png'
 
 export default {
   id: 'LXM-VL',
@@ -13,7 +13,7 @@ export default {
       sku: 'LXM-VL-GN',
       title: 'Genesis Validator',
       optionLabel: 'Genesis Validator',
-      categoryId: 'LXM-VL',
+      familyId: 'LXM-VL',
       price: 1000000, // 1M
       img: VL_IMG,
       video: validatorVideo
@@ -23,7 +23,7 @@ export default {
       sku: 'LXM-VL-VL',
       title: 'Validator',
       optionLabel: 'Validator',
-      categoryId: 'LXM-VL',
+      familyId: 'LXM-VL',
       price: 100000, // 100K
       img: VL_IMG,
       video: validatorVideo
@@ -33,7 +33,7 @@ export default {
       sku: 'LXM-VL-MI',
       title: 'Mini Validator',
       optionLabel: 'Mini Validator',
-      categoryId: 'LXM-VL',
+      familyId: 'LXM-VL',
       price: 10000, // 10K
       img: VL_IMG,
       video: validatorVideo
@@ -43,10 +43,10 @@ export default {
       sku: 'LXM-VL-NA',
       title: 'Nano Validator',
       optionLabel: 'Nano Validator',
-      categoryId: 'LXM-VL',
+      familyId: 'LXM-VL',
       price: 1000, // 1K
       img: VL_IMG,
       video: validatorVideo
     },
   ] satisfies Product[]
-} satisfies Category
+} satisfies Family

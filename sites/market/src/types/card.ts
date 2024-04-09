@@ -1,9 +1,9 @@
 import { type ReactNode } from 'react'
-import type { Category } from '@hanzo/commerce/types'
+import type { Family } from '@hanzo/commerce/types'
 
 type CardType = 'black' | 'elite' | 'founder' | 'sovereign'
 
-interface CardCategory extends Category {
+interface CardFamily extends Family {
   type: CardType
   material: string
   run: number
@@ -17,6 +17,6 @@ interface CardCategory extends Category {
 
 export {
   type CardType,
-  type CardCategory
+  type CardFamily
 }
 

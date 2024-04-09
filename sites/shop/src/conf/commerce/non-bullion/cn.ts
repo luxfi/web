@@ -1,7 +1,7 @@
-import type { Product, Category } from '@hanzo/commerce/types'
+import type { Product, Family } from '@hanzo/commerce/types'
 import { coinVideo } from '../videos'
 
-const CN_IMG = '/assets/img/cmmc/lux-coin-800x800.png'
+const CN_IMG = '/assets/img/products/coin/lux-coin-800x800.png'
 
 const COIN = 0.00011
 
@@ -19,7 +19,7 @@ export default {
       sku: 'LXM-CN-10B',
       title: 'Lux Coin, 10B',
       optionLabel: '10B',
-      categoryId: 'LXM-CN',
+      familyId: 'LXM-CN',
       price: 10 * B * COIN, // $11M
       img: CN_IMG,
       video: coinVideo
@@ -29,7 +29,7 @@ export default {
       sku: 'LXM-CN-1B',
       title: 'Lux Coin, 1B',
       optionLabel: '1B',
-      categoryId: 'LXM-CN',
+      familyId: 'LXM-CN',
       price: B * COIN, // $1.1M
       img: CN_IMG,
       video: coinVideo
@@ -39,7 +39,7 @@ export default {
       sku: 'LXM-CN-100M',
       title: 'Lux Coin, 100M',
       optionLabel: '100M',
-      categoryId: 'LXM-CN',
+      familyId: 'LXM-CN',
       price: 100 * M * COIN, // $110K
       img: CN_IMG,
       video: coinVideo
@@ -49,7 +49,7 @@ export default {
       sku: 'LXM-CN-10M',
       title: 'Lux Coin, 10M',
       optionLabel: '10M',
-      categoryId: 'LXM-CN',
+      familyId: 'LXM-CN',
       price: 10 * M * COIN, // $11K
       img: CN_IMG,
       video: coinVideo
@@ -59,10 +59,10 @@ export default {
       sku: 'LXM-CN-1M',
       title: 'Lux Coin, 1M',
       optionLabel: '1M',
-      categoryId: 'LXM-CN',
+      familyId: 'LXM-CN',
       price: M * COIN, // $1.1K
       img: CN_IMG,
       video: coinVideo
     },
   ] satisfies Product[]
-} satisfies Category
+} satisfies Family

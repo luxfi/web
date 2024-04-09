@@ -1,11 +1,11 @@
 import type { ServiceOptions } from '@hanzo/commerce'
 
-import rootNode from './facets'
-import products from './products'
+import rootNode from './nodes'
+import products from './cr-families'
 
 export default {
   rootNode, 
-  productsByCategory: products,
+  productsByFamily: products,
   options: {
     dbName: 'lux-commerce',
     ordersTable: 'orders'

@@ -1,9 +1,9 @@
-import type { CardCategory } from '@/types'
+import type { CardFamily } from '@/types'
 import type { Block } from '@hanzo/ui/blocks'
 
 interface CardComparisonBlock extends Block {
   blockType: 'card-comparison'
-  cards: CardCategory[] 
+  cards: CardFamily[] 
 }
 
 export {

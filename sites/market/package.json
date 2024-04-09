@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "@hanzo/auth": "2.3.4",
-    "@hanzo/commerce": "6.1.8",
-    "@hanzo/ui": "3.4.4",
+    "@hanzo/commerce": "6.2.1",
+    "@hanzo/ui": "3.5.0",
     "@hookform/resolvers": "^3.3.4",
-    "@luxdefi/common": "4.2.8",
+    "@luxdefi/common": "4.3.1",
     "@next/mdx": "14.1.0",
     "ethers": "^6.11.1",
     "firebase": "^10.8.0",

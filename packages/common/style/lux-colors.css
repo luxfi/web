@@ -45,7 +45,6 @@
     --hz-ui-destructive-hover: hsl(0 62.8% 25%);
     --hz-ui-destructive-fg: hsl(0 0% 100%);
 
-    --hz-ui-input: var(--hz-ui-bg-1);
     --hz-ui-ring: var(--hz-ui-fg-1);
 
     --hz-ui-radius: 0.5rem;

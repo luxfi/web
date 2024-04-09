@@ -1,4 +1,4 @@
-import type { Category } from '@hanzo/commerce/types'
+import type { Family } from '@hanzo/commerce/types'
 
 import black from './black'
 import elite from './elite'
@@ -10,4 +10,4 @@ export default [
   elite,
   founder,
   sovereign
-] as Category[]
+] as Family[]
