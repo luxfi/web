@@ -1,12 +1,11 @@
 import CardsCarousel from '@/components/cards-carousel'
 import { type Block, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type SpaceBlock } from '@hanzo/ui/blocks'
-import type { ImageDef, LinkDef } from '@hanzo/ui/types'
 
 const byline = 'Borrow up to 50% of all your assets* when you pay with the Lux Credit Card, the most exclusive card membership program, that doesn\'t ever effect your credit score.'
 
 export default {
   blockType: 'screenful',
-  specifiers: 'vert-center',
+  specifiers: 'vert-center no-gutters full-screen-width',
   columnSpecifiers: ['vert-center center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading',
@@ -18,7 +17,7 @@ export default {
       },
     } satisfies EnhHeadingBlock as Block,
     {blockType: 'element',
-      element: <p className='mx-auto max-w-[45rem] !text-center'>{byline}</p>,
+      element: <p className='mx-auto max-w-[45rem] !text-center px-4'>{byline}</p>,
     } satisfies ElementBlock as Block,
     {blockType: 'space', level: 1} as SpaceBlock,
     {blockType: 'element',
@@ -26,28 +25,75 @@ export default {
         <CardsCarousel
           cards={[
             {
-              title: 'BLACK CARD',
-              byline: 'Black Titanium',
-              skuPath: 'LXM-CR-B',
-              img: {src: '/assets/img/cards-flat/black-f-700x441.png', dim: {w: 700, h: 441 }, alt: 'Black card'} as ImageDef,
+              title: 'BLACK TITANIUM',
+              byline: 'Black Card',
+              skuPath: 'LXM-CR-B-ABT',
+              img: {
+                src: '/assets/img/cards-flat/black-f-700x441.png',
+                dim: {w: 700, h: 441 },
+                alt: 'Black Card Anodized Black Titanium'
+              },
             },
             {
-              title: 'ELITE CARD',
-              byline: '24k Gold or Sterling Silver',
-              skuPath: 'LXM-CR-E',
-              img: {src: '/assets/img/cards-flat/gold-f-700x442.png', dim: {w: 700, h: 442}, alt: 'Elite card'} as ImageDef,
+              title: 'BLACK GUNMETAL',
+              byline: 'Black Card',
+              skuPath: 'LXM-CR-B-GM',
+              img: {
+                //TODO: Change this to the correct image
+                src: '/assets/img/cards-flat/black-f-700x441.png',
+                dim: {w: 700, h: 441 },
+                alt: 'Black Card Black Gunmetal',
+              },
             },
             {
-              title: 'FOUNDER CARD',
-              byline: 'Cool or Iridescent Chrome',
-              skuPath: 'LXM-CR-F',
-              img: {src: '/assets/img/cards-flat/chrome-cool-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Founder card'} as ImageDef,
+              title: 'COOL CHROME',
+              byline: 'Founder Card',
+              skuPath: 'LXM-CR-F-CC',
+              img: {
+                src: '/assets/img/cards-flat/chrome-cool-f-700x441.png',
+                dim: {w: 700, h: 441 },
+                alt: 'Founder Card Cool Chrome'
+              },
             },
             {
-              title: 'SOVEREIGN CARD',
-              byline: 'Reflective Titanium',
-              skuPath: 'LXM-CR-S',
-              img: {src: '/assets/img/cards-flat/titanium-f-700x441.png', dim: {w: 700, h: 441}, alt: 'Sovereign card'} as ImageDef,
+              title: 'IRIDESCENT CHROME',
+              byline: 'Founder Card',
+              skuPath: 'LXM-CR-F-IC',
+              img: {
+                src: '/assets/img/cards-flat/chrome-irid-f-700x441.png',
+                dim: {w: 700, h: 441 },
+                alt: 'Founder Card Iridescent Chrome'
+              },
+            },
+            {
+              title: '24K GOLD',
+              byline: 'Elite Card',
+              skuPath: 'LXM-CR-E-24G',
+              img: {
+                src: '/assets/img/cards-flat/gold-f-700x442.png',
+                dim: {w: 700, h: 442 },
+                alt: 'Elite Card 24k Gold'
+              },
+            },
+            {
+              title: 'STERLING SILVER',
+              byline: 'Elite Card',
+              skuPath: 'LXM-CR-E-SS',
+              img: {
+                src: '/assets/img/cards-flat/silver-f-700x441.png',
+                dim: {w: 700, h: 441 },
+                alt: 'Elite Card Sterling Silver'
+              },
+            },
+            {
+              title: 'MIRROR CARD',
+              byline: 'Sovereign Card',
+              skuPath: 'LXM-CR-S-RT',
+              img: {
+                src: '/assets/img/cards-flat/titanium-f-700x428.png',
+                dim: {w: 700, h: 428 },
+                alt: 'Sovereign Card Mirror Card'
+              },
             },
           ]}
         />
