@@ -26,8 +26,8 @@ export default new ProductMediaAccessor({
       rounded: 'full'
     } satisfies ImageDef,
     'LXM-CR-B-GM': {
-      src: '/assets/img/products/credit/option/black-card-gunmetal-100x99.png',
-      dim: {w: 100, h: 99 },
+      src: '/assets/img/products/credit/option/black-card-gunmetal-99x99.png',
+      dim: {w: 99, h: 99 },
     } satisfies ImageDef,
   },
   anim: {
