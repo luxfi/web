@@ -1,7 +1,7 @@
 import { footer, mainNav, type SiteDef  } from '@luxdefi/common/site-def'
 
-import commerce from '@/conf/commerce'
-import prices from '@/conf/prices'
+import commerce from './commerce'
+import prices from './prices'
 
 export default {
   currentAs: 'https://lux.market',

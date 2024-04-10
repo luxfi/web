@@ -8,7 +8,7 @@ import BannerComponent from '@/blocks/components/banner-block'
 
 import { landing } from '@/content'
 
-import siteDef from '@/site-def'
+import siteDef from '@/conf/site-def'
 
 const MOBILE_VID_CONSTRAINT = {
   w: 300,

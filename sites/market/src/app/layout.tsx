@@ -16,7 +16,7 @@ import {
 import { selectionUISpecifiers } from '@luxdefi/common/conf'
 import '@luxdefi/common/style/lux-global.css'
 
-import siteDef from '../site-def'
+import siteDef from '../conf/site-def'
 import _metadata from '../metadata'
 
 export const metadata = { ..._metadata }

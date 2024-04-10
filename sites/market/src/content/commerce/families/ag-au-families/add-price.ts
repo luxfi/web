@@ -1,4 +1,4 @@
-import prices from '../../../prices'
+import prices from '../../../../conf/prices'
 import type { Family } from '@hanzo/commerce/types'
 
 const sep = {
