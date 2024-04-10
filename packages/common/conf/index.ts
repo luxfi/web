@@ -4,9 +4,9 @@ export const selectionUISpecifiers = {
 
   'LXM-CN': {
     singleFamily: {
-      type: 'buttons',
+      type: 'carousel',
       options: {
-        imageButtons: true 
+        //imageButtons: true 
       }
     }
   },  
@@ -14,7 +14,7 @@ export const selectionUISpecifiers = {
     singleFamily: {
       type: 'carousel',
       options: {
-        showQuantity: true 
+        //showQuantity: true 
       }
     }
   },  

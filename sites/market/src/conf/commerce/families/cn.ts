@@ -3,11 +3,14 @@ import { coin as video } from './videos'
 import type { ImageDef } from '@hanzo/ui/types'
 
 const CN_IMG = '/assets/img/products/coin/lux-coin-800x800.png'
-const CN_IMG_DEF = {
+const img = {
   src: CN_IMG, 
   dim: { w: 800, h: 800},
   rounded: 'full'
 } satisfies ImageDef
+
+// DEBUG
+const animation = 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
 
 const COIN = 0.00011
 
@@ -18,7 +21,7 @@ const B = 1000 * M
 export default {
   id: 'LXM-CN',
   title: 'Lux Coin',
-  img: CN_IMG_DEF, 
+  img, 
   products: [
     {
       id: 'LXM-CN-10B',
@@ -27,8 +30,12 @@ export default {
       optionLabel: '10B',
       familyId: 'LXM-CN',
       price: 10 * B * COIN, // $11M
-      img: CN_IMG_DEF,
-      video
+      img,
+      video,
+      animation,
+      mediaTransform: {
+        // scale: 1
+      }
     },
     {
       id: 'LXM-CN-1B',
@@ -37,8 +44,12 @@ export default {
       optionLabel: '1B',
       familyId: 'LXM-CN',
       price: B * COIN, // $1.1M
-      img: CN_IMG_DEF,
-      video
+      img,
+      video,
+      animation,
+      mediaTransform: {
+        scale: 0.75
+      }
     },
     {
       id: 'LXM-CN-100M',
@@ -47,8 +58,12 @@ export default {
       optionLabel: '100M',
       familyId: 'LXM-CN',
       price: 100 * M * COIN, // $110K
-      img: CN_IMG_DEF,
-      video
+      img,
+      video,
+      animation,
+      mediaTransform: {
+        scale: 0.5
+      }
     },
     {
       id: 'LXM-CN-10M',
@@ -57,8 +72,13 @@ export default {
       optionLabel: '10M',
       familyId: 'LXM-CN',
       price: 10 * M * COIN, // $11K
-      img: CN_IMG_DEF,
-      video
+      img,
+      video,
+      animation,
+      mediaTransform: {
+        scale: 0.3
+      }
+
     },
     {
       id: 'LXM-CN-1M',
@@ -67,8 +87,12 @@ export default {
       optionLabel: '1M',
       familyId: 'LXM-CN',
       price: M * COIN, // $1.1K
-      img: CN_IMG_DEF,
-      video
+      img,
+      video,
+      animation,
+      mediaTransform: {
+        scale: 0.18
+      }
     },
   ] satisfies Product[]
 } satisfies Family

@@ -24,10 +24,18 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
+const INITIAL_SKU_PATH = 'LXM-CN'
+
 const FormSchema = z.object({
+  /*
   skupath: z.string().min(2, {
     message: 'sku path must be at least 2 characters.',
   }),
+  */
+ skupath: z.custom<string>((v) => (
+    (typeof v === 'string' && v.split('-').length >= 2),
+    "Sku Path must have at least two levels."
+ ))
 })
 
 const InputForm: React.FC<{
@@ -79,7 +87,7 @@ const Page = ({ searchParams }: Props ) => {
 
   const cmmc = useCommerce()
 
-  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-CR')
+  const [skuPath, setSkuPath] = useState<string | undefined>(INITIAL_SKU_PATH)
   const [json, setJSON] = useState<string | undefined>(undefined)
   const [error, setError] = useState<string | undefined>(undefined)
 
