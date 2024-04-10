@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import type * as C from '@hanzo/ui/blocks'
-import { BuyButton } from '@hanzo/commerce'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 

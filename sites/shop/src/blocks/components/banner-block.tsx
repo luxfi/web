@@ -1,19 +1,20 @@
 import React  from 'react'
 
-import type { Dimensions, TShirtSize } from '@hanzo/ui/types'
+import type { TShirtSize } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
 import { type Block, VideoBlockComponent } from '@hanzo/ui/blocks'
 import { BuyButton } from '@hanzo/commerce'
 
 import type BannerBlock from '@/blocks/def/banner-block'
+import SplinePlayer from '@/components/spline-player'
 
 type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'
 
 const BannerBlockComponent: React.FC<{
   block: Block,
   videoSize?: TShirtSize
-  videoConstraint?: Dimensions
+  videoConstraint?: {w: number, h: number}
   grouping?: BannerGrouping
   groupingClasses?: string[] // count should match number of siblings in the chosen grouping
 }> = ({
@@ -41,7 +42,8 @@ const BannerBlockComponent: React.FC<{
       <LinkElement 
         def={{
           href: banner.learnLink.href,
-          title: banner.learnLink.title ? banner.learnLink.title : 'Learn More'
+          title: banner.learnLink.title ? banner.learnLink.title : 'Learn More',
+          newTab: banner.learnLink.newTab
         }} 
         className={cn(
           buttonVariants({ 
@@ -73,10 +75,13 @@ const BannerBlockComponent: React.FC<{
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
-      <div className={'self-center flex flex-col justify-center items-center text-center ' + mediaClasses}>
-        {banner.video && (
-          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
-        )}
+      <div className={'self-center w-full max-w-[40rem] flex flex-col justify-center items-center text-center ' + mediaClasses}>
+        {banner.video ? (
+          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
+        ) :
+        banner.animation ? (
+          <SplinePlayer src={banner.animation} className='!aspect-[12/10]'/>
+        ) : null}
       </div>
       <CTAs className={ctaClasses}/>
     </>)
@@ -88,9 +93,12 @@ const BannerBlockComponent: React.FC<{
       <div className={'self-center flex flex-col justify-start items-center text-center ' + titleAndMediaClasses} >
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
-        {banner.video && (
-          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constraint={videoConstraint}/>
-        )}
+        {banner.video ? (
+          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
+        ) :
+        banner.animation ? (
+          <SplinePlayer src={banner.animation} className='!aspect-[12/10]'/>
+        ) : null}
       </div>
       <CTAs className={ctaClasses}/>
     </>)
@@ -106,9 +114,12 @@ const BannerBlockComponent: React.FC<{
   return (<>
     <h1 className={'text-center ' + titleClasses}>{banner.title}</h1>
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
-    {banner.video && (
-      <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constraint={videoConstraint}/>
-    )}
+    {banner.video ? (
+      <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
+    ) :
+    banner.animation ? (
+      <SplinePlayer src={banner.animation} className='!aspect-[12/10]'/>
+    ) : null}
     <CTAs className={ctaClasses}/>
   </>)
 }
