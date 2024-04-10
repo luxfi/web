@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import Link from 'next/link'
 
 import { cn } from '@hanzo/ui/util'
@@ -31,10 +32,10 @@ const DesktopAllCards: React.FC<{
       </ApplyTypography>
       <div className='flex flex-col'>
         {cards.map((card, index) => (
-          <>
-            <CardPreview key={index} card={card} />
+          <Fragment key={index}>
+            <CardPreview card={card} />
             {index < cards.length - 1 && <Separator className='bg-muted-4'/>}
-          </>
+          </Fragment>
         ))}
       </div>
     </div>

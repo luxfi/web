@@ -26,10 +26,8 @@ import CardMaterialPicker from '../card-material-picker'
 import Link from 'next/link'
 
 const CardPreview: React.FC<{
-  key: number | string
   card: Card
 }> = ({
-  key,
   card,
 }) => {
   const router = useRouter()
@@ -51,7 +49,7 @@ const CardPreview: React.FC<{
 
   return (
     <div className='flex flex-col gap-10'>
-      <div key={key} className='grid grid-cols-4 gap-10'>
+      <div className='grid grid-cols-4 gap-10'>
         <div className='flex flex-col gap-5 items-center col-span-1'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial.cardImg}}

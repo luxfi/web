@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { cn } from '@hanzo/ui/util'
 import { Main } from '@hanzo/ui/primitives'
 
@@ -12,7 +13,9 @@ const DesktopAllCards: React.FC<{
   return (
     <Main className={cn('flex flex-col gap-20', clx)}>
       {cards.map((card, index) => (
-        <CardPreview key={index} card={card} />
+        <Fragment  key={index}>
+          <CardPreview card={card} />
+        </Fragment>
       ))}
     </Main>
   )
