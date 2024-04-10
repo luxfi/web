@@ -8,6 +8,7 @@ interface BannerBlock extends Block {
   title: string
   byline?: React.ReactNode
   video?: VideoBlock
+  animation?: string
   learnLink?: LinkDef
   skuPath?: string
   ext?: any
