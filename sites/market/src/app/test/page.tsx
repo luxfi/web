@@ -64,8 +64,8 @@ const InputForm: React.FC<{
           )}
         />
         <div className={'grid gap-1 w-full min-w-0 ' + (onClear ? 'grid-cols-2': 'grid-cols-1')}>
-          <Button type='submit'>Submit</Button>
-          {onClear && <Button onClick={() => {form.reset(); onClear()}}>Clear</Button>}
+          <Button className={(!!onClear ? 'shrink' : '')} type='submit'>Submit</Button>
+          {onClear && <Button className={(!!onClear ? 'shrink' : '')} onClick={() => {form.reset(); onClear()}}>Clear</Button>}
         </div>
       </form>
     </Form>
@@ -101,14 +101,16 @@ const Page = ({ searchParams }: Props ) => {
     setSkuPath(undefined)
     setJSON(undefined)
   }
-
+        {/* 
+*/}
   return (
-    <Main className='w-full h-[90vh] pt-10'>
-      <div className='w-[400px] mx-auto flex flex-col items-center gap-8'>
+    <Main className=''>
+      <div className='bg-[#eeeeee] h-10 w-full mb-2 text-primary-fg text-center p-2'>Badassery</div>
+      <div className='w-full md:w-[400px] md:mx-auto flex flex-col items-center gap-8'>
         <InputForm 
           onSubmit={handleSubmit} 
           onClear={skuPath ? handleClear : undefined} 
-          className='flex flex-col items-stretch w-[250px] mx-auto'
+          className='flex flex-col items-stretch w-full md:w-[250px] md:mx-auto'
         />
         <div className='w-full'>
           <p className='text-muted text-center'>peek</p>
@@ -116,10 +118,11 @@ const Page = ({ searchParams }: Props ) => {
             {skuPath && <pre>PATH: {skuPath}</pre>}
             {error && <p className='text-destructive'>{error}</p>}
             {json && <pre>{json}</pre>}
-          </ScrollArea>
+          </ScrollArea> 
         </div>
         {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}
       </div>
+      
     </Main>
   )
 }

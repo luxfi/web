@@ -2,12 +2,13 @@ import React, { type PropsWithChildren } from 'react'
 
 import type { Viewport } from 'next'
 
+import { Toaster } from '@hanzo/ui/primitives'
+
 import Header from './header'
 import type SiteDef from '../site-def/site-def'
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 import Scripts from './scripts'
-import { Toaster } from '@hanzo/ui/primitives'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
@@ -51,9 +52,9 @@ const RootLayout: React.FC<PropsWithChildren & {
     <body className={bodyClasses} style={{
       // Not sure why these got added (by my check in)
       // overflow: hidden here breaks scroll snap, see comment above
-      paddingRight: '0 !important',
-      maxWidth: '100vw',
-      display: 'none',
+      //paddingRight: '0 !important',
+      //maxWidth: '100vw',
+      display: 'none', // see scripts.tsx
 
     }}>
       <Scripts/>
