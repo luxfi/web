@@ -9,8 +9,8 @@ export default new ProductMediaAccessor({
       dim: {w: 1593, h: 1231}
     } satisfies ImageDef,
     'LXM-CR-S-RT': {
-      src: '/assets/img/products/credit/product/titanium-f-700x441.png', 
-      dim: {w: 700, h: 441}
+      src: '/assets/img/products/credit/product/titanium-f-700x442.png', 
+      dim: {w: 700, h: 442}
     } satisfies ImageDef,
   },
   optionImg: {
