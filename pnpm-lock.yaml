@@ -13,13 +13,13 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@next/mdx':
         specifier: ^14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1)(@mdx-js/react@3.0.1)
@@ -70,13 +70,13 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers':
         specifier: ^3.3.2
         version: 3.3.4(react-hook-form@7.50.1)
@@ -146,15 +146,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -216,18 +216,18 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers':
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -334,15 +334,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -413,15 +413,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -507,15 +507,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -589,18 +589,18 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers':
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -701,15 +701,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -792,15 +792,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -868,15 +868,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -944,15 +944,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.2
-        version: 2.3.2(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.2(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.2)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.2)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -1027,15 +1027,15 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -1109,18 +1109,18 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.3.4
-        version: 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce':
-        specifier: 6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: 6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
-        specifier: 3.5.0
-        version: 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+        specifier: 3.5.2
+        version: 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers':
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxdefi/common':
-        specifier: 4.3.1
+        specifier: 4.3.3
         version: link:../../packages/common
       '@next/mdx':
         specifier: 14.1.0
@@ -1211,8 +1211,8 @@ importers:
   utilities/market-bullion-data-generator:
     devDependencies:
       '@hanzo/commerce':
-        specifier: ^6.2.1
-        version: 6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.4.4)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
+        specifier: ^6.2.3
+        version: 6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.4.4)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4)
       '@hanzo/ui':
         specifier: 3.4.4
         version: 3.4.4(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
@@ -3475,7 +3475,7 @@ packages:
       protobufjs: 7.2.6
       yargs: 17.7.2
 
-  /@hanzo/auth@2.3.2(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
+  /@hanzo/auth@2.3.2(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
     resolution: {integrity: sha512-YUL5lYTsjxi9GXaiDUKuqxnBouVvcn/JdECEazwdM4QxlEA369imQ++oHH5uh2PekTPs/+ISTRudghbrWtBTyg==}
     peerDependencies:
       '@hanzo/ui': ^3.0.10
@@ -3489,7 +3489,7 @@ packages:
       react-hook-form: ^7.50.1
       zod: 3.21.4
     dependencies:
-      '@hanzo/ui': 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+      '@hanzo/ui': 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
       firebase-admin: 12.0.0(supports-color@8.1.1)
@@ -3535,7 +3535,7 @@ packages:
       - supports-color
     dev: true
 
-  /@hanzo/auth@2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
+  /@hanzo/auth@2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
     resolution: {integrity: sha512-aDsKLK9PP3sKqJylpl4d+TRudYWh0Qi4tTRV8olFgxQPjUt4Ram33xFa9SUIlci5ICK6qTDaSK6+TNLSC74kHQ==}
     peerDependencies:
       '@hanzo/ui': ^3.4.0
@@ -3549,7 +3549,7 @@ packages:
       react-hook-form: ^7.50.1
       zod: 3.21.4
     dependencies:
-      '@hanzo/ui': 3.5.0(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
+      '@hanzo/ui': 3.5.2(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
       firebase-admin: 12.0.0(supports-color@8.1.1)
@@ -3565,7 +3565,7 @@ packages:
       - supports-color
     dev: false
 
-  /@hanzo/auth@2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
+  /@hanzo/auth@2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4):
     resolution: {integrity: sha512-aDsKLK9PP3sKqJylpl4d+TRudYWh0Qi4tTRV8olFgxQPjUt4Ram33xFa9SUIlci5ICK6qTDaSK6+TNLSC74kHQ==}
     peerDependencies:
       '@hanzo/ui': ^3.4.0
@@ -3579,7 +3579,7 @@ packages:
       react-hook-form: ^7.50.1
       zod: 3.21.4
     dependencies:
-      '@hanzo/ui': 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+      '@hanzo/ui': 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       firebase: 10.8.0
       firebase-admin: 12.0.0(supports-color@8.1.1)
@@ -3595,8 +3595,8 @@ packages:
       - supports-color
     dev: false
 
-  /@hanzo/commerce@6.2.1(@hanzo/auth@2.3.2)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
-    resolution: {integrity: sha512-JyyO//vNOb1kLmhb9CEZmyrzts8y2rsK1OfgS2tOi3KugYM7ersaPEcImkohPvRVVXmwR8mP1nQwNiX7mryX+A==}
+  /@hanzo/commerce@6.2.3(@hanzo/auth@2.3.2)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-7b2WVZ0IQoOIw5GgwHqOJbN8RQlfaZvgJbPqzkslagnNFG9bowV7msGDCJ5Kf0wjNmYOL2u54zrewv24MZaPMg==}
     peerDependencies:
       '@hanzo/auth': ^2.3.4
       '@hanzo/ui': ^3.5.0
@@ -3613,8 +3613,8 @@ packages:
       react-hook-form: 7.50.1
       zod: 3.21.4
     dependencies:
-      '@hanzo/auth': 2.3.2(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
-      '@hanzo/ui': 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+      '@hanzo/auth': 2.3.2(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+      '@hanzo/ui': 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       '@radix-ui/react-radio-group': 1.1.3(@types/react-dom@18.2.24)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
       ethers: 6.11.1
@@ -3637,8 +3637,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@hanzo/commerce@6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.4.4)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
-    resolution: {integrity: sha512-JyyO//vNOb1kLmhb9CEZmyrzts8y2rsK1OfgS2tOi3KugYM7ersaPEcImkohPvRVVXmwR8mP1nQwNiX7mryX+A==}
+  /@hanzo/commerce@6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.4.4)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-7b2WVZ0IQoOIw5GgwHqOJbN8RQlfaZvgJbPqzkslagnNFG9bowV7msGDCJ5Kf0wjNmYOL2u54zrewv24MZaPMg==}
     peerDependencies:
       '@hanzo/auth': ^2.3.4
       '@hanzo/ui': ^3.5.0
@@ -3679,8 +3679,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@hanzo/commerce@6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
-    resolution: {integrity: sha512-JyyO//vNOb1kLmhb9CEZmyrzts8y2rsK1OfgS2tOi3KugYM7ersaPEcImkohPvRVVXmwR8mP1nQwNiX7mryX+A==}
+  /@hanzo/commerce@6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-7b2WVZ0IQoOIw5GgwHqOJbN8RQlfaZvgJbPqzkslagnNFG9bowV7msGDCJ5Kf0wjNmYOL2u54zrewv24MZaPMg==}
     peerDependencies:
       '@hanzo/auth': ^2.3.4
       '@hanzo/ui': ^3.5.0
@@ -3697,8 +3697,8 @@ packages:
       react-hook-form: 7.50.1
       zod: 3.21.4
     dependencies:
-      '@hanzo/auth': 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
-      '@hanzo/ui': 3.5.0(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
+      '@hanzo/auth': 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.344.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+      '@hanzo/ui': 3.5.2(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       '@radix-ui/react-radio-group': 1.1.3(@types/react-dom@18.2.24)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
       ethers: 6.11.1
@@ -3721,8 +3721,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@hanzo/commerce@6.2.1(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
-    resolution: {integrity: sha512-JyyO//vNOb1kLmhb9CEZmyrzts8y2rsK1OfgS2tOi3KugYM7ersaPEcImkohPvRVVXmwR8mP1nQwNiX7mryX+A==}
+  /@hanzo/commerce@6.2.3(@hanzo/auth@2.3.4)(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(@radix-ui/react-radio-group@1.1.3)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx-utils@6.0.8)(mobx@6.12.3)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-7b2WVZ0IQoOIw5GgwHqOJbN8RQlfaZvgJbPqzkslagnNFG9bowV7msGDCJ5Kf0wjNmYOL2u54zrewv24MZaPMg==}
     peerDependencies:
       '@hanzo/auth': ^2.3.4
       '@hanzo/ui': ^3.5.0
@@ -3739,8 +3739,8 @@ packages:
       react-hook-form: 7.50.1
       zod: 3.21.4
     dependencies:
-      '@hanzo/auth': 2.3.4(@hanzo/ui@3.5.0)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
-      '@hanzo/ui': 3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
+      '@hanzo/auth': 2.3.4(@hanzo/ui@3.5.2)(@hookform/resolvers@3.3.4)(firebase@10.8.0)(lucide-react@0.360.0)(mobx-react-lite@4.0.7)(mobx@6.12.3)(next@14.1.3)(react-hook-form@7.50.1)(react@18.2.0)(supports-color@8.1.1)(zod@3.21.4)
+      '@hanzo/ui': 3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4)
       '@hookform/resolvers': 3.3.4(react-hook-form@7.50.1)
       '@radix-ui/react-radio-group': 1.1.3(@types/react-dom@18.2.24)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
       ethers: 6.11.1
@@ -3832,8 +3832,8 @@ packages:
       - tailwindcss
     dev: true
 
-  /@hanzo/ui@3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4):
-    resolution: {integrity: sha512-eDJ8ZixeiBgrgs7k2Cbzrb9RHgOshTKpBYAOUvTieNoLo4lzn//TtlYp5r5yZuOUSrj4/FGM+OWbpzKhabdhfw==}
+  /@hanzo/ui@3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4):
+    resolution: {integrity: sha512-ze/WQGhZGD3gGqpjV+8y4M+3y7VIJQB3/+sMqiRNG7MCfdBFhfNNJXHe+0OOz1QeHWvmtFycB26vyud1lm05wQ==}
     peerDependencies:
       '@hookform/resolvers': ^3.3.2
       embla-carousel: ^8.0.1
@@ -3903,8 +3903,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/ui@3.5.0(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4):
-    resolution: {integrity: sha512-eDJ8ZixeiBgrgs7k2Cbzrb9RHgOshTKpBYAOUvTieNoLo4lzn//TtlYp5r5yZuOUSrj4/FGM+OWbpzKhabdhfw==}
+  /@hanzo/ui@3.5.2(@hookform/resolvers@3.3.4)(@types/react-dom@18.2.24)(@types/react@18.2.64)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.360.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(tailwindcss@3.4.3)(validator@13.11.0)(zod@3.21.4):
+    resolution: {integrity: sha512-ze/WQGhZGD3gGqpjV+8y4M+3y7VIJQB3/+sMqiRNG7MCfdBFhfNNJXHe+0OOz1QeHWvmtFycB26vyud1lm05wQ==}
     peerDependencies:
       '@hookform/resolvers': ^3.3.2
       embla-carousel: ^8.0.1
@@ -3974,8 +3974,8 @@ packages:
       - tailwindcss
     dev: false
 
-  /@hanzo/ui@3.5.0(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4):
-    resolution: {integrity: sha512-eDJ8ZixeiBgrgs7k2Cbzrb9RHgOshTKpBYAOUvTieNoLo4lzn//TtlYp5r5yZuOUSrj4/FGM+OWbpzKhabdhfw==}
+  /@hanzo/ui@3.5.2(@hookform/resolvers@3.3.4)(date-fns@3.6.0)(embla-carousel@8.0.1)(lucide-react@0.344.0)(next-themes@0.2.1)(next@14.1.3)(react-dom@18.2.0)(react-hook-form@7.50.1)(react@18.2.0)(validator@13.11.0)(zod@3.21.4):
+    resolution: {integrity: sha512-ze/WQGhZGD3gGqpjV+8y4M+3y7VIJQB3/+sMqiRNG7MCfdBFhfNNJXHe+0OOz1QeHWvmtFycB26vyud1lm05wQ==}
     peerDependencies:
       '@hookform/resolvers': ^3.3.2
       embla-carousel: ^8.0.1

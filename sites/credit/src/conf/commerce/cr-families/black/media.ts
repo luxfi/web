@@ -28,6 +28,7 @@ export default new ProductMediaAccessor({
     'LXM-CR-B-GM': {
       src: '/assets/img/products/credit/option/black-card-gunmetal-99x99.png',
       dim: {w: 99, h: 99 },
+      rounded: 'full'
     } satisfies ImageDef,
   },
   anim: {
