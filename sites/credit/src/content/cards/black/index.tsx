@@ -15,12 +15,12 @@ const card: Card = {
       title: 'Anodized Black Titanium',
       sku: 'LXM-CR-B-ABT',
       materialImg: {
-        src: '/assets/img/products/credit/option/black-card-anodized-black-titanium-100x99.png',
+        src: '/assets/commerce/cr/product/option/black-card-anodized-black-titanium-100x99.png',
         dim: {w: 100, h: 99 },
         alt: 'Anodized Black Titanium'
       },
       cardImg: {
-        src: '/assets/img/products/credit/product/black-f-700x441.png',
+        src: '/assets/commerce/cr/product/black-f-700x441.png',
         dim: {w: 700, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
@@ -30,13 +30,13 @@ const card: Card = {
       title: 'Black Gunmetal',
       sku: 'LXM-CR-B-GM',
       materialImg: {
-        src: '/assets/img/products/credit/option/black-card-gunmetal-99x99.png',
+        src: '/assets/commerce/cr/product/option/black-card-gunmetal-99x99.png',
         dim: {w: 99, h: 99 },
         alt: 'Black Gunmetal'
       },
       cardImg: {
         //TODO: Change this to the correct image
-        src: '/assets/img/products/credit/product/black-f-700x441.png',
+        src: '/assets/commerce/cr/product/black-f-700x441.png',
         dim: {w: 700, h: 441 },
         alt: 'Black Card Black Gunmetal',
       },

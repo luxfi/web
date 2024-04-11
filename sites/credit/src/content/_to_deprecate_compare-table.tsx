@@ -21,10 +21,10 @@ const textBelow = 'Open the door to a universe of digital assets with the Lux Ca
 
 
 const CARDS = {
-  black : <Image src='/assets/img/products/credit/families/cards-dual-black-1483x1074.png' alt='cards' width={150} height={108.5} loading='lazy' />,
-  elite : <Image src='/assets/img/products/credit/families/cards-dual-gd-sl-1485x1114.png' alt='cards' width={150} height={112.5} loading='lazy' />,
-  founder : <Image src='/assets/img/products/credit/families/cards-dual-chr-psm-1475x1220.png' alt='cards' width={150} height={124} loading='lazy' />,
-  sovereign : <Image src='/assets/img/products/credit/families/cards-2-flat-tit-1593x1231.png' alt='cards' width={150} height={116} loading='lazy' />,
+  black : <Image src='/assets/commerce/cr/family/cards-dual-black-1483x1074.png' alt='cards' width={150} height={108.5} loading='lazy' />,
+  elite : <Image src='/assets/commerce/cr/family/cards-dual-gd-sl-1485x1114.png' alt='cards' width={150} height={112.5} loading='lazy' />,
+  founder : <Image src='/assets/commerce/cr/family/cards-dual-chr-psm-1475x1220.png' alt='cards' width={150} height={124} loading='lazy' />,
+  sovereign : <Image src='/assets/commerce/cr/family/cards-2-flat-tit-1593x1231.png' alt='cards' width={150} height={116} loading='lazy' />,
 }
 
 function capitalize(str: string) {

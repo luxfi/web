@@ -6,7 +6,7 @@ import { Header } from '@luxdefi/common'
 import { tiles}  from '@/content'
 import '@/blocks/registerComponents'
 import FooterSlide from '@/components/footer-slide'
-import siteDef from '../site-def'
+import siteDef from '../conf/site-def'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

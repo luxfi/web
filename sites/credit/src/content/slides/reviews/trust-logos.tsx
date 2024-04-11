@@ -18,13 +18,13 @@ const TrustLogosGrid: React.FC = () => (
       'lg:px-0 gap-4 text-foreground w-full lg:mx-auto max-w-screen-lg'
     }
   >
-    <Image src='/assets/img/logos/logo_vera.png' width={138} height={37} alt='Vera logo' className={lgclx}/>
-    <Image src='/assets/img/logos/logo_vera.png' width={138 * MF} height={37 * MF} alt='Vera logo' className={smclx}/>
+    <Image src='/assets/content/logos/logo_vera.png' width={138} height={37} alt='Vera logo' className={lgclx}/>
+    <Image src='/assets/content/logos/logo_vera.png' width={138 * MF} height={37 * MF} alt='Vera logo' className={smclx}/>
     <SVG_cdax width={102} height={33} className={lgclx}/>
     <SVG_cdax width={102 * MF} height={33 * MF} className={smclx}/>
-    <Image src='/assets/img/logos/logo_mc_consulting.png' alt='MC2 logo' width={178} height={28} className={lgclx}/>
+    <Image src='/assets/content/logos/logo_mc_consulting.png' alt='MC2 logo' width={178} height={28} className={lgclx}/>
     <Image 
-      src='/assets/img/logos/logo_mc_consulting.png' 
+      src='/assets/content/logos/logo_mc_consulting.png' 
       alt='MC2 logo' 
       width={178 * MF} 
       height={28 * MF} 
@@ -33,8 +33,8 @@ const TrustLogosGrid: React.FC = () => (
     <hr className='md:hidden' style={{ flexBasis: '100%', height: 0, margin: 0, border: 0 }} />
     <SVG_gda_capital width={142} height={52} className={lgclx}/>
     <SVG_gda_capital width={142 * MF} height={52 * MF} className={smclx}/>
-    <Image src='/assets/img/logos/logo_viscount.png' alt='Viscount logo' width={150} height={43} className={lgclx}/>
-    <Image src='/assets/img/logos/logo_viscount.png' alt='Viscount logo' width={150 * MF} height={43 * MF} className={smclx}/>
+    <Image src='/assets/content/logos/logo_viscount.png' alt='Viscount logo' width={150} height={43} className={lgclx}/>
+    <Image src='/assets/content/logos/logo_viscount.png' alt='Viscount logo' width={150 * MF} height={43 * MF} className={smclx}/>
   </div>
 )
 
