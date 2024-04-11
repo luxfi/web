@@ -32,7 +32,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params}: Props) {
-  return { title: params.slug }
+  const title = params.slug
+  const capitalized = title.charAt(0).toUpperCase() + title.slice(1)
+  return { title: capitalized }
 }
 
 const ProductPage = ({ params, searchParams }: Props) => {

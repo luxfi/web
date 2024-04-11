@@ -14,8 +14,10 @@ import buildOnLux from './slides/build-on-lux'
 import runTheNetwork from './slides/run-the-network'
 import discoverMoreProducts from './slides/discover-more-products'
 import wagmi from './slides/wagmi'
+import coin from './products/coin'
+import validator from './products/validator'
 
-export default [
+const tiles = [
   power,
   runTheNetwork,
   keyFeatures,
@@ -31,3 +33,13 @@ export default [
   discoverMoreProducts,
   wagmi
 ] as ScreenfulBlock[];
+
+const products = {
+  coin,
+  validator,
+}
+
+export {
+  tiles,
+  products
+}

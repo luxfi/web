@@ -6,7 +6,7 @@ import type {
   VideoBlock,
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
-import ProductCTA from '@/components/product-detail-cta'
+import ProductCTA from '@/components/product-cta'
 
 const validatorVideo = {
   blockType: 'video',
@@ -49,7 +49,7 @@ export default [
       } as EnhHeadingBlock,
       {blockType: 'space', level: 0},
       {blockType: 'element',
-        element: <ProductCTA learnMoreUrl='https://lux.market/validator' skuPath='LXM-VL' />
+        element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='/validator' skuPath='LXM-VL' />
       } satisfies ElementBlock as Block  
     ]
   } as CarteBlancheBlock,
@@ -64,7 +64,7 @@ export default [
       } as EnhHeadingBlock,
       {blockType: 'space', level: 0},
       {blockType: 'element',
-        element: <ProductCTA learnMoreUrl='https://lux.market/coin' skuPath='LXM-CN' />
+        element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='/coin' skuPath='LXM-CN' />
       } satisfies ElementBlock as Block
     ]
   } as CarteBlancheBlock,
