@@ -15,7 +15,7 @@ export default {
   video: {...video, sizing: { vh: 70 }},
   accordian,
   blocks: [{blockType: 'element',
-    element: <ProductDetailCTA readMoreUrl='https://lux.network' skuPath='LXM-CN' />
+    element: <ProductDetailCTA readMoreUrl='https://lux.network' skuPath='LXM-VL' />
   } satisfies C.ElementBlock as C.Block]
 } as ProductDetailBlock
 

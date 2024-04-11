@@ -34,8 +34,8 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
   const TitleArea: React.FC<{className?: string}> = ({
     className=''
   }) => (
-    <ApplyTypography className={cn('typography-headings:text-left', className)}>
-      <h1 className='text-left'>{p.title}</h1>
+    <ApplyTypography className={cn('typography-headings:text-left typography-h2:md:text-3xl typography-h2:lg:text-4xl', className)}>
+      <h2 className='text-left'>{p.title}</h2>
       {p.desc && (typeof p.desc === 'string') ? (
           <h6>{p.desc}</h6>
         ) : (
