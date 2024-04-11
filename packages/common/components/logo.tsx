@@ -17,14 +17,14 @@ const Logo: React.FC<{
   href, // no default please!
   className='',
   spanClassName,
-  option='full'
+  layout='full'
 }) => {
   let classes: any = {}
-  const toAdd = (option === 'logo-only') ? {
+  const toAdd = (layout === 'logo-only') ? {
     span: ' hidden',
     icon: ''
   } :
-  (option === 'text-only') ? {
+  (layout === 'text-only') ? {
     span: '',
     icon: ' hidden'
   } : 
