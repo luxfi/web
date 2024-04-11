@@ -17,7 +17,7 @@ export default {
   [
     { blockType: 'enh-heading',
       specifiers: 'preheading-heading-font mobile-heading-typography-base',
-      icon: '/assets/img/icon-eth-475.png',
+      icon: '/assets/content/icon-eth-475.png',
       iconSize: 40,
       preheading: { text: 'EVM PLATFORM', level: 5, mb: 2 },
       heading: { text: 'DEVELOPER READY', mb: 0 },

@@ -14,7 +14,7 @@ export default {
   columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', 
-      icon: '/assets/img/icon-security-shield-504.png',
+      icon: '/assets/content/icon-security-shield-504.png',
       specifiers: 'preheading-heading-font',
       iconSize: 40,
       preheading: {text: 'BREAKTHROUGH PRIVACY', level: 5, mb: 2},
