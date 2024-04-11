@@ -29,7 +29,7 @@ export default {
               byline: 'Black Card',
               skuPath: 'LXM-CR-B-ABT',
               img: {
-                src: '/assets/img/cards-flat/black-f-700x441.png',
+                src: '/assets/img/products/credit/product/black-f-700x441.png',
                 dim: {w: 700, h: 441 },
                 alt: 'Black Card Anodized Black Titanium'
               },
@@ -40,7 +40,7 @@ export default {
               skuPath: 'LXM-CR-B-GM',
               img: {
                 //TODO: Change this to the correct image
-                src: '/assets/img/cards-flat/black-f-700x441.png',
+                src: '/assets/img/products/credit/product/black-f-700x441.png',
                 dim: {w: 700, h: 441 },
                 alt: 'Black Card Black Gunmetal',
               },
@@ -50,7 +50,7 @@ export default {
               byline: 'Founder Card',
               skuPath: 'LXM-CR-F-CC',
               img: {
-                src: '/assets/img/cards-flat/chrome-cool-f-700x441.png',
+                src: '/assets/img/products/credit/product/chrome-cool-f-700x441.png',
                 dim: {w: 700, h: 441 },
                 alt: 'Founder Card Cool Chrome'
               },
@@ -60,7 +60,7 @@ export default {
               byline: 'Founder Card',
               skuPath: 'LXM-CR-F-IC',
               img: {
-                src: '/assets/img/cards-flat/chrome-irid-f-700x441.png',
+                src: '/assets/img/products/credit/product/chrome-irid-f-700x441.png',
                 dim: {w: 700, h: 441 },
                 alt: 'Founder Card Iridescent Chrome'
               },
@@ -70,7 +70,7 @@ export default {
               byline: 'Elite Card',
               skuPath: 'LXM-CR-E-24G',
               img: {
-                src: '/assets/img/cards-flat/gold-f-700x442.png',
+                src: '/assets/img/products/credit/product/gold-f-700x442.png',
                 dim: {w: 700, h: 442 },
                 alt: 'Elite Card 24k Gold'
               },
@@ -80,7 +80,7 @@ export default {
               byline: 'Elite Card',
               skuPath: 'LXM-CR-E-SS',
               img: {
-                src: '/assets/img/cards-flat/silver-f-700x441.png',
+                src: '/assets/img/products/credit/product/silver-f-700x441.png',
                 dim: {w: 700, h: 441 },
                 alt: 'Elite Card Sterling Silver'
               },
@@ -90,8 +90,8 @@ export default {
               byline: 'Sovereign Card',
               skuPath: 'LXM-CR-S-RT',
               img: {
-                src: '/assets/img/cards-flat/titanium-f-700x428.png',
-                dim: {w: 700, h: 428 },
+                src: '/assets/img/products/credit/product/titanium-f-700x442.png',
+                dim: {w: 700, h: 442 },
                 alt: 'Sovereign Card Mirror Card'
               },
             },

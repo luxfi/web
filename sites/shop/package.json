@@ -22,6 +22,8 @@
     "@luxdefi/common": "4.3.3",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.68",
     "ethers": "^6.11.1",
     "firebase": "^10.8.0",
     "lucide-react": "^0.344.0",

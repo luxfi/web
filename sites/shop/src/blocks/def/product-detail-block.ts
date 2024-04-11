@@ -11,7 +11,8 @@ interface ProductDetailBlock extends Block {
   blockType: 'product-detail'
   title: string
   desc?: ReactNode
-  video: VideoBlock
+  video?: VideoBlock
+  animation?: string
   accordian: AccordianBlock
   price?: {
     heading?: string

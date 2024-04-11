@@ -13,6 +13,7 @@ import {
 } from '@hanzo/ui/blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
+import SplinePlayer from '@/components/spline-player'
 
 const Spacer: React.FC = () => (
   <SpaceBlockComponent block={{blockType: 'space'}} />
@@ -29,8 +30,6 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
   const p = block as ProductDetailBlock
 
   const videoSize = (agent === 'phone') ? 'md' : 'lg'
-  const mobile = (agent === 'phone')
-
 
   const TitleArea: React.FC<{className?: string}> = ({
     className=''
@@ -46,33 +45,39 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
     </ApplyTypography>
   )
 
-  return (<>
-    {mobile ? (<></>) : (
-      <div className='mb-12 md:min-w-[400px] md:w-1/2 md:static'>
-        <VideoBlockComponent block={p.video} agent={agent} size={videoSize} className='md:sticky md:top-[80px] md:mt-0 mt-[16px] mx-auto'/>
+  return (
+    <div className='grid grid-cols-1 md:grid-cols-2 w-full'>
+      <div className='mb-6 md:mb-12 w-full'>
+        {p.video ? (
+          <VideoBlockComponent block={p.video} agent={agent} size={videoSize} className='md:sticky md:top-[80px] md:mt-0 mt-[16px] mx-auto'/>
+        ) :
+        p.animation ? (
+          <SplinePlayer src={p.animation} className='!aspect-square'/>
+        ) : null}
       </div>
-    )}
-    <div className='md:bg-scroll md:w-1/2 '>
-      <div className='md:max-w-[555px] flex flex-col items-start gap-4' >
-        <TitleArea className='flex flex-col justify-start items-start ' />
-        {p.price && (<>
-          {p.price.heading && (
-            <ApplyTypography >
-              <h3>{p.price.heading}</h3>
-            </ApplyTypography>
-          )}
-          <div className='flex flex-col justify-start items-stretch self-stretch w-full sm:self-center sm:grid sm:grid-cols-2 gap-4 '>
-            <CardComponent block={p.price.priceCard} agent={agent} />
-            <CardComponent block={p.price.msCard} agent={agent} />
-          </div>
-        </>)}
-        <AccordianBlockComponent block={p.accordian} agent={agent} className='mt-5'/>
-        <Spacer />
-        <ContentComponent blocks={p.blocks} agent={agent}/>
-        <Spacer />
+
+      <div className='md:bg-scroll w-full'>
+        <div className='md:max-w-[555px] flex flex-col items-start gap-4' >
+          <TitleArea className='flex flex-col justify-start items-start ' />
+          {p.price && (<>
+            {p.price.heading && (
+              <ApplyTypography >
+                <h3>{p.price.heading}</h3>
+              </ApplyTypography>
+            )}
+            <div className='flex flex-col justify-start items-stretch self-stretch w-full sm:self-center sm:grid sm:grid-cols-2 gap-4 '>
+              <CardComponent block={p.price.priceCard} agent={agent} />
+              <CardComponent block={p.price.msCard} agent={agent} />
+            </div>
+          </>)}
+          <AccordianBlockComponent block={p.accordian} agent={agent} className='mt-5'/>
+          <Spacer />
+          <ContentComponent blocks={p.blocks} agent={agent}/>
+          <Spacer />
+        </div>
       </div>
     </div>
-  </>)
+  )
 }
 
 export default ProductDetailBlockComponent

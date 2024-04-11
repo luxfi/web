@@ -1,7 +1,6 @@
 import type * as C from '@hanzo/ui/blocks'
 
 import { MiniChart } from '@luxdefi/common'
-import { markdown } from '@hanzo/ui/util'
 import { BuyButton } from '@hanzo/commerce'
 
 import { formatCurrencyValue, bullionPrice1oz } from '@/util'
