@@ -39,7 +39,7 @@ const DesktopHeader: React.FC<{
             currentAs={currentAs}
             items={links} 
             className='flex md:gap-4 lg:justify-between lg:gap-7' 
-            itemClx='font-nav h-8 !text-[13px]/[13px]'
+            itemClx='font-nav h-8'
             key='three'
           />
           <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />

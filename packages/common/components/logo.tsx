@@ -40,7 +40,7 @@ const Logo: React.FC<{
     // match lux.network
   else if (size === 'md') {
     classes.icon = 'h-[32px] w-[32px] mr-[12px] color-inherit' + toAdd.icon
-    classes.span = 'text-[26px]/[26px] tracking-tighter' + toAdd.span
+    classes.span = 'text-[1.8rem]/[1.8rem] tracking-tighter' + toAdd.span
   }
   else if (size === 'sm' ) {
     classes.icon = 'h-6 w-6 mr-2 color-inherit' + toAdd.icon
