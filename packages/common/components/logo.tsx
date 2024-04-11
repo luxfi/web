@@ -8,7 +8,7 @@ import * as Icons from './icons'
 
 const Logo: React.FC<{
   size?: TShirtSize
-  logoOnly?: boolean
+  layout?: 'text-only' | 'logo-only' | 'full'
   href?: string
   className?: string
   spanClassName?: string
@@ -17,16 +17,22 @@ const Logo: React.FC<{
   href, // no default please!
   className='',
   spanClassName,
-  logoOnly=false
+  option='full'
 }) => {
   let classes: any = {}
-  const toAdd = (logoOnly) ? {
+  const toAdd = (option === 'logo-only') ? {
     span: ' hidden',
-    icon: ' mr-r'
-  } : {
+    icon: ''
+  } :
+  (option === 'text-only') ? {
+    span: '',
+    icon: ' hidden'
+  } : 
+  {
     span: '',
     icon: ''
   }
+
   if (size === 'lg' || size === 'xl' ) { // for safety
     classes.icon = 'h-10 w-10 mr-4 color-inherit' + toAdd.icon
     classes.span = 'text-3xl' + toAdd.span

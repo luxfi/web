@@ -29,7 +29,7 @@ const LoginPanel: React.FC<{
               onClick={close}
               className='w-fit !min-w-0 p-2'
             >
-              <Logo size='md' spanClassName='!cursor-pointer'/>
+              <Logo size='md' spanClassName='!cursor-pointer' layout='text-only'/>
             </Button>  
             {children}
           </div>

@@ -24,7 +24,15 @@ export default [
   },
   {
     title: 'Lux Validator',
-    href: "https://lux.market/validator/",
+    href: "https://lux.network/validator",
+  },
+  {
+    title: 'Lux Coin',
+    href: "https://lux.network/coin",
+  },
+  {
+    title: 'Governance',
+    href: "https://lux.vote",
   },
   {
     title: 'Open Source',
