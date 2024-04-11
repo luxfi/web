@@ -20,7 +20,7 @@
     "@hanzo/commerce": "6.2.3",
     "@hanzo/ui": "3.5.2",
     "@hookform/resolvers": "^3.3.4",
-    "@luxdefi/common": "4.3.3",
+    "@luxdefi/common": "4.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.68",
