@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.1.0",
+    "embla-carousel-autoplay": "^8.0.1",
     "react-device-detect": "^2.2.3",
     "react-social-icons": "^6.4.0"
   },
