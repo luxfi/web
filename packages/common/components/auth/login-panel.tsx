@@ -1,7 +1,8 @@
-import type { PropsWithChildren } from 'react'
+import Link from 'next/link'
+import Autoplay from 'embla-carousel-autoplay'
 
 import { cn } from '@hanzo/ui/util'
-import { Button } from '@hanzo/ui/primitives'
+import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
 import { LoginPanel as Login } from '@hanzo/auth/components'
 
 import { Logo } from '..'
@@ -12,12 +13,13 @@ const LoginPanel: React.FC<{
   getStartedUrl?: string
   redirectUrl?: string
   className?: string
-} & PropsWithChildren> = ({
+  reviews: { text: string, author: string, href: string }[]
+}> = ({
   close,
   getStartedUrl='/',
   redirectUrl,
   className='',
-  children
+  reviews
 }) => {
   return (
     <div className={cn('grid grid-cols-1 md:grid-cols-2', className)}>
@@ -31,7 +33,22 @@ const LoginPanel: React.FC<{
             >
               <Logo size='md' spanClassName='!cursor-pointer'/>
             </Button>  
-            {children}
+            <Carousel
+              options={{ align: 'center', loop: true }}
+              className='w-full'
+              plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
+            >
+              <CarouselContent>
+                {reviews.map(({text, author, href}, index) => (
+                  <CarouselItem key={index}>
+                    <Link href={href} className='flex flex-col gap-3 cursor-pointer'>
+                      <p>“{text}“</p>
+                      <p className='text-sm'>{author}</p>
+                    </Link>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </div>
       </div>
