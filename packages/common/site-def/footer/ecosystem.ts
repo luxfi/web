@@ -3,19 +3,15 @@ import type { LinkDef } from '@hanzo/ui/types'
 export default [
   {
     title: 'Ecosystem',
-    href: '',
+    href: 'https://lux.link',
     variant: 'linkFG'
   },
   {
-    title: 'Lux Silver',
-    href: 'https://lux.market/silver',
+    title: 'Lux AI',
+    href: 'https://lux.chat',
   },
   {
-    title: 'Lux Gold',
-    href: 'https://lux.market/gold',
-  },
-  {
-    title: 'Lux Credit Card',
+    title: 'Lux Credit',
     href: 'https://lux.credit',
   },
   {
@@ -31,7 +27,11 @@ export default [
     href: 'https://lux.market',
   },
   {
-    title: 'Lux Network',
-    href: 'https://lux.network',
+    title: 'Lux Shop',
+    href: 'https://lux.shop',
+  },
+  {
+    title: 'Lux Quest',
+    href: 'https://lux.quest',
   },
 ] satisfies LinkDef[]

@@ -92,7 +92,7 @@ const MobileHeader: React.FC<{
       {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
       <div className="flex h-11 items-center justify-between pl-6 pr-4">
         <div className='relative h-full w-200 flex flex-row'>
-          <Logo href='/' size='sm' className={'top-[3px] h-full'}/>
+          <Logo href='/' size='sm' className={'top-[3px] h-full'} layout='text-only'/>
           {/* Not that key to the cross-fade effect 
               is that this is **on top of** the logo. */}
           {menuOpen() && ( 
