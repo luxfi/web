@@ -34,13 +34,13 @@ type Props = {
 const Page = ({ searchParams }: Props ) => {
   const router = useRouter()
 
-  const handleCheckoutDone = () => {
+  const handleLoginDone = () => {
     router.back()
   }
   // max-w-screen-2xl 2xl:w-[1500px] 
   return (
     <LoginPanel
-      close={handleCheckoutDone}
+      close={handleLoginDone}
       getStartedUrl='/'
       redirectUrl={searchParams?.redirectUrl as string ?? undefined}
       reviews={reviews}
