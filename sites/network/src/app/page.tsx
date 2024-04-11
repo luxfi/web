@@ -4,8 +4,7 @@ import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 import { Footer, Header } from '@luxdefi/common'
 
 import tiles from '@/content'
-
-import siteDef from '../site-def'
+import siteDef from '@/conf/site-def'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }

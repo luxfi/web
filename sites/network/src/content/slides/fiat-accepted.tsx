@@ -14,7 +14,7 @@ export default {
   columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading',
-      icon: '/assets/img/icon-fiat-coins.png',
+      icon: '/assets/content/icon-fiat-coins.png',
       iconSize: 40,
       preheading: { text: 'NATIVE FIAT CURRENCY INTEGRATION', level: 5, mb: 2 },
       heading: { text: 'FIAT ACCEPTED', level: 1 },
@@ -36,22 +36,22 @@ export default {
               cards: [
                 {
                   text: 'Managed by a regulated and global class-A money transmitter partner.',
-                  icon: '/assets/img/icon-kyc-aml-centered-top.png',
+                  icon: '/assets/content/icon-kyc-aml-centered-top.png',
                 },
                 {
                   text: 'Native integration of SWIFT and Fed wire transfers.',
-                  icon: '/assets/img/icon-fed-p-500.png',
+                  icon: '/assets/content/icon-fed-p-500.png',
                 },
                 {
                   text: 'KYC identity and AML anti-money laundering verification assurance.',
-                  icon: '/assets/img/icon-money-transmitter-centered-top.png',
+                  icon: '/assets/content/icon-money-transmitter-centered-top.png',
                 }
               ]
             } as BulletCardsBlock
           ]
         } as GridBlock,
         {blockType: 'image',
-          src: '/assets/img/fiat-purple-p-800.png',
+          src: '/assets/content/fiat-purple-p-800.png',
           alt: 'Fiat Accepted',
           dim: { h: 380, w: 300 }
         } as ImageBlock

@@ -4,10 +4,10 @@ import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 export default  {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/video/LUX-COIN-poster.jpg',
+  poster: '/assets/commerce/cn/product/LUX-COIN-poster.jpg',
   sources: [
-    '/assets/video/LUX-COIN-transcode.mp4', 
-    '/assets/video/LUX-COIN-transcode.webm'
+    '/assets/commerce/cn/product/LUX-COIN-transcode.mp4', 
+    '/assets/commerce/cn/product/LUX-COIN-transcode.webm'
   ],
     // Determin aspect ration from dims manually...
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co

@@ -3,7 +3,7 @@ import React from 'react'
 import { Footer } from '@luxdefi/common'
 import { cn } from '@hanzo/ui/util'
 
-import siteDef from '@/site-def'
+import siteDef from '@/conf/site-def'
 
 const FooterSlide: React.FC<{
   agent: string

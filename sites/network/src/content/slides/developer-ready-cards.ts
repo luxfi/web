@@ -15,7 +15,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 217, h: 165}, 
       alt: 'image',
-      src: '/assets/img/code-panel-217x165.png',
+      src: '/assets/content/code-panel-217x165.png',
       props: {style: { width: 'auto', height: 50}}
     }  as ImageBlock],
     heading: {blockType: 'enh-heading',
@@ -29,7 +29,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 558, h: 165}, 
       alt: 'image',
-      src: '/assets/img/bridge-check-558-165.png',
+      src: '/assets/content/bridge-check-558-165.png',
       props: {style: { width: 'auto', height: 50 }}
     } as ImageBlock],
     heading: {blockType: 'enh-heading',

@@ -26,7 +26,7 @@ export default {
       cells: [
         {
           blockType: 'enh-heading',
-          icon: '/assets/img/icon-dao-copy.png',
+          icon: '/assets/content/icon-dao-copy.png',
           iconSize: 40,
           preheading: { text: 'LUX DAO', level: 5, mb: 2 },
           heading: { text: 'DISTRIBUTED POWER', level: 1 },
@@ -34,7 +34,7 @@ export default {
         } as EnhHeadingBlock,
         {
           blockType: 'image',
-          src: '/assets/img/illustration-dao-purple-p-800.png',
+          src: '/assets/content/illustration-dao-purple-p-800.png',
           alt: 'Lux DAO',
           dim: { h: 300, w: 300 },
         } as ImageBlock,

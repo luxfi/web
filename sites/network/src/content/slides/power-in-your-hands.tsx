@@ -13,10 +13,10 @@ import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 const video = {
   blockType: 'video',
   videoProps: {...DEF_VIDEO_PROPS, preload: 'auto'},
-  poster: '/assets/video/Lux-VALIDATOR-poster.jpg',
+  poster: '/assets/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
   sources: [
-    '/assets/video/Lux-VALIDATOR-transcode.mp4',
-    '/assets/video/Lux-VALIDATOR-transcode.webm'
+    '/assets/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
+    '/assets/commerce/vl/product/Lux-VALIDATOR-transcode.webm'
   ],
     // Determin aspect ration from dims manually...
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co

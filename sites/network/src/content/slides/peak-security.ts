@@ -10,7 +10,7 @@ export default {
   columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', 
-      icon: '/assets/img/icon-24-7-security-475.png',
+      icon: '/assets/content/icon-24-7-security-475.png',
       iconSize: 40,
       heading: {text: 'PEAK SECURITY', level: 5},
     } as EnhHeadingBlock,

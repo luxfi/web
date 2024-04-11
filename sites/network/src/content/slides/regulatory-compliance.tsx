@@ -18,7 +18,7 @@ export default {
       grid: COMMON_GRID_2_COL,
       cells: [
         {blockType: 'enh-heading',
-          icon: '/assets/img/icon-regulatory-compliant-475.png',
+          icon: '/assets/content/icon-regulatory-compliant-475.png',
           iconSize: 40,
           preheading: { text: 'REGULATORY COMPLIANCE', level: 5, mb: 2 },
           heading: { text: 'COMPLIANT', level: 1 },

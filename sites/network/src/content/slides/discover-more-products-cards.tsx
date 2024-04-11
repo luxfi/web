@@ -15,9 +15,9 @@ import SplinePlayer from '@/components/spline-player'
 const silverVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/video/luxsilver-poster.jpg',
+  poster: '/assets/commerce/silver/product/luxsilver-poster.jpg',
   sources: [
-    '/assets/video/luxsilver.mp4',
+    '/assets/commerce/silver/product/luxsilver.mp4',
   ],
   dim: {md: { w: 1172, h: 1920}, lg: {w: 1172, h: 1920}},
   sizing: {vh: 30, mobile: {vw: 20}}
@@ -26,9 +26,9 @@ const silverVideo = {
 const goldVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/video/luxgold-poster.jpg',
+  poster: '/assets/commerce/gold/product/luxgold-poster.jpg',
   sources: [
-    '/assets/video/luxgold.mp4',
+    '/assets/commerce/gold/product/luxgold.mp4',
   ],
   dim: {md: { w: 1282, h: 1920}, lg: {w: 1282, h: 1920}},
   sizing: {vh: 30, mobile: {vw: 20}}

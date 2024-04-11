@@ -1,7 +1,7 @@
 const benefits = [
   {
     img: {
-      src: '/assets/img/card-benefits/food-dining-560x299.png',
+      src: '/assets/content/card-benefits/food-dining-560x299.png',
       dim: {w: 560, h: 299},
       alt: 'Food & Dining'
     },
@@ -10,7 +10,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/private-jets-560x295.png',
+      src: '/assets/content/card-benefits/private-jets-560x295.png',
       dim: {w: 560, h: 295},
       alt: 'Retail Stores'
     },
@@ -19,7 +19,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/chauffer-services-509x272.png',
+      src: '/assets/content/card-benefits/chauffer-services-509x272.png',
       dim: {w: 509, h: 272},
       alt: 'Chauffer Services'
     },
@@ -28,7 +28,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/yacht-charter-540x289.png',
+      src: '/assets/content/card-benefits/yacht-charter-540x289.png',
       dim: {w: 540, h: 289},
       alt: 'Yacht Charter'
     },
@@ -37,7 +37,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/vip-experiences-560x300.png',
+      src: '/assets/content/card-benefits/vip-experiences-560x300.png',
       dim: {w: 560, h: 300},
       alt: 'VIP Experiences & Events'
     },
@@ -46,7 +46,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/security-detail-560x300.png',
+      src: '/assets/content/card-benefits/security-detail-560x300.png',
       dim: {w: 560, h: 300},
       alt: 'Security Detail'
     },
@@ -55,7 +55,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/butler-300x161.png',
+      src: '/assets/content/card-benefits/butler-300x161.png',
       dim: {w: 300, h: 161},
       alt: 'Private Islands'
     },
@@ -64,7 +64,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/private-chefs-560x300.png',
+      src: '/assets/content/card-benefits/private-chefs-560x300.png',
       dim: {w: 560, h: 300},
       alt: 'Private Chefs and Sommelier'
     },
@@ -73,7 +73,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/wellness-465x249.png',
+      src: '/assets/content/card-benefits/wellness-465x249.png',
       dim: {w: 465, h: 249},
       alt: 'Wellness'
     },
@@ -82,7 +82,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/lux-quests-560x300.png',
+      src: '/assets/content/card-benefits/lux-quests-560x300.png',
       dim: {w: 560, h: 300},
       alt: 'Lux Quests and Retreats'
     },
@@ -91,7 +91,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/mindfulness-560x300.png',
+      src: '/assets/content/card-benefits/mindfulness-560x300.png',
       dim: {w: 560, h: 300},
       alt: 'Mindfulness'
     },
@@ -100,7 +100,7 @@ const benefits = [
   },
   {
     img: {
-      src: '/assets/img/card-benefits/promoters-560x300.png',
+      src: '/assets/content/card-benefits/promoters-560x300.png',
       dim: {w: 560, h: 300},
       alt: 'Promoters & Organizers'
     },

@@ -16,7 +16,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 500, h: 400}, 
       alt: 'image',
-      src: '/assets/img/icon-encryption-purple-thicker-p-500.png',
+      src: '/assets/content/icon-encryption-purple-thicker-p-500.png',
       props: {style: { width: 'auto', height: 50}}
     }  as ImageBlock],
     heading: {blockType: 'enh-heading',
@@ -30,7 +30,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 500, h: 400}, 
       alt: 'image',
-      src: '/assets/img/icon-proof-purple-p-500.png',
+      src: '/assets/content/icon-proof-purple-p-500.png',
       props: {style: { width: 'auto', height: 50 }}
     } as ImageBlock],
     heading: {blockType: 'enh-heading',
@@ -44,7 +44,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 500, h: 400}, 
       alt: 'image',
-      src: '/assets/img/icon-zk-rollups-purple-2-p-500.png',
+      src: '/assets/content/icon-zk-rollups-purple-2-p-500.png',
       props: {style: { width: 'auto', height: 50 }}
     } as ImageBlock],
     heading: {blockType: 'enh-heading',

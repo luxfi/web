@@ -43,7 +43,7 @@ export default {
     ], 
     [ 
     {blockType: 'image',
-      src: '/assets/img/card-packaging-800x472.png',
+      src: '/assets/content/card-packaging-800x472.png',
       alt: 'cards',
       dim: {w: 800, h: 472},
       fullWidthOnMobile: true,

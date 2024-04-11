@@ -15,31 +15,31 @@ export default {
       cards: [
         {
           text: 'EVM compatibility and interoperability.',
-          icon: '/assets/img/icon-eth-475.png'
+          icon: '/assets/content/icon-eth-475.png'
         },
         {
           text: 'Scale to millions of transactions per second.',
-          icon: '/assets/img/icon-speed-475.png'
+          icon: '/assets/content/icon-speed-475.png'
         },
         {
           text: 'Wallet, Swap, Explore, Bridge, all in one place.',
-          icon: '/assets/img/icon-apps-475.png'
+          icon: '/assets/content/icon-apps-475.png'
         },
         {
           text: 'All-new Native Fiat Currency support.',
-          icon: '/assets/img/icon-fiat-coins-475.png'
+          icon: '/assets/content/icon-fiat-coins-475.png'
         },
         {
           text: 'Breakthrough privacy chain and bridge.',
-          icon: '/assets/img/icon-security-shield-504.png'
+          icon: '/assets/content/icon-security-shield-504.png'
         },
         {
           text: 'Automated security with 24/7 monitoring.',
-          icon: '/assets/img/icon-24-7-security-475.png'
+          icon: '/assets/content/icon-24-7-security-475.png'
         },
         {
           text: 'Regulatory compliant from day one.',
-          icon: '/assets/img/icon-regulatory-compliant-475.png'
+          icon: '/assets/content/icon-regulatory-compliant-475.png'
         },
         {
           text: 'Tax advantaged trading.',
@@ -47,7 +47,7 @@ export default {
         },
         {
           text: 'Governed by a DAO.',
-          icon: '/assets/img/icon-dao-475.png'
+          icon: '/assets/content/icon-dao-475.png'
         },
       ] 
     } as BulletCardsBlock

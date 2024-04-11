@@ -15,12 +15,12 @@ const card: Card = {
       title: '24k Gold',
       sku: 'LXM-CR-E-24G',
       materialImg: {
-        src: '/assets/img/products/credit/option/elite-card-gold-100x99.png',
+        src: '/assets/commerce/cr/product/option/elite-card-gold-100x99.png',
         dim: {w: 100, h: 99 },
         alt: '24k Gold'
       },
       cardImg: {
-        src: '/assets/img/products/credit/product/gold-f-700x442.png',
+        src: '/assets/commerce/cr/product/gold-f-700x442.png',
         dim: {w: 700, h: 442 },
         alt: 'Elite Card 24k Gold'
       },
@@ -30,12 +30,12 @@ const card: Card = {
       title: 'Sterling Silver',
       sku: 'LXM-CR-E-SS',
       materialImg: {
-        src: '/assets/img/products/credit/option/elite-card-silver-99x99.png',
+        src: '/assets/commerce/cr/product/option/elite-card-silver-99x99.png',
         dim: {w: 99, h: 99 },
         alt: 'Sterling Silver'
       },
       cardImg: {
-        src: '/assets/img/products/credit/product/silver-f-700x441.png',
+        src: '/assets/commerce/cr/product/silver-f-700x441.png',
         dim: {w: 700, h: 441 },
         alt: 'Elite Card Sterling Silver'
       },
