@@ -1,8 +1,7 @@
-import type { VideoBlock } from '@hanzo/ui/blocks'
+import type { VideoDef } from '@hanzo/ui/types'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
-export default  {
-  blockType: 'video',
+const video = {
   videoProps: DEF_VIDEO_PROPS, 
   poster: '/assets/commerce/cn/product/LUX-COIN-poster.jpg',
   sources: [
@@ -19,10 +18,9 @@ export default  {
       w: 273,
       h: 270
     },
-
-    lg: {
-      w: 415,
-      h: 410
-    }
   }
-} as VideoBlock
+} satisfies VideoDef
+
+export {
+  video as default
+}
