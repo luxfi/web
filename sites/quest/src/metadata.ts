@@ -6,7 +6,7 @@ export default {
     default: 'Lux Quest',
     template: '%s | Lux Quest',
   },
-  description: 'Log in to Lux',
+  description: 'Join us on a quest',
   applicationName: 'Lux Quest',
   authors: {name: 'Lux Partners Limited'},
   keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
