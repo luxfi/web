@@ -15,11 +15,11 @@ export default {blockType: 'screenful',
   contentColumns: [
     [
       {blockType: 'enh-heading', 
-        heading: {text: 'THE NEW 1%', level: 1}, 
-        byline: {text: 'Never sell your crypto again with our self-paying credit card', level: 4}, 
+        heading: {text: 'LUX CREDIT', level: 1}, 
+        byline: {text: 'Build multi-generational wealth with the only self-repaying cred card. Earn Karma with every purchase', level: 6}, 
         specifiers: 'left'
       } satisfies EnhHeadingBlock as Block,
-      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
+      {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
         skuPath: 'LXM-CR-B'

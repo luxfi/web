@@ -34,7 +34,6 @@ export default {
         element: <p className='!text-xs italic text-muted-1'>Select Membership Tier</p>
       } satisfies ElementBlock as Block,
       */
-      {blockType: 'space'} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "See Tiers", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B'
