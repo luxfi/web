@@ -17,7 +17,7 @@ export default {
   columnSpecifiers: ['center vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading', 
-      icon: '/assets/img/icon-speed-475.png',
+      icon: '/assets/content/icon-speed-475.png',
       iconSize: 40,
       preheading: {text: 'HIGH PERFORMANCE', level: 5, mb: 2}, 
       heading: {text: 'NEAR-INFINITE SCALE', level: 1}, 

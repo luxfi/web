@@ -25,28 +25,28 @@ export default {
           autostart={true}
           reviews={[
             {
-              image: {src: '/assets/img/reviews/giovanna-mingarelli-73x73.png', dim: {h: 73, w: 73}, alt: 'Giovanna Mingarelli'},
+              image: {src: '/assets/content/reviews/giovanna-mingarelli-73x73.png', dim: {h: 73, w: 73}, alt: 'Giovanna Mingarelli'},
               title: 'Lux Defi is Amazing!',
               text: texts[0],
               author: 'Giovanna Mingarelli',
               href: 'https://trstp.lt/a55NNi_j9'
             },
             {
-              image: {src: '/assets/img/reviews/ben-chu-73x73.png', dim: {h: 73, w: 73}, alt: 'Ben Chu'},
+              image: {src: '/assets/content/reviews/ben-chu-73x73.png', dim: {h: 73, w: 73}, alt: 'Ben Chu'},
               title: 'Great product, worth trying!',
               text: texts[1],
               author: 'Ben Chu',     
               href: 'https://trstp.lt/PtpL8qO-U'
             },
             {
-              image: {src: '/assets/img/reviews/ole-brereton-73x73.png', dim: {h: 73, w: 73}, alt: 'Ole Brereton'},
+              image: {src: '/assets/content/reviews/ole-brereton-73x73.png', dim: {h: 73, w: 73}, alt: 'Ole Brereton'},
               title: 'Setting the bar for innovation',
               text: texts[2],
               author: 'Ole Brereton',     
               href: 'https://trstp.lt/gOB3GTbOb'
             },
             {
-              image: {src: '/assets/img/reviews/lisa-goodman-73x73.png', dim: {h: 73, w: 73}, alt: 'Lisa Goodman'},
+              image: {src: '/assets/content/reviews/lisa-goodman-73x73.png', dim: {h: 73, w: 73}, alt: 'Lisa Goodman'},
               title: 'Lux Defi - a smart, exciting way to diversify your portfolio',
               text: texts[3],
               author: 'Lisa Goodman',     

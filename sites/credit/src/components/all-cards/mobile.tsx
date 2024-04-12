@@ -5,7 +5,7 @@ import { cn } from '@hanzo/ui/util'
 import { ApplyTypography, Main, Separator } from '@hanzo/ui/primitives'
 
 import cards from '@/content/cards'
-import sovereign from '@/conf/commerce/cr-families/sovereign'
+import sovereign from '@/content/cards/sovereign'
 import CardPreview from './mobile-card-preview'
 import SplinePlayer from '../spline-player'
 
@@ -17,7 +17,7 @@ const DesktopAllCards: React.FC<{
   return (
     <div className={cn('flex flex-col gap-4 pt-11', clx)}>
       <Main className='flex flex-col gap-2'>
-        <SplinePlayer src={sovereign.products[0].animation ?? ''} className='!aspect-[12/10]'/>
+        <SplinePlayer src={sovereign.materials[0].animation ?? ''} className='!aspect-[12/10]'/>
         <ApplyTypography className='flex flex-col gap-2'>
           <h4>Earn up to 11% of your balance annually with Lux Credit.</h4>
           <p className='text-sm'>Learn more about how you can earn rewards infinitely by using your Lux Card without ever impacting your credit score.</p>

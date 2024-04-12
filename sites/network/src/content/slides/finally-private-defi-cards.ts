@@ -15,7 +15,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 217, h: 165}, 
       alt: 'image',
-      src: '/assets/img/icon-zchain-privacy-purple.png',
+      src: '/assets/content/icon-zchain-privacy-purple.png',
       props: {style: { width: 'auto', height: 50}}
     }  as ImageBlock],
     heading: {blockType: 'enh-heading',
@@ -29,7 +29,7 @@ export default [
     topContent: [{blockType: 'image',
       dim: {w: 558, h: 165}, 
       alt: 'image',
-      src: '/assets/img/icon-z-chain-purple-2.png',
+      src: '/assets/content/icon-z-chain-purple-2.png',
       props: {style: { width: 'auto', height: 50 }}
     } as ImageBlock],
     heading: {blockType: 'enh-heading',

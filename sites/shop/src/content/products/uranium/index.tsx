@@ -102,7 +102,7 @@ Market spot price: $52 / lb
           specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
-            src: '/assets/img/press-cointelegraph-white-transparent.png',
+            src: '/assets/content/press-cointelegraph-white-transparent.png',
             dim: {
               w: 160,
               h: 27
@@ -128,7 +128,7 @@ Market spot price: $52 / lb
           specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
-            src: '/assets/img/press-mining-white-p-500.png',
+            src: '/assets/content/press-mining-white-p-500.png',
             dim: {
               w: 90,
               h: 21
@@ -149,7 +149,7 @@ Market spot price: $52 / lb
           specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
-            src: '/assets/img/press-globe-newswire-white.png',
+            src: '/assets/content/press-globe-newswire-white.png',
             dim: {
               w: 130,
               h: 30
@@ -170,7 +170,7 @@ Market spot price: $52 / lb
           specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
           media: {
             blockType: 'image',
-            src: '/assets/img/press-mining-weekly-white-p-500.png',
+            src: '/assets/content/press-mining-weekly-white-p-500.png',
             dim: {
               w: 130,
               h: 24.5
@@ -209,7 +209,7 @@ Market spot price: $52 / lb
       specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
-        src: '/assets/img/press-ga.png',
+        src: '/assets/content/press-ga.png',
         dim: {
           w: 120,
           h: 30
@@ -230,7 +230,7 @@ Market spot price: $52 / lb
       specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
-        src: '/assets/img/press-the-tomorrow-investor-white.png',
+        src: '/assets/content/press-the-tomorrow-investor-white.png',
         dim: {
           w: 150,
           h: 16.5
@@ -251,7 +251,7 @@ Market spot price: $52 / lb
       specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
-        src: '/assets/img/press-us-doe.png',
+        src: '/assets/content/press-us-doe.png',
         dim: {
           w: 100,
           h: 26.5
@@ -272,7 +272,7 @@ Market spot price: $52 / lb
       specifiers: 'bg-card content-left no-outer-border links-w-arrow typography-sm',
       media: {
         blockType: 'image',
-        src: '/assets/img/press-wnn-white.png',
+        src: '/assets/content/press-wnn-white.png',
         dim: {
           w: 70,
           h: 29.5
@@ -304,7 +304,7 @@ Market spot price: $52 / lb
       specifiers: 'ghost content-before heading-style-title',
       title: 'Demand is outpacing supply.',
       media: { blockType: 'image',
-        src: '/assets/img/uranium-overview-1.png',
+        src: '/assets/content/uranium-overview-1.png',
         dim: { w: 555, h: 308.5 }
       },
       content: 'Uranium production is expected to stagnate as producers aren\'t overly-incentivized until prices rise, all while nuclear demand is increasing.',
@@ -317,7 +317,7 @@ Market spot price: $52 / lb
       specifiers: 'ghost content-before heading-style-title',
       title: 'There is an emerging uranium bull run.',
       media: { blockType: 'image',
-        src: '/assets/img/image-lux-uranium-bull-run.png',
+        src: '/assets/content/image-lux-uranium-bull-run.png',
         dim: { w: 555, h: 318 }
       },
       content: 'Historically, uranium prices experience periods of exponential growth surrounding catalyst events, and now, non-utility buyers appear to be pushing spot prices up.',
@@ -330,7 +330,7 @@ Market spot price: $52 / lb
       specifiers: 'ghost content-before heading-style-title',
       title: 'Nuclear demand is high and growing.',
       media: { blockType: 'image',
-        src: '/assets/img/image-lux-uranium-3.png',
+        src: '/assets/content/image-lux-uranium-3.png',
         dim: { w: 555, h: 374 }
       },
       content: 'Nuclear generation already accounts for 10% of the world\'s energy, over 150 reactors are being built or are planned, and global decarbonization goals are driving a major shift toward nuclear energy.',
@@ -343,7 +343,7 @@ Market spot price: $52 / lb
       specifiers: 'ghost content-before heading-style-title',
       title: 'The UN\'s 2050 Net Zero Goals can\'t be achieved without nuclear energy.',
       media: { blockType: 'image',
-        src: '/assets/img/image-lux-uranium-4.png',
+        src: '/assets/content/image-lux-uranium-4.png',
         dim: { w: 555, h: 280 }
       },
       content: <UN2050MDX />

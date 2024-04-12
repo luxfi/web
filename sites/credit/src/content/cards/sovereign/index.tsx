@@ -14,12 +14,12 @@ const card: Card = {
     title: 'Reflective Titanium',
     sku: 'LXM-CR-S-RT',
     materialImg: {
-      src: '/assets/img/products/credit/option/sovereign-card-reflective-titanium-100x99.png',
+      src: '/assets/commerce/cr/product/option/sovereign-card-reflective-titanium-100x99.png',
       dim: {w: 100, h: 99 },
       alt: 'Reflective Titanium'
     },
     cardImg: {
-      src: '/assets/img/products/credit/product/titanium-f-700x442.png',
+      src: '/assets/commerce/cr/product/titanium-f-700x442.png',
       dim: {w: 700, h: 442 },
       alt: 'Sovereign Card Reflective Titanium'
     },

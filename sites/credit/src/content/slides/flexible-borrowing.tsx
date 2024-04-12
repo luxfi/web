@@ -16,7 +16,7 @@ export default {blockType: 'screenful',
   columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'image',
-      src: '/assets/img/products/credit/families/cards-2-flat-tit-1593x1231.png',
+      src: '/assets/commerce/cr/family/cards-2-flat-tit-1593x1231.png',
       alt: 'cards',
       dim: {w: 1593, h: 1231},
 //      fullWidthOnMobile: true,

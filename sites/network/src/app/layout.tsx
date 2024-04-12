@@ -12,10 +12,12 @@ import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 
-import siteDef from '../site-def'
 import _metadata from '../metadata'
 
 import '@luxdefi/common/style/lux-global.css'
+import siteDef from '@/conf/site-def'
+import { CommerceServiceProvider } from '@hanzo/commerce'
+import { selectionUISpecifiers } from '@luxdefi/common/conf'
 
 export const metadata = { ..._metadata }
 export const viewport = { ...rootLayoutViewport}
@@ -23,25 +25,31 @@ export const viewport = { ...rootLayoutViewport}
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
 }) => {
-
   const currentUser = await getUserServerSide()
 
   return(
     <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
-      <RootLayoutCommon siteDef={siteDef} header={false}>
-        {children}
-        <ChatWidget
-          title='LUX'
-          subtitle='AI'
-          chatbotUrl='https://lux.chat/iframe'
-          suggestedQuestions={[{
-            heading: 'Lux network features', 
-            message: 'What are the key features of Lux network?', 
-            icon: 'ShieldFlashLineIcon' 
-          }]}
-        />
-        <Toaster />
-      </RootLayoutCommon>
+      <CommerceServiceProvider 
+        rootNode={siteDef.ext.commerce.rootNode} 
+        productsByFamily={siteDef.ext.commerce.productsByFamily}
+        options={siteDef.ext.commerce.options}
+        uiSpecs={selectionUISpecifiers}
+      >
+        <RootLayoutCommon siteDef={siteDef} header={false}>
+          {children}
+          <ChatWidget
+            title='LUX'
+            subtitle='AI'
+            chatbotUrl='https://lux.chat/iframe'
+            suggestedQuestions={[{
+              heading: 'Lux network features', 
+              message: 'What are the key features of Lux network?', 
+              icon: 'ShieldFlashLineIcon' 
+            }]}
+          />
+          <Toaster />
+        </RootLayoutCommon>
+      </CommerceServiceProvider>
     </AuthServiceProvider>
   )
 }

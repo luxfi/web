@@ -1,5 +1,5 @@
-# quest
-Lux Quest experiences and leaderboard.
+# login
+Lux Login authentication and login page.
 
 ## To run locally
 

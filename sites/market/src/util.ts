@@ -1,4 +1,4 @@
-import siteDef from '@/site-def'
+import siteDef from '@/conf/site-def'
 
 const PRICES = siteDef.ext.prices
 

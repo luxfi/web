@@ -4,8 +4,8 @@ import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 export default  {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS,
-  poster: '/assets/video/luxgold-poster.jpg',
-  sources: ['/assets/video/luxgold.mp4'],
+  poster: '/assets/commerce/gold/product/luxgold-poster.jpg',
+  sources: ['/assets/commerce/gold/product/luxgold.mp4'],
     // From manually looking at aspect ratio
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {

@@ -8,7 +8,7 @@ type PageProps = {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-import siteDef from '@/site-def'
+import siteDef from '@/conf/site-def'
 
 const Page: React.FC<PageProps> = ({
   searchParams

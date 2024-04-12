@@ -2,7 +2,7 @@ import React, { type PropsWithChildren } from 'react'
 
 import { Header, Footer } from '@luxdefi/common'
 
-import siteDef from '../../site-def'
+import siteDef from '../../conf/site-def'
 
 const Layout: React.FC<PropsWithChildren> = async ({
   children

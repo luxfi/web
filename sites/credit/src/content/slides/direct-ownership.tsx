@@ -11,14 +11,12 @@ import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
 const byline = 'Retain complete sovereignty over your digital assets, backed by the security and transparency ' + 
   'inherent in Lux quantum safe blockchain technology.'
-const finePrint = 'Borrow up to 50% of all your digital assets when you pay with the Lux Credit Card, ' + 
- "the most premium and exclusive card membership program around, that doesn't ever use or effect your credit score."
 
 const fireworks = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/video/fireworks-poster-comp.png',
-  sources: [ '/assets/video/fireworks-md.mp4'  ],
+  poster: '/assets/content/fireworks-poster-comp.png',
+  sources: [ '/assets/content/fireworks-md.mp4'  ],
   dim: {md: {w: 656, h: 484}, lg: {w: 656, h: 484}},
   sizing: { vh: 25, mobile: {vw: 50} }
 } as VideoBlock
@@ -41,7 +39,7 @@ export default {
     } satisfies ItemCTASBlock as Block,
   ], [ 
     {blockType: 'image',
-      src: '/assets/img/products/credit/families/cards-2-flat-tit-1593x1231.png',
+      src: '/assets/commerce/cr/family/cards-2-flat-tit-1593x1231.png',
       alt: 'cards',
       fullWidthOnMobile: true,
       dim: {w: 1593, h: 1231},
