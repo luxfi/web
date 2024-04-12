@@ -6,7 +6,12 @@ export const selectionUISpecifiers = {
     singleFamily: {
       type: 'carousel',
       options: {
-        //imageButtons: true 
+        showFamilyTitle: true,
+        showFamilyByline: true,
+        showFamilyInOption: false,
+        showQuantity: false,
+        showByline: false,
+        showSlider: true
       }
     }
   },  
