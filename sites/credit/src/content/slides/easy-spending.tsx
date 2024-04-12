@@ -12,8 +12,8 @@ const byline = 'Unlock the full potential of Lux Credit Card with zero staking r
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
-  specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
+  specifiers: 'vert-center full-screen-height',
+  columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [
     [
       {blockType: 'enh-heading', 
@@ -38,7 +38,7 @@ export default {
         otherLink: { title: "See Tiers", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
-
+      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ], 
     [ 
     {blockType: 'image',

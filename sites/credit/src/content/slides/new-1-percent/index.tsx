@@ -9,8 +9,8 @@ import type ItemCTASBlock from '@/blocks/def/item-ctas'
 import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
-  specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
+  specifiers: 'vert-center full-screen-height',
+  columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
     [
@@ -24,6 +24,7 @@ export default {blockType: 'screenful',
         otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
+      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ], 
     [
       {blockType: 'element',
