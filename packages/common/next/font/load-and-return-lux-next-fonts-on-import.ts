@@ -18,17 +18,12 @@ import twFonts from '../../tailwind/lux-tw-fonts'
 const drukWide = localFont({
   src: [
     {
-      path: './local/DrukWide-Medium-Trial.otf',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: './local/DrukWide-Bold-Trial.otf',
+      path: './local/Druk-Wide-Bold.ttf',
       weight: '700',
       style: 'normal'
     },
     {
-      path: './local/DrukWide-Heavy-Trial.otf',
+      path: './local/Druk-Wide-Medium.ttf',
       weight: '500',
       style: 'normal',
     },

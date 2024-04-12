@@ -24,8 +24,8 @@ const ItemCTAsBlockComponent: React.FC<{
   
   return (ctas.skuPath || ctas.otherLink) ? (
     <div className={cn(
-      (ctas.skuPath && ctas.otherLink) ? ' w-full sm:w-auto grid grid-cols-2 gap-2' : 'flex flex-row',
-      'sm:flex sm:flex-row justify-center items-center sm:gap-4 lg:gap-6 self-center', 
+      (ctas.skuPath && ctas.otherLink) ? ' !w-full sm:w-auto grid grid-cols-2 gap-2' : 'flex flex-row',
+      'sm:flex sm:flex-row items-center sm:gap-4 lg:gap-6 self-center', 
       className
     )}>
     {ctas.otherLink && (
@@ -39,7 +39,7 @@ const ItemCTAsBlockComponent: React.FC<{
             variant: ctas.skuPath ? 'outline' : 'primary', 
             size: 'default', 
             rounded: 'md' }),
-          'lg:min-w-[220px]  sm:min-w-[220px]'
+          '!w-full max-w-56'
         )}
       />
     )}
@@ -48,7 +48,7 @@ const ItemCTAsBlockComponent: React.FC<{
         skuPath={ctas.skuPath} 
         size='default'
         variant='primary'
-        className='lg:min-w-[220px] sm:min-w-[220px]'
+        className='!w-full max-w-56'
         mobile={agent !== 'desktop'}
       >
         {ctas.buyLabel ? ctas.buyLabel : 'Buy'}
