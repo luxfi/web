@@ -1,10 +1,9 @@
 'use client'
 import React from 'react'
 
-import { Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import LuxLogo from '../../icons/lux-logo'
+import Logo from '../../logo'
 
 const CloseButton: React.FC<{
   close: () => void
@@ -13,14 +12,12 @@ const CloseButton: React.FC<{
   close,
   className=''
 }) => (
-  <Button
-    variant='ghost'
-    size='icon'
+  <div
     onClick={close}
-    className={cn('group rounded-full p-2', className)}
+    className={cn('md:self-start', className)}
   >
-    <LuxLogo className='w-5 h-5'/>
-  </Button>    
+    <Logo layout='text-only' href='/'/>
+  </div>    
 )
 
 export default CloseButton
