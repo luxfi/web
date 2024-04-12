@@ -9,9 +9,6 @@ const img = {
   rounded: 'full'
 } satisfies ImageDef
 
-// DEBUG
-const animation = 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
-
 const COIN = 0.00011
 
 const K = 1000
@@ -28,11 +25,11 @@ export default {
       sku: 'LXM-CN-10B',
       familyTitle: 'Lux Coin',
       optionLabel: '10B',
+      byline: '10B byline',
       familyId: 'LXM-CN',
       price: 10 * B * COIN, // $11M
       img,
       video,
-      animation,
       mediaTransform: {
         // scale: 1
       }
@@ -42,11 +39,11 @@ export default {
       sku: 'LXM-CN-1B',
       familyTitle: 'Lux Coin',
       optionLabel: '1B',
+      byline: '1B byline',
       familyId: 'LXM-CN',
       price: B * COIN, // $1.1M
       img,
       video,
-      animation,
       mediaTransform: {
         scale: 0.75
       }
@@ -56,11 +53,11 @@ export default {
       sku: 'LXM-CN-100M',
       familyTitle: 'Lux Coin',
       optionLabel: '100M',
+      byline: '100M byline',
       familyId: 'LXM-CN',
       price: 100 * M * COIN, // $110K
       img,
       video,
-      animation,
       mediaTransform: {
         scale: 0.5
       }
@@ -70,11 +67,11 @@ export default {
       sku: 'LXM-CN-10M',
       familyTitle: 'Lux Coin',
       optionLabel: '10M',
+      byline: '10M byline',
       familyId: 'LXM-CN',
       price: 10 * M * COIN, // $11K
       img,
       video,
-      animation,
       mediaTransform: {
         scale: 0.3
       }
@@ -85,11 +82,11 @@ export default {
       sku: 'LXM-CN-1M',
       familyTitle: 'Lux Coin',
       optionLabel: '1M',
+      byline: '1M byline',
       familyId: 'LXM-CN',
       price: M * COIN, // $1.1K
       img,
       video,
-      animation,
       mediaTransform: {
         scale: 0.18
       }

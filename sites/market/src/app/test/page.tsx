@@ -110,12 +110,10 @@ const Page = ({ searchParams }: Props ) => {
     setSkuPath(undefined)
     setJSON(undefined)
   }
-        {/* 
-*/}
+        
   return (
     <Main className=''>
       <div className='bg-[#eeeeee] h-10 w-full mb-2 text-primary-fg text-center p-2'>Badassery</div>
-      {/* 
       <div className='w-full md:w-[400px] md:mx-auto flex flex-col items-center gap-8'>
         <InputForm 
           onSubmit={handleSubmit} 
@@ -132,17 +130,6 @@ const Page = ({ searchParams }: Props ) => {
         </div>
         {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}
       </div>
-      */}
-      <Slider 
-        className='mt-5 max-w-[300px]' 
-        thumbClx='w-8 border-muted border-2 bg-level-1 focus-visible:ring-0 focus-visible:ring-offset-0 transition-none' 
-        trackBgClx='bg-level-3'
-        rangeBgClx='bg-level-3'
-        thumbSlidingClx='bg-muted-2' 
-        defaultValue={[20]} 
-        max={100} 
-        step={20} 
-      />
     </Main>
   )
 }
