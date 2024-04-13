@@ -25,7 +25,7 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
-const INITIAL_SKU_PATH = 'LXM-CN'
+const INITIAL_SKU_PATH = 'LXM-CR'
 
 const FormSchema = z.object({
   /*

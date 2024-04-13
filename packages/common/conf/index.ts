@@ -4,14 +4,14 @@ export const selectionUISpecifiers = {
 
   'LXM-CN': {
     singleFamily: {
-      type: 'carousel',
+      type: 'buttons',
       options: {
         showFamilyTitle: true,
-        showFamilyByline: true,
-        showFamilyInOption: false,
-        showQuantity: false,
         showByline: false,
-        showSlider: true
+        buttonType: 'text',
+        showPrice: false,
+        horizButtons: true,
+        sort: 'asc'
       }
     }
   },  
@@ -25,28 +25,23 @@ export const selectionUISpecifiers = {
   },  
   'LXM-CR': {
     multiFamily: {
-      familySelector: 'carousel',
+      type: 'all-variants-carousel',
       showParentTitle: false, 
-      slide: {
-        type: 'buttons',
-        options: {
-          title: 'long',
-          showPrice: false,
-          imageButtons: true,
-          horizButtons: true,
-        }
+      options: {
+        showFamilyByline: true,
+        title: 'long',
+        showPrice: false,
+        buttonType: 'image',
+        horizButtons: true,
       }
     }
   },
   'LXM-AG': {
     multiFamily: {
-      familySelector: 'carousel',
+      type: 'all-variants-carousel',
       showParentTitle: true, 
-      slide: {
-        type: 'buttons',
-        options: {
-          title: 'long',
-        }
+      options: {
+        title: 'long',
       }
     }
   },
