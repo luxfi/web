@@ -30,7 +30,7 @@ const level1 = [
   {
     skuToken: 'AG',
     label: 'Lux Silver',
-    terminal: true,
+    outermost: true,
     img: '/assets/commerce/silver/product/silver-bar-pt-100x125.png',
     imgAR: 1/1.25,
     subNodes: [
@@ -46,7 +46,7 @@ const level1 = [
   {
     skuToken: 'AU',
     label: 'Lux Gold',
-    terminal: true,
+    outermost: true,
     img: '/assets/commerce/gold/product/gold-bar-pt-100x125.png',
     imgAR: 1/1.25,
     subNodes: [...BULLION_FORM]

@@ -37,7 +37,8 @@ const CARD_LEVELS = [
 export default {
     skuToken: 'CR',
     label: 'Lux Credit',
-    terminal: true,
+    subNodesLabel: 'Level',
+    outermost: true,
     img: BLACK_IMAGE,
     imgAR: CC_AR,
     subNodes: [...CARD_LEVELS]
