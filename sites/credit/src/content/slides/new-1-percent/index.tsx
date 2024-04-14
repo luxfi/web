@@ -9,21 +9,22 @@ import type ItemCTASBlock from '@/blocks/def/item-ctas'
 import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
-  specifiers: 'vert-center',
-  columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
+  specifiers: 'vert-center full-screen-height',
+  columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
     [
       {blockType: 'enh-heading', 
-        heading: {text: 'THE NEW 1%', level: 1}, 
-        byline: {text: 'Never sell your crypto again with our self-paying credit card', level: 4}, 
+        heading: {text: 'LUX CREDIT', level: 1}, 
+        byline: {text: 'Build multi-generational wealth with the only self-repaying cred card. Earn Karma with every purchase', level: 6}, 
         specifiers: 'left'
       } satisfies EnhHeadingBlock as Block,
-      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
+      {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
+      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ], 
     [
       {blockType: 'element',

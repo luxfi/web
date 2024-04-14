@@ -26,7 +26,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '1B',
       familyId: 'LXM-CN',
-      price: 1111111, // B * COIN, // $1.111M
+      price: 111111, // B * COIN, // $1.111M
       img: CN_IMG_DEF,
       video
     },
@@ -36,7 +36,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '100M',
       familyId: 'LXM-CN',
-      price: 111111, // 100 * M * COIN, // $111.1K
+      price: 11111, // 100 * M * COIN, // $111.1K
       img: CN_IMG_DEF,
       video
     },
@@ -46,7 +46,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '10M',
       familyId: 'LXM-CN',
-      price: 11111, // 10 * M * COIN, // $11.1K
+      price: 1111, // 10 * M * COIN, // $11.1K
       img: CN_IMG_DEF,
       video
     },
@@ -56,7 +56,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '1M',
       familyId: 'LXM-CN',
-      price: 1111, // M * COIN, // $1.1K
+      price: 111, // M * COIN, // $1.1K
       img: CN_IMG_DEF,
       video
     },

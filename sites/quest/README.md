@@ -1,5 +1,5 @@
-# login
-Lux Login authentication and login page.
+# quest
+Lux Quest app.
 
 ## To run locally
 
