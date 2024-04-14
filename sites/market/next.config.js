@@ -30,7 +30,7 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   webpack: (config) => {
     let conf = svgrPluginConfig(config)
-    conf =  watchPluginConfig(conf) 
+    //conf =  watchPluginConfig(conf) 
     return conf
   }
 }
