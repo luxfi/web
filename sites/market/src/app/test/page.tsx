@@ -14,7 +14,8 @@ import {
   FormLabel,
   FormMessage,
   Input,
-  ScrollArea
+  ScrollArea,
+  Slider
 } from '@hanzo/ui/primitives'
 import { useCommerce, BuyButton } from '@hanzo/commerce'
 import { peekDump } from '@hanzo/commerce/debug'
@@ -24,10 +25,18 @@ type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
+const INITIAL_SKU_PATH = 'LXM-CR'
+
 const FormSchema = z.object({
+  /*
   skupath: z.string().min(2, {
     message: 'sku path must be at least 2 characters.',
   }),
+  */
+ skupath: z.custom<string>((v) => (
+    (typeof v === 'string' && v.split('-').length >= 2),
+    "Sku Path must have at least two levels."
+ ))
 })
 
 const InputForm: React.FC<{
@@ -79,7 +88,7 @@ const Page = ({ searchParams }: Props ) => {
 
   const cmmc = useCommerce()
 
-  const [skuPath, setSkuPath] = useState<string | undefined>('LXM-CR')
+  const [skuPath, setSkuPath] = useState<string | undefined>(INITIAL_SKU_PATH)
   const [json, setJSON] = useState<string | undefined>(undefined)
   const [error, setError] = useState<string | undefined>(undefined)
 
@@ -101,8 +110,7 @@ const Page = ({ searchParams }: Props ) => {
     setSkuPath(undefined)
     setJSON(undefined)
   }
-        {/* 
-*/}
+        
   return (
     <Main className=''>
       <div className='bg-[#eeeeee] h-10 w-full mb-2 text-primary-fg text-center p-2'>Badassery</div>
@@ -122,7 +130,6 @@ const Page = ({ searchParams }: Props ) => {
         </div>
         {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}
       </div>
-      
     </Main>
   )
 }

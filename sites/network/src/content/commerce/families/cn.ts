@@ -18,7 +18,7 @@ const B = 1000 * M
 export default {
   id: 'LXM-CN',
   title: 'Lux Coin',
-  img: CN_IMG_DEF, 
+  img: CN_IMG_DEF,
   products: [
     {
       id: 'LXM-CN-1B',
@@ -38,7 +38,8 @@ export default {
       familyId: 'LXM-CN',
       price: 11111, // 100 * M * COIN, // $111.1K
       img: CN_IMG_DEF,
-      video
+      video,
+      mediaTransform: { scale: 0.75 }
     },
     {
       id: 'LXM-CN-10M',
@@ -48,7 +49,8 @@ export default {
       familyId: 'LXM-CN',
       price: 1111, // 10 * M * COIN, // $11.1K
       img: CN_IMG_DEF,
-      video
+      video,
+      mediaTransform: { scale: 0.50 }
     },
     {
       id: 'LXM-CN-1M',
@@ -58,7 +60,8 @@ export default {
       familyId: 'LXM-CN',
       price: 111, // M * COIN, // $1.1K
       img: CN_IMG_DEF,
-      video
+      video,
+      mediaTransform: { scale: 0.25 }
     },
   ] satisfies Product[]
 } satisfies Family
