@@ -22,7 +22,7 @@ const StepsIndicator: React.FC<{
         <>
           <BreadcrumbItem key={`item-${i}`}>
             <BreadcrumbLink className={cn(
-                currentStep >= i ? 'text-foreground hover:text-foreground' : 'hover:text-muted-2',
+                currentStep >= i ? '!text-foreground hover:text-foreground' : 'hover:text-muted-2',
                 'text-xxs sm:text-sm'  
               )}
             >
