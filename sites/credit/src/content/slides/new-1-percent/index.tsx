@@ -1,8 +1,8 @@
-import type { 
+import type {
   Block,
-  ElementBlock, 
-  EnhHeadingBlock, 
-  ScreenfulBlock, 
+  ElementBlock,
+  EnhHeadingBlock,
+  ScreenfulBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
@@ -14,9 +14,9 @@ export default {blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
     [
-      {blockType: 'enh-heading', 
-        heading: {text: 'LUX CREDIT', level: 1}, 
-        byline: {text: 'Build multi-generational wealth with the only self-repaying cred card. Earn Karma with every purchase', level: 6}, 
+      {blockType: 'enh-heading',
+        heading: {text: 'LUX CREDIT', level: 1},
+        byline: {text: 'Build multi-generational wealth with the only credit card that automatically repays every loan.', level: 6},
         specifiers: 'left'
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
@@ -25,10 +25,10 @@ export default {blockType: 'screenful',
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
-    ], 
+    ],
     [
       {blockType: 'element',
-        element: 
+        element:
           <SplinePlayer
             src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'
             className='!aspect-[12/10]'
@@ -38,5 +38,5 @@ export default {blockType: 'screenful',
         element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Black Card</p>
       } satisfies ElementBlock as Block
     ]
-  ] 
+  ]
 } satisfies ScreenfulBlock as ScreenfulBlock
