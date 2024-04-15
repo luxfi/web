@@ -4,48 +4,46 @@ import type {
   ImageBlock,
   ScreenfulBlock,
   SpaceBlock,
+  VideoBlock,
 } from '@hanzo/ui/blocks'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
-const byline = 'Unlock the full potential of Lux Credit Card with zero interest auto repaying loans and multiple card tiers.'
+const byline = 'Pay zero interest on all loans. Retain complete sovereignty over your assets, backed by the security and transparency ' +
+  'inherent in Lux Quantum Safe Technology.'
+
+const fireworks = {
+  blockType: 'video',
+  videoProps: DEF_VIDEO_PROPS,
+  poster: '/assets/content/fireworks-poster-comp.png',
+  sources: [ '/assets/content/fireworks-md.mp4'  ],
+  dim: {md: {w: 656, h: 484}, lg: {w: 656, h: 484}},
+  sizing: { vh: 25, mobile: {vw: 50} }
+} as VideoBlock
 
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
   specifiers: 'vert-center full-screen-height narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
-  contentColumns: [
-    [
-      {blockType: 'enh-heading',
-        heading: {text: 'ZERO INTEREST + PREMIER BENEFITS', level: 1, mb: 6},
-        byline: {text: byline, level: 6},
-      } satisfies EnhHeadingBlock as Block,
-      {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
-      /*
-      {blockType: 'element',
-        element: <div className='flex gap-2'>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Black</Badge>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Elite</Badge>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Founder</Badge>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 !border-muted-4'>Sovereign</Badge>
-        </div>
-      } satisfies ElementBlock as Block,
-      {blockType: 'element',
-        element: <p className='!text-xs italic text-muted-1'>Select Membership Tier</p>
-      } satisfies ElementBlock as Block,
-      */
-      {blockType: 'item-ctas',
-        otherLink: { title: "See Tiers", href: "/cards", variant: 'outline' },
-        skuPath: 'LXM-CR-B'
-      } satisfies ItemCTASBlock as Block,
-      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
-    ],
-    [
+  banner: fireworks,
+  contentColumns: [[
+    {blockType: 'enh-heading',
+      heading: {text: 'ZERO INTEREST', level: 1, mb: 2},
+      byline: {text: byline, level: 6},
+    } satisfies EnhHeadingBlock as Block,
+    {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
+    {blockType: 'item-ctas',
+      otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
+      skuPath: 'LXM-CR-F'
+    } satisfies ItemCTASBlock as Block,
+    {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
+  ], [
     {blockType: 'image',
-      src: '/assets/content/card-packaging-800x472.png',
+      src: '/assets/commerce/cr/family/cards-2-flat-tit-1593x1231.png',
       alt: 'cards',
-      dim: {w: 800, h: 472},
       fullWidthOnMobile: true,
+      dim: {w: 1593, h: 1231},
       props: {
         sizes: '900px, 440px',
         style: {

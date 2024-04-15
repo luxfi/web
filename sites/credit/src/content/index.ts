@@ -2,24 +2,25 @@ import type { ScreenfulBlock } from '@hanzo/ui/blocks'
 
 import hero from './slides/hero'
 import keyFeatures from './slides/key-features'
-import directOwnership from './slides/direct-ownership'
-import cashBack from './slides/cash-back'
-import zeroInterest from './slides/zero-interest'
 import autoRepayment from './slides/auto-repayment'
-import roadmap from './slides/roadmap'
 import browseCards from './slides/browse-cards'
+import cashBack from './slides/cash-back'
+import premierBenefits from './slides/premier-benefits'
 import reviews from './slides/reviews'
+import roadmap from './slides/roadmap'
+import zeroInterest from './slides/zero-interest'
 
 const tiles = [
   hero,
-  //reviews,
   browseCards,
   keyFeatures,
-  // roadmap,
-  zeroInterest,
-  autoRepayment,
   cashBack,
-  directOwnership
+  autoRepayment,
+  zeroInterest,
+  premierBenefits,
+  //reviews,
+  //roadmap,
+  browseCards,
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
 
