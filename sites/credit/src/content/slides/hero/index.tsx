@@ -35,7 +35,7 @@ export default {blockType: 'screenful',
           />
       } satisfies ElementBlock as Block,
       {blockType: 'element',
-        element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Anondized Black Titanium</p>
+        element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Anodized Black Titanium</p>
       } satisfies ElementBlock as Block
     ]
   ]
