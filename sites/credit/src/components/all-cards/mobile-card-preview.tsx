@@ -33,10 +33,7 @@ const CardPreview: React.FC<{
           className='flex justify-between items-center cursor-pointer'
           onClick={() => router.push(`/cards/${card.category}?sku=${selectedMaterial.sku}`)}
         >
-          <div className='flex flex-col'>
-            <span className='text-xs sm:text-base'>Lux Partners</span>
-            <span className='!text-sm sm:!text-lg'>{card.title}</span>
-          </div>
+          <span className='sm:!text-lg'>{card.title}</span>
           <ArrowRight/>
         </div>
         <div className='flex gap-2 items-center'>
