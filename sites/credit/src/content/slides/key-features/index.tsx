@@ -1,8 +1,8 @@
-import type { 
+import type {
   Block,
   BulletCardsBlock,
-  EnhHeadingBlock, 
-  ScreenfulBlock, 
+  EnhHeadingBlock,
+  ScreenfulBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 
@@ -12,7 +12,7 @@ import SVG_globally from './svg/send-recieve-globally-121x127.svg'
 
 import SVG_mobile_wallet from './svg/mobile-wallet-129x120.svg'
 import SVG_network from './svg/network-123x105.svg'
-import SVG_spend_wo_selling from './svg/spend-wo-selling-116x81.svg' 
+import SVG_spend_wo_selling from './svg/spend-wo-selling-116x81.svg'
 
 import SVG_quantum_security from './svg/quantum-security-121x130.svg'
 import SVG_no_fiat from  './svg/no-fiat-137x137.svg'
@@ -65,7 +65,7 @@ export default {
         },
 
         {
-          text: 'Quantum secure with anti-fraud measures supported by Visa',
+          text: 'Quantum secure storage of assets with anti-fraud built-in',
           icon: <SVG_quantum_security width={121 * .25} height={130 * .25} className={iconStyle}/>
         },
         {
@@ -86,10 +86,10 @@ export default {
           icon: <SVG_wallets_available width={81 * .30} height={141 * .30} className={iconStyle}/>
         },
         {
-          text: 'Self-Repaying Debt as your underlying assets increase in value',
+          text: 'Loans automatically repaid as your collateral generates yield',
           icon: <SVG_self_repaying width={110 * .26} height={92 * .26} className={iconStyle}/>
         },
-      ] 
+      ]
     } as BulletCardsBlock
   ]]
 } satisfies ScreenfulBlock
