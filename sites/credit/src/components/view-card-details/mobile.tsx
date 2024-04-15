@@ -21,7 +21,7 @@ import type { Card, CardMaterial } from '@/types/card'
 import SplinePlayer from '../spline-player'
 import CardMaterialPicker from '../card-material-picker'
 import MoreWaysToEarn from './more-ways-to-earn'
-import Arrow from './icons/arrow'
+import Arrow from '../../content/cards/benefits/icons/arrow'
 
 const MobileViewCardDetails: React.FC<{
   card: Card
