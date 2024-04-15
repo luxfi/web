@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
-import { BuyButton, useCommerce } from '@hanzo/commerce'
+import { AddToCartWidget, BuyButton, useCommerce } from '@hanzo/commerce'
 import { ApplyTypography, Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import type { ImageDef } from '@hanzo/ui/types'
@@ -24,10 +24,12 @@ const CardComponent: React.FC<{
   card: Card
   current: number
   index: number
+  onSelectCard: () => void
 }> = ({
   card,
   current,
-  index
+  index,
+  onSelectCard
 }) => {
   const {family, title, byline, skuPath, img} = card
   
@@ -41,37 +43,30 @@ const CardComponent: React.FC<{
 
   return (
     <ApplyTypography className='flex flex-col !gap-4 items-center h-full'>
-      <ImageBlockComponent
-        block={{blockType: 'image',
-          props: {
-            style: {
-              width: '100%',
-              height: 'auto'
-            }
-          },
-          ...img
-        } as ImageBlock}
-        className={cn(
-          'mx-auto aspect-[1.58577251]',
-          current !== index ? 'cursor-pointer' : ''
-        )}
-      />
+      <div onClick={onSelectCard}>
+        <ImageBlockComponent
+          block={{blockType: 'image',
+            props: {
+              style: {
+                width: '100%',
+                height: 'auto'
+              }
+            },
+            ...img
+          } as ImageBlock}
+          className={cn(
+            'mx-auto aspect-[1.58577251]',
+            current !== index ? 'cursor-pointer' : ''
+          )}
+        />
+      </div>
       <Link href={`cards/${family}?sku=${skuPath}`} className='flex flex-col items-center !no-underline'>
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
       </Link>
-      {lineItem &&
-        <BuyButton
-          skuPath={skuPath}
-          size='default'
-          variant='primary'
-          className='!w-full max-w-56'
-        >
-          Buy Now
-        </BuyButton>
-      }
+      {lineItem && <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>}
     </ApplyTypography>
-)
+  )
 }
 
 const CardsCarousel: React.FC<{
@@ -120,8 +115,8 @@ const CardsCarousel: React.FC<{
     >
       <CarouselContent>
         {transformedCards.map((card: Card, index) => (
-          <CarouselItem key={index} className='basis-3/4 md:basis-1/3 xl:basis-1/5' onClick={() => selectCard(index)}>
-            <CardComponent card={card} current={current} index={index}/>
+          <CarouselItem key={index} className='basis-3/4 md:basis-1/3 xl:basis-1/5'>
+            <CardComponent card={card} current={current} index={index} onSelectCard={() => selectCard(index)}/>
           </CarouselItem>
         ))}
       </CarouselContent>
