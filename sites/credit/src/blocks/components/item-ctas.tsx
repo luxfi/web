@@ -4,7 +4,7 @@ import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
 import { type Block} from '@hanzo/ui/blocks'
 import { BuyButton } from '@hanzo/commerce'
-  
+
 import type ItemCTAsBlock from '@/blocks/def/item-ctas'
 
 const ItemCTAsBlockComponent: React.FC<{
@@ -21,37 +21,37 @@ const ItemCTAsBlockComponent: React.FC<{
     return <>item-ctas block required</>
   }
   const ctas = block as ItemCTAsBlock
-  
+
   return (ctas.skuPath || ctas.otherLink) ? (
     <div className={cn(
       (ctas.skuPath && ctas.otherLink) ? ' !w-full sm:w-auto grid grid-cols-2 gap-2' : 'flex flex-row',
-      'sm:flex sm:flex-row items-center sm:gap-4 lg:gap-6 self-center', 
+      'sm:flex sm:flex-row items-center sm:gap-4 lg:gap-6 self-center',
       className
     )}>
     {ctas.otherLink && (
-      <LinkElement 
+      <LinkElement
         def={{
           href: ctas.otherLink.href,
           title: ctas.otherLink.title ? ctas.otherLink.title : 'Learn More'
-        }} 
+        }}
         className={cn(
-          buttonVariants({ 
-            variant: ctas.skuPath ? 'outline' : 'primary', 
-            size: 'default', 
+          buttonVariants({
+            variant: ctas.skuPath ? 'outline' : 'primary',
+            size: 'default',
             rounded: 'md' }),
           '!w-full max-w-56'
         )}
       />
     )}
     {ctas.skuPath && (
-      <BuyButton 
-        skuPath={ctas.skuPath} 
+      <BuyButton
+        skuPath={ctas.skuPath}
         size='default'
         variant='primary'
         className='!w-full max-w-56'
         mobile={agent !== 'desktop'}
       >
-        {ctas.buyLabel ? ctas.buyLabel : 'Buy'}
+        {ctas.buyLabel ? ctas.buyLabel : 'Buy Now'}
       </BuyButton>
     )}
     </div>
