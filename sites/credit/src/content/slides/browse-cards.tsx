@@ -11,7 +11,7 @@ export default {
     {blockType: 'enh-heading',
       specifiers: 'center',
       heading: {
-        text: 'BROWSE CARDS',
+        text: 'CHOOSE YOUR CARD',
         level: 3,
         mb: 6
       },
