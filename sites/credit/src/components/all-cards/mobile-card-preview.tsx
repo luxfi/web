@@ -28,7 +28,7 @@ const CardPreview: React.FC<{
         <ImageBlockComponent block={{blockType: 'image', ...selectedMaterial.cardImg}} className='w-pr-90'/>
         <p className='text-xxs sm:text-xs'>{selectedMaterial.title}</p>
       </div>
-      <div className='flex flex-col h-full justify-between col-span-3 sm:p-3'>
+      <div className='flex flex-col h-auto justify-between col-span-3 sm:p-3'>
         <div
           className='flex justify-between items-center cursor-pointer'
           onClick={() => router.push(`/cards/${card.category}?sku=${selectedMaterial.sku}`)}
