@@ -71,8 +71,10 @@ const CardComponent: React.FC<{
 
 const CardsCarousel: React.FC<{
   className?: string
+  cardClx?: string
 }> = ({
-  className
+  className,
+  cardClx
 }) => {
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
@@ -115,7 +117,7 @@ const CardsCarousel: React.FC<{
     >
       <CarouselContent>
         {transformedCards.map((card: Card, index) => (
-          <CarouselItem key={index} className='basis-3/4 md:basis-1/3 xl:basis-1/5'>
+          <CarouselItem key={index} className={cn('basis-3/4 md:basis-1/3 xl:basis-1/5', cardClx)}>
             <CardComponent card={card} current={current} index={index} onSelectCard={() => selectCard(index)}/>
           </CarouselItem>
         ))}

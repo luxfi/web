@@ -2,12 +2,15 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 
 import { cn } from '@hanzo/ui/util'
-import { ApplyTypography, Main, Separator } from '@hanzo/ui/primitives'
+import { ApplyTypography, Separator } from '@hanzo/ui/primitives'
 
 import cards from '@/content/cards'
 import sovereign from '@/content/cards/sovereign'
 import CardPreview from './mobile-card-preview'
 import SplinePlayer from '../spline-player'
+
+const title = 'Earn up to 11% of your balance annually with Lux Credit.'
+const byline = 'Learn more about how you can earn rewards infinitely by using your Lux Card without ever impacting your credit score.'
 
 const DesktopAllCards: React.FC<{
   clx: string
@@ -16,19 +19,17 @@ const DesktopAllCards: React.FC<{
 }) => {
   return (
     <div className={cn('flex flex-col gap-4 pt-11', clx)}>
-      <Main className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-2 px-4'>
         <SplinePlayer src={sovereign.materials[0].animation ?? ''} className='!aspect-[12/10]'/>
         <ApplyTypography className='flex flex-col gap-2'>
-          <h4>Earn up to 11% of your balance annually with Lux Credit.</h4>
-          <p className='text-sm'>Learn more about how you can earn rewards infinitely by using your Lux Card without ever impacting your credit score.</p>
+          <h4>{title}</h4>
+          <p className='text-sm'>{byline}</p>
           <Link href=''>What are Karma Rewards?</Link>
         </ApplyTypography>
-      </Main>
-      <ApplyTypography className='flex bg-muted-4'>
-        <Main className='flex flex-row justify-between items-center w-full'>
-          <div className='text-muted-2'>All Cards</div>
-          <Link href='/compare'>Compare Cards</Link>
-        </Main>
+      </div>
+      <ApplyTypography className='flex flex-row justify-between items-center w-full bg-muted-4 px-4 py-2'>
+        <div className='text-muted-2'>All Cards</div>
+        <Link href='/compare'>Compare Cards</Link>
       </ApplyTypography>
       <div className='flex flex-col'>
         {cards.map((card, index) => (

@@ -10,7 +10,7 @@ import reviews from './slides/reviews'
 import roadmap from './slides/roadmap'
 import zeroInterest from './slides/zero-interest'
 
-const tiles = [
+const mobileTiles = [
   hero,
   browseCards,
   keyFeatures,
@@ -23,7 +23,20 @@ const tiles = [
   browseCards,
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
+const desktopTiles = [
+  hero,
+  browseCards,
+  keyFeatures,
+  cashBack,
+  autoRepayment,
+  zeroInterest,
+  premierBenefits,
+  //reviews,
+  //roadmap,
+] satisfies ScreenfulBlock[] as ScreenfulBlock[]
+
 
 export {
-  tiles,
+  mobileTiles,
+  desktopTiles,
 }
