@@ -1,7 +1,7 @@
 import CardsCarousel from '@/components/cards-carousel'
 import { type Block, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type SpaceBlock } from '@hanzo/ui/blocks'
 
-const byline = 'Borrow up to 50% of all your assets* when you pay with the Lux Credit Card, the most exclusive card membership program, that doesn\'t ever effect your credit score.'
+const byline = 'Every card is a finely crafted key to spending power, enabling purchases that pay for themselves. Cherish the freedom where spending never costs, only benefits.',
 
 export default {
   blockType: 'screenful',
@@ -21,7 +21,7 @@ export default {
     } satisfies ElementBlock as Block,
     {blockType: 'space', level: 1} as SpaceBlock,
     {blockType: 'element',
-      element: 
+      element:
         <CardsCarousel
           cards={[
             {
@@ -98,5 +98,5 @@ export default {
           ]}
         />
     } satisfies ElementBlock as Block,
-  ]], 
+  ]],
 } as ScreenfulBlock
