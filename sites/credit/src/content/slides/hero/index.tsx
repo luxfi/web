@@ -9,7 +9,7 @@ import type ItemCTASBlock from '@/blocks/def/item-ctas'
 import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
-  specifiers: 'vert-center full-screen-height',
+  specifiers: 'vert-center full-screen-height narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [

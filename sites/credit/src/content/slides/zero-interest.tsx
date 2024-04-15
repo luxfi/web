@@ -12,7 +12,7 @@ const byline = 'Unlock the full potential of Lux Credit Card with zero interest 
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
-  specifiers: 'vert-center full-screen-height',
+  specifiers: 'vert-center full-screen-height narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [
     [
