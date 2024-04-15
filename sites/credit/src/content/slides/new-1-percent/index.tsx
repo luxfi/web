@@ -21,7 +21,7 @@ export default {blockType: 'screenful',
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
-        otherLink: { title: "All Cards", href: "/cards", variant: 'outline' },
+        otherLink: { title: "Browse Cards", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
