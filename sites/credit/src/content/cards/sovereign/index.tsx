@@ -12,6 +12,7 @@ const card: Card = {
   rarity: '1/1,000',
   materials: [{
     title: 'Reflective Titanium',
+    titleAlt: 'MIRROR CARD',
     sku: 'LXM-CR-S-RT',
     materialImg: {
       src: '/assets/commerce/cr/product/option/sovereign-card-reflective-titanium-100x99.png',

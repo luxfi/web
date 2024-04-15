@@ -13,6 +13,7 @@ const card: Card = {
   materials: [
     {
       title: 'Cool Chrome',
+      titleAlt: 'COOL CHROME',
       sku: 'LXM-CR-F-CC',
       materialImg: {
         src: '/assets/commerce/cr/product/option/founder-card-cool-chrome-99x99.png',
@@ -28,6 +29,7 @@ const card: Card = {
     },
     {
       title: 'Iridescent Chrome',
+      titleAlt: 'IRIDESCENT CHROME',
       sku: 'LXM-CR-F-IC',
       materialImg: {
         src: '/assets/commerce/cr/product/option/founder-card-iridescent-chrome-99x99.png',

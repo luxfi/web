@@ -17,6 +17,7 @@ interface CardFamily extends Family {
 
 type CardMaterial = {
   title: string
+  titleAlt: string
   sku: string
   materialImg: ImageDef
   cardImg: ImageDef

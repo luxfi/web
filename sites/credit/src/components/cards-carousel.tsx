@@ -3,12 +3,13 @@
 import React, { useEffect, useState } from 'react'
 
 import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
-import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
+import { BuyButton, useCommerce } from '@hanzo/commerce'
+import { ApplyTypography, Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import type { ImageDef } from '@hanzo/ui/types'
 import type { LineItem } from '@hanzo/commerce/types'
 import Link from 'next/link'
+import cards from '@/content/cards'
 
 type Card = {
   family: string
@@ -39,7 +40,7 @@ const CardComponent: React.FC<{
   }, [])
 
   return (
-    <div className='flex flex-col gap-5 items-center h-full'>
+    <ApplyTypography className='flex flex-col !gap-4 items-center h-full'>
       <ImageBlockComponent
         block={{blockType: 'image',
           props: {
@@ -59,18 +60,41 @@ const CardComponent: React.FC<{
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
       </Link>
-      {lineItem && <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>}
-    </div>
+      {lineItem &&
+        <BuyButton
+          skuPath={skuPath}
+          size='default'
+          variant='primary'
+          className='!w-full max-w-56'
+        >
+          Buy Now
+        </BuyButton>
+      }
+    </ApplyTypography>
 )
 }
 
 const CardsCarousel: React.FC<{
-  cards: Card[]
+  className?: string
 }> = ({
-  cards
+  className
 }) => {
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
+
+  const transformedCards = cards.flatMap(card => 
+    card.materials.map(material => ({
+      family: card.category,
+      title: material.titleAlt,
+      byline: card.title,
+      skuPath: material.sku,
+      img: {
+        src: material.cardImg.src,
+        dim: material.cardImg.dim,
+        alt: material.cardImg.alt
+      },
+    }))
+  )
 
   useEffect(() => {
     if (!api) {
@@ -92,10 +116,10 @@ const CardsCarousel: React.FC<{
     <Carousel
       setApi={setApi} 
       options={{ align: 'center', loop: true }}
-      className='w-full'
+      className={cn('w-full', className)}
     >
       <CarouselContent>
-        {cards.map((card: Card, index) => (
+        {transformedCards.map((card: Card, index) => (
           <CarouselItem key={index} className='basis-3/4 md:basis-1/3 xl:basis-1/5' onClick={() => selectCard(index)}>
             <CardComponent card={card} current={current} index={index}/>
           </CarouselItem>
