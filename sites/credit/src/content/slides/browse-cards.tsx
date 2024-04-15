@@ -25,6 +25,7 @@ export default {
         <CardsCarousel
           cards={[
             {
+              family: 'black',
               title: 'BLACK TITANIUM',
               byline: 'Black Card',
               skuPath: 'LXM-CR-B-ABT',
@@ -35,6 +36,7 @@ export default {
               },
             },
             {
+              family: 'black',
               title: 'BLACK GUNMETAL',
               byline: 'Black Card',
               skuPath: 'LXM-CR-B-GM',
@@ -46,6 +48,7 @@ export default {
               },
             },
             {
+              family: 'founder',
               title: 'COOL CHROME',
               byline: 'Founder Card',
               skuPath: 'LXM-CR-F-CC',
@@ -56,6 +59,7 @@ export default {
               },
             },
             {
+              family: 'founder',
               title: 'IRIDESCENT CHROME',
               byline: 'Founder Card',
               skuPath: 'LXM-CR-F-IC',
@@ -66,6 +70,7 @@ export default {
               },
             },
             {
+              family: 'elite',
               title: '24K GOLD',
               byline: 'Elite Card',
               skuPath: 'LXM-CR-E-24G',
@@ -76,6 +81,7 @@ export default {
               },
             },
             {
+              family: 'elite',
               title: 'STERLING SILVER',
               byline: 'Elite Card',
               skuPath: 'LXM-CR-E-SS',
@@ -86,6 +92,7 @@ export default {
               },
             },
             {
+              family: 'sovereign',
               title: 'MIRROR CARD',
               byline: 'Sovereign Card',
               skuPath: 'LXM-CR-S-RT',

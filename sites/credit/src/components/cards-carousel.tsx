@@ -8,8 +8,10 @@ import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanz
 import { cn } from '@hanzo/ui/util'
 import type { ImageDef } from '@hanzo/ui/types'
 import type { LineItem } from '@hanzo/commerce/types'
+import Link from 'next/link'
 
 type Card = {
+  family: string
   title: string
   byline: string
   skuPath: string
@@ -26,7 +28,7 @@ const CardComponent: React.FC<{
   current,
   index
 }) => {
-  const {title, byline, skuPath, img} = card
+  const {family, title, byline, skuPath, img} = card
   
   const cmmc = useCommerce()
   const [lineItem, setLineItem] = useState<LineItem>()
@@ -53,10 +55,10 @@ const CardComponent: React.FC<{
           current !== index ? 'cursor-pointer' : ''
         )}
       />
-      <div className='flex flex-col items-center'>
+      <Link href={`cards/${family}?sku=${skuPath}`} className='flex flex-col items-center !no-underline'>
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base'>{title}</div>
         <p className='text-sm'>{byline}</p>
-      </div>
+      </Link>
       {lineItem && <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>}
     </div>
 )

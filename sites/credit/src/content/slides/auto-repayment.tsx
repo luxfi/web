@@ -32,7 +32,7 @@ export default {blockType: 'screenful',
     } satisfies ElementBlock as Block,
   ], [
       {blockType: 'enh-heading',
-        heading: {text: 'LOANS THAT PAY THEMSELVES OFF AUTOMATICALLY', level: 1, mb: 2},
+        heading: {text: 'AUTO LOAN REPAYMENT', level: 1, mb: 2},
         byline: {text: byline, level: 6},
       } satisfies EnhHeadingBlock,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
