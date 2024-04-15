@@ -16,7 +16,7 @@ export default {blockType: 'screenful',
     [
       {blockType: 'enh-heading',
         heading: {text: 'LUX CREDIT', level: 1},
-        byline: {text: 'Build multi-generational wealth with the only credit card that automatically repays every loan.', level: 6},
+        byline: {text: 'Build multi-generational wealth with the first zero interest credit card with auto repaying loans. The future of finance is here.', level: 6},
         specifiers: 'left'
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
