@@ -1,13 +1,13 @@
 import type * as C from '@hanzo/ui/blocks'
 
 import { MiniChart } from '@luxdefi/common'
-import { BuyButton } from '@hanzo/commerce'
 
 import { formatCurrencyValue, bullionPrice1oz } from '@/util'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'
 import accordian from './accordian'
+import modal from './waitlist-modal'
 
 export default {
   blockType: 'product-detail',
@@ -16,13 +16,11 @@ export default {
   video: {...video, sizing: { vh: 80 }},
   accordian,
   price: {
-    priceCard: {blockType: 'card',
-      title: 'Lux Gold Price  / Oz', 
-      content: <div className='h-full w-full flex flex-col justify-center items-center gap-8'>
-        <h4 className='text-center font-bold text-3xl'>{formatCurrencyValue(bullionPrice1oz('au'))}</h4>
-        <BuyButton skuPath='LXM-AU' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyButton>
-      </div>,
-    } satisfies C.CardBlock,
+    priceCard: {
+      blockType: 'card',
+      title: 'Lux Gold Price / Oz',
+      content: <h4 className='font-heading text-lg md:text-3xl'>{formatCurrencyValue(bullionPrice1oz('au'))}</h4>,
+    },
     msCard: {blockType: 'card',
       specifiers: 'full-width',
       title: 'Market Spot Price / Oz',
@@ -31,6 +29,22 @@ export default {
   },
 
   blocks: [
+    {
+      blockType: 'cta',
+      elements: [
+        {
+          text: 'Waitlist',
+          props: {
+            variant: 'primary',
+            size: 'lg', 
+          },
+          action: {
+            type: 'modal',
+            def: modal
+          }
+        },
+      ]
+    } as C.CTABlock,
     /*
     {
       blockType: 'heading',
