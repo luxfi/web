@@ -31,10 +31,11 @@ const reviews = [
     href: 'https://trstp.lt/PtpL8qO-U'
   },
   {
-    text: 'Setting the bar for innovation, development and execution within an ever evolving mix of AI, Blockchain, Design and Finance.'
+    text: 'Setting the bar for innovation, development and execution within an ever evolving mix of AI, Blockchain, Design and Finance.',
     author: 'Ole Brereton',
     href: 'https://trstp.lt/gOB3GTbOb'
   },
+  {
     text: 'World class leaders in the future of metaverse and integrated, financial systems.',
     author: 'Ole Brereton',
     href: 'https://trstp.lt/gOB3GTbOb'
@@ -43,7 +44,7 @@ const reviews = [
     text: 'As an art collector and real estate executive, I value unique investments. Lux Defi, merging real-world assets with blockchain, is a refreshing addition.',
     author: 'Lisa Goodman',
     href: 'https://trstp.lt/GfjNiLa7D'
-  }
+  },
   {
     text: 'Lux, merging real-world assets with blockchain, is a refreshing addition alongside my art works and other assets.',
     author: 'Lisa Goodman',
