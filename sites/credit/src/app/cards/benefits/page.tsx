@@ -19,10 +19,10 @@ const Page = () => {
       </div>
       <p className="text-xs">Learn more about the exclusive benefits only available to Lux card holders and what to expect when you sign up for your Lux card.</p>
       <div className="flex flex-col w-full">
-        {benefits.map(({title, icon}, index) => (
+        {benefits.map(({id, title, icon}, index) => (
           <>
             <Separator className="bg-level-2"/>
-            <Link key={index} href={`cards/benefits/${title}`} className="flex justify-between p-2">
+            <Link key={index} href={`/cards/benefits/${id}`} className="flex justify-between px-2 py-3">
               <div className="flex gap-2 items-center">
                 {icon}
                 <h5 className="whitespace-nowrap">{title}</h5>
