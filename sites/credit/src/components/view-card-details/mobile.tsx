@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 
 import { cn } from '@hanzo/ui/util'
@@ -18,9 +19,9 @@ import type { LineItem } from '@hanzo/commerce/types'
 
 import type { Card, CardMaterial } from '@/types/card'
 import SplinePlayer from '../spline-player'
-import Benefits from './benefits'
 import CardMaterialPicker from '../card-material-picker'
 import MoreWaysToEarn from './more-ways-to-earn'
+import Arrow from './icons/arrow'
 
 const MobileViewCardDetails: React.FC<{
   card: Card
@@ -70,7 +71,7 @@ const MobileViewCardDetails: React.FC<{
             <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
           </div>
           <div className={cn(
-              'w-full h-full !aspect-[12/10] transition-all duration-300',
+              'w-full h-auto !aspect-[12/10] transition-all duration-300',
               showAnimation ? 'opacity-100' : 'opacity-0',
             )}
           >
@@ -97,7 +98,10 @@ const MobileViewCardDetails: React.FC<{
           ))}
         </Accordion>
         <MoreWaysToEarn rewards={card.karmaRewards} clx='pt-6'/>
-        <Benefits card={card} cardStyle='accordion' limit={4} clx='mt-14'/>
+        <Link href='/cards/benefits' className='flex gap-4 px-4 pt-6 w-full text-center underline cursor-pointer whitespace-nowrap'>
+          View All Lux Benefits
+          <Arrow/>
+        </Link>
       </div>
     </Main>
   )

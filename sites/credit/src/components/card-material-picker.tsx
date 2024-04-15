@@ -15,13 +15,13 @@ const CardMaterialPicker: React.FC<{
   materialClx
 }) => {
   return (
-    <div className='flex gap-1 sm:gap-2 justify-center'>
+    <div className='flex gap-1 sm:gap-3 justify-center'>
       {materials.map(({title, materialImg}, i) => (
         <div
           key={i}
           className={cn(
             'cursor-pointer rounded-full p-0.5',
-            title === selectedMaterial?.title && 'outline outline-2 outline-foreground'
+            title === selectedMaterial?.title && 'outline outline-1 sm:outline-2 outline-foreground',
           )}
           onClick={() => onChange(materials[i])}
         >
