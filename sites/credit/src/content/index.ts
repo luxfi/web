@@ -20,7 +20,6 @@ const tiles = [
   premierBenefits,
   //reviews,
   //roadmap,
-  browseCards,
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
 

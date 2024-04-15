@@ -6,6 +6,7 @@ import { Header } from '@luxdefi/common'
 import { tiles}  from '@/content'
 import '@/blocks/registerComponents'
 import FooterSlide from '@/components/footer-slide'
+import browseCards from '@/content/slides/browse-cards'
 import siteDef from '../conf/site-def'
 
 type Props = {
@@ -27,6 +28,13 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
+    <div className='md:hidden'>
+      <Screenful 
+        block={browseCards} 
+        agent={agent}
+        snapTile
+      />
+    </div>
     <FooterSlide agent={agent} />
   </>)
 }
