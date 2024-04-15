@@ -1,13 +1,13 @@
-import type { 
+import type {
   Block,
-  EnhHeadingBlock, 
-  ImageBlock, 
-  ScreenfulBlock, 
+  EnhHeadingBlock,
+  ImageBlock,
+  ScreenfulBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
 
-const byline = 'Unlock the full potential of Lux Credit Card with zero staking requirements and multiple card tiers.'
+const byline = 'Unlock the full potential of Lux Credit Card with zero interest auto repaying loans and multiple card tiers.'
 
 export default {
   blockType: 'screenful',
@@ -16,9 +16,9 @@ export default {
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [
     [
-      {blockType: 'enh-heading', 
-        heading: {text: 'EASY SPENDING + PREMIER BENEFITS', level: 1, mb: 6}, 
-        byline: {text: byline, level: 6}, 
+      {blockType: 'enh-heading',
+        heading: {text: 'ZERO INTEREST + PREMIER BENEFITS', level: 1, mb: 6},
+        byline: {text: byline, level: 6},
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       /*
@@ -39,20 +39,20 @@ export default {
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
-    ], 
-    [ 
+    ],
+    [
     {blockType: 'image',
       src: '/assets/content/card-packaging-800x472.png',
       alt: 'cards',
       dim: {w: 800, h: 472},
       fullWidthOnMobile: true,
       props: {
-        sizes: '900px, 440px', 
+        sizes: '900px, 440px',
         style: {
           width: '100%',
           height: 'auto'
         }
       }
     } satisfies ImageBlock as Block,
-  ]], 
+  ]],
 } as ScreenfulBlock
