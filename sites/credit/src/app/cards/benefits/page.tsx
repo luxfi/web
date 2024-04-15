@@ -7,6 +7,9 @@ import { Button, Main, Separator } from '@hanzo/ui/primitives'
 import benefits from "@/content/cards/benefits"
 import Link from "next/link"
 
+const title = 'All Lux Benefits'
+const byline = 'Learn more about the exclusive benefits only available to Lux card holders and what to expect when you sign up for your Lux card.'
+
 const Page = () => {
   const router = useRouter()
   
@@ -16,9 +19,9 @@ const Page = () => {
         <Button size='icon' variant='ghost' onClick={() => router.back()}>
           <ChevronLeft/>
         </Button>
-        <div>All Lux Benefits</div>
+        <div>{title}</div>
       </div>
-      <p className="text-xs">Learn more about the exclusive benefits only available to Lux card holders and what to expect when you sign up for your Lux card.</p>
+      <p className="text-xs">{byline}</p>
       <div className="flex flex-col w-full">
         {benefits.map(({id, title, icon}, index) => (
           <>

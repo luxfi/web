@@ -2,12 +2,15 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 
 import { cn } from '@hanzo/ui/util'
-import { ApplyTypography, Main, Separator } from '@hanzo/ui/primitives'
+import { ApplyTypography, Separator } from '@hanzo/ui/primitives'
 
 import cards from '@/content/cards'
 import sovereign from '@/content/cards/sovereign'
 import CardPreview from './mobile-card-preview'
 import SplinePlayer from '../spline-player'
+
+const title = 'Earn up to 11% of your balance annually with Lux Credit.'
+const byline = 'Learn more about how you can earn rewards infinitely by using your Lux Card without ever impacting your credit score.'
 
 const DesktopAllCards: React.FC<{
   clx: string
@@ -19,8 +22,8 @@ const DesktopAllCards: React.FC<{
       <div className='flex flex-col gap-2 px-4'>
         <SplinePlayer src={sovereign.materials[0].animation ?? ''} className='!aspect-[12/10]'/>
         <ApplyTypography className='flex flex-col gap-2'>
-          <h4>Earn up to 11% of your balance annually with Lux Credit.</h4>
-          <p className='text-sm'>Learn more about how you can earn rewards infinitely by using your Lux Card without ever impacting your credit score.</p>
+          <h4>{title}</h4>
+          <p className='text-sm'>{byline}</p>
           <Link href=''>What are Karma Rewards?</Link>
         </ApplyTypography>
       </div>
