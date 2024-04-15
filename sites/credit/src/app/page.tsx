@@ -3,10 +3,9 @@ import React  from 'react'
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 import { Header } from '@luxdefi/common'
 
-import { tiles}  from '@/content'
+import { desktopTiles, mobileTiles}  from '@/content'
 import '@/blocks/registerComponents'
 import FooterSlide from '@/components/footer-slide'
-import browseCards from '@/content/slides/browse-cards'
 import siteDef from '../conf/site-def'
 
 type Props = {
@@ -16,6 +15,8 @@ type Props = {
 const Page = ({ searchParams }: Props ) => {
     // see src/middleware.ts
   const agent = searchParams?.agent as string
+
+  const tiles = agent === 'desktop' ? desktopTiles : mobileTiles
 
   return (<>
     <Header siteDef={siteDef}/>
@@ -28,14 +29,7 @@ const Page = ({ searchParams }: Props ) => {
         key={`section-${index}`} 
       />
     ))}
-    <div className='md:hidden'>
-      <Screenful 
-        block={browseCards} 
-        agent={agent}
-        snapTile
-      />
-    </div>
-    <FooterSlide agent={agent} />
+    <FooterSlide />
   </>)
 }
 

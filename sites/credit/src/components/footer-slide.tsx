@@ -7,11 +7,7 @@ import { ApplyTypography } from '@hanzo/ui/primitives'
 import siteDef from '@/conf/site-def'
 import CardsCarousel from './cards-carousel'
 
-const FooterSlide: React.FC<{
-  agent: string
-}> = ({
-  agent
-}) => {
+const FooterSlide = () => {
   const swipeOuter = 'snap-start snap-always h-[100vh] '
   const swipeInner = 'pt-[68px] md:pt-[104px] pb-[24px] '
   const swipeInnerTouch = swipeInner + 'h-[100svh] '
@@ -19,7 +15,7 @@ const FooterSlide: React.FC<{
   return (<>
     <div className='hidden md:flex w-full'>
       <div className={cn(swipeOuter, 'swipe flex flex-col justify-between items-stretch pt-20 gap-3 w-full')} >
-        <ApplyTypography className='flex flex-col !gap-2 max-w-screen-md m-auto items-center'>
+        <ApplyTypography className='flex flex-col !gap-2 max-w-screen-md mx-auto items-center'>
           <h3 className='!text-center'>ALL CARDS</h3>
           <p className='text-sm !text-center'>Join the financial revolution with Lux Credit Card, and make your transactions not just purchases, but investments in your legacy, thanks to our zero-interest credit facility with automatic loan repayment.</p>
         </ApplyTypography>

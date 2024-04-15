@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter } from "next/navigation"
+import { notFound, useRouter } from "next/navigation"
 import { ChevronLeft } from 'lucide-react'
 
 import { Button } from "@hanzo/ui/primitives"
@@ -18,7 +18,7 @@ const Page = ({ params }: Props) => {
   const benefit = benefits.find(benefit => benefit.id === params.slug)
 
   if (!benefit) {
-    return null
+    notFound()
   }
 
   return (
@@ -38,8 +38,12 @@ const Page = ({ params }: Props) => {
         className='w-full h-auto max-w-full'
       />
       <div className="flex gap-4 px-4">
-        <Button variant='outline' onClick={() => router.push('/cards')} className="w-full">View All Cards</Button>
-        <Button variant='primary' onClick={() => router.push('/compare')} className="w-full">Compare Cards</Button>
+        <Button variant='outline' onClick={() => router.push('/cards')} className="w-full">
+          View All Cards
+        </Button>
+        <Button variant='primary' onClick={() => router.push('/compare')} className="w-full">
+          Compare Cards
+        </Button>
       </div>
     </div>
   )

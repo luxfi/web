@@ -9,6 +9,7 @@ import Link from "next/link"
 
 const Page = () => {
   const router = useRouter()
+  
   return (
     <Main className={'flex flex-col gap-4 pt-11'}>
       <div className='flex gap-4 items-center self-start cursor-pointer'>
