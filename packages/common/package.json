@@ -31,6 +31,7 @@
   },
   "exports": {
     ".": "./components/index.ts",
+    "./server-actions": "./server-actions/index.ts",
     "./next": "./next/index.ts",
     "./style/": "./style/",
     "./site-def": "./site-def/index.ts",

@@ -1,5 +1,6 @@
 'use client'
-import React from 'react'
+
+import React, { useState } from 'react'
 
 import type { ButtonModalProps} from '@hanzo/ui/types'
 
@@ -25,24 +26,39 @@ const ContactDialog: React.FC<ButtonModalProps> = ({
   byline,
   action,
   actionEnclosure
-}) => (
-  <Dialog open={open} onOpenChange={onOpenChange} >
-    <DialogTrigger asChild>
-      <Button {...buttonProps} >{buttonText}</Button>
-    </DialogTrigger>
-    <DialogContent className="sm:max-w-[500px] p-0 gap-0 bg-background border">
-      <DialogHeader className='py-6 text-foreground'>
-        <DialogTitle className='text-4xl font-heading text-center text-inherit'>{title}</DialogTitle>
-        {byline && (<DialogDescription className='text-inherit text-xl text-center'>{byline} </DialogDescription>)}
-      </DialogHeader>
-      <div className='p-8 rounded-e-lg flex flex-col justify-start items-center'>
-        <ContactForm onSubmit={action} enclosure={actionEnclosure}/>
-        <div className='text-muted-1 text-xs mt-4' >
-          <Disclaimer />
+}) => {
+  const [success, setSuccess] = useState(false)
+
+  const onSubmit = async (formData: any, enclosure: any) => {
+    const result = await action(formData, enclosure)
+    if (result.success) {
+      setSuccess(true)
+    }
+  }
+  
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange} >
+      <DialogTrigger asChild>
+        <Button {...buttonProps} >{buttonText}</Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[500px] p-0 gap-0 bg-background border">
+        <DialogHeader className='py-6 text-foreground'>
+          <DialogTitle className='text-4xl text-center text-inherit'>{title}</DialogTitle>
+          {byline && (<DialogDescription className='text-inherit text-lg text-center'>{byline} </DialogDescription>)}
+        </DialogHeader>
+        <div className='px-8 pb-8 rounded-e-lg flex flex-col justify-start items-center'>
+          {success ? (
+            <p>{actionEnclosure?.reply}</p>
+          ) : (
+            <ContactForm onSubmit={onSubmit} enclosure={actionEnclosure}/>
+          )}
+          <div className='text-muted-1 text-xs mt-4' >
+            <Disclaimer />
+          </div>
         </div>
-      </div>
-    </DialogContent>
-  </Dialog>
-)
+      </DialogContent>
+    </Dialog>
+  )
+}
 
 export default ContactDialog
