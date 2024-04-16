@@ -20,7 +20,8 @@ import {
   FormMessage,
 } from '@hanzo/ui/primitives'
 
-import type { ContactInfo, SubmitServerAction } from '@hanzo/ui/types'
+import type { SubmitServerAction } from '@hanzo/ui/types'
+import type { ContactInfo } from '../../types'
 
 const ValidationSchema = z.object({
   email: z

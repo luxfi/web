@@ -7,5 +7,4 @@ export default {
   byline: <>Responsibly manufactured, <br className='sm:hidden'/>ethically sourced.</>,
   video: {...video, sizing: { vh: 50}},
   learnLink: { href: "/gold" },
-  skuPath: 'LXM-AU'
 } satisfies BannerBlock

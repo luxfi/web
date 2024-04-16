@@ -5,11 +5,11 @@ import saveToWaitlist from '@luxdefi/common/server-actions'
 export default {
   Comp: ContactDialog,
   title: 'Join the Waitlist',
-  byline: 'Be the first to get access to Lux Pass.',
+  byline: 'Be the first to get access to Lux Gold.',
   action: saveToWaitlist,
   actionEnclosure: {
     dbId: 'lux-waitlist',
-    listId: 'pass',
-    reply: "You're on the LUX Pass Waitlist."
+    listId: 'gold',
+    reply: "You're on the LUX Gold Waitlist."
   }
 } satisfies ButtonModalDef
