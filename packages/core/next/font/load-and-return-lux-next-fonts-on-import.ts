@@ -1,15 +1,15 @@
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
 import type { TwFontDesc } from '@hanzo/ui/tailwind' // TODO
 import type NextFontDesc from './next-font-desc'
 
-import twFonts from '../../tailwind/lux-tw-fonts' 
+import twFonts from '../../tailwind/lux-tw-fonts'
 
 /*
-  Creating NextFontDesc's and TwFontDesc's has to be seperated because they are needed 
-  at different times during the next compile / build.  Otherwise a nasty 
-  race condition happens! 
+  Creating NextFontDesc's and TwFontDesc's has to be seperated because they are needed
+  at different times during the next compile / build.  Otherwise a nasty
+  race condition happens!
 
   Also, requires that "Font loaders must be called and assigned to a const in the module scope"
 
@@ -29,14 +29,21 @@ const drukWide = localFont({
     },
   ],
   display: 'swap',
-  variable: '--font-druk-wide' ,
+  variable: '--font-druk-wide',
 })
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const inter = localFont({
+  src: './local/GeistVF.ttf',
+  display: 'swap',
+  variable: '--font-inter',
 })
-  
+
+//const inter = localFont({
+//  src: './local/InterVariable.ttf',
+//  display: 'swap',
+//  variable: '--font-inter',
+//})
+
 export default [
   {
     font: inter,
@@ -49,7 +56,7 @@ export default [
   {
     font: drukWide,
     twName: 'heading'
-  } 
+  }
 ].map (
   (el) => {
     const twFont: TwFontDesc | undefined = twFonts.find((twf: TwFontDesc) => (el.twName === twf.twName))
