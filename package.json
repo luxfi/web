@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "@luxfi/web",
+  "version": "0.1.0",
   "engines": {
     "pnpm": ">=8"
   },
