@@ -3,7 +3,7 @@
 import React from 'react'
 
 import siteDef from '@/conf/site-def'
-import { CheckoutPanel, Footer, Header } from '@luxfi/common'
+import { CheckoutPanel, Footer, Header } from '@luxfi/core'
 import { Main } from '@hanzo/ui/primitives'
 
 const Page: React.FC = () => {
