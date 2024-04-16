@@ -15,5 +15,5 @@
 }
 
 .font-heading {
-  @apply text-transform[uppercase];
+  @apply uppercase;
 }
