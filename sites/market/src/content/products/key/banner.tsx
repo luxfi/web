@@ -8,6 +8,6 @@ export default {
       and NFT drops.
   </>),
   animation: 'https://prod.spline.design/Itggaf1iI7481mcU/scene.splinecode',
-  learnLink: { href: "/pass" },
+  learnLink: { href: "/key" },
   skuPath: 'LXM-PS'
 } satisfies BannerBlock

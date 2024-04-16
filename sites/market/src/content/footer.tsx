@@ -42,8 +42,8 @@ export default [
         href: '/validator',
       },
       {
-        title: 'Lux Pass',
-        href: '/pass',
+        title: 'Lux Key',
+        href: '/key',
       },
     ]
   },

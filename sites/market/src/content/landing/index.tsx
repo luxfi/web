@@ -10,7 +10,7 @@ import gold from '../products/gold/banner'
 import coin from '../products/coin/banner'
 import validator from '../products/validator/banner'
 import credit from '../products/credit/banner'
-import pass from '../products/pass/banner'
+import key from '../products/key/banner'
 // import uranium from '../products/uranium/banner'
 
 import BottomMDX from './landing-bottom.mdx'
@@ -25,7 +25,7 @@ export default {
     validator,
     coin,
     // uranium,
-    pass,
+    key,
   ] satisfies BannerBlock[],
 
   bottom: [

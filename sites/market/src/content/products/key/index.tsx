@@ -5,7 +5,7 @@ import { BuyButton } from '@hanzo/commerce'
 
 import accordian from './accordian'
 
-const desc = 'Acquire a Lux Pass and ensure access to the Lux Network’s most sought-after events and launches. Start your journey with 1,000,000 LUX Coins, offering a future woven with thrilling experiences and adventures that redefine extraordinary.'
+const desc = 'Acquire a Lux Key and ensure access to the Lux Network’s most sought-after events and launches. Start your journey with 1,000,000 LUX Coins, offering a future woven with thrilling experiences and adventures that redefine extraordinary.'
 
 export default {
   blockType: 'product-detail',
@@ -19,5 +19,5 @@ export default {
         <BuyButton skuPath='LXM-PS' className='lg:min-w-pr-65 min-w-pr-65 mx-auto'>Buy</BuyButton>
       </div>
     )
-  } satisfies C.ElementBlock as C.Block] 
+  } satisfies C.ElementBlock as C.Block]
 } satisfies ProductDetailBlock
