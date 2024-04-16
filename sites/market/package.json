@@ -2,6 +2,8 @@
   "name": "@luxfi/market",
   "version": "1.0.8",
   "private": true,
+  "license": "BSD-3-Clause",
+  "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,7 +18,7 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@luxfi/core": "4.3.11",
+    "@luxfi/core": "4.3.12",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",

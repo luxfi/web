@@ -148,7 +148,7 @@ importers:
   sites/blank:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -212,7 +212,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -318,7 +318,7 @@ importers:
   sites/exchange:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -388,7 +388,7 @@ importers:
   sites/finance:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -473,7 +473,7 @@ importers:
   sites/login:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -549,7 +549,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -655,7 +655,7 @@ importers:
   sites/network:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -737,7 +737,7 @@ importers:
   sites/network-safe:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -804,7 +804,7 @@ importers:
   sites/network-wallet:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -871,7 +871,7 @@ importers:
   sites/partners:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -945,7 +945,7 @@ importers:
   sites/quest:
     dependencies:
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
@@ -1021,7 +1021,7 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4(react-hook-form@7.50.1)
       '@luxfi/core':
-        specifier: 4.3.11
+        specifier: 4.3.12
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0

@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/pay",
-  "homepage": "https://pay.lux.network",
+  "homepage": "https://pay.lux.finance",
   "version": "0.1.0",
   "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
   "license": "BSD-3-Clause",
@@ -11,8 +11,8 @@
     "dev": "netlify dev",
     "start": "netlify dev"
   },
-  "author": "stripe-samples",
-  "license": "ISC",
+  "author": "Lux Partners Limited",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "express": "^4.17.1",
     "netlify-cli": "^11.5.0",

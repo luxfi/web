@@ -3,7 +3,6 @@
   "homepage": "https://lux.credit",
   "version": "0.1.0",
   "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
-  "license": "BSD-3-Clause",
   "private": true,
   "description": "Marketing site for Lux Credit Card",
   "scripts": {
