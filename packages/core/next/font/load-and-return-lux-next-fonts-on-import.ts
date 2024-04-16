@@ -33,16 +33,10 @@ const drukWide = localFont({
 })
 
 const inter = localFont({
-  src: './local/GeistVF.ttf',
+  src: './local/InterVariable.ttf',
   display: 'swap',
   variable: '--font-inter',
 })
-
-//const inter = localFont({
-//  src: './local/InterVariable.ttf',
-//  display: 'swap',
-//  variable: '--font-inter',
-//})
 
 export default [
   {
