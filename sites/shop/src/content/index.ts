@@ -6,7 +6,7 @@ import coin from './products/coin'
 //import credit from './products/credit'
 import validator from './products/validator'
 import pass from './products/pass'
-// import uranium from './products/uranium'
+import uranium from './products/uranium'
 
 const products = {
   silver,
@@ -15,7 +15,7 @@ const products = {
   //credit,
   validator,
   pass,
-  // uranium,
+  uranium,
 }
 
 export {
