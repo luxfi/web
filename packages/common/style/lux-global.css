@@ -13,3 +13,7 @@
 .nextjs-toast-errors-parent {
   display: none;
 }
+
+.font-heading {
+  @apply text-transform[uppercase];
+}
