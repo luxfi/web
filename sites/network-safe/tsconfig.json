@@ -5,13 +5,11 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts",
-    "node_modules/@hanzo/ui",
-    "node_modules/@hanzo/auth",
-    "node_modules/@hanzo/commerce",
-    "node_modules/@luxfi/core"
+    "node_modules/@luxfi/core",
+    "node_modules/@luxfi/core/node_modules/@hanzo/*"
   ],
   "exclude": ["node_modules"],
-  
+
   "compilerOptions": {
     "jsx": "preserve",
     "baseUrl": ".",
@@ -19,10 +17,8 @@
       "@/*": ["./src/*"],
       // https://remarkablemark.org/blog/2023/06/30/react-types-reactnode-error/
       "react": ["node_modules/@types/react"],
-      "@hanzo/ui": ["node_modules/@hanzo/ui"],
-      "@hanzo/auth": ["node_modules/@hanzo/auth"],
-      "@hanzo/commerce": ["node_modules/@hanzo/commerce"],
-      "@luxfi/core": ["node_modules/@luxfi/core"]
+      "@luxfi/core": ["node_modules/@luxfi/core"],
+      "@hanzo/*": ["node_modules/@luxfi/core/node_modules/hanzo/*"]
     },
     "plugins": [{"name": "next"}]
   }

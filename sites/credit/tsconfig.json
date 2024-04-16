@@ -6,9 +6,7 @@
     "src/**/*.tsx",
     ".next/types/**/*.ts",
     "node_modules/@luxfi/core",
-    "node_modules/@luxfi/core/node_modules/@hanzo/auth",
-    "node_modules/@luxfi/core/node_modules/@hanzo/commerce",
-    "node_modules/@luxfi/core/node_modules/@hanzo/ui"
+    "node_modules/@luxfi/core/node_modules/@hanzo/*"
   ],
   "exclude": [ "node_modules" ],
   "compilerOptions": {
