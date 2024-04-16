@@ -9,7 +9,7 @@ const desc = 'Acquire a Lux Pass and ensure access to the Lux Network’s most s
 
 export default {
   blockType: 'product-detail',
-  title: 'LUX PASS',
+  title: 'LUX KEY',
   desc,
   animation: 'https://prod.spline.design/Itggaf1iI7481mcU/scene.splinecode',
   accordian,

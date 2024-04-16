@@ -2,7 +2,7 @@ import type BannerBlock from '@/blocks/def/banner-block'
 
 export default {
   blockType: 'banner',
-  title: 'LUX PASS',
+  title: 'LUX KEY',
   byline: (<>
       FREE priority access to LUX events  <br className='lg:hidden'/>
       and NFT drops.
