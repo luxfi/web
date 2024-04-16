@@ -40,11 +40,10 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
     </div>
     <div className='w-full h-full flex flex-col gap-3 min-h-screen items-center py-8 px-10 bg-level-1'>
       <StepIndicator
-        dotSizeRem={1.5}
+        dotSizeRem={1.2}
         steps={stepNames}
         currentStep={index}
-        className='gap-2 text-base w-pr-70'
-        muted
+        className='gap-2 text-sm w-pr-70'
       />
       {children}
     </div>

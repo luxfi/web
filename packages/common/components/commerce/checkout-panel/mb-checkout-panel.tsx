@@ -21,10 +21,10 @@ const MobileCheckoutPanel: React.FC<PropsWithChildren & {
 
   <div /* id='MOBILE_GRID' */ className={cn('flex flex-col items-center justify-start px-4 pt-11', className)}>
     <StepIndicator 
-      dotSizeRem={1} 
+      dotSizeRem={0.8} 
       steps={stepNames} 
       currentStep={index} 
-      className='text-xs font-semibold w-full'
+      className='text-xs w-full'
       muted
     />
     <CartAccordian 
