@@ -30,10 +30,8 @@ import DesktopCP from './dt-checkout-panel'
 import MobileCP from './mb-checkout-panel'
 
 const CheckoutPanel: React.FC<{
-  close: () => void
   className?: string
 }> = ({
-  close,
   className=''
 }) => {
 
@@ -74,11 +72,6 @@ const CheckoutPanel: React.FC<{
     }
   } 
 
-  const _close = () => {
-    setStep('first')
-    close()
-  }
-
   // Determine if mobile or desktop based on visibility of desktopElement
   // https://stackoverflow.com/a/21696585/11378853
   const desktopElement = useRef<HTMLDivElement | null>(null)
@@ -101,8 +94,7 @@ const CheckoutPanel: React.FC<{
 
   return (<>
     <DesktopCP 
-      className={cn('h-full', className, 'hidden md:flex')} 
-      close={_close}
+      className={cn('h-full', className, 'hidden md:grid')} 
       index={stepIndex}
       stepNames={STEP_NAMES}
     >
@@ -112,7 +104,6 @@ const CheckoutPanel: React.FC<{
     </DesktopCP>
     <MobileCP 
       className={cn('h-full overflow-y-auto', className, 'md:hidden' )} 
-      close={_close}
       index={stepIndex}
       stepNames={STEP_NAMES}
     >
