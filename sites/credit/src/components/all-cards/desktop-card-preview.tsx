@@ -83,7 +83,7 @@ const CardPreview: React.FC<{
 
         <div className='flex flex-col gap-4 col-span-1'>
           <ApplyTypography className='flex flex-col !gap-2 typography-p:text-sm'>
-            <p className='font-bold'>KARMA Rewards with every purchase.</p>
+            <p className='font-bold'>Rewards with every purchase.</p>
             <div className='flex flex-col gap-2'>
               {card.karmaRewards.map(({multiplier, description}, i) => (
                 <p key={i}><span className='font-bold'>{multiplier}X points</span> {description}</p>
