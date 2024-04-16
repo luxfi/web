@@ -1,7 +1,7 @@
 
 import { type CTABlock} from '@hanzo/ui/blocks'
 
-import { Icons } from '@luxdefi/common'
+import { Icons } from '@luxfi/core'
 
 const SOC_ICON_SIZE = 18
 
@@ -45,7 +45,7 @@ export default [
         title: 'Lux Pass',
         href: '/pass',
       },
-    ] 
+    ]
   },
   {
     blockType: 'cta',
@@ -67,9 +67,9 @@ export default [
       },
       {
         title: 'Github',
-        href: 'https://github.com/luxdefi',
+        href: 'https://github.com/luxfi',
       },
-    ] 
+    ]
   },
   {
     blockType: 'cta',
@@ -113,8 +113,8 @@ export default [
         href: 'https://drive.google.com/drive/folders/14OJtKLVakGY6883XO9yGbiHtlFxQUUm5?usp=share_link',
         external: true
       },
-    ] 
-  },  
+    ]
+  },
   {
     blockType: 'cta',
     elements: [
@@ -158,7 +158,7 @@ export default [
         external: true,
         icon: <Icons.SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
       },
-    ] 
+    ]
   },
   {
     blockType: 'cta',
@@ -177,6 +177,6 @@ export default [
         href: '/assets/pdf/LUX-Privacy-Policy.pdf',
         newTab: true,
       },
-    ] 
+    ]
   },
 ] as CTABlock[]

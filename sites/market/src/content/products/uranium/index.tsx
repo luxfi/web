@@ -1,7 +1,7 @@
 import type * as C from '@hanzo/ui/blocks'
 import { markdown } from '@hanzo/ui/util'
 
-import { MiniChart } from '@luxdefi/common'
+import { MiniChart } from '@luxfi/core'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 

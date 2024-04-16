@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Desktop, TouchDevice } from './scroll-snap'
-import { Header } from '@luxdefi/common'
+import { Header } from '@luxfi/core'
 
 type PageProps = {
   params: { slug: string };

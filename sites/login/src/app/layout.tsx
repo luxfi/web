@@ -4,7 +4,7 @@ import {
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport, 
   ChatWidget
-} from '@luxdefi/common'
+} from '@luxfi/core'
 
 import { Toaster } from '@hanzo/ui/primitives'
 
@@ -17,7 +17,7 @@ import { CommerceServiceProvider } from '@hanzo/commerce'
 import siteDef from '../site-def'
 import _metadata from '../metadata'
 
-import '@luxdefi/common/style/lux-global.css'
+import '@luxfi/core/style/lux-global.css'
 
 export const metadata = { ..._metadata }
 export const viewport = { ...rootLayoutViewport}

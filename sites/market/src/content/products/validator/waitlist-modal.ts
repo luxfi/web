@@ -1,6 +1,6 @@
 import type { ButtonModalDef } from '@hanzo/ui/types'
-import { ContactDialog } from '@luxdefi/common'
-import saveToWaitlist from '@luxdefi/common/server-actions'
+import { ContactDialog } from '@luxfi/core'
+import saveToWaitlist from '@luxfi/core/server-actions'
 
 export default {
   Comp: ContactDialog,

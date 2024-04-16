@@ -4,7 +4,7 @@ import {
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport, 
   ChatWidget
-} from '@luxdefi/common'
+} from '@luxfi/core'
 
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
@@ -13,7 +13,7 @@ import type { AuthServiceConf } from '@hanzo/auth/types'
 import siteDef from '../site-def'
 import _metadata from '../metadata'
 
-import '@luxdefi/common/style/lux-global.css'
+import '@luxfi/core/style/lux-global.css'
 
 export const metadata = { ..._metadata }
 export const viewport = { ...rootLayoutViewport}

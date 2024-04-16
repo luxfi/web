@@ -19,8 +19,8 @@ export default   [
     icon: <SVG_warp_logo width={SOC_ICON_SIZE} height={SOC_ICON_SIZE} /> //<Icons.SocialIcon network='warpcast' size={SOC_ICON_SIZE} />
   },
   {
-    title: 'Lux Discussion',
-    href: 'https://github.com/orgs/luxdefi/discussions',
+    title: 'Lux Discussions',
+    href: 'https://github.com/orgs/luxfi/discussions',
     icon: <Icons.SocialIcon network='github' size={SOC_ICON_SIZE} />
   },
 

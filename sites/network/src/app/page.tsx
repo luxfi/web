@@ -1,7 +1,7 @@
 import React  from 'react'
 
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
-import { Footer, Header } from '@luxdefi/common'
+import { Footer, Header } from '@luxfi/core'
 
 import { tiles } from '@/content'
 import siteDef from '@/conf/site-def'

@@ -1,6 +1,6 @@
 import type { LinkDef } from '@hanzo/ui/types'
 import type * as C from '@hanzo/ui/blocks'
-import { MiniChart } from '@luxdefi/common'
+import { MiniChart } from '@luxfi/core'
 
 import { BuyButton } from '@hanzo/commerce'
 

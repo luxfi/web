@@ -25,7 +25,7 @@ const nextConfig = {
     '@hanzo/ui', 
     '@hanzo/auth', 
     '@hanzo/commerce', 
-    '@luxdefi/common'
+    '@luxfi/core'
   ],
   productionBrowserSourceMaps: true,
   webpack: (config) => {

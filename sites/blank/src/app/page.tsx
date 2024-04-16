@@ -1,5 +1,5 @@
 import React  from 'react'
-import { Footer } from '@luxdefi/common'
+import { Footer } from '@luxfi/core'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 
 

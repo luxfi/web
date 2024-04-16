@@ -2,9 +2,9 @@
 
 import React from 'react'
 
-import { Main } from '@hanzo/ui/primitives'
-import { CheckoutPanel, Footer, Header } from '@luxdefi/common'
 import siteDef from '@/conf/site-def'
+import { CheckoutPanel, Footer, Header } from '@luxfi/common'
+import { Main } from '@hanzo/ui/primitives'
 
 const Page: React.FC = () => {
   return (<>

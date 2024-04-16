@@ -8,7 +8,7 @@
     "node_modules/@hanzo/ui",
     "node_modules/@hanzo/auth",
     "node_modules/@hanzo/commerce",
-    "node_modules/@luxdefi/common"
+    "node_modules/@luxfi/core"
   ],
   "exclude": ["node_modules"],
   
@@ -22,7 +22,7 @@
       "@hanzo/ui": ["node_modules/@hanzo/ui"],
       "@hanzo/auth": ["node_modules/@hanzo/auth"],
       "@hanzo/commerce": ["node_modules/@hanzo/commerce"],
-      "@luxdefi/common": ["node_modules/@luxdefi/common"]
+      "@luxfi/core": ["node_modules/@luxfi/core"]
     },
     "plugins": [{"name": "next"}]
   }

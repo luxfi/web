@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 
-import { LoginPanel } from '@luxdefi/common'
+import { LoginPanel } from '@luxfi/core'
 
 const reviews = [
   {

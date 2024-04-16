@@ -36,7 +36,7 @@ export default [
   },
   {
     title: 'Open Source',
-    href: 'https://github.com/luxdefi',
+    href: 'https://github.com/luxfi',
   },
   {
     title: 'Launch Subnet',

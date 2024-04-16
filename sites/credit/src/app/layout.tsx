@@ -10,10 +10,10 @@ import {
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport,
   ChatWidget
-} from '@luxdefi/common'
+} from '@luxfi/core'
 
-import { selectionUISpecifiers } from '@luxdefi/common/conf'
-import '@luxdefi/common/style/lux-global.css'
+import { selectionUISpecifiers } from '@luxfi/core/conf'
+import '@luxfi/core/style/lux-global.css'
 
 import siteDef from '../conf/site-def'
 import _metadata from '../metadata'

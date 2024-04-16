@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Footer } from '@luxdefi/common'
+import { Footer } from '@luxfi/core'
 import { cn } from '@hanzo/ui/util'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 

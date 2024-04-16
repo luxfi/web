@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
 
-import { determineDeviceMW } from '@luxdefi/common/next'
+import { determineDeviceMW } from '@luxfi/core/next'
 
 export const middleware = 
   async (request: NextRequest) => (determineDeviceMW(request))

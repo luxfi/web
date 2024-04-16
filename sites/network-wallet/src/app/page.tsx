@@ -2,7 +2,7 @@
 
 import { observer } from 'mobx-react-lite'
 
-import { AccessCodeInput, Footer } from '@luxdefi/common'
+import { AccessCodeInput, Footer } from '@luxfi/core'
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
 

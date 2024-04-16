@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ContentComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography } from '@hanzo/ui/primitives'
-import { Footer } from '@luxdefi/common'
+import { Footer } from '@luxfi/core'
 
 import BannerComponent from '@/blocks/components/banner-block'
 

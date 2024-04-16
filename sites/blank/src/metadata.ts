@@ -57,7 +57,7 @@ export default {
     title: 'Lux Bridge Explorer - Explore your swaps',
     description: "Experience seamless multi-chain connectivity with Lux Network's Blockchain Bridge. EVM, Solana, Bitcoin, and more, united.",
     images: 'https://explorer.bridge.lux.network/assets/img/opengraph-lux.jpg',
-    site: '@luxdefi'
+    site: '@luxfi'
   },
   */
   formatDetection: { telephone: false },

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Footer } from "@luxdefi/common"
+import { Footer } from "@luxfi/core"
 import { Main } from '@hanzo/ui/primitives'
 
 import Ecosystem from "@/blocks/components/ecosystem"

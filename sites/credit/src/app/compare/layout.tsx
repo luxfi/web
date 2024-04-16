@@ -1,6 +1,6 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { Header, Footer } from '@luxdefi/common'
+import { Header, Footer } from '@luxfi/core'
 
 import siteDef from '../../conf/site-def'
 

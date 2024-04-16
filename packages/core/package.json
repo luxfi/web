@@ -1,15 +1,15 @@
 {
-  "name": "@luxdefi/common",
+  "name": "@luxfi/core",
   "version": "4.3.11",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public",
-    "scope": "@luxdefi"
+    "scope": "@luxfi"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxdefi/sites.git",
+    "url": "git+https://github.com/luxfi/web.git",
     "directory": "packages/common"
   },
   "keywords": [
@@ -19,7 +19,7 @@
     "luxdefi"
   ],
   "scripts": {
-    "lat": "npm show @luxdefi/common version",
+    "lat": "npm show @luxfi/core version",
     "pub": "npm publish",
     "build": "tsc",
     "tc": "tsc",
@@ -39,15 +39,15 @@
     "./conf": "./conf/index.ts"
   },
   "dependencies": {
+    "@hanzo/auth": "2.3.5",
+    "@hanzo/commerce": "6.3.2",
+    "@hanzo/ui": "3.6.3",
     "@next/third-parties": "^14.1.0",
     "embla-carousel-autoplay": "^8.0.1",
     "react-device-detect": "^2.2.3",
     "react-social-icons": "^6.4.0"
   },
   "peerDependencies": {
-    "@hanzo/auth": "2.3.5",
-    "@hanzo/commerce": "6.3.2",
-    "@hanzo/ui": "3.6.2",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "^0.344.0",
     "next": "14.1.3",

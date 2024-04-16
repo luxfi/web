@@ -39,7 +39,7 @@ export default {
         elements: [
           {
             title: 'Lux Standard',
-            href: 'https://github.com/luxdefi/standard',
+            href: 'https://github.com/luxfi/standard',
             newTab: true
           }
         ]

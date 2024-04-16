@@ -1,4 +1,4 @@
-import { footer, mainNav, type SiteDef  } from '@luxdefi/common/site-def'
+import { footer, mainNav, type SiteDef  } from '@luxfi/core/site-def'
 
 import commerce from '@/conf/commerce'
 import prices from '@/conf/prices'

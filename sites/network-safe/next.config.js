@@ -23,7 +23,7 @@ const nextConfig = {
     '@hanzo/ui', 
     '@hanzo/auth', 
     '@hanzo/commerce', 
-    '@luxdefi/common'
+    '@luxfi/core'
   ],
   productionBrowserSourceMaps: true,
   webpack: svgrWebpackConfig // if we need others, set up a chain of calls. 
