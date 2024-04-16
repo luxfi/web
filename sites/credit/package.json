@@ -1,6 +1,6 @@
 {
-  "name": "@hanzo/credit",
-  "version": "0.0.3",
+  "name": "@luxfi/credit",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
