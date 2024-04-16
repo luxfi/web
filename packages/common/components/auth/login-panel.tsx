@@ -7,6 +7,7 @@ import { LoginPanel as Login } from '@hanzo/auth/components'
 
 import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
+import { legal } from '../../site-def/footer'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -21,6 +22,9 @@ const LoginPanel: React.FC<{
   className='',
   reviews
 }) => {
+  const termsOfServiceUrl = legal.find(({title}) => title === 'Terms and Conditions')?.href || ''
+  const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
+
   return (
     <div className={cn('grid grid-cols-1 md:grid-cols-2', className)}>
       <div className='hidden md:flex w-full h-full bg-level-1 flex-row items-end justify-end overflow-y-auto min-h-screen'>
@@ -62,13 +66,12 @@ const LoginPanel: React.FC<{
             >
               <LuxLogo className='w-5 h-5'/>
             </Button>
-            {/* TODO: add Terms of Service and Privacy Policy links */}
             <Login 
               getStartedUrl={getStartedUrl} 
               redirectUrl={redirectUrl}
               className='w-full max-w-sm'
-              termsOfServiceUrl=''
-              privacyPolicyUrl=''
+              termsOfServiceUrl={termsOfServiceUrl}
+              privacyPolicyUrl={privacyPolicyUrl}
             />
           </div>
         </div>
