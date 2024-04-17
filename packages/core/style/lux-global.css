@@ -17,3 +17,15 @@
 .font-heading, h1, h2, h3 {
   @apply uppercase;
 }
+
+/* Specific style fixes for react-square-web-payments-sdk -
+ * reduce gap between card input and pay button
+ */
+#rswps-card-container {
+  min-height: unset !important;
+}
+
+.sq-card-wrapper .sq-card-message {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
