@@ -13,11 +13,11 @@ export default {
     },
     {
       trigger: 'Apple Wallet pass included',
-      content: 'Lux Pass is the first NFT that can be added to your Apple Wallet as a reward card with NFC support at events.'
+      content: 'Lux Key is the first NFT that can be added to your Apple Wallet as a reward card with NFC support at events.'
     },
     {
       trigger: 'Automatic DAO membership',
-      content: 'Lux Pass includes a membership to the Lux Network decentralized governance organization.'
+      content: 'Lux Key includes a membership to the Lux Network decentralized governance organization.'
     },
   ]
 } satisfies AccordianBlock
