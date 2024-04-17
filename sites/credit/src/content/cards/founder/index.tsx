@@ -9,7 +9,7 @@ import benefits from '../benefits'
 const card: Card = {
   category: 'founder',
   title: 'Founder Card',
-  rarity: '1/100,000',
+  rarity: '1/20,000',
   materials: [
     {
       title: 'Cool Chrome',
@@ -46,9 +46,9 @@ const card: Card = {
   ],
   annualFee: 0,
   initiationFee: 4999,
-  replacementFee: 49,
-  rewardPct: 8,
-  fxRatePct: 0.75,
+  replacementFee: 69,
+  rewardPct: 9,
+  fxRatePct: 0.5,
   maxAccountHolders: 3,
   travelBenefits: <TravelBenefits/>,
   lifestyleBenefits: <LifestyleBenefits/>,

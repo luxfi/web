@@ -6,8 +6,8 @@ import MDX_Content from './detail.mdx'
 import m from './media'
 
 const fees = {
-  initial: 50000,
-  annual: 5000 
+  initial: 49500,
+  annual: 4999 
 }
 const byline = `${formatCurrencyValue(fees.initial)} initiation - ${formatCurrencyValue(fees.annual)} yearly`
 
@@ -19,7 +19,7 @@ export default {
   title: 'Lux Sovereign Card',
   titleShort: 'Sovereign',
   ...m.spreadableImg('LXM-CR-S'),
-  run: 10000,
+  run: 1000,
   fees,
   byline,
   detail: <MDX_Content />,
@@ -30,7 +30,7 @@ export default {
       familyId: 'LXM-CR-S',
       familyTitle: 'Sovereign',
       optionLabel: 'Reflective Titanium',
-      price: 50000,
+      price: fees.initial,
       ...m.spreadableOptionImg('LXM-CR-S-RT'),
       ...m.mediaStack('LXM-CR-S-RT'),
     } satisfies Product,

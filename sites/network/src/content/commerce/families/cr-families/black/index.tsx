@@ -6,8 +6,8 @@ import MDX_Content from './detail.mdx'
 import m from './media'
 
 const fees = {
-  initial: 500,
-  annual: 69
+  initial: 999,
+  annual: 99
 }
 const byline = `${formatCurrencyValue(fees.initial)} initiation - ${formatCurrencyValue(fees.annual)} yearly`
 
@@ -30,7 +30,7 @@ export default {
       familyTitle: 'Black',
       optionLabel: 'Annodized Black Titanium',
       familyId: 'LXM-CR-B',
-      price: 500,
+      price: fees.initial,
       ...m.spreadableOptionImg('LXM-CR-B-ABT'),
       ...m.mediaStack('LXM-CR-B-ABT'),
     } satisfies Product,
@@ -40,7 +40,7 @@ export default {
       familyTitle: 'Black',
       optionLabel: 'Black Gunmetal',
       familyId: 'LXM-CR-B',
-      price: 500,
+      price: fees.initial,
       ...m.spreadableOptionImg('LXM-CR-B-GM'),
       ...m.mediaStack('LXM-CR-B-GM'),
     } satisfies Product

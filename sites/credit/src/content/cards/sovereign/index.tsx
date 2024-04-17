@@ -27,7 +27,7 @@ const card: Card = {
     animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'
   }],
   annualFee: 4999,
-  initiationFee: 49050,
+  initiationFee: 49500,
   replacementFee: 89,
   rewardPct: 11,
   fxRatePct: 0,
