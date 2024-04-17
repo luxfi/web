@@ -47,7 +47,7 @@ const BagButton: React.FC<{
       <div className={
         'z-above-content flex flex-col justify-center items-center  ' +
         'absolute left-0 right-0 top-0 bottom-0 ' + 
-        'leading-none font-sans font-bold text-primary-fg text-accent text-xs ' 
+        'leading-none font-sans font-bold text-foreground text-xs ' 
       }>
         <div className='h-[3px] w-full' />
         <div>{c.cartQuantity}</div>

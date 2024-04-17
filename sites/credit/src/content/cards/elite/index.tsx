@@ -45,10 +45,10 @@ const card: Card = {
     }
   ],
   annualFee: 999,
-  initiationFee: 4990,
+  initiationFee: 9999,
   replacementFee: 79,
-  rewardPct: 9,
-  fxRatePct: 0.5,
+  rewardPct: 10,
+  fxRatePct: 0.25,
   maxAccountHolders: 5,
   travelBenefits: <TravelBenefits/>,
   lifestyleBenefits: <LifestyleBenefits/>,

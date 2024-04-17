@@ -9,7 +9,7 @@ import benefits from '../benefits'
 const card: Card = {
   category: 'black',
   title: 'Black Card',
-  rarity: 'Limited',
+  rarity: 'Unlimited',
   materials: [
     {
       title: 'Anodized Black Titanium',
@@ -48,7 +48,7 @@ const card: Card = {
   annualFee: 99,
   initiationFee: 999,
   replacementFee: 49,
-  rewardPct: 7,
+  rewardPct: 8,
   fxRatePct: 1,
   maxAccountHolders: 2,
   travelBenefits: <TravelBenefits/>,
