@@ -6,7 +6,8 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "node_modules/@luxfi/core",
-    "node_modules/@luxfi/core/node_modules/@hanzo/*"
+    "node_modules/@luxfi/core/node_modules/@hanzo/**/*.ts",
+    "node_modules/@luxfi/core/node_modules/@hanzo/**/*.tsx"
   ],
   "exclude": [ "node_modules" ],
   "compilerOptions": {

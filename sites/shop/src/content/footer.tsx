@@ -42,10 +42,10 @@ export default [
         href: '/validator',
       },
       {
-        title: 'Lux Pass',
-        href: '/pass',
+        title: 'Lux Key',
+        href: '/key',
       },
-    ] 
+    ]
   },
   {
     blockType: 'cta',
@@ -69,7 +69,7 @@ export default [
         title: 'Github',
         href: 'https://github.com/luxdefi',
       },
-    ] 
+    ]
   },
   {
     blockType: 'cta',
@@ -113,8 +113,8 @@ export default [
         href: 'https://drive.google.com/drive/folders/14OJtKLVakGY6883XO9yGbiHtlFxQUUm5?usp=share_link',
         external: true
       },
-    ] 
-  },  
+    ]
+  },
   {
     blockType: 'cta',
     elements: [
@@ -158,7 +158,7 @@ export default [
         external: true,
         icon: <Icons.SocialIcon network='instagram' size={SOC_ICON_SIZE + 2} />
       },
-    ] 
+    ]
   },
   {
     blockType: 'cta',
@@ -177,6 +177,6 @@ export default [
         href: '/assets/pdf/LUX-Privacy-Policy.pdf',
         newTab: true,
       },
-    ] 
+    ]
   },
 ] as CTABlock[]

@@ -17,7 +17,7 @@ import {
   ScrollArea
 } from '@hanzo/ui/primitives'
 import { useCommerce, BuyButton } from '@hanzo/commerce'
-import { peekDump } from '@hanzo/commerce/debug'
+//import { peekDump } from '@hanzo/commerce/debug'
 import { useState } from 'react'
 
 type Props = {
@@ -92,7 +92,7 @@ const Page = ({ searchParams }: Props ) => {
       setJSON(undefined)
     }
     else {
-      setJSON(peekDump(result))
+      setJSON(JSON.stringify(result ? result : {}))
       setError(undefined)
     }
   }
@@ -101,15 +101,15 @@ const Page = ({ searchParams }: Props ) => {
     setSkuPath(undefined)
     setJSON(undefined)
   }
-        {/* 
+        {/*
 */}
   return (
     <Main className=''>
       <div className='bg-[#eeeeee] h-10 w-full mb-2 text-primary-fg text-center p-2'>Badassery</div>
       <div className='w-full md:w-[400px] md:mx-auto flex flex-col items-center gap-8'>
-        <InputForm 
-          onSubmit={handleSubmit} 
-          onClear={skuPath ? handleClear : undefined} 
+        <InputForm
+          onSubmit={handleSubmit}
+          onClear={skuPath ? handleClear : undefined}
           className='flex flex-col items-stretch w-full md:w-[250px] md:mx-auto'
         />
         <div className='w-full'>
@@ -118,11 +118,11 @@ const Page = ({ searchParams }: Props ) => {
             {skuPath && <pre>PATH: {skuPath}</pre>}
             {error && <p className='text-destructive'>{error}</p>}
             {json && <pre>{json}</pre>}
-          </ScrollArea> 
+          </ScrollArea>
         </div>
         {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}
       </div>
-      
+
     </Main>
   )
 }
