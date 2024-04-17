@@ -18,7 +18,7 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@luxfi/core": "4.3.16",
+    "@luxfi/core": "4.3.17",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
@@ -36,7 +36,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "7.50.1",
-    "request": "^2.88.2",
     "supports-color": "8.1.1",
     "webpack-watch-files-plugin": "^1.2.1",
     "zod": "3.21.4"
