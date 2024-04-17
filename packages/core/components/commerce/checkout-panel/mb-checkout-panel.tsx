@@ -1,32 +1,40 @@
 'use client'
-
 import React, { type PropsWithChildren } from 'react'
 
+import { StepIndicator } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+import { AuthWidget } from '@hanzo/auth/components'
 import { CartAccordian } from '@hanzo/commerce'
 
+import CloseButton from './close-button'
 import BagButton from '../bag-button'
-import { StepIndicator } from '@hanzo/ui/primitives'
+import LinksRow from './links-row'
 
 const MobileCheckoutPanel: React.FC<PropsWithChildren & {
   index: number
   stepNames: string[]
+  close:() => void
   className?: string
 }> = ({
   index,
   stepNames,
+  close,
   className='',
   children
 }) => (
 
-  <div /* id='MOBILE_GRID' */ className={cn('flex flex-col items-center justify-start px-4 pt-11', className)}>
-    <StepIndicator 
-      dotSizeRem={0.8} 
-      steps={stepNames} 
-      currentStep={index} 
-      className='text-xs w-full'
-      muted
-    />
+  <div /* id='MOBILE_GRID' */ className={cn('bg-background flex flex-col justify-start px-4', className)}>
+    <div className='sticky top-0 w-full flex flex-row justify-between items-center bg-background'>
+      <CloseButton close={close} className='p-1 -ml-3' size='xs' />
+      <StepIndicator 
+        dotSizeRem={1} 
+        steps={stepNames} 
+        currentStep={index} 
+        className='text-xs font-semibold w-pr-70 mt-3' 
+      />
+      {/* Need wrapper div since 'noLogin' returns null if no logged in user */}
+      <div className='w-10 h-10 flex items-center justify-center'><AuthWidget noLogin className=''/></div>
+    </div>
     <CartAccordian 
       icon={
         <BagButton 
@@ -38,9 +46,10 @@ const MobileCheckoutPanel: React.FC<PropsWithChildren & {
           iconClx='fill-foreground '
         />
       } 
-      className='flex items-center justify-center py-2 w-full' 
+      className='flex items-center justify-center py-2 mt-2 w-full' 
     />
     {children}
+    <LinksRow className='mt-auto mb-3 pt-2' />
   </div>
 )
 

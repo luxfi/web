@@ -57,7 +57,7 @@ const DesktopBagPopup: React.FC<{
         <CartPanel 
           handleCheckout={() => {router.push('/checkout')}} 
           className='mt-4 mb-4 border-none py-0 px-4'
-          listClx='rounded-sm'
+          listClx='rounded-sm pr-3'
           scrollAfter={5}
           scrollHeightClx='h-[70vh]'
           itemClx='mt-3'

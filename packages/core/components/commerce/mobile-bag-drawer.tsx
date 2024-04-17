@@ -25,7 +25,7 @@ const MobileBagDrawer: React.FC<{
         <CartPanel 
           handleCheckout={handleCheckout} 
           className='mt-4 mb-4 border-none py-0 px-4 w-full '
-          listClx='rounded-sm'
+          listClx='rounded-sm pr-3'
           scrollAfter={5}
           itemClx='mt-2'
           totalClx='sticky px-1 pr-2 border rounded-sm -bottom-[1px] bg-background'
