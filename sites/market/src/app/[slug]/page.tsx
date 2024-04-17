@@ -10,7 +10,7 @@ import { products } from '@/content'
 import siteDef from '../../conf/site-def'
 
 type Props = {
-  params: { slug: 'silver' | 'gold' | 'coin' | /* 'credit' |*/ 'validator' | 'key' | 'uranium' }
+  params: { slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator' | 'key' | 'uranium' }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
 
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
     'silver',
     'gold',
     'coin',
-    //'credit',
+    'credit',
     'validator',
     'key',
     'uranium',
