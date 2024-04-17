@@ -18,7 +18,7 @@ import {
   Slider
 } from '@hanzo/ui/primitives'
 import { useCommerce, BuyButton } from '@hanzo/commerce'
-import { peekDump } from '@hanzo/commerce/debug'
+import { peekDump } from '@hanzo/commerce/service/debug'
 import { useState } from 'react'
 
 type Props = {
