@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/core",
-  "version": "4.4.0",
+  "version": "4.4.1",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -39,8 +39,8 @@
     "./conf": "./conf/index.ts"
   },
   "dependencies": {
-    "@hanzo/auth": "2.4.0",
-    "@hanzo/commerce": "6.4.0",
+    "@hanzo/auth": "2.4.1",
+    "@hanzo/commerce": "6.4.1",
     "@hanzo/ui": "3.6.3",
     "@next/third-parties": "^14.1.0",
     "embla-carousel-autoplay": "^8.0.1",
