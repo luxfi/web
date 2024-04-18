@@ -1,7 +1,10 @@
 'use client'
 
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Autoplay from 'embla-carousel-autoplay'
+import { getCookie , setCookie } from 'cookies-next'
 
 import { cn } from '@hanzo/ui/util'
 import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
@@ -11,7 +14,6 @@ import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
 import domains from './common-auth-domains'
-import { useEffect } from 'react'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -26,20 +28,23 @@ const LoginPanel: React.FC<{
   className='',
   reviews
 }) => {
+  const router = useRouter()
+  
   const termsOfServiceUrl = legal.find(({title}) => title === 'Terms and Conditions')?.href || ''
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
   const onLogin = (token: string) => {
-    localStorage.setItem('auth-token', token)
+    setCookie('auth-token', token)
     for (const { url } of domains) {
       parent?.contentWindow?.postMessage(token, url)
     }
+    redirectUrl && router.replace(redirectUrl)
   }
 
   useEffect(() => {
     const handleMessage = (event: any) => {
       if (domains.includes(event.origin)) {
-        const token = localStorage.getItem('auth-token')
+        const token = getCookie('auth-token')
         parent.contentWindow?.postMessage(token, event.origin)
       }
     }

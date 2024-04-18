@@ -43,6 +43,7 @@
     "@hanzo/commerce": "6.4.1",
     "@hanzo/ui": "3.6.3",
     "@next/third-parties": "^14.1.0",
+    "cookies-next": "^4.1.1",
     "embla-carousel-autoplay": "^8.0.1",
     "react-device-detect": "^2.2.3",
     "react-social-icons": "^6.4.0"
