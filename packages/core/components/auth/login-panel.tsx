@@ -8,6 +8,7 @@ import { LoginPanel as Login } from '@hanzo/auth/components'
 import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
+import domains from './common-auth-domains'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -25,7 +26,14 @@ const LoginPanel: React.FC<{
   const termsOfServiceUrl = legal.find(({title}) => title === 'Terms and Conditions')?.href || ''
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
-  return (
+  const onLogin = (token: string) => {
+    for (const { id, url } of domains) {
+      const childFrame = document.getElementById(id) as HTMLIFrameElement
+      childFrame?.contentWindow?.postMessage(token, url)
+    }
+  }
+
+  return (<>
     <div className={cn('grid grid-cols-1 md:grid-cols-2', className)}>
       <div className='hidden md:flex w-full h-full bg-level-1 flex-row items-end justify-end overflow-y-auto min-h-screen'>
         <div className='h-full w-full max-w-[750px] px-8 pt-0'>
@@ -72,12 +80,18 @@ const LoginPanel: React.FC<{
               className='w-full max-w-sm'
               termsOfServiceUrl={termsOfServiceUrl}
               privacyPolicyUrl={privacyPolicyUrl}
+              onLoginChanged={onLogin}
             />
           </div>
         </div>
       </div>
     </div>
-  )
+    <div className="hidden">
+      {domains.map(({ id, url }) => (
+        <iframe key={id} id={id} src={`${url}/login`} />
+      ))}
+    </div>
+  </>)
 }
 
 export default LoginPanel

@@ -15,6 +15,7 @@ export {
 
 export { default as CheckoutPanel } from './commerce/checkout-panel'
 export { default as LoginPanel } from './auth/login-panel'
+export { default as AuthListener } from './auth/auth-listener'
 
 
 /* PLEASE KEEP

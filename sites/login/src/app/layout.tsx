@@ -36,9 +36,6 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
           subtitle='AI'
           chatbotUrl='https://lux.chat/iframe'
         />
-        <div className="hidden">
-          <iframe id={'lux.market'} src={'https://lux.market'} />
-        </div>
       </RootLayoutCommon>
     </AuthServiceProvider>
   )

@@ -55,9 +55,9 @@ const MobileHeader: React.FC<{
 
   const menuOpen = () => (menuState !== 'closed')
 
-  const onLoginChanged = (loggedIn: boolean) => {
+  const onLoginChanged = (token: string) => {
     // by def, menu was in state 'login'
-    if (loggedIn) { setMenuState('nav') }
+    if (!!token) { setMenuState('nav') }
   }
 
   const setMenuOpen = (open: boolean) => {
