@@ -3,7 +3,8 @@ import React, { type PropsWithChildren } from 'react'
 import { 
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport,
-  ChatWidget
+  ChatWidget,
+  AuthListener
 } from '@luxfi/core'
 
 import { Toaster } from '@hanzo/ui/primitives'
@@ -47,6 +48,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
               icon: 'ShieldFlashLineIcon' 
             }]}
           />
+          <AuthListener/>
           <Toaster />
         </RootLayoutCommon>
       </CommerceServiceProvider>

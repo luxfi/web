@@ -9,7 +9,8 @@ import { CommerceServiceProvider } from '@hanzo/commerce'
 import { 
   RootLayout as RootLayoutCommon, 
   rootLayoutViewport,
-  ChatWidget
+  ChatWidget,
+  AuthListener
 } from '@luxfi/core'
 
 import { selectionUISpecifiers } from '@luxfi/core/conf'
@@ -41,6 +42,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
             subtitle='AI'
             chatbotUrl='https://lux.chat/iframe'
           />
+          <AuthListener/>
         </RootLayoutCommon>
       </CommerceServiceProvider>
     </AuthServiceProvider>
