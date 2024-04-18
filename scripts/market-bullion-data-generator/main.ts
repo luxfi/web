@@ -1,5 +1,4 @@
-import { writeFileSync } from 'fs'
-import { v4 as unique} from 'uuid'
+import fs from 'fs-extra'
 
 import { type Product, type Family } from '@hanzo/commerce/types'
 
@@ -39,13 +38,16 @@ const visitNode = (
     const bullionForm = titleTokens.pop()
     const previousTitle = titleTokens.filter((el) => (el.length > 0)).join(', ')
 
+    const getSku = (prodTok: string) => (
+      [...skuTokens, prodTok].join(SEP.tok)   
+    )
+
         // from LeafImportData to hanzo/cart Product
     const hanzoProducts = (levelData.ch as LeafImportData[]).map(
       (prod) => ({
-        id: unique(),
+        id: getSku(prod.tok),
+        sku: getSku(prod.tok), 
 
-          // add myself to the string
-        sku: [...skuTokens, prod.tok].join('-'), 
           // Desired result: "Lux Bullion, Gold, 1oz Minted Bar", ie,
           //  `<previous title tokens joined>, <amount> <form>`
         fullTitle: `${previousTitle}, ${amountStrFromItemToken(prod.tok)} ${bullionForm!}`,
@@ -95,5 +97,9 @@ const visitNode = (
 visitNode(ROOT as unknown as NodeImportData)
 
 console.log(`Writing Family with their Products to ${OUT_DIR + OUT_FN}...`)
-writeFileSync(OUT_DIR + OUT_FN, JSON.stringify(families, null, 2))
+fs.writeJsonSync(
+  OUT_DIR + OUT_FN, 
+  families, 
+  { spaces: 2 }
+)
 console.log('done')
