@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 import { formatCurrencyValue } from '@hanzo/commerce'
@@ -15,7 +15,6 @@ const CardPreview: React.FC<{
 }> = ({
   card,
 }) => {
-  const router = useRouter()
   const [selectedMaterial, setSelectedMaterial] = useState<CardMaterial>(card.materials[0])
 
   if (!selectedMaterial) {
@@ -23,19 +22,24 @@ const CardPreview: React.FC<{
   }
 
   return (
-    <div className='grid grid-cols-5 gap-2 py-5 px-4'>
-      <div className='flex flex-col gap-2 col-span-2 items-center'>
-        <ImageBlockComponent block={{blockType: 'image', ...selectedMaterial.cardImg}} className='w-pr-90'/>
-        <p className='text-xxs sm:text-xs'>{selectedMaterial.title}</p>
+    <div className='grid grid-cols-7 gap-2 py-5 px-4'>
+      <div className='flex flex-col gap-2 col-span-3 items-center'>
+        <Link href={`/cards/${card.category}?sku=${selectedMaterial.sku}`}>
+          <ImageBlockComponent
+            block={{blockType: 'image', ...selectedMaterial.cardImg}}
+            className='w-pr-90'
+          />
+        </Link>
+        <p className='text-xxs sm:text-xs text-center'>{selectedMaterial.title}</p>
       </div>
-      <div className='flex flex-col h-auto justify-between col-span-3 sm:p-3'>
-        <div
+      <div className='flex flex-col h-auto justify-between col-span-4 sm:p-3'>
+        <Link
+          href={`/cards/${card.category}?sku=${selectedMaterial.sku}`}
           className='flex justify-between items-center cursor-pointer'
-          onClick={() => router.push(`/cards/${card.category}?sku=${selectedMaterial.sku}`)}
         >
           <span className='sm:!text-lg'>{card.title}</span>
           <ArrowRight/>
-        </div>
+        </Link>
         <div className='flex gap-2 items-center'>
           <CardMaterialPicker
             materials={card.materials}

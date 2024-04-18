@@ -51,10 +51,12 @@ const CardPreview: React.FC<{
     <div className='flex flex-col gap-10'>
       <div className='grid grid-cols-4 gap-10'>
         <div className='flex flex-col gap-5 items-center col-span-1'>
-          <ImageBlockComponent
-            block={{blockType: 'image', ...selectedMaterial.cardImg}}
-            className='w-pr-80'
-          />
+          <Link href={`/cards/${card.category}?sku=${selectedMaterial.sku}`}>
+            <ImageBlockComponent
+              block={{blockType: 'image', ...selectedMaterial.cardImg}}
+              className='w-pr-80'
+            />
+          </Link>
           <CardMaterialPicker
             materials={card.materials}
             selectedMaterial={selectedMaterial}
@@ -68,14 +70,16 @@ const CardPreview: React.FC<{
         </div>
 
         <div className='flex flex-col gap-10 col-span-2'>
-          <div className='flex flex-col gap-2'>
-            <h3 className='font-heading text-xl'>{card.title}</h3>
+          <ApplyTypography className='flex flex-col !gap-2'>
+            <Link href={`/cards/${card.category}?sku=${selectedMaterial.sku}`} className='font-heading text-xl w-fit !no-underline'>
+              {card.title}
+            </Link>
             <p className='text-sm'>{selectedMaterial?.title}</p>
             <div className='flex flex-col text-sm'>
               <div><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
               <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
             </div>
-          </div>
+          </ApplyTypography>
           <ApplyTypography className='flex flex-col !gap-2'>
             {card.preview}
           </ApplyTypography>
