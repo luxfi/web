@@ -45,11 +45,11 @@ const LoginPanel: React.FC<{
     const handleMessage = (event: any) => {
       if (domains.includes(event.origin)) {
         const token = getCookie('auth-token')
-        parent.contentWindow?.postMessage(token, event.origin)
+        parent?.contentWindow?.postMessage(token, event.origin)
       }
     }
 
-    if (window) {
+    if (typeof window !== "undefined") {
       window.addEventListener('message', handleMessage)
   
       return () => {

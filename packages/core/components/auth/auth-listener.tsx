@@ -19,7 +19,7 @@ const AuthListener = () => {
       }
     }
 
-    if (window) {
+    if (typeof window !== "undefined") {
       window.addEventListener('message', handleMessage)
   
       return () => {
