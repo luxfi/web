@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Autoplay from 'embla-carousel-autoplay'
 
@@ -9,6 +11,7 @@ import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
 import domains from './common-auth-domains'
+import { useEffect } from 'react'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -27,13 +30,28 @@ const LoginPanel: React.FC<{
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
   const onLogin = (token: string) => {
-    for (const { id, url } of domains) {
-      const childFrame = document.getElementById(id) as HTMLIFrameElement
-      childFrame?.contentWindow?.postMessage(token, url)
+    localStorage.setItem('auth-token', token)
+    for (const { url } of domains) {
+      parent?.contentWindow?.postMessage(token, url)
     }
   }
 
-  return (<>
+  useEffect(() => {
+    const handleMessage = (event: any) => {
+      if (domains.includes(event.origin)) {
+        const token = localStorage.getItem('auth-token')
+        parent.contentWindow?.postMessage(token, event.origin)
+      }
+    }
+
+    window.addEventListener('message', handleMessage)
+
+    return () => {
+      window.removeEventListener('message', handleMessage)
+    }
+  }, [])
+
+  return (
     <div className={cn('grid grid-cols-1 md:grid-cols-2', className)}>
       <div className='hidden md:flex w-full h-full bg-level-1 flex-row items-end justify-end overflow-y-auto min-h-screen'>
         <div className='h-full w-full max-w-[750px] px-8 pt-0'>
@@ -86,12 +104,7 @@ const LoginPanel: React.FC<{
         </div>
       </div>
     </div>
-    <div className="hidden">
-      {domains.map(({ id, url }) => (
-        <iframe key={id} id={id} src={`${url}/login`} />
-      ))}
-    </div>
-  </>)
+  )
 }
 
 export default LoginPanel
