@@ -12,16 +12,10 @@ const AuthListener = () => {
   }
 
   useEffect(() => {
-    if (!!localStorage.getItem('auth-token')) {
-      console.log("Detected auth-token cookie... Logging in...")
-      auth.loginWithCustomToken(localStorage.getItem('auth-token') as string)
-    }
-
     const handleMessage = (event: any) => {
       if (event.origin === process.env.NEXT_PUBLIC_AUTH_ORIGIN) {
         const token = event.data
-        localStorage.setItem('auth-token', token)
-        auth.loginWithCustomToken(localStorage.getItem('auth-token') as string)
+        auth.loginWithCustomToken(token)
       }
     }
 
