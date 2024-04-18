@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from "react"
+import { useEffect } from 'react'
 import { useAuth } from '@hanzo/auth/service'
 
 const AuthListener = () => {
@@ -19,14 +19,23 @@ const AuthListener = () => {
       }
     }
 
-    window.addEventListener('message', handleMessage)
-
-    return () => {
-      window.removeEventListener('message', handleMessage)
+    if (window) {
+      window.addEventListener('message', handleMessage)
+  
+      return () => {
+        window.removeEventListener('message', handleMessage)
+      }
     }
   }, [])
 
-  return (<iframe id='login' onLoad={requestAuthToken} src={`${process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/login`}/>)
+  return (
+    <iframe
+      id='login'
+      onLoad={requestAuthToken}
+      src={`${process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/login`}
+      className='hidden'
+    />
+  )
 }
 
 export default AuthListener

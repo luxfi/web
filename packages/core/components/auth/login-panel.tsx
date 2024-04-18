@@ -34,7 +34,7 @@ const LoginPanel: React.FC<{
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
   const onLogin = (token: string) => {
-    setCookie('auth-token', token)
+    setCookie('auth-token', token, { sameSite: 'none', secure: true })
     for (const { url } of domains) {
       parent?.contentWindow?.postMessage(token, url)
     }
@@ -49,10 +49,12 @@ const LoginPanel: React.FC<{
       }
     }
 
-    window.addEventListener('message', handleMessage)
-
-    return () => {
-      window.removeEventListener('message', handleMessage)
+    if (window) {
+      window.addEventListener('message', handleMessage)
+  
+      return () => {
+        window.removeEventListener('message', handleMessage)
+      }
     }
   }, [])
 
