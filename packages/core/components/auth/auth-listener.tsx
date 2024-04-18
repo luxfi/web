@@ -26,7 +26,7 @@ const AuthListener = () => {
     }
   }, [])
 
-  return (<iframe id='login' onLoad={requestAuthToken} src={process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/>)
+  return (<iframe id='login' onLoad={requestAuthToken} src={`${process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/login`}/>)
 }
 
 export default AuthListener
