@@ -29,7 +29,7 @@ const LoginPanel: React.FC<{
   reviews
 }) => {
   const router = useRouter()
-  
+
   const termsOfServiceUrl = legal.find(({title}) => title === 'Terms and Conditions')?.href || ''
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
@@ -49,9 +49,9 @@ const LoginPanel: React.FC<{
       }
     }
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.addEventListener('message', handleMessage)
-  
+
       return () => {
         window.removeEventListener('message', handleMessage)
       }
@@ -69,7 +69,7 @@ const LoginPanel: React.FC<{
               className='w-fit !min-w-0 p-2'
             >
               <Logo size='md' spanClassName='!cursor-pointer' layout='text-only'/>
-            </Button>  
+            </Button>
             <Carousel
               options={{ align: 'center', loop: true }}
               className='w-full'
@@ -99,8 +99,8 @@ const LoginPanel: React.FC<{
             >
               <LuxLogo className='w-5 h-5'/>
             </Button>
-            <Login 
-              getStartedUrl={getStartedUrl} 
+            <Login
+              getStartedUrl={getStartedUrl}
               redirectUrl={redirectUrl}
               className='w-full max-w-sm'
               termsOfServiceUrl={termsOfServiceUrl}

@@ -19,9 +19,9 @@ const AuthListener = () => {
       }
     }
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.addEventListener('message', handleMessage)
-  
+
       return () => {
         window.removeEventListener('message', handleMessage)
       }
