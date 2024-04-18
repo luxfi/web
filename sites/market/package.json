@@ -18,7 +18,7 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@luxfi/core": "4.4.7",
+    "@luxfi/core": "4.4.8",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
