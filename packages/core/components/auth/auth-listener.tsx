@@ -13,7 +13,7 @@ const AuthListener = () => {
 
   useEffect(() => {
     const handleMessage = (event: any) => {
-      if (event.origin === process.env.NEXT_PUBLIC_AUTH_ORIGIN) {
+      if (event.origin === process.env.NEXT_PUBLIC_LOGIN_SITE_URL) {
         const token = event.data
         auth.loginWithCustomToken(token)
       }
