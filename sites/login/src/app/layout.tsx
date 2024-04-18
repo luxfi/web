@@ -29,7 +29,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
 
   return (
     <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
-      <RootLayoutCommon siteDef={siteDef} >
+      <RootLayoutCommon siteDef={siteDef} header={false} >
         {children}
         <ChatWidget
           title='LUX'
