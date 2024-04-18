@@ -7,7 +7,7 @@ import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
 import { LoginPanel } from '@hanzo/auth/components'
 
-import { AccessCodeInput, Footer } from '@luxfi/core'
+import { AccessCodeInput, Footer, Header } from '@luxfi/core'
 
 import siteDef from '../site-def'
 import { useRouter } from 'next/navigation'
@@ -27,6 +27,7 @@ const Home = observer(() => {
   }
 
   return (<>
+    <Header siteDef={siteDef} />
     <Main className='h-screen -mt-[44px] md:-mt-[80px]'>
       <ApplyTypography className='flex flex-col gap-8 m-auto text-center'>
         <h1>MEMBER LOGIN</h1>

@@ -29,13 +29,16 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
 
   return (
     <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
-      <RootLayoutCommon siteDef={siteDef} >
+      <RootLayoutCommon siteDef={siteDef} header={false} >
         {children}
         <ChatWidget
           title='LUX'
           subtitle='AI'
           chatbotUrl='https://lux.chat/iframe'
         />
+        <div className="hidden">
+          <iframe id={'lux.market'} src={'https://lux.market'} />
+        </div>
       </RootLayoutCommon>
     </AuthServiceProvider>
   )
