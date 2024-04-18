@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/core",
-  "version": "4.4.6",
+  "version": "4.4.7",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -39,8 +39,8 @@
     "./conf": "./conf/index.ts"
   },
   "dependencies": {
-    "@hanzo/auth": "2.4.3",
-    "@hanzo/commerce": "6.4.3",
+    "@hanzo/auth": "2.4.4",
+    "@hanzo/commerce": "6.4.4",
     "@hanzo/ui": "3.6.3",
     "@next/third-parties": "^14.1.0",
     "cookies-next": "^4.1.1",
