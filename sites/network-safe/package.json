@@ -17,7 +17,7 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@luxfi/core": "4.4.12",
+    "@luxfi/core": "4.4.13",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "mobx-react": "^9.1.0",
