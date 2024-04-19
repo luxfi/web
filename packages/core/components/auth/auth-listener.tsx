@@ -2,40 +2,22 @@
 
 import { useEffect } from 'react'
 import { useAuth } from '@hanzo/auth/service'
+import { getCookie } from 'cookies-next'
 
 const AuthListener = () => {
   const auth = useAuth()
 
-  const requestAuthToken = () => {
-    const childFrame = document.getElementById('login') as HTMLIFrameElement
-    childFrame?.contentWindow?.postMessage(true, process.env.NEXT_PUBLIC_LOGIN_SITE_URL ?? '')
-  }
-
   useEffect(() => {
-    const handleMessage = (event: any) => {
-      if (event.origin === process.env.NEXT_PUBLIC_LOGIN_SITE_URL) {
-        const token = event.data
-        auth.loginWithCustomToken(token)
-      }
+    const authToken = getCookie('auth-token')
+    if (!!authToken) {
+      auth.loginWithCustomToken(authToken)
     }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('message', handleMessage)
-
-      return () => {
-        window.removeEventListener('message', handleMessage)
-      }
+    else {
+      auth.logout()
     }
   }, [])
 
-  return (
-    <iframe
-      id='login'
-      onLoad={requestAuthToken}
-      src={`${process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/login`}
-      className='hidden'
-    />
-  )
+  return ( <></> )
 }
 
 export default AuthListener
