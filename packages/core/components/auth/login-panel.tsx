@@ -11,6 +11,7 @@ import { LoginPanel as Login } from '@hanzo/auth/components'
 import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
+import { useRouter } from 'next/navigation'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -25,6 +26,8 @@ const LoginPanel: React.FC<{
   className='',
   reviews
 }) => {
+  const router = useRouter()
+
   const termsOfServiceUrl = legal.find(({title}) => title === 'Terms and Conditions')?.href || ''
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
@@ -32,6 +35,8 @@ const LoginPanel: React.FC<{
     setCookie('auth-token', token, {
       expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // 30 days
     })
+
+    redirectUrl && router.push(redirectUrl)
   }
 
   return (<>

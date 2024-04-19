@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { useAuth } from '@hanzo/auth/service'
+import { getCookie } from 'cookies-next'
 
 const AuthListener = () => {
   const auth = useAuth()
@@ -13,10 +14,11 @@ const AuthListener = () => {
     })
     .then(response => response.json())
     .then((data: any) => {
+      const token = getCookie('auth-token')
       console.log(data)
-      if (!!data.token) {
-
-        auth.loginWithCustomToken(data.token)
+      console.log(token)
+      if (!!token) {
+        auth.loginWithCustomToken(token)
       }
     })
   }, [auth])
