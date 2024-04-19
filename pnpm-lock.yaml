@@ -595,12 +595,6 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  sites/link_old:
-    dependencies:
-      http-server:
-        specifier: ^14.1.1
-        version: 14.1.1(supports-color@8.1.1)
-
   sites/login:
     dependencies:
       '@luxfi/core':
