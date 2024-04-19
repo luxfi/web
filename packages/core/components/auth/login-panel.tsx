@@ -1,10 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Autoplay from 'embla-carousel-autoplay'
-import { getCookie , setCookie } from 'cookies-next'
+import { setCookie } from 'cookies-next'
 
 import { cn } from '@hanzo/ui/util'
 import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
@@ -13,7 +11,7 @@ import { LoginPanel as Login } from '@hanzo/auth/components'
 import { Logo } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
-import domains from './common-auth-domains'
+import { useRouter } from 'next/navigation'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -34,31 +32,19 @@ const LoginPanel: React.FC<{
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
   const onLogin = (token: string) => {
-    setCookie('auth-token', token, { sameSite: 'none', secure: true })
-    for (const { url } of domains) {
-      parent?.contentWindow?.postMessage(token, url)
-    }
-    redirectUrl && router.replace(redirectUrl)
+    setCookie('auth-token', token, {
+      domain: 'lux.services',
+      path: '/',
+      sameSite: 'none',
+      secure: true,
+      httpOnly: false,
+      expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // 30 days
+    })
+
+    redirectUrl && router.push(redirectUrl)
   }
 
-  useEffect(() => {
-    const handleMessage = (event: any) => {
-      if (domains.includes(event.origin)) {
-        const token = getCookie('auth-token')
-        parent?.contentWindow?.postMessage(token, event.origin)
-      }
-    }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('message', handleMessage)
-
-      return () => {
-        window.removeEventListener('message', handleMessage)
-      }
-    }
-  }, [])
-
-  return (
+  return (<>
     <div className={cn('grid grid-cols-1 md:grid-cols-2', className)}>
       <div className='hidden md:flex w-full h-full bg-level-1 flex-row items-end justify-end overflow-y-auto min-h-screen'>
         <div className='h-full w-full max-w-[750px] px-8 pt-0'>
@@ -111,7 +97,7 @@ const LoginPanel: React.FC<{
         </div>
       </div>
     </div>
-  )
+  </>)
 }
 
 export default LoginPanel
