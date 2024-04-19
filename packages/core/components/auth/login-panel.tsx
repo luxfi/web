@@ -33,6 +33,8 @@ const LoginPanel: React.FC<{
 
   const onLogin = (token: string) => {
     setCookie('auth-token', token, {
+      sameSite: 'none',
+      secure: true,
       expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // 30 days
     })
 
