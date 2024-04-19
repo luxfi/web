@@ -39,7 +39,22 @@ const LoginPanel: React.FC<{
 
   const onLogin = (token: string) => {
     setAuthToken(token)
-    redirectUrl && setTimeout(() => router.replace(redirectUrl))
+
+    const promises = domains.map(({url}) => {
+      return new Promise<void>((resolve, reject) => {
+        const img = new Image()
+        img.onload = () => {
+          document.body.appendChild(img)
+          resolve()
+        }
+        img.onerror = reject
+        img.src = url
+      })
+    })
+  
+    Promise.all(promises)
+      .then(() => redirectUrl && router.replace(redirectUrl))
+      .catch(error => console.error('An image failed to load', error));
   }
 
   return (<>

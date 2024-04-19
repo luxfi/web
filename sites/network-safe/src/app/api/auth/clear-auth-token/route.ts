@@ -5,15 +5,13 @@ import { NextRequest, NextResponse } from 'next/server'
 const transparentGIF = Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64')
 
 export async function GET(request: NextRequest) {
+  // Return the GIF as the response
+  const response = new NextResponse(transparentGIF)
+  response.headers.set('Content-Type', 'image/gif')
+  response.headers.set('Content-Length', transparentGIF.length.toString())
+  response.headers.set('Cache-Control', 'no-store, max-age=0')
+
   cookies().delete('auth-token')
-  
-  return NextResponse.json({
-    statusCode: 200,
-    headers: {
-      'Content-Type': 'image/gif',
-      'Content-Length': transparentGIF.length.toString(),
-    },
-    body: transparentGIF.toString('base64'),
-    isBase64Encoded: true,
-  })
+
+  return response
 }
