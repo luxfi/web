@@ -35,7 +35,7 @@ const LoginPanel: React.FC<{
     setCookie('auth-token', token, {
       domain: '.lux.services',
       path: '/',
-      sameSite: 'None',
+      sameSite: 'none',
       secure: true,
       httpOnly: true,
       expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // 30 days
