@@ -5,7 +5,7 @@ import { Toaster } from '@hanzo/ui/primitives'
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
-import { CommerceProvider } from '@hanzo/commerce'
+import { CommerceProvider, CommerceUIComponent as CommerceUI } from '@hanzo/commerce'
 
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
@@ -95,6 +95,7 @@ const RootLayout: React.FC<PropsWithChildren & {
             uiSpecs={selectionUISpecifiers}
           >
             <Guts />
+            <CommerceUI />
           </CommerceProvider>
         ) : ( 
           <Guts />
