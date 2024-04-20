@@ -5,7 +5,7 @@ import families from '../content/commerce/families'
 
 export default {
   rootNode, 
-  productsByFamily: families,
+  families: families,
   options: {
     dbName: 'lux-commerce',
     ordersTable: 'orders'

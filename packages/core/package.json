@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/core",
-  "version": "4.4.18",
+  "version": "4.5.2",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxfi/web.git",
-    "directory": "packages/common"
+    "directory": "packages/core"
   },
   "keywords": [
     "components",
@@ -23,14 +23,11 @@
     "pub": "npm publish",
     "build": "tsc",
     "tc": "tsc",
-    "ln:ui": "pnpm link -g @hanzo/ui",
-    "ln:auth": "pnpm link -g @hanzo/auth",
-    "ln:cmmc": "pnpm link -g @hanzo/commerce",
-    "ul:all": "rm node_modules/@hanzo/*",
     "clean": "rm -rf node_modules"
   },
   "exports": {
     ".": "./components/index.ts",
+    "./root-layout": "./root-layout/index.tsx",
     "./server-actions": "./server-actions/index.ts",
     "./next": "./next/index.ts",
     "./style/": "./style/",
@@ -39,11 +36,12 @@
     "./conf": "./conf/index.ts"
   },
   "dependencies": {
-    "@hanzo/auth": "2.4.4",
-    "@hanzo/commerce": "6.4.4",
-    "@hanzo/ui": "3.6.3",
+    "@hanzo/auth": "2.4.6",
+    "@hanzo/commerce": "6.4.7",
+    "@hanzo/ui": "3.6.5",
     "@next/third-parties": "^14.1.0",
     "cookies-next": "^4.1.1",
+    "date-fns": "^3.6.0",
     "embla-carousel-autoplay": "^8.0.1",
     "react-device-detect": "^2.2.3",
     "react-social-icons": "^6.4.0"

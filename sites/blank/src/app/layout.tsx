@@ -1,24 +1,25 @@
 import React, { type PropsWithChildren } from 'react'
 
 import { 
-  RootLayout as RootLayoutCommon, 
-  rootLayoutViewport, 
-} from '@luxfi/core'
+  RootLayout as RootLayoutCore, 
+  viewport as ViewportCode, 
+} from '@luxfi/core/root-layout'
+
+import '@luxfi/core/style/lux-global.css'
 
 import siteDef from '../site-def'
 import _metadata from '../metadata'
 
-import '@luxfi/core/style/lux-global.css'
-
 export const metadata = { ..._metadata }
-export const viewport = { ...rootLayoutViewport}
+export const viewport = { ...ViewportCode}
 
-const RootLayout: React.FC<PropsWithChildren> = ({
+const RootLayout: React.FC<PropsWithChildren> = async ({
   children
-}) => (
-  <RootLayoutCommon siteDef={siteDef}>
+}) =>  (
+  <RootLayoutCore siteDef={siteDef} showHeader>
     {children}
-  </RootLayoutCommon>
+  </RootLayoutCore>
 )
 
 export default RootLayout
+
