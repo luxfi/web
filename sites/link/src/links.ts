@@ -26,7 +26,7 @@ export default {
       icon: "/assets/links/app.jpeg"
     },
     {
-      url: "https://lux.creditcard/?utm_medium=social&utm_source=linktree&utm_campaign=credit",
+      url: "https://lux.credit?utm_medium=social&utm_source=linktree&utm_campaign=credit",
       name: "Credit",
       icon: "/assets/links/credit.jpeg"
     },
