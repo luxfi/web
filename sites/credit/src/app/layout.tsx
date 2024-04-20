@@ -1,52 +1,24 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { AuthServiceProvider } from '@hanzo/auth/service'
-import { getUserServerSide } from '@hanzo/auth/server'
-import type { AuthServiceConf } from '@hanzo/auth/types'
-
-import { CommerceServiceProvider } from '@hanzo/commerce'
-
 import { 
-  RootLayout as RootLayoutCommon, 
-  rootLayoutViewport,
-  ChatWidget,
-  AuthListener
-} from '@luxfi/core'
+  RootLayout as RootLayoutCore, 
+  viewport as ViewportCode, 
+} from '@luxfi/core/root-layout'
 
-import { selectionUISpecifiers } from '@luxfi/core/conf'
 import '@luxfi/core/style/lux-global.css'
 
 import siteDef from '../conf/site-def'
 import _metadata from '../metadata'
 
 export const metadata = { ..._metadata }
-export const viewport = { ...rootLayoutViewport}
+export const viewport = { ...ViewportCode}
 
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
-}) =>  {
-  const currentUser = await getUserServerSide()
-
-  return (
-    <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
-      <CommerceServiceProvider 
-        rootNode={siteDef.ext.commerce.rootNode} 
-        families={siteDef.ext.commerce.families}
-        options={siteDef.ext.commerce.options}
-        uiSpecs={selectionUISpecifiers}
-      >
-        <RootLayoutCommon siteDef={siteDef} header={false}>
-          {children}
-          <ChatWidget
-            title='LUX'
-            subtitle='AI'
-            chatbotUrl='https://lux.chat/iframe'
-          />
-          <AuthListener/>
-        </RootLayoutCommon>
-      </CommerceServiceProvider>
-    </AuthServiceProvider>
-  )
-}
+}) =>  (
+  <RootLayoutCore siteDef={siteDef} >
+    {children}
+  </RootLayoutCore>
+)
 
 export default RootLayout

@@ -5,7 +5,7 @@ import { Toaster } from '@hanzo/ui/primitives'
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
-import { CommerceServiceProvider } from '@hanzo/commerce'
+import { CommerceProvider } from '@hanzo/commerce'
 
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
@@ -55,12 +55,16 @@ const RootLayout: React.FC<PropsWithChildren & {
   const currentUser = await getUserServerSide()
   const usingCommerce = siteDef.ext.commerce && siteDef.ext.commerce.rootNode && siteDef.ext.commerce.families
 
-
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}
     {children}
-    {chatbot && ( // TODO: questions could optionally be fed in from sideDef.ext.aiBot or some such thing.
-      <ChatWidget title='LUX' subtitle='AI' chatbotUrl='https://lux.chat/iframe' />
+    {chatbot && ( 
+      <ChatWidget 
+        title='LUX' 
+        subtitle='AI' 
+        chatbotUrl='https://lux.chat/iframe' 
+        suggestedQuestions={siteDef.ext?.chatBot?.suggestedQuestions ?? []}
+      />
     )}
   </>)
 
@@ -84,14 +88,14 @@ const RootLayout: React.FC<PropsWithChildren & {
         <Scripts/>
         <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
         {usingCommerce ? (
-          <CommerceServiceProvider 
+          <CommerceProvider 
             rootNode={siteDef.ext.commerce.rootNode} 
             families={siteDef.ext.commerce.families}
             options={siteDef.ext.commerce.options}
             uiSpecs={selectionUISpecifiers}
           >
             <Guts />
-          </CommerceServiceProvider>
+          </CommerceProvider>
         ) : ( 
           <Guts />
         )}

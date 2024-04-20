@@ -12,5 +12,12 @@ export default {
   ext: {
     commerce,
     prices,
+    chatBot: {
+      suggestedQuestions:[{
+        heading: 'Lux network features', 
+        message: 'What are the key features of Lux network?', 
+        icon: 'ShieldFlashLineIcon' 
+      }]    
+    }
   }
 } satisfies SiteDef
