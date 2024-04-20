@@ -32,7 +32,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
     <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
       <CommerceServiceProvider 
         rootNode={siteDef.ext.commerce.rootNode} 
-        productsByFamily={siteDef.ext.commerce.productsByFamily}
+        families={siteDef.ext.commerce.families}
         options={siteDef.ext.commerce.options}
         uiSpecs={selectionUISpecifiers}
       >

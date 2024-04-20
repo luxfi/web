@@ -5,10 +5,8 @@ export default {
   content: {
     files: [
       'src/**/*.tsx',
-      './node_modules/@hanzo/ui/**/*.{ts,tsx}',
-      './node_modules/@hanzo/commerce/**/*.{ts,tsx}',
-      './node_modules/@hanzo/auth/**/*.{ts,tsx}',
-      './node_modules/@luxfi/core/**/*.{ts,tsx}'
+      './node_modules/@luxfi/core/**/*.{ts,tsx}',
+      './node_modules/@luxfi/core/node_modules/@hanzo/**/*.{ts,tsx}'
     ]
   },
 } 

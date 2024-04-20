@@ -8,14 +8,12 @@ export * as Icons from './icons'
 export { default as Logo } from './logo'
 export { default as MiniChart } from './mini-chart'
 export { default as NotFound } from './not-found'
-export {
-  default as RootLayout,
-  viewport as rootLayoutViewport
-} from './root-layout'
+
 
 export { default as CheckoutPanel } from './commerce/checkout-panel'
 export { default as LoginPanel } from './auth/login-panel'
 export { default as AuthListener } from './auth/auth-listener'
+export { default as Scripts } from './scripts'
 
 
 /* PLEASE KEEP

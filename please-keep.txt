@@ -1,2 +1,2 @@
-"@hanzo/ui": "file:../../hanzoai/react-sdk/packages/ui",
+, "@hanzo/ui": "file:../../hanzoai/react-sdk/packages/ui",
 "@hanzo/commerce": "file:../../hanzoai/react-sdk/packages/commerce"

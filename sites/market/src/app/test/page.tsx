@@ -18,7 +18,7 @@ import {
   Slider
 } from '@hanzo/ui/primitives'
 import { useCommerce, BuyButton } from '@hanzo/commerce'
-import { peekDump } from '@hanzo/commerce/service/debug'
+//import { peekDump } from '@hanzo/commerce/service/debug'
 import { useState } from 'react'
 
 type Props = {
@@ -89,7 +89,7 @@ const Page = ({ searchParams }: Props ) => {
   const cmmc = useCommerce()
 
   const [skuPath, setSkuPath] = useState<string | undefined>(INITIAL_SKU_PATH)
-  const [json, setJSON] = useState<string | undefined>(undefined)
+  //const [json, setJSON] = useState<string | undefined>(undefined)
   const [error, setError] = useState<string | undefined>(undefined)
 
   const handleSubmit = (data: z.infer<typeof FormSchema>): void => {
@@ -98,17 +98,17 @@ const Page = ({ searchParams }: Props ) => {
     const result = cmmc.peek(_skuPath)
     if (typeof result === 'string') {
       setError(result)
-      setJSON(undefined)
+      //setJSON(undefined)
     }
     else {
-      setJSON(peekDump(result))
+      //setJSON(peekDump(result))
       setError(undefined)
     }
   }
 
   const handleClear = () => {
     setSkuPath(undefined)
-    setJSON(undefined)
+    //setJSON(undefined)
   }
         
   return (
@@ -125,7 +125,7 @@ const Page = ({ searchParams }: Props ) => {
           <ScrollArea className='border rounded h-[300px] w-full p-4 text-muted flex flex-col gap-2'>
             {skuPath && <pre>PATH: {skuPath}</pre>}
             {error && <p className='text-destructive'>{error}</p>}
-            {json && <pre>{json}</pre>}
+            {/* json && <pre>{json}</pre> */}
           </ScrollArea> 
         </div>
         {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}

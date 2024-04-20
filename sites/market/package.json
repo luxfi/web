@@ -10,15 +10,10 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit",
-    "ln:ui": "pnpm link -g @hanzo/ui",
-    "ln:auth": "pnpm link -g @hanzo/auth",
-    "ln:cmmc": "pnpm link -g @hanzo/commerce",
-    "ls:all": "ls -l node_modules/@hanzo/",
-    "ul:all": "rm node_modules/@hanzo/*"
+    "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "@luxfi/core": "4.4.18",
+    "@luxfi/core": "workspace:*",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",

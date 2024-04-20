@@ -16,7 +16,7 @@ export const viewport = { ...rootLayoutViewport}
 const RootLayout: React.FC<PropsWithChildren> = ({
   children
 }) => (
-  <RootLayoutCommon siteDef={siteDef}>
+  <RootLayoutCommon siteDef={siteDef} showHeader>
     {children}
   </RootLayoutCommon>
 )

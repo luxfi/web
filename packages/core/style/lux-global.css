@@ -14,7 +14,7 @@
   display: none;
 }
 
-.font-heading, h1, h2, h3 {
+.font-heading {
   @apply uppercase;
 }
 

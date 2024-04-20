@@ -1,6 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+
 import Autoplay from 'embla-carousel-autoplay'
 import { setCookie } from 'cookies-next'
 
@@ -8,10 +10,9 @@ import { cn } from '@hanzo/ui/util'
 import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
 import { LoginPanel as Login } from '@hanzo/auth/components'
 
-import { Logo } from '..'
+import Logo from '../logo'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
-import { useRouter } from 'next/navigation'
 
 const LoginPanel: React.FC<{
   close: () => void
@@ -44,7 +45,7 @@ const LoginPanel: React.FC<{
     redirectUrl && router.push(redirectUrl)
   }
 
-  return (<>
+  return (
     <div className={cn('grid grid-cols-1 md:grid-cols-2', className)}>
       <div className='hidden md:flex w-full h-full bg-level-1 flex-row items-end justify-end overflow-y-auto min-h-screen'>
         <div className='h-full w-full max-w-[750px] px-8 pt-0'>
@@ -97,7 +98,7 @@ const LoginPanel: React.FC<{
         </div>
       </div>
     </div>
-  </>)
+  )
 }
 
 export default LoginPanel
