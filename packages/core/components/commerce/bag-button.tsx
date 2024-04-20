@@ -2,8 +2,8 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { buttonVariants, type ButtonSizes } from '@hanzo/ui/primitives'
-import { cn } from '@hanzo/ui/util'
+import { buttonVariants } from '@hanzo/ui/primitives'
+import { cn, type VariantProps } from '@hanzo/ui/util'
 import { useCommerce } from '@hanzo/commerce'
 
 import * as Icons from '../icons'
@@ -11,7 +11,7 @@ import * as Icons from '../icons'
 const BagButton: React.FC<{
   showIfEmpty?: boolean  
   noHoverEffects?: boolean
-  size?: ButtonSizes
+  size?: VariantProps<typeof buttonVariants>['size']
   className?: string
   iconClx?: string
   onClick?: () => void

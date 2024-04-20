@@ -128,7 +128,7 @@ const Page = ({ searchParams }: Props ) => {
             {/* json && <pre>{json}</pre> */}
           </ScrollArea> 
         </div>
-        {skuPath && <BuyButton skuPath={skuPath} className='' mobile={mobile} >Buy</BuyButton>}
+        {skuPath && <BuyButton skuPath={skuPath} className='' >Buy</BuyButton>}
       </div>
     </Main>
   )
