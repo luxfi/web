@@ -18,7 +18,7 @@ const TopButtons = () => {
         <ContactDialog
           open={open}
           onOpenChange={setOpen}
-          title="Subscribe to luxdefi"
+          title="Subscribe for updates"
           buttonText="Subscribe"
           byline="Stay up to date with everything important."
           action={saveToWaitlist}
@@ -26,7 +26,7 @@ const TopButtons = () => {
           actionEnclosure={{
             dbId: 'lux-waitlist',
             listId: 'coin',
-            reply: "You're on the LUX Coin Waitlist."
+            reply: "You're on the list."
           }}
         />
       </div>

@@ -2,9 +2,7 @@
 
 import React, {useEffect} from 'react'
 import {useParams, useRouter} from "next/navigation";
-import _links, {type ILink, type ILinks} from "@/links";
-
-export const links = { ..._links } as ILinks
+import links, {type ILink, type ILinks} from "@/links";
 
 const RedirectPage = () => {
   const { page } = useParams()
