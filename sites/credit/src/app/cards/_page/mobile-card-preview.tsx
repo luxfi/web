@@ -8,7 +8,7 @@ import { formatCurrencyValue } from '@hanzo/commerce'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 
 import type { Card, CardMaterial } from '@/types/card'
-import CardMaterialPicker from '../card-material-picker'
+import CardMaterialPicker from '../../../components/card-material-picker'
 
 const CardPreview: React.FC<{
   card: Card

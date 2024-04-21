@@ -2,7 +2,7 @@ import React  from 'react'
 
 import '@/blocks/registerComponents'
 
-import CompareCards from '@/components/compare-cards'
+import CompareCards from './_page'
 
 type Props = {
   searchParams?: { [key: string]: string }

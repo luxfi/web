@@ -9,17 +9,11 @@ const DesktopAllCards: React.FC<{
   clx: string
 }> = ({
   clx,
-}) => {
-  return (
-    <Main className={cn('flex flex-col gap-20', clx)}>
-      {cards.map((card, index) => (
-        <Fragment  key={index}>
-          <CardPreview card={card} />
-        </Fragment>
-      ))}
-    </Main>
-  )
-}
+}) => (
+  <Main className={cn('flex flex-col gap-20', clx)}>
+  {cards.map((card, index) => ( <CardPreview key={index} card={card} /> ))}
+  </Main>
+)
 
 export {
   DesktopAllCards as default

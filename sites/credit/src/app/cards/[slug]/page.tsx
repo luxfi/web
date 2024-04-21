@@ -5,12 +5,14 @@ import { useEffect, useRef, useState } from "react"
 import { useCommerce } from "@hanzo/commerce"
 import type { LineItem } from "@hanzo/commerce/types"
 
-import DesktopViewCardDetails from "@/components/view-card-details/desktop"
-import MobileViewCardDetails from "@/components/view-card-details/mobile"
-import TabletViewCardDetails from "@/components/view-card-details/tablet"
-import CardsBar from "@/components/view-card-details/cards-bar"
-import cards from "@/content/cards"
 import type { Card, CardMaterial, CardType } from "@/types/card"
+
+import DesktopViewCardDetails from "./_page/desktop"
+import MobileViewCardDetails from "./_page/mobile"
+import TabletViewCardDetails from "./_page/tablet"
+import CardsBar from "./_page/cards-bar"
+
+import cards from "@/content/cards"
 
 type Props = {
   params: { slug: CardType }

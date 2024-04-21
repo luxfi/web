@@ -61,10 +61,13 @@ type Card = {
   }
 }
 
+type CardWithSelectedMaterial = Card & { selectedMaterial: CardMaterial }
+
 export {
   type Card,
   type CardFamily,
   type CardMaterial,
-  type CardType
+  type CardType,
+  type CardWithSelectedMaterial
 }
 

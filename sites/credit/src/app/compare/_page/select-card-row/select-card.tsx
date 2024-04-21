@@ -4,18 +4,15 @@ import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
 import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
 
-import type { Card } from '@/types/card'
+import type { Card, CardWithSelectedMaterial } from '@/types'
 import cards from '@/content/cards'
-import type { CardWithSelectedMaterial } from '../index'
 
 const SelectCard: React.FC<{
-  key: number | string
   selectedCards: CardWithSelectedMaterial[]
   setSelectedCards: (cards: CardWithSelectedMaterial[]) => void
   hiddenOnMobile?: boolean,
   condensed?: boolean
 }> = ({
-  key,
   selectedCards,
   setSelectedCards,
   hiddenOnMobile,
@@ -30,7 +27,7 @@ const SelectCard: React.FC<{
   }
 
   return (
-    <Popover key={key}>
+    <Popover>
       <PopoverTrigger asChild>
         <div className={cn(
             hiddenOnMobile ? 'hidden lg:flex' : 'flex',

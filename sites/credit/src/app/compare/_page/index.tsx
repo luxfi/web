@@ -1,21 +1,17 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 
 import { ApplyTypography, Main } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import type { Card, CardMaterial } from '@/types/card'
+import type { CardWithSelectedMaterial } from '@/types'
+
 import RowHeading from './row-heading'
 import rowsContent from './rows-content'
 import CompareHeader from './compare-header'
 import SelectCardRow from './select-card-row'
+
 import cards from '@/content/cards'
-
-const numCardsMobile = 2
-const numCardsDesktop = 3
-
-type CardWithSelectedMaterial = Card & { selectedMaterial: CardMaterial }
 
 const CompareCards: React.FC<{
   predefinedCards?: string
@@ -66,7 +62,5 @@ const CompareCards: React.FC<{
 
 export {
   CompareCards as default,
-  numCardsDesktop,
-  numCardsMobile,
   type CardWithSelectedMaterial
 }

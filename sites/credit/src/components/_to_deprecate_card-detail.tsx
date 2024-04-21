@@ -3,7 +3,7 @@ import React from 'react'
 import type { ImageBlock, Block } from '@hanzo/ui/blocks'
 
 import { ImageBlockComponent, SpaceBlockComponent } from '@hanzo/ui/blocks'
-import { ApplyTypography, LinkElement, type ButtonSizes } from '@hanzo/ui/primitives'
+import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn, capitalize } from '@hanzo/ui/util'
 
 import { getProductHeading } from '@/util'

@@ -4,10 +4,12 @@ import Link from 'next/link'
 import { cn } from '@hanzo/ui/util'
 import { ApplyTypography, Separator } from '@hanzo/ui/primitives'
 
+import SplinePlayer from '@/components/spline-player'
+
+import CardPreview from './mobile-card-preview'
+
 import cards from '@/content/cards'
 import sovereign from '@/content/cards/sovereign'
-import CardPreview from './mobile-card-preview'
-import SplinePlayer from '../spline-player'
 
 const title = 'Earn up to 11% of your balance annually with Lux Credit.'
 const byline = 'Learn more about how you can earn rewards infinitely by using your Lux Card without ever impacting your credit score.'

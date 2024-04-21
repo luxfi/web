@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 

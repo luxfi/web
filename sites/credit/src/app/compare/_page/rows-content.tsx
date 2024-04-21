@@ -1,9 +1,11 @@
+import React, { type PropsWithChildren } from 'react'
+
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { formatCurrencyValue } from '@hanzo/commerce'
+
 import type { Card } from '@/types/card'
-import { numCardsDesktop, numCardsMobile } from './index'
-import type { PropsWithChildren } from 'react'
+import { NUM_CARDS_DESKTOP, NUM_CARDS_MOBILE } from './CONST'
 
 const MdxRowContent: React.FC<{
   key: number | string
@@ -59,8 +61,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'Travel Benefits',
       description: 'Sustainable, mindful experiences to elevate the body, mind, and soul.',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1}>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <MdxRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}>
             {selectedCards[i]?.travelBenefits}
           </MdxRowContent>
         ))}
@@ -70,8 +72,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'What you earn?',
       description: 'Rewards are based on a percentage of your average available credit.',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1} clx='justify-center'>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <MdxRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1} clx='justify-center'>
             {selectedCards[i]?.rewards}
           </MdxRowContent>
         ))}
@@ -81,8 +83,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'Karma Rewards',
       description: 'Karma Rewards, is our point reward system that can be used to pay for almost anything. You can also leverage it and earn even more by staking the Karma you have accrued in the Lux ecosystem. Plus you can even sell it to pay off your balance. ',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1} clx='flex-col self-start'>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1} clx='flex-col self-start'>
             {selectedCards[i]?.karmaRewards && (
               <>
                 <p className='font-bold'>Earn Karma while you spend</p>
@@ -100,8 +102,8 @@ const rowsContent = (selectedCards: Card[]) => {
     {
       title: 'Exclusive Lux Benefits',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <MdxRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1}>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <MdxRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}>
             {selectedCards[i]?.lifestyleBenefits}
           </MdxRowContent>
         ))}
@@ -111,8 +113,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'Maximum Account Holders',
       description: 'Reward Based on average Deposit.',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1}>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}>
             <h4>{selectedCards[i]?.maxAccountHolders}</h4>
           </DataRowContent>
         ))}
@@ -122,8 +124,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'Annual Reward',
       description: 'Reward Based on average Deposit.',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1}>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}>
             {selectedCards[i] && <h4>{selectedCards[i].rewardPct}%</h4>}
           </DataRowContent>
         ))}
@@ -133,8 +135,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'Lost Card Fee',
       description: 'If you lose your card we can replace it and get it to you within 3 days, business days with expedited worldwide shipping.',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1}>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}>
             {selectedCards[i] && <h4>{formatCurrencyValue(selectedCards[i].replacementFee)}</h4>}
           </DataRowContent>
         ))}
@@ -144,8 +146,8 @@ const rowsContent = (selectedCards: Card[]) => {
       title: 'FX Rate',
       description: 'Rate of exchange when traveling or paying in foreign currency.',
       content: <>
-        {[...Array(numCardsDesktop)].map((_, i) => (
-          <DataRowContent key={i} hiddenOnMobile={i > numCardsMobile - 1}>
+        {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
+          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}>
             {selectedCards[i] && <h4>{selectedCards[i].fxRatePct}%</h4>}
           </DataRowContent>
         ))}
