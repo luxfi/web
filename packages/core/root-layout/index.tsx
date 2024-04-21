@@ -53,16 +53,16 @@ const RootLayout: React.FC<PropsWithChildren & {
 }) =>  {
 
   const currentUser = await getUserServerSide()
-  const usingCommerce = siteDef.ext.commerce && siteDef.ext.commerce.rootNode && siteDef.ext.commerce.families
+  const usingCommerce = siteDef?.ext?.commerce && siteDef.ext.commerce.rootNode && siteDef.ext.commerce.families
 
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}
     {children}
-    {chatbot && ( 
-      <ChatWidget 
-        title='LUX' 
-        subtitle='AI' 
-        chatbotUrl='https://lux.chat/iframe' 
+    {chatbot && (
+      <ChatWidget
+        title='LUX'
+        subtitle='AI'
+        chatbotUrl='https://lux.chat/iframe'
         suggestedQuestions={siteDef.ext?.chatBot?.suggestedQuestions ?? []}
       />
     )}
@@ -88,15 +88,15 @@ const RootLayout: React.FC<PropsWithChildren & {
         <Scripts/>
         <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
         {usingCommerce ? (
-          <CommerceProvider 
-            rootNode={siteDef.ext.commerce.rootNode} 
+          <CommerceProvider
+            rootNode={siteDef.ext.commerce.rootNode}
             families={siteDef.ext.commerce.families}
             options={siteDef.ext.commerce.options}
             uiSpecs={selectionUISpecifiers}
           >
             <Guts />
           </CommerceProvider>
-        ) : ( 
+        ) : (
           <Guts />
         )}
           <AuthListener/>
