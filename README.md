@@ -2,7 +2,7 @@
 
 ▼ on the World Wide Web 🌏.
 
-#### Decentralized network of blockchains designed for privacy and quantum security. 
+#### Decentralized network of blockchains designed for privacy and quantum security.
 
 ## Lux Features
 
@@ -15,18 +15,24 @@
 **AI-Driven Lifestyle**: Lux AI enhances daily life, encouraging growth.
 
 ## Lux Ecosystem
-- Lux Partners Limited, our company: [Lux Partners](https://lux.partners)
-- Lux Network of blockchains: [Lux Network](https://lux.network)
-- Lux Credit Card: [Lux Credit](https://lux.credit)
-- Mint tokenized assets: [Lux Market](https://lux.market)
-- Trade crypto & NFTs: [Lux Exchange](https://lux.exchange)
-- Access DeFi apps: [Lux Finance](https://lux.finance)
-- Lux Safe, our quantum safe multisig: [Lux Safe](https://safe.lux.finance)
-- Use Wallet and Operate Lux Validators: [Lux Wallet](https://wallet.lux.network)
-- Bridge Assets into Lux Mainnet: [Lux Bridge](https://bridge.lux.network)
-- Explore Lux Mainnet: [Lux Explore](https://explore.lux.network)
-- Use Lux AI to learn more: [Lux AI](https://lux.chat)
-  
+- [Lux Network](https://lux.network): Explore the Lux Network of blockchains, which forms the foundation of the ecosystem.
+
+  - [Lux Bridge](https://bridge.lux.network): Bridge assets into the Lux Mainnet, facilitating asset transfers between different blockchains and the Lux Mainnet.
+
+  - [Lux Wallet](https://wallet.lux.network): Manage your wallet and operate Lux Validators, essential for engaging with the Lux Network's functionalities.
+
+  - [Lux Explore](https://explore.lux.network): Delve into the Lux Mainnet to view transactions, blocks, and statistics.
+
+- [Lux Exchange](https://lux.exchange): Trade cryptocurrencies and NFTs, providing a platform for secure and versatile trading options.
+
+- [Lux Market](https://lux.market): Mint real-world assets (RWAs) like gold and silver, integrating traditional assets into the blockchain environment.
+
+- [Lux Safe](https://safe.lux.finance): Our quantum-safe multisig wallet, ensuring high security for digital asset management.
+
+- [Lux Credit](https://lux.credit) powered by [Lux Finance](https://lux.finance): Our zero-interest, auto-repaid credit card, offering a novel approach to credit with financial integration in the Lux ecosystem.
+
+- [Lux AI](https://lux.chat): Use Lux AI to learn more about the Lux ecosystem and its various applications.
+
 ## Dev: run locally
 
 Install `pnpm` [like so](https://pnpm.io/installation)
@@ -48,7 +54,7 @@ Since "pnpm" is a finger twister, many people alias it to "pn". For example, wit
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode with `next-themes`
 
-## Built on the hanzoai/react-sdk (@hanzo/ui, @hanzo/auth, @hanzo/commerce)
+## Built on the Hanzo React SDK (@hanzo/ui, @hanzo/auth, @hanzo/commerce)
 
 - A potent React framework using Next 14, Tailwind and Radix
 - Renders most content from simple 'Block' definitions (in `/src/content` )
