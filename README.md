@@ -16,21 +16,13 @@
 
 ## Lux Ecosystem
 - [Lux Network](https://lux.network): Explore the Lux Network of blockchains, which forms the foundation of the ecosystem.
-
   - [Lux Bridge](https://bridge.lux.network): Bridge assets into the Lux Mainnet, facilitating asset transfers between different blockchains and the Lux Mainnet.
-
+  - [Lux Explorer](https://explore.lux.network): Delve into the Lux Mainnet to view transactions, blocks, and statistics.
   - [Lux Wallet](https://wallet.lux.network): Manage your wallet and operate Lux Validators, essential for engaging with the Lux Network's functionalities.
-
-  - [Lux Explore](https://explore.lux.network): Delve into the Lux Mainnet to view transactions, blocks, and statistics.
-
-- [Lux Exchange](https://lux.exchange): Trade cryptocurrencies and NFTs, providing a platform for secure and versatile trading options.
-
-- [Lux Market](https://lux.market): Mint real-world assets (RWAs) like gold and silver, integrating traditional assets into the blockchain environment.
-
-- [Lux Safe](https://safe.lux.finance): Our quantum-safe multisig wallet, ensuring high security for digital asset management.
-
 - [Lux Credit](https://lux.credit) powered by [Lux Finance](https://lux.finance): Our zero-interest, auto-repaid credit card, offering a novel approach to credit with financial integration in the Lux ecosystem.
-
+- [Lux Exchange](https://lux.exchange): Trade cryptocurrencies and NFTs, providing a platform for secure and versatile trading options.
+- [Lux Market](https://lux.market): Mint real-world assets (RWAs) like gold and silver, integrating traditional assets into the blockchain environment.
+- [Lux Safe](https://safe.lux.finance): Our quantum-safe multisig wallet, ensuring high security for digital asset management.
 - [Lux AI](https://lux.chat): Use Lux AI to learn more about the Lux ecosystem and its various applications.
 
 ## Dev: run locally
