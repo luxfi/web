@@ -1,7 +1,9 @@
 {
-  "name": "@luxfi/network-wallet",
+  "name": "@luxfi/safe",
   "version": "0.0.2",
   "private": true,
+  "license": "BSD-3-Clause",
+  "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
