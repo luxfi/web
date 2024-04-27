@@ -4,18 +4,25 @@ import React, { useEffect } from 'react'
 
 import { cn } from '@hanzo/ui/util'
 import { MediaStack, Skeleton } from '@hanzo/ui/primitives'
-import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
+import { AddToCartWidget, useCommerce, useCommerceUI } from '@hanzo/commerce'
+import { observer } from 'mobx-react-lite'
+import { autorun } from 'mobx'
 
 const AddPanel: React.FC<{
   clx?: string
-}> = ({
+}> = observer(({
   clx='',
 }) => {
 
   const cmmc = useCommerce()
+  const ui = useCommerceUI()
 
   useEffect(() => {
     cmmc.setCurrentItem('LXM-CR-E-24G')
+
+    return autorun(() => {
+      console.log("AUTO: ", ui.recentSku)   
+    })
   }, [])
 
   return (
@@ -31,7 +38,7 @@ const AddPanel: React.FC<{
       )}
     </div>
   )
-}
+})
 
 export default AddPanel
 

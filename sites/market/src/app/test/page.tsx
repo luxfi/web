@@ -9,9 +9,12 @@ import {
   TabsContent 
 } from '@hanzo/ui/primitives'
 
+import { Header } from '@luxfi/core'
+
+import siteDef from '@/conf/site-def'
+
 import AddPanel from './_page/add-panel' 
 import BuyPanel from './_page/buy-panel' 
-
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -19,9 +22,10 @@ type Props = {
 
 const Page = ({ searchParams }: Props ) => {
         
-  return (
-    <Main className=''>
-      <Tabs defaultValue='add' className='w-[500px]'>
+  return (<>
+    <Header siteDef={siteDef}/>
+    <Main className='pt-[44px] md:pt-[80px]'>
+      <Tabs defaultValue='buy' className='w-full sm:w-[500px]'>
         <TabsList className='grid w-full grid-cols-2'>
           <TabsTrigger value='buy'>Buy</TabsTrigger>
           <TabsTrigger value='add'>Add</TabsTrigger>
@@ -34,7 +38,7 @@ const Page = ({ searchParams }: Props ) => {
         </TabsContent>
       </Tabs>
     </Main>
-  )
+  </>)
 }
 
 export default Page

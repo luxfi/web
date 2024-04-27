@@ -9578,6 +9578,24 @@ packages:
       map-cache: 0.2.2
     dev: false
 
+  /framer-motion@11.1.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-cW11Pu53eDAXUEhv5hEiWuIXWhfkbV32PlgVISn7jRdcAiVrJ1S03YQQ0/DzoswGYYwKi4qYmHHjCzAH52eSdQ==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tslib: 2.6.2
+
   /fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
     engines: {node: '>= 0.6'}
@@ -16102,6 +16120,7 @@ packages:
       '@radix-ui/react-radio-group': 1.1.3(@types/react-dom@18.2.25)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
       ethers: 6.12.0
       firebase: 10.8.0
+      framer-motion: 11.1.7(react-dom@18.2.0)(react@18.2.0)
       lucide-react: 0.344.0(react@18.2.0)
       mobx: 6.12.3
       mobx-react-lite: 4.0.7(mobx@6.12.3)(react-dom@18.2.0)(react@18.2.0)
@@ -16115,6 +16134,7 @@ packages:
       square: 35.1.0
       zod: 3.21.4
     transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
       - bufferutil
       - debug
       - utf-8-validate
@@ -16146,6 +16166,7 @@ packages:
       '@radix-ui/react-radio-group': 1.1.3(@types/react-dom@18.2.25)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
       ethers: 6.12.0
       firebase: 10.8.0
+      framer-motion: 11.1.7(react-dom@18.2.0)(react@18.2.0)
       lucide-react: 0.344.0(react@18.2.0)
       mobx: 6.12.3
       mobx-react-lite: 4.0.7(mobx@6.12.3)(react-dom@18.2.0)(react@18.2.0)
@@ -16159,6 +16180,7 @@ packages:
       square: 35.1.0
       zod: 3.21.4
     transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
       - bufferutil
       - debug
       - utf-8-validate

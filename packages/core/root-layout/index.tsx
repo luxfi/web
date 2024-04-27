@@ -15,6 +15,7 @@ import { AuthListener, ChatWidget, Header, Scripts } from '../components'
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../site-def/site-def'
 
+import '../style/cart-animation.css'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {

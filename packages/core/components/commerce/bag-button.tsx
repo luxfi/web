@@ -1,5 +1,6 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { observable, type IObservableValue, reaction } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
 import { buttonVariants } from '@hanzo/ui/primitives'
@@ -11,6 +12,7 @@ import * as Icons from '../icons'
 const BagButton: React.FC<{
   showIfEmpty?: boolean  
   noHoverEffects?: boolean
+  animateOnQuantityChange?: boolean
   size?: VariantProps<typeof buttonVariants>['size']
   className?: string
   iconClx?: string
@@ -18,6 +20,7 @@ const BagButton: React.FC<{
 }> = observer(({
   showIfEmpty=false,
   noHoverEffects=false,
+  animateOnQuantityChange=true,
   size='default',
   className='',
   iconClx='',
@@ -31,6 +34,28 @@ const BagButton: React.FC<{
     return <div /> // trigger code needs non-null 
   }
 
+  const wiggleRef = useRef<IObservableValue<'more' | 'less' | 'none'>>(observable.box('none'))
+
+  useEffect(() => (
+      // return IReactionDisposer
+    animateOnQuantityChange ? reaction(
+      () => (c.cartQuantity),
+      (curr, prev) => {
+        if (curr > prev) {
+          wiggleRef.current.set('more')   
+        }
+        else {
+          wiggleRef.current.set('less')   
+        }    
+        setTimeout(() => {
+            // Note that this doesn't actually stop the animation
+            // just resets the styles
+          wiggleRef.current.set('none')   
+        }, 800)
+      }
+    ) : undefined
+  ), [])
+
   return (
     <div
       aria-label="Bag"
@@ -40,6 +65,10 @@ const BagButton: React.FC<{
         buttonVariants({ variant: 'ghost', size, rounded: 'md' }),
           // Overides the bg change on hover --not a "hover effect" 
         'relative group p-0 aspect-square hover:bg-background', 
+        ((wiggleRef.current.get() === 'more') ? 
+          'item-added-to-cart-animation' 
+          : 
+          (wiggleRef.current.get() === 'less') ? 'item-removed-from-cart-animation' : ''), 
         className
       )}
     >
