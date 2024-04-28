@@ -1,7 +1,7 @@
 import React from "react"
 
 import { type Block, CTABlockComponent, HeadingBlockComponent, ContentComponent, EnhHeadingBlockComponent } from "@hanzo/ui/blocks"
-import Badge from "@hanzo/ui/primitives/badge"
+import { Badge } from "@hanzo/ui/primitives"
 import { ApplyTypography } from "@hanzo/ui/primitives"
 
 import type ProductCardContentBlock from "@/blocks/def/product-card-content-block"

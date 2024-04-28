@@ -105,10 +105,8 @@ const CommerceUIComponent: React.FC = observer(() => {
     }
   }, [])
 
-
-
   const handleCheckout = () => {
-  //  router.push('/checkout')
+    router.push('/checkout')
   }
 
     // Should only ever be called internally to close
