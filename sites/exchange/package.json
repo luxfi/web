@@ -14,7 +14,10 @@
     "ul:all": "rm node_modules/@hanzo/"
   },
   "dependencies": {
-    "@luxfi/core": "4.5.2",
+    "@luxfi/core": "5.0.1",
+    "@hanzo/auth": "2.4.6",
+    "@hanzo/commerce": "7.0.0",
+    "@hanzo/ui": "3.7.0",
     "@next/mdx": "14.1.0",
     "mobx": "^6.12.0",
     "mobx-react-lite": "^4.0.5",

@@ -1,12 +1,10 @@
 'use client'
-
 import React, { useEffect } from 'react'
+import { observer } from 'mobx-react-lite'
 
 import { cn } from '@hanzo/ui/util'
 import { MediaStack, Skeleton } from '@hanzo/ui/primitives'
-import { AddToCartWidget, useCommerce, useCommerceUI } from '@hanzo/commerce'
-import { observer } from 'mobx-react-lite'
-import { autorun } from 'mobx'
+import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
 
 const AddPanel: React.FC<{
   clx?: string
@@ -15,7 +13,6 @@ const AddPanel: React.FC<{
 }) => {
 
   const cmmc = useCommerce()
-  const ui = useCommerceUI()
 
   useEffect(() => {
     cmmc.setCurrentItem('LXM-CR-E-24G')
@@ -37,4 +34,3 @@ const AddPanel: React.FC<{
 })
 
 export default AddPanel
-
