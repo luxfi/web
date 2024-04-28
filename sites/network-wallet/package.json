@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "@luxfi/core": "4.5.2",
+    "@hanzo/auth": "2.4.6",
+    "@hanzo/commerce": "6.4.7",
+    "@hanzo/ui": "3.6.5",
     "@next/mdx": "14.1.0",
     "firebase": "^10.8.0",
     "mobx-react": "^9.1.0",
