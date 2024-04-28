@@ -1,25 +1,23 @@
+import React, { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
-import { AddToCartWidget, formatCurrencyValue, useCommerce } from '@hanzo/commerce'
 
-import type { Card, CardMaterial } from '@/types/card'
-import type { CardWithSelectedMaterial } from '../index'
+import { AddToCartWidget, formatCurrencyValue, useCommerce } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
-import { useEffect, useState } from 'react'
+
+import type { Card, CardMaterial, CardWithSelectedMaterial } from '@/types'
 import CardMaterialPicker from '@/components/card-material-picker'
 
 const CardHero: React.FC<{
-  key: number | string
   card: Card
   selectedCards: CardWithSelectedMaterial[]
   setSelectedCards: (cards: CardWithSelectedMaterial[]) => void
   hiddenOnMobile?: boolean
   condensed?: boolean
 }> = ({
-  key,
   card,
   selectedCards,
   setSelectedCards,
@@ -76,7 +74,6 @@ const CardHero: React.FC<{
 
   return (
     <ApplyTypography
-      key={key}
       className={cn(
         hiddenOnMobile ? 'hidden lg:flex' : 'flex',
         'flex-col lg:col-span-3 gap-2 items-center text-center'

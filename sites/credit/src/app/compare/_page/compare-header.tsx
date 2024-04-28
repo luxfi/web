@@ -1,10 +1,9 @@
 'use client'
-
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { cn } from '@hanzo/ui/util'
 
-import { type CardWithSelectedMaterial } from './index'
+import { type CardWithSelectedMaterial } from '@/types'
 import SelectCardRow from './select-card-row'
 
 const CompareHeader: React.FC<{

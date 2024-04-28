@@ -47,7 +47,7 @@ const ChatWidget: React.FC<{
   return (<>
     <div className={
       'fixed bottom-0 sm:bottom-16 right-0 w-full h-full ' +
-      'sm:max-w-[400px] sm:max-h-[550px] sm:px-4 z-above-floating ' +
+      'sm:max-w-[400px] sm:max-h-[550px] sm:px-4 z-floating ' +
       (showChatbot ? 'flex' : 'hidden')
     }>
       <Card className='flex flex-col h-full w-full'>
@@ -66,7 +66,8 @@ const ChatWidget: React.FC<{
       height={28}
       onClick={onClick}
       className={cn(
-        'fixed bottom-5 right-5 z-floating transition-all cursor-pointer hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
+          // z-index should be below anything in commerce-iu (buy drawer and checkout widget)
+        'fixed bottom-5 right-5 z-below-modal-3 transition-all cursor-pointer hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
         showChatbot ? 'rotate-180' : ''
       )}
       strokeWidth={1}

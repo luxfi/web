@@ -23,7 +23,7 @@
     "next-usequerystate": "^1.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "7.50.1",
+    "react-hook-form": "^7.51.3",
     "request": "^2.88.2",
     "supports-color": "8.1.1",
     "zod": "3.21.4"

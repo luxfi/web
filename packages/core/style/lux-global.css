@@ -10,7 +10,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.nextjs-toast-errors-parent {
+div.nextjs-toast-errors-parent[data-nextjs-toast="true"] {
   display: none;
 }
 

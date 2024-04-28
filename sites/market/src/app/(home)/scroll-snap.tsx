@@ -17,7 +17,6 @@ const MOBILE_VID_CONSTRAINT = {
 
   // using this approach: 
   // https://stackoverflow.com/a/76066443/11645689
-  // @hanzo/ui/style/global.css
 const swipeOuter = 'snap-start snap-always h-[100vh] '
   // 44+24=68, 80+24=104
 const swipeInner = 'pt-[68px] md:pt-[104px] pb-[24px] '

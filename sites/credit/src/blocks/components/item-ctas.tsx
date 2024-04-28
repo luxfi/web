@@ -49,7 +49,6 @@ const ItemCTAsBlockComponent: React.FC<{
         size='default'
         variant='primary'
         className='!w-full max-w-56'
-        mobile={agent !== 'desktop'}
       >
         {ctas.buyLabel ? ctas.buyLabel : 'Buy Now'}
       </BuyButton>

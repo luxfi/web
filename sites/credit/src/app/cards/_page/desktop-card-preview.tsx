@@ -22,7 +22,7 @@ import {
 
 import type { Card, CardMaterial } from '@/types/card'
 import CardQuickView from './card-quick-view'
-import CardMaterialPicker from '../card-material-picker'
+import CardMaterialPicker from '../../../components/card-material-picker'
 import Link from 'next/link'
 
 const CardPreview: React.FC<{

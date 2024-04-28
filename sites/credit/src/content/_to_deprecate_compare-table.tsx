@@ -1,18 +1,16 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import type { 
-  ElementBlock, 
   ScreenfulBlock, 
   SpaceBlock,
   Block,
   EnhHeadingBlock
 } from '@hanzo/ui/blocks'
 
-import { BuyTriggerWrapper } from '@hanzo/commerce'
-
 import { cn } from '@hanzo/ui/util'
+import { useCommerceUI } from '@hanzo/commerce'
 
 import type ElementTableBlock from '@/blocks/def/_to_move_element-table'
 
@@ -39,31 +37,30 @@ const CardButton : React.FC<{
   product,
   skuPath,
   className=''
-}) => (
-  <BuyTriggerWrapper 
-    skuPath={skuPath} 
-    trigger={(
-      <button 
-        className={cn('relative w-full opacity-90 group-hover:opacity-100  ' + 
-          'rounded-2xl py-4 px-2 ' + 
-          'flex flex-col justify-center items-center', 
-          '!no-underline',
-          className
-        )} 
-      > 
-        {CARDS[product]}
-        <div className='font-sans group-hover:text-muted-1 text-center'>
-          <span className='text-foreground font-semibold'>{capitalize(product)}</span>
-          <br/>
-          <span className='hidden sm:inline text-muted-1 text-xxs whitespace-nowrap'>click to buy&nbsp;</span>
-        </div>
-      </button>
-    )} 
-  />
-    
-)
+}) => {
+  
+  const ui = useCommerceUI()
+  const handleClick = () => { ui.showBuyOptions(skuPath) }
 
-// hidden md:inline
+  return (
+    <button 
+      className={cn('relative w-full opacity-90 group-hover:opacity-100  ' + 
+        'rounded-2xl py-4 px-2 ' + 
+        'flex flex-col justify-center items-center', 
+        '!no-underline',
+        className
+      )} 
+      onClick={handleClick}
+    > 
+      {CARDS[product]}
+      <div className='font-sans group-hover:text-muted-1 text-center'>
+        <span className='text-foreground font-semibold'>{capitalize(product)}</span>
+        <br/>
+        <span className='hidden sm:inline text-muted-1 text-xxs whitespace-nowrap'>click to buy&nbsp;</span>
+      </div>
+    </button>
+  )
+}
 
 export default {blockType: 'screenful',
   specifiers: 'narrow-gutters constrain-to-lg',

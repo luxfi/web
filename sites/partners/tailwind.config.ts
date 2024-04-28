@@ -6,7 +6,7 @@ export default {
     files: [
       'src/**/*.tsx',
       './node_modules/@luxfi/core/**/*.{ts,tsx}',
-      './node_modules/@luxfi/core/node_modules/@hanzo/**/*.{ts,tsx}'
+      './node_modules/@hanzo/**/*.{ts,tsx}'
     ]
   },
 } 

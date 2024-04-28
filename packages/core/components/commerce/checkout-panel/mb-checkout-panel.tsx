@@ -32,12 +32,11 @@ const MobileCheckoutPanel: React.FC<PropsWithChildren & {
     <CartAccordian 
       icon={
         <BagButton 
-          noHoverEffects 
+          animateOnHover={false} 
           showIfEmpty 
           size='sm'
-          className=
-          'mr-1 relative w-5 h-6 sm:w-6 sm:h-7 '
-          iconClx='fill-foreground '
+          className='mr-1 relative w-5 h-6 sm:w-6 sm:h-7'
+          iconClx='fill-foreground'
         />
       } 
       className='flex items-center justify-center w-full' 

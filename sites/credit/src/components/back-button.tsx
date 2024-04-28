@@ -2,12 +2,15 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 
-import { Button, type ButtonSizes, type ButtonVariants } from '@hanzo/ui/primitives'
 import { ChevronLeft } from 'lucide-react'
 
+
+import { Button, buttonVariants } from '@hanzo/ui/primitives'
+import type { VariantProps } from '@hanzo/ui/util'
+
 const BackButton: React.FC<{
-  variant: ButtonVariants
-  size?: ButtonSizes
+  variant: VariantProps<typeof buttonVariants>['variant']
+  size?: VariantProps<typeof buttonVariants>['size']
   className?: string
   iconClx?: string
 }> = ({

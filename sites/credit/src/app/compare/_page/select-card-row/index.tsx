@@ -1,9 +1,11 @@
 import { Main } from '@hanzo/ui/primitives'
 
-import SelectCard from './select-card'
-import { numCardsDesktop, numCardsMobile, type CardWithSelectedMaterial } from '../index'
-import CardHero from './card-hero'
+import { type CardWithSelectedMaterial } from '@/types'
+
+import { NUM_CARDS_DESKTOP, NUM_CARDS_MOBILE } from '../CONST'
 import RowHeading from '../row-heading'
+import SelectCard from './select-card'
+import CardHero from './card-hero'
 
 const SelectCardRow: React.FC<{
   selectedCards: CardWithSelectedMaterial[]
@@ -25,29 +27,24 @@ const SelectCardRow: React.FC<{
           className='text-center lg:text-left typography-h4:!text-3xl'
         />
       )}
-      {[...Array(numCardsDesktop)].map((_, i) => {
-        if (selectedCards[i]) {
-          return (
-            <CardHero
-              key={i}
-              card={selectedCards[i]}
-              selectedCards={selectedCards}
-              setSelectedCards={setSelectedCards}
-              hiddenOnMobile={i > numCardsMobile - 1}
-              condensed={condensed}
-            />
-          )
-        }
-        return (
-          <SelectCard
-            key={i}
-            selectedCards={selectedCards}
-            setSelectedCards={setSelectedCards}
-            hiddenOnMobile={i > numCardsMobile - 1}
-            condensed={condensed}
-          />
-        )
-      })}
+      {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => ( (selectedCards[i]) ? (
+        <CardHero
+          key={i}
+          card={selectedCards[i]}
+          selectedCards={selectedCards}
+          setSelectedCards={setSelectedCards}
+          hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}
+          condensed={condensed}
+        />
+      ) : (
+        <SelectCard
+          key={i}
+          selectedCards={selectedCards}
+          setSelectedCards={setSelectedCards}
+          hiddenOnMobile={i > NUM_CARDS_MOBILE - 1}
+          condensed={condensed}
+        />
+      )))}
     </Main>
   )
 }

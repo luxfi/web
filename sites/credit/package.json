@@ -15,7 +15,10 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@luxfi/core": "4.5.2",
+    "@luxfi/core": "5.0.1",
+    "@hanzo/auth": "2.4.6",
+    "@hanzo/commerce": "7.0.0",
+    "@hanzo/ui": "3.7.0",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
@@ -33,7 +36,7 @@
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "7.50.1",
+    "react-hook-form": "^7.51.3",
     "supports-color": "8.1.1",
     "webpack-watch-files-plugin": "^1.2.1",
     "zod": "3.21.4"
