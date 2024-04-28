@@ -82,8 +82,8 @@ const BagButton: React.FC<{
         <div>{c.cartQuantity}</div>
       </div>
     )}
-      <Icons.bag className={cn(
-        'relative -top-[3px] fill-primary w-6 h-7 ',
+      <Icons.bag width='24' height='28' className={cn(
+        'relative -top-[3px] fill-primary',
         iconClx,
         (animateOnHover ? 
           'group-hover:fill-primary-hover group-hover:scale-105 transition-scale transition-duration-300'

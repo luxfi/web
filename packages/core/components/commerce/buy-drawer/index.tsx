@@ -15,7 +15,7 @@ import CommerceDrawer from './drawer'
 import CheckoutButton from '../checkout-button'
 
 const DEF_IMG_CONSTRAINT={w: 40, h: 24}
-const CO_ANIM_DURATION = 350
+const CO_ANIM_DURATION = 400
 const CO_ANIM_TIMING_FN = 'cubic-bezier(0.4, 0, 0.2, 1)'
 const CO_WIDGET_W_CLX = {
   checkout: 'w-pr-40',
@@ -26,7 +26,6 @@ const CO_WIDGET_SHADOW_STYLE = {
   border: '1px solid rgb(100 100 100)',
   boxShadow: '2px 4px 4px -3px rgb(125 125 125 / 0.7), 4px -4px 8px -4px rgb(125 125 125 / 0.7)'
 }
-
 
 const CommerceUIComponent: React.FC = observer(() => {
 
