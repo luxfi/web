@@ -1,5 +1,5 @@
 # link
-Lux Link social sharing site.
+Entrypoint to Lux Ecosystem and social sharing app.
 
 ## To run locally
 

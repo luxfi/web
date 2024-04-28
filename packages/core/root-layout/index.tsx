@@ -11,13 +11,10 @@ import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classe
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
-import BuyDrawer from '../components/commerce/buy-drawer'
 
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../site-def/site-def'
 
-import '../style/cart-animation.css'
-import '../style/checkout-animation.css'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
@@ -56,16 +53,16 @@ const RootLayout: React.FC<PropsWithChildren & {
 }) =>  {
 
   const currentUser = await getUserServerSide()
-  const usingCommerce = siteDef.ext.commerce && siteDef.ext.commerce.rootNode && siteDef.ext.commerce.families
+  const usingCommerce = siteDef?.ext?.commerce && siteDef.ext.commerce.rootNode && siteDef.ext.commerce.families
 
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}
     {children}
-    {chatbot && ( 
-      <ChatWidget 
-        title='LUX' 
-        subtitle='AI' 
-        chatbotUrl='https://lux.chat/iframe' 
+    {chatbot && (
+      <ChatWidget
+        title='LUX'
+        subtitle='AI'
+        chatbotUrl='https://lux.chat/iframe'
         suggestedQuestions={siteDef.ext?.chatBot?.suggestedQuestions ?? []}
       />
     )}
@@ -91,16 +88,15 @@ const RootLayout: React.FC<PropsWithChildren & {
         <Scripts/>
         <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
         {usingCommerce ? (
-          <CommerceProvider 
-            rootNode={siteDef.ext.commerce.rootNode} 
+          <CommerceProvider
+            rootNode={siteDef.ext.commerce.rootNode}
             families={siteDef.ext.commerce.families}
             options={siteDef.ext.commerce.options}
             uiSpecs={selectionUISpecifiers}
           >
             <Guts />
-            <BuyDrawer />
           </CommerceProvider>
-        ) : ( 
+        ) : (
           <Guts />
         )}
           <AuthListener/>

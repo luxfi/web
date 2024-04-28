@@ -17,9 +17,6 @@
   },
   "dependencies": {
     "@luxfi/core": "4.5.2",
-    "@hanzo/auth": "2.4.6",
-    "@hanzo/commerce": "6.4.7",
-    "@hanzo/ui": "3.6.5",
     "@hookform/resolvers": "^3.3.4",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
