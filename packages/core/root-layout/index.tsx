@@ -5,17 +5,19 @@ import { Toaster } from '@hanzo/ui/primitives'
 import { AuthServiceProvider } from '@hanzo/auth/service'
 import { getUserServerSide } from '@hanzo/auth/server'
 import type { AuthServiceConf } from '@hanzo/auth/types'
-import { CommerceProvider, CommerceUIComponent as CommerceUI } from '@hanzo/commerce'
+import { CommerceProvider } from '@hanzo/commerce'
 
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
+import BuyDrawer from '../components/commerce/buy-drawer'
 
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../site-def/site-def'
 
 import '../style/cart-animation.css'
+import '../style/checkout-animation.css'
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
 const viewport = {
@@ -96,7 +98,7 @@ const RootLayout: React.FC<PropsWithChildren & {
             uiSpecs={selectionUISpecifiers}
           >
             <Guts />
-            <CommerceUI />
+            <BuyDrawer />
           </CommerceProvider>
         ) : ( 
           <Guts />

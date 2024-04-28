@@ -66,7 +66,8 @@ const ChatWidget: React.FC<{
       height={28}
       onClick={onClick}
       className={cn(
-        'fixed bottom-5 right-5 z-below-modal-2 transition-all cursor-pointer hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
+          // z-index should be below anything in commerce-iu (buy drawer and checkout widget)
+        'fixed bottom-5 right-5 z-below-modal-3 transition-all cursor-pointer hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
         showChatbot ? 'rotate-180' : ''
       )}
       strokeWidth={1}

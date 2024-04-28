@@ -16,8 +16,10 @@ import {
   ScrollArea,
 } from '@hanzo/ui/primitives'
 
-import { useCommerce, BuyButton, CheckoutButton } from '@hanzo/commerce'
+import { useCommerce, BuyButton } from '@hanzo/commerce'
 import { peekDump } from '@hanzo/commerce/debug'
+
+import { CheckoutButton } from '@luxfi/core'
 
 const INITIAL_SKU_PATH = 'LXM-CR'
 

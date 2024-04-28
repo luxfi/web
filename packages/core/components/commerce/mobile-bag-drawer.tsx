@@ -33,7 +33,7 @@ const MobileBagDrawer: React.FC<{
         >
           <div className='flex flex-row items-center flex-none justify-center '>
             <BagButton 
-              noHoverEffects 
+              animateOnHover={false} 
               showIfEmpty 
               className=
               'mr-2 relative w-6 h-7'

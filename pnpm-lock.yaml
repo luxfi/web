@@ -16134,7 +16134,6 @@ packages:
       square: 35.1.0
       zod: 3.21.4
     transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
       - bufferutil
       - debug
       - utf-8-validate
@@ -16180,7 +16179,6 @@ packages:
       square: 35.1.0
       zod: 3.21.4
     transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
       - bufferutil
       - debug
       - utf-8-validate

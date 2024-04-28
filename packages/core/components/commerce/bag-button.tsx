@@ -11,7 +11,7 @@ import * as Icons from '../icons'
 
 const BagButton: React.FC<{
   showIfEmpty?: boolean  
-  noHoverEffects?: boolean
+  animateOnHover?: boolean
   animateOnQuantityChange?: boolean
   size?: VariantProps<typeof buttonVariants>['size']
   className?: string
@@ -19,7 +19,7 @@ const BagButton: React.FC<{
   onClick?: () => void
 }> = observer(({
   showIfEmpty=false,
-  noHoverEffects=false,
+  animateOnHover=true,
   animateOnQuantityChange=true,
   size='default',
   className='',
@@ -28,12 +28,6 @@ const BagButton: React.FC<{
 }) => {
 
   const c = useCommerce()
-
-    // undefined means context is not installed, ie commerce functions are not in use
-  if (!c || (!showIfEmpty && c.cartEmpty)) {
-    return <div /> // trigger code needs non-null 
-  }
-
   const wiggleRef = useRef<IObservableValue<'more' | 'less' | 'none'>>(observable.box('none'))
 
   useEffect(() => (
@@ -55,6 +49,12 @@ const BagButton: React.FC<{
       }
     ) : undefined
   ), [])
+
+    // undefined means context is not installed, ie commerce functions are not in use
+  if (!c || (!showIfEmpty && c.cartEmpty)) {
+    return <div /> // trigger code needs non-null 
+  }
+
 
   return (
     <div
@@ -85,9 +85,11 @@ const BagButton: React.FC<{
       <Icons.bag className={cn(
         'relative -top-[3px] fill-primary w-6 h-7 ',
         iconClx,
-        (noHoverEffects ? '' : (
+        (animateOnHover ? 
           'group-hover:fill-primary-hover group-hover:scale-105 transition-scale transition-duration-300'
-        )) 
+          : 
+          ''
+        ) 
       )} aria-hidden="true" />
     </div>            
   )

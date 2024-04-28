@@ -19,10 +19,6 @@ const AddPanel: React.FC<{
 
   useEffect(() => {
     cmmc.setCurrentItem('LXM-CR-E-24G')
-
-    return autorun(() => {
-      console.log("AUTO: ", ui.recentSku)   
-    })
   }, [])
 
   return (
