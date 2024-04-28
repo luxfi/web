@@ -1,4 +1,4 @@
-import type * as C from "@hanzo/ui/blocks/def"
+import type * as C from "@hanzo/ui/blocks"
 
 import type PressCardBlock from "@/blocks/def/press-card-block"
 import { ImageBlockComponent } from "@hanzo/ui/blocks"

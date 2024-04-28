@@ -7,7 +7,7 @@ import {
 
 const byline = 'The only decentralized network of quantum safe blockchains providing institutional-grade, regulatory-compliant access to digital money and real-world assets.'
 
-import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks/def'
+import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const video = {

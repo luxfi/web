@@ -1,4 +1,4 @@
-import type * as C from "@hanzo/ui/blocks/def"
+import type * as C from "@hanzo/ui/blocks"
 
 import type PartnersLogosBlock from "@/blocks/def/partners-logos-block"
 

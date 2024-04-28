@@ -5,7 +5,6 @@ import {
   viewport as ViewportCode, 
 } from '@luxfi/core/root-layout'
 
-import '@luxfi/core/style/lux-global.css'
 
 import siteDef from '../conf/site-def'
 import _metadata from '../metadata'
