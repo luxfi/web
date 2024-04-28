@@ -11,9 +11,14 @@ import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classe
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
+import BuyDrawer from '../components/commerce/buy-drawer'
 
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../site-def/site-def'
+
+import '../style/lux-global.css'
+import '../style/cart-animation.css'
+import '../style/checkout-animation.css'
 
 
 // Next 14: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#use-viewport-export
@@ -95,6 +100,7 @@ const RootLayout: React.FC<PropsWithChildren & {
             uiSpecs={selectionUISpecifiers}
           >
             <Guts />
+            <BuyDrawer />
           </CommerceProvider>
         ) : (
           <Guts />

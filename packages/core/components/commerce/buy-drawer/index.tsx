@@ -138,7 +138,7 @@ const CommerceUIComponent: React.FC = observer(() => {
     {globalThis?.document?.body && createPortal(
       <div 
         className={cn(
-          'min-w-[160px] sm:max-w-[320px] w-[calc(100%-32px)] mx-auto !h-10',
+          'min-w-[160px] sm:max-w-[320px] w-[calc(100%-72px)] ml-2 !h-10',
           'z-below-modal-2 fixed bottom-[20px] left-0 right-0',
           'rounded-lg bg-background',
           'flex',
