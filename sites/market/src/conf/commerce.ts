@@ -1,4 +1,4 @@
-import type { ServiceOptions } from '@hanzo/commerce'
+import { serviceOptions } from '@luxfi/core/commerce'
 
 import rootNode from '../content/commerce/nodes'
 import families from '../content/commerce/families'
@@ -6,8 +6,5 @@ import families from '../content/commerce/families'
 export default {
   rootNode, 
   families: families,
-  options: {
-    dbName: 'lux-commerce',
-    ordersTable: 'orders'
-  } satisfies ServiceOptions
+  options: serviceOptions
 }

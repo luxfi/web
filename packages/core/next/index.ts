@@ -1,1 +1,1 @@
-export { default as determineDeviceMW } from './determine-device-mw'
+export { default as determineDeviceMW } from './middleware/determine-device-mw'

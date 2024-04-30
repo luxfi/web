@@ -1,9 +1,15 @@
 import React from 'react'
+
 import type { LinkDef } from '@hanzo/ui/types'
 
+import type CommerceConfig from './commerce-config'
+import type ChatbotConfig from './chatbot-config'
+
 interface SiteDef {
+
     /** url of this site.  All nav links in the system will show it in 'current' state */
   currentAs?: string
+
   nav: {
       /** common elements (will auto-select currentAs if it's provide) */
       /** optional feature element. right-most after 'elements' (any min-w is ignored) */
@@ -25,13 +31,15 @@ interface SiteDef {
      */
   footer: LinkDef[][]  
 
-    /** optional override of default 'above copyright' horizantal links */
-    /** default (undefined or absent): @ui/sideDef/footer/legal are rendered */
-    /** [] renders nothing above the copyright */
+    /** 
+     * optional override of default 'above copyright' horizantal links 
+      default (undefined / absent): links in side-def/footer/legal are rendered 
+      [] renders nothing above the copyright 
+    */
   aboveCopyright?: LinkDef[] 
 
-      /** any site-specific stuff we'd like access to (link urls, etc) */
-  ext?: any 
+  commerce?: CommerceConfig
+  chatbot?: ChatbotConfig
 }
 
 export { type SiteDef as default }

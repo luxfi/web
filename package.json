@@ -31,6 +31,10 @@
   "pnpm": {
     "overrides": {
       "@types/react": "18.2.64"
+
+, "@hanzo/ui": "file:../../hanzoai/react-sdk/packages/ui",
+"@hanzo/commerce": "file:../../hanzoai/react-sdk/packages/commerce"
+
     }
   }
 }

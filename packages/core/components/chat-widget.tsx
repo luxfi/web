@@ -2,9 +2,10 @@
 import React from 'react'
 
 import { Button, Card } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
 
 import LuxLogo from './icons/lux-logo'
-import { cn } from '@hanzo/ui/util'
+import type { ChatbotSuggestedQuestion } from '../types'
 
 const ChatWidget: React.FC<{
   title: string,
@@ -12,6 +13,7 @@ const ChatWidget: React.FC<{
   subtitle?: string,
   question?: string,
   /* 
+    ChatBotSuggestQuestion.icon
     Currently supports these icons from remix icons (https://remixicon.com/):
       GlobalLineIcon,
       ShieldFlashLineIcon,
@@ -19,7 +21,7 @@ const ChatWidget: React.FC<{
       GroupLineIcon,
       QuestionnaireLineIcon
   */
-  suggestedQuestions?: { heading: string, message: string, icon?: string }[]
+  suggestedQuestions?: ChatbotSuggestedQuestion[]
 }> = ({
   title,
   chatbotUrl,

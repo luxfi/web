@@ -12,12 +12,10 @@ export default {
     }],
   },
   footer: footer.standard, 
-  ext: {
-    chatBot: {
-      suggestedQuestions: [
-        { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },
-        { heading: 'Lux Ecosystem', message: 'Tell me more about Lux ecosystem', icon: 'GlobalLineIcon' },
-      ]
-    }
+  chatbot: {
+    suggestedQuestions: [
+      { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },
+      { heading: 'Lux Ecosystem', message: 'Tell me more about Lux ecosystem', icon: 'GlobalLineIcon' },
+    ]
   }
 } satisfies SiteDef

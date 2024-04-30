@@ -27,6 +27,7 @@
   },
   "exports": {
     ".": "./components/index.ts",
+    "./commerce": "./commerce/index.ts",
     "./root-layout": "./root-layout/index.tsx",
     "./server-actions": "./server-actions/index.ts",
     "./next": "./next/index.ts",

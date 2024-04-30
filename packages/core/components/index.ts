@@ -9,13 +9,12 @@ export { default as Logo } from './logo'
 export { default as MiniChart } from './mini-chart'
 export { default as NotFound } from './not-found'
 
-
-
-export { default as BuyDrawer } from './commerce/buy-drawer'
-export { default as CheckoutPanel } from './commerce/checkout-panel'
-export { default as CheckoutButton } from './commerce/checkout-button'
-export { default as LoginPanel } from './auth/login-panel'
 export { default as AuthListener } from './auth/auth-listener'
+export { default as BuyDrawer } from './commerce/buy-drawer'
+export { default as CheckoutButton } from './commerce/checkout-button'
+export { default as CheckoutPanel } from './commerce/checkout-panel'
+export { default as CheckoutWidget } from './commerce/checkout-widget'
+export { default as LoginPanel } from './auth/login-panel'
 export { default as Scripts } from './scripts'
 
 

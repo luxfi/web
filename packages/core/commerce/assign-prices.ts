@@ -1,5 +1,6 @@
-import prices from '../../../../conf/prices'
 import type { Family } from '@hanzo/commerce/types'
+
+import prices from './EDIT-ME-bullion-market-prices'
 
 const sep = {
   tok: '-',
@@ -7,14 +8,14 @@ const sep = {
   decimal: '.'
 } 
 
-const G_PER_OZ = 28.3495
+const GRAMS_PER_OZ = 28.3495
 
 const tree: any = {}
 for (let key in prices) {
   const values = prices[key as keyof typeof prices]
   tree[key] = {
     oz: values.market1oz * (1 - values.discount),
-    g: values.market1oz * (1 - values.discount) / G_PER_OZ  
+    g: values.market1oz * (1 - values.discount) / GRAMS_PER_OZ  
   }
 }
 
