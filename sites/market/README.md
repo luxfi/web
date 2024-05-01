@@ -1,5 +1,5 @@
 # market
-Lux Market static site.
+Lux Market NFT marketplace.
 
 ## To run locally
 
