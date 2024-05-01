@@ -14,7 +14,8 @@
       "@/*": ["./src/*"],
       "react": ["node_modules/@types/react"],
       "@luxfi/core": ["node_modules/@luxfi/core"],
-      "@hanzo": ["node_modules/@luxfi/core/node_modules/@hanzo"]
+      "@hanzo/*": ["node_modules/@luxfi/core/node_modules/@hanzo/*"]
+
     },
     "plugins": [ { "name": "next" } ]
   }

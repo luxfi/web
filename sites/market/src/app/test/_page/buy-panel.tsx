@@ -17,7 +17,7 @@ import {
 } from '@hanzo/ui/primitives'
 
 import { useCommerce, BuyButton } from '@hanzo/commerce'
-import { peekDump } from '@hanzo/commerce/debug'
+import { peekDump } from '@hanzo/commerce/service/debug'
 
 import { CheckoutButton } from '@luxfi/core'
 
@@ -98,12 +98,12 @@ const BuyTab: React.FC = () => {
     setSkuPath(undefined)
     setJSON(undefined)
   }
-        
+
   return (
     <div className='w-full md:w-[400px] md:mx-auto flex flex-col items-center gap-8'>
-      <InputForm 
-        onSubmit={handleSubmit} 
-        onClear={skuPath ? handleClear : undefined} 
+      <InputForm
+        onSubmit={handleSubmit}
+        onClear={skuPath ? handleClear : undefined}
         className='flex flex-col items-stretch w-full md:w-[250px] md:mx-auto'
       />
       <div className='w-full'>
@@ -112,7 +112,7 @@ const BuyTab: React.FC = () => {
           {skuPath && <pre>PATH: {skuPath}</pre>}
           {error && <p className='text-destructive'>{error}</p>}
           {json && <pre>{json}</pre> }
-        </ScrollArea> 
+        </ScrollArea>
       </div>
       {skuPath && <BuyButton skuPath={skuPath} className='' >Buy</BuyButton>}
     </div>
