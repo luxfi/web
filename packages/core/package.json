@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/core",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -45,7 +45,7 @@
   },
   "peerDependencies": {
     "@hanzo/auth": "2.4.6",
-    "@hanzo/commerce": "7.0.0",
+    "@hanzo/commerce": "7.0.1",
     "@hanzo/ui": "3.7.0",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "^0.344.0",
