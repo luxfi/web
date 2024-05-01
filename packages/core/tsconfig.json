@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.hanzo-modules.base.json",
+  "extends": "../tsconfig.lux.base.json",
   "include": [
     "**/*.ts",
     "**/*.tsx",
