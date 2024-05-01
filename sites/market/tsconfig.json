@@ -12,7 +12,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "react": ["node_modules/@types/react"]
+      "react": ["node_modules/@types/react"],
+      "@luxfi/core": ["node_modules/@luxfi/core"],
+      "@hanzo/auth": ["node_modules/@luxfi/core/node_modules/@hanzo/auth"],
+      "@hanzo/commerce": ["node_modules/@luxfi/core/node_modules/@hanzo/commerce"],
+      "@hanzo/ui": ["node_modules/@luxfi/core/node_modules/@hanzo/ui"]
     },
     "plugins": [ { "name": "next" } ]
   }
