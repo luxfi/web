@@ -3,9 +3,9 @@
   "name": "@luxfi/web",
   "version": "0.1.0",
   "engines": {
-    "pnpm": ">=8"
+    "pnpm": ">=9"
   },
-  "packageManager": "pnpm@8.15.7",
+  "packageManager": "pnpm@9.0.6",
   "scripts": {
     "clean:nm": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "clean:nxt": "find . -name '.next' -type d -prune -exec rm -rf '{}' +",
