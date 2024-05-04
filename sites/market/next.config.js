@@ -2,6 +2,7 @@ const withMDX = require('@next/mdx')()
 const svgrPluginConfig = require('./next-conf/svgr.next.config')
 const watchPluginConfig = require('./next-conf/watch.next.config')
 
+const env = process.env.NODE_ENV
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -30,7 +31,9 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   webpack: (config) => {
     let conf = svgrPluginConfig(config)
-    conf =  watchPluginConfig(conf) 
+    if (env === "development") {
+      conf =  watchPluginConfig(conf) 
+    }
     return conf
   }
 }

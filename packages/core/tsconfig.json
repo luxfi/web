@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.lux.base.json",
+  "extends": "../tsconfig.modules.base.json",
   "include": [
     "**/*.ts",
     "**/*.tsx",
