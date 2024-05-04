@@ -5,7 +5,9 @@ import {
   type ScreenfulBlock,
 } from '@hanzo/ui/blocks'
 
-const byline = 'The only decentralized network of quantum safe blockchains providing institutional-grade, regulatory-compliant access to digital money and real-world assets.'
+import "./animation.css"
+
+const byline = `Decentralized network of blockchains designed to provide private and quantum safe access to high yield auto compounding staking protocols, and zero interest, zero liquidation, self repaying loans.`
 
 import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
@@ -43,10 +45,7 @@ export default {
   contentColumns: [
   [
     {blockType: 'element',
-      element: <h4 className='font-heading self-start !text-lg'>LUX Network</h4>,
-    } as ElementBlock,
-    {blockType: 'element',
-      element: <h1 className='font-heading self-start !text-4xl sm:!text-6xl mb-6'>POWER IN YOUR HANDS</h1>,
+      element: <h1 className='font-heading self-start text-6xl sm:text-5xl mb-6'>LUX NETWORK</h1>,
     } as ElementBlock,
     {blockType: 'enh-heading',
       specifiers: 'mobile-center-headings',
@@ -88,12 +87,19 @@ export default {
     } as CTABlock,
   ], [
     video,
-    {blockType: 'element',
+    {
+      blockType: 'element',
       element: <>
-        <div className='absolute hidden md:flex top-[110px] left-pr-50 w-[200px] h-[200px] z-below-content'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-0 md:top-[210px] md:left-pr-80 w-[80px] h-[80px] z-above-content'><VideoBlockComponent block={video}/></div>
-        <div className='absolute top-pr-25 left-pr-75 md:top-[665px] md:left-pr-57 w-[80px] h-[80px] z-above-content'><VideoBlockComponent block={video}/></div>
-        <div className='absolute hidden md:flex top-[610px] left-pr-80 w-[150px] h-[150px] z-below-content'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[99px] right-[22%] w-[33px] h-[33px] z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[111px] left-[88%] w-[77px] h-[77px] z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[222px] right-[11%] w-[42px] h-[42px] z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[333px] right-[6.9%] w-[69px] h-[69px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[444px] right-[11%] w-[42px] h-[42px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[555px] right-[21%] w-[123px] h-[123px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[600px] left-[49%] w-[169px] h-[169px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[666px] left-[36.9%] w-[69px] h-[69px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[700px] right-[22%] w-[33px] h-[33px] z-network-node'><VideoBlockComponent block={video}/></div>
+        <div className='animate-validator absolute top-[777px] left-[11%] w-[69px] h-[69px] z-network-node'><VideoBlockComponent block={video}/></div>
       </>,
     } as ElementBlock,
   ]],
