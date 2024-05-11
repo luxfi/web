@@ -3,29 +3,70 @@ import React, {type PropsWithChildren } from 'react'
 
 import { X as LucideX} from 'lucide-react'
 
-import { Button, Drawer, DrawerContent, type DrawerProps } from '@hanzo/ui/primitives'
+import { 
+  Button, 
+  Drawer, 
+  DrawerContent, 
+  DrawerHandle,
+  type DrawerProps,
+  useDrawerContext 
+} from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+
+import '../../../style/drawer-handle-overrides.css'
 
 const CommerceDrawer: React.FC<PropsWithChildren & 
   Omit<DrawerProps, 'onOpenChange'> & 
   {
     setOpen: (b: boolean) => void
+    handleHandleClicked: () => void
     drawerClx?: string
+    setActiveSPIndexSetter?: (fn: (snapPoint: number | string | null) => void) => void
   }
 > = ({
   children,
   open,
   setOpen,
   modal,
+  snapPoints,
+  setActiveSnapPoint,
+  activeSnapPoint,
+  handleHandleClicked,
+  setActiveSPIndexSetter,
   drawerClx='',
   ...rest
-}) => (
+}) => {
+  
+ 
+  return (
     // @ts-ignore
-  <Drawer open={open} onOpenChange={setOpen} modal={modal} {...rest}>
-    <DrawerContent modal={modal} className={cn(
+  <Drawer 
+    open={open} 
+    onOpenChange={setOpen} 
+    modal={modal} 
+    snapPoints={snapPoints}
+    setActiveSnapPoint={setActiveSnapPoint}
+    activeSnapPoint={activeSnapPoint}
+    fastDragSkipsToEnd={false}
+    handleOnly={true}
+    setActiveSPIndexSetter={setActiveSPIndexSetter}
+    
+
+    {...rest}
+  >
+    <DrawerContent defaultHandle={false} className={cn(
       'rounded-t-xl mt-6 pt-6',
       drawerClx
     )}>
+
+      <DrawerHandle 
+        className={
+          'absolute left-0 right-0 mx-auto top-2 ' + 
+          'w-[100px] h-3 rounded-full bg-level-3 hover:bg-level-2 shrink-0'
+        } 
+        handleClick={handleHandleClicked}
+      />
+
       {children}
       <Button
         variant='ghost'
@@ -38,6 +79,7 @@ const CommerceDrawer: React.FC<PropsWithChildren &
     </DrawerContent>
   </Drawer>
 )
+}
 
 
 export default CommerceDrawer

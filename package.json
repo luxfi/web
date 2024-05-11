@@ -31,7 +31,7 @@
   "pnpm": {
     "overrides": {
       "react": "^18.3.1",
-      "@types/react": "^18.3.1"
+      "@types/react": "^18.3.2"
 
 ,    "@hanzo/ui": "link:../../hanzoai/react-sdk/packages/ui"
 ,    "@hanzo/commerce": "link:../../hanzoai/react-sdk/packages/commerce"

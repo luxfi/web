@@ -1,6 +1,7 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { reaction, runInAction} from 'mobx'
 import { observer } from 'mobx-react-lite'
 
 import { useCommerceUI, CarouselBuyCard } from '@hanzo/commerce'
@@ -8,10 +9,37 @@ import { useCommerceUI, CarouselBuyCard } from '@hanzo/commerce'
 import CommerceDrawer from './drawer'
 import CheckoutButton from '../checkout-button'
 
+
+const SNAP = ['120px', '700px']
+
 const CommerceUIComponent: React.FC = observer(() => {
 
   const ui = useCommerceUI()
+  //const itemRef = useCommerceUI()
   const router = useRouter()
+
+  const [activeSnapPoint, setActiveSnapPoint] = useState<string | number | null>(null)
+  const setterRef = useRef<((index: number ) => void) | undefined>(undefined)
+
+  useEffect(() => {
+    reaction(
+      () => ({
+        buyOpen: !!ui.buyOptionsSkuPath
+      }),
+      (val, prev) => {
+        if (val.buyOpen && !prev.buyOpen) {
+          setActiveSnapPoint(SNAP[1])
+        }
+      },
+      {equals: (val, prev) => (
+        //val.microOpen === prev.microOpen 
+        //&& 
+        val.buyOpen === prev.buyOpen
+      )}
+    )
+  }, [])
+
+  
 
   const handleCheckout = () => {
     router.push('/checkout')
@@ -24,11 +52,33 @@ const CommerceUIComponent: React.FC = observer(() => {
     }
   }
 
+  const handleHandleClicked = () => {
+    console.log("HANDLE CLICKED")
+    console.log("ACTIVE: ", activeSnapPoint)
+    if (activeSnapPoint == SNAP[1] && setterRef.current) {
+      console.log("INSIDE === ")
+      setterRef.current(0)
+    }
+    else if (activeSnapPoint == SNAP[0] && setterRef.current) {
+      console.log("INSIDE === ")
+      setterRef.current(1)
+    }
+  }
+
+  const setActiveSPIndexSetter = (fn: (index: number ) => void): void => {
+    setterRef.current = fn 
+  }
+
   return (
     <CommerceDrawer 
       open={!!ui.buyOptionsSkuPath} 
       setOpen={reallyOnlyCloseDrawer}
-      drawerClx={'w-full md:max-w-[550px] md:mx-auto lg:max-w-[50vw]'}
+      drawerClx={'w-full h-full'}
+      snapPoints={SNAP}
+      activeSnapPoint={!!ui.buyOptionsSkuPath ? SNAP[SNAP.length - 1] : activeSnapPoint}
+      setActiveSnapPoint={setActiveSnapPoint}
+      handleHandleClicked={handleHandleClicked}
+      setActiveSPIndexSetter={setActiveSPIndexSetter}
     >
       <CarouselBuyCard 
         skuPath={ui.buyOptionsSkuPath!} 

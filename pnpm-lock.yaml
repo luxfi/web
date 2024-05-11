@@ -6,7 +6,7 @@ settings:
 
 overrides:
   react: ^18.3.1
-  '@types/react': ^18.3.1
+  '@types/react': ^18.3.2
   '@hanzo/ui': link:../../hanzoai/react-sdk/packages/ui
   '@hanzo/commerce': link:../../hanzoai/react-sdk/packages/commerce
 
@@ -16,7 +16,7 @@ importers:
     dependencies:
       '@next/mdx':
         specifier: ^14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       firebase:
         specifier: 10.8.0
         version: 10.8.0
@@ -40,7 +40,7 @@ importers:
         version: 0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-usequerystate:
         specifier: ^1.17.0
-        version: 1.17.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 1.17.2(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -64,7 +64,7 @@ importers:
     dependencies:
       '@hanzo/auth':
         specifier: 2.4.6
-        version: 2.4.6(@hanzo/ui@..+hanzoai+react-sdk+packages+ui)(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.21.4)
+        version: 2.4.6(@hanzo/ui@..+hanzoai+react-sdk+packages+ui)(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next@14.1.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.23.8)
       '@hanzo/commerce':
         specifier: link:../../../../hanzoai/react-sdk/packages/commerce
         version: link:../../../../hanzoai/react-sdk/packages/commerce
@@ -85,7 +85,7 @@ importers:
         version: 3.6.0
       embla-carousel-autoplay:
         specifier: ^8.0.1
-        version: 8.0.3(embla-carousel@8.0.3)
+        version: 8.0.4(embla-carousel@8.0.4)
       lucide-react:
         specifier: ^0.344.0
         version: 0.344.0(react@18.3.1)
@@ -112,17 +112,17 @@ importers:
         version: 6.16.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       validator:
         specifier: ^13.11.0
-        version: 13.11.0
+        version: 13.12.0
       zod:
-        specifier: 3.21.4
-        version: 3.21.4
+        specifier: 3.23.8
+        version: 3.23.8
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@types/facebook-pixel':
         specifier: ^0.0.30
         version: 0.0.30
@@ -133,14 +133,14 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -161,16 +161,16 @@ importers:
         version: 5.3.3
       vite-node:
         specifier: ^1.4.0
-        version: 1.6.0(@types/node@20.12.8)(supports-color@8.1.1)(terser@5.31.0)
+        version: 1.6.0(@types/node@20.12.11)(supports-color@8.1.1)(terser@5.31.0)
 
   sites/auth:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       firebase:
         specifier: ^10.8.0
         version: 10.8.0
@@ -207,7 +207,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -215,8 +215,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -231,7 +231,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -240,10 +240,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       lucide-react:
         specifier: ^0.344.0
         version: 0.344.0(react@18.3.1)
@@ -268,7 +268,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -276,8 +276,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -292,7 +292,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -301,10 +301,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       lucide-react:
         specifier: ^0.344.0
         version: 0.344.0(react@18.3.1)
@@ -329,7 +329,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -337,8 +337,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -353,7 +353,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -365,19 +365,19 @@ importers:
         version: 3.3.4(react-hook-form@7.51.4(react@18.3.1))
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.21.4)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.2.5
+        version: 1.3.1
       embla-carousel-autoplay:
         specifier: ^8.0.1
-        version: 8.0.3(embla-carousel@8.0.3)
+        version: 8.0.4(embla-carousel@8.0.4)
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -404,7 +404,7 @@ importers:
         version: 0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-usequerystate:
         specifier: ^1.17.0
-        version: 1.17.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 1.17.2(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       postcss-selector-parser:
         specifier: ^6.0.13
         version: 6.0.16
@@ -432,7 +432,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -441,10 +441,10 @@ importers:
         version: 2.0.13
       '@types/node':
         specifier: ^20.11.24
-        version: 20.12.8
+        version: 20.12.11
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -459,7 +459,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -468,10 +468,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.21.4)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       mobx:
         specifier: ^6.12.0
         version: 6.12.3
@@ -505,7 +505,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -513,8 +513,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -529,7 +529,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -538,10 +538,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       firebase:
         specifier: ^10.8.0
         version: 10.8.0
@@ -578,7 +578,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -586,8 +586,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -602,7 +602,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -617,10 +617,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       lucide-react:
         specifier: ^0.344.0
         version: 0.344.0(react@18.3.1)
@@ -645,7 +645,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -653,8 +653,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -669,7 +669,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -684,13 +684,13 @@ importers:
         version: link:../../packages/core
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.2.5
+        version: 1.3.1
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -717,7 +717,7 @@ importers:
         version: 0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-usequerystate:
         specifier: ^1.17.0
-        version: 1.17.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 1.17.2(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       postcss-selector-parser:
         specifier: ^6.0.13
         version: 6.0.16
@@ -737,15 +737,15 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1(webpack@5.91.0)
       zod:
-        specifier: 3.21.4
-        version: 3.21.4
+        specifier: 3.23.8
+        version: 3.23.8
     devDependencies:
       '@mdx-js/loader':
         specifier: ^3.0.0
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -753,8 +753,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -769,7 +769,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -784,16 +784,16 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.21.4)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.2.5
+        version: 1.3.1
       firebase:
         specifier: ^10.8.0
         version: 10.8.0
@@ -830,7 +830,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -838,8 +838,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -857,7 +857,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -866,10 +866,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       next:
         specifier: 14.1.3
         version: 14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -891,7 +891,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -899,8 +899,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -915,7 +915,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -940,10 +940,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       firebase:
         specifier: ^10.8.0
         version: 10.8.0
@@ -980,7 +980,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -988,8 +988,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -1004,7 +1004,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1013,10 +1013,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       firebase:
         specifier: ^10.8.0
         version: 10.8.0
@@ -1047,7 +1047,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -1055,8 +1055,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -1071,7 +1071,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1083,16 +1083,16 @@ importers:
         version: 3.3.4(react-hook-form@7.51.4(react@18.3.1))
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.21.4)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.2.5
+        version: 1.3.1
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -1119,7 +1119,7 @@ importers:
         version: 0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-usequerystate:
         specifier: ^1.17.0
-        version: 1.17.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 1.17.2(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       postcss-selector-parser:
         specifier: ^6.0.13
         version: 6.0.16
@@ -1144,7 +1144,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -1152,8 +1152,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -1168,7 +1168,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1177,10 +1177,10 @@ importers:
     dependencies:
       '@luxfi/core':
         specifier: 5.0.5
-        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)
+        version: 5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)
       '@next/mdx':
         specifier: 14.1.0
-        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))
+        version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))
       firebase:
         specifier: ^10.8.0
         version: 10.8.0
@@ -1211,7 +1211,7 @@ importers:
         version: 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
       '@mdx-js/react':
         specifier: ^3.0.0
-        version: 3.0.1(@types/react@18.3.1)(react@18.3.1)
+        version: 3.0.1(@types/react@18.3.2)(react@18.3.1)
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
@@ -1219,8 +1219,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.13
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^18.3.2
+        version: 18.3.2
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
@@ -1235,7 +1235,7 @@ importers:
         version: 15.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.2
-        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+        version: 3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1903,11 +1903,11 @@ packages:
   '@bugsnag/cuid@3.1.1':
     resolution: {integrity: sha512-d2z4b0rEo3chI07FNN1Xds8v25CNeekecU6FC/2Fs9MxY2EipkZTThVcV2YinMn8dvRUlViKOyC50evoUxg8tw==}
 
-  '@bugsnag/js@7.22.7':
-    resolution: {integrity: sha512-Qq8l06rSDTZtxgNIDpTeXHrin9C30INNbPfnR2CNcEsCmfqyVQb4USPEuRb0xg5wiaLKU9r4IAatMqiCgdzG6A==}
+  '@bugsnag/js@7.23.0':
+    resolution: {integrity: sha512-gnCpcv/v6p3CtbwwDuAjVYPPNq4NMVj4hp70MiB3OGJ+LmIS66CwElDiyvRMA8Ar6OzCF4joTeaNG5bD9cM41w==}
 
-  '@bugsnag/node@7.22.7':
-    resolution: {integrity: sha512-Ud8vpX9UkGxoWAk7OigyR7w1eycbsE5uv5KZx0aWiqDPXylvICd42V5ZiWstpkdm9IVFo9AQ4+gmerHPe4Lwrg==}
+  '@bugsnag/node@7.23.0':
+    resolution: {integrity: sha512-eXA8/h+J2booEMlKsuRl1NAszebwm4KZ9zxCSg/xN4sw5boXia7kMifLf8QTqk+UBtIhNKBsyQQKHXbawKyE6Q==}
 
   '@bugsnag/safe-json-stringify@6.0.0':
     resolution: {integrity: sha512-htzFO1Zc57S8kgdRK9mLcPVTW1BY2ijfH7Dk2CeZmspTWKdKqSo1iwmqrq2WtRjFlo8aRZYgLX0wFrDXF/9DLA==}
@@ -2278,8 +2278,8 @@ packages:
   '@firebase/webchannel-wrapper@0.10.5':
     resolution: {integrity: sha512-eSkJsnhBWv5kCTSU1tSUVl9mpFu+5NXXunZc83le8GMjMlsWwQArSc7cJJ4yl+aDFY0NGLi0AjZWMn1axOrkRg==}
 
-  '@google-cloud/firestore@7.6.0':
-    resolution: {integrity: sha512-WUDbaLY8UnPxgwsyIaxj6uxCtSDAaUyvzWJykNH5rZ9i92/SZCsPNNMN0ajrVpAR81hPIL4amXTaMJ40y5L+Yg==}
+  '@google-cloud/firestore@7.7.0':
+    resolution: {integrity: sha512-41/vBFXOeSYjFI/2mJuJrDwg2umGk+FDrI/SCGzBRUe+UZWDN4GoahIbGZ19YQsY0ANNl6DRiAy4wD6JezK02g==}
     engines: {node: '>=14.0.0'}
 
   '@google-cloud/paginator@5.0.0':
@@ -2294,8 +2294,8 @@ packages:
     resolution: {integrity: sha512-Orxzlfb9c67A15cq2JQEyVc7wEsmFBmHjZWZYQMUyJ1qivXyMwdyNOs9odi79hze+2zqdTtu1E19IM/FtqZ10g==}
     engines: {node: '>=14'}
 
-  '@google-cloud/storage@7.10.2':
-    resolution: {integrity: sha512-NaCyhwu0cSqwj6waZO+8WiyzCXUBUfVE7T1fHAGRHEJ+CRy5on2ah/jfC0ZPYXL0q4JoPj98VtMW4bEgtFfKHw==}
+  '@google-cloud/storage@7.11.0':
+    resolution: {integrity: sha512-W+OPOCgq7a3aAMANALbJAlEnpMV9fy681JWIm7dYe5W/+nRhq/UvA477TJT5/oPNA5DgiAdMEdiitdoLpZqhJg==}
     engines: {node: '>=14'}
 
   '@grpc/grpc-js@1.10.7':
@@ -2400,7 +2400,7 @@ packages:
   '@mdx-js/react@3.0.1':
     resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
     peerDependencies:
-      '@types/react': ^18.3.1
+      '@types/react': ^18.3.2
       react: ^18.3.1
 
   '@mrmlnc/readdir-enhanced@2.2.1':
@@ -2961,8 +2961,8 @@ packages:
       react: ^18.3.1
       react-dom: '>=17.0.0'
 
-  '@splinetool/runtime@1.2.5':
-    resolution: {integrity: sha512-2mbp+3wfUE2gabqSWbp+xu5fKRRN0RHBoPO55ax6K3+vBeslK9undUcTkOVsdK7+LDU7RARfHsuecDvB40LtBg==}
+  '@splinetool/runtime@1.3.1':
+    resolution: {integrity: sha512-0zD0l4fYVa4Auw/8LwzsaGwyk6XvKhQXcJ3EMugWvkI7NpOZCSsBDUkFeS4nmch3g7+1kT/OzEhLv5GeiVmYug==}
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
     resolution: {integrity: sha512-b9MIk7yhdS1pMCZM8VeNfUlSKVRhsHZNMl5O9SfaX0l0t5wjdgu4IDzGB8bpnGBBOjGST3rRFVsaaEtI4W6f7g==}
@@ -3184,14 +3184,14 @@ packages:
   '@types/node-fetch@2.6.11':
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
 
-  '@types/node@16.18.96':
-    resolution: {integrity: sha512-84iSqGXoO+Ha16j8pRZ/L90vDMKX04QTYMTfYeE1WrjWaZXuchBehGUZEpNgx7JnmlrIHdnABmpjrQjhCnNldQ==}
+  '@types/node@16.18.97':
+    resolution: {integrity: sha512-4muilE1Lbfn57unR+/nT9AFjWk0MtWi5muwCEJqnOvfRQDbSfLCUdN7vCIg8TYuaANfhLOV85ve+FNpiUsbSRg==}
 
   '@types/node@18.15.13':
     resolution: {integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==}
 
-  '@types/node@20.12.8':
-    resolution: {integrity: sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==}
+  '@types/node@20.12.11':
+    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3208,8 +3208,8 @@ packages:
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
 
-  '@types/react@18.3.1':
-    resolution: {integrity: sha512-V0kuGBX3+prX+DQ/7r2qsv1NsdfnCLnTgnRJ1pYnxykBhGMz+qj+box5lq7XsO5mtZsBqpjwwTu/7wszPfMBcw==}
+  '@types/react@18.3.2':
+    resolution: {integrity: sha512-Btgg89dAnqD4vV7R3hlwOxgqobUQKgx3MmrQRi0yYbs/P0ym8XozIAlkqVilPqHQwXs4e9Tf63rrCgl58BcO4w==}
 
   '@types/request@2.48.12':
     resolution: {integrity: sha512-G3sY+NpsA9jnwm0ixhAFQSJ3Q9JkpLZpJbI3GMv0mIAT0y3mRabYeINzal5WOChIiaTEGQYlHOKgkaM9EisWHw==}
@@ -3795,8 +3795,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  caniuse-lite@1.0.30001615:
-    resolution: {integrity: sha512-1IpazM5G3r38meiae0bHRnPhz+CBQ3ZLqbQMtrg+AsTPKAXgW38JNsXkyZ+v8waCsDmPq87lmfun5Q2AGysNEQ==}
+  caniuse-lite@1.0.30001617:
+    resolution: {integrity: sha512-mLyjzNI9I+Pix8zwcrpxEbGlfqOkF9kM3ptzmKNw5tizSyYwMe+nGLTqMK9cO+0E+Bh6TsBxNAaHWEM8xwSsmA==}
 
   caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
@@ -4409,20 +4409,20 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.4.756:
-    resolution: {integrity: sha512-RJKZ9+vEBMeiPAvKNWyZjuYyUqMndcP1f335oHqn3BEQbs2NFtVrnK5+6Xg5wSM9TknNNpWghGDUCKGYF+xWXw==}
+  electron-to-chromium@1.4.763:
+    resolution: {integrity: sha512-k4J8NrtJ9QrvHLRo8Q18OncqBCB7tIUyqxRcJnlonQ0ioHKYB988GcDFF3ZePmnb8eHEopDs/wPHR/iGAFgoUQ==}
 
   elegant-spinner@1.0.1:
     resolution: {integrity: sha512-B+ZM+RXvRqQaAmkMlO/oSe5nMUOaUnyfGYCEHoR8wrXsZR2mA0XVibsxV1bvTwxdRWah1PkQqso2EzhILGHtEQ==}
     engines: {node: '>=0.10.0'}
 
-  embla-carousel-autoplay@8.0.3:
-    resolution: {integrity: sha512-EIgb6B62ukGykg6JlHwaT9Xaq3pwO0C3Vue+10OYBPDX9wFPJppUMstm6Ty0B99PapEEq53fDeZRplzowVwugQ==}
+  embla-carousel-autoplay@8.0.4:
+    resolution: {integrity: sha512-Ilmgn+d09o2M23yvl4cYwfO8VnZi7YXQl9UGYIflLGhtFaZW9PKU67TaW8teRjaDhS3I+uz3osBFDO407YPjfQ==}
     peerDependencies:
-      embla-carousel: 8.0.3
+      embla-carousel: 8.0.4
 
-  embla-carousel@8.0.3:
-    resolution: {integrity: sha512-ThQxBJeAQ8tS1LjBKS5ZoMfRCNXfuK93VrslWnNFmCKG45ir2AniCIMx+bYhaNA8lxwelfPXj1cEiZlHXk7IpQ==}
+  embla-carousel@8.0.4:
+    resolution: {integrity: sha512-INndmilrV9KY4Wnb4F2tI55DuQnFjf3GPOaPDT2LGYiKhIWVNUhv1nz/RI7CZ6WoIZ8MYHP4t6Qm/cqpcGHknA==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -4440,12 +4440,9 @@ packages:
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
 
-  enhanced-resolve@5.16.0:
-    resolution: {integrity: sha512-O+QWCviPNSSLAD9Ucn8Awv+poAkqn3T1XY5/N7kR7rQO9yfSGWkYZDwpJ+iKF7B8rxaQKWngSqACpgzeapSyoA==}
+  enhanced-resolve@5.16.1:
+    resolution: {integrity: sha512-4U5pNsuDl0EhuZpq46M5xPslstkviJuhrdobaRDBk2Jy2KO37FDAJl4lb2KlNabxT0m4MTK2UHNrsAcphE8nyw==}
     engines: {node: '>=10.13.0'}
-
-  ent@2.2.0:
-    resolution: {integrity: sha512-GHrMyVZQWvTIdDtpiEXdHZnFQKzeO09apj8Cbl4pKWy4i0Oprcq17usfDt5aO63swf0JOeMWjWQE/LzgSRuWpA==}
 
   entities@2.2.0:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
@@ -4988,8 +4985,8 @@ packages:
   glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
 
-  glob@10.3.12:
-    resolution: {integrity: sha512-TCNv8vJ+xz4QiqTpfOJA7HvYv+tNIRHKfUWw/q+v2jdgN4ebz+KY9tGx5J4rHP0o84mNP+ApH66HRX8us3Khqg==}
+  glob@10.3.14:
+    resolution: {integrity: sha512-4fkAqu93xe9Mk7le9v0y3VrPDqLKHarNi2s4Pv7f2yOvfhWfhc7hRPHC/JyqMqb8B/Dt/eGS4n7ykwf3fOsl8g==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
 
@@ -5168,6 +5165,9 @@ packages:
   html-encoding-sniffer@3.0.0:
     resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
     engines: {node: '>=12'}
+
+  html-entities@2.5.2:
+    resolution: {integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==}
 
   http-cache-semantics@3.8.1:
     resolution: {integrity: sha512-5ai2iksyV8ZXmnZhHH4rWPoxxistEexSi5936zIQ1bnNTW5VnA85B6P/VpXiRM017IgRvb2kKo1a//y+0wSp3w==}
@@ -6167,8 +6167,8 @@ packages:
     resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==}
     engines: {node: '>=8'}
 
-  minipass@7.1.0:
-    resolution: {integrity: sha512-oGZRv2OT1lO2UF1zUcwdTb3wqUwI0kBGTgt/T7OdSj6M6N5m3o5uPf0AIW6lVxGGoiWUR7e2AwTE+xiwK8WQig==}
+  minipass@7.1.1:
+    resolution: {integrity: sha512-UZ7eQ+h8ywIRAW1hIEl2AqdwzJucU/Kp59+8kkZeSvafXhZjul247BvIJjEVFVeON6d7lM46XX1HXCduKAS8VA==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minizlib@2.1.2:
@@ -6311,8 +6311,8 @@ packages:
       react: ^18.3.1
       react-dom: '*'
 
-  next-usequerystate@1.17.1:
-    resolution: {integrity: sha512-gRUswW1OIFJY+ncQKq2GH0BEIFX63JhC5+hKSkQr8s48jib7ffdx7sCivmssFmRJrIfhyawRyBUaCSPaSyPMgw==}
+  next-usequerystate@1.17.2:
+    resolution: {integrity: sha512-C+8i56c32aso/tfdgfWZ8GQaQARrEz7rTim0YczXIjlnzdFZVr5D2+yFGLQGXHDm3QRO1sD61IVaEc2fhiYV/Q==}
     peerDependencies:
       next: '>=13.4 <14.0.2 || ^14.0.3'
 
@@ -6722,8 +6722,8 @@ packages:
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
 
-  path-scurry@1.10.2:
-    resolution: {integrity: sha512-7xTavNy5RQXnsjANvVvMkEjvloOinkAjv/Z6Ildz9v2RinZ4SBKTWFOVRbaF8p0vpHnyjV/UwNDdKuUv6M5qcA==}
+  path-scurry@1.11.0:
+    resolution: {integrity: sha512-LNHTaVkzaYaLGlO+0u3rQTz7QrHTFOuKyba9JMTQutkmtNew8dw8wOD7mTU/5fCPZzCWpfW0XnQKzY61P0aTaw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   path-to-regexp@0.1.7:
@@ -6897,6 +6897,10 @@ packages:
 
   protobufjs@7.2.6:
     resolution: {integrity: sha512-dgJaEDDL6x8ASUZ1YqWciTRrdOuYNzoOf27oHNfdyvKqHr5i0FV7FSLU+aIeFjyFgVxrpTOtQUi0BLLBymZaBw==}
+    engines: {node: '>=12.0.0'}
+
+  protobufjs@7.3.0:
+    resolution: {integrity: sha512-YWD03n3shzV9ImZRX3ccbjqLxj7NokGN0V/ESiBV5xWqrommYHYiihuIyavq03pWSGqlyvYUFmfoMKd+1rPA/g==}
     engines: {node: '>=12.0.0'}
 
   proxy-addr@2.0.7:
@@ -7252,8 +7256,8 @@ packages:
     resolution: {integrity: sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==}
     hasBin: true
 
-  semver@7.6.0:
-    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
+  semver@7.6.2:
+    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -7605,8 +7609,8 @@ packages:
   svg-parser@2.0.4:
     resolution: {integrity: sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==}
 
-  svgo@3.2.0:
-    resolution: {integrity: sha512-4PP6CMW/V7l/GmKRKzsLR8xxjdHTV4IMvhTnpuHwwBazSIlw5W/5SmPjN8Dwyt7lKbSJrRDgp4t9ph0HgChFBQ==}
+  svgo@3.3.2:
+    resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -8037,8 +8041,8 @@ packages:
     resolution: {integrity: sha512-mzR0L8ZDktZjpX4OB46KT+56MAhl4EIazWP/+G/HPGuvfdaqg4YsCdtOm6U9+LOFyYDoh4dpnpxZRB9MQQns5Q==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
 
-  validator@13.11.0:
-    resolution: {integrity: sha512-Ii+sehpSfZy+At5nPdnyMhx78fEoPDkR2XW/zimHEL3MyGJQOCQ7WeP20jPYRz7ZCpcKLB21NxuXHF3bxjStBQ==}
+  validator@13.12.0:
+    resolution: {integrity: sha512-c1Q0mCiPlgdTVVVIJIrBuxNicYE+t/7oKeI9MWLj3fh/uq2Pxh/3eeWbVZ4OcGW1TUf53At0njHw5SMdA3tmMg==}
     engines: {node: '>= 0.10'}
 
   vary@1.1.2:
@@ -8258,6 +8262,9 @@ packages:
 
   zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -9067,12 +9074,12 @@ snapshots:
 
   '@bugsnag/cuid@3.1.1': {}
 
-  '@bugsnag/js@7.22.7':
+  '@bugsnag/js@7.23.0':
     dependencies:
       '@bugsnag/browser': 7.22.7
-      '@bugsnag/node': 7.22.7
+      '@bugsnag/node': 7.23.0
 
-  '@bugsnag/node@7.22.7':
+  '@bugsnag/node@7.23.0':
     dependencies:
       '@bugsnag/core': 7.22.7
       byline: 5.0.0
@@ -9517,12 +9524,12 @@ snapshots:
 
   '@firebase/webchannel-wrapper@0.10.5': {}
 
-  '@google-cloud/firestore@7.6.0(supports-color@8.1.1)':
+  '@google-cloud/firestore@7.7.0(supports-color@8.1.1)':
     dependencies:
       fast-deep-equal: 3.1.3
       functional-red-black-tree: 1.0.1
       google-gax: 4.3.3(supports-color@8.1.1)
-      protobufjs: 7.2.6
+      protobufjs: 7.3.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -9540,7 +9547,7 @@ snapshots:
   '@google-cloud/promisify@4.0.0':
     optional: true
 
-  '@google-cloud/storage@7.10.2(supports-color@8.1.1)':
+  '@google-cloud/storage@7.11.0(supports-color@8.1.1)':
     dependencies:
       '@google-cloud/paginator': 5.0.0
       '@google-cloud/projectify': 4.0.0
@@ -9548,10 +9555,10 @@ snapshots:
       abort-controller: 3.0.0
       async-retry: 1.3.3
       duplexify: 4.1.3
-      ent: 2.2.0
       fast-xml-parser: 4.3.6
       gaxios: 6.5.0(supports-color@8.1.1)
       google-auth-library: 9.9.0(supports-color@8.1.1)
+      html-entities: 2.5.2
       mime: 3.0.0
       p-limit: 3.1.0
       retry-request: 7.0.2(supports-color@8.1.1)
@@ -9571,13 +9578,13 @@ snapshots:
   '@grpc/grpc-js@1.9.14':
     dependencies:
       '@grpc/proto-loader': 0.7.13
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@grpc/proto-loader@0.7.13':
     dependencies:
       lodash.camelcase: 4.3.0
       long: 5.2.3
-      protobufjs: 7.2.6
+      protobufjs: 7.3.0
       yargs: 17.7.2
 
   '@hanzo/auth@2.4.6(@hanzo/ui@..+hanzoai+react-sdk+packages+ui)(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.21.4)':
@@ -9593,6 +9600,23 @@ snapshots:
       react: 18.3.1
       react-hook-form: 7.51.4(react@18.3.1)
       zod: 3.21.4
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@hanzo/auth@2.4.6(@hanzo/ui@..+hanzoai+react-sdk+packages+ui)(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next@14.1.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.23.8)':
+    dependencies:
+      '@hanzo/ui': link:../../hanzoai/react-sdk/packages/ui
+      '@hookform/resolvers': 3.3.4(react-hook-form@7.51.4(react@18.3.1))
+      firebase: 10.8.0
+      firebase-admin: 12.1.0(supports-color@8.1.1)
+      lucide-react: 0.344.0(react@18.3.1)
+      mobx: 6.12.3
+      mobx-react-lite: 4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-hook-form: 7.51.4(react@18.3.1)
+      zod: 3.23.8
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -9623,7 +9647,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       '@types/yargs': 16.0.9
       chalk: 4.1.2
 
@@ -9657,7 +9681,7 @@ snapshots:
   '@js-sdsl/ordered-map@4.4.2':
     optional: true
 
-  '@luxfi/core@5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.3)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.11.0)(zod@3.21.4)':
+  '@luxfi/core@5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.21.4)':
     dependencies:
       '@hanzo/auth': 2.4.6(@hanzo/ui@..+hanzoai+react-sdk+packages+ui)(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.21.4)
       '@hanzo/commerce': link:../../hanzoai/react-sdk/packages/commerce
@@ -9666,7 +9690,7 @@ snapshots:
       '@next/third-parties': 14.2.3(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       cookies-next: 4.1.1
       date-fns: 3.6.0
-      embla-carousel-autoplay: 8.0.3(embla-carousel@8.0.3)
+      embla-carousel-autoplay: 8.0.4(embla-carousel@8.0.4)
       lucide-react: 0.344.0(react@18.3.1)
       next: 14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-themes: 0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9675,8 +9699,36 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-hook-form: 7.51.4(react@18.3.1)
       react-social-icons: 6.16.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      validator: 13.11.0
+      validator: 13.12.0
       zod: 3.21.4
+    transitivePeerDependencies:
+      - embla-carousel
+      - encoding
+      - firebase
+      - mobx
+      - mobx-react-lite
+      - supports-color
+
+  '@luxfi/core@5.0.5(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(embla-carousel@8.0.4)(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next-themes@0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(validator@13.12.0)(zod@3.23.8)':
+    dependencies:
+      '@hanzo/auth': 2.4.6(@hanzo/ui@..+hanzoai+react-sdk+packages+ui)(@hookform/resolvers@3.3.4(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.8.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.3)(next@14.1.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.23.8)
+      '@hanzo/commerce': link:../../hanzoai/react-sdk/packages/commerce
+      '@hanzo/ui': link:../../hanzoai/react-sdk/packages/ui
+      '@hookform/resolvers': 3.3.4(react-hook-form@7.51.4(react@18.3.1))
+      '@next/third-parties': 14.2.3(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      cookies-next: 4.1.1
+      date-fns: 3.6.0
+      embla-carousel-autoplay: 8.0.4(embla-carousel@8.0.4)
+      lucide-react: 0.344.0(react@18.3.1)
+      next: 14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-themes: 0.2.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-device-detect: 2.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
+      react-hook-form: 7.51.4(react@18.3.1)
+      react-social-icons: 6.16.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      validator: 13.12.0
+      zod: 3.23.8
     transitivePeerDependencies:
       - embla-carousel
       - encoding
@@ -9694,7 +9746,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.6.0
+      semver: 7.6.2
       tar: 6.2.1
     transitivePeerDependencies:
       - encoding
@@ -9709,7 +9761,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.6.0
+      semver: 7.6.2
       tar: 6.2.1
     transitivePeerDependencies:
       - encoding
@@ -9751,10 +9803,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1)':
+  '@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 18.3.1
+      '@types/react': 18.3.2
       react: 18.3.1
 
   '@mrmlnc/readdir-enhanced@2.2.1':
@@ -9766,7 +9818,7 @@ snapshots:
 
   '@netlify/build@27.20.6':
     dependencies:
-      '@bugsnag/js': 7.22.7
+      '@bugsnag/js': 7.23.0
       '@netlify/cache-utils': 4.1.6(supports-color@9.4.0)
       '@netlify/config': 18.2.6
       '@netlify/edge-bundler': 2.9.0
@@ -9776,7 +9828,7 @@ snapshots:
       '@netlify/run-utils': 4.0.2
       '@netlify/zip-it-and-ship-it': 7.1.3(supports-color@9.4.0)
       '@sindresorhus/slugify': 2.2.1
-      '@types/node': 16.18.96
+      '@types/node': 16.18.97
       ajv: 8.13.0
       ajv-errors: 3.0.0(ajv@8.13.0)
       ansi-escapes: 5.0.0
@@ -9810,13 +9862,13 @@ snapshots:
       resolve: 2.0.0-next.5
       rfdc: 1.3.1
       safe-json-stringify: 1.2.0
-      semver: 7.6.0
+      semver: 7.6.2
       statsd-client: 0.4.7
       string-width: 5.1.2
       strip-ansi: 7.1.0
       supports-color: 9.4.0
       tmp-promise: 3.0.3
-      ts-node: 10.9.2(@types/node@16.18.96)(typescript@4.9.5)
+      ts-node: 10.9.2(@types/node@16.18.97)(typescript@4.9.5)
       typescript: 4.9.5
       update-notifier: 5.1.0
       uuid: 8.3.2
@@ -9882,7 +9934,7 @@ snapshots:
       p-retry: 5.1.2
       p-wait-for: 4.1.0
       path-key: 4.0.0
-      semver: 7.6.0
+      semver: 7.6.2
       tmp-promise: 3.0.3
       uuid: 9.0.1
 
@@ -9980,7 +10032,7 @@ snapshots:
       p-locate: 6.0.0
       process: 0.11.10
       read-pkg-up: 9.1.0
-      semver: 7.6.0
+      semver: 7.6.2
 
   '@netlify/functions-utils@4.2.11(supports-color@9.4.0)':
     dependencies:
@@ -10087,7 +10139,7 @@ snapshots:
       read-package-json-fast: 2.0.3
       require-package-name: 2.0.1
       resolve: 2.0.0-next.5
-      semver: 7.6.0
+      semver: 7.6.2
       tmp-promise: 3.0.3
       toml: 3.0.0
       unixify: 1.0.0
@@ -10125,7 +10177,7 @@ snapshots:
       read-package-json-fast: 2.0.3
       require-package-name: 2.0.1
       resolve: 2.0.0-next.5
-      semver: 7.6.0
+      semver: 7.6.2
       tmp-promise: 3.0.3
       toml: 3.0.0
       unixify: 1.0.0
@@ -10136,12 +10188,12 @@ snapshots:
 
   '@next/env@14.1.3': {}
 
-  '@next/mdx@14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.1)(react@18.3.1))':
+  '@next/mdx@14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.2)(react@18.3.1))':
     dependencies:
       source-map: 0.7.4
     optionalDependencies:
       '@mdx-js/loader': 3.0.1(supports-color@8.1.1)(webpack@5.91.0)
-      '@mdx-js/react': 3.0.1(@types/react@18.3.1)(react@18.3.1)
+      '@mdx-js/react': 3.0.1(@types/react@18.3.2)(react@18.3.1)
 
   '@next/swc-darwin-arm64@14.1.3':
     optional: true
@@ -10385,15 +10437,15 @@ snapshots:
     dependencies:
       escape-string-regexp: 5.0.0
 
-  '@splinetool/react-spline@2.2.6(@splinetool/runtime@1.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@splinetool/react-spline@2.2.6(@splinetool/runtime@1.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@splinetool/runtime': 1.2.5
+      '@splinetool/runtime': 1.3.1
       lodash.debounce: 4.0.8
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-merge-refs: 2.1.1
 
-  '@splinetool/runtime@1.2.5':
+  '@splinetool/runtime@1.3.1':
     dependencies:
       on-change: 4.0.2
       semver-compare: 1.0.0
@@ -10473,7 +10525,7 @@ snapshots:
       '@svgr/core': 8.1.0(supports-color@8.1.1)(typescript@5.3.3)
       cosmiconfig: 8.3.6(typescript@5.3.3)
       deepmerge: 4.3.1
-      svgo: 3.2.0
+      svgo: 3.3.2
     transitivePeerDependencies:
       - typescript
 
@@ -10523,13 +10575,13 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       '@types/responselike': 1.0.3
 
   '@types/caseless@0.12.5':
@@ -10537,7 +10589,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/cookie@0.6.0': {}
 
@@ -10547,13 +10599,13 @@ snapshots:
 
   '@types/decompress@4.2.7':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/download@8.0.5':
     dependencies:
       '@types/decompress': 4.2.7
       '@types/got': 9.6.12
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -10573,7 +10625,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.0':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -10590,11 +10642,11 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/got@9.6.12':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       '@types/tough-cookie': 4.0.5
       form-data: 2.5.1
 
@@ -10610,7 +10662,7 @@ snapshots:
 
   '@types/http-proxy@1.17.14':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -10631,11 +10683,11 @@ snapshots:
 
   '@types/jsonwebtoken@9.0.6':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/long@4.0.2':
     optional: true
@@ -10654,14 +10706,14 @@ snapshots:
 
   '@types/node-fetch@2.6.11':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       form-data: 4.0.0
 
-  '@types/node@16.18.96': {}
+  '@types/node@16.18.97': {}
 
   '@types/node@18.15.13': {}
 
-  '@types/node@20.12.8':
+  '@types/node@20.12.11':
     dependencies:
       undici-types: 5.26.5
 
@@ -10675,9 +10727,9 @@ snapshots:
 
   '@types/react-dom@18.3.0':
     dependencies:
-      '@types/react': 18.3.1
+      '@types/react': 18.3.2
 
-  '@types/react@18.3.1':
+  '@types/react@18.3.2':
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
@@ -10685,14 +10737,14 @@ snapshots:
   '@types/request@2.48.12':
     dependencies:
       '@types/caseless': 0.12.5
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       '@types/tough-cookie': 4.0.5
       form-data: 2.5.1
     optional: true
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/retry@0.12.1': {}
 
@@ -10701,12 +10753,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       '@types/send': 0.17.4
 
   '@types/tough-cookie@4.0.5': {}
@@ -10736,7 +10788,7 @@ snapshots:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.0
+      semver: 7.6.2
       tsutils: 3.21.0(typescript@4.9.5)
     optionalDependencies:
       typescript: 4.9.5
@@ -10750,7 +10802,7 @@ snapshots:
       debug: 4.3.4(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.0
+      semver: 7.6.2
       tsutils: 3.21.0(typescript@4.9.5)
     optionalDependencies:
       typescript: 4.9.5
@@ -10963,7 +11015,7 @@ snapshots:
       global-cache-dir: 2.0.0
       jest-validate: 25.5.0
       path-exists: 4.0.0
-      semver: 7.6.0
+      semver: 7.6.2
       write-file-atomic: 3.0.3
 
   ansi-align@3.0.1:
@@ -11132,7 +11184,7 @@ snapshots:
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001615
+      caniuse-lite: 1.0.30001617
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -11298,8 +11350,8 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001615
-      electron-to-chromium: 1.4.756
+      caniuse-lite: 1.0.30001617
+      electron-to-chromium: 1.4.763
       node-releases: 2.0.14
       update-browserslist-db: 1.0.15(browserslist@4.23.0)
 
@@ -11327,7 +11379,7 @@ snapshots:
 
   builtins@5.1.0:
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.2
 
   busboy@1.6.0:
     dependencies:
@@ -11408,7 +11460,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
-  caniuse-lite@1.0.30001615: {}
+  caniuse-lite@1.0.30001617: {}
 
   caseless@0.12.0: {}
 
@@ -11628,7 +11680,7 @@ snapshots:
       js-string-escape: 1.0.1
       lodash: 4.17.21
       md5-hex: 3.0.1
-      semver: 7.6.0
+      semver: 7.6.2
       well-known-symbols: 2.0.0
 
   configstore@5.0.1:
@@ -11659,7 +11711,7 @@ snapshots:
   cookies-next@4.1.1:
     dependencies:
       '@types/cookie': 0.6.0
-      '@types/node': 16.18.96
+      '@types/node': 16.18.97
       cookie: 0.6.0
 
   copy-descriptor@0.1.1: {}
@@ -12090,15 +12142,15 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.4.756: {}
+  electron-to-chromium@1.4.763: {}
 
   elegant-spinner@1.0.1: {}
 
-  embla-carousel-autoplay@8.0.3(embla-carousel@8.0.3):
+  embla-carousel-autoplay@8.0.4(embla-carousel@8.0.4):
     dependencies:
-      embla-carousel: 8.0.3
+      embla-carousel: 8.0.4
 
-  embla-carousel@8.0.3: {}
+  embla-carousel@8.0.4: {}
 
   emoji-regex@8.0.0: {}
 
@@ -12112,13 +12164,10 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  enhanced-resolve@5.16.0:
+  enhanced-resolve@5.16.1:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
-
-  ent@2.2.0:
-    optional: true
 
   entities@2.2.0: {}
 
@@ -12567,7 +12616,7 @@ snapshots:
       '@fastify/busboy': 2.1.1
       '@firebase/database-compat': 1.0.4
       '@firebase/database-types': 1.0.2
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       farmhash: 3.3.1
       jsonwebtoken: 9.0.2
       jwks-rsa: 3.1.0(supports-color@8.1.1)
@@ -12575,8 +12624,8 @@ snapshots:
       node-forge: 1.3.1
       uuid: 9.0.1
     optionalDependencies:
-      '@google-cloud/firestore': 7.6.0(supports-color@8.1.1)
-      '@google-cloud/storage': 7.10.2(supports-color@8.1.1)
+      '@google-cloud/firestore': 7.7.0(supports-color@8.1.1)
+      '@google-cloud/storage': 7.11.0(supports-color@8.1.1)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -12790,7 +12839,7 @@ snapshots:
       '@types/semver': 7.5.8
       download: 8.0.0
       node-fetch: 2.7.0
-      semver: 7.6.0
+      semver: 7.6.2
     transitivePeerDependencies:
       - encoding
 
@@ -12819,13 +12868,13 @@ snapshots:
 
   glob-to-regexp@0.4.1: {}
 
-  glob@10.3.12:
+  glob@10.3.14:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.4
-      minipass: 7.1.0
-      path-scurry: 1.10.2
+      minipass: 7.1.1
+      path-scurry: 1.11.0
 
   glob@7.2.3:
     dependencies:
@@ -13125,6 +13174,9 @@ snapshots:
   html-encoding-sniffer@3.0.0:
     dependencies:
       whatwg-encoding: 2.0.0
+
+  html-entities@2.5.2:
+    optional: true
 
   http-cache-semantics@3.8.1: {}
 
@@ -13513,7 +13565,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -13586,7 +13638,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.6.0
+      semver: 7.6.2
 
   jsprim@1.4.2:
     dependencies:
@@ -13784,7 +13836,7 @@ snapshots:
       jest-validate: 27.5.1
       map-obj: 5.0.2
       moize: 6.1.6
-      semver: 7.6.0
+      semver: 7.6.2
 
   log-symbols@1.0.2:
     dependencies:
@@ -14315,7 +14367,7 @@ snapshots:
 
   minipass@5.0.0: {}
 
-  minipass@7.1.0: {}
+  minipass@7.1.1: {}
 
   minizlib@2.1.2:
     dependencies:
@@ -14527,7 +14579,7 @@ snapshots:
       pump: 3.0.0
       raw-body: 2.5.2
       read-pkg-up: 7.0.1
-      semver: 7.6.0
+      semver: 7.6.2
       source-map-support: 0.5.21
       static-server: 2.2.1
       string-similarity: 4.0.4
@@ -14596,7 +14648,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  next-usequerystate@1.17.1(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+  next-usequerystate@1.17.2(next@14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
     dependencies:
       mitt: 3.0.1
       next: 14.1.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -14606,7 +14658,7 @@ snapshots:
       '@next/env': 14.1.3
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001615
+      caniuse-lite: 1.0.30001617
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -14633,7 +14685,7 @@ snapshots:
 
   node-abi@3.62.0:
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.2
 
   node-addon-api@5.1.0: {}
 
@@ -14668,7 +14720,7 @@ snapshots:
       jest-validate: 25.5.0
       normalize-node-version: 10.0.0
       path-exists: 4.0.0
-      semver: 7.6.0
+      semver: 7.6.2
 
   nodemon@2.0.22:
     dependencies:
@@ -14698,7 +14750,7 @@ snapshots:
       all-node-versions: 8.0.0
       filter-obj: 2.0.2
       jest-validate: 25.5.0
-      semver: 7.6.0
+      semver: 7.6.2
 
   normalize-package-data@2.5.0:
     dependencies:
@@ -14711,7 +14763,7 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.13.1
-      semver: 7.6.0
+      semver: 7.6.2
       validate-npm-package-license: 3.0.4
 
   normalize-path@2.1.1:
@@ -15000,10 +15052,10 @@ snapshots:
 
   path-parse@1.0.7: {}
 
-  path-scurry@1.10.2:
+  path-scurry@1.11.0:
     dependencies:
       lru-cache: 10.2.2
-      minipass: 7.1.0
+      minipass: 7.1.1
 
   path-to-regexp@0.1.7: {}
 
@@ -15071,13 +15123,13 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.38
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3)):
+  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3)):
     dependencies:
       lilconfig: 3.1.1
       yaml: 2.4.2
     optionalDependencies:
       postcss: 8.4.38
-      ts-node: 10.9.2(@types/node@20.12.8)(typescript@5.3.3)
+      ts-node: 10.9.2(@types/node@20.12.11)(typescript@5.3.3)
 
   postcss-nested@6.0.1(postcss@8.4.38):
     dependencies:
@@ -15193,7 +15245,7 @@ snapshots:
 
   proto3-json-serializer@2.0.1:
     dependencies:
-      protobufjs: 7.2.6
+      protobufjs: 7.3.0
     optional: true
 
   protobufjs@7.2.6:
@@ -15208,7 +15260,23 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
+      long: 5.2.3
+    optional: true
+
+  protobufjs@7.3.0:
+    dependencies:
+      '@protobufjs/aspromise': 1.1.2
+      '@protobufjs/base64': 1.1.2
+      '@protobufjs/codegen': 2.0.4
+      '@protobufjs/eventemitter': 1.1.0
+      '@protobufjs/fetch': 1.1.0
+      '@protobufjs/float': 1.0.2
+      '@protobufjs/inquire': 1.1.0
+      '@protobufjs/path': 1.1.2
+      '@protobufjs/pool': 1.1.0
+      '@protobufjs/utf8': 1.1.0
+      '@types/node': 20.12.11
       long: 5.2.3
 
   proxy-addr@2.0.7:
@@ -15619,9 +15687,7 @@ snapshots:
 
   semver@7.0.0: {}
 
-  semver@7.6.0:
-    dependencies:
-      lru-cache: 6.0.0
+  semver@7.6.2: {}
 
   send@0.18.0(supports-color@8.1.1):
     dependencies:
@@ -15951,7 +16017,7 @@ snapshots:
 
   stripe@9.16.0:
     dependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       qs: 6.12.1
 
   strnum@1.0.5:
@@ -15979,7 +16045,7 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       commander: 4.1.1
-      glob: 10.3.12
+      glob: 10.3.14
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.6
@@ -16012,7 +16078,7 @@ snapshots:
 
   svg-parser@2.0.4: {}
 
-  svgo@3.2.0:
+  svgo@3.3.2:
     dependencies:
       '@trysound/sax': 0.2.0
       commander: 7.2.0
@@ -16035,7 +16101,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3)):
+  tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3)):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -16054,7 +16120,7 @@ snapshots:
       postcss: 8.4.38
       postcss-import: 15.1.0(postcss@8.4.38)
       postcss-js: 4.0.1(postcss@8.4.38)
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3))
       postcss-nested: 6.0.1(postcss@8.4.38)
       postcss-selector-parser: 6.0.16
       resolve: 1.22.8
@@ -16241,14 +16307,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@16.18.96)(typescript@4.9.5):
+  ts-node@10.9.2(@types/node@16.18.97)(typescript@4.9.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 16.18.96
+      '@types/node': 16.18.97
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -16259,14 +16325,14 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.2(@types/node@20.12.8)(typescript@5.3.3):
+  ts-node@10.9.2(@types/node@20.12.11)(typescript@5.3.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -16447,7 +16513,7 @@ snapshots:
       is-yarn-global: 0.3.0
       latest-version: 5.1.0
       pupa: 2.1.1
-      semver: 7.6.0
+      semver: 7.6.2
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
 
@@ -16492,7 +16558,7 @@ snapshots:
     dependencies:
       builtins: 5.1.0
 
-  validator@13.11.0: {}
+  validator@13.12.0: {}
 
   vary@1.1.2: {}
 
@@ -16513,13 +16579,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-node@1.6.0(@types/node@20.12.8)(supports-color@8.1.1)(terser@5.31.0):
+  vite-node@1.6.0(@types/node@20.12.11)(supports-color@8.1.1)(terser@5.31.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.11(@types/node@20.12.8)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.11)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -16530,13 +16596,13 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.11(@types/node@20.12.8)(terser@5.31.0):
+  vite@5.2.11(@types/node@20.12.11)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.17.2
     optionalDependencies:
-      '@types/node': 20.12.8
+      '@types/node': 20.12.11
       fsevents: 2.3.3
       terser: 5.31.0
 
@@ -16580,7 +16646,7 @@ snapshots:
       acorn-import-assertions: 1.9.0(acorn@8.11.3)
       browserslist: 4.23.0
       chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.16.0
+      enhanced-resolve: 5.16.1
       es-module-lexer: 1.5.2
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -16732,5 +16798,7 @@ snapshots:
       readable-stream: 3.6.2
 
   zod@3.21.4: {}
+
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}

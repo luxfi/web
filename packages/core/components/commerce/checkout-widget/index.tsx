@@ -4,7 +4,9 @@ import { createPortal } from 'react-dom'
 import { usePathname, useRouter } from 'next/navigation'
 import { observer } from 'mobx-react-lite'
 
-import { cn, useStepAnimation } from '@hanzo/ui/util'
+import { cn } from '@hanzo/ui/util'
+import { useStepAnimation } from '@hanzo/ui/util-client'
+
 import { Image } from '@hanzo/ui/primitives'
 
 import { useCommerceUI } from '@hanzo/commerce'
