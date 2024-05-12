@@ -11,7 +11,7 @@ const SplinePlayer: React.FC<{
   className
 }) => {
   return (
-    <Spline scene={src} className={cn('!w-full !h-auto pointer-events-none', className)} />
+    <video src={src} className={cn('!w-full !h-auto pointer-events-none', className)} autoPlay loop muted />
   )
 }
 

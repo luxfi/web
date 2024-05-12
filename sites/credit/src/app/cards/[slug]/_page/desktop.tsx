@@ -49,6 +49,8 @@ const DesktopViewCardDetails: React.FC<{
     }, 300)
   }
 
+
+
   return (
     <Main className={cn('flex flex-col gap-8 mt-20', clx)}>
       <div className='flex gap-1 items-center self-start cursor-pointer' onClick={() => router.push('/cards')}>
