@@ -18,7 +18,8 @@ const CommerceUIComponent: React.FC = observer(() => {
   //const itemRef = useCommerceUI()
   const router = useRouter()
 
-  const [activeSnapPoint, setActiveSnapPoint] = useState<string | number | null>(null)
+  const [modal, setModal] = useState<boolean>(true)
+  const [activeSnapPoint, setActiveSnapPoint] = useState<string | number | null>(ui.buyOptionsSkuPath ? SNAP[SNAP.length - 1] : null)
   const setterRef = useRef<((index: number ) => void) | undefined>(undefined)
 
   useEffect(() => {
@@ -39,7 +40,16 @@ const CommerceUIComponent: React.FC = observer(() => {
     )
   }, [])
 
-  
+  const _setActiveSnapPoint = (pt: string | number | null): void => {
+    console.log("ON CHANGE: ", pt)
+    if (pt && pt == SNAP[0]) {
+      setModal(false)
+    }
+    else {
+      setModal(true)
+    }
+    setActiveSnapPoint(pt)  
+  }
 
   const handleCheckout = () => {
     router.push('/checkout')
@@ -65,6 +75,16 @@ const CommerceUIComponent: React.FC = observer(() => {
     }
   }
 
+  const handleCloseGesture = () => {
+    if (activeSnapPoint == SNAP[1] && setterRef.current) {
+      console.log("CLOSE GESTURE FROM TOP === ")
+      setterRef.current(0)
+      return true
+    }
+    console.log("NATURAL CLOSE GESTURE ")
+    return false
+  }
+
   const setActiveSPIndexSetter = (fn: (index: number ) => void): void => {
     setterRef.current = fn 
   }
@@ -75,10 +95,12 @@ const CommerceUIComponent: React.FC = observer(() => {
       setOpen={reallyOnlyCloseDrawer}
       drawerClx={'w-full h-full'}
       snapPoints={SNAP}
-      activeSnapPoint={!!ui.buyOptionsSkuPath ? SNAP[SNAP.length - 1] : activeSnapPoint}
-      setActiveSnapPoint={setActiveSnapPoint}
+      modal={modal}
+      activeSnapPoint={activeSnapPoint}
+      setActiveSnapPoint={_setActiveSnapPoint}
       handleHandleClicked={handleHandleClicked}
       setActiveSPIndexSetter={setActiveSPIndexSetter}
+      handleCloseGesture={handleCloseGesture}
     >
       <CarouselBuyCard 
         skuPath={ui.buyOptionsSkuPath!} 

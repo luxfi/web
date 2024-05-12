@@ -21,16 +21,19 @@ const AddPanel: React.FC<{
   return (
     <div className={cn('flex flex-col gap-10 items-center mt-10', clx)}>
       <p>Current Sku: {cmmc.currentItem ? cmmc.currentItem.sku : 'none'}</p>
-      {cmmc.currentItem ? (
-        <MediaStack media={cmmc.currentItem} constrainTo={{w: 250, h: 250}} />
-      ) : (
-        <Skeleton className='h-[250px]' />
-      )}
       {cmmc.currentItem && (
          <AddToCartWidget item={cmmc.currentItem} className='w-[260px]'/>
       )}
     </div>
   )
 })
+
+/*
+      {cmmc.currentItem ? (
+        <MediaStack media={cmmc.currentItem} constrainTo={{w: 250, h: 250}} />
+      ) : (
+        <Skeleton className='h-[250px]' />
+      )}
+*/
 
 export default AddPanel
