@@ -2,11 +2,12 @@ import type {
   Block,
   EnhHeadingBlock,
   ElementBlock,
-  ImageBlock,
+  VideoBlock,
   ScreenfulBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 const byline = 'Each loan is automatically repaid by Lux Protocol, ' + 'so you never have to sell your assets or pay capital gains.'
 
@@ -14,19 +15,16 @@ export default {blockType: 'screenful',
   specifiers: 'vert-center',
   columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [[
-    {blockType: 'image',
-      src: '/assets/commerce/cr/family/cards-2-flat-tit-1593x1231.png',
-      alt: 'cards',
-      dim: {w: 1593, h: 1231},
-//      fullWidthOnMobile: true,
-      props: {
-        sizes: '900px, 440px',
-        style: {
-          width: '100%',
-          height: 'auto'
-        }
-      }
-    } satisfies ImageBlock as Block,
+    {blockType: 'video',
+      videoProps: DEF_VIDEO_PROPS, 
+      sources: ['/assets/content/repayment-md.mp4'],
+      dim: {
+          sm: {w: 300, h: 300},
+          md: {w: 600, h: 300},
+          lg: {w: 1000, h: 300}
+      },
+      sizing: {vh: 100, mobile: {vw: 100}}
+    } satisfies VideoBlock as Block,
     {blockType: 'element',
       element: <p className='w-full text-xxs text-muted-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0  relative -top-[2vh] lg:-top-[16vh] lg:left-[4vw] italic'>Sovereign Card</p>
     } satisfies ElementBlock as Block,
