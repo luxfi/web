@@ -61,10 +61,14 @@ const CardComponent: React.FC<{
         />
       </div>
       <Link href={`cards/${family}?sku=${skuPath}`} className='flex flex-col items-center !no-underline'>
-        <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base'>{title}</div>
-        <p className='text-sm'>{byline}</p>
+        <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base font-bold'>{byline}</div>
       </Link>
-      {lineItem && <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>}
+      {lineItem && 
+        <div className='flex flex-row items-center gap-5'>
+          <span className='text-sm mb-0'>{title}</span>
+          <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>
+        </div>
+      }
     </ApplyTypography>
   )
 }

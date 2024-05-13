@@ -19,14 +19,12 @@ export default {blockType: 'screenful',
       videoProps: DEF_VIDEO_PROPS, 
       sources: ['/assets/content/gunmetal-card.mp4'],
       dim: {
-          sm: {w: 300, h: 300},
           md: {w: 600, h: 300},
-          lg: {w: 1000, h: 300}
       },
       sizing: {vh: 100, mobile: {vw: 100}}
     } satisfies VideoBlock as Block,
     {blockType: 'element',
-      element: <p className='w-full text-xxs text-muted-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0  relative -top-[2vh] lg:-top-[16vh] lg:left-[4vw] italic'>Sovereign Card</p>
+      element: <p className='w-full text-xxs text-muted-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0  relative -top-[2vh] lg:-top-[16vh] lg:left-[4vw] italic'>Black Gunmetal</p>
     } satisfies ElementBlock as Block,
   ], [
       {blockType: 'enh-heading',
@@ -36,7 +34,7 @@ export default {blockType: 'screenful',
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
-        skuPath: 'LXM-CR-S'
+        skuPath: 'LXM-CR-B-GM'
       } satisfies ItemCTASBlock as Block,
     ]
   ]

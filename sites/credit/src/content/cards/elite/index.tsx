@@ -13,7 +13,7 @@ const card: Card = {
   materials: [
     {
       title: '24k Gold',
-      titleAlt: '24K GOLD',
+      titleAlt: '24K Gold',
       sku: 'LXM-CR-E-24G',
       materialImg: {
         src: '/assets/commerce/cr/product/option/elite-card-gold-100x99.png',
@@ -29,7 +29,7 @@ const card: Card = {
     },
     {
       title: 'Sterling Silver',
-      titleAlt: 'STERLING SILVER',
+      titleAlt: 'Sterling Silver',
       sku: 'LXM-CR-E-SS',
       materialImg: {
         src: '/assets/commerce/cr/product/option/elite-card-silver-99x99.png',

@@ -13,7 +13,7 @@ const card: Card = {
   materials: [
     {
       title: 'Anodized Black Titanium',
-      titleAlt: 'BLACK TITANIUM',
+      titleAlt: 'Matte Titanium',
       sku: 'LXM-CR-B-ABT',
       materialImg: {
         src: '/assets/commerce/cr/product/option/black-card-anodized-black-titanium-100x99.png',
@@ -29,7 +29,7 @@ const card: Card = {
     },
     {
       title: 'Black Gunmetal',
-      titleAlt: 'BLACK GUNMETAL',
+      titleAlt: 'Gun Metal',
       sku: 'LXM-CR-B-GM',
       materialImg: {
         src: '/assets/commerce/cr/product/option/black-card-gunmetal-99x99.png',

@@ -23,7 +23,7 @@ export default {blockType: 'screenful',
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "Browse Cards", href: "/cards", variant: 'outline' },
-        skuPath: 'LXM-CR-B'
+        skuPath: 'LXM-CR-B-ABT'
       } satisfies ItemCTASBlock as Block,
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ],
