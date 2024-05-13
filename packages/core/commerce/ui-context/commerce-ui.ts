@@ -13,12 +13,17 @@ interface CommerceUI extends ObsLineItemRef {
   get buyOptionsSkuPath(): string | undefined
 
   itemQuantityChanged(sku: string, val: number, prevVal: number): void
+
+  get closed(): boolean
+  setClosed(b: boolean): void
+
 }
 
 class CommerceUIStore implements CommerceUI {
 
   static readonly TIMEOUT = 1500
   _buyOptionsSkuPath: string | undefined = undefined
+  _closed: boolean = false
   _paused: boolean = false
   _activeItem: LineItem | undefined = undefined
   _lastActivity: number | undefined = undefined
@@ -29,10 +34,13 @@ class CommerceUIStore implements CommerceUI {
     makeObservable(this, {
       _buyOptionsSkuPath: observable,
       _activeItem: observable.shallow, 
+      _closed: observable,
       showBuyOptions: action,
       hideBuyOptions: action,
       buyOptionsSkuPath: computed,
       itemQuantityChanged: action,
+      setClosed: action,
+      closed: computed,
       tick: action,
       item: computed
     })
@@ -42,6 +50,7 @@ class CommerceUIStore implements CommerceUI {
     this._service.setCurrentItem(undefined)
     this._buyOptionsSkuPath = skuPath
     this._paused = true
+    this._closed = false
   } 
 
   hideBuyOptions = (): void => {
@@ -93,6 +102,12 @@ class CommerceUIStore implements CommerceUI {
   get item(): LineItem | undefined {
     return this._activeItem
   }
+
+  get closed(): boolean {
+    return this._closed
+  }
+
+  setClosed = (b: boolean): void => { this._closed = b}
 
   dispose = () => {}
 }

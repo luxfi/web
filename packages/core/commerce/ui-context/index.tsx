@@ -17,7 +17,7 @@ import { useCommerce } from '@hanzo/commerce'
 const CommerceUIContext = createContext<CommerceUIStore | undefined>(undefined)
 
 const useCommerceUI = (): CommerceUI => {
-  return (useContext(CommerceUIContext) as CommerceUIStore)
+  return useContext(CommerceUIContext) as CommerceUIStore
 }
 
 const CommerceUIProvider: React.FC<PropsWithChildren & {
@@ -28,11 +28,11 @@ const CommerceUIProvider: React.FC<PropsWithChildren & {
 }) => {
 
   const cmmc = useCommerce()
-  const valueRef = useRef<CommerceUIStore | undefined>(undefined)
+  const valueRef = useRef<CommerceUIStore>(new CommerceUIStore(cmmc))
 
   useEffect(() => {
 
-    valueRef.current = new CommerceUIStore(cmmc)
+    //valueRef.current = new CommerceUIStore(cmmc)
     return () => { valueRef.current?.dispose() }
   }, [])
 
