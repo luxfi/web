@@ -61,7 +61,7 @@ const TabletViewCardDetails: React.FC<{
             showAnimation ? 'opacity-100' : 'opacity-0',
           )}
         >
-          <SplinePlayer src={currentAnimation} className='!aspect-[12/10]'/>
+          <SplinePlayer src={currentAnimation} className='!aspect-[1920/1080]'/>
         </div>
         <div className='grid grid-cols-4'>
           <div className='flex flex-col justify-between col-span-2 gap-2'>
