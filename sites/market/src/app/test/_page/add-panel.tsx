@@ -4,7 +4,9 @@ import { observer } from 'mobx-react-lite'
 
 import { cn } from '@hanzo/ui/util'
 import { MediaStack, Skeleton } from '@hanzo/ui/primitives'
-import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
+
+import { useCommerce } from '@hanzo/commerce'
+import { AddWidget } from '@luxfi/core'
 
 const AddPanel: React.FC<{
   clx?: string
@@ -22,7 +24,7 @@ const AddPanel: React.FC<{
     <div className={cn('flex flex-col gap-10 items-center mt-10', clx)}>
       <p>Current Sku: {cmmc.currentItem ? cmmc.currentItem.sku : 'none'}</p>
       {cmmc.currentItem && (
-         <AddToCartWidget item={cmmc.currentItem} className='w-[260px]'/>
+         <AddWidget item={cmmc.currentItem} className='w-[260px]'/>
       )}
     </div>
   )

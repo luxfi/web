@@ -1,10 +1,12 @@
 'use client'
-
+import React from 'react'
 import { useRouter } from 'next/navigation'
 
-import { BuyButton } from '@hanzo/commerce'
 import { Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
+
+import { BuyButton } from '@luxfi/core'
+
 
 const ProductDetailCTA: React.FC<{
   readMoreUrl: string,

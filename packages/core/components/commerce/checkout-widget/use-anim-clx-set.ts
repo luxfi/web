@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { reaction, runInAction} from 'mobx'
 
+import { useCommerce } from '@hanzo/commerce'
+
 import ObsStringSet from './obs-string-set'
-import { useCommerce, useCommerceUI } from '@hanzo/commerce'
+import { useCommerceUI } from '../../../commerce/ui-context'
 
 export default (isCheckout: boolean): ObsStringSet => {
 

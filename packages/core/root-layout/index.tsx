@@ -10,9 +10,10 @@ import { CommerceProvider } from '@hanzo/commerce'
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
+import { CommerceUIProvider } from '../commerce/ui-context'
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
+
 import BuyDrawer from '../components/commerce/buy-drawer'
-//import CheckoutWidget from '../components/commerce/checkout-widget'
 
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../types/site-def'
@@ -99,8 +100,10 @@ const RootLayout: React.FC<PropsWithChildren & {
             options={siteDef.commerce!.options}
             uiSpecs={selectionUISpecifiers}
           >
-            <Guts />
-            <BuyDrawer />
+            <CommerceUIProvider >
+              <Guts />
+              <BuyDrawer />
+            </CommerceUIProvider>
           </CommerceProvider>
         ) : (
           <Guts />

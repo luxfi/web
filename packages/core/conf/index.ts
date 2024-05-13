@@ -1,5 +1,7 @@
 import type { SelectionUISpecifier } from '@hanzo/commerce/types'
 
+export { default as commerceServiceOptions } from './lux-commerce-options'
+
 export const selectionUISpecifiers = {
 
   'LXM-CN': {

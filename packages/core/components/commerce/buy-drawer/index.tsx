@@ -1,53 +1,129 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { reaction, runInAction} from 'mobx'
+import { usePathname, useRouter } from 'next/navigation'
+import { action, computed, makeObservable, observable, reaction } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
-import { useCommerceUI, CarouselBuyCard } from '@hanzo/commerce'
+import { CarouselBuyCard, useCommerce } from '@hanzo/commerce'
+
+import { useCommerceUI } from '../../../commerce/ui-context'
 
 import CommerceDrawer from './drawer'
 import CheckoutButton from '../checkout-button'
 
+const BUY = '700px'
+const MICRO = '120px'
+const BOTH = [MICRO, BUY]
+const BUY_ONLY = [BUY]
+const MICRO_ONLY = [MICRO]
 
-const SNAP = ['120px', '700px']
+type DrawerMode = 'checkout' | 'added' | 'buy' | 'buy-added' | 'buy-checkout' | 'none' | 'closed' // manually
+type DrawerState = 'micro' | 'buy' | 'closed'
+
+const MODE_TO_STATE = {
+  checkout: 'micro',
+  added: 'micro',
+  buy: 'buy',
+  'buy-checkout': 'buy',
+  'buy-added': 'buy',
+  none: 'closed',
+  closed: 'closed'
+} satisfies Record<DrawerMode, DrawerState>
+
+const MODE_TO_POINTS = {
+  checkout: MICRO_ONLY,
+  added: BOTH,
+  buy: BUY_ONLY,
+  'buy-checkout': BOTH,
+  'buy-added': BOTH,
+  none: BOTH,
+  closed: BOTH
+}
+
+
+class ObsDrawerState {
+
+  _mode: DrawerMode = 'none'
+
+  constructor() {
+    makeObservable(this, {
+      _mode: observable,
+      setMode: action,
+      mode: computed,
+      state: computed,
+      points: computed,
+      modal: computed,
+      activePoint: computed
+    })
+  }
+
+  get mode(): DrawerMode {return this._mode}
+  get state(): DrawerState  { return MODE_TO_STATE[this._mode] }
+  get points(): (number | string)[] { return MODE_TO_POINTS[this._mode] }
+  get modal(): boolean { return this.state !== 'micro' }
+  get activePoint(): number | string | null {
+    if (this.state === 'buy') return BUY
+    if (this.state === 'micro') return MICRO
+    return null
+  }
+
+  setMode = (m: DrawerMode) => {this._mode = m}
+}
 
 const CommerceUIComponent: React.FC = observer(() => {
 
+  const cmmc = useCommerce()
   const ui = useCommerceUI()
-  //const itemRef = useCommerceUI()
   const router = useRouter()
+  const isCheckout = usePathname() === '/checkout'
 
-  const [modal, setModal] = useState<boolean>(true)
-  const [activeSnapPoint, setActiveSnapPoint] = useState<string | number | null>(ui.buyOptionsSkuPath ? SNAP[SNAP.length - 1] : null)
-  const setterRef = useRef<((index: number ) => void) | undefined>(undefined)
+  const stateRef = useRef<ObsDrawerState>(new ObsDrawerState())
+
+  const [activeSnapPoint, setActiveSnapPoint] = useState<string | number | null>(stateRef.current.activePoint)
+  //const setterRef = useRef<((index: number ) => void) | undefined>(undefined)
 
   useEffect(() => {
     reaction(
       () => ({
-        buyOpen: !!ui.buyOptionsSkuPath
+        buy: !!ui.buyOptionsSkuPath,
+        added: !isCheckout && ui.item,
+        checkout: !isCheckout && !cmmc.cartEmpty
       }),
-      (val, prev) => {
-        if (val.buyOpen && !prev.buyOpen) {
-          setActiveSnapPoint(SNAP[1])
+      ({buy, added, checkout}) => {
+        let mode: DrawerMode = 'none' // TODO: 'closed'
+        if (buy) {
+          if (added) {
+            mode = 'buy-added'
+          }
+          else if (checkout) {
+            mode = 'buy-checkout'
+          }
+          else {
+            mode = 'buy'
+          }
         }
+        else {
+          if (added) {
+            mode = 'added'
+          }
+          else if (checkout) {
+            mode = 'checkout'
+          }
+        }
+        stateRef.current.setMode(mode) 
       },
       {equals: (val, prev) => (
-        //val.microOpen === prev.microOpen 
-        //&& 
-        val.buyOpen === prev.buyOpen
+        val.buy === prev.buy 
+        && 
+        val.added === prev.added
+        &&
+        val.checkout === prev.checkout
       )}
     )
-  }, [])
+  }, [isCheckout])
 
   const _setActiveSnapPoint = (pt: string | number | null): void => {
     console.log("ON CHANGE: ", pt)
-    if (pt && pt == SNAP[0]) {
-      setModal(false)
-    }
-    else {
-      setModal(true)
-    }
     setActiveSnapPoint(pt)  
   }
 
@@ -57,60 +133,92 @@ const CommerceUIComponent: React.FC = observer(() => {
 
     // Should only ever be called internally to close
   const reallyOnlyCloseDrawer = (b: boolean) => {
+    // Using handleCloseGesture()
+    /*
     if (!b ) {
       ui.hideBuyOptions()
     }
+    */
   }
 
   const handleHandleClicked = () => {
     console.log("HANDLE CLICKED")
-    console.log("ACTIVE: ", activeSnapPoint)
-    if (activeSnapPoint == SNAP[1] && setterRef.current) {
-      console.log("INSIDE === ")
-      setterRef.current(0)
+
+    if (stateRef.current.state === 'buy') {
+      const toks = stateRef.current.mode.split('-')
+      if (toks.length <= 1) {
+      console.log("CLOSING 'BUY' ... ")
+        ui.hideBuyOptions()
+        //stateRef.current.setMode('none')
+      }
+      else {
+      console.log("CLOSING 'BUY' to ", toks[1])
+        ui.hideBuyOptions()
+        //stateRef.current.setMode(toks[1] as DrawerMode) // 'checkout' or 'added'
+      }
     }
-    else if (activeSnapPoint == SNAP[0] && setterRef.current) {
-      console.log("INSIDE === ")
-      setterRef.current(1)
+    else if (stateRef.current.state === 'micro') {
+      if (stateRef.current.mode === 'checkout') {
+        console.log(" CLOSING 'CHECKOUT' ... ")
+        stateRef.current.setMode('closed')
+      }
+      else if (stateRef.current.mode === 'added') {
+        console.log(" OPENING 'ADDED' ... ")
+        ui.showBuyOptions(ui.item?.sku ?? '')
+        //stateRef.current.setMode('buy-added')
+      }
     }
   }
 
   const handleCloseGesture = () => {
-    if (activeSnapPoint == SNAP[1] && setterRef.current) {
-      console.log("CLOSE GESTURE FROM TOP === ")
-      setterRef.current(0)
-      return true
+    if (stateRef.current.state === 'buy') {
+      console.log(" CLOSING 'BUY' ... ")
+      const toks = stateRef.current.mode.split('-')
+      if (toks.length <= 1) {
+        stateRef.current.setMode('none')
+      }
+      else {
+        stateRef.current.setMode(toks[1] as DrawerMode) // 'checkout' or 'added'
+      }
+      return true // "handled!"
     }
-    console.log("NATURAL CLOSE GESTURE ")
+    console.log("DEFAULT CLOSE ACTION")
     return false
   }
 
+/*
   const setActiveSPIndexSetter = (fn: (index: number ) => void): void => {
     setterRef.current = fn 
   }
+*/
 
   return (
     <CommerceDrawer 
-      open={!!ui.buyOptionsSkuPath} 
+      open={!(stateRef.current.state === 'closed')} 
       setOpen={reallyOnlyCloseDrawer}
       drawerClx={'w-full h-full'}
-      snapPoints={SNAP}
-      modal={modal}
-      activeSnapPoint={activeSnapPoint}
+      snapPoints={stateRef.current.points}
+      modal={stateRef.current.modal}
+      activeSnapPoint={stateRef.current.activePoint}
       setActiveSnapPoint={_setActiveSnapPoint}
       handleHandleClicked={handleHandleClicked}
-      setActiveSPIndexSetter={setActiveSPIndexSetter}
+      //setActiveSPIndexSetter={setActiveSPIndexSetter}
       handleCloseGesture={handleCloseGesture}
     >
-      <CarouselBuyCard 
-        skuPath={ui.buyOptionsSkuPath!} 
-        checkoutButton={
-          <CheckoutButton handleCheckout={handleCheckout} className='w-full min-w-[160px] sm:max-w-[320px]'/>
-        }
-        clx='w-full'
-        addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
-        selectorClx='max-w-[475px]'
-      />
+      {stateRef.current.state === 'buy' && (
+        <CarouselBuyCard 
+          skuPath={ui.buyOptionsSkuPath!} 
+          checkoutButton={
+            <CheckoutButton handleCheckout={handleCheckout} className='w-full min-w-[160px] sm:max-w-[320px]'/>
+          }
+          clx='w-full'
+          addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
+          selectorClx='max-w-[475px]'
+        />
+      )}
+      {stateRef.current.state === 'micro' && (
+        <p>Mode: {stateRef.current.mode}</p>
+      )}
     </CommerceDrawer>
   )
 })
