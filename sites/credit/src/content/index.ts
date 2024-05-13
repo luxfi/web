@@ -23,7 +23,6 @@ const mobileTiles = [
   cardDefaultMobile,
   //reviews,
   //roadmap,
-  browseCards,
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
 
 const desktopTiles = [

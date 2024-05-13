@@ -1,4 +1,4 @@
-import CardsCarousel from '@/components/cards-carousel'
+import CardsCarousel from '@/components/cards-carousel-browse'
 import { type Block, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type SpaceBlock } from '@hanzo/ui/blocks'
 
 const byline = 'Every card is a finely crafted key to spending power, enabling purchases that pay for themselves. Cherish the freedom where spending never costs, only benefits.'
