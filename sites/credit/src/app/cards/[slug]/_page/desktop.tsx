@@ -53,12 +53,12 @@ const DesktopViewCardDetails: React.FC<{
 
     return (
       <Main className={cn('flex flex-col gap-8 mt-20', clx)}>
-        <div className='flex gap-1 items-center self-start cursor-pointer' onClick={() => router.push('/cards')}>
+        <div className='flex gap-1 items-center self-start cursor-pointer mt-16 fixed' onClick={() => router.push('/cards')}>
           <ChevronLeft />
           <div>View All Cards</div>
         </div>
         <ApplyTypography className='grid grid-cols-1 md:grid-cols-7'>
-          <div className='flex flex-col md:col-span-2 items-center gap-3 fixed w-pr-23 top-44'>
+          <div className='flex flex-col items-center gap-3 fixed w-pr-23 top-48'>
             <h3 className='!text-2xl self-start'>{card.title}</h3>
             <div className={cn(
               'w-full transition-all duration-300',
@@ -82,7 +82,7 @@ const DesktopViewCardDetails: React.FC<{
             {lineItem && <AddToCartWidget item={lineItem} className='w-fit mx-auto' />}
           </div>
           <div className='flex flex-col md:col-span-2 gap-3'></div>
-          <div className='flex flex-col gap-12 md:col-span-5'>
+          <div className='flex flex-col gap-12 md:col-span-5 mt-20'>
             {card.cardDetails.intro.map(({ title, description }, i) => (
               <div key={i} className='flex flex-col'>
                 <h5>{title}</h5>
