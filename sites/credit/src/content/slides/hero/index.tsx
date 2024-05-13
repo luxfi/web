@@ -3,10 +3,11 @@ import type {
   ElementBlock,
   EnhHeadingBlock,
   ScreenfulBlock,
+  VideoBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
-import SplinePlayer from '@/components/spline-player'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center full-screen-height narrow-gutters',
@@ -27,13 +28,17 @@ export default {blockType: 'screenful',
       {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ],
     [
-      {blockType: 'element',
-        element:
-          <SplinePlayer
-            src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'
-            className='!aspect-[12/10]'
-          />
-      } satisfies ElementBlock as Block,
+      {
+        blockType: 'video', 
+        videoProps: DEF_VIDEO_PROPS, 
+        sources: ['/assets/content/gunmetal-card.mp4'],
+        dim: {
+            md: {w: 600, h: 300},
+        },
+        sizing: {
+          vh: 50
+        }
+      } satisfies VideoBlock as Block,
       {blockType: 'element',
         element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Anodized Black Titanium</p>
       } satisfies ElementBlock as Block

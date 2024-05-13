@@ -24,7 +24,7 @@ const card: Card = {
       dim: {w: 700, h: 442 },
       alt: 'Sovereign Card Reflective Titanium'
     },
-    animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'
+    animation: '../../assets/content/mirroed-card.mp4'
   }],
   annualFee: 4999,
   initiationFee: 49500,

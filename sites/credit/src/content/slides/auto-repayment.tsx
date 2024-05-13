@@ -17,7 +17,7 @@ export default {blockType: 'screenful',
   contentColumns: [[
     {blockType: 'video',
       videoProps: DEF_VIDEO_PROPS, 
-      sources: ['/assets/content/repayment-md.mp4'],
+      sources: ['/assets/content/gunmetal-card.mp4'],
       dim: {
           sm: {w: 300, h: 300},
           md: {w: 600, h: 300},

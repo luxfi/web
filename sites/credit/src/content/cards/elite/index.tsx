@@ -25,7 +25,7 @@ const card: Card = {
         dim: {w: 700, h: 442 },
         alt: 'Elite Card 24k Gold'
       },
-      animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
+      animation: '../../assets/content/gold-card.mp4'
     },
     {
       title: 'Sterling Silver',
@@ -41,7 +41,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Elite Card Sterling Silver'
       },
-      animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
+      animation: '../../assets/content/gold-card.mp4'
     }
   ],
   annualFee: 999,

@@ -25,7 +25,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Cool Chrome'
       },
-      animation: 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode'
+      animation: '../../assets/content/iridescent-card.mp4'
     },
     {
       title: 'Iridescent Chrome',
@@ -41,7 +41,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Iridescent Chrome'
       },
-      animation: 'https://prod.spline.design/O1mz-aE1mHafZXeX/scene.splinecode'
+      animation: '../../assets/content/iridescent-card.mp4'
     }
   ],
   annualFee: 0,

@@ -25,7 +25,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
-      animation: 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
+      animation: '../../assets/content/gunmetal-card.mp4'
     },
     {
       title: 'Black Gunmetal',
@@ -42,7 +42,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Black Card Black Gunmetal',
       },
-      animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
+      animation: '../../assets/content/gunmetal-card.mp4'
     }
   ],
   annualFee: 99,

@@ -34,6 +34,17 @@ const goldVideo = {
   sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
+const cardVideo = {
+  blockType: 'video',
+  videoProps: DEF_VIDEO_PROPS, 
+  poster: '/assets/commerce/cr/product/black-f-700x441.jpg',
+  sources: [
+    '/assets/commerce/cr/product/gunmetal-card.mp4',
+  ],
+  dim: {md: { w: 1920, h: 1080}, lg: {w: 1920, h: 1080}},
+  sizing: {vh: 30, mobile: {vw: 20}}
+} as VideoBlock
+
 export default [
   {blockType: 'carte-blanche',
     specifiers: 'no-outer-borders',
@@ -75,7 +86,7 @@ export default [
       {blockType: 'element',
         element: <>
           <Link href='https://lux.credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1 content-center'>
-            <SplinePlayer src='https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode' className='!aspect-[12/10]'/>
+            <VideoBlockComponent block={cardVideo} className='h-full !my-0'/>
           </Link>
         </>
       } as ElementBlock,
