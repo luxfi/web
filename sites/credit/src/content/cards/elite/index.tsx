@@ -21,7 +21,7 @@ const card: Card = {
         alt: '24k Gold'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/gold-f-700x442.png',
+        src: '/assets/commerce/cr/product/gold-f.png',
         dim: {w: 700, h: 442 },
         alt: 'Elite Card 24k Gold'
       },
