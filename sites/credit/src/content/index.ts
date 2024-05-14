@@ -8,6 +8,7 @@ import cardDefault from './slides/card-default'
 import cardDefaultMobile from './slides/card-default-mobile'
 import cashBack from './slides/cash-back'
 import premierBenefits from './slides/premier-benefits'
+import compatible from './slides/compatible'
 import reviews from './slides/reviews'
 import roadmap from './slides/roadmap'
 import zeroInterest from './slides/zero-interest'
@@ -19,6 +20,7 @@ const mobileTiles = [
   cashBack,
   autoRepayment,
   zeroInterest,
+  compatible,
   premierBenefits,
   cardDefaultMobile,
   //reviews,
@@ -32,6 +34,7 @@ const desktopTiles = [
   cashBack,
   autoRepayment,
   zeroInterest,
+  compatible,
   premierBenefits,
   cardDefault,
   //reviews,
