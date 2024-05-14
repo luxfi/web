@@ -8,7 +8,7 @@ import { COMMON_GRID_2_COL } from '@hanzo/ui/types'
 
 const bylines = [
   'Lux Wallet is non-custodial, whereby assets are self-managed instead of third-party managed, private and quantum secure with support for cryptocurrencies, both public and private, fiat currencies, security tokens, and NFT\'s.',
-  'Lux Exchange is a decentralized exchange, enabling secure, trustless or no middle-man trading of cryptocurrencies, fiat currencies, commodities, and securities.'
+  'Lux Exchange is a decentralized exchange, enabling secure, trustless or no middle-man trading of cryptocurrencies, fiat currencies, commodities, and securities.',
   `Lux Bridge enables complete privacy while exchanging assets across chains, while remaining trustless and non-custodial. ZChain enables anyone to store assets off-chain during bridging, whereby a zero knowledge proof key enables re-minting back on-chain at anytime, in any amount, on any supported chain. Lux DAO maintains asset-backed liquidity pools, ensuring there is always proper liquidity for cross-chain swapping.`,
   `Lux Explorer provides an in-depth look at your multi-bank and multi-wallet assets with ZChain integration. Explorer provides the analytic tools to search for transactions, addresses, and provides tools for performance tracking, trading insights, and portfolio management.`,
 ]
