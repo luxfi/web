@@ -3,7 +3,6 @@ import type { ScreenfulBlock } from '@hanzo/ui/blocks'
 import hero from './slides/hero'
 import keyFeatures from './slides/key-features'
 import autoRepayment from './slides/auto-repayment'
-import browseCards from './slides/browse-cards'
 import cardDefault from './slides/card-default'
 import cardDefaultMobile from './slides/card-default-mobile'
 import cashBack from './slides/cash-back'
@@ -14,7 +13,6 @@ import zeroInterest from './slides/zero-interest'
 
 const mobileTiles = [
   hero,
-  browseCards,
   keyFeatures,
   cashBack,
   autoRepayment,
@@ -27,7 +25,6 @@ const mobileTiles = [
 
 const desktopTiles = [
   hero,
-  browseCards,
   keyFeatures,
   cashBack,
   autoRepayment,
