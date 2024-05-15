@@ -37,7 +37,7 @@ const card: Card = {
         alt: 'Sterling Silver'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/silver-f-700x441.png',
+        src: '/assets/commerce/cr/product/silver-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Elite Card Sterling Silver'
       },
