@@ -20,7 +20,7 @@ const card: Card = {
       alt: 'Reflective Titanium'
     },
     cardImg: {
-      src: '/assets/commerce/cr/product/titanium-f-700x442.png',
+      src: '/assets/commerce/cr/product/mirrored-f.png',
       dim: {w: 700, h: 442 },
       alt: 'Sovereign Card Reflective Titanium'
     },

@@ -21,7 +21,7 @@ const card: Card = {
         alt: 'Cool Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/chrome-cool-f-700x441.png',
+        src: '/assets/commerce/cr/product/chrome-cool-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Cool Chrome'
       },
@@ -37,7 +37,7 @@ const card: Card = {
         alt: 'Iridescent Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/chrome-irid-f-700x441.png',
+        src: '/assets/commerce/cr/product/chrome-irid-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Iridescent Chrome'
       },
