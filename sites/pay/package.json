@@ -2,7 +2,7 @@
   "name": "@luxfi/pay",
   "homepage": "https://pay.lux.finance",
   "version": "0.1.0",
-  "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
+  "author": "Lux Partners Limited",
   "license": "BSD-3-Clause",
   "private": true,
   "description": "A sample Lux Pay checkout page",
@@ -11,9 +11,8 @@
     "dev": "netlify dev",
     "start": "netlify dev"
   },
-  "author": "Lux Partners Limited",
-  "license": "BSD-3-Clause",
   "dependencies": {
+    "@types/node": "^20.12.12",
     "express": "^4.17.1",
     "netlify-cli": "^11.5.0",
     "stripe": "^9.0.0"

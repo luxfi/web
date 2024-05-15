@@ -16,11 +16,12 @@
     "ul:all": "rm node_modules/@hanzo/*"
   },
   "dependencies": {
-    "@luxfi/core": "5.1.0",
     "@hookform/resolvers": "^3.3.4",
+    "@luxfi/core": "5.1.1",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.68",
+    "@types/node": "^20.12.12",
     "ethers": "^6.11.1",
     "firebase": "^10.8.0",
     "lucide-react": "^0.344.0",

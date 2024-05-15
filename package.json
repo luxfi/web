@@ -5,7 +5,7 @@
   "engines": {
     "pnpm": ">=9"
   },
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b",
   "scripts": {
     "clean:nm": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "clean:nxt": "find . -name '.next' -type d -prune -exec rm -rf '{}' +",
