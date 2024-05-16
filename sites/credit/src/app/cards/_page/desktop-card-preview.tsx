@@ -38,6 +38,7 @@ const CardPreview: React.FC<{
 
   useEffect(() => {
     if (selectedMaterial) {
+      if (!cmmc) return
       cmmc.selectPath(selectedMaterial.sku)
       setLineItem(cmmc.selectedItems.find(item => item.sku === selectedMaterial.sku))
     }

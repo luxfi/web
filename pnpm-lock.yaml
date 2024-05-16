@@ -57,6 +57,16 @@ importers:
         specifier: 3.21.4
         version: 3.21.4
 
+  packages/assets:
+    dependencies:
+      next:
+        specifier: ^14.2.3
+        version: 14.2.3(@babel/core@7.24.5(supports-color@8.1.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      typescript:
+        specifier: 5.3.3
+        version: 5.3.3
+
   packages/core:
     dependencies:
       '@hanzo/auth':
