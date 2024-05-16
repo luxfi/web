@@ -7,6 +7,19 @@ const watchPluginConfig = require('./next-conf/watch.next.config')
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
+  experimental: {
+    turbo: {
+      resolveExtensions: [
+        '.mdx',
+        '.tsx',
+        '.ts',
+        '.jsx',
+        '.js',
+        '.mjs',
+        '.json',
+      ],
+    },
+  },
   images: {
     remotePatterns: [
       {
@@ -18,19 +31,19 @@ const nextConfig = {
         protocol: "http",
         hostname: "localhost",
       }
-    ],    
+    ],
  },
     // https://stackoverflow.com/questions/72621835/how-to-fix-you-may-need-an-appropriate-loader-to-handle-this-file-type-current
   transpilePackages: [
-    '@hanzo/ui', 
-    '@hanzo/auth', 
-    '@hanzo/commerce', 
+    '@hanzo/ui',
+    '@hanzo/auth',
+    '@hanzo/commerce',
     '@luxfi/core'
   ],
   productionBrowserSourceMaps: true,
   webpack: (config) => {
     let conf = svgrPluginConfig(config)
-    //conf =  watchPluginConfig(conf) 
+    //conf =  watchPluginConfig(conf)
     return conf
   }
 }

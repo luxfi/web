@@ -1,0 +1,36 @@
+{
+  "name": "@luxfi/assets",
+  "version": "0.1.0",
+  "description": "Library of Lux Web assets",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "scope": "@luxfi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxfi/web.git",
+    "directory": "packages/assets"
+  },
+  "keywords": [
+    "ai",
+    "blockchain",
+    "luxdefi",
+    "luxfi",
+    "lux",
+    "web3"
+  ],
+  "scripts": {
+    "lat": "npm show @luxfi/assets version",
+    "pub": "npm publish",
+    "build": "tsc",
+    "tc": "tsc",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "next": "^14.2.3"
+  },
+  "devDependencies": {
+    "typescript": "5.3.3"
+  }
+}

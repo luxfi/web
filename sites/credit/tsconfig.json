@@ -3,11 +3,12 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [ "node_modules" ],
   "compilerOptions": {
+    "incremental": true,
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
