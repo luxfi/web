@@ -30,8 +30,14 @@ export default {blockType: 'screenful',
     [
       {
         blockType: 'video', 
-        videoProps: DEF_VIDEO_PROPS, 
-        sources: ['/assets/content/gunmetal-card.mp4'],
+        videoProps: {
+          autoPlay: true, 
+          loop: true, 
+          muted: true, 
+          playsInline: true,
+          controlsList: "nofullscreen"
+        }, 
+        sources: ['/assets/content/gunmetal-card-smooth.mp4'],
         dim: {
             md: {w: 600, h: 300},
         },
