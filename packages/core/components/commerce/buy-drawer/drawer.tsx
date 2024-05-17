@@ -21,7 +21,6 @@ const CommerceDrawer: React.FC<PropsWithChildren &
     setOpen: (b: boolean) => void
     handleHandleClicked: () => void
     drawerClx?: string
-    setActiveSPIndexSetter?: (fn: (snapPoint: number | string | null) => void) => void
   }
 > = ({
   children,
@@ -32,7 +31,6 @@ const CommerceDrawer: React.FC<PropsWithChildren &
   setActiveSnapPoint,
   activeSnapPoint,
   handleHandleClicked,
-  setActiveSPIndexSetter,
   drawerClx='',
   ...rest
 }) => {
@@ -48,10 +46,8 @@ const CommerceDrawer: React.FC<PropsWithChildren &
     setActiveSnapPoint={setActiveSnapPoint}
     activeSnapPoint={activeSnapPoint}
     fastDragSkipsToEnd={false}
-    handleOnly={true}
-    setActiveSPIndexSetter={setActiveSPIndexSetter}
-    
-
+    dragHandleOnly={true}
+    handleHandleClicked={handleHandleClicked}
     {...rest}
   >
     <DrawerContent defaultHandle={false} className={cn(
@@ -62,9 +58,9 @@ const CommerceDrawer: React.FC<PropsWithChildren &
       <DrawerHandle 
         className={
           'absolute left-0 right-0 mx-auto top-2 ' + 
-          'w-[100px] h-3 rounded-full bg-level-3 hover:bg-level-2 shrink-0'
+          'w-[100px] h-3 rounded-full bg-level-3 hover:bg-level-2 ' + 
+          'cursor-grab active:cursor-grabbing touch-pan-y'
         } 
-        handleClick={handleHandleClicked}
       />
 
       {children}

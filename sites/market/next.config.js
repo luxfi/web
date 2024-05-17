@@ -32,7 +32,7 @@ const nextConfig = {
   webpack: (config) => {
     let conf = svgrPluginConfig(config)
     if (env === "development") {
-      conf =  watchPluginConfig(conf) 
+      //conf =  watchPluginConfig(conf) 
     }
     return conf
   }

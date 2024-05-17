@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
-import { observable, type IObservableValue, reaction } from 'mobx'
+import { observable, type IObservableValue, reaction, runInAction } from 'mobx'
 import { observer } from 'mobx-react-lite'
 
 import { Button, type ButtonProps } from '@hanzo/ui/primitives'
@@ -34,15 +34,15 @@ const IconAndQuantity: React.FC<{
       () => (cmmc.cartQuantity),
       (curr, prev) => {
         if (curr > prev) {
-          wiggleRef.current.set('more')   
+          runInAction(() => {wiggleRef.current.set('more') })  
         }
         else {
-          wiggleRef.current.set('less')   
+          runInAction(() => {wiggleRef.current.set('less')  })  
         }    
         setTimeout(() => {
             // Note that this doesn't actually stop the animation
             // just resets the styles
-          wiggleRef.current.set('none')   
+          runInAction(() => {wiggleRef.current.set('none') })   
         }, 800)
       }
     ) : undefined

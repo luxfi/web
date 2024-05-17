@@ -89,11 +89,18 @@ const CommerceUIComponent: React.FC = observer(() => {
 
       () => ({
         buy: !!ui.buyOptionsSkuPath,
-        added: !isCheckout && ui.item,
+        added: !isCheckout && !!ui.item,
         checkout: !isCheckout && !cmmc.cartEmpty,
         closed: ui.closed
       }),
-      ({buy, added, checkout, closed}) => {
+      ({buy, added, checkout, closed}, prev) => {
+
+        console.log("MODE CHANGED: ")
+        console.log("  buy: ", buy, prev.buy)
+        console.log("  added: ", added, prev.added)
+        console.log("  checkout: ", checkout, prev.checkout)
+        console.log("  closed: ", closed, prev.closed)
+
         let mode: DrawerMode = 'none' // TODO: 'closed'
         if (buy) {
           if (added) {
@@ -132,11 +139,18 @@ const CommerceUIComponent: React.FC = observer(() => {
     reactionDisposers.current.push(reaction(
       () => ( stateRef.current.state ),
       (s) => {
+        if (ui.syncingStateToUI) {
+          console.log(`STATE CHANGE to "${s}" (IGNORED)`)
+          ui.setSyncingStateToUI(false)
+          return
+        }
         if (s === 'buy') {
           //setterRef.current?.(stateRef.current.points.length - 1)
+          console.log(`STATE CHANGE to "${s}" (UI REACTED)`)
           setActiveSnapPoint(BUY)
         }
         else if (s === 'micro') {
+          console.log(`STATE CHANGE to "${s}" (UI REACTED)`)
           //setterRef.current?.(0)
           setActiveSnapPoint(MICRO)
         }
@@ -149,6 +163,14 @@ const CommerceUIComponent: React.FC = observer(() => {
 
   const _setActiveSnapPoint = (pt: string | number | null): void => {
     console.log("ON CHANGE: ", pt)
+    if (activeSnapPoint === BUY && pt === MICRO) {
+      ui.setSyncingStateToUI(true)
+      ui.hideBuyOptions()  
+    }
+    else if (activeSnapPoint === MICRO && pt === BUY) {
+      ui.setSyncingStateToUI(true)
+      ui.showBuyOptions(ui.item?.sku ?? '')  
+    }
     setActiveSnapPoint(pt)  
   }
 
@@ -156,8 +178,15 @@ const CommerceUIComponent: React.FC = observer(() => {
     router.push('/checkout')
   }
 
-  const reallyOnlyCloseDrawer = (b: boolean) => {
-    // Should only ever be called internally to close
+  const setOpen = (b: boolean) => {
+
+    if (!b) {
+      console.log("ON CLOSE")
+      if (!ui.closed) {
+        console.log("syncing closed state to UI gesture")
+        ui.setClosed(true)
+      }
+    }
     // Using handleCloseGesture()
   }
 
@@ -188,38 +217,25 @@ const CommerceUIComponent: React.FC = observer(() => {
   }
 
   const handleCloseGesture = () => {
-    if (stateRef.current.state === 'buy') {
+    if (stateRef.current.state.startsWith('buy')) {
       console.log(" CLOSING 'BUY' ... ")
-      const toks = stateRef.current.mode.split('-')
-      if (toks.length <= 1) {
-        stateRef.current.setMode('none')
-      }
-      else {
-        stateRef.current.setMode(toks[1] as DrawerMode) // 'checkout' or 'added'
-      }
+      ui.hideBuyOptions()
       return true // "handled!"
     }
     console.log("DEFAULT CLOSE ACTION")
     return false
   }
 
-
-  const setActiveSPIndexSetter = (fn: (index: number ) => void): void => {
-    setterRef.current = fn 
-  }
-
-
   return (
     <CommerceDrawer 
       open={!(stateRef.current.state === 'closed')} 
-      setOpen={reallyOnlyCloseDrawer}
+      setOpen={setOpen}
       drawerClx={'w-full h-full'}
       snapPoints={stateRef.current.points}
       modal={stateRef.current.modal}
       activeSnapPoint={activeSnapPoint}
       setActiveSnapPoint={_setActiveSnapPoint}
       handleHandleClicked={handleHandleClicked}
-      setActiveSPIndexSetter={setActiveSPIndexSetter}
       handleCloseGesture={handleCloseGesture}
     >
       {stateRef.current.state === 'buy' && (
