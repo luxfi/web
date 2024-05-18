@@ -9,7 +9,6 @@ import {
   DrawerContent, 
   DrawerHandle,
   type DrawerProps,
-  useDrawerContext 
 } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 

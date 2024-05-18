@@ -4,11 +4,11 @@ import { reaction, runInAction} from 'mobx'
 import { useCommerce } from '@hanzo/commerce'
 
 import ObsStringSet from './obs-string-set'
-import { useCommerceUI } from '../../../commerce/ui-context'
+import { useBuyOptions } from '../../../commerce/ui-context'
 
 export default (isCheckout: boolean): ObsStringSet => {
 
-  const ui = useCommerceUI()
+  const ui = useBuyOptions()
   const cmmc = useCommerce()
 
   const clxSetRef = useRef<ObsStringSet>(new ObsStringSet(

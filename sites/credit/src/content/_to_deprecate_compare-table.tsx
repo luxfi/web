@@ -10,7 +10,7 @@ import type {
 } from '@hanzo/ui/blocks'
 
 import { cn } from '@hanzo/ui/util'
-import { useCommerceUI } from '@hanzo/commerce'
+import { useBuyOptions } from '@hanzo/commerce'
 
 import type ElementTableBlock from '@/blocks/def/_to_move_element-table'
 
@@ -39,7 +39,7 @@ const CardButton : React.FC<{
   className=''
 }) => {
   
-  const ui = useCommerceUI()
+  const ui = useBuyOptions()
   const handleClick = () => { ui.showBuyOptions(skuPath) }
 
   return (

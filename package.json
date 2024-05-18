@@ -11,31 +11,10 @@
     "clean:nxt": "find . -name '.next' -type d -prune -exec rm -rf '{}' +",
     "clean:all": "pnpm clean:nm && pnpm clean:nxt && rm pnpm-lock.yaml"
   },
-  "dependencies": {
-    "@next/mdx": "^14.1.0",
-    "firebase": "10.8.0",
-    "lucide-react": "0.344.0",
-    "mobx": "^6.12.0",
-    "mobx-react-lite": "^4.0.5",
-    "mobx-utils": "^6.0.8",
-    "next": "14.2.3",
-    "next-themes": "^0.2.1",
-    "next-usequerystate": "^1.17.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hook-form": "^7.51.4",
-    "request": "^2.88.2",
-    "supports-color": "8.1.1",
-    "zod": "3.23.8"
-  },
   "pnpm": {
     "overrides": {
       "react": "^18.3.1",
       "@types/react": "^18.3.2"
-
-,    "@hanzo/ui": "link:../../hanzoai/react-sdk/packages/ui"
-,    "@hanzo/commerce": "link:../../hanzoai/react-sdk/packages/commerce"
-
     }
   }
 }

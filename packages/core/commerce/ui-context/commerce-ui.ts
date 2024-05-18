@@ -18,28 +18,24 @@ const MICRO_ONLY = [MICRO]
 type CommerceUIState = 'closed' | 'micro' | 'full' 
 type SnapPoint = number | string
 
-interface CommerceUI extends ObsLineItemRef {
+// ObsLineItemRef
 
+interface QuantityChangedListener {
+  itemQuantityChanged(sku: string, val: number, prevVal: number): void
+}
+
+interface BuyOptions {
   showBuyOptions: (skuPath: string) => void
   hideBuyOptions: () => void
-  setCheckingOut (b: boolean): void
-  itemQuantityChanged(sku: string, val: number, prevVal: number): void
-  setClosedByUser(b: boolean): void
-
-  syncUIToState: (s: CommerceUIState) => void
- 
   get buyOptionsSkuPath(): string | undefined
-  get ignoreStateChange(): boolean
-  setIgnoreStateChange(b: boolean): void
+}
 
-  get open(): boolean
+interface CommerceDrawer extends ObsLineItemRef {
 
+  setClosedByUser(b: boolean): void
+  get drawerOpen(): boolean
     // Called by UI Gesture
   onActivePointChanged: (p: SnapPoint | null) => void
-
-    // Mutates states
-  setActivePoint: (p: SnapPoint | null) => void
-
   get state(): CommerceUIState 
   get closedByUser(): boolean
   get points(): SnapPoint[] 
@@ -48,13 +44,13 @@ interface CommerceUI extends ObsLineItemRef {
   get showCheckout(): boolean
   get showAdded(): boolean
   get showBuy(): boolean
-
-  init: (
-    //pts: {micro: SnapPoint, full: SnapPoint},
-  ) => void
 }
 
-class CommerceUIStore implements CommerceUI {
+class CommerceUIStore implements 
+  QuantityChangedListener,
+  BuyOptions,
+  CommerceDrawer
+{
 
   _buyOptionsSkuPath: string | undefined = undefined
   _closedByUser: boolean = false
@@ -85,7 +81,7 @@ class CommerceUIStore implements CommerceUI {
     })
   }
 
-  init = (
+  initialize = (
     //pts: {micro: SnapPoint, full: SnapPoint},
   ): void => {
     //this._snapPoints = Object.values(pts)
@@ -100,7 +96,7 @@ class CommerceUIStore implements CommerceUI {
         }
         else {
           console.log(`STATE CHANGE to "${s}" (UI REACTED)`)
-          this.syncUIToState(s)
+          this._syncUIToState(s)
         }
       }
     ))
@@ -169,7 +165,7 @@ class CommerceUIStore implements CommerceUI {
     return BOTH
   }
 
-  syncUIToState = (s: CommerceUIState) => {
+  _syncUIToState = (s: CommerceUIState) => {
     if (s === 'micro') {
       this.setActivePoint(this.points[0])
     }
@@ -178,7 +174,7 @@ class CommerceUIStore implements CommerceUI {
     } 
   }
 
-  get open(): boolean {
+  get drawerOpen(): boolean {
     return ( 
       !this.closedByUser 
       && 
@@ -208,5 +204,7 @@ class CommerceUIStore implements CommerceUI {
 
 export {
   CommerceUIStore,
-  type CommerceUI
+  type CommerceDrawer,
+  type QuantityChangedListener,
+  type BuyOptions,
 }

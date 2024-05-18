@@ -9,7 +9,7 @@ import { useStepAnimation } from '@hanzo/ui/util-client'
 
 import { Image } from '@hanzo/ui/primitives'
 
-import { useCommerceUI } from '../../../commerce/ui-context'
+import { useCommerceDrawer } from '../../../commerce/ui-context'
 
 import CheckoutButton from '../checkout-button'
 import useAnimationClxSet from './use-anim-clx-set'
@@ -111,7 +111,7 @@ const CheckoutWidget: React.FC<{
   const isCheckout = usePathname() === '/checkout'
   const clxSet = useAnimationClxSet(isCheckout)
 
-  const itemRef = useCommerceUI()
+  const itemRef = useCommerceDrawer()
 
     // for rendering content after itemRef.item() would return false
   const persistentRef = useRef<LineItem | undefined>(undefined)

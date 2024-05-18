@@ -4,7 +4,7 @@ import React from 'react'
 import type { LineItem } from '@hanzo/commerce/types'
 import  { AddToCartWidget } from '@hanzo/commerce'
 
-import { useCommerceUI } from '../../commerce/ui-context'
+import { useQuantityChangedListener } from '../../commerce/ui-context'
 
 const AddWidget: React.FC<{
   item: LineItem
@@ -13,8 +13,8 @@ const AddWidget: React.FC<{
   buttonClx?: string
   variant?: 'minimal' | 'primary' | 'outline'
 }> = (props) => {
-  const ui = useCommerceUI()
-  return <AddToCartWidget {...props} onQuantityChanged={ui.itemQuantityChanged}/>
+  const l = useQuantityChangedListener()
+  return <AddToCartWidget {...props} onQuantityChanged={l.itemQuantityChanged.bind(l)}/>
 }
 
 export default AddWidget

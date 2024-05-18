@@ -11,14 +11,23 @@ import React, {
 import { enableStaticRendering } from 'mobx-react-lite'
 enableStaticRendering(typeof window === "undefined")
 
-import  { type CommerceUI, CommerceUIStore } from './commerce-ui'
+import type { CommerceDrawer, BuyOptions, QuantityChangedListener } from './commerce-ui'
+import { CommerceUIStore } from './commerce-ui'
 import { useCommerce } from '@hanzo/commerce'
 import { usePathname } from 'next/navigation'
 
 const CommerceUIContext = createContext<CommerceUIStore | undefined>(undefined)
 
-const useCommerceUI = (): CommerceUI => {
-  return useContext(CommerceUIContext) as CommerceUIStore
+const useCommerceDrawer = (): CommerceDrawer => {
+  return useContext(CommerceUIContext) as CommerceDrawer
+}
+
+const useBuyOptions = (): BuyOptions => {
+  return useContext(CommerceUIContext) as BuyOptions
+}
+
+const useQuantityChangedListener = (): QuantityChangedListener => {
+  return useContext(CommerceUIContext) as QuantityChangedListener
 }
 
 const CommerceUIProvider: React.FC<PropsWithChildren & {
@@ -33,7 +42,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren & {
   const ref = useRef<CommerceUIStore>(new CommerceUIStore(cmmc))
 
   useEffect(() => {
-    ref.current.init()
+    ref.current.initialize()
     return () => { ref.current.dispose() }
   }, [])
 
@@ -51,7 +60,9 @@ const CommerceUIProvider: React.FC<PropsWithChildren & {
 }
 
 export {
-  useCommerceUI, 
+  useCommerceDrawer, 
+  useBuyOptions,
+  useQuantityChangedListener,
   CommerceUIProvider
 }
 
