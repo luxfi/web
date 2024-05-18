@@ -13,6 +13,7 @@ enableStaticRendering(typeof window === "undefined")
 
 import  { type CommerceUI, CommerceUIStore } from './commerce-ui'
 import { useCommerce } from '@hanzo/commerce'
+import { usePathname } from 'next/navigation'
 
 const CommerceUIContext = createContext<CommerceUIStore | undefined>(undefined)
 
@@ -28,16 +29,22 @@ const CommerceUIProvider: React.FC<PropsWithChildren & {
 }) => {
 
   const cmmc = useCommerce()
-  const valueRef = useRef<CommerceUIStore>(new CommerceUIStore(cmmc))
+  const isCheckout = usePathname() === '/checkout'
+  const ref = useRef<CommerceUIStore>(new CommerceUIStore(cmmc))
 
   useEffect(() => {
-
-    //valueRef.current = new CommerceUIStore(cmmc)
-    return () => { valueRef.current?.dispose() }
+    ref.current.init()
+    return () => { ref.current.dispose() }
   }, [])
 
+  useEffect(() => {
+    ref.current.setCheckingOut(isCheckout)
+  }, [isCheckout])
+
+
+
   return (
-    <CommerceUIContext.Provider value={valueRef.current}>
+    <CommerceUIContext.Provider value={ref.current}>
       {children}
     </CommerceUIContext.Provider>
   )
