@@ -67,7 +67,7 @@ const CommerceUIComponent: React.FC = observer(() => {
 
   return (
     <CommerceDrawer 
-      open={drawer.drawerOpen} 
+      open={drawer.open} 
       setOpen={setOpen}
       drawerClx={'w-full h-full'}
       snapPoints={drawer.points}

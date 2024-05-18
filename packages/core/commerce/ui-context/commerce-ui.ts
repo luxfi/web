@@ -6,6 +6,7 @@ import {
   reaction,
   type IReactionDisposer, 
 } from 'mobx'
+
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
 const BUY = '700px'
@@ -14,11 +15,8 @@ const BOTH = [MICRO, BUY]
 const BUY_ONLY = [BUY]
 const MICRO_ONLY = [MICRO]
 
-
-type CommerceUIState = 'closed' | 'micro' | 'full' 
+type DrawerState = 'closed' | 'micro' | 'full' 
 type SnapPoint = number | string
-
-// ObsLineItemRef
 
 interface QuantityChangedListener {
   itemQuantityChanged(sku: string, val: number, prevVal: number): void
@@ -32,15 +30,15 @@ interface BuyOptions {
 
 interface CommerceDrawer extends ObsLineItemRef {
 
+  get open(): boolean
+  get state(): DrawerState 
+  get closedByUser(): boolean
   setClosedByUser(b: boolean): void
-  get drawerOpen(): boolean
+  get modal(): boolean
+  get points(): SnapPoint[] 
+  get activePoint(): SnapPoint | null
     // Called by UI Gesture
   onActivePointChanged: (p: SnapPoint | null) => void
-  get state(): CommerceUIState 
-  get closedByUser(): boolean
-  get points(): SnapPoint[] 
-  get modal(): boolean
-  get activePoint(): SnapPoint | null
   get showCheckout(): boolean
   get showAdded(): boolean
   get showBuy(): boolean
@@ -165,7 +163,7 @@ class CommerceUIStore implements
     return BOTH
   }
 
-  _syncUIToState = (s: CommerceUIState) => {
+  _syncUIToState = (s: DrawerState) => {
     if (s === 'micro') {
       this.setActivePoint(this.points[0])
     }
@@ -174,7 +172,7 @@ class CommerceUIStore implements
     } 
   }
 
-  get drawerOpen(): boolean {
+  get open(): boolean {
     return ( 
       !this.closedByUser 
       && 
@@ -182,7 +180,7 @@ class CommerceUIStore implements
     )
   }
 
-  get state(): CommerceUIState {
+  get state(): DrawerState {
     if (this.showBuy) {
       return 'full'
     }
