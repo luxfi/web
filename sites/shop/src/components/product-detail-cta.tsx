@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 
-import { BuyButton } from '@hanzo/commerce'
+import { BuyButton } from '@luxfi/core'
 import { Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 

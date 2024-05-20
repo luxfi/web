@@ -10,6 +10,9 @@
     "clean:nxt": "find . -name '.next' -type d -prune -exec rm -rf '{}' +",
     "clean:all": "pnpm clean:nm && pnpm clean:nxt && rm pnpm-lock.yaml"
   },
+  "devDependencies": {
+    "webpack-watch-files-plugin": "^1.2.1"
+  },
   "//": "https://stackoverflow.com/questions/76591038/module-not-found-esm-packages-supports-color-need-to-be-imported-use-import",
   "pnpm": {
     "overrides": {

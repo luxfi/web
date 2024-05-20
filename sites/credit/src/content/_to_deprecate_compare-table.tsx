@@ -10,7 +10,7 @@ import type {
 } from '@hanzo/ui/blocks'
 
 import { cn } from '@hanzo/ui/util'
-import { useBuyOptions } from '@hanzo/commerce'
+import { useBuyOptions } from '@luxfi/core/commerce'
 
 import type ElementTableBlock from '@/blocks/def/_to_move_element-table'
 

@@ -3,7 +3,8 @@ import React  from 'react'
 import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
 import { type Block} from '@hanzo/ui/blocks'
-import { BuyButton } from '@hanzo/commerce'
+
+import { BuyButton } from '@luxfi/core'
 
 import type ItemCTAsBlock from '@/blocks/def/item-ctas'
 

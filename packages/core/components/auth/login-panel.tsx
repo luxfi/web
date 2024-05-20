@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-import Autoplay from 'embla-carousel-autoplay'
 import { setCookie } from 'cookies-next'
 
 import { cn } from '@hanzo/ui/util'
@@ -11,6 +10,7 @@ import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primi
 import { LoginPanel as Login } from '@hanzo/auth/components'
 
 import Logo from '../logo'
+import { EmblaAutoplay } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
 
@@ -60,7 +60,7 @@ const LoginPanel: React.FC<{
             <Carousel
               options={{ align: 'center', loop: true }}
               className='w-full'
-              plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
+              plugins={[EmblaAutoplay({ delay: 5000, stopOnInteraction: true })]}
             >
               <CarouselContent>
                 {reviews.map(({text, author, href}, index) => (

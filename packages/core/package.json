@@ -28,6 +28,7 @@
   "exports": {
     ".": "./components/index.ts",
     "./commerce-data": "./commerce/data/index.ts",
+    "./commerce": "./commerce/ui-context/index.tsx",
     "./root-layout": "./root-layout/index.tsx",
     "./server-actions": "./server-actions/index.ts",
     "./next": "./next/index.ts",

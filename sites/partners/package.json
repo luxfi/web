@@ -16,7 +16,7 @@
   "dependencies": {
     "@luxfi/core": "workspace:*",
     "@next/mdx": "14.1.0",
-    "next": "14.1.3",
+    "next": "14.2.3",
     "next-themes": "^0.2.1",
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.3.1",
