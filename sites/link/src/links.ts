@@ -73,7 +73,7 @@ export default {
       icon: "/assets/links/wallet.jpeg"
     },
     {
-      url: "https://github.com/luxdefi?utm_medium=social&utm_source=linktree&utm_campaign=code",
+      url: "https://github.com/luxfi?utm_medium=social&utm_source=linktree&utm_campaign=code",
       name: "Code",
       icon: "/assets/links/code.jpeg"
     },
