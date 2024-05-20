@@ -3,28 +3,23 @@ import React from 'react'
 import { useRouter } from 'next/navigation'
 import { observer } from 'mobx-react-lite'
 
-import { Image } from '@hanzo/ui/primitives'
-import { cn } from '@hanzo/ui/util'
 import { CarouselBuyCard } from '@hanzo/commerce'
 
 import { 
-  useBuyOptions, 
+  useSelectAndBuy, 
   useCommerceDrawer, 
-  useQuantityChangedListener 
-} from '../../../commerce/ui-context'
+  useRecentActivity 
+} from '../../../commerce/ui/context'
 
-import CommerceDrawer from './drawer'
+import CommerceDrawer from './shell'
 import CheckoutButton from '../checkout-button'
-
-const CONST = {
-    itemImgConstraint: { w: 40, h: 24 },
-}
+import Micro from './micro'
 
 const CommerceUIComponent: React.FC = observer(() => {
 
-  const buyOptions = useBuyOptions()
+  const buy = useSelectAndBuy()
   const drawer = useCommerceDrawer()
-  const listener = useQuantityChangedListener()
+  const recent = useRecentActivity()
   const router = useRouter()
 
   const handleCheckout = (): void => {
@@ -32,8 +27,8 @@ const CommerceUIComponent: React.FC = observer(() => {
     //router.push('/checkout')
   }
 
+    // see handleCloseGesture()
   const setOpen = (b: boolean): void => {
-
     if (!b) {
       console.log("ON CLOSE")
       if (!drawer.closedByUser) {
@@ -41,34 +36,33 @@ const CommerceUIComponent: React.FC = observer(() => {
         drawer.setClosedByUser(true)
       }
     }
-    // see handleCloseGesture()
   }
 
   const handleHandleClicked = (): void => {
-    //console.log("HANDLE CLICKED")
 
     if (drawer.state === 'full') {
-      buyOptions.hideBuyOptions()
+      buy.hideVariants()
     }
     else if (drawer.state === 'micro') {
       if (drawer.showAdded) {
-        //console.log(" OPENING 'ADDED' ... ")
-        buyOptions.showBuyOptions(drawer.item?.sku ?? '')
+        buy.showVariants(recent.item?.sku ?? '')
       }
-      if (drawer.showCheckout) {
-        //console.log(" CLOSING 'CHECKOUT' ... ")
+        // checkout only
+      else {
         drawer.setClosedByUser(true)
       }
     }
   }
 
+  const handleItemClicked = () => {
+    buy.showVariants(recent.item?.sku ?? '')
+  }
+
   const handleCloseGesture = (): boolean => {
     if (drawer.state === 'full') {
-      //console.log(" CLOSING 'BUY' ... ")
-      buyOptions.hideBuyOptions()
+      buy.hideVariants()
       return true // "handled!"
     }
-    //console.log("DEFAULT CLOSE ACTION")
     return false
   }
 
@@ -76,7 +70,7 @@ const CommerceUIComponent: React.FC = observer(() => {
     <CommerceDrawer 
       open={drawer.open} 
       setOpen={setOpen}
-      drawerClx={'w-full h-full'}
+      drawerClx={'w-full h-full ' + (drawer.state === 'full' ? 'mt-7 pt-7' : 'mt-5 pt-5')}
       snapPoints={drawer.points}
       modal={drawer.modal}
       activeSnapPoint={drawer.activePoint}
@@ -86,66 +80,25 @@ const CommerceUIComponent: React.FC = observer(() => {
     >
       {drawer.state === 'full' && (
         <CarouselBuyCard 
-          skuPath={buyOptions.buyOptionsSkuPath!} 
+          skuPath={buy.currentSkuPath!} 
           checkoutButton={
-            <CheckoutButton handleCheckout={handleCheckout} className='w-full min-w-[160px] sm:max-w-[320px]'/>
+            <CheckoutButton 
+              handleCheckout={handleCheckout} 
+              className='w-full min-w-[160px] sm:max-w-[320px]'
+            />
           }
-          onQuantityChanged={listener.itemQuantityChanged.bind(listener)}
+          onQuantityChanged={recent.quantityChanged.bind(recent)}
           clx='w-full'
           addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
           selectorClx='max-w-[475px]'
         />
       )}
       {drawer.state === 'micro' && (
-        <div className='flex justify-center items-center gap-2'>
-          {drawer.showAdded && (<div 
-            className={cn(
-              'flex flex-row justify-between items-center', 
-              //transClx(steps.notPast(0), VARS[v].activeItemAnim.info),
-              //VARS[v].itemClx, 
-              //steps.notPast(1) ? 'px-3 border rounded-lg bg-level-1 border-muted-3' : '' 
-            )}
-            //style={transStyle(VARS[v].activeItemAnim.info)}
-          >
-            {drawer.item?.img && (
-              <Image def={drawer.item.img} constrainTo={CONST.itemImgConstraint} preload className='grow-0 shrink-0'/>
-            )} 
-            {drawer.item && (
-            <div className='text-foreground grow ml-1'>
-              <p className='whitespace-nowrap text-ellipsis text-sm'>{drawer.item.title}</p>
-              <p className='whitespace-nowrap text-clip text-xxs' >recently added...</p>
-            </div>)}
-          </div>
-          )}
-          {drawer.showCheckout && (
-          <CheckoutButton 
-            handleCheckout={handleCheckout} 
-            centerText={true}
-            variant='primary' 
-            rounded='lg' 
-            showQuantity
-            showArrow
-            className={cn(
-                // for setting and unsetting 'gap'
-              //transClx((VARS[v].activeItemAnim.coText ? steps.notPast(3) : true), VARS[v].activeItemAnim.co),
-              //VARS[v].coClx
-            )} 
-            //style={transStyle(VARS[v].activeItemAnim.co)}
-          >
-            <div 
-              className={cn(
-                'overflow-hidden',
-                'flex justify-center items-center',
-                //transClx(steps.notPast(2), VARS[v].activeItemAnim.coText),
-              )} 
-              //style={transStyle(VARS[v].activeItemAnim.coText)}
-            >
-              Checkout
-            </div>
-          </CheckoutButton>
-          )}
-
-        </div>
+        <Micro 
+          handleCheckout={handleCheckout}
+          handleItemClicked={handleItemClicked}
+          clx='w-full px-3 sm:px-0 sm:w-[480px] sm:mx-auto md:w-[550px]'
+        />
       )}
     </CommerceDrawer>
   )

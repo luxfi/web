@@ -10,7 +10,7 @@ import {
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
 const BUY = '700px'
-const MICRO = '120px'
+const MICRO = '90px'
 const BOTH = [MICRO, BUY]
 const BUY_ONLY = [BUY]
 const MICRO_ONLY = [MICRO]
@@ -18,17 +18,17 @@ const MICRO_ONLY = [MICRO]
 type DrawerState = 'closed' | 'micro' | 'full' 
 type SnapPoint = number | string
 
-interface QuantityChangedListener {
-  itemQuantityChanged(sku: string, val: number, prevVal: number): void
+interface RecentActivity extends ObsLineItemRef {
+  quantityChanged(sku: string, val: number, prevVal: number): void
 }
 
-interface BuyOptions {
-  showBuyOptions: (skuPath: string) => void
-  hideBuyOptions: () => void
-  get buyOptionsSkuPath(): string | undefined
+interface SelectAndBuy {
+  showVariants: (skuPath: string) => void
+  hideVariants: () => void
+  get currentSkuPath(): string | undefined
 }
 
-interface CommerceDrawer extends ObsLineItemRef {
+interface CommerceDrawer {
 
   get open(): boolean
   get state(): DrawerState 
@@ -42,15 +42,17 @@ interface CommerceDrawer extends ObsLineItemRef {
   get showCheckout(): boolean
   get showAdded(): boolean
   get showBuy(): boolean
+
+  get microHeight(): SnapPoint
 }
 
 class CommerceUIStore implements 
-  QuantityChangedListener,
-  BuyOptions,
+  RecentActivity,
+  SelectAndBuy,
   CommerceDrawer
 {
 
-  _buyOptionsSkuPath: string | undefined = undefined
+  _currentSkuPath: string | undefined = undefined
   _closedByUser: boolean = false
   _checkingOut: boolean = false
   _ignoreStateChange: boolean = false
@@ -64,14 +66,14 @@ class CommerceUIStore implements
   constructor(s: CommerceService) {
     this._service = s
     makeObservable(this, {
-      _buyOptionsSkuPath: observable,
+      _currentSkuPath: observable,
       _activeItem: observable.ref, 
       _closedByUser: observable,
       _checkingOut: observable,
-      showBuyOptions: action,
-      hideBuyOptions: action,
-      buyOptionsSkuPath: computed,
-      itemQuantityChanged: action,
+      showVariants: action,
+      hideVariants: action,
+      currentSkuPath: computed,
+      quantityChanged: action,
       setClosedByUser: action,
       closedByUser: computed,
       checkingOut: computed,
@@ -104,26 +106,26 @@ class CommerceUIStore implements
     console.log("ON onActivePointChanged: ", pt)
     if (pt === MICRO && this.activePoint === BUY) {
       this.setIgnoreStateChange(true)
-      this.hideBuyOptions()  
+      this.hideVariants()  
     }
     else if (pt === BUY && this.activePoint === MICRO) {
       this.setIgnoreStateChange(true)
-      this.showBuyOptions(this.item?.sku ?? '')  
+      this.showVariants(this.item?.sku ?? '')  
     }
     this.setActivePoint(pt)  
   }
 
-  showBuyOptions = (skuPath: string): void => {
+  showVariants = (skuPath: string): void => {
     this._service.setCurrentItem(undefined)
-    this._buyOptionsSkuPath = skuPath
+    this._currentSkuPath = skuPath
     this._closedByUser = false
   } 
 
-  hideBuyOptions = (): void => { this._buyOptionsSkuPath = undefined }
+  hideVariants = (): void => { this._currentSkuPath = undefined }
 
-  get buyOptionsSkuPath(): string | undefined { return this._buyOptionsSkuPath } 
+  get currentSkuPath(): string | undefined { return this._currentSkuPath } 
 
-  itemQuantityChanged = (sku: string, val: number, oldVal: number): void  => {
+  quantityChanged = (sku: string, val: number, oldVal: number): void  => {
 
     if (val === 0) {
       if (this._activeItem?.sku === sku) {
@@ -190,10 +192,14 @@ class CommerceUIStore implements
     return 'closed'
   }
 
-  get showBuy(): boolean {return !!this.buyOptionsSkuPath}
+  get showBuy(): boolean {return !!this.currentSkuPath}
   get showAdded(): boolean { return !this._checkingOut && !!this.item}
   get showCheckout(): boolean { return !this._checkingOut && !this._service.cartEmpty}
   get modal(): boolean { return this.state !== 'micro'}
+
+  get microHeight(): SnapPoint {
+    return MICRO
+  }
 
   dispose = () => {
     this._reactionDisposers.forEach((d) => {d()})
@@ -203,6 +209,6 @@ class CommerceUIStore implements
 export {
   CommerceUIStore,
   type CommerceDrawer,
-  type QuantityChangedListener,
-  type BuyOptions,
+  type RecentActivity,
+  type SelectAndBuy,
 }

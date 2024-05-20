@@ -9,7 +9,7 @@ import { useStepAnimation } from '@hanzo/ui/util-client'
 
 import { Image } from '@hanzo/ui/primitives'
 
-import { useCommerceDrawer } from '../../../commerce/ui-context'
+import { useCommerceDrawer } from '../../../commerce/ui/context'
 
 import CheckoutButton from '../checkout-button'
 import useAnimationClxSet from './use-anim-clx-set'

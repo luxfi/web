@@ -5,7 +5,7 @@ import { Button, buttonVariants } from '@hanzo/ui/primitives'
 import { type VariantProps } from '@hanzo/ui/util'
 
 import { cn } from '@hanzo/ui/util'
-import { useBuyOptions } from '../../commerce/ui-context'
+import { useSelectAndBuy } from '../../commerce/ui/context'
 
 const BuyButton: React.FC<
   PropsWithChildren & 
@@ -21,8 +21,8 @@ const BuyButton: React.FC<
   ...rest
 }) => {
 
-  const buyOptions = useBuyOptions()
-  const handleClick = (): void => { buyOptions.showBuyOptions(skuPath) }
+  const buyOptions = useSelectAndBuy()
+  const handleClick = (): void => { buyOptions.showVariants(skuPath) }
   
   return (
     <Button onClick={handleClick} {...rest} className={cn(className, '')}>

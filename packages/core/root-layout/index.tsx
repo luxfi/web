@@ -10,7 +10,7 @@ import { CommerceProvider } from '@hanzo/commerce'
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
-import { CommerceUIProvider } from '../commerce/ui-context'
+import { CommerceUIProvider } from '../commerce/ui/context'
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
 
 import BuyDrawer from '../components/commerce/buy-drawer'

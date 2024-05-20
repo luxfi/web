@@ -6,15 +6,16 @@ import React, {
   type PropsWithChildren, 
   useEffect
 } from 'react'
+import { enableStaticRendering } from 'mobx-react-lite'
+import { usePathname } from 'next/navigation'
+
+import { useCommerce } from '@hanzo/commerce'
+
+import type { CommerceDrawer, SelectAndBuy, RecentActivity } from './store'
+import { CommerceUIStore } from './store'
 
 // https://dev.to/ivandotv/mobx-server-side-rendering-with-next-js-4m18
-import { enableStaticRendering } from 'mobx-react-lite'
 enableStaticRendering(typeof window === "undefined")
-
-import type { CommerceDrawer, BuyOptions, QuantityChangedListener } from './commerce-ui'
-import { CommerceUIStore } from './commerce-ui'
-import { useCommerce } from '@hanzo/commerce'
-import { usePathname } from 'next/navigation'
 
 const CommerceUIContext = createContext<CommerceUIStore | undefined>(undefined)
 
@@ -22,19 +23,16 @@ const useCommerceDrawer = (): CommerceDrawer => {
   return useContext(CommerceUIContext) as CommerceDrawer
 }
 
-const useBuyOptions = (): BuyOptions => {
-  return useContext(CommerceUIContext) as BuyOptions
+const useSelectAndBuy = (): SelectAndBuy => {
+  return useContext(CommerceUIContext) as SelectAndBuy
 }
 
-const useQuantityChangedListener = (): QuantityChangedListener => {
-  return useContext(CommerceUIContext) as QuantityChangedListener
+const useRecentActivity = (): RecentActivity => {
+  return useContext(CommerceUIContext) as RecentActivity
 }
 
-const CommerceUIProvider: React.FC<PropsWithChildren & {
-  DEBUG_NO_TICK?: boolean
-}> = ({ 
+const CommerceUIProvider: React.FC<PropsWithChildren> = ({ 
   children,
-  DEBUG_NO_TICK=false
 }) => {
 
   const cmmc = useCommerce()
@@ -51,7 +49,6 @@ const CommerceUIProvider: React.FC<PropsWithChildren & {
   }, [isCheckout])
 
 
-
   return (
     <CommerceUIContext.Provider value={ref.current}>
       {children}
@@ -61,8 +58,8 @@ const CommerceUIProvider: React.FC<PropsWithChildren & {
 
 export {
   useCommerceDrawer, 
-  useBuyOptions,
-  useQuantityChangedListener,
+  useSelectAndBuy,
+  useRecentActivity,
   CommerceUIProvider
 }
 
