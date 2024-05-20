@@ -111,7 +111,10 @@ const Micro: React.FC<{
       </div>
     )}
     {drawer.showCheckout && (
-      <div className={cn('flex flex-col justify-center w-full', (drawer.showAdded ? 'items-stretch' : 'items-center'))}>
+      <div className={cn(
+        'flex flex-col justify-center w-full', 
+        (drawer.showAdded ? 'items-stretch' : 'items-center' )
+      )}>
         <CheckoutButton 
           handleCheckout={handleCheckout} 
           variant='primary' 
