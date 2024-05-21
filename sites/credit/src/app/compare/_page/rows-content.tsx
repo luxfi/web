@@ -87,8 +87,8 @@ const rowsContent = (selectedCards: Card[]) => {
           <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1} clx='flex-col self-start'>
             {selectedCards[i]?.karmaRewards && (
               <>
-                <p className='font-bold'>Earn Karma while you spend</p>
-                <div className='flex flex-col gap-2'>
+                <p key={`p-${i}`} className='font-bold'>Earn Karma while you spend</p>
+                <div key={`div-${i}`} className='flex flex-col gap-2'>
                   {selectedCards[i]?.karmaRewards.map(({multiplier, description}, i) => (
                     <p key={i}><span className='font-bold'>{multiplier}X points</span> {description}</p>
                   ))}

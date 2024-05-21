@@ -79,7 +79,7 @@ const CardHero: React.FC<{
         'flex-col lg:col-span-3 gap-2 items-center text-center'
       )}
     >
-      <div className='flex flex-col gap-2 h-full justify-between'>
+      <div key='one' className='flex flex-col gap-2 h-full justify-between'>
         <div className='relative flex gap-2 items-center'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial.cardImg}}
@@ -96,12 +96,12 @@ const CardHero: React.FC<{
         </div>
         <h6 className='font-heading text-xs'>{card.title}</h6>
       </div>
-      <div className='relative flex flex-col gap-4 items-center justify-end'>
-        <div className='flex flex-col items-center text-xxs sm:text-base'>
-          <div><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
-          <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
+      <div key='two' className='relative flex flex-col gap-4 items-center justify-end'>
+        <div key='one' className='flex flex-col items-center text-xxs sm:text-base'>
+          <div key='one'><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
+          <div key='two'><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
         </div>
-        <div className='flex flex-col gap-2 items-center'>
+        <div key='two' className='flex flex-col gap-2 items-center'>
           <CardMaterialPicker
             materials={card.materials}
             selectedMaterial={selectedMaterial}

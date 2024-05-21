@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-import { ApplyTypography, Main } from '@hanzo/ui/primitives'
+import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
 import type { CardWithSelectedMaterial } from '@/types'
@@ -10,6 +10,7 @@ import RowHeading from './row-heading'
 import rowsContent from './rows-content'
 import CompareHeader from './compare-header'
 import SelectCardRow from './select-card-row'
+import PseudoMain from '../../../components/pseudo-main'
 
 import cards from '@/content/cards'
 
@@ -40,17 +41,17 @@ const CompareCards: React.FC<{
         <SelectCardRow selectedCards={selectedCards} setSelectedCards={setSelectedCards}/>
         {selectedCards.length > 0 && (
           <>
-            <Main id='benefits'>
+            <PseudoMain id='benefits'>
               <ApplyTypography className='flex justify-center w-full col-span-2 lg:col-span-11 mt-12 sm:mb-6 text-center'>
                 <h3>Exclusive Lux Card Benefits</h3>
               </ApplyTypography>
-            </Main>
+            </PseudoMain>
             {rowsContent(selectedCards).map(({title, description, content}, i) => (
               <div key={i} className={cn('py-4', i % 2 === 1 ? 'bg-muted-4' : '')}>
-                <Main className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 lg:gap-20'>
+                <PseudoMain className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 lg:gap-20'>
                   <RowHeading title={title} description={description}/>
                   {content}
-                </Main>
+                </PseudoMain>
               </div>
             ))}
           </>

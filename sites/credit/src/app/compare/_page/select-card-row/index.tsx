@@ -1,11 +1,10 @@
-import { Main } from '@hanzo/ui/primitives'
-
 import { type CardWithSelectedMaterial } from '@/types'
 
 import { NUM_CARDS_DESKTOP, NUM_CARDS_MOBILE } from '../CONST'
 import RowHeading from '../row-heading'
 import SelectCard from './select-card'
 import CardHero from './card-hero'
+import PseudoMain from '../../../../components/pseudo-main'
 
 const SelectCardRow: React.FC<{
   selectedCards: CardWithSelectedMaterial[]
@@ -17,7 +16,7 @@ const SelectCardRow: React.FC<{
   condensed
 }) => {
   return (
-    <Main className='grid grid-cols-2 lg:grid-cols-11 gap-4 sm:gap-8 lg:gap-16 items-start'>
+    <PseudoMain className='grid grid-cols-2 lg:grid-cols-11 gap-4 sm:gap-8 lg:gap-16 items-start'>
       {condensed ? (
         <div className='hidden lg:block lg:col-span-2'></div>
       ) : (
@@ -45,7 +44,7 @@ const SelectCardRow: React.FC<{
           condensed={condensed}
         />
       )))}
-    </Main>
+    </PseudoMain>
   )
 }
 
