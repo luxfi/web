@@ -13,7 +13,7 @@ import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 import { CommerceUIProvider } from '../commerce/ui/context'
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
 
-import BuyDrawer from '../components/commerce/buy-drawer'
+import CommerceDrawer from '../components/commerce/drawer'
 
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../types/site-def'
@@ -102,7 +102,7 @@ const RootLayout: React.FC<PropsWithChildren & {
           >
             <CommerceUIProvider >
               <Guts />
-              <BuyDrawer />
+              <CommerceDrawer />
             </CommerceUIProvider>
           </CommerceProvider>
         ) : (

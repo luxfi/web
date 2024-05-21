@@ -11,7 +11,7 @@ export { default as NotFound } from './not-found'
 
 export { default as AuthListener } from './auth/auth-listener'
 export { default as AddWidget } from './commerce/add-widget'
-export { default as BuyDrawer } from './commerce/buy-drawer'
+export { default as BuyDrawer } from './commerce/drawer'
 export { default as BuyButton } from './commerce/buy-button'
 export { default as CheckoutButton } from './commerce/checkout-button'
 export { default as CheckoutPanel } from './commerce/checkout-panel'

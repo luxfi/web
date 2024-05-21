@@ -66,11 +66,12 @@ const CommerceUIComponent: React.FC = observer(() => {
     return false
   }
 
+  const spacingClx = (drawer.state === 'micro' && drawer.showAdded ? 'mt-5 pt-5' : 'mt-7 pt-7')
   return (
     <CommerceDrawer 
       open={drawer.open} 
       setOpen={setOpen}
-      drawerClx={'w-full h-full ' + (drawer.state === 'full' ? 'mt-7 pt-7' : 'mt-5 pt-5')}
+      drawerClx={'w-full h-full ' + spacingClx}
       snapPoints={drawer.points}
       modal={drawer.modal}
       activeSnapPoint={drawer.activePoint}
