@@ -10,7 +10,7 @@ import {
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
 const BUY = '700px'
-const MICRO = '90px'
+const MICRO = '87px'
 const BOTH = [MICRO, BUY]
 const BUY_ONLY = [BUY]
 const MICRO_ONLY = [MICRO]
