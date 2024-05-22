@@ -2,14 +2,13 @@
 import React from 'react'
 
 import {
-  Main,
   Tabs, 
   TabsList, 
   TabsTrigger, 
   TabsContent 
 } from '@hanzo/ui/primitives'
 
-import { Header } from '@luxfi/core'
+import { Header, Main } from '@luxfi/core'
 
 import siteDef from '@/conf/site-def'
 
@@ -24,7 +23,7 @@ const Page = ({ searchParams }: Props ) => {
         
   return (<>
     <Header siteDef={siteDef}/>
-    <Main className='pt-[44px] md:pt-[80px]'>
+    <Main>
       <Tabs defaultValue='buy' className='w-full sm:w-[500px]'>
         <TabsList className='grid w-full grid-cols-2'>
           <TabsTrigger value='buy'>Buy</TabsTrigger>

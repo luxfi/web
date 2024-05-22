@@ -9,14 +9,15 @@ import {
 
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
-const BUY = '700px'
-const MICRO = '87px'
-const BOTH = [MICRO, BUY]
-const BUY_ONLY = [BUY]
-const MICRO_ONLY = [MICRO]
+type SnapPoint = number | string
+
+const BUY = 0.75 as SnapPoint
+const MICRO = '87px' as SnapPoint
+const BOTH = [MICRO, BUY] as SnapPoint[]
+const BUY_ONLY = [BUY] as SnapPoint[]
+const MICRO_ONLY = [MICRO] as SnapPoint[]
 
 type DrawerState = 'closed' | 'micro' | 'full' 
-type SnapPoint = number | string
 
 interface RecentActivity extends ObsLineItemRef {
   quantityChanged(sku: string, val: number, prevVal: number): void

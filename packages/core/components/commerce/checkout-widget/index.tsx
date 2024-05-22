@@ -9,7 +9,7 @@ import { useStepAnimation } from '@hanzo/ui/util-client'
 
 import { Image } from '@hanzo/ui/primitives'
 
-import { useCommerceDrawer } from '../../../commerce/ui/context'
+import { useCommerceDrawer, useRecentActivity } from '../../../commerce/ui/context'
 
 import CheckoutButton from '../checkout-button'
 import useAnimationClxSet from './use-anim-clx-set'
@@ -111,18 +111,18 @@ const CheckoutWidget: React.FC<{
   const isCheckout = usePathname() === '/checkout'
   const clxSet = useAnimationClxSet(isCheckout)
 
-  const itemRef = useCommerceDrawer()
+  const recentActivity = useRecentActivity()
 
-    // for rendering content after itemRef.item() would return false
+    // for rendering content after recentActivity.item() would return false
   const persistentRef = useRef<LineItem | undefined>(undefined)
 
     // Doing double duty of being initial step fn for StepAnimation,
     // and also capturing the item for persistentRef :)
   const initialStepFn = (): boolean => {
-    if (!!itemRef.item && !persistentRef.current) {
-      persistentRef.current = itemRef.item
+    if (!!recentActivity.item && !persistentRef.current) {
+      persistentRef.current = recentActivity.item
     }  
-    return !!itemRef.item
+    return !!recentActivity.item
   }
   const steps = useStepAnimation(initialStepFn, [CONST.animDurationMs, CONST.animDurationMs, CONST.animDurationMs])
 
