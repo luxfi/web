@@ -11,6 +11,10 @@ import bag from './bag-icon'
 import logo from './lux-logo'
 import youtube from './youtube-logo'
 import secureDelivery from './secure-delivery'
+import RightArrow from './right-arrow'
+import LeftArrow from './left-arrow'
+import Avatar from './avatar'
+import Search from './search'
 
 import  {
   type SocialIconProps,
@@ -30,6 +34,10 @@ export {
   youtube,
   secureDelivery,
   SocialIcon,
+  RightArrow,
+  LeftArrow,
+  Avatar,
+  Search
 }
 
 
