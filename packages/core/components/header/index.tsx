@@ -38,7 +38,7 @@ const Header: React.FC<{
       // showOpen={setOpen}
       title='LUX'
       subtitle='AI'
-      chatbotUrl='https://lux.chat/iframe'
+      chatbotUrl='https://lux.chat/?isIframe=true'
       suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
     />
   </>)
