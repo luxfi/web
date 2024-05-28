@@ -48,16 +48,16 @@ const bodyClasses =
   'bg-background text-foreground flex flex-col min-h-full' +
   getAppRouterBodyFontClasses()
 
-const RootLayout: React.FC<PropsWithChildren & {
-  siteDef: SiteDef
-  showHeader?: boolean
-  chatbot?: boolean
-}> = async ({
+async function RootLayout({
   showHeader = false,
   chatbot = true,
   siteDef,
   children,
-}) =>  {
+} : {
+  siteDef: SiteDef
+  showHeader?: boolean
+  chatbot?: boolean
+} & PropsWithChildren) {
 
   const currentUser = await getUserServerSide()
 
@@ -115,7 +115,7 @@ const RootLayout: React.FC<PropsWithChildren & {
       </body>
     </html>
   )
-}
+} 
 
 export {
   RootLayout,

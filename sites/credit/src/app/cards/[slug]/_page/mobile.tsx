@@ -12,10 +12,10 @@ import {
   AccordionItem,
   AccordionTrigger,
   ApplyTypography,
-  Main
 } from '@hanzo/ui/primitives'
 import { AddToCartWidget, formatCurrencyValue } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
+import { Main } from '@luxfi/core'
 
 import type { Card, CardMaterial } from '@/types/card'
 import SplinePlayer from '../../../../components/spline-player'

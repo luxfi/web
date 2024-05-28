@@ -40,7 +40,7 @@ const CardButton : React.FC<{
 }) => {
   
   const ui = useSelectAndBuy()
-  const handleClick = () => { ui.showBuyOptions(skuPath) }
+  const handleClick = () => { ui.showVariants(skuPath) }
 
   return (
     <button 

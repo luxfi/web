@@ -7,4 +7,9 @@
   "exclude": [
     "node_modules",
   ],
+  "compilerOptions": {
+    "paths": {
+      "react": [ "./node_modules/@types/react" ],
+    }
+  }
 }
