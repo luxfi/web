@@ -90,12 +90,12 @@ export default {
       icon: "/assets/links/cards.jpeg"
     },
     {
-      url: "https://lux.market/coin?utm_medium=social&utm_source=linktree&utm_campaign=coins",
+      url: "https://lux.network/coin?utm_medium=social&utm_source=linktree&utm_campaign=coins",
       name: "Coins",
       icon: "/assets/links/coins.jpeg"
     },
     {
-      url: "https://lux.market/validator?utm_medium=social&utm_source=linktree&utm_campaign=validators",
+      url: "https://lux.network/validator?utm_medium=social&utm_source=linktree&utm_campaign=validators",
       name: "Validators",
       icon: "/assets/links/validators.jpeg"
     },
@@ -112,13 +112,13 @@ export default {
   ],
   Members: [
     {
-      url: "https://login.lux.network/?utm_medium=social&utm_source=linktree&utm_campaign=login",
-      name: "Login",
+      url: "https://lux.id/?utm_medium=social&utm_source=linktree&utm_campaign=login",
+      name: "Account",
       icon: "/assets/links/login.jpeg"
     },
     {
-      url: "https://lux.market/passkey?utm_medium=social&utm_source=linktree&utm_campaign=mint",
-      name: "Mint",
+      url: "https://lux.shop/key?utm_medium=social&utm_source=linktree&utm_campaign=mint",
+      name: "Key",
       icon: "/assets/links/mint.jpeg"
     },
     {
