@@ -61,6 +61,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
         ref.current.setMobile(false)
       }
     }
+    ref.current.setViewportHeight(window.innerHeight)
   }
 
   const onResize_debounced = useDebounceCallback(onResize, 500)

@@ -57,6 +57,7 @@ interface CommerceDrawer {
 
   get microHeight(): SnapPoint
   get isMobile(): boolean
+  get snapPointPx(): number
 }
 
 class CommerceUIStore implements 
@@ -64,6 +65,8 @@ class CommerceUIStore implements
   SelectAndBuy,
   CommerceDrawer
 {
+  _vHeight: number = 0
+
   _currentSkuPath: string | undefined = undefined
   _closedByUser: boolean = false
   _checkingOut: boolean = false
@@ -88,6 +91,7 @@ class CommerceUIStore implements
       _checkingOut: observable,
       _activePoint: observable,
       _points: observable.ref, 
+      _vHeight: observable,
 
       showVariants: action,
       hideVariants: action,
@@ -96,13 +100,16 @@ class CommerceUIStore implements
       setCheckingOut: action,
       setActivePoint: action,
       setMobile: action,
+      setViewportHeight: action,
       
       currentSkuPath: computed,
       closedByUser: computed,
       checkingOut: computed,
       item: computed,
       activePoint: computed,
-      points: computed
+      points: computed,
+      microHeight: computed,
+      snapPointPx: computed
     })
   }
 
@@ -227,6 +234,17 @@ class CommerceUIStore implements
   setMobile = (b: boolean): void => { 
     log("setMobile: " +  b) // ===========
     this._points = b ? this._pointsConfig.mb : this._pointsConfig.dt
+  }
+
+  setViewportHeight = (v: number) => {this._vHeight = v}
+  get snapPointPx(): number {
+    if (!this._activePoint || this._vHeight === 0) return 0
+
+    if (typeof this._activePoint === 'string') {
+      return parseInt(this._activePoint)
+    }
+
+    return this._vHeight * this._activePoint as number
   }
 
   dispose = () => {

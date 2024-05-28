@@ -29,12 +29,21 @@ const nextConfig = {
     '@luxfi/core'
   ],
   productionBrowserSourceMaps: true,
-  webpack: (config) => {
+  webpack: (config, { dev }) => {
     let conf = svgrPluginConfig(config)
-    if (env === "development") {
+    if (dev) {
       //conf =  watchPluginConfig(conf) 
+        //https://github.com/vercel/next.js/discussions/33929
+      config.snapshot = {
+        ...(config.snapshot ?? {}),
+        // Add all node_modules but @hanzo module to managedPaths
+        // Allows for hot refresh of changes to @hanzo module
+        managedPaths: [/^(.+?[\\/]node_modules[\\/])(?!@hanzo)/],
+      };
+      config.cache = false
     }
     return conf
+
   }
 }
 

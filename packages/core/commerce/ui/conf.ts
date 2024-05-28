@@ -3,7 +3,7 @@ import type { SnapPointsConfig } from './store'
 export default {
   mb: {
     micro: '62px',
-    full: 0.75 
+    full: '550px' 
   },
 
   dt: {

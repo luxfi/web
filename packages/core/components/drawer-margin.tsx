@@ -3,10 +3,11 @@ import React from 'react'
 
 import { cn } from '@hanzo/ui/util'
 import { useCommerceDrawer } from '@luxfi/core/commerce'
+import { observer } from 'mobx-react-lite'
 
 const DrawerMargin: React.FC<{
   clx?: string
-}> = ({
+}> = observer(({
   clx=''
 }) => {
 
@@ -19,6 +20,6 @@ const DrawerMargin: React.FC<{
       }}
     />
   )
-}
+})
 
 export default DrawerMargin

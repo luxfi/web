@@ -55,15 +55,17 @@ const CommerceDrawer: React.FC<PropsWithChildren &
       defaultHandle={false} 
       className={cn(
         (modal  ? 'rounded-t-xl border-muted-2' : 'rounded-t-md border-muted-4' ),
-        drawerClx
+        (micro ? (mobile ? 'mt-4 pt-1.5' : 'mt-5 pt-4') : 'mt-5 pt-5'),
+        'w-full h-full'
       )}
     >
       <DrawerHandle 
         className={cn(
-          'absolute left-0 right-0 mx-auto ',
-          !mobile ? 'cursor-grab active:cursor-grabbing touch-pan-y ' : '',
-          (micro && mobile) ? 'top-1 w-[85px] h-2 rounded-[2px] bg-level-1' : '',
-          //(!micro ? 'top-2 w-[100px] h-3 rounded-full ' : 'top-1.5 w-[85px] h-2.5 rounded-[2px] '),
+          'absolute left-0 right-0 mx-auto z-10',
+          'bg-level-3 hover:bg-level-2',
+          !mobile ? 'cursor-grab active:cursor-grabbing' : 'touch-pan-y',
+          (micro ? (mobile ? 'top-1 w-[85px] h-2 rounded-[2px]' : 'top-2 w-[85px] h-3 rounded-[2px]') : 'top-2 w-[100px] h-3 rounded-full'),
+          '[&>[vaul-handle-hitarea]]:hidden',
           //(!micro ? 'bg-level-3 hover:bg-level-2 ' : 'bg-level-1 hover:bg-level-2 ')
         )} 
       />

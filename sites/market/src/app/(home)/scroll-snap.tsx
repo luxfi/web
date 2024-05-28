@@ -71,7 +71,7 @@ const TouchDevice: React.FC<{
         className={'w-full flex flex-col items-stretch grow ' + swipeInnerTouch + 
           (isTablet ? 'gap-2 justify-around lg:justify-start lg:gap-24 ' 
             : 
-          'justify-between pb-18') // make room for chat button at bottom
+          'justify-between pb-2') 
         } 
       >
         <BannerComponent 

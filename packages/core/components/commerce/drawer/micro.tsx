@@ -85,7 +85,7 @@ const Micro: React.FC<{
     )}>
     {drawer.showAdded && (
       <div className='pb-3 flex flex-col items-stretch'>
-        <p className='text-muted text-xxs md:text-xs leading-none'>recent item:</p>
+        <p className='text-muted text-xxs md:text-xs leading-none pl-1'>recent item:</p>
         <Button 
           variant='ghost'
           rounded='sm'
@@ -113,7 +113,7 @@ const Micro: React.FC<{
     {drawer.showCheckout && (
       <div className={cn(
         'flex flex-col justify-center w-full', 
-        (drawer.showAdded ? 'items-stretch' : 'items-center' )
+        (drawer.showAdded ? 'items-stretch' : 'items-center pt-3' )
       )}>
         <CheckoutButton 
           handleCheckout={handleCheckout} 

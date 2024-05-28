@@ -67,13 +67,11 @@ const CommerceUIComponent: React.FC = observer(() => {
     return false
   }
 
-  const spacingClx = (drawer.state === 'micro' && drawer.isMobile ? 'mt-4 pt-1.5' : '')
 
   return (
     <CommerceDrawer 
       open={drawer.open} 
       setOpen={setOpen}
-      drawerClx={'w-full h-full ' + spacingClx}
       snapPoints={drawer.points}
       modal={drawer.modal}
       activeSnapPoint={drawer.activePoint}
@@ -82,27 +80,35 @@ const CommerceUIComponent: React.FC = observer(() => {
       handleCloseGesture={handleCloseGesture}
       micro={drawer.state === 'micro'}
       mobile={drawer.isMobile}
+      drawerClx='flex flex-col'
     >
       {drawer.state === 'full' && (
-        <CarouselBuyCard 
-          skuPath={buy.currentSkuPath!} 
-          checkoutButton={
-            <CheckoutButton 
-              handleCheckout={handleCheckout} 
-              className='w-full min-w-[160px] sm:max-w-[320px]'
-            />
-          }
-          onQuantityChanged={recent.quantityChanged.bind(recent)}
-          clx='w-full'
-          addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
-          selectorClx='max-w-[475px]'
-        />
+        /* The actual drawer is larger than the visible area (due to awkward
+        vaul impl.  So we have to ask the drawer for its currect snappoint 
+        and constrain layout to that.  
+        */
+        <div style={{height: drawer.snapPointPx - 24 /* fudge factor for handle area */}}>
+          <CarouselBuyCard 
+            skuPath={buy.currentSkuPath!} 
+            checkoutButton={
+              <CheckoutButton 
+                handleCheckout={handleCheckout} 
+                className='w-full min-w-[160px] sm:max-w-[320px]'
+              />
+            }
+            onQuantityChanged={recent.quantityChanged.bind(recent)}
+            clx='justify-between h-full pb-3'
+            addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
+            selectorClx='max-w-[475px]'
+            
+          />
+        </div>
       )}
       {drawer.state === 'micro' && (
         <Micro 
           handleCheckout={handleCheckout}
           handleItemClicked={handleItemClicked}
-          clx='w-full sm:w-[480px] sm:mx-auto md:w-[550px]'
+          clx='w-full sm:w-[460px] sm:mx-auto md:w-[550px]'
         />
       )}
     </CommerceDrawer>
