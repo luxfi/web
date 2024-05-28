@@ -67,7 +67,7 @@ export default [
       },
       {
         title: 'Github',
-        href: 'https://github.com/luxdefi',
+        href: 'https://github.com/luxfi',
       },
     ]
   },

@@ -32,13 +32,14 @@ const CardComponent: React.FC<{
   onSelectCard
 }) => {
   const {family, title, byline, skuPath, img} = card
-  
+
   const cmmc = useCommerce()
   const [lineItem, setLineItem] = useState<LineItem>()
 
   useEffect(() => {
-    if(!cmmc)
-      return
+
+    if (!cmmc) return
+
     cmmc.selectPath(skuPath)
     setLineItem(cmmc.selectedItems.find(item => item.sku === skuPath))
   }, [])
@@ -65,7 +66,7 @@ const CardComponent: React.FC<{
       <Link href={`cards/${family}?sku=${skuPath}`} className='flex flex-col items-center !no-underline'>
         <div className='font-heading text-center text-xs sm:text-lg md:text-sm 2xl:text-base font-bold'>{byline}</div>
       </Link>
-      {lineItem && 
+      {lineItem &&
         <div className='flex flex-row items-center gap-5'>
           <span className='text-sm mb-0'>{title}</span>
           <AddToCartWidget item={lineItem} className='mx-auto' buttonClx='h-8'/>
@@ -85,7 +86,7 @@ const CardsCarousel: React.FC<{
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
 
-  const transformedCards = cards.flatMap(card => 
+  const transformedCards = cards.flatMap(card =>
     card.materials.map(material => ({
       family: card.category,
       title: material.titleAlt,
@@ -117,7 +118,7 @@ const CardsCarousel: React.FC<{
 
   return (
     <Carousel
-      setApi={setApi} 
+      setApi={setApi}
       options={{ align: 'center', loop: true }}
       className={cn('w-full', className)}
     >

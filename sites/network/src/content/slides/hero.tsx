@@ -76,13 +76,13 @@ const main = {
         specifiers: 'fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
           {
-            title: "Learn More",
+            title: "Read Docs",
             href: "https://docs.lux.network",
             variant: 'outline',
           },
           {
-            title: "Open Source",
-            href: "https://github.com/luxdefi",
+            title: "Source Code",
+            href: "https://github.com/luxfi",
             variant: 'outline',
           },
         ]

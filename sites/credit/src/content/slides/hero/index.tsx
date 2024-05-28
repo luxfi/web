@@ -35,9 +35,11 @@ export default {blockType: 'screenful',
           loop: true, 
           muted: true, 
           playsInline: true,
-          controlsList: 'nofullscreen',
+
+          controlsList: "nofullscreen"
         }, 
-        sources: ['/assets/content/gunmetal-card.mp4'],
+        sources: ['/assets/content/gunmetal-card-smooth.mp4'],
+
         dim: {
             md: {w: 600, h: 300},
         },
