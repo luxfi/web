@@ -1,5 +1,5 @@
-# auth
-Lux Identity authentication and login page for all Lux Web3 apps.
+# id
+Lux Identity is your Web3 identity. Authentication and account pages for all Lux Web3 apps.
 
 ## To run locally
 
