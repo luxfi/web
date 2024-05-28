@@ -1,5 +1,5 @@
-# login
-Lux Login authentication and login page.
+# auth
+Lux Identity authentication and login page for all Lux Web3 apps.
 
 ## To run locally
 
