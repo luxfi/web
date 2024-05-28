@@ -61,44 +61,47 @@ const TouchDevice: React.FC<{
   isTablet: boolean
 }> = ({
   isTablet,
-}) => (<>
-{landing.banners.map((banner, index) => (
-  <div key={index} className={swipeOuter + 'flex flex-col px-4 xs:px-2'}>
-    <ApplyTypography 
-      asTag='section' 
-      className={'w-full flex flex-col items-stretch grow ' + swipeInnerTouch + 
-        (isTablet ? 'gap-2 justify-around lg:justify-start lg:gap-24 ' 
-          : 
-        'justify-between pb-18') // make room for chat button at bottom
-      } 
-    >
-      <BannerComponent 
-        block={banner} 
-        groupingClasses={[
-          'md:pt-12 lg:pt-32', 
-          'md:mt-32 md:w-[70%] lg:w-[60%] md:self-center']
-        }
-        videoConstraint={isTablet ? undefined : MOBILE_VID_CONSTRAINT}
-        videoSize={isTablet ? 'lg' : 'md'}
-      />
-    </ApplyTypography>
-    <DrawerMargin clx='grow-0 shrink-0'/>
-  </div>
-))}
-  <div key='last' className={swipeOuter + 'flex flex-col'}>
-    <ApplyTypography 
-      asTag='section' 
-      className={swipeInnerTouch + 'pb-[180px] mx-auto px-2 flex flex-col gap-10 justify-center items-center grow'}  
-    >
-      <ContentComponent blocks={landing.bottom}/>
-    </ApplyTypography>
-    <DrawerMargin clx='grow-0 shrink-0'/>
-  </div>
-  <div key='lastest' className={swipeOuter + 'flex flex-col'}>
-    <Footer siteDef={siteDef} className={swipeInnerTouch + 'pl-[32px] pr-[24px] flex flex-col justify-between border-none grow'} noHorizPadding/>
-    <DrawerMargin clx='grow-0 shrink-0'/>
-  </div>
-</>) 
+}) => {
+  
+  return (<>
+  {landing.banners.map((banner, index) => (
+    <div key={index} className={swipeOuter + 'flex flex-col px-4 xs:px-2'}>
+      <ApplyTypography 
+        asTag='section' 
+        className={'w-full flex flex-col items-stretch grow ' + swipeInnerTouch + 
+          (isTablet ? 'gap-2 justify-around lg:justify-start lg:gap-24 ' 
+            : 
+          'justify-between pb-18') // make room for chat button at bottom
+        } 
+      >
+        <BannerComponent 
+          block={banner} 
+          groupingClasses={[
+            'md:pt-12 lg:pt-32', 
+            'md:mt-32 md:w-[70%] lg:w-[60%] md:self-center']
+          }
+          videoConstraint={isTablet ? undefined : MOBILE_VID_CONSTRAINT}
+          videoSize={isTablet ? 'lg' : 'md'}
+        />
+      </ApplyTypography>
+      <DrawerMargin clx='grow-0 shrink-0'/>
+    </div>
+  ))}
+    <div key='last' className={swipeOuter + 'flex flex-col'}>
+      <ApplyTypography 
+        asTag='section' 
+        className={swipeInnerTouch + 'pb-[180px] mx-auto px-2 flex flex-col gap-10 justify-center items-center grow'}  
+      >
+        <ContentComponent blocks={landing.bottom}/>
+      </ApplyTypography>
+      <DrawerMargin clx='grow-0 shrink-0'/>
+    </div>
+    <div key='lastest' className={swipeOuter + 'flex flex-col'}>
+      <Footer siteDef={siteDef} className={swipeInnerTouch + 'pl-[32px] pr-[24px] flex flex-col justify-between border-none grow'} noHorizPadding/>
+      <DrawerMargin clx='grow-0 shrink-0'/>
+    </div>
+  </>) 
+}
 
 export {
   Desktop,

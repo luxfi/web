@@ -18,7 +18,10 @@
     "overrides": {
       "react": "^18.3.1",
       "@types/react": "^18.3.2",
-      "supports-color": "8.1.1"
+      "supports-color": "8.1.1",
+      "@hanzo/auth": "2.4.10",
+      "@hanzo/commerce": "7.0.8",
+      "@hanzo/ui": "link:../../hanzoai/react-sdk/packages/ui"
     },
     "allowedDeprecatedVersions": {
       "request": "*"

@@ -9,12 +9,11 @@ import { useCommerce, formatCurrencyValue } from '@hanzo/commerce'
 
 import CheckoutButton from '../checkout-button'
 import { useCommerceDrawer, useRecentActivity } from '../../../commerce/ui/context'
-import { truncate } from 'fs/promises'
 
 const CN = {
     // h: mind padding!
-  mobile: { w: 38, h: 38 },
-  sm:  { w: 60, h: 34 },
+  mobile: { w: 36, h: 36 },
+  sm:  { w: 60, h: 36 },
   desktop: { w: 60, h: 36 },
 }
 
@@ -46,9 +45,9 @@ const Info: React.FC<{
   const priceStr = formatCurrencyValue(item.price)
 
   return (<>
-    <div className={cn('sm:hidden flex flex-col !text-muted items-stretch whitespace-nowrap text-ellipsis text-xxs', clx)}>
-      <p className='text-left'>{topLine}</p>
-      <div className='flex justify-between'>
+    <div className={cn('sm:hidden flex flex-col !text-muted items-stretch whitespace-nowrap text-ellipsis ', clx)}>
+      <p className='text-left text-xs'>{topLine}</p>
+      <div className='flex justify-between text-xxs'>
         <div>{optionLabel}</div>
         <div className='pl-2.5'>{priceStr}</div>
       </div>
@@ -79,13 +78,14 @@ const Micro: React.FC<{
 
   return (        
     <div className={cn(
+      'px-2 sm:px-3 sm:px-0', 
       (drawer.showAdded ? 'grid grid-cols-2 ' : 'flex justify-center items-center '),
       'gap-2 md:gap-3 relative',
       clx
     )}>
     {drawer.showAdded && (
       <div className='pb-3 flex flex-col items-stretch'>
-        <p className='text-muted text-xs leading-none'>recent item:</p>
+        <p className='text-muted text-xxs md:text-xs leading-none'>recent item:</p>
         <Button 
           variant='ghost'
           rounded='sm'
@@ -118,16 +118,14 @@ const Micro: React.FC<{
         <CheckoutButton 
           handleCheckout={handleCheckout} 
           variant='primary' 
-          rounded='lg'
-          centerText={true}
-          className={cn('hidden md:flex', (drawer.showAdded ? '' : 'w-[320px]'))} 
-        />
-        <CheckoutButton 
-          handleCheckout={handleCheckout} 
-          variant='primary' 
-          rounded='lg'
-          centerText={!drawer.showAdded}
-          className={cn('md:hidden', (drawer.showAdded ? 'pl-3.5 pr-2.5' : 'min-w-[320px]'))} 
+          size={drawer.isMobile ? 'default' : 'lg'}
+          rounded={drawer.isMobile ? 'md' : 'lg'}
+          centerText={drawer.isMobile ? !drawer.showAdded : true}
+          className={cn(drawer.isMobile ? 
+            (drawer.showAdded ? 'pl-3.5 pr-2.5' : 'min-w-[320px]')
+            :
+            (drawer.showAdded ? '' : 'w-[320px]')
+          )} 
         />
       </div>
     )}

@@ -21,10 +21,11 @@ const CommerceUIComponent: React.FC = observer(() => {
   const drawer = useCommerceDrawer()
   const recent = useRecentActivity()
   const router = useRouter()
+  
 
   const handleCheckout = (): void => {
-    alert('CHECKOUT PRESSED')
-    //router.push('/checkout')
+    console.log('CHECKOUT PRESSED')
+    // :aa router.push('/checkout')
   }
 
     // see handleCloseGesture()
@@ -66,7 +67,8 @@ const CommerceUIComponent: React.FC = observer(() => {
     return false
   }
 
-  const spacingClx = (drawer.state === 'micro' && drawer.showAdded ? 'mt-5 pt-5' : 'mt-7 pt-7')
+  const spacingClx = (drawer.state === 'micro' && drawer.isMobile ? 'mt-4 pt-1.5' : '')
+
   return (
     <CommerceDrawer 
       open={drawer.open} 
@@ -78,6 +80,8 @@ const CommerceUIComponent: React.FC = observer(() => {
       setActiveSnapPoint={drawer.onActivePointChanged.bind(drawer)}
       handleHandleClicked={handleHandleClicked}
       handleCloseGesture={handleCloseGesture}
+      micro={drawer.state === 'micro'}
+      mobile={drawer.isMobile}
     >
       {drawer.state === 'full' && (
         <CarouselBuyCard 
@@ -98,7 +102,7 @@ const CommerceUIComponent: React.FC = observer(() => {
         <Micro 
           handleCheckout={handleCheckout}
           handleItemClicked={handleItemClicked}
-          clx='w-full px-3 sm:px-0 sm:w-[480px] sm:mx-auto md:w-[550px]'
+          clx='w-full sm:w-[480px] sm:mx-auto md:w-[550px]'
         />
       )}
     </CommerceDrawer>

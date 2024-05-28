@@ -70,6 +70,7 @@ const RootLayout: React.FC<PropsWithChildren & {
         subtitle='AI'
         chatbotUrl='https://lux.chat/iframe'
         suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
+        buttonClx='hidden md:block'
       />
     )}
   </>)

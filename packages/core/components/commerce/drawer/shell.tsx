@@ -20,6 +20,8 @@ const CommerceDrawer: React.FC<PropsWithChildren &
     setOpen: (b: boolean) => void
     handleHandleClicked: () => void
     drawerClx?: string
+    mobile?: boolean
+    micro?: boolean
   }
 > = ({
   children,
@@ -31,6 +33,8 @@ const CommerceDrawer: React.FC<PropsWithChildren &
   activeSnapPoint,
   handleHandleClicked,
   drawerClx='',
+  mobile=false,
+  micro=false,
   ...rest
 }) => (
     // @ts-ignore
@@ -44,6 +48,7 @@ const CommerceDrawer: React.FC<PropsWithChildren &
     fastDragSkipsToEnd={false}
     dragHandleOnly={true}
     handleHandleClicked={handleHandleClicked}
+    debugOutput
     {...rest}
   >
     <DrawerContent 
@@ -54,14 +59,15 @@ const CommerceDrawer: React.FC<PropsWithChildren &
       )}
     >
       <DrawerHandle 
-        className={
-          'absolute left-0 right-0 mx-auto ' + 
-          'cursor-grab active:cursor-grabbing touch-pan-y ' + 
-          (modal ? 'top-2 w-[100px] h-3 rounded-full ' : 'top-1.5 w-[85px] h-2.5 rounded-[2px] ') + 
-          (modal ? 'bg-level-3 hover:bg-level-2 ' : 'bg-level-1 hover:bg-level-2 ')
-        } 
+        className={cn(
+          'absolute left-0 right-0 mx-auto ',
+          !mobile ? 'cursor-grab active:cursor-grabbing touch-pan-y ' : '',
+          (micro && mobile) ? 'top-1 w-[85px] h-2 rounded-[2px] bg-level-1' : '',
+          //(!micro ? 'top-2 w-[100px] h-3 rounded-full ' : 'top-1.5 w-[85px] h-2.5 rounded-[2px] '),
+          //(!micro ? 'bg-level-3 hover:bg-level-2 ' : 'bg-level-1 hover:bg-level-2 ')
+        )} 
       />
-      {modal && ( // close button
+      {micro && !mobile && ( // close button
         <Button
           variant='ghost'
           size='icon'

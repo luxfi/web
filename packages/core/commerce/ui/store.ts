@@ -9,13 +9,24 @@ import {
 
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
+const logOn = true
+const log = (s: string) => {
+  if (logOn) {
+    console.log('COMMERCE_UI ' + s)
+  }
+}
+
 type SnapPoint = number | string
 
-const BUY = 0.75 as SnapPoint
-const MICRO = '87px' as SnapPoint
-const BOTH = [MICRO, BUY] as SnapPoint[]
-const BUY_ONLY = [BUY] as SnapPoint[]
-const MICRO_ONLY = [MICRO] as SnapPoint[]
+type SnapPoints = {
+  full: SnapPoint
+  micro: SnapPoint
+}
+  
+type SnapPointsConfig = {
+  mb: SnapPoints
+  dt: SnapPoints
+}
 
 type DrawerState = 'closed' | 'micro' | 'full' 
 
@@ -45,6 +56,7 @@ interface CommerceDrawer {
   get showBuy(): boolean
 
   get microHeight(): SnapPoint
+  get isMobile(): boolean
 }
 
 class CommerceUIStore implements 
@@ -52,51 +64,60 @@ class CommerceUIStore implements
   SelectAndBuy,
   CommerceDrawer
 {
-
   _currentSkuPath: string | undefined = undefined
   _closedByUser: boolean = false
   _checkingOut: boolean = false
   _ignoreStateChange: boolean = false
   _activePoint: SnapPoint | null = null 
-  //_snapPoints: SnapPoint[] = []
   
   _activeItem: LineItem | undefined = undefined
   _reactionDisposers: IReactionDisposer[] = []
   _service: CommerceService
+  _pointsConfig: SnapPointsConfig 
+  _points: SnapPoints  // points to either this._pointsConfig.md or this._pointsConfig.dt 
 
-  constructor(s: CommerceService) {
+  constructor(s: CommerceService, conf: SnapPointsConfig) {
     this._service = s
+    this._pointsConfig = conf
+    this._points = this._pointsConfig.dt
+
     makeObservable(this, {
       _currentSkuPath: observable,
       _activeItem: observable.ref, 
       _closedByUser: observable,
       _checkingOut: observable,
+      _activePoint: observable,
+      _points: observable.ref, 
+
       showVariants: action,
       hideVariants: action,
-      currentSkuPath: computed,
       quantityChanged: action,
       setClosedByUser: action,
+      setCheckingOut: action,
+      setActivePoint: action,
+      setMobile: action,
+      
+      currentSkuPath: computed,
       closedByUser: computed,
       checkingOut: computed,
       item: computed,
+      activePoint: computed,
+      points: computed
     })
   }
 
-  initialize = (
-    //pts: {micro: SnapPoint, full: SnapPoint},
-  ): void => {
-    //this._snapPoints = Object.values(pts)
+  initialize = (): void => {
 
     this._reactionDisposers.push(reaction(
       () => ( this.state ),
       (s) => {
         if (this.ignoreStateChange) {
-          console.log(`STATE CHANGE to "${s}" (IGNORED)`)
+          log(`STATE CHANGE to "${s}" (IGNORED)`) // ===========
           this.setIgnoreStateChange(false)
           return
         }
         else {
-          console.log(`STATE CHANGE to "${s}" (UI REACTED)`)
+          log(`STATE CHANGE to "${s}" (UI REACTED)`) // ===========
           this._syncUIToState(s)
         }
       }
@@ -104,12 +125,12 @@ class CommerceUIStore implements
   }
 
   onActivePointChanged = (pt: SnapPoint | null): void => { 
-    console.log("ON onActivePointChanged: ", pt)
-    if (pt === MICRO && this.activePoint === BUY) {
+    log("ON onActivePointChanged: " +  pt) // ===========
+    if (pt === this._points.micro && this.activePoint === this._points.full) {
       this.setIgnoreStateChange(true)
       this.hideVariants()  
     }
-    else if (pt === BUY && this.activePoint === MICRO) {
+    else if (pt === this._points.full && this.activePoint === this._points.micro) {
       this.setIgnoreStateChange(true)
       this.showVariants(this.item?.sku ?? '')  
     }
@@ -156,17 +177,17 @@ class CommerceUIStore implements
   setActivePoint = (pt: SnapPoint | null): void => { this._activePoint = pt}
    
   get points(): SnapPoint[] { 
-    //return this._snapPoints 
     if (this.showBuy && !(this.showAdded || this.showCheckout)) {
-      return BUY_ONLY
+      return [this._points.full]
     }
     else if (!this.showBuy && !this.showAdded && this.showCheckout) {
-      return MICRO_ONLY
+      return [this._points.micro]
     }
-    return BOTH
+    return [this._points.micro, this._points.full]
   }
 
   _syncUIToState = (s: DrawerState) => {
+    log("_syncUIToState: " +  s) // ===========
     if (s === 'micro') {
       this.setActivePoint(this.points[0])
     }
@@ -199,7 +220,13 @@ class CommerceUIStore implements
   get modal(): boolean { return this.state !== 'micro'}
 
   get microHeight(): SnapPoint {
-    return MICRO
+    return this._points.micro
+  }
+
+  get isMobile(): boolean { return this._pointsConfig.mb === this._points }
+  setMobile = (b: boolean): void => { 
+    log("setMobile: " +  b) // ===========
+    this._points = b ? this._pointsConfig.mb : this._pointsConfig.dt
   }
 
   dispose = () => {
@@ -212,4 +239,7 @@ export {
   type CommerceDrawer,
   type RecentActivity,
   type SelectAndBuy,
+  type SnapPointsConfig,
+  type SnapPoints,
+  type SnapPoint
 }

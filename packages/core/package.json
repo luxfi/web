@@ -38,19 +38,20 @@
     "./conf": "./conf/index.ts"
   },
   "dependencies": {
-    "@hanzo/auth": "2.4.10",
-    "@hanzo/commerce": "7.0.8",
-    "@hanzo/ui": "3.8.10",
     "@next/third-parties": "^14.1.0",
     "cookies-next": "^4.1.1",
     "date-fns": "^3.6.0",
     "embla-carousel-autoplay": "^8.1.1",
     "firebase": "10.12.0",
-    "request": "^2.88.2",
     "react-device-detect": "^2.2.3",
-    "react-social-icons": "^6.4.0"
+    "react-social-icons": "^6.4.0",
+    "request": "^2.88.2",
+    "usehooks-ts": "^3.1.0"
   },
   "peerDependencies": {
+    "@hanzo/auth": "*",
+    "@hanzo/commerce": "*",
+    "@hanzo/ui": "*",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "^0.344.0",
     "mobx": "^6.12.3",
