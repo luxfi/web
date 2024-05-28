@@ -24,7 +24,7 @@ export default {blockType: 'screenful',
       sizing: {vh: 100, mobile: {vw: 100}}
     } satisfies VideoBlock as Block,
     {blockType: 'element',
-      element: <p className='w-full text-xxs text-muted-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0  relative -top-[2vh] lg:-top-[16vh] lg:left-[4vw] italic'>Black Gunmetal</p>
+      element: <a href='/cards/black?sku=LXM-CR-B-ABT' className='w-full text-xxs text-muted-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0  relative -top-[2vh] lg:-top-[16vh] lg:left-[4vw] italic' style={{textDecoration: "none"}}>Black Gunmetal</a>
     } satisfies ElementBlock as Block,
   ], [
       {blockType: 'enh-heading',
