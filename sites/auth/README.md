@@ -1,5 +1,5 @@
 # id
-Lux Identity is your Web3 identity. Authentication and account pages for all Lux Web3 apps.
+Lux ID is your Web3 Identity. Authentication and account pages for Lux Ecosystem.
 
 ## To run locally
 
