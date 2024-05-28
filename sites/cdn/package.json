@@ -13,7 +13,7 @@
     "ul:ui": "pnpm unlink -g @hanzo/ui"
   },
   "dependencies": {
-    "@luxfi/core": "5.1.1",
+    "@luxfi/core": "5.1.4",
     "@next/mdx": "14.1.0",
     "@types/node": "^20.12.12",
     "lucide-react": "^0.344.0",
