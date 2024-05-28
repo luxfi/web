@@ -46,7 +46,7 @@ export default {blockType: 'screenful',
         }
       } satisfies VideoBlock as Block,
       {blockType: 'element',
-        element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Anodized Black Titanium</p>
+        element: <a href='/cards/black?sku=LXM-CR-B-ABT' className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]' style= {{textDecoration: "none"}} > Anodized Black Titanium</a>
       } satisfies ElementBlock as Block
     ]
   ]

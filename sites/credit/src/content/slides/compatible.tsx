@@ -29,7 +29,7 @@ export default {
     contentColumns: [[
         {
             blockType: 'image',
-            src: '/assets/commerce/cr/family/cards-dual-chr-psm-1475x1220.png',
+            src: '/assets/commerce/cr/family/cards-dual-chr-flat.png',
             alt: 'cards',
             fullWidthOnMobile: true,
             dim: { w: 1475, h: 1220 },
@@ -43,7 +43,7 @@ export default {
         } satisfies ImageBlock as Block,
         {
             blockType: 'element',
-            element: <p className='w-full text-xxs text-muted-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0  relative -top-[2vh] lg:-top-[5vh] lg:left-[4vw] italic'>LUX FOUNDER CARD</p>
+            element: <a href='/cards/founder?sku=LXM-CR-F-CC' className='text-xxs text-muted-2 relative -top-[2vh] lg:-top-[5vh] lg:left-[4vw] italic' style={{textDecoration : "none"}}>Lux Founder Card</a>
         } satisfies ElementBlock as Block,
     ], [
         {
