@@ -39,7 +39,7 @@
   "dependencies": {
     "@hanzo/auth": "2.4.6",
     "@hanzo/commerce": "7.0.2",
-    "@hanzo/ui": "3.7.0",
+    "@hanzo/ui": "3.8.14",
     "@next/third-parties": "^14.1.0",
     "@types/node": "^20.12.12",
     "cookies-next": "^4.1.1",
