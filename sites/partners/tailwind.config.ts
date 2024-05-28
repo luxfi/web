@@ -5,8 +5,8 @@ export default {
   content: {
     files: [
       'src/**/*.tsx',
-      './node_modules/@luxfi/core/**/*.{ts,tsx}',
-      './node_modules/@hanzo/**/*.{ts,tsx}'
+      '../../packages/core/**/*.{ts,tsx}',
+      '../../packages/core/node_modules/@hanzo/**/*.{ts,tsx}'
     ]
   },
-} 
+}
