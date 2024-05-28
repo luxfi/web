@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export default {
   metadataBase: new URL('https://lux.id'),
   title: {
-    default: 'Lux Identity',
-    template: '%s | Lux Identity',
+    default: 'Lux ID',
+    template: '%s | Lux ID',
   },
-  description: 'Log in to Lux',
-  applicationName: 'Lux Identity',
+  description: 'Lux ID is your Web3 Identity. Authentication and account pages for Lux Ecosystem.',
+  applicationName: 'Lux ID',
   authors: {name: 'Lux Partners Limited'},
   keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
   icons: [
