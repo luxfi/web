@@ -21,8 +21,8 @@ const card: Card = {
         alt: 'Anodized Black Titanium'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/black-f.png',
-        dim: {w: 700, h: 441 },
+        src: '/assets/commerce/cr/product/black-titanium-back.png',
+        dim: {w: 800, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
       animation: '../../assets/content/gunmetal-card.mp4'
