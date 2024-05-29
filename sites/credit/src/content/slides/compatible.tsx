@@ -2,12 +2,14 @@ import type {
     Block,
     EnhHeadingBlock,
     ElementBlock,
-    ImageBlock,
+    VideoBlock,
     ScreenfulBlock,
     SpaceBlock,
 } from '@hanzo/ui/blocks'
 import { BlocksComponent } from '@hanzo/ui/blocks'
 import { Button } from '@hanzo/ui/primitives'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+
 
 const byline = 'Every vard lets you earn points that pay off your balance, AND has access to exclusive Lux Card Benefits.'
 
@@ -28,19 +30,14 @@ export default {
     columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
     contentColumns: [[
         {
-            blockType: 'image',
-            src: '/assets/commerce/cr/family/cards-dual-chr-flat.png',
-            alt: 'cards',
-            fullWidthOnMobile: true,
-            dim: { w: 1475, h: 1220 },
-            props: {
-                sizes: '900px, 440px',
-                style: {
-                    width: '70%',
-                    height: 'auto'
-                }
-            }
-        } satisfies ImageBlock as Block,
+            blockType: 'video',
+            videoProps: DEF_VIDEO_PROPS,
+            sources: ['/assets/content/iradescent-chrome-video.mp4'],
+            dim: { 
+                md: {w: 600, h: 300},
+             },
+             sizing: {vh: 100, mobile: {vw: 100}}
+        } satisfies VideoBlock as Block,
         {
             blockType: 'element',
             element: <a href='/cards/founder?sku=LXM-CR-F-CC' className='text-xxs text-muted-2 relative -top-[2vh] lg:-top-[5vh] lg:left-[4vw] italic' style={{textDecoration : "none"}}>Lux Founder Card</a>
