@@ -11,6 +11,7 @@ import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classe
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
+import Guts from '../components/header/guts'
 import BuyDrawer from '../components/commerce/buy-drawer'
 import CheckoutWidget from '../components/commerce/checkout-widget'
 
@@ -53,25 +54,12 @@ const RootLayout: React.FC<PropsWithChildren & {
   chatbot?: boolean
 }> = async ({
   showHeader = false,
-  chatbot = true,
+  chatbot = false,
   siteDef,
   children,
 }) =>  {
-
+  
   const currentUser = await getUserServerSide()
-
-  const Guts: React.FC = () => (<>
-    {showHeader && <Header siteDef={siteDef}/>}
-    {children}
-    {chatbot && (
-      <ChatWidget
-        title='LUX'
-        subtitle='AI'
-        chatbotUrl='https://lux.chat/iframe'
-        suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
-      />
-    )}
-  </>)
 
   return (
     <html lang='en' suppressHydrationWarning className='hanzo-ui-dark-theme' style={{backgroundColor: '#000'}}>
@@ -99,12 +87,25 @@ const RootLayout: React.FC<PropsWithChildren & {
             options={siteDef.commerce!.options}
             uiSpecs={selectionUISpecifiers}
           >
-            <Guts />
+            <Guts
+              siteDef={siteDef}
+              showHeader={showHeader}
+              chatbot={chatbot}
+            >
+              {children}
+            </Guts>
             <BuyDrawer />
             <CheckoutWidget />
           </CommerceProvider>
         ) : (
-          <Guts />
+          <Guts
+            siteDef={siteDef}
+            showHeader={showHeader}
+            chatbot={chatbot}
+          >
+            {children}
+          </Guts>
+
         )}
           <AuthListener/>
         </AuthServiceProvider>

@@ -37,7 +37,7 @@ const CardComponent: React.FC<{
   const [lineItem, setLineItem] = useState<LineItem>()
 
   useEffect(() => {
-    if(!cmmc) return
+    if (!cmmc) return
     cmmc.selectPath(skuPath)
     setLineItem(cmmc.selectedItems.find(item => item.sku === skuPath))
   }, [])
