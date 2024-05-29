@@ -37,9 +37,7 @@ const CardComponent: React.FC<{
   const [lineItem, setLineItem] = useState<LineItem>()
 
   useEffect(() => {
-
     if (!cmmc) return
-
     cmmc.selectPath(skuPath)
     setLineItem(cmmc.selectedItems.find(item => item.sku === skuPath))
   }, [])
@@ -116,6 +114,19 @@ const CardsCarousel: React.FC<{
     }
   }
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const target = Math.floor(window.pageYOffset / window.innerHeight)
+      if (target !== current ){
+        selectCard(target)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+    },[current, selectCard] )
+
+ 
   return (
     <Carousel
       setApi={setApi}

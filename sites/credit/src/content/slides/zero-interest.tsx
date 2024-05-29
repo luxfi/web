@@ -5,6 +5,7 @@ import type {
   ScreenfulBlock,
   SpaceBlock,
   VideoBlock,
+  ElementBlock
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
@@ -52,5 +53,9 @@ export default {
         }
       }
     } satisfies ImageBlock as Block,
+    {
+      blockType: 'element',
+      element: <a href='/cards/sovereign?sku=LXM-CR-S-RT' className='text-xxs text-muted-2 italic pl-40' style={{textDecoration : "none"}}>Sovereign Card</a>
+  } satisfies ElementBlock as Block,
   ]],
 } as ScreenfulBlock
