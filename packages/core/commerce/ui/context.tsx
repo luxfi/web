@@ -41,7 +41,8 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
 }) => {
 
   const cmmc = useCommerce()
-  const isCheckout = usePathname() === '/checkout'
+  const pathName = usePathname()
+  const isCheckout = pathName === '/checkout'
   const ref = useRef<CommerceUIStore>(new CommerceUIStore(cmmc, conf))
 
   const onResize = () => { 
@@ -79,6 +80,10 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
   useEffect(() => {
     ref.current.setCheckingOut(isCheckout)
   }, [isCheckout])
+
+  useEffect(() => {
+    ref.current.routeChanged(pathName)
+  }, [pathName])
 
 
   return (

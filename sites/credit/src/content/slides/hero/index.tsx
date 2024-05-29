@@ -9,7 +9,7 @@ import type ItemCTASBlock from '@/blocks/def/item-ctas'
 import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
-  specifiers: 'vert-center full-screen-height narrow-gutters',
+  specifiers: 'vert-center narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
@@ -24,7 +24,6 @@ export default {blockType: 'screenful',
         otherLink: { title: "Browse Cards", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
-      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ],
     [
       {blockType: 'element',
@@ -35,7 +34,7 @@ export default {blockType: 'screenful',
           />
       } satisfies ElementBlock as Block,
       {blockType: 'element',
-        element: <p className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]'>Anodized Black Titanium</p>
+        element: <p className='w-full text-xs text-muted-2 italic !text-center'>Anodized Black Titanium</p>
       } satisfies ElementBlock as Block
     ]
   ]

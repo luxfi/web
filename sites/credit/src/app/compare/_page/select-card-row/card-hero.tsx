@@ -88,10 +88,10 @@ const CardHero: React.FC<{
           <Button
             variant='outline'
             size='icon'
-            onClick={() => setSelectedCards(selectedCards.filter(c => c.title !== card.title))}
-            className='absolute rounded-full w-6 h-6 -right-4 sm:-right-5 lg:-right-6 sm:w-9 sm:h-9'
+            onClick={() => {setSelectedCards(selectedCards.filter(c => c.title !== card.title))}}
+            className='group absolute rounded-full w-6 h-6 -right-2 top-2 sm:-right-1 sm:top-1 sm:w-7 sm:h-7'
           >
-            <X className='w-4 h-4 sm:w-6 sm:h-6'/>
+            <X className='text-muted group-hover:text-foreground w-4 h-4 sm:w-5 sm:h-5'/>
           </Button>
         </div>
         <h6 className='font-heading text-xs'>{card.title}</h6>

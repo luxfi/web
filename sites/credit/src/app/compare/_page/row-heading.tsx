@@ -14,7 +14,7 @@ const RowHeading: React.FC<{
 }) => {
   return (
     <ApplyTypography className={cn('flex flex-col self-start !gap-0 lg:gap-7 col-span-2', className)}>
-      <h4 className='font-heading'>{title}</h4>
+      <h5 className='font-heading'>{title}</h5>
       {description && <p className='italic text-sm mb-2'>{description}</p>}
     </ApplyTypography>
   )

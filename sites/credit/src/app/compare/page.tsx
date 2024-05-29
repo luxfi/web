@@ -1,5 +1,7 @@
 import React  from 'react'
 
+import { Main } from '@luxfi/core'
+
 import '@/blocks/registerComponents'
 
 import CompareCards from './_page'
@@ -13,7 +15,9 @@ const Page = ({ searchParams }: Props) => {
   const predefinedCards = searchParams?.cards
 
   return (
-    <CompareCards predefinedCards={predefinedCards}/> 
+    <Main>
+      <CompareCards predefinedCards={predefinedCards}/> 
+    </Main>
   )
 }
 

@@ -9,7 +9,7 @@ import {
 
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
-const logOn = true
+const logOn = false
 const log = (s: string) => {
   if (logOn) {
     console.log('COMMERCE_UI ' + s)
@@ -129,6 +129,11 @@ class CommerceUIStore implements
         }
       }
     ))
+  }
+
+  routeChanged = (p: string) => {
+    this.hideVariants()
+    this.setClosedByUser(false)
   }
 
   onActivePointChanged = (pt: SnapPoint | null): void => { 

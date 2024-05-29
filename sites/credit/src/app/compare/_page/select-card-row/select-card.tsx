@@ -36,18 +36,18 @@ const SelectCard: React.FC<{
           )}
         >
           <Button
-            variant='ghost'
+            variant='outline'
             className={cn(
-              'flex rounded-xl border border-foreground items-center justify-center aspect-[1.6/1] h-auto',
+              'flex rounded-xl items-center justify-center aspect-[1.6/1] h-auto group',
               condensed ? 'w-28 h-full !min-w-0' : 'w-pr-90 sm:w-pr-80 mx-auto',
             )}
           >
             <div className={cn(
-                'flex rounded-full border border-foreground items-center justify-center aspect-square',
+                'flex rounded-full border border-muted-2 group-hover:border-foreground items-center justify-center aspect-square',
                 condensed ? 'h-pr-50' : 'h-pr-30'
               )}
             >
-              <Plus className='w-full aspect-square h-pr-50'/>
+              <Plus className='text-muted-2 group-hover:text-foreground w-full aspect-square h-pr-50'/>
             </div>
           </Button>
           <h4 className={cn(

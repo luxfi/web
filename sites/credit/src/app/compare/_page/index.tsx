@@ -41,17 +41,20 @@ const CompareCards: React.FC<{
         <SelectCardRow selectedCards={selectedCards} setSelectedCards={setSelectedCards}/>
         {selectedCards.length > 0 && (
           <>
-            <PseudoMain id='benefits'>
+            <div id='benefits'>
               <ApplyTypography className='flex justify-center w-full col-span-2 lg:col-span-11 mt-12 sm:mb-6 text-center'>
                 <h3>Exclusive Lux Card Benefits</h3>
               </ApplyTypography>
-            </PseudoMain>
+            </div>
             {rowsContent(selectedCards).map(({title, description, content}, i) => (
-              <div key={i} className={cn('py-4', i % 2 === 1 ? 'bg-muted-4' : '')}>
-                <PseudoMain className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 lg:gap-20'>
+              <div key={i} className={cn(
+                'py-4', 
+                i % 2 === 1 ? 'bg-level-3 pl-4 -ml-4' : ''
+              )}>
+                <div className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 lg:gap-20'>
                   <RowHeading title={title} description={description}/>
                   {content}
-                </PseudoMain>
+                </div>
               </div>
             ))}
           </>

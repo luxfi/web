@@ -30,7 +30,7 @@ const CompareHeader: React.FC<{
   }, [])
   
   return (
-    <div className={cn(showHeader ? 'opacity-100 top-0' : 'opacity-0 -top-30', 'fixed w-full bg-background mt-11 md:mt-20 transition-all')}>
+    <div className={cn(showHeader ? 'opacity-100 top-0' : 'opacity-0 -top-30', 'fixed w-full pb-3 bg-background mt-11 md:mt-20 transition-all')}>
       <SelectCardRow selectedCards={selectedCards} setSelectedCards={setSelectedCards} condensed/>
     </div>
   )

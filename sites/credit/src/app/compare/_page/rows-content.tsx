@@ -143,7 +143,7 @@ const rowsContent = (selectedCards: Card[]) => {
       </>
     },
     {
-      title: 'FX Rate',
+      title: 'Fx Rate',
       description: 'Rate of exchange when traveling or paying in foreign currency.',
       content: <>
         {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
