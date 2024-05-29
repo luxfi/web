@@ -22,7 +22,7 @@ const CommerceDrawer: React.FC<PropsWithChildren &
 }) => (
     // @ts-ignore
   <Drawer open={open} onOpenChange={setOpen} modal={modal} {...rest}>
-    <DrawerContent modal={modal} className={cn(
+    <DrawerContent className={cn(
       'rounded-t-xl mt-6 pt-6',
       drawerClx
     )}>
