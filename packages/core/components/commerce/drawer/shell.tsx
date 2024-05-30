@@ -69,16 +69,6 @@ const CommerceDrawer: React.FC<PropsWithChildren &
           //(!micro ? 'bg-level-3 hover:bg-level-2 ' : 'bg-level-1 hover:bg-level-2 ')
         )} 
       />
-      {micro && !mobile && ( // close button
-        <Button
-          variant='ghost'
-          size='icon'
-          onClick={() => {setOpen(false)}}
-          className={'absolute top-4 right-4 w-8 h-8 group rounded-full p-1 hidden md:flex items-center'}
-        >
-          <LucideX className='w-6 h-6 text-muted group-hover:text-foreground'/>
-        </Button>    
-      )}
       {children}
     </DrawerContent>
   </Drawer>

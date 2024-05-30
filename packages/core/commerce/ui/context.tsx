@@ -82,7 +82,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
   }, [isCheckout])
 
   useEffect(() => {
-    ref.current.routeChanged(pathName)
+    ref.current.reset()
   }, [pathName])
 
 

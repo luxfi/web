@@ -48,7 +48,7 @@ importers:
         version: 3.6.0
       embla-carousel-autoplay:
         specifier: ^8.1.1
-        version: 8.1.3(embla-carousel@8.1.1)
+        version: 8.1.3(embla-carousel@8.1.3)
       firebase:
         specifier: 10.12.0
         version: 10.12.0
@@ -371,10 +371,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.1
+        version: 1.4.2
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -693,10 +693,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.1
+        version: 1.4.2
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -793,10 +793,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.1
+        version: 1.4.2
       mobx:
         specifier: ^6.12.0
         version: 6.12.3
@@ -1095,10 +1095,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.1
+        version: 1.4.2
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -2671,8 +2671,8 @@ packages:
   '@netlify/local-functions-proxy@1.1.1':
     resolution: {integrity: sha512-eXSsayLT6PMvjzFQpjC9nkg2Otc3lZ5GoYele9M6f8PmsvWpaXRhwjNQ0NYhQQ2UZbLMIiO2dH8dbRsT3bMkFw==}
 
-  '@netlify/open-api@2.30.0':
-    resolution: {integrity: sha512-SMRzNwaG6/2MTIBe/RThLQRm3kNpiwb90te+iDJgMLLfTdVA33P/oiinTypBMyQU4Cm3IvQm7P5zD2mXZacSsg==}
+  '@netlify/open-api@2.31.0':
+    resolution: {integrity: sha512-g7bZej+AL+n5TdXwSa3PVGZ53SqNIt/TahyWuGziRagyDZmTeEE3Md/KEV+c+qo5Os0k4aNkGhkY2amD2elOMg==}
     engines: {node: '>=14'}
 
   '@netlify/plugins-list@6.80.0':
@@ -3150,11 +3150,11 @@ packages:
       react: ^18.3.1
       react-dom: ^18.3.1
 
-  '@splinetool/runtime@1.4.1':
-    resolution: {integrity: sha512-a5lcE5jXE99W2qWHk4f4ejL471jwzfIYmv5y0nbsFl2iktoIlI4wbUXrKVzdwpoiMXpEjxaz0AaVysHHe681+A==}
+  '@splinetool/runtime@1.4.2':
+    resolution: {integrity: sha512-d1n8h1cM5pI1IvK43RXIqSPQpDXlP5StsyP5rpJgVBMLSppIk6eLDMPIzqed04BIdWe3wIocm2MCBXNRjfWSEg==}
 
-  '@square/web-payments-sdk-types@1.57.1':
-    resolution: {integrity: sha512-Oym94MFqsJyqH4GWKt3/+WyMicP0zt1LoB03slF7A5HI6MiABMb9U/Em6xQwwBzcY4QwmYzK3qFCJ6bMPESKig==}
+  '@square/web-payments-sdk-types@1.57.2':
+    resolution: {integrity: sha512-hldZl8PUplqac7QmeWeX+lkbIpZ5TXLOrGDQFkrVgcD81fPmM7Q4ymtoTOr/korcI+tBrVUgvbroe7R0oEq36A==}
 
   '@square/web-sdk@2.0.1':
     resolution: {integrity: sha512-m+pauPLJUHO4qzBNKlHRMe+qDAhQdbEd7g/v/SW8BWZARwJC0liHB4AnVAJuM/7JMFEPiT2ZO3SRt1VQsCeoYg==}
@@ -4006,8 +4006,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  caniuse-lite@1.0.30001624:
-    resolution: {integrity: sha512-0dWnQG87UevOCPYaOR49CBcLBwoZLpws+k6W37nLjWUhumP1Isusj0p2u+3KhjNloRWK9OKMgjBBzPujQHw4nA==}
+  caniuse-lite@1.0.30001625:
+    resolution: {integrity: sha512-4KE9N2gcRH+HQhpeiRZXd+1niLB/XNLAhSy4z7fI8EzcbcPoAqjNInxVHTiTwWfTIV4w096XG8OtCOCQQKPv3w==}
 
   caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
@@ -4638,8 +4638,8 @@ packages:
     peerDependencies:
       embla-carousel: 8.1.3
 
-  embla-carousel@8.1.1:
-    resolution: {integrity: sha512-PfdhNbPoNl7V5YnwuKe2zmKd0+/HY+Q4O59xQcVvinsgv2LkpAVQ1NB/q5STqAde8nZ56U2uQOe6X+9u4IZlhA==}
+  embla-carousel@8.1.3:
+    resolution: {integrity: sha512-GiRpKtzidV3v50oVMly8S+D7iE1r96ttt7fSlvtyKHoSkzrAnVcu8fX3c4j8Ol2hZSQlVfDqDIqdrFPs0u5TWQ==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -5254,8 +5254,8 @@ packages:
     resolution: {integrity: sha512-ol+oSa5NbcGdDqA+gZ3G3mev59OHBZksBTxY/tYwjtcp1H/scAFwJfSQU9/1RALoyZ7FslNbke8j4i3ipwlyuQ==}
     engines: {node: '>=14'}
 
-  google-gax@4.3.4:
-    resolution: {integrity: sha512-upnobdflCz9+Lq9+nOv0pm9EQ+fLhWckz6lQTgLAkLAGggIH2fl+CUj0WgczdbhQDAnA0BSNfXYHglhA/dmZpw==}
+  google-gax@4.3.5:
+    resolution: {integrity: sha512-zXRSGgHp33ottCQMdYlKEFX/MhWkzKVX5P3Vpmx+DW6rtseLILzp3V0YV5Rh4oQzzkM0BH9+nJIyX01EUgmd3g==}
     engines: {node: '>=14'}
 
   gopd@1.0.1:
@@ -10421,7 +10421,7 @@ snapshots:
     dependencies:
       fast-deep-equal: 3.1.3
       functional-red-black-tree: 1.0.1
-      google-gax: 4.3.4(supports-color@8.1.1)
+      google-gax: 4.3.5(supports-color@8.1.1)
       protobufjs: 7.3.0
     transitivePeerDependencies:
       - encoding
@@ -10932,7 +10932,7 @@ snapshots:
       '@netlify/local-functions-proxy-win32-ia32': 1.1.1
       '@netlify/local-functions-proxy-win32-x64': 1.1.1
 
-  '@netlify/open-api@2.30.0': {}
+  '@netlify/open-api@2.31.0': {}
 
   '@netlify/plugins-list@6.80.0': {}
 
@@ -11378,26 +11378,26 @@ snapshots:
     dependencies:
       escape-string-regexp: 5.0.0
 
-  '@splinetool/react-spline@2.2.6(@splinetool/runtime@1.4.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@splinetool/react-spline@2.2.6(@splinetool/runtime@1.4.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@splinetool/runtime': 1.4.1
+      '@splinetool/runtime': 1.4.2
       lodash.debounce: 4.0.8
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-merge-refs: 2.1.1
 
-  '@splinetool/runtime@1.4.1':
+  '@splinetool/runtime@1.4.2':
     dependencies:
       on-change: 4.0.2
       semver-compare: 1.0.0
 
-  '@square/web-payments-sdk-types@1.57.1':
+  '@square/web-payments-sdk-types@1.57.2':
     dependencies:
       typescript: 4.9.5
 
   '@square/web-sdk@2.0.1':
     dependencies:
-      '@square/web-payments-sdk-types': 1.57.1
+      '@square/web-payments-sdk-types': 1.57.2
 
   '@stitches/react@1.2.8(react@18.3.1)':
     dependencies:
@@ -12193,7 +12193,7 @@ snapshots:
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001624
+      caniuse-lite: 1.0.30001625
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -12374,7 +12374,7 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001624
+      caniuse-lite: 1.0.30001625
       electron-to-chromium: 1.4.783
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
@@ -12484,7 +12484,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
-  caniuse-lite@1.0.30001624: {}
+  caniuse-lite@1.0.30001625: {}
 
   caseless@0.12.0: {}
 
@@ -13146,11 +13146,11 @@ snapshots:
 
   elegant-spinner@1.0.1: {}
 
-  embla-carousel-autoplay@8.1.3(embla-carousel@8.1.1):
+  embla-carousel-autoplay@8.1.3(embla-carousel@8.1.3):
     dependencies:
-      embla-carousel: 8.1.1
+      embla-carousel: 8.1.3
 
-  embla-carousel@8.1.1: {}
+  embla-carousel@8.1.3: {}
 
   emoji-regex@8.0.0: {}
 
@@ -13933,7 +13933,7 @@ snapshots:
       - supports-color
     optional: true
 
-  google-gax@4.3.4(supports-color@8.1.1):
+  google-gax@4.3.5(supports-color@8.1.1):
     dependencies:
       '@grpc/grpc-js': 1.10.8
       '@grpc/proto-loader': 0.7.13
@@ -15574,7 +15574,7 @@ snapshots:
 
   netlify@12.0.3:
     dependencies:
-      '@netlify/open-api': 2.30.0
+      '@netlify/open-api': 2.31.0
       lodash-es: 4.17.21
       micro-api-client: 3.3.0
       node-fetch: 3.3.2
@@ -15604,7 +15604,7 @@ snapshots:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001624
+      caniuse-lite: 1.0.30001625
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -15629,7 +15629,7 @@ snapshots:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001624
+      caniuse-lite: 1.0.30001625
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1

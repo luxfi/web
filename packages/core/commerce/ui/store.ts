@@ -101,6 +101,7 @@ class CommerceUIStore implements
       setActivePoint: action,
       setMobile: action,
       setViewportHeight: action,
+      clearActiveItem: action,
       
       currentSkuPath: computed,
       closedByUser: computed,
@@ -131,9 +132,10 @@ class CommerceUIStore implements
     ))
   }
 
-  routeChanged = (p: string) => {
+  reset = () => {
     this.hideVariants()
     this.setClosedByUser(false)
+    this.clearActiveItem()
   }
 
   onActivePointChanged = (pt: SnapPoint | null): void => { 
@@ -175,6 +177,7 @@ class CommerceUIStore implements
   } 
 
   get item(): LineItem | undefined { return this._activeItem }
+  clearActiveItem = (): void => { this._activeItem = undefined }
 
   get closedByUser(): boolean { return this._closedByUser }
   setClosedByUser = (b: boolean): void => { this._closedByUser = b}
