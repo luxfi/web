@@ -39,7 +39,7 @@ export default {
           title: 'Select Your Card',
           variant: 'primary',
           size: 'lg', 
-          href: '/compare'
+          href: '/cards'
         },
       ]
     } satisfies CTABlock as Block,
