@@ -8,7 +8,7 @@ const domains = [
   { id: 'lux.finance', url: 'https://lux.finance' },
   { id: 'lux.exchange', url: 'https://lux.exchange' },
   { id: 'lux.quest', url: 'https://lux.quest' },
-  { id: 'lux.services', url: 'https://lux.services' },
+  { id: 'lux.id', url: 'https://lux.id' },
 ]
 
 export {
