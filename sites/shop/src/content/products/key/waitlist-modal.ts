@@ -10,6 +10,6 @@ export default {
   actionEnclosure: {
     dbId: 'lux-waitlist',
     listId: 'key',
-    reply: "You're on the Lux Key Waitlist."
+    reply: "You're on the Lux Waitlist."
   }
 } satisfies ButtonModalDef

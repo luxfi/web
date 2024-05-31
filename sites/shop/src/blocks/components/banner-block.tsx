@@ -4,6 +4,7 @@ import type { TShirtSize } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
 import { type Block, VideoBlockComponent } from '@hanzo/ui/blocks'
+
 import { BuyButton } from '@luxfi/core'
 
 import type BannerBlock from '@/blocks/def/banner-block'

@@ -12,7 +12,7 @@ export default {
       content: 'Get 1,000,000 LUX Coin, the deflationary and supply-locked Lux Network currency.'
     },
     {
-      trigger: 'Apple Wallet pass included',
+      trigger: 'Apple Wallet Supported',
       content: 'Lux Key is the first NFT that can be added to your Apple Wallet as a reward card with NFC support at events.'
     },
     {

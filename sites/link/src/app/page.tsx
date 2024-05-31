@@ -1,18 +1,21 @@
 import React  from 'react'
 import Image from 'next/image'
-import {ApplyTypography, Main} from '@hanzo/ui/primitives'
+
+import { ApplyTypography } from '@hanzo/ui/primitives'
+import { Footer, Main } from "@luxfi/core";
+
 import Links from "@/components/links";
 import Socials from "@/components/socials";
-import {Footer} from "@luxfi/core";
-import './global.css'
 import TopButtons from "@/components/top-buttons";
+
+import './global.css'
+
+import siteDef from '../site-def'
 
 type Props = {
   params: { slug: string }
   searchParams?: { [key: string]: string | string[] | undefined }
 }
-
-import siteDef from '../site-def'
 
 
 const UniversalPage = ({ params, searchParams }: Props) => (<>

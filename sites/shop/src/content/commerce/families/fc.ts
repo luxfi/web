@@ -6,7 +6,7 @@ import type { ImageDef } from '@hanzo/ui/types'
 
 const CN_IMG = '/assets/commerce/cn/product/lux-coin-800x800.png'
 const CN_IMG_DEF = {
-  src: CN_IMG,
+  src: CN_IMG, 
   dim: { w: 800, h: 800},
   rounded: 'full'
 } satisfies ImageDef
@@ -20,7 +20,7 @@ const B = 1000 * M
 export default {
   id: 'LXM-FC',
   title: 'Fux Coin',
-  img: CN_IMG_DEF,
+  img: CN_IMG_DEF, 
   products: [
     {
       id: 'LXM-FC-10B',
