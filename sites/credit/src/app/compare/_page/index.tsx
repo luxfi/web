@@ -43,15 +43,15 @@ const CompareCards: React.FC<{
         <SelectCardRow selectedCards={selectedCards} setSelectedCards={setSelectedCards}/>
         {selectedCards.length > 0 && (<>
           <ApplyTypography id='benefits' className='flex justify-center w-full col-span-2 lg:col-span-11 mt-12 sm:mb-6 text-center'>
-            <h3>Exclusive Lux Card Benefits</h3>
+            <h3 className='xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl'>Exclusive Lux Card Benefits</h3>
           </ApplyTypography>
           {rowsContent(selectedCards).map(({title, description, content}, i) => (
             <div key={i} className={cn(
               'py-4', 
               i % 2 === 1 ? 'bg-level-3 -mx-4 px-4 sm:pl-4 sm:-ml-4' : ''
             )}>
-              <div className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 lg:gap-20'>
-                <RowHeading title={title} description={description} clx='col-span-2 items-center'/>
+              <div className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10'>
+                <RowHeading title={title} description={description} clx='col-span-2'/>
                 {content}
               </div>
             </div>
@@ -61,6 +61,8 @@ const CompareCards: React.FC<{
     </>
   )
 }
+
+// lg:gap-20
 
 export {
   CompareCards as default,

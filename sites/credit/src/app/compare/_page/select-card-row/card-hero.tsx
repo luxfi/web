@@ -63,9 +63,9 @@ const CardHero: React.FC<{
         <div className='flex gap-2 items-center'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial?.cardImg}}
-            className='h-8 w-auto'
+            className='h-8 w-auto self-center'
           />
-          <h6 className='font-heading text-xs xl:text-base'>{card.title}</h6>
+          <h6 className='font-heading text-xs !leading-tight whitespace-break-spaces xs:w-min xl:text-base'>{card.title}</h6>
         </div>
         {lineItem && <AddToCartWidget item={lineItem} variant='primary-smaller' className='w-fit'/>}
       </div>

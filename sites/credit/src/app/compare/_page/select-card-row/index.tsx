@@ -16,7 +16,7 @@ const SelectCardRow: React.FC<{
   condensed,
 }) => {
   return (
-    <div className='grid grid-cols-2 lg:grid-cols-11 gap-4 sm:gap-8 lg:gap-16 items-start'>
+    <div className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 items-start'>
       {condensed ? (
         <div className='hidden lg:block lg:col-span-2'></div>
       ) : (
