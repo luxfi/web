@@ -8,17 +8,17 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit",
-    "ln:ui": "pnpm link -g @hanzo/ui",
-    "ln:auth": "pnpm link -g @hanzo/auth",
-    "ls:all": "ls -l node_modules/@hanzo/",
-    "ul:all": "rm node_modules/@hanzo/*"
+    "tc": "tsc --noEmit"
   },
   "dependencies": {
     "@luxfi/core": "workspace:*",
+    "@hanzo/auth": "*",
+    "@hanzo/commerce": "*",
+    "@hanzo/ui": "*",
     "@next/mdx": "14.1.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.68",
+    "lucide-react": "^0.344.0",
     "mobx": "^6.12.0",
     "mobx-react-lite": "^4.0.5",
     "next": "14.2.3",

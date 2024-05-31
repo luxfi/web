@@ -8,11 +8,7 @@
     "prod": "next start",
     "cn": "rm -rf ./.next",
     "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit",
-    "ln:ui": "pnpm link -g @hanzo/ui",
-    "ln:auth": "pnpm link -g @hanzo/auth",
-    "ln:cmmc": "pnpm link -g @hanzo/commerce",
-    "ul:all": "rm node_modules/@hanzo/*"
+    "tc": "tsc --noEmit"
   },
   "dependencies": {
     "@luxfi/core": "workspace:*",

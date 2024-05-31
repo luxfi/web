@@ -1,4 +1,4 @@
-import { serviceOptions } from '@luxfi/core/commerce'
+import { serviceOptions } from '@luxfi/core/commerce-data'
 
 import rootNode from '../content/commerce/nodes'
 import families from '../content/commerce/families'
