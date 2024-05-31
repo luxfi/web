@@ -1,14 +1,17 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 
-import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
-import { AddToCartWidget, BuyButton, useCommerce } from '@hanzo/commerce'
-import { ApplyTypography, Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
-import { cn } from '@hanzo/ui/util'
 import type { ImageDef } from '@hanzo/ui/types'
 import type { LineItem } from '@hanzo/commerce/types'
-import Link from 'next/link'
+
+import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
+
+import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { ApplyTypography, Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
+import { cn } from '@hanzo/ui/util'
+
 import cards from '@/content/cards'
 
 type Card = {
@@ -136,7 +139,7 @@ const CardsCarousel: React.FC<{
       <CarouselContent>
         {transformedCards.map((card: Card, index) => (
           <CarouselItem key={index} className={cn('basis-3/4 md:basis-1/3 xl:basis-1/5', cardClx)}>
-            <CardComponent card={card} current={current} index={index} onSelectCard={() => selectCard(index)}/>
+            <CardComponent card={card} current={current} index={index} onSelectCard={() => {selectCard(index)}}/>
           </CarouselItem>
         ))}
       </CarouselContent>

@@ -30,50 +30,50 @@ const MobileNav: React.FC<{
   commonItemClx,
   setChatbotOpen,
 }) => (
-    links.length > 0 ? (
+  links.length > 0 ? (
 
-      <div className={cn('flex flex-col h-full', className)} >
-        <div className="flex flex-col flex-1">
-          {links.map((el, index) => {
-            const variant = el.variant ?? 'link'
-            let internalClx = ''
-            // note that linkFG (or any other variant of 'link') 
-            // will not get assigned these classes,
-            // and will remain styles is 'foreground' (hence the name)
-            if (variant === 'link') {
-              internalClx += ' text-muted hover:text-foreground active:text-accent rounded-none'
-              if (currentAs && currentAs === el.href) {
-                internalClx += ' text-accent '
-              }
-            }
-            else {
-              internalClx += ' min-w-0'
-            }
+    <div className={cn('flex flex-col h-full', className)} >
+      <div className="flex flex-col flex-1">
+        {links.map((el, index) => {
+          const variant = el.variant ?? 'link'
+          let internalClx = ''
+          // note that linkFG (or any other variant of 'link') 
+          // will not get assigned these classes,
+          // and will remain styles is 'foreground' (hence the name)
+          if (variant === 'link') {
+            internalClx += ' text-muted hover:text-foreground active:text-accent rounded-none'
             if (currentAs && currentAs === el.href) {
-              internalClx += ' pointer-events-none'
+              internalClx += ' text-accent '
             }
-            const itemClx = (commonItemClx) ? (typeof commonItemClx === 'string' ? commonItemClx : commonItemClx(el)) : ''
+          }
+          else {
+            internalClx += ' min-w-0'
+          }
+          if (currentAs && currentAs === el.href) {
+            internalClx += ' pointer-events-none'
+          }
+          const itemClx = (commonItemClx) ? (typeof commonItemClx === 'string' ? commonItemClx : commonItemClx(el)) : ''
 
-            // return (
-            //   <LinkElement 
-            //     def={el}
-            //     key={`common-${index}`}
-            //     size='lg'
-            //     className={cn(internalClx, itemClx)}
-            //     onClick={onAction}  
-            //   />
-            // )
-            if (el.isAIMenu) {
-              return <MobileNavMenuAI link={el} setChatbotOpen={setChatbotOpen} />
-            } else {
-              return <MobileNavMenuItem link={el} />
-            }
-          })}
-        </div>
-        <MobileAuthWidget className=' text-2xl' handleLogin={() => { setMenuState('login') }} />
+          // return (
+          //   <LinkElement 
+          //     def={el}
+          //     key={`common-${index}`}
+          //     size='lg'
+          //     className={cn(internalClx, itemClx)}
+          //     onClick={onAction}  
+          //   />
+          // )
+          if (el.isAIMenu) {
+            return <MobileNavMenuAI link={el} setChatbotOpen={setChatbotOpen} />
+          } 
+          else {
+            return <MobileNavMenuItem link={el} />
+          }
+        })}
       </div>
-    )
-      : null
-  )
+      <MobileAuthWidget className=' text-2xl' handleLogin={() => { setMenuState('login') }} />
+    </div>
+  ) : null
+)
 
 export default MobileNav

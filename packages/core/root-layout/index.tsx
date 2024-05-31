@@ -64,7 +64,7 @@ async function RootLayout({
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}
     {children}
-    {chatbot && (
+    {/* chatbot && (
       <ChatWidget
         title='LUX'
         subtitle='AI'
@@ -72,7 +72,7 @@ async function RootLayout({
         suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
         buttonClx='hidden md:block'
       />
-    )}
+    )*/}
   </>)
 
   return (
@@ -107,14 +107,7 @@ async function RootLayout({
             </CommerceUIProvider>
           </CommerceProvider>
         ) : (
-          <Guts
-            siteDef={siteDef}
-            showHeader={showHeader}
-            chatbot={chatbot}
-          >
-            {children}
-          </Guts>
-
+          <Guts />
         )}
           <AuthListener/>
         </AuthServiceProvider>

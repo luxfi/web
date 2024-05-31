@@ -7,7 +7,7 @@ import type {
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center narrow-gutters',
