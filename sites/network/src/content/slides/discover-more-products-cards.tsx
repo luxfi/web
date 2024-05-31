@@ -23,14 +23,14 @@ const silverVideo = {
   sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
-const goldVideo = {
+const keyVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/commerce/gold/product/luxgold-poster.jpg',
+  poster: '/assets/commerce/ps/product/LUX-PASS-poster.jpg',
   sources: [
-    '/assets/commerce/gold/product/luxgold.mp4',
+    '/assets/commerce/ps/product/LUX-PASS-transcode.mp4',
   ],
-  dim: {md: { w: 1282, h: 1920}, lg: {w: 1282, h: 1920}},
+  dim: {md: { w: 658, h: 720}, lg: {w: 658, h: 720}},
   sizing: {vh: 30, mobile: {vw: 20}}
 } as VideoBlock
 
@@ -68,15 +68,15 @@ export default [
     content: [
       {blockType: 'element',
         element: <>
-          <Link href='https://lux.market/gold' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
-            <VideoBlockComponent block={goldVideo} className='h-full !my-0'/>
+          <Link href='https://lux.market/key' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
+            <VideoBlockComponent block={keyVideo} className='h-full !my-0'/>
           </Link>
         </>
       } as ElementBlock,
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
-        heading: {text: 'GOLD', level: 3},
+        heading: {text: 'KEY', level: 3},
       } as EnhHeadingBlock,
     ]
   } as CarteBlancheBlock,

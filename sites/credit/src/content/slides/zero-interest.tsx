@@ -25,7 +25,7 @@ const fireworks = {
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
-  specifiers: 'vert-center full-screen-height narrow-gutters',
+  specifiers: 'vert-center narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   banner: fireworks,
   contentColumns: [[
@@ -38,7 +38,6 @@ export default {
       otherLink: { title: "Compare", href: "/compare", variant: 'outline' },
       skuPath: 'LXM-CR-F'
     } satisfies ItemCTASBlock as Block,
-    {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
   ], [
     {blockType: 'image',
       src: '/assets/commerce/cr/family/cards-2-flat-tit-1593x1231.png',

@@ -27,7 +27,8 @@
   },
   "exports": {
     ".": "./components/index.ts",
-    "./commerce": "./commerce/index.ts",
+    "./commerce-data": "./commerce/data/index.ts",
+    "./commerce": "./commerce/ui/context.tsx",
     "./root-layout": "./root-layout/index.tsx",
     "./server-actions": "./server-actions/index.ts",
     "./next": "./next/index.ts",
@@ -37,27 +38,32 @@
     "./conf": "./conf/index.ts"
   },
   "dependencies": {
-    "@hanzo/auth": "2.4.6",
-    "@hanzo/commerce": "7.0.2",
-    "@hanzo/ui": "3.8.5",
     "@next/third-parties": "^14.1.0",
     "@types/node": "^20.12.12",
     "cookies-next": "^4.1.1",
     "date-fns": "^3.6.0",
-    "embla-carousel-autoplay": "^8.0.1",
+    "embla-carousel-autoplay": "^8.1.1",
+    "firebase": "10.12.0",
     "react-device-detect": "^2.2.3",
-    "react-social-icons": "^6.4.0"
+    "react-social-icons": "^6.4.0",
+    "request": "^2.88.2",
+    "usehooks-ts": "^3.1.0"
   },
   "peerDependencies": {
+    "@hanzo/auth": "*",
+    "@hanzo/commerce": "*",
+    "@hanzo/ui": "*",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "^0.344.0",
-    "next": "14.1.3",
+    "mobx": "^6.12.3",
+    "mobx-react-lite": "^4.0.7",
+    "next": "14.2.3",
     "next-themes": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.44.2",
+    "react": "*",
+    "react-dom": "*",
+    "react-hook-form": "^7.51.4",
     "validator": "^13.11.0",
-    "zod": "3.21.4"
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",
@@ -65,9 +71,10 @@
     "@types/facebook-pixel": "^0.0.30",
     "@types/gtag.js": "^0.0.19",
     "@types/mdx": "^2.0.9",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.18",
-    "tailwindcss": "^3.4.2",
-    "typescript": "5.3.3"
+    "@types/node": "^20.11.24",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "tailwindcss": "^3.4.3",
+    "typescript": "5.4.5"
   }
 }

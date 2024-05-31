@@ -1,7 +1,8 @@
 import type * as C from '@hanzo/ui/blocks'
 
+import { BuyButton } from '@luxfi/core'
+
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
-import { BuyButton } from '@hanzo/commerce'
 
 import accordian from './accordian'
 
@@ -19,5 +20,5 @@ export default {
         <BuyButton skuPath='LXM-PS' className='lg:min-w-pr-65 min-w-pr-65 mx-auto'>Buy</BuyButton>
       </div>
     )
-  } satisfies C.ElementBlock as C.Block] 
+  } satisfies C.ElementBlock as C.Block]
 } satisfies ProductDetailBlock

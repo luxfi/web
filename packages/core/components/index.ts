@@ -6,22 +6,20 @@ export { default as Footer } from './footer'
 export { default as Header } from './header'
 export * as Icons from './icons'
 export { default as Logo } from './logo'
+export { default as Main } from './main'
 export { default as MiniChart } from './mini-chart'
 export { default as NotFound } from './not-found'
 
 export { default as AuthListener } from './auth/auth-listener'
-export { default as BuyDrawer } from './commerce/buy-drawer'
+export { default as AddWidget } from './commerce/add-widget'
+export { default as BuyDrawer } from './commerce/drawer'
+export { default as DrawerMargin } from './drawer-margin'
+export { default as BuyButton } from './commerce/buy-button'
 export { default as CheckoutButton } from './commerce/checkout-button'
 export { default as CheckoutPanel } from './commerce/checkout-panel'
 export { default as CheckoutWidget } from './commerce/checkout-widget'
 export { default as LoginPanel } from './auth/login-panel'
 export { default as Scripts } from './scripts'
 
+export { default as EmblaAutoplay } from 'embla-carousel-autoplay'
 
-/* PLEASE KEEP
-export { 
-  default as HeadMetadata, 
-  getTitleFromTemplateString, 
-  TwitterComponent
-} from './head-metadata'
-*/

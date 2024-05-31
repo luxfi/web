@@ -5,9 +5,11 @@ import { useRouter } from 'next/navigation'
 import { ChevronLeft } from 'lucide-react'
 
 import { cn } from '@hanzo/ui/util'
-import { ApplyTypography, Main } from '@hanzo/ui/primitives'
+import { ApplyTypography } from '@hanzo/ui/primitives'
 import { AddToCartWidget, formatCurrencyValue } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
+
+import { Main } from '@luxfi/core'
 
 import type { Card, CardMaterial } from '@/types/card'
 import SplinePlayer from '../../../../components/spline-player'

@@ -3,7 +3,8 @@
 import { useRouter } from "next/navigation"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-import { Button, Main, Separator } from '@hanzo/ui/primitives'
+import { Button, Separator } from '@hanzo/ui/primitives'
+import { Main } from '@luxfi/core'
 import benefits from "@/content/cards/benefits"
 import Link from "next/link"
 

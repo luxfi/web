@@ -12,7 +12,7 @@ const byline = `The ultimate credit card for digital nomads, artists, creators, 
 export default {
   blockType: 'screenful',
   mobileOrder: [1, 0], // mobile: card image on top please
-  specifiers: 'vert-center full-screen-height narrow-gutters',
+  specifiers: 'vert-center narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [
     [
@@ -21,24 +21,10 @@ export default {
         byline: {text: byline, level: 6},
       } satisfies EnhHeadingBlock as Block,
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
-      /*
-      {blockType: 'element',
-        element: <div className='flex gap-2'>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Black</Badge>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Elite</Badge>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 border-muted-4'>Founder</Badge>
-          <Badge variant='outline' className='rounded-full px-5 py-1 text-muted-2 !border-muted-4'>Sovereign</Badge>
-        </div>
-      } satisfies ElementBlock as Block,
-      {blockType: 'element',
-        element: <p className='!text-xs italic text-muted-1'>Select Membership Tier</p>
-      } satisfies ElementBlock as Block,
-      */
       {blockType: 'item-ctas',
         otherLink: { title: "See Tiers", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B'
       } satisfies ItemCTASBlock as Block,
-      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ],
     [
     {blockType: 'image',

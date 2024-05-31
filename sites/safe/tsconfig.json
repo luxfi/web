@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.apps.base.json",
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
@@ -8,13 +8,10 @@
   ],
   "exclude": [ "node_modules" ],
   "compilerOptions": {
-    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "react": ["node_modules/@types/react"],
-      "@luxfi/core": ["../../packages/core"],
-      "@hanzo/*": ["../../packages/core/node_modules/@hanzo/*"]
     },
     "plugins": [ { "name": "next" } ]
   }

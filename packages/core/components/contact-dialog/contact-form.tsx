@@ -2,9 +2,10 @@
 
 import React, { useTransition } from 'react'
 
-import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, type SubmitHandler, type ControllerRenderProps } from 'react-hook-form'
-import * as z from 'zod'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+
   // @ts-ignore
 import validator from 'validator'
 
@@ -23,7 +24,7 @@ import {
 import type { SubmitServerAction } from '@hanzo/ui/types'
 import type { ContactInfo } from '../../types'
 
-const ValidationSchema = z.object({
+const ContactFormSchema = z.object({
   email: z
     .string()
     .min(1, { message: "Email must be provided." })
@@ -34,17 +35,18 @@ const ValidationSchema = z.object({
     .refine(validator.isMobilePhone, { message: "Invalid format." })
 })
 
+type ContactFormSchemaType = z.infer<typeof ContactFormSchema>
+
 const ContactForm: React.FC<{
-  onSubmit: SubmitServerAction
+  onSubmit: (data: ContactFormSchemaType, enc: any) => void
   enclosure: any
 }> = ({
-  onSubmit,
+  onSubmit: _onSubmit,
   enclosure
 }) => {
 
-  const form = useForm<ContactInfo>({
-      // @ts-ignore (pnpm linking / tsc bug )
-    resolver: zodResolver(ValidationSchema),
+  const form = useForm<ContactFormSchemaType>({
+    resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       email: '',
       phone: '',
@@ -53,16 +55,16 @@ const ContactForm: React.FC<{
 
   const [isPending, startTransition] = useTransition()
 
-  const onFormSubmit: SubmitHandler<ContactInfo> = (data) => {
+  const onSubmit: SubmitHandler<ContactFormSchemaType> = (data) => {
     // https://github.com/orgs/react-hook-form/discussions/10757#discussioncomment-6672403
     // @ts-ignore
     startTransition(async () => {
-      await onSubmit(data, enclosure)
+      await _onSubmit(data, enclosure)
     })
   }
 
   const MyFormItem: React.FC<{ 
-    field: ControllerRenderProps<ContactInfo, 'email'> | ControllerRenderProps<ContactInfo, 'phone'>  
+    field: ControllerRenderProps<ContactFormSchemaType, 'email'> | ControllerRenderProps<ContactFormSchemaType, 'phone'>  
     placeholder: string
   }> = ({
     field,
@@ -80,12 +82,11 @@ const ContactForm: React.FC<{
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onFormSubmit)} className="w-3/4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-3/4">
         <div className='flex flex-col justify-start items-stretch mt-4'>
         <FormField
           control={form.control}
           name='email'
-            // @ts-ignore
           render={({ field }) => ( <MyFormItem field={field} placeholder='email'/> )}
         />
         <FormField

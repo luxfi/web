@@ -84,11 +84,11 @@ const rowsContent = (selectedCards: Card[]) => {
       description: 'Karma Rewards, is our point reward system that can be used to pay for almost anything. You can also leverage it and earn even more by staking the Karma you have accrued in the Lux ecosystem. Plus you can even sell it to pay off your balance. ',
       content: <>
         {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (
-          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1} clx='flex-col self-start'>
+          <DataRowContent key={i} hiddenOnMobile={i > NUM_CARDS_MOBILE - 1} clx='flex-col items-start self-start'>
             {selectedCards[i]?.karmaRewards && (
               <>
-                <p className='font-bold'>Earn Karma while you spend</p>
-                <div className='flex flex-col gap-2'>
+                <p key={`p-${i}`} className='font-bold'>Earn Karma while you spend</p>
+                <div key={`div-${i}`} className='flex flex-col gap-2'>
                   {selectedCards[i]?.karmaRewards.map(({multiplier, description}, i) => (
                     <p key={i}><span className='font-bold'>{multiplier}X points</span> {description}</p>
                   ))}
@@ -143,7 +143,7 @@ const rowsContent = (selectedCards: Card[]) => {
       </>
     },
     {
-      title: 'FX Rate',
+      title: 'Fx Rate',
       description: 'Rate of exchange when traveling or paying in foreign currency.',
       content: <>
         {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => (

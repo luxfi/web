@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.lux.base.json",
+  "extends": "../tsconfig.modules.base.json",
   "include": [
     "**/*.ts",
     "**/*.tsx",
@@ -7,4 +7,9 @@
   "exclude": [
     "node_modules",
   ],
+  "compilerOptions": {
+    "paths": {
+      "react": [ "./node_modules/@types/react" ],
+    }
+  }
 }

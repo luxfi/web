@@ -63,11 +63,11 @@ const CardHero: React.FC<{
         <div className='flex gap-2 items-center'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial?.cardImg}}
-            className='h-8 w-auto'
+            className='h-8 w-auto self-center'
           />
-          <h6 className='font-heading text-xs xl:text-base'>{card.title}</h6>
+          <h6 className='font-heading text-xs !leading-tight whitespace-break-spaces xs:w-min xl:text-base'>{card.title}</h6>
         </div>
-        {lineItem && <AddToCartWidget item={lineItem} className='w-fit'/>}
+        {lineItem && <AddToCartWidget item={lineItem} variant='primary-smaller' className='w-fit'/>}
       </div>
     )
   }
@@ -76,32 +76,32 @@ const CardHero: React.FC<{
     <ApplyTypography
       className={cn(
         hiddenOnMobile ? 'hidden lg:flex' : 'flex',
-        'flex-col lg:col-span-3 gap-2 items-center text-center'
+        'w-full flex-col lg:col-span-3 gap-2 items-center text-center'
       )}
     >
-      <div className='flex flex-col gap-2 h-full justify-between'>
-        <div className='relative flex gap-2 items-center'>
+      <div key='one' className='w-full flex flex-col items-center gap-2 h-full'>
+        <div className='relative w-full sm:w-pr-85 md:w-pr-60 lg:w-pr-90 xl:w-pr-80'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial.cardImg}}
-            className='w-pr-80'
+            className='w-full'
           />
           <Button
             variant='outline'
             size='icon'
-            onClick={() => setSelectedCards(selectedCards.filter(c => c.title !== card.title))}
-            className='absolute rounded-full w-6 h-6 -right-4 sm:-right-5 lg:-right-6 sm:w-9 sm:h-9'
+            onClick={() => {setSelectedCards(selectedCards.filter(c => c.title !== card.title))}}
+            className='group absolute rounded-full w-7 h-7 -right-1 -top-1'
           >
-            <X className='w-4 h-4 sm:w-6 sm:h-6'/>
+            <X className='text-muted group-hover:text-foreground w-4 h-4 sm:w-5 sm:h-5'/>
           </Button>
         </div>
         <h6 className='font-heading text-xs'>{card.title}</h6>
       </div>
-      <div className='relative flex flex-col gap-4 items-center justify-end'>
-        <div className='flex flex-col items-center text-xxs sm:text-base'>
-          <div><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
-          <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
+      <div key='two' className='relative flex flex-col gap-4 items-center justify-end'>
+        <div key='one' className='flex flex-col items-center text-xxs sm:text-base'>
+          <div key='one'><span className='font-bold'>Annual Fee:</span> {formatCurrencyValue(card.annualFee)}</div>
+          <div key='two'><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
         </div>
-        <div className='flex flex-col gap-2 items-center'>
+        <div key='two' className='flex flex-col gap-2 items-center'>
           <CardMaterialPicker
             materials={card.materials}
             selectedMaterial={selectedMaterial}

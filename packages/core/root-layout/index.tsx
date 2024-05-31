@@ -10,10 +10,10 @@ import { CommerceProvider } from '@hanzo/commerce'
 import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classes'
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
+import { CommerceUIProvider } from '../commerce/ui/context'
 import { AuthListener, ChatWidget, Header, Scripts } from '../components'
-import Guts from '../components/header/guts'
-import BuyDrawer from '../components/commerce/buy-drawer'
-import CheckoutWidget from '../components/commerce/checkout-widget'
+
+import CommerceDrawer from '../components/commerce/drawer'
 
 import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../types/site-def'
@@ -48,18 +48,32 @@ const bodyClasses =
   'bg-background text-foreground flex flex-col min-h-full' +
   getAppRouterBodyFontClasses()
 
-const RootLayout: React.FC<PropsWithChildren & {
-  siteDef: SiteDef
-  showHeader?: boolean
-  chatbot?: boolean
-}> = async ({
+async function RootLayout({
   showHeader = false,
   chatbot = false,
   siteDef,
   children,
-}) =>  {
-  
+} : {
+  siteDef: SiteDef
+  showHeader?: boolean
+  chatbot?: boolean
+} & PropsWithChildren) {
+
   const currentUser = await getUserServerSide()
+
+  const Guts: React.FC = () => (<>
+    {showHeader && <Header siteDef={siteDef}/>}
+    {children}
+    {/* chatbot && (
+      <ChatWidget
+        title='LUX'
+        subtitle='AI'
+        chatbotUrl='https://lux.chat/iframe'
+        suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
+        buttonClx='hidden md:block'
+      />
+    )*/}
+  </>)
 
   return (
     <html lang='en' suppressHydrationWarning className='hanzo-ui-dark-theme' style={{backgroundColor: '#000'}}>
@@ -87,25 +101,13 @@ const RootLayout: React.FC<PropsWithChildren & {
             options={siteDef.commerce!.options}
             uiSpecs={selectionUISpecifiers}
           >
-            <Guts
-              siteDef={siteDef}
-              showHeader={showHeader}
-              chatbot={chatbot}
-            >
-              {children}
-            </Guts>
-            <BuyDrawer />
-            <CheckoutWidget />
+            <CommerceUIProvider >
+              <Guts />
+              <CommerceDrawer />
+            </CommerceUIProvider>
           </CommerceProvider>
         ) : (
-          <Guts
-            siteDef={siteDef}
-            showHeader={showHeader}
-            chatbot={chatbot}
-          >
-            {children}
-          </Guts>
-
+          <Guts />
         )}
           <AuthListener/>
         </AuthServiceProvider>
@@ -113,7 +115,7 @@ const RootLayout: React.FC<PropsWithChildren & {
       </body>
     </html>
   )
-}
+} 
 
 export {
   RootLayout,

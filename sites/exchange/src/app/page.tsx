@@ -3,11 +3,11 @@
 import React  from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { ApplyTypography, Main } from '@hanzo/ui/primitives'
+import { ApplyTypography } from '@hanzo/ui/primitives'
 import { useAuth } from '@hanzo/auth/service'
 import { LoginPanel } from '@hanzo/auth/components'
 
-import { AccessCodeInput, Footer } from '@luxfi/core'
+import { AccessCodeInput, Footer, Main } from '@luxfi/core'
 
 import siteDef from '../site-def'
 import { useRouter } from 'next/navigation'

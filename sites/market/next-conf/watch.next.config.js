@@ -3,7 +3,8 @@ const watchExternalFilesPlugin = require('webpack-watch-files-plugin').default
 const disable = false
 
 const localModules = [
-  //'../../../../hanzoai/react-sdk/packages/ui',
+//'../../../../hanzoai/react-sdk/packages/ui',
+//  '../../../../hanzoai/vaul-fork',
   //'../../../../hanzoai/react-sdk/packages/commerce'
 ]
 

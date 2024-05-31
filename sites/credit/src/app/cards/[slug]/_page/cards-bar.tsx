@@ -2,9 +2,11 @@
 
 import { useRouter } from 'next/navigation'
 
-import { Button, Main } from '@hanzo/ui/primitives'
+import { Button } from '@hanzo/ui/primitives'
 import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
+
+import PseudoMain from '@/components/pseudo-main'
 
 import type { Card } from '@/types/card'
 import cards from '@/content/cards'
@@ -20,7 +22,7 @@ const CardsBar: React.FC<{
 
   return (
     <div className={cn('hidden sm:flex w-full bg-background transition-all', clx)}>
-      <Main className='grid grid-cols-4 w-full gap-4 px-2'>
+      <PseudoMain className='grid grid-cols-4 w-full gap-4 px-2'>
         {cards.map((card, index) => (
           <Button
             key={index}
@@ -38,7 +40,7 @@ const CardsBar: React.FC<{
             <div className='text-xs md:text-sm lg:text-base'>{card.title}</div>
           </Button>
         ))}
-      </Main>
+      </PseudoMain>
     </div>
   )
 }

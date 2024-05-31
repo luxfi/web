@@ -30,6 +30,7 @@ export default {
       familyId: 'LXM-CR-S',
       familyTitle: 'Sovereign',
       optionLabel: 'Reflective Titanium',
+      optionLabelShort: 'Titanium',
       price: fees.initial,
       ...m.spreadableOptionImg('LXM-CR-S-RT'),
       ...m.mediaStack('LXM-CR-S-RT'),

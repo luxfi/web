@@ -1,7 +1,8 @@
 import type * as C from '@hanzo/ui/blocks'
 
+import { BuyButton } from '@luxfi/core'
+
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
-import { BuyButton } from '@hanzo/commerce'
 
 import accordian from './accordian'
 

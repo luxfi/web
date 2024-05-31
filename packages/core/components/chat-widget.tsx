@@ -8,10 +8,11 @@ import LuxLogo from './icons/lux-logo'
 import type { ChatbotSuggestedQuestion } from '../types'
 
 const ChatWidget: React.FC<{
-  title: string,
-  chatbotUrl: string,
-  subtitle?: string,
-  question?: string,
+  title: string
+  chatbotUrl: string
+  subtitle?: string
+  question?: string
+  buttonClx?: string
   /* 
     ChatBotSuggestQuestion.icon
     Currently supports these icons from remix icons (https://remixicon.com/):
@@ -27,7 +28,8 @@ const ChatWidget: React.FC<{
   chatbotUrl,
   subtitle,
   question,
-  suggestedQuestions
+  suggestedQuestions,
+  buttonClx=''
 }) => {
 
   const [showChatbot, setShowChatbot] = React.useState<boolean>(false)
@@ -69,8 +71,11 @@ const ChatWidget: React.FC<{
       onClick={onClick}
       className={cn(
           // z-index should be below anything in commerce-iu (buy drawer and checkout widget)
-        'fixed bottom-5 right-5 z-below-modal-3 transition-all cursor-pointer hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
-        showChatbot ? 'rotate-180' : ''
+        'fixed bottom-5 right-5 z-floating cursor-pointer',
+        'hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
+        'transition-transform', 
+        showChatbot ? 'rotate-180' : '',
+        buttonClx
       )}
       strokeWidth={1}
     />

@@ -1,6 +1,5 @@
-import { Fragment } from 'react'
 import { cn } from '@hanzo/ui/util'
-import { Main } from '@hanzo/ui/primitives'
+import { Main } from '@luxfi/core'
 
 import cards from '@/content/cards'
 import CardPreview from './desktop-card-preview'

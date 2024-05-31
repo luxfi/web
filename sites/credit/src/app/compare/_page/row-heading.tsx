@@ -6,16 +6,16 @@ import { cn } from '@hanzo/ui/util'
 const RowHeading: React.FC<{
   title: string,
   description?: string
-  className?: string
+  clx?: string
 }> = ({
   title,
   description,
-  className
+  clx
 }) => {
   return (
-    <ApplyTypography className={cn('flex flex-col self-start !gap-0 lg:gap-7 col-span-2', className)}>
-      <h4 className='font-heading'>{title}</h4>
-      {description && <p className='italic text-sm mb-2'>{description}</p>}
+    <ApplyTypography className={cn('flex flex-col items-center lg:items-start !gap-0 mt-2 lg:gap-7', clx)}>
+      <h5 className='font-heading !my-0 text-center sm:text-left md:text-lg lg:text-xl xl:text-2xl'>{title}</h5>
+      {description && <p className='italic text-sm mb-2 md:max-w-pr-80  lg:w-full'>{description}</p>}
     </ApplyTypography>
   )
 }

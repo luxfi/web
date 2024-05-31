@@ -13,10 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hanzo/commerce": "6.4.4",
-    "@hanzo/ui": "3.8.3",
+    "@hanzo/commerce": "*",
+    "@hanzo/ui": "*",
     "fs-extra": "^11.2.0",
-    "typescript": "5.3.3",
+    "typescript": "^5.4.5",
     "vite-node": "^1.4.0"
+  },
+  "peerDependencies": {
+    "tailwindcss" : "^3.4.3"
   }
 }

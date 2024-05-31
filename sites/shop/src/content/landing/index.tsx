@@ -1,7 +1,8 @@
 import React from 'react'
 
 import type { ElementBlock, Block } from '@hanzo/ui/blocks'
-import { BuyButton } from '@hanzo/commerce'
+
+import { BuyButton } from '@luxfi/core'
 
 import type BannerBlock from '@/blocks/def/banner-block'
 

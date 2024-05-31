@@ -1,14 +1,21 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 
-import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
-import { AddToCartWidget, BuyButton, useCommerce } from '@hanzo/commerce'
-import { ApplyTypography, Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import type { ImageDef } from '@hanzo/ui/types'
+import { 
+  ApplyTypography, 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  type CarouselApi 
+} from '@hanzo/ui/primitives'
+import { ImageBlockComponent, type ImageBlock } from '@hanzo/ui/blocks'
+import { AddToCartWidget, useCommerce } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
-import Link from 'next/link'
+
 import cards from '@/content/cards'
 
 type Card = {

@@ -64,7 +64,7 @@ const level1 = [
   },
   {
     skuToken: 'PS',
-    label: 'Pass',
+    label: 'Key',
     img: '/assets/commerce/ps/product/pass-icon-539x686.png',
     imgAR: 539 / 686
   },

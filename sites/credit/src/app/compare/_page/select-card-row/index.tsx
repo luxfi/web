@@ -1,11 +1,10 @@
-import { Main } from '@hanzo/ui/primitives'
-
 import { type CardWithSelectedMaterial } from '@/types'
 
 import { NUM_CARDS_DESKTOP, NUM_CARDS_MOBILE } from '../CONST'
 import RowHeading from '../row-heading'
 import SelectCard from './select-card'
 import CardHero from './card-hero'
+import PseudoMain from '../../../../components/pseudo-main'
 
 const SelectCardRow: React.FC<{
   selectedCards: CardWithSelectedMaterial[]
@@ -14,17 +13,17 @@ const SelectCardRow: React.FC<{
 }> = ({
   selectedCards,
   setSelectedCards,
-  condensed
+  condensed,
 }) => {
   return (
-    <Main className='grid grid-cols-2 lg:grid-cols-11 gap-4 sm:gap-8 lg:gap-16 items-start'>
+    <div className='grid grid-cols-2 lg:grid-cols-11 gap-8 sm:gap-10 items-start'>
       {condensed ? (
         <div className='hidden lg:block lg:col-span-2'></div>
       ) : (
         <RowHeading
           title='Compare'
           description='These offers may not be available if you leave this web page and return later.'
-          className='text-center lg:text-left typography-h4:!text-3xl'
+          clx='col-span-2 self-start text-center lg:text-left typography-h4:!text-3xl'
         />
       )}
       {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => ( (selectedCards[i]) ? (
@@ -45,7 +44,7 @@ const SelectCardRow: React.FC<{
           condensed={condensed}
         />
       )))}
-    </Main>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import type { VideoDef } from '@hanzo/ui/types'
 
 
-import { getBullionFamilies } from '@luxfi/core/commerce'
+import { getBullionFamilies } from '@luxfi/core/commerce-data'
 
 import crFamilies from './cr-families'
 import coin from './cn'

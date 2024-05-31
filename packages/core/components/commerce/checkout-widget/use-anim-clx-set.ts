@@ -1,23 +1,25 @@
 import { useEffect, useRef } from 'react'
 import { reaction, runInAction} from 'mobx'
 
+import { useCommerce } from '@hanzo/commerce'
+
 import ObsStringSet from './obs-string-set'
-import { useCommerce, useCommerceUI } from '@hanzo/commerce'
+import { useSelectAndBuy } from '../../../commerce/ui/context'
 
 export default (isCheckout: boolean): ObsStringSet => {
 
-  const ui = useCommerceUI()
+  const ui = useSelectAndBuy()
   const cmmc = useCommerce()
 
   const clxSetRef = useRef<ObsStringSet>(new ObsStringSet(
-    (cmmc.cartEmpty || ui.buyOptionsSkuPath || isCheckout) ? ['hidden'] : []
+    (cmmc.cartEmpty || ui.currentSkuPath || isCheckout) ? ['hidden'] : []
   ))
 
   useEffect(() => (
     reaction(
       () => ({
-        microOpen: !(cmmc.cartEmpty || !!ui.buyOptionsSkuPath || isCheckout),
-        buyOpen: !!ui.buyOptionsSkuPath
+        microOpen: !(cmmc.cartEmpty || !!ui.currentSkuPath || isCheckout),
+        buyOpen: !!ui.currentSkuPath
       }),
       (val, prev) => {
 

@@ -7,10 +7,10 @@ import type {
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import SplinePlayer from '@/components/spline-player'
 
 export default {blockType: 'screenful',
-  specifiers: 'vert-center full-screen-height narrow-gutters',
+  specifiers: 'vert-center narrow-gutters',
   columnSpecifiers: ['bottom mobile-vert-center', 'vert-center mobile-vert-center'],
   mobileOrder: [1, 0], // mobile: card image on top please
   contentColumns: [
@@ -25,7 +25,6 @@ export default {blockType: 'screenful',
         otherLink: { title: "Browse Cards", href: "/cards", variant: 'outline' },
         skuPath: 'LXM-CR-B-ABT'
       } satisfies ItemCTASBlock as Block,
-      {blockType: 'space', level: 1} satisfies SpaceBlock as Block,
     ],
     [
       {
@@ -48,7 +47,14 @@ export default {blockType: 'screenful',
         }
       } satisfies VideoBlock as Block,
       {blockType: 'element',
-        element: <a href='/cards/black?sku=LXM-CR-B-ABT' className='w-full text-xxs text-muted-2 italic !text-right pr-2 max-w-[70vw] mx-auto md:max-w-full md:mx-0 md:pr-[5vw] relative -top-[2vh] lg:-top-[4vh]' style= {{textDecoration: "none"}} > Anodized Black Titanium</a>
+        element:
+          <SplinePlayer
+            src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'
+            className='!aspect-[12/10]'
+          />
+      } satisfies ElementBlock as Block,
+      {blockType: 'element',
+        element: <p className='w-full text-xs text-muted-2 italic !text-center'>Anodized Black Titanium</p>
       } satisfies ElementBlock as Block
     ]
   ]

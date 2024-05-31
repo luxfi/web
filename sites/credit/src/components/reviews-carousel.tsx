@@ -1,8 +1,7 @@
 'use client'
+import React, { useRef, useState } from 'react'
+import Link from 'next/link'
 
-import CarouselAutoplayPlugin from 'embla-carousel-autoplay'
-
-import { useRef, useState } from 'react'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import {
   Carousel,
@@ -12,7 +11,8 @@ import {
 } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import Link from 'next/link'
+import { EmblaAutoplay } from '@luxfi/core'
+
 import type { Review } from '@/types'
 
 const ReviewComponent: React.FC<{
@@ -61,7 +61,7 @@ const ReviewsCarousel: React.FC<{
       <Carousel
         setApi={setApi}
           // safe to pass in this way, since Shadcn and Embla do that.
-        plugins={autostart ? [CarouselAutoplayPlugin({ delay: 5000, stopOnInteraction: true })] : []}
+        plugins={autostart ? [EmblaAutoplay({ delay: 5000, stopOnInteraction: true })] : []}
         options={{ align: 'start', loop: true }}
         className='w-full mx-auto max-w-[40rem]'
         onCarouselSelect={onSelect}

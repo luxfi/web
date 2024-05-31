@@ -2,7 +2,7 @@ import type * as C from '@hanzo/ui/blocks'
 import { formatCurrencyValue } from '@hanzo/commerce'
 
 import { MiniChart } from '@luxfi/core'
-import { bullionPrice1oz } from '@luxfi/core/commerce'
+import { bullionPrice1oz } from '@luxfi/core/commerce-data'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'

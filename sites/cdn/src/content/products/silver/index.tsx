@@ -2,7 +2,7 @@ import type { LinkDef } from '@hanzo/ui/types'
 import type * as C from '@hanzo/ui/blocks'
 import { MiniChart } from '@luxfi/core'
 
-import { BuyButton } from '@hanzo/commerce'
+import { BuyButton } from '@luxfi/core'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import { formatCurrencyValue, bullionPrice1oz } from '@/util'

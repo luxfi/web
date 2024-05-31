@@ -1,4 +1,4 @@
-import { serviceOptions } from '@luxfi/core/commerce'
+import { commerceServiceOptions } from '@luxfi/core/conf'
 
 import rootNode from '../content/commerce/nodes'
 import families from '../content/commerce/families'
@@ -6,5 +6,5 @@ import families from '../content/commerce/families'
 export default {
   rootNode, 
   families: families,
-  options: serviceOptions
+  options: commerceServiceOptions
 }

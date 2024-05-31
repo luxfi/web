@@ -6,13 +6,16 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": true
-  }
+    "verbatimModuleSyntax": true,
+    "jsx": "preserve",
+    "declaration": false,
+    "noEmit": true,
+  },
+  "plugins": [ { "name": "next" } ]
 }

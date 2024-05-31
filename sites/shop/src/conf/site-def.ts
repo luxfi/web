@@ -8,5 +8,5 @@ export default {
     common: mainNav,
   },
   footer: footer.standard, 
-  commerce,
+  commerce
 } satisfies SiteDef
