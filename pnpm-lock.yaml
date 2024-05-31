@@ -398,10 +398,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.5
+        version: 1.4.6
       ethers:
         specifier: ^6.11.1
         version: 6.12.1
@@ -750,10 +750,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.5
+        version: 1.4.6
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.13
@@ -862,10 +862,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.5
+        version: 1.4.6
       lucide-react:
         specifier: ^0.344.0
         version: 0.344.0(react@18.3.1)
@@ -1187,10 +1187,10 @@ importers:
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.91.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
       '@splinetool/react-spline':
         specifier: ^2.2.6
-        version: 2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@splinetool/runtime':
         specifier: ^1.0.68
-        version: 1.4.5
+        version: 1.4.6
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.13
@@ -3334,8 +3334,8 @@ packages:
       react: ^18.3.1
       react-dom: ^18.3.1
 
-  '@splinetool/runtime@1.4.5':
-    resolution: {integrity: sha512-6C9DVy2WqrZaVl3Ge1ozSOvHmTz7j+XcFWW8QS4Ft7V+oPYzDODnlUeXtBMM1GH8TKIkW8iyz37OkwLKZifl7Q==}
+  '@splinetool/runtime@1.4.6':
+    resolution: {integrity: sha512-aGokuiWVFqkmi3O2p88n/Tcvb1ALfJ+1oKk6jwkvbIyysnUVuHkPus2Dsus3a0+RcjmCF+G7KptlnHIuoOeBlg==}
 
   '@square/web-payments-sdk-types@1.57.2':
     resolution: {integrity: sha512-hldZl8PUplqac7QmeWeX+lkbIpZ5TXLOrGDQFkrVgcD81fPmM7Q4ymtoTOr/korcI+tBrVUgvbroe7R0oEq36A==}
@@ -8061,8 +8061,8 @@ snapshots:
       '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-toggle': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-toggle-group': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@splinetool/react-spline': 2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@splinetool/runtime': 1.4.5
+      '@splinetool/react-spline': 2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@splinetool/runtime': 1.4.6
       '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.3)
       class-variance-authority: 0.7.0
       clsx: 2.1.1
@@ -8122,8 +8122,8 @@ snapshots:
       '@radix-ui/react-toast': 1.1.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-toggle': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-toggle-group': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@splinetool/react-spline': 2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@splinetool/runtime': 1.4.5
+      '@splinetool/react-spline': 2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@splinetool/runtime': 1.4.6
       '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.3)
       class-variance-authority: 0.7.0
       clsx: 2.1.1
@@ -9079,15 +9079,15 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@splinetool/react-spline@2.2.6(@splinetool/runtime@1.4.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@splinetool/react-spline@2.2.6(@splinetool/runtime@1.4.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@splinetool/runtime': 1.4.5
+      '@splinetool/runtime': 1.4.6
       lodash.debounce: 4.0.8
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-merge-refs: 2.1.1
 
-  '@splinetool/runtime@1.4.5':
+  '@splinetool/runtime@1.4.6':
     dependencies:
       on-change: 4.0.2
       semver-compare: 1.0.0
