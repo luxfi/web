@@ -7,7 +7,7 @@ export default {
   },
 
   dt: {
-    micro: '87px',
+    micro: '80px',
     full: 0.75 
   }
 } satisfies SnapPointsConfig

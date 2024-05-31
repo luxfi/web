@@ -13,7 +13,7 @@ const SelectCardRow: React.FC<{
 }> = ({
   selectedCards,
   setSelectedCards,
-  condensed
+  condensed,
 }) => {
   return (
     <div className='grid grid-cols-2 lg:grid-cols-11 gap-4 sm:gap-8 lg:gap-16 items-start'>
@@ -23,7 +23,7 @@ const SelectCardRow: React.FC<{
         <RowHeading
           title='Compare'
           description='These offers may not be available if you leave this web page and return later.'
-          className='text-center lg:text-left typography-h4:!text-3xl'
+          clx='col-span-2 self-start text-center lg:text-left typography-h4:!text-3xl'
         />
       )}
       {[...Array(NUM_CARDS_DESKTOP)].map((_, i) => ( (selectedCards[i]) ? (

@@ -13,10 +13,11 @@ type Props = {
 const Page = ({ searchParams }: Props) => {
   
   const predefinedCards = searchParams?.cards
+  const mobile = searchParams?.agent === 'phone'
 
   return (
     <Main>
-      <CompareCards predefinedCards={predefinedCards}/> 
+      <CompareCards predefinedCards={predefinedCards} mobile={mobile}/> 
     </Main>
   )
 }

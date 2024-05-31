@@ -11,7 +11,7 @@ const CompareHeader: React.FC<{
   setSelectedCards: (cards: CardWithSelectedMaterial[]) => void
 }> = ({
   selectedCards,
-  setSelectedCards
+  setSelectedCards,
 }) => {
   const [showHeader, setShowHeader] = useState<boolean>(false)
 

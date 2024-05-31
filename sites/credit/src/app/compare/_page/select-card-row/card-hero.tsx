@@ -67,7 +67,7 @@ const CardHero: React.FC<{
           />
           <h6 className='font-heading text-xs xl:text-base'>{card.title}</h6>
         </div>
-        {lineItem && <AddToCartWidget item={lineItem} className='w-fit'/>}
+        {lineItem && <AddToCartWidget item={lineItem} variant='primary-smaller' className='w-fit'/>}
       </div>
     )
   }
@@ -76,20 +76,20 @@ const CardHero: React.FC<{
     <ApplyTypography
       className={cn(
         hiddenOnMobile ? 'hidden lg:flex' : 'flex',
-        'flex-col lg:col-span-3 gap-2 items-center text-center'
+        'w-full flex-col lg:col-span-3 gap-2 items-center text-center'
       )}
     >
-      <div key='one' className='flex flex-col gap-2 h-full justify-between'>
-        <div className='relative flex gap-2 items-center'>
+      <div key='one' className='w-full flex flex-col items-center gap-2 h-full'>
+        <div className='relative w-full sm:w-pr-85 md:w-pr-60 lg:w-pr-90 xl:w-pr-80'>
           <ImageBlockComponent
             block={{blockType: 'image', ...selectedMaterial.cardImg}}
-            className='w-pr-80'
+            className='w-full'
           />
           <Button
             variant='outline'
             size='icon'
             onClick={() => {setSelectedCards(selectedCards.filter(c => c.title !== card.title))}}
-            className='group absolute rounded-full w-6 h-6 -right-2 top-2 sm:-right-1 sm:top-1 sm:w-7 sm:h-7'
+            className='group absolute rounded-full w-7 h-7 -right-1 -top-1'
           >
             <X className='text-muted group-hover:text-foreground w-4 h-4 sm:w-5 sm:h-5'/>
           </Button>
