@@ -104,6 +104,8 @@
   cursor: grab;
 }
 
+
+
 /* [vaul-handle]:hover, */
 [vaul-handle]:active {
   opacity: 1;
@@ -111,6 +113,10 @@
 
 [vaul-handle]:active {
   cursor: grabbing;
+}
+
+[vaul-handle]:focus-visible {
+  outline: none;
 }
 
 [vaul-handle-hitarea] {

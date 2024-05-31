@@ -1,4 +1,4 @@
-import { type Block, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type VideoBlock } from '@hanzo/ui/blocks'
+import { type Block, type CTABlock, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type VideoBlock } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 import { Button } from '@hanzo/ui/primitives'
 
@@ -6,7 +6,7 @@ const byline = "A payment method so simple, so secure and never accrues interest
 
 export default {
   blockType: 'screenful',
-  specifiers: 'vert-center no-gutters full-screen-width mobile-vert-center',
+  specifiers: 'vert-center full-screen-width mobile-vert-center',
   columnSpecifiers: ['vert-center center mobile-vert-center'],
   contentColumns: [[
     {blockType: 'enh-heading',
@@ -17,7 +17,7 @@ export default {
       },
     } satisfies EnhHeadingBlock as Block,
     {blockType: 'element',
-      element: <h5 className='mx-auto max-w-[45rem] !text-center px-4 text-blue'>{byline}</h5>,
+      element: <h5 className='mx-auto max-w-[45rem] !text-center px-4'>{byline}</h5>,
     } satisfies ElementBlock as Block,
     {
         blockType: 'video', 
@@ -27,9 +27,19 @@ export default {
             md: {w: 600, h: 300},
         },
         sizing: {
-          vh: 50
+          vh: 40
         }
     } satisfies VideoBlock as Block,
-    {blockType: 'element', element: <Button variant='primary' className='rounded-full !w-full max-w-56 mx-auto'>Select Your Card</Button>}satisfies ElementBlock as Block,
+    {
+      blockType: 'cta',
+      elements: [
+        {
+          title: 'Select Your Card',
+          variant: 'primary',
+          size: 'lg', 
+          href: '/cards'
+        },
+      ]
+    } satisfies CTABlock as Block,
   ]],
 } as ScreenfulBlock

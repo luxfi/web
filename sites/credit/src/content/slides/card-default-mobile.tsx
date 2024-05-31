@@ -1,4 +1,4 @@
-import { type Block, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type VideoBlock } from '@hanzo/ui/blocks'
+import { type Block, type CTABlock, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type VideoBlock } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 import { Button } from '@hanzo/ui/primitives'
 
@@ -32,6 +32,16 @@ export default {
           vh: 50
         }
     } satisfies VideoBlock as Block,
-    {blockType: 'element', element: <Button variant='primary' className='rounded-full !w-full max-w-56 mx-auto'>Select Your Card</Button>}satisfies ElementBlock as Block,
+    {
+      blockType: 'cta',
+      elements: [
+        {
+          title: 'Select Your Card',
+          variant: 'primary',
+          size: 'lg', 
+          href: '/cards'
+        },
+      ]
+    } satisfies CTABlock as Block,
   ]],
 } as ScreenfulBlock

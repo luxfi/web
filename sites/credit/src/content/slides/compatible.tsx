@@ -7,12 +7,13 @@ import type {
     SpaceBlock,
 } from '@hanzo/ui/blocks'
 import { BlocksComponent } from '@hanzo/ui/blocks'
-import { Button } from '@hanzo/ui/primitives'
+import { Button, LinkElement } from '@hanzo/ui/primitives'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 
 const byline = 'Every vard lets you earn points that pay off your balance, AND has access to exclusive Lux Card Benefits.'
 
+// :aa TODO clean this up!
 const viewAllCards = {
     blockType: 'element',
     element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>View All Cards</Button></a>
@@ -38,10 +39,14 @@ export default {
              },
              sizing: {vh: 100, mobile: {vw: 100}}
         } satisfies VideoBlock as Block,
-        {
-            blockType: 'element',
-            element: <a href='/cards/founder?sku=LXM-CR-F-CC' className='text-xxs text-muted-2 relative -top-[2vh] lg:-top-[5vh] lg:left-[4vw] italic' style={{textDecoration : "none"}}>Lux Founder Card</a>
-        } satisfies ElementBlock as Block,
+        {blockType: 'element', element: (
+        <LinkElement 
+            def={{ variant: 'link', href: '/cards/founder?sku=LXM-CR-F-CC' }}
+            className='w-full text-xs !text-muted-2 hover:!text-foreground italic !text-center !no-underline'
+        >
+            Founder Card
+        </LinkElement>
+        )} satisfies ElementBlock as Block,
     ], [
         {
             blockType: 'enh-heading',

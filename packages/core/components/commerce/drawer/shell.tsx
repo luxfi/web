@@ -58,6 +58,8 @@ const CommerceDrawer: React.FC<PropsWithChildren &
         (micro ? (mobile ? 'mt-4 pt-1.5' : 'mt-5 pt-4') : 'mt-5 pt-5'),
         'w-full h-full'
       )}
+       // https://github.com/radix-ui/primitives/discussions/935
+      onOpenAutoFocus={(e) => {e.preventDefault()}}
     >
       <DrawerHandle 
         className={cn(
