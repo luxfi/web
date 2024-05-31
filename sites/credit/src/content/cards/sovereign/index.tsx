@@ -12,7 +12,7 @@ const card: Card = {
   rarity: '1/1,000',
   materials: [{
     title: 'Reflective Titanium',
-    titleAlt: 'MIRROR CARD',
+    titleAlt: 'Mirrored Card',
     sku: 'LXM-CR-S-RT',
     materialImg: {
       src: '/assets/commerce/cr/product/option/sovereign-card-reflective-titanium-100x99.png',
@@ -20,11 +20,11 @@ const card: Card = {
       alt: 'Reflective Titanium'
     },
     cardImg: {
-      src: '/assets/commerce/cr/product/titanium-f-700x442.png',
+      src: '/assets/commerce/cr/product/mirrored-f.png',
       dim: {w: 700, h: 442 },
       alt: 'Sovereign Card Reflective Titanium'
     },
-    animation: 'https://prod.spline.design/gLe0xmFfLrftccCc/scene.splinecode'
+    animation: '../../assets/content/mirroed-card.mp4'
   }],
   annualFee: 4999,
   initiationFee: 49500,

@@ -1,5 +1,5 @@
-# login
-Lux Login authentication and login page.
+# id
+Lux ID is your Web3 Identity. Authentication and account pages for Lux Ecosystem.
 
 ## To run locally
 

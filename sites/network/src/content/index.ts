@@ -1,7 +1,7 @@
 import type { ScreenfulBlock } from '@hanzo/ui/blocks'
 
+import hero from './slides/hero'
 import keyFeatures from './slides/key-features'
-import power from './slides/power-in-your-hands'
 import developerReady from './slides/developer-ready'
 import nearInfiniteScale from './slides/near-infinite-scale'
 import finallyPrivateDefi from './slides/finally-private-defi'
@@ -18,7 +18,7 @@ import coin from './products/coin'
 import validator from './products/validator'
 
 const tiles = [
-  power,
+  hero,
   runTheNetwork,
   keyFeatures,
   developerReady,

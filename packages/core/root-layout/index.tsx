@@ -50,7 +50,7 @@ const bodyClasses =
 
 async function RootLayout({
   showHeader = false,
-  chatbot = true,
+  chatbot = false,
   siteDef,
   children,
 } : {
@@ -107,7 +107,14 @@ async function RootLayout({
             </CommerceUIProvider>
           </CommerceProvider>
         ) : (
-          <Guts />
+          <Guts
+            siteDef={siteDef}
+            showHeader={showHeader}
+            chatbot={chatbot}
+          >
+            {children}
+          </Guts>
+
         )}
           <AuthListener/>
         </AuthServiceProvider>

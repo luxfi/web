@@ -13,7 +13,7 @@ const card: Card = {
   materials: [
     {
       title: 'Anodized Black Titanium',
-      titleAlt: 'BLACK TITANIUM',
+      titleAlt: 'Matte Titanium',
       sku: 'LXM-CR-B-ABT',
       materialImg: {
         src: '/assets/commerce/cr/product/option/black-card-anodized-black-titanium-100x99.png',
@@ -21,15 +21,15 @@ const card: Card = {
         alt: 'Anodized Black Titanium'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/black-f-700x441.png',
-        dim: {w: 700, h: 441 },
+        src: '/assets/commerce/cr/product/black-titanium-back.png',
+        dim: {w: 800, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
-      animation: 'https://prod.spline.design/ECUOH40K2iVPcLvn/scene.splinecode'
+      animation: '../../assets/content/gunmetal-card.mp4'
     },
     {
       title: 'Black Gunmetal',
-      titleAlt: 'BLACK GUNMETAL',
+      titleAlt: 'Gun Metal',
       sku: 'LXM-CR-B-GM',
       materialImg: {
         src: '/assets/commerce/cr/product/option/black-card-gunmetal-99x99.png',
@@ -38,11 +38,11 @@ const card: Card = {
       },
       cardImg: {
         //TODO: Change this to the correct image
-        src: '/assets/commerce/cr/product/black-f-700x441.png',
+        src: '/assets/commerce/cr/product/black-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Black Card Black Gunmetal',
       },
-      animation: 'https://prod.spline.design/UHbvWIPc4FxmZ3If/scene.splinecode'
+      animation: '../../assets/content/gunmetal-card.mp4'
     }
   ],
   annualFee: 99,

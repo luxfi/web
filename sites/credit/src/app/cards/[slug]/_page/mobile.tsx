@@ -71,11 +71,11 @@ const MobileViewCardDetails: React.FC<{
             <div><span className='font-bold'>Initiation Fee:</span> {formatCurrencyValue(card.initiationFee)}</div>
           </div>
           <div className={cn(
-              'w-full h-auto !aspect-[12/10] transition-all duration-300',
+              'w-full h-auto !aspect-[1920/1080] transition-all duration-300',
               showAnimation ? 'opacity-100' : 'opacity-0',
             )}
           >
-            <SplinePlayer src={currentAnimation} className='!aspect-[12/10]'/>
+            <SplinePlayer src={currentAnimation} className='!aspect-[1920/1080]'/>
           </div>
           <CardMaterialPicker
             materials={card.materials}

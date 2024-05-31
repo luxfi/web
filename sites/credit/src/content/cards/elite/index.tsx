@@ -13,7 +13,7 @@ const card: Card = {
   materials: [
     {
       title: '24k Gold',
-      titleAlt: '24K GOLD',
+      titleAlt: '24K Gold',
       sku: 'LXM-CR-E-24G',
       materialImg: {
         src: '/assets/commerce/cr/product/option/elite-card-gold-100x99.png',
@@ -21,15 +21,15 @@ const card: Card = {
         alt: '24k Gold'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/gold-f-700x442.png',
+        src: '/assets/commerce/cr/product/gold-f.png',
         dim: {w: 700, h: 442 },
         alt: 'Elite Card 24k Gold'
       },
-      animation: 'https://prod.spline.design/YaHS6YD1dQbaxp4W/scene.splinecode'
+      animation: '../../assets/content/gold-card.mp4'
     },
     {
       title: 'Sterling Silver',
-      titleAlt: 'STERLING SILVER',
+      titleAlt: 'Sterling Silver',
       sku: 'LXM-CR-E-SS',
       materialImg: {
         src: '/assets/commerce/cr/product/option/elite-card-silver-99x99.png',
@@ -37,11 +37,11 @@ const card: Card = {
         alt: 'Sterling Silver'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/silver-f-700x441.png',
+        src: '/assets/commerce/cr/product/silver-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Elite Card Sterling Silver'
       },
-      animation: 'https://prod.spline.design/sKvZa9cmo3oDBIuA/scene.splinecode'
+      animation: '../../assets/content/gold-card.mp4'
     }
   ],
   annualFee: 999,

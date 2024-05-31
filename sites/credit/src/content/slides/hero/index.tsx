@@ -3,10 +3,11 @@ import type {
   ElementBlock,
   EnhHeadingBlock,
   ScreenfulBlock,
+  VideoBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
-import SplinePlayer from '@/components/spline-player'
+import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center narrow-gutters',
@@ -22,10 +23,29 @@ export default {blockType: 'screenful',
       {blockType: 'space', level: 0} satisfies SpaceBlock as Block,
       {blockType: 'item-ctas',
         otherLink: { title: "Browse Cards", href: "/cards", variant: 'outline' },
-        skuPath: 'LXM-CR-B'
+        skuPath: 'LXM-CR-B-ABT'
       } satisfies ItemCTASBlock as Block,
     ],
     [
+      {
+        blockType: 'video', 
+        videoProps: {
+          autoPlay: true, 
+          loop: true, 
+          muted: true, 
+          playsInline: true,
+
+          controlsList: "nofullscreen"
+        }, 
+        sources: ['/assets/content/gunmetal-card-smooth.mp4'],
+
+        dim: {
+            md: {w: 600, h: 300},
+        },
+        sizing: {
+          vh: 50
+        }
+      } satisfies VideoBlock as Block,
       {blockType: 'element',
         element:
           <SplinePlayer

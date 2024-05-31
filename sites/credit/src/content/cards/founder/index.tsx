@@ -13,7 +13,7 @@ const card: Card = {
   materials: [
     {
       title: 'Cool Chrome',
-      titleAlt: 'COOL CHROME',
+      titleAlt: 'Cool Chrome',
       sku: 'LXM-CR-F-CC',
       materialImg: {
         src: '/assets/commerce/cr/product/option/founder-card-cool-chrome-99x99.png',
@@ -21,15 +21,15 @@ const card: Card = {
         alt: 'Cool Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/chrome-cool-f-700x441.png',
+        src: '/assets/commerce/cr/product/chrome-cool-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Cool Chrome'
       },
-      animation: 'https://prod.spline.design/Wpu4L9F5H1tfK1dv/scene.splinecode'
+      animation: '../../assets/content/iridescent-card.mp4'
     },
     {
       title: 'Iridescent Chrome',
-      titleAlt: 'IRIDESCENT CHROME',
+      titleAlt: 'Iridescent Chrome',
       sku: 'LXM-CR-F-IC',
       materialImg: {
         src: '/assets/commerce/cr/product/option/founder-card-iridescent-chrome-99x99.png',
@@ -37,11 +37,11 @@ const card: Card = {
         alt: 'Iridescent Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/chrome-irid-f-700x441.png',
+        src: '/assets/commerce/cr/product/chrome-irid-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Iridescent Chrome'
       },
-      animation: 'https://prod.spline.design/O1mz-aE1mHafZXeX/scene.splinecode'
+      animation: '../../assets/content/iridescent-card.mp4'
     }
   ],
   annualFee: 0,

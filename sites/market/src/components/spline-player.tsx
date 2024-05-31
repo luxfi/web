@@ -11,7 +11,7 @@ const SplinePlayer: React.FC<{
   className
 }) => {
   return (
-    <Spline scene={src} className={cn('!w-full !h-auto pointer-events-none', className)} />
+    <Spline scene={src} className={cn('!w-full !h-auto pointer-events-none', className)}/>
   )
 }
 
