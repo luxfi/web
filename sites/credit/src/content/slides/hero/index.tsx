@@ -7,7 +7,7 @@ import type {
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
-import SplinePlayer from '@/components/spline-player'
+import { LinkElement } from '@hanzo/ui/primitives'
 
 export default {blockType: 'screenful',
   specifiers: 'vert-center narrow-gutters',
@@ -34,28 +34,31 @@ export default {blockType: 'screenful',
           loop: true, 
           muted: true, 
           playsInline: true,
-
           controlsList: "nofullscreen"
         }, 
-        sources: ['/assets/content/gunmetal-card-smooth.mp4'],
+        poster: '/assets/commerce/cr/product/LUX-CARD-poster.jpg',
+        sources: ['/assets/commerce/cr/product/LUX-CARD-transcode.mp4'],
 
         dim: {
             md: {w: 600, h: 300},
         },
         sizing: {
-          vh: 50
+          vh: 70
         }
       } satisfies VideoBlock as Block,
       {blockType: 'element',
-        element:
-          <SplinePlayer
-            src='https://prod.spline.design/V7clbkHAos9Rx1ZY/scene.splinecode'
-            className='!aspect-[12/10]'
-          />
-      } satisfies ElementBlock as Block,
-      {blockType: 'element',
-        element: <p className='w-full text-xs text-muted-2 italic !text-center'>Anodized Black Titanium</p>
+        element: 
+        <LinkElement 
+          def={{
+            variant: 'link',
+            href: '/cards/black?sku=LXM-CR-B-ABT' 
+          }}
+          className='w-full text-xs !text-muted-2 hover:!text-foreground italic !text-center !no-underline'
+        >
+          Anodized Black Titanium
+        </LinkElement>
       } satisfies ElementBlock as Block
+
     ]
   ]
 } satisfies ScreenfulBlock as ScreenfulBlock

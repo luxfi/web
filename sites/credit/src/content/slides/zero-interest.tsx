@@ -9,6 +9,7 @@ import type {
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
+import { LinkElement } from '@hanzo/ui/primitives'
 
 const byline = 'Pay zero interest on all loans. Retain complete sovereignty over your assets, backed by the security and transparency ' +
   'inherent in Lux Quantum Safe Technology.'
@@ -52,9 +53,13 @@ export default {
         }
       }
     } satisfies ImageBlock as Block,
-    {
-      blockType: 'element',
-      element: <a href='/cards/sovereign?sku=LXM-CR-S-RT' className='text-xxs text-muted-2 italic pl-40' style={{textDecoration : "none"}}>Sovereign Card</a>
-  } satisfies ElementBlock as Block,
+    {blockType: 'element', element: (
+      <LinkElement 
+        def={{ variant: 'link', href: '/cards/sovereign?sku=LXM-CR-S-RT' }}
+        className='w-full text-xs !text-muted-2 hover:!text-foreground italic !text-center !no-underline'
+      >
+        Sovereign Card
+      </LinkElement>
+    )} satisfies ElementBlock as Block,
   ]],
 } as ScreenfulBlock
