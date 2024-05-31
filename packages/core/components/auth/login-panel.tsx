@@ -34,7 +34,7 @@ const LoginPanel: React.FC<{
 
   const onLogin = (token: string) => {
     setCookie('auth-token', token, {
-      domain: 'lux.services',
+      domain: 'lux.id',
       path: '/',
       sameSite: 'none',
       secure: true,

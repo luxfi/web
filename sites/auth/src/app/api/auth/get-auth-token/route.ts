@@ -5,7 +5,7 @@ const domains = [
   'https://lux.market', 'https://lux.shop', 'https://lux.credit',
   'https://lux.network', 'https://wallet.lux.network', 'https://safe.lux.network',
   'https://lux.finance', 'https://lux.exchange', 'https://lux.quest',
-  'https://lux.services'
+  'https://lux.id'
 ]
 
 export async function GET(request: NextRequest) {
