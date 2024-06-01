@@ -16,6 +16,7 @@ const Header: React.FC<{
   className = ''
 }) => {
 
+    // TODO
   const [open, setOpen] = React.useState<boolean>(false);
 
   const { nav: { common, featured }, currentAs } = siteDef
@@ -32,14 +33,6 @@ const Header: React.FC<{
       links={links}
       currentAs={currentAs}
       setChatbotOpen={setOpen}
-    />
-    <ChatWidget
-      // open={open}
-      // showOpen={setOpen}
-      title='LUX'
-      subtitle='AI'
-      chatbotUrl='https://lux.chat/?isIframe=true'
-      suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
     />
   </>)
 }

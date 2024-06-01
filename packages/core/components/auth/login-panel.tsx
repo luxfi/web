@@ -32,6 +32,9 @@ const LoginPanel: React.FC<{
   const termsOfServiceUrl = legal.find(({title}) => title === 'Terms and Conditions')?.href || ''
   const privacyPolicyUrl = legal.find(({title}) => title === 'Privacy Policy')?.href || ''
 
+    // TODO :aa shouldn't this happen in @hanzo/auth: components/LoginPanel ??
+    // Otherwise, the functionality is split across modules! (and client/fw!) 
+    // (This was never my intent w the onLoginChanged callback.)
   const onLogin = (token: string) => {
     setCookie('auth-token', token, {
       domain: 'lux.id',

@@ -64,15 +64,13 @@ async function RootLayout({
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}
     {children}
-    {/* chatbot && (
-      <ChatWidget
-        title='LUX'
-        subtitle='AI'
-        chatbotUrl='https://lux.chat/iframe'
-        suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
-        buttonClx='hidden md:block'
-      />
-    )*/}
+    {chatbot && (<ChatWidget
+      title='LUX'
+      subtitle='AI'
+      chatbotUrl='https://lux.chat/?isIframe=true'
+      suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
+      buttonClx='hidden md:block'
+    />)}
   </>)
 
   return (
@@ -84,12 +82,9 @@ async function RootLayout({
       </head>
 
       <body className={bodyClasses} style={{
-        // Not sure why these got added (by my commit)
 
         // As also noted above, 'overflow: hidden' on the <body> tag breaks scroll snap!
-        //paddingRight: '0 !important',
-        //maxWidth: '100vw',
-        display: 'none', // see scripts.tsx
+        display: 'none', // see scripts.tsx // :aa concerned about this.
 
       }}>
         <Scripts/>

@@ -8,7 +8,7 @@ import { FacebookPixel } from '../next/analytics'
 const Scripts = () => {
 
   useEffect(() => {
-    document.body.style.display = 'block'
+    document.body.style.display = 'flex'
   }, [])
 
   return (
