@@ -48,7 +48,7 @@ const CommerceDrawer: React.FC<PropsWithChildren &
     fastDragSkipsToEnd={false}
     dragHandleOnly={true}
     handleHandleClicked={handleHandleClicked}
-    debugOutput
+//    debugOutput
     {...rest}
   >
     <DrawerContent 

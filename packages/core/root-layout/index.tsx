@@ -89,7 +89,8 @@ async function RootLayout({
         // As also noted above, 'overflow: hidden' on the <body> tag breaks scroll snap!
         //paddingRight: '0 !important',
         //maxWidth: '100vw',
-        display: 'none', // see scripts.tsx
+        
+        //display: 'none', // see scripts.tsx
 
       }}>
         <Scripts/>

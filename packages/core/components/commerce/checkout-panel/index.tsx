@@ -41,8 +41,12 @@ const CheckoutPanel: React.FC<{
     
     // For sites that don't initialize cmmc
   if (!cmmc) {
+    console.log("NO CMMC!")
     return <></>
   }
+
+  console.log("CMMC OK ===")
+
   const [stepIndex, setStepIndex] = useState<number>(0)
   const [orderId, setOrderId] = useState<string | undefined>(undefined)
 

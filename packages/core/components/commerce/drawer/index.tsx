@@ -24,8 +24,7 @@ const CommerceUIComponent: React.FC = observer(() => {
   
 
   const handleCheckout = (): void => {
-    console.log('CHECKOUT PRESSED')
-    // :aa router.push('/checkout')
+    router.push('/checkout')
   }
 
     // see handleCloseGesture()
