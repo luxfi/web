@@ -45,6 +45,10 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
   const isCheckout = pathName === '/checkout'
   const ref = useRef<CommerceUIStore>(new CommerceUIStore(cmmc, conf))
 
+  if (ref.current.checkingOut != isCheckout) {
+    ref.current.setCheckingOut(isCheckout)
+  }
+
   const onResize = () => { 
     const width = window.innerWidth 
     let desktopMin = 0
@@ -76,10 +80,6 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
       ref.current.dispose() 
     }
   }, [])
-
-  useEffect(() => {
-    ref.current.setCheckingOut(isCheckout)
-  }, [isCheckout])
 
   useEffect(() => {
     ref.current.reset()

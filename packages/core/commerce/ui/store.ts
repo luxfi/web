@@ -103,14 +103,19 @@ class CommerceUIStore implements
       setViewportHeight: action,
       clearActiveItem: action,
       
-      currentSkuPath: computed,
-      closedByUser: computed,
-      checkingOut: computed,
-      item: computed,
       activePoint: computed,
-      points: computed,
+      checkingOut: computed,
+      closedByUser: computed,
+      currentSkuPath: computed,
+      item: computed,
       microHeight: computed,
-      snapPointPx: computed
+      modal: computed,
+      points: computed,
+      showAdded: computed,
+      showBuy: computed,
+      showCheckout: computed,
+      snapPointPx: computed,
+      state: computed,
     })
   }
 
@@ -136,6 +141,7 @@ class CommerceUIStore implements
     this.hideVariants()
     this.setClosedByUser(false)
     this.clearActiveItem()
+    // DO NOT reset _checkingOut!
   }
 
   onActivePointChanged = (pt: SnapPoint | null): void => { 
@@ -186,7 +192,7 @@ class CommerceUIStore implements
   setIgnoreStateChange = (b: boolean): void => { this._ignoreStateChange = b}
 
   get checkingOut(): boolean { return this._checkingOut }
-  setCheckingOut = (b: boolean): void => { this._checkingOut = b}
+  setCheckingOut = (b: boolean): void => { this._checkingOut = b }
 
   get activePoint(): SnapPoint | null { return this._activePoint }
   setActivePoint = (pt: SnapPoint | null): void => { this._activePoint = pt}

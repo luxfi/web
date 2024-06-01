@@ -20,6 +20,7 @@ const MobileNav: React.FC<{
    * action.  eg, I link is clicked, and the modal menu is closes
    */
   onAction?: () => void
+    // TODO :aa shouldn't be so aware of parent context! 
   setMenuState: (arg: 'closed' | 'nav' | 'login' | 'bag') => void
 }> = ({
   currentAs,

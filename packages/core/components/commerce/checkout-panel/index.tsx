@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState }  from 'react'
+import React, { useLayoutEffect, useRef, useState }  from 'react'
 
 import { capitalize, cn } from '@hanzo/ui/util'
 
@@ -41,11 +41,9 @@ const CheckoutPanel: React.FC<{
     
     // For sites that don't initialize cmmc
   if (!cmmc) {
-    console.log("NO CMMC!")
+    console.log("CHECKOUT PANEL: cmmc svc undefined!")
     return <></>
   }
-
-  console.log("CMMC OK ===")
 
   const [stepIndex, setStepIndex] = useState<number>(0)
   const [orderId, setOrderId] = useState<string | undefined>(undefined)
@@ -87,7 +85,10 @@ const CheckoutPanel: React.FC<{
   // https://stackoverflow.com/a/21696585/11378853
   const desktopElement = useRef<HTMLDivElement | null>(null)
   const [layout, setLayout] = useState<'mobile' | 'desktop' | undefined>()
-  useEffect(() => {
+
+    // TODO :aa I assume it's becase we don't want two instance of the Square plugin....
+    // ... wondering if there is a simpler way.
+  useLayoutEffect(() => {
     const checkLayout = () => {
       setLayout(!!desktopElement.current?.offsetParent ? 'desktop' : 'mobile')
     }
