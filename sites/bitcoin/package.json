@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "stat": "http-server ./static-site",
     "dev": "next dev",
     "build": "next build",
     "prod": "next start",
