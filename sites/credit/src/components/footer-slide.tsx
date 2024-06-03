@@ -26,7 +26,6 @@ const FooterSlide = () => {
         <Footer siteDef={siteDef} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
       </div>
     </div>
-
 </>)
 }
 
