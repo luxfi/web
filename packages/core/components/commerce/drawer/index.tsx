@@ -30,9 +30,7 @@ const CommerceUIComponent: React.FC = observer(() => {
     // see handleCloseGesture()
   const setOpen = (b: boolean): void => {
     if (!b) {
-      console.log("ON CLOSE")
       if (!drawer.closedByUser) {
-        console.log("syncing closed state to UI gesture")
         drawer.setClosedByUser(true)
       }
     }
@@ -107,7 +105,7 @@ const CommerceUIComponent: React.FC = observer(() => {
         <Micro 
           handleCheckout={handleCheckout}
           handleItemClicked={handleItemClicked}
-          clx='w-full sm:w-[460px] sm:mx-auto md:w-[550px]'
+          clx='w-full px-2 sm:w-[460px] sm:mx-auto md:w-[550px]'
         />
       )}
     </CommerceDrawer>
