@@ -70,8 +70,8 @@ const CommerceDrawer: React.FC<PropsWithChildren &
       >
         <div className={cn(
             // pseudo-handle
-          mobile ? 'w-[155px] mt-[5px] h-1.5  bg-level-3' : 'w-[180px] mt-[3px] h-2.5  bg-level-2 hover:bg-level-3',
-          'rounded-[3px]',
+          'rounded-[3px] bg-level-3',
+          mobile ? 'w-[155px] mt-[5px] h-1.5' : 'w-[180px] mt-[3px] h-2.5 hover:bg-level-4',
           !mobile ? 'cursor-grab active:cursor-grabbing' : '',
         )} />
       </DrawerHandle>
