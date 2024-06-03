@@ -1,10 +1,11 @@
 import { footer, mainNav, type SiteDef  } from '@luxfi/core/site-def'
 
 export default {
-  currentAs: 'https://cdn.lux.network',
+  currentAs: 'https://lux.finance',
   nav: {
     common: mainNav,
   },
-  footer: footer.standard,
-} as SiteDef
+  footer: footer.standard 
+} satisfies SiteDef
 
+  
