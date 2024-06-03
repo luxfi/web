@@ -37,7 +37,7 @@ const card: Card = {
         alt: 'Iridescent Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/chrome-irid-f.png',
+        src: '/assets/commerce/cr/product/iradescent-chrome-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Iridescent Chrome'
       },
