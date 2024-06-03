@@ -12,17 +12,9 @@ import { useCommerceDrawer, useRecentActivity } from '../../../commerce/ui/conte
 
 const CN = {
     // h: mind padding!
-  mobile: { w: 36, h: 36 },
-  sm:  { w: 60, h: 36 },
-  desktop: { w: 60, h: 36 },
-}
-
-const renderTitle = (item: LineItem): React.ReactNode => {
-  const toks = item.title.split(', ')
-  if (toks.length === 2) {
-    return <><p>{toks[0]},</p><p className=''>{toks[1]}</p></>
-  }
-  return <p>{item.title}</p>
+  mobile: { w: 36, h: 32 },
+  sm:  { w: 60, h: 34 },
+  desktop: { w: 60, h: 32 },
 }
 
 const Info: React.FC<{
@@ -62,6 +54,7 @@ const Info: React.FC<{
   </>)
 }
 
+const PROMPT_COMMON_CLX = 'block absolute top-0 left-0 bg-transparent duration-400 transition-opacity' 
 
 const Micro: React.FC<{
   clx?: string
@@ -75,32 +68,45 @@ const Micro: React.FC<{
 
   const drawer = useCommerceDrawer()
   const recent = useRecentActivity()
+  const mobile = drawer.isMobile
 
   return (        
     <div className={cn(
-      'px-2 sm:px-3 sm:px-0', 
-      (drawer.showAdded ? 'grid grid-cols-2 ' : 'flex justify-center items-center '),
+      (drawer.showAdded ? 'grid grid-cols-2' : 'flex justify-center items-center '),
+      (drawer.showAdded ? ((drawer.isMobile) ? '-mt-3' : '-mt-3') : ''),
       'gap-2 md:gap-3 relative',
       clx
     )}>
     {drawer.showAdded && (
-      <div className='pb-3 flex flex-col items-stretch'>
-        <p className='text-muted text-xxs md:text-xs leading-none pl-1'>recent item:</p>
+      <div className={'flex flex-col items-stretch ' + (drawer.isMobile ? 'justify-start' : 'group')}>
+        <p className={'relative text-muted text-xxs md:text-xs leading-none pl-1 self-start ' + (drawer.isMobile ? 'top-[3px]' : 'top-[1px]')}>
+          <span className='invisible'>scrictly for layout</span>
+          {drawer.isMobile ? (
+            <span className={PROMPT_COMMON_CLX}>tap for options:</span>
+          ) : (<>
+            <span className={PROMPT_COMMON_CLX + ' group-hover:opacity-0'}>recent item:</span>
+            <span className={PROMPT_COMMON_CLX + ' opacity-0 group-hover:opacity-100'}>view options:</span>
+          </>)}
+        </p>
         <Button 
           variant='ghost'
-          rounded='sm'
+          rounded={drawer.isMobile ? 'md' : 'lg'}
+          size={drawer.isMobile ? 'default' : 'lg'}
           onClick={handleItemClicked}
           className={cn(
+            'box-content',
             'flex flex-row justify-between items-center gap-1',
             '-ml-1.5',
             'overflow-hidden ', 
-            'px-1 py-1 md:px-2 md:py-2',
+            'px-1 md:px-2 py-[2px]',
+            'border border-transparent group-hover:border-muted-3',
+            'group-hover:!bg-transparent '
           )}
         >
           {recent.item?.img && (<>
             <Image def={recent.item.img} constrainTo={CN.mobile} preload className='sm:hidden grow-0 shrink-0'/>
-            <Image def={recent.item.img} constrainTo={CN.sm} preload className='hidden sm:flex md:hidden grow-0 shrink-0'/>
-            <Image def={recent.item.img} constrainTo={CN.desktop} preload className='hidden md:flex grow-0 shrink-0'/>
+            <Image def={recent.item.img} constrainTo={CN.sm} preload className='hidden sm:block md:hidden grow-0 shrink-0'/>
+            <Image def={recent.item.img} constrainTo={CN.desktop} preload className='hidden md:block grow-0 shrink-0'/>
           </>)} 
           {recent.item && (
             <div className='grow w-full'>
@@ -112,9 +118,11 @@ const Micro: React.FC<{
     )}
     {drawer.showCheckout && (
       <div className={cn(
-        'flex flex-col justify-center w-full', 
-        (drawer.showAdded ? 'items-stretch' : 'items-center pt-3' )
+        'flex flex-col w-full', 
+        (drawer.showAdded ? 'items-stretch' : 'items-center' ),
+        (drawer.isMobile ? 'justify-start' : 'justify-center')
       )}>
+        {drawer.showAdded && <p className='invisible text-muted text-xxs md:text-xs leading-none pl-1 self-start'>for layout</p>}
         <CheckoutButton 
           handleCheckout={handleCheckout} 
           variant='primary' 
