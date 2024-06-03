@@ -13,7 +13,7 @@ export default {
       specifiers: 'center',
       heading: {
         text: 'MAKE LUX YOUR DEFAULT CARD',
-        level: 1,
+        level: 3,
       },
     } satisfies EnhHeadingBlock as Block,
     {blockType: 'element',
@@ -24,12 +24,12 @@ export default {
         videoProps: DEF_VIDEO_PROPS, 
         sources: ['/assets/content/default-card-vertical.mp4'],
         dim: {
-            sm: {w: 600, h: 300},
-            md: {w: 1200, h: 300},
-            lg: {w: 2000, h: 300}
+            sm: {w: 300, h: 300},
+            md: {w: 600, h: 300},
+            lg: {w: 1000, h: 300}
         },
         sizing: {
-          vh: 100
+          vh: 50
         }
     } satisfies VideoBlock as Block,
     {
