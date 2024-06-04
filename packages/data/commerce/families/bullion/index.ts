@@ -13,6 +13,5 @@ export const getBullionFamilies = (videoMap: Map<string, VideoDef>) => (
   )
 )
 
-//export { default as serviceOptions } from '../../conf/lux-commerce-options'
-//export { default as bullionPrice1oz } from './bullion-price-1oz'
+export { default as bullionPrice1oz } from './bullion-price-1oz'
 
