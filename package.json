@@ -13,7 +13,7 @@
   "devDependencies": {
     "webpack-watch-files-plugin": "^1.2.1"
   },
-  "//": "https://stackoverflow.com/questions/76591038/module-not-found-esm-packages-supports-color-need-to-be-imported-use-import",
+  "//": "re 'supports-color': https://stackoverflow.com/questions/76591038/module-not-found-esm-packages-supports-color-need-to-be-imported-use-import",
   "pnpm": {
     "overrides": {
       "react": "^18.3.1",
