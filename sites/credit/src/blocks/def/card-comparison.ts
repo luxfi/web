@@ -1,4 +1,4 @@
-import type { CardFamily } from '@/types'
+import type { CardFamily } from '@luxfi/data/commerce/types'
 import type { Block } from '@hanzo/ui/blocks'
 
 interface CardComparisonBlock extends Block {

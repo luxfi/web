@@ -7,8 +7,8 @@ import { ArrowRight } from 'lucide-react'
 import { formatCurrencyValue } from '@hanzo/commerce'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 
-import type { Card, CardMaterial } from '@/types/card'
-import CardMaterialPicker from '../../../components/card-material-picker'
+import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
+import CardMaterialPicker from '@/components/card-material-picker'
 
 const CardPreview: React.FC<{
   card: Card

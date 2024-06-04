@@ -24,7 +24,8 @@
     "clean": "rm -rf node_modules"
   },
   "exports": {
-    "./commerce": "./commerce/index.ts"
+    "./commerce": "./commerce/index.ts",
+    "./commerce/types": "./commerce/types/index.ts"
   },
   "peerDependencies": {
     "@hanzo/commerce": "*",

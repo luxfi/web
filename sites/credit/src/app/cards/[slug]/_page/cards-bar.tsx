@@ -8,7 +8,7 @@ import { cn } from '@hanzo/ui/util'
 
 import PseudoMain from '@/components/pseudo-main'
 
-import type { Card } from '@/types/card'
+import type { Card } from '@luxfi/data/commerce/types'
 import cards from '@/content/cards'
 
 const CardsBar: React.FC<{

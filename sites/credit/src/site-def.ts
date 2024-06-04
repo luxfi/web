@@ -1,6 +1,6 @@
 import { footer, mainNav, type SiteDef  } from '@luxfi/core/site-def'
 
-import commerce from './commerce'
+import { commerceConfig as commerce }  from '@luxfi/data/commerce'
 
 export default {
   currentAs: 'https://lux.credit',

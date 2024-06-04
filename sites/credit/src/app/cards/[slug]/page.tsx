@@ -1,18 +1,18 @@
 'use client'
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from 'react'
 
-import { useCommerce } from "@hanzo/commerce"
-import type { LineItem } from "@hanzo/commerce/types"
+import { useCommerce } from '@hanzo/commerce'
+import type { LineItem } from '@hanzo/commerce/types'
 
-import type { Card, CardMaterial, CardType } from "@/types/card"
+import type { Card, CardMaterial, CardType } from '@luxfi/data/commerce/types'
 
-import DesktopViewCardDetails from "./_page/desktop"
-import MobileViewCardDetails from "./_page/mobile"
-import TabletViewCardDetails from "./_page/tablet"
-import CardsBar from "./_page/cards-bar"
+import DesktopViewCardDetails from './_page/desktop'
+import MobileViewCardDetails from './_page/mobile'
+import TabletViewCardDetails from './_page/tablet'
+import CardsBar from './_page/cards-bar'
 
-import cards from "@/content/cards"
+import cards from '@/content/cards'
 
 type Props = {
   params: { slug: CardType }
@@ -71,7 +71,7 @@ const Page = ({ params, searchParams }: Props) => {
 
   return (<>
     <CardsBar selectedCard={card} clx='fixed top-0 mt-11 md:mt-20'/>
-    <div className="sm:hidden h-full min-h-screen">
+    <div className='sm:hidden h-full min-h-screen'>
       <div ref={mobileElement}></div>
       {layout === 'mobile' && isCardSet && (
         <MobileViewCardDetails
@@ -82,7 +82,7 @@ const Page = ({ params, searchParams }: Props) => {
         />
       )}
     </div>
-    <div className="hidden sm:flex md:hidden h-full min-h-screen">
+    <div className='hidden sm:flex md:hidden h-full min-h-screen'>
       <div ref={tabletElement}></div>
       {layout === 'tablet' && isCardSet && (
         <TabletViewCardDetails
@@ -93,7 +93,7 @@ const Page = ({ params, searchParams }: Props) => {
         />
       )}
     </div>
-    <div className="hidden md:flex h-full min-h-screen">
+    <div className='hidden md:flex h-full min-h-screen'>
       <div ref={desktopElement}></div>
       {layout === 'desktop' && isCardSet && (
         <DesktopViewCardDetails
