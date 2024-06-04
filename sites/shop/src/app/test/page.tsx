@@ -10,7 +10,7 @@ import {
 
 import { Header, Main } from '@luxfi/core'
 
-import siteDef from '@/conf/site-def'
+import siteDef from '@/site-def'
 
 import AddPanel from './_page/add-panel' 
 import BuyPanel from './_page/buy-panel' 

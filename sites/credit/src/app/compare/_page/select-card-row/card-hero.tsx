@@ -8,7 +8,8 @@ import { cn } from '@hanzo/ui/util'
 import { AddToCartWidget, formatCurrencyValue, useCommerce } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
 
-import type { Card, CardMaterial, CardWithSelectedMaterial } from '@/types'
+import type { Card, CardMaterial, CardWithSelectedMaterial } from '@luxfi/data/commerce/types'
+
 import CardMaterialPicker from '@/components/card-material-picker'
 
 const CardHero: React.FC<{

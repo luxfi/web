@@ -15,7 +15,6 @@ import { AuthListener, ChatWidget, Header, Scripts } from '../components'
 
 import CommerceDrawer from '../components/commerce/drawer'
 
-import { selectionUISpecifiers } from '../conf'
 import type SiteDef from '../types/site-def'
 
 import '../style/lux-global.css'
@@ -90,12 +89,7 @@ async function RootLayout({
         <Scripts/>
         <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
         {siteDef?.commerce ? (
-          <CommerceProvider
-            rootNode={siteDef.commerce!.rootNode}
-            families={siteDef.commerce!.families}
-            options={siteDef.commerce!.options}
-            uiSpecs={selectionUISpecifiers}
-          >
+          <CommerceProvider config={siteDef.commerce!} >
             <CommerceUIProvider >
               <Guts />
               <CommerceDrawer />

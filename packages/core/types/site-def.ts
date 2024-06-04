@@ -1,8 +1,8 @@
 import React from 'react'
 
 import type { LinkDef } from '@hanzo/ui/types'
+import type { CommerceConfig }  from '@hanzo/commerce/types'
 
-import type CommerceConfig from './commerce-config'
 import type ChatbotConfig from './chatbot-config'
 
 interface SiteDef {

@@ -4,13 +4,12 @@ import { useEffect, useState } from 'react'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import type { CardWithSelectedMaterial } from '@/types'
+import type { CardWithSelectedMaterial } from '@luxfi/data/commerce/types'
 
 import RowHeading from './row-heading'
 import rowsContent from './rows-content'
 import CompareHeader from './compare-header'
 import SelectCardRow from './select-card-row'
-import PseudoMain from '../../../components/pseudo-main'
 
 import cards from '@/content/cards'
 

@@ -1,4 +1,4 @@
-import type { Card } from '@/types/card'
+import type { Card } from '@luxfi/data/commerce/types'
 
 import black from './black'
 import elite from './elite'

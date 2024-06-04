@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { ApplyTypography, Button } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import type { Card, CardMaterial } from '@/types/card'
+import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
 
 const CardQuickView: React.FC<{
   card: Card,

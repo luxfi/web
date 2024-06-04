@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation'
 import { Footer, Header, Main } from '@luxfi/core'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
-import { products } from '@/content'
 
-import siteDef from '../../conf/site-def'
+import { products } from '@/content'
+import siteDef from '@/site-def'
 
 type Props = {
   params: { slug: 'silver' | 'gold' | 'coin' | 'credit' | 'validator' | 'key' | 'uranium' }

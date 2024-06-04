@@ -1,10 +1,10 @@
-import { type CardWithSelectedMaterial } from '@/types'
+import React from 'react'
+import { type CardWithSelectedMaterial } from '@luxfi/data/commerce/types'
 
 import { NUM_CARDS_DESKTOP, NUM_CARDS_MOBILE } from '../CONST'
 import RowHeading from '../row-heading'
 import SelectCard from './select-card'
 import CardHero from './card-hero'
-import PseudoMain from '../../../../components/pseudo-main'
 
 const SelectCardRow: React.FC<{
   selectedCards: CardWithSelectedMaterial[]

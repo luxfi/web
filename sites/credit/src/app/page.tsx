@@ -5,8 +5,8 @@ import { DrawerMargin, Header } from '@luxfi/core'
 
 import { desktopTiles, mobileTiles}  from '@/content'
 import FooterSlide from '@/components/footer-slide'
+import siteDef from '@/site-def'
 import '@/blocks/registerComponents'
-import siteDef from '@/conf/site-def'
 
 type Props = {
   searchParams?: { [key: string]: string | string[] | undefined }
@@ -29,7 +29,7 @@ const Page = ({ searchParams }: Props ) => {
         bottom={<DrawerMargin clx='grow-0 shrink-0'/>}
       />
     ))}
-    <FooterSlide />
+    <FooterSlide agent={agent} />
   </>)
 }
 
