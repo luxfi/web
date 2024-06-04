@@ -15,6 +15,9 @@ interface CardFamily extends Family {
   detail: ReactNode
 }
 
+  // TODO: These two should be consolidated into CardProduct, and 
+  // CardFamily (above)
+  // (CardFamily was :aa and below was erik) 
 type CardMaterial = {
   title: string
   titleAlt: string

@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.modules.base.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/declarations.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+  "compilerOptions": {
+    "paths": {
+      "react": [ "./node_modules/@types/react" ],
+    }
+  }
+}
