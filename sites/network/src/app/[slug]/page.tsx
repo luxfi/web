@@ -6,7 +6,7 @@ import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
 import { products } from '@/content'
 
-import siteDef from '../../conf/site-def'
+import siteDef from '@/site-def'
 
 type Props = {
   params: { slug: 'coin' | 'validator' }
