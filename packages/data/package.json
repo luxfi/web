@@ -24,6 +24,7 @@
     "clean": "rm -rf node_modules"
   },
   "exports": {
+    ".": "./index.ts",
     "./commerce": "./commerce/index.ts",
     "./commerce/types": "./commerce/types/index.ts"
   },

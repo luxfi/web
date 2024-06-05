@@ -15,8 +15,6 @@ interface SiteDef {
       /** optional feature element. right-most after 'elements' (any min-w is ignored) */
     common: LinkDef[]       
     featured?: LinkDef[]
-    auth?: boolean
-    cart?: React.ReactNode
   }
 
     /** 

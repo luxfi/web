@@ -5,7 +5,7 @@ import type {
   EnhHeadingBlock,
   VideoBlock,
 } from '@hanzo/ui/blocks'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 import ProductCTA from '@/components/product-cta'
 
 const validatorVideo = {

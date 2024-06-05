@@ -78,7 +78,7 @@ export default {
   skuToken: 'LXM',
   label: '',
   subNodes: level1
-}
+} satisfies CategoryNode
 
 
 
