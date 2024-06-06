@@ -8,6 +8,6 @@ export default {
 
   dt: {
     micro: '74px',
-    full: 0.75 
+    full: '575px' 
   }
 } satisfies SnapPointsConfig
