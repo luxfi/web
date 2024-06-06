@@ -16,7 +16,6 @@ import { cn } from '@hanzo/ui/util'
 
 import { useAuth } from "@hanzo/auth/service"
 
-import { Avatar } from "../icons"
 import { Ethereum } from "@hanzo/auth/icons"
 import { Icons } from ".."
 
@@ -26,10 +25,12 @@ const MobileAuthWidget: React.FC<{
     handleLogin?: () => void
 }> = observer(({
     noLogin = false,
-    handleLogin,
     className
 }) => {
     const auth = useAuth()
+    const handleLogin = () => {
+        window.location.href = "https://lux.id";
+      };
 
     if (!auth) {
         return null

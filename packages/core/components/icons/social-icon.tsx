@@ -25,7 +25,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({
     className={cn('color-inherit', className)}
     bgColor='transparent' 
     fgColor='currentColor'
-    style={{height: size, width: size}} 
+    style={{height: size, width: size, flex: 'none' }} 
   />
 )
 
