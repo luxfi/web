@@ -36,14 +36,6 @@ const DesktopHeader: React.FC<{
         <Logo size='sm' href='/' className='hidden md:flex lg:hidden' key='one' layout='text-only'/>
         {/* md or larger */}
         <div className='flex gap-4 items-center'>
-          {/* <NavItems 
-            currentAs={currentAs}
-            items={links} 
-            className='flex md:gap-4 lg:justify-between lg:gap-7' 
-            itemClx='font-nav h-8'
-            key='three'
-          /> */}
-
           <DesktopNav links = {links}/>
           <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
           <AuthWidget/>
