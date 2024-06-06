@@ -46,7 +46,7 @@ const CardComponent: React.FC<{
     }, [])
 
     return (
-      <ApplyTypography className='flex flex-col !gap-4 items-center h-full'>
+      <ApplyTypography className='flex flex-col !gap-4 items-center'>
         <div onClick={onSelectCard}>
           <Link href={`cards/${family}?sku=${skuPath}`} className='!no-underline'>
             <ImageBlockComponent

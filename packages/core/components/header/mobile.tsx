@@ -154,6 +154,7 @@ const MobileHeader: React.FC<{
                 commonItemClx='px-0 text-xl h-16 justify-start '
                 setMenuState={setMenuState}
                 setChatbotOpen={setChatbotOpen}
+                setMenuOpen={setMenuOpen}
               />
             )
           )}
