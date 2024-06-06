@@ -3,7 +3,7 @@ import type * as C from '@hanzo/ui/blocks'
 import { formatCurrencyValue } from '@hanzo/commerce'
 
 import { MiniChart, BuyButton } from '@luxfi/core'
-import { bullionPrice1oz } from '@luxfi/core/commerce-data'
+import { bullionPrice1oz } from '@luxfi/data/commerce'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 
@@ -23,7 +23,7 @@ export default {
     priceCard: {blockType: 'card',
       title: 'Lux Silver Price  / Oz', 
       content: <div className='h-full w-full flex flex-col justify-center items-center gap-8'>
-        <h4 className='text-center font-bold text-3xl'>{formatCurrencyValue(bullionPrice1oz('ag'))}</h4>
+        <h4 className='font-heading text-center text-xl sm:text-2xl md:text-lg lg:text-2xl'>{formatCurrencyValue(bullionPrice1oz('ag'))}</h4>
         <BuyButton skuPath='LXM-AG' className='lg:min-w-pr-65 min-w-pr-65'>Buy</BuyButton>
       </div>,
     } satisfies C.CardBlock,

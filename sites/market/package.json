@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/market",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "private": true,
   "license": "BSD-3-Clause",
   "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@luxfi/core": "*",
+    "@luxfi/data": "*",
     "@hanzo/auth": "*",
     "@hanzo/commerce": "*",
     "@hanzo/ui": "*",

@@ -6,9 +6,9 @@ export default {
     default: 'Lux CDN',
     template: '%s | Lux CDN',
   },
-  description: 'Lux content delivery network',
-  applicationName: 'Lux CD',
-  authors: {name: 'Lux Partners Limtied'},
+  description: 'Lux is the only private and quantum safe DeFi interface',
+  applicationName: 'Lux CDN',
+  authors: {name: 'Lux Partners Limited'},
   keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
   icons: [
     {

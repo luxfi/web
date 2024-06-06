@@ -7,7 +7,7 @@ import type {
   SpaceBlock,
 } from '@hanzo/ui/blocks'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 import { LinkElement } from '@hanzo/ui/primitives'
 
 const byline = 'Each loan is automatically repaid by Lux Protocol, ' + 'so you never have to sell your assets or pay capital gains.'

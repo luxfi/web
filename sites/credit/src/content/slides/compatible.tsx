@@ -1,22 +1,21 @@
 import type {
-    Block,
-    EnhHeadingBlock,
-    ElementBlock,
-    VideoBlock,
-    ScreenfulBlock,
-    SpaceBlock,
+  Block,
+  EnhHeadingBlock,
+  ElementBlock,
+  VideoBlock,
+  ScreenfulBlock,
+  SpaceBlock,
 } from '@hanzo/ui/blocks'
 import { BlocksComponent } from '@hanzo/ui/blocks'
 import { Button, LinkElement } from '@hanzo/ui/primitives'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
-
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
 const byline = 'Every vard lets you earn points that pay off your balance, AND has access to exclusive Lux Card Benefits.'
 
 // :aa TODO clean this up!
 const viewAllCards = {
-    blockType: 'element',
-    element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>View All Cards</Button></a>
+  blockType: 'element',
+  element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>View All Cards</Button></a>
 } satisfies ElementBlock as Block
 
 const compare = {

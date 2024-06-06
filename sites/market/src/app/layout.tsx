@@ -5,8 +5,7 @@ import {
   viewport as ViewportCode, 
 } from '@luxfi/core/root-layout'
 
-
-import siteDef from '../conf/site-def'
+import siteDef from '../site-def'
 import _metadata from '../metadata'
 
 export const metadata = { ..._metadata }

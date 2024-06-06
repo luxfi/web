@@ -5,7 +5,6 @@
   "license": "BSD-3-Clause",
   "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
   "scripts": {
-    "stat": "http-server ./static-site",
     "dev": "next dev",
     "build": "next build",
     "prod": "next start",

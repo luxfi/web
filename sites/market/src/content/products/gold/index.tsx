@@ -2,7 +2,7 @@ import type * as C from '@hanzo/ui/blocks'
 import { formatCurrencyValue } from '@hanzo/commerce'
 
 import { MiniChart } from '@luxfi/core'
-import { bullionPrice1oz } from '@luxfi/core/commerce-data'
+import { bullionPrice1oz } from '@luxfi/data/commerce'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import video from './video'
@@ -19,7 +19,7 @@ export default {
     priceCard: {
       blockType: 'card',
       title: 'Lux Gold Price / Oz',
-      content: <h4 className='font-heading text-lg md:text-3xl'>{formatCurrencyValue(bullionPrice1oz('au'))}</h4>,
+      content: <h4 className='font-heading text-xl sm:text-2xl md:text-lg lg:text-2xl'>{formatCurrencyValue(bullionPrice1oz('au'))}</h4>,
     },
     msCard: {blockType: 'card',
       specifiers: 'full-width',

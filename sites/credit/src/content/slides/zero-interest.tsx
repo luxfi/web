@@ -7,7 +7,8 @@ import type {
   VideoBlock,
   ElementBlock
 } from '@hanzo/ui/blocks'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 import type ItemCTASBlock from '@/blocks/def/item-ctas'
 import { LinkElement } from '@hanzo/ui/primitives'
 

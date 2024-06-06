@@ -1,8 +1,8 @@
 import React from 'react'
 
 import type { LinkDef } from '@hanzo/ui/types'
+import type { CommerceConfig }  from '@hanzo/commerce/types'
 
-import type CommerceConfig from './commerce-config'
 import type ChatbotConfig from './chatbot-config'
 
 interface SiteDef {
@@ -15,8 +15,6 @@ interface SiteDef {
       /** optional feature element. right-most after 'elements' (any min-w is ignored) */
     common: LinkDef[]       
     featured?: LinkDef[]
-    auth?: boolean
-    cart?: React.ReactNode
   }
 
     /** 

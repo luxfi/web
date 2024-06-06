@@ -4,7 +4,7 @@ import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
 import { Button, Popover, PopoverContent, PopoverTrigger } from '@hanzo/ui/primitives'
 
-import type { Card, CardWithSelectedMaterial } from '@/types'
+import type { Card, CardWithSelectedMaterial } from '@luxfi/data/commerce/types'
 import cards from '@/content/cards'
 
 const SelectCard: React.FC<{

@@ -5,6 +5,7 @@ export default {
   nav: {
     common: mainNav,
   },
-  footer: footer.standard,
-} as SiteDef
+  footer: footer.standard
+} satisfies SiteDef
+
 

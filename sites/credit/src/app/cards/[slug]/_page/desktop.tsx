@@ -8,13 +8,13 @@ import { cn } from '@hanzo/ui/util'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { AddToCartWidget, formatCurrencyValue } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
-
 import { Main } from '@luxfi/core'
 
-import type { Card, CardMaterial } from '@/types/card'
-import SplinePlayer from '../../../../components/spline-player'
+import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
+
+import SplinePlayer from '@/components/spline-player'
+import CardMaterialPicker from '@/components/card-material-picker'
 import Benefits from './benefits'
-import CardMaterialPicker from '../../../../components/card-material-picker'
 import MoreWaysToEarn from './more-ways-to-earn'
 
 const DesktopViewCardDetails: React.FC<{

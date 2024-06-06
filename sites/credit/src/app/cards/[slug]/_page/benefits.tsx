@@ -13,7 +13,7 @@ import {
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import type { ImageDef } from '@hanzo/ui/types'
 
-import type { Card } from '@/types/card'
+import type { Card } from '@luxfi/data/commerce/types'
 
 const BenefitCard: React.FC<{
   key: string | number

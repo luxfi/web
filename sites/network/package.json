@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/network",
-  "version": "0.0.2",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@luxfi/core": "*",
+    "@luxfi/data": "*",
     "@hanzo/auth": "*",
     "@hanzo/commerce": "*",
     "@hanzo/ui": "*",

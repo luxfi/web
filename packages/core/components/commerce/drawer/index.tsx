@@ -94,9 +94,10 @@ const CommerceUIComponent: React.FC = observer(() => {
               />
             }
             onQuantityChanged={recent.quantityChanged.bind(recent)}
-            clx='justify-between h-full pb-3'
+            clx='justify-between h-full pb-3 gap-8'
             addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
-            selectorClx='max-w-[475px]'
+            buttonsAreaClx='grow-0 shrink-0 mt-0'
+            selectorClx='max-w-[475px] justify-between grow'
             
           />
         </div>

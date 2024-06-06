@@ -1,9 +1,17 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ChevronDown } from 'lucide-react'
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  ApplyTypography,
+  Button
+} from '@hanzo/ui/primitives'
 import {
   AddToCartWidget,
   formatCurrencyValue,
@@ -12,18 +20,11 @@ import {
 import type { LineItem } from '@hanzo/commerce/types'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 import { cn } from '@hanzo/ui/util'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  ApplyTypography,
-  Button
-} from '@hanzo/ui/primitives'
 
-import type { Card, CardMaterial } from '@/types/card'
+import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
+
 import CardQuickView from './card-quick-view'
-import CardMaterialPicker from '../../../components/card-material-picker'
-import Link from 'next/link'
+import CardMaterialPicker from '@/components/card-material-picker'
 
 const CardPreview: React.FC<{
   card: Card

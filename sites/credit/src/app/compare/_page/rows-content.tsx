@@ -4,7 +4,8 @@ import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { formatCurrencyValue } from '@hanzo/commerce'
 
-import type { Card } from '@/types/card'
+import type { Card } from '@luxfi/data/commerce/types'
+
 import { NUM_CARDS_DESKTOP, NUM_CARDS_MOBILE } from './CONST'
 
 const MdxRowContent: React.FC<{

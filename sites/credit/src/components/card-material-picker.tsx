@@ -1,7 +1,7 @@
 import { cn } from '@hanzo/ui/util'
 import { ImageBlockComponent } from '@hanzo/ui/blocks'
 
-import type { CardMaterial } from '@/types/card'
+import type { CardMaterial } from '@luxfi/data/commerce/types'
 
 const CardMaterialPicker: React.FC<{
   materials: CardMaterial[]

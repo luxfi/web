@@ -13,15 +13,17 @@ import {
   AccordionTrigger,
   ApplyTypography,
 } from '@hanzo/ui/primitives'
+
 import { AddToCartWidget, formatCurrencyValue } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
-import { Main } from '@luxfi/core'
 
-import type { Card, CardMaterial } from '@/types/card'
-import SplinePlayer from '../../../../components/spline-player'
-import CardMaterialPicker from '../../../../components/card-material-picker'
+import { Main } from '@luxfi/core'
+import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
+
+import SplinePlayer from '@/components/spline-player'
+import CardMaterialPicker from '@/components/card-material-picker'
 import MoreWaysToEarn from './more-ways-to-earn'
-import Arrow from '../../../../content/cards/benefits/icons/arrow'
+import Arrow from '@/content/cards/benefits/icons/arrow'
 
 const MobileViewCardDetails: React.FC<{
   card: Card
