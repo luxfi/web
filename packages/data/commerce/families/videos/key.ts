@@ -1,5 +1,5 @@
 import type { VideoDef } from '@hanzo/ui/types'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import { DEF_VIDEO_PROPS } from '../../..'
 
 const video = {
   videoProps: DEF_VIDEO_PROPS,

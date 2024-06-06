@@ -1,5 +1,5 @@
 import type { VideoDef } from '@hanzo/ui/types'
-
+import type { Family } from '@hanzo/commerce/types'
 
 import { getBullionFamilies } from './bullion'
 
@@ -14,4 +14,10 @@ const videoMap = new Map<string, VideoDef>([
   ['Lux Silver', silverVideo]
 ])
 
-export default [...getBullionFamilies(videoMap), ...crFamilies, coin, validator, key]
+export default [
+  ...getBullionFamilies(videoMap), 
+  ...crFamilies, 
+  coin, 
+  validator, 
+  key
+] satisfies Family[]

@@ -1,4 +1,4 @@
-import type { CommerceConfig } from '@hanzo/commerce/types'
+import { type CommerceConfig } from '@hanzo/commerce/types'
 
 import options from './lux-commerce-service-options'
 import uiSpecifiers from './lux-selection-ui-specifiers'

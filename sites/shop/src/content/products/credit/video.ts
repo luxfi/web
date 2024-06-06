@@ -1,5 +1,5 @@
 import type { VideoBlock } from '@hanzo/ui/blocks'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
 export default  {
   blockType: 'video',

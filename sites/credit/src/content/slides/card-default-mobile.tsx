@@ -1,6 +1,5 @@
 import { type Block, type CTABlock, type ElementBlock, type EnhHeadingBlock, type ScreenfulBlock, type VideoBlock } from '@hanzo/ui/blocks'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
-import { Button } from '@hanzo/ui/primitives'
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
 const byline = "A payment method so simple, so secure and never accrues interest, now that's Lux!"
 

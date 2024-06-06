@@ -13,11 +13,11 @@ import "./animation.css"
 const byline = 'Decentralized network of blockchains designed to provide private and quantum safe access to high yield auto compounding staking protocols, and zero interest, zero liquidation, self repaying loans.'
 
 import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks'
-import { DEF_VIDEO_PROPS } from '@hanzo/ui/util'
+import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
 const video = {
   blockType: 'video',
-  videoProps: {...DEF_VIDEO_PROPS, preload: 'auto'},
+  videoProps: DEF_VIDEO_PROPS,
   poster: '/assets/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
   sources: [
     '/assets/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
