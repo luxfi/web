@@ -37,7 +37,7 @@ export default {blockType: 'screenful',
           controlsList: "nofullscreen"
         }, 
         poster: '/assets/commerce/cr/product/LUX-CARD-poster.jpg',
-        sources: ['/assets/commerce/cr/product/LUX-CARD-transcode.mp4'],
+        sources: ['/assets/commerce/cr/product/LUX-CARD-black.mp4'],
 
         dim: {
             md: {w: 600, h: 300},

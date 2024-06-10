@@ -19,6 +19,17 @@ export default {
       element: <h5 className='mx-auto max-w-[45rem] !text-center px-4 text-blue'>{byline}</h5>,
     } satisfies ElementBlock as Block,
     {
+      blockType: 'cta',
+      elements: [
+        {
+          title: 'Select Your Card',
+          variant: 'primary',
+          size: 'sm', 
+          href: '/cards'
+        },
+      ]
+    } satisfies CTABlock as Block,
+    {
         blockType: 'video', 
         videoProps: DEF_VIDEO_PROPS, 
         sources: ['/assets/content/default-card-vertical.mp4'],
@@ -30,17 +41,6 @@ export default {
         sizing: {
           vh: 50
         }
-    } satisfies VideoBlock as Block,
-    {
-      blockType: 'cta',
-      elements: [
-        {
-          title: 'Select Your Card',
-          variant: 'primary',
-          size: 'lg', 
-          href: '/cards'
-        },
-      ]
-    } satisfies CTABlock as Block,
+    } satisfies VideoBlock as Block,   
   ]],
 } as ScreenfulBlock
