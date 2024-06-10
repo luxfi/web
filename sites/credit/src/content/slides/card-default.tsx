@@ -19,23 +19,12 @@ export default {
       specifiers: 'center',
       heading: {
         text: 'MAKE LUX YOUR DEFAULT CARD',
-        level: 3,
+        level: 1,
       },
     } satisfies EnhHeadingBlock as Block,
     {blockType: 'element',
       element: <h5 className='mx-auto max-w-[45rem] !text-center px-4'>{byline}</h5>,
     } satisfies ElementBlock as Block,
-    {
-        blockType: 'video', 
-        videoProps: DEF_VIDEO_PROPS, 
-        sources: ['/assets/content/default-card-horizontal.mp4'],
-        dim: {
-            md: {w: 600, h: 300},
-        },
-        sizing: {
-          vh: 40
-        }
-    } satisfies VideoBlock as Block,
     {
       blockType: 'cta',
       elements: [
@@ -47,5 +36,16 @@ export default {
         },
       ]
     } satisfies CTABlock as Block,
+    {
+        blockType: 'video', 
+        videoProps: DEF_VIDEO_PROPS, 
+        sources: ['/assets/content/default-card-horizontal.mp4'],
+        dim: {
+            md: {w: 600, h: 300},
+        },
+        sizing: {
+          vh: 50
+        }
+    } satisfies VideoBlock as Block
   ]],
 } as ScreenfulBlock
