@@ -19,8 +19,8 @@ const MOBILE_VID_CONSTRAINT = {
   // https://stackoverflow.com/a/76066443/11645689
   // @hanzo/ui/style/global.css
 const swipeOuter = 'snap-start snap-always h-[100vh] '
-  // 44+8=52, 80+8=88
-const swipeInner = 'pt-[52px] md:pt-[88px] pb-[24px] '
+  // 44+16=60, 80+8=88
+const swipeInner = 'pt-[60px] md:pt-[88px] pb-[24px] '
 const swipeInnerDesk = swipeInner + 'h-full '
 const swipeInnerTouch = swipeInner + 'h-[100svh] '
 
@@ -49,13 +49,16 @@ const Desktop: React.FC = () => (<>
   </div>
 ))}
   <div key='last' className={swipeOuter + 'swipe flex flex-col justify-start items-stretch'} >
-    <ApplyTypography asTag='section' className={swipeInnerDesk + 'grow w-full border-b flex flex-col items-center justify-start self-stretch lg:gap-10'} >
-      <ContentComponent blocks={landing.bottom}/>
-    </ApplyTypography>
     <Footer siteDef={siteDef} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
     <DrawerMargin clx='grow-0 shrink-0'/>
   </div>
 </>)
+
+/* above footer
+    <ApplyTypography asTag='section' className={swipeInnerDesk + 'grow w-full border-b flex flex-col items-center justify-start self-stretch lg:gap-10'} >
+      <ContentComponent blocks={landing.bottom}/>
+    </ApplyTypography>
+*/
 
 const TouchDevice: React.FC<{
   isTablet: boolean
@@ -71,14 +74,14 @@ const TouchDevice: React.FC<{
         className={'w-full flex flex-col items-stretch grow ' + swipeInnerTouch + 
           (isTablet ? 'gap-2 justify-around lg:justify-start lg:gap-24 ' 
             : 
-          'justify-between pb-2') 
+          'justify-between pb-4') 
         } 
       >
         <BannerComponent 
           block={banner} 
           groupingClasses={[
             'md:pt-12 lg:pt-32', 
-            'md:mt-32 md:w-[70%] lg:w-[60%] md:self-center']
+            'md:mt-32 md:w-pr-70 lg:w-pr-60 md:self-center']
           }
           videoConstraint={isTablet ? undefined : MOBILE_VID_CONSTRAINT}
           videoSize={isTablet ? 'lg' : 'md'}
@@ -87,6 +90,14 @@ const TouchDevice: React.FC<{
       <DrawerMargin clx='grow-0 shrink-0'/>
     </div>
   ))}
+    <div key='lastest' className={swipeOuter + 'flex flex-col'}>
+      <Footer siteDef={siteDef} className={swipeInnerTouch + 'pl-[32px] pr-[24px] flex flex-col justify-between border-none grow'} noHorizPadding/>
+      <DrawerMargin clx='grow-0 shrink-0'/>
+    </div>
+  </>) 
+}
+
+/* above lastest
     <div key='last' className={swipeOuter + 'flex flex-col'}>
       <ApplyTypography 
         asTag='section' 
@@ -96,12 +107,7 @@ const TouchDevice: React.FC<{
       </ApplyTypography>
       <DrawerMargin clx='grow-0 shrink-0'/>
     </div>
-    <div key='lastest' className={swipeOuter + 'flex flex-col'}>
-      <Footer siteDef={siteDef} className={swipeInnerTouch + 'pl-[32px] pr-[24px] flex flex-col justify-between border-none grow'} noHorizPadding/>
-      <DrawerMargin clx='grow-0 shrink-0'/>
-    </div>
-  </>) 
-}
+*/
 
 export {
   Desktop,

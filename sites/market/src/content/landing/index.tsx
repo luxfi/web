@@ -14,21 +14,25 @@ import credit from '../products/credit/banner'
 import key from '../products/key/banner'
 // import uranium from '../products/uranium/banner'
 
-import BottomMDX from './landing-bottom.mdx'
+import last from './last'
+
+//import BottomMDX from './landing-bottom.mdx'
 
 
 export default {
 
   banners: [
     silver,
-    gold,
+    //gold,
     credit,
     validator,
     coin,
     // uranium,
     key,
+    last
   ] satisfies BannerBlock[],
 
+/*
   bottom: [
     {blockType: 'element',
      element: <BottomMDX />
@@ -41,4 +45,5 @@ export default {
      )
     } satisfies ElementBlock as Block,
   ] satisfies Block[]
+*/
 }
