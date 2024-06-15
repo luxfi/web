@@ -10,7 +10,7 @@ import {
 
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
-const LOG = true ////////////////////
+const LOG = false ////////////////////
 
 const log = (s: string) => {
   if (LOG) {

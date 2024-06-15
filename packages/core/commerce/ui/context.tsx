@@ -19,7 +19,7 @@ import type { CommerceDrawer, SelectAndBuy, RecentActivity } from './store'
 import { CommerceUIStore } from './store'
 import conf from './conf'
 
-const LOG = true ////////////////////
+const LOG = false ////////////////////
 const log = (s: string) => {
   if (LOG) {
     console.log('CMMC UI CONTEXT ' + s)
