@@ -10,7 +10,7 @@ import {
 
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
-const LOG = false ////////////////////
+const LOG = true ////////////////////
 
 const log = (s: string) => {
   if (LOG) {
@@ -71,7 +71,7 @@ class CommerceUIStore implements
 
   _currentSkuPath: string | undefined = undefined
   _closedByUser: boolean = false
-  _checkingOut: boolean = false
+  _checkingOut: boolean | undefined = undefined
   _ignoreStateChange: boolean = false
   _activePoint: SnapPoint | null = null 
   
@@ -204,7 +204,7 @@ class CommerceUIStore implements
   get ignoreStateChange(): boolean { return this._ignoreStateChange }
   setIgnoreStateChange = (b: boolean): void => { this._ignoreStateChange = b}
 
-  get checkingOut(): boolean { return this._checkingOut }
+  get checkingOut(): boolean | undefined { return this._checkingOut }
   setCheckingOut = (b: boolean): void => { this._checkingOut = b }
 
   get activePoint(): SnapPoint | null { return this._activePoint }
@@ -238,10 +238,14 @@ class CommerceUIStore implements
       ' showBuy: ' + this.showBuy
     ) // ===========
 
+
+
     return ( 
-      !this.closedByUser
+      this._checkingOut !== undefined
       &&
       !this._checkingOut 
+      &&
+      !this.closedByUser
       && 
       (this.showCheckout || this.showAdded || this.showBuy)
     )

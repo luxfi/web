@@ -84,14 +84,14 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
     }
   }, [])
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const checkingOut = (pathname === '/checkout')
 
     /////////////////////////////////////
     log("useEffect: pathname: " + pathname)
     log("useEffect: prev pathname: " + prevPathRef.current)
     
-    if (storeRef.current.checkingOut !== checkingOut) {
+    if (storeRef.current.checkingOut === undefined || storeRef.current._checkingOut!== checkingOut) {
       log("useEffect: setting checkingOut to: " + checkingOut) /////////////////////////////////////
       storeRef.current.setCheckingOut(checkingOut)
     }
