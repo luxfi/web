@@ -2,9 +2,7 @@
 import React, { useState } from 'react'
 import { Plus } from 'lucide-react'
 import { Search } from '../icons'
-import { ChatWidget } from '../../components'
 import { Button, Card } from '@hanzo/ui/primitives'
-import LuxLogo from '../icons/lux-logo'
 
 interface MobileNavMenuAIProps {
     setMenuOpen: (open: boolean) => void

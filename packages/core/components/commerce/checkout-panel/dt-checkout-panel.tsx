@@ -4,17 +4,16 @@ import React, { type PropsWithChildren } from 'react'
 import { ScrollArea, StepIndicator } from '@hanzo/ui/primitives'
 import { AuthWidget } from '@hanzo/auth/components'
 import { CartPanel } from '@hanzo/commerce'
-
-import * as Icons from '../../icons'
-import DesktopBagCarousel from './dt-bag-carousel'
-import CloseButton from './close-button'
 import { cn } from '@hanzo/ui/util'
+
+import { BackButton, Logo, Tooltip } from '../..'
+import DesktopBagCarousel from './dt-bag-carousel'
 import LinksRow from './links-row'
 
 const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
   index: number
   stepNames: string[]
-  close:() => void
+  close: () => void
   className?: string
 }> = ({
   index,
@@ -23,11 +22,15 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
   className='',
   children
 }) => ( 
-
   <div /* id='CHECKOUT_PANEL' */  className={cn('grid grid-cols-2',  className)}>
     <div className='w-full h-full bg-background flex flex-row items-start justify-end'>
-      <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start p-8'>
-        <CloseButton close={close} size='md'/>
+      <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start px-8 pb-8'>
+        <div className=' self-start h-[80px] flex items-center' >
+          <Logo onClick={close} size='md' href='/' variant='text-only' outerClx='logo-outer-tooltip-class' />
+        </div>
+        <Tooltip select='.logo-outer-tooltip-class' text='home' place='bottom-start'/>
+        <BackButton size='sm' clx='!pl-0 !pr-1 self-start back-button-tooltip-class relative -top-4' />
+        <Tooltip select='.back-button-tooltip-class' text='back' place='bottom-start'/>
         <div className='w-full max-w-[550px] mx-auto flex flex-col gap-3'>
           <DesktopBagCarousel className='h-[260px] w-[360px] lg:w-[420px] mx-auto -mt-8' constrainTo={{w: 250, h: 250}}/>
           <CartPanel 

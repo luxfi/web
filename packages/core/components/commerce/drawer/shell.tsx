@@ -64,7 +64,7 @@ const CommerceDrawer: React.FC<PropsWithChildren &
           className={cn(
             'absolute top-0 left-0 right-0 mx-auto z-10',
             'flex justify-center items-start',
-            'border-t rounded-t-lg border-muted-2',
+            'border-t rounded-t-lg border-muted-3',
             drawer.isMobile ? 'h-5 touch-pan-y' : 'h-6',
           )} 
         >

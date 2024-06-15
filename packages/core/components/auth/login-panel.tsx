@@ -58,7 +58,7 @@ const LoginPanel: React.FC<{
               onClick={close}
               className='w-fit !min-w-0 p-2'
             >
-              <Logo size='md' spanClassName='!cursor-pointer' layout='text-only'/>
+              <Logo size='md' textClx='!cursor-pointer' variant='text-only'/>
             </Button>
             <Carousel
               options={{ align: 'center', loop: true }}
