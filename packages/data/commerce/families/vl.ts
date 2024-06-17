@@ -22,6 +22,7 @@ export default {
       price: 1000000, // 1M
       img: VL_IMG_DEF,
       video,
+
     },
     {
       id: 'LXM-VL-VL',
@@ -32,7 +33,8 @@ export default {
       familyId: 'LXM-VL',
       price: 100000, // 100K
       img: VL_IMG_DEF,
-      video
+      video,
+      mediaTransform: { scale: 0.75 }
     },
     {
       id: 'LXM-VL-MI',
@@ -43,7 +45,9 @@ export default {
       familyId: 'LXM-VL',
       price: 10000, // 10K
       img: VL_IMG_DEF,
-      video
+      video,
+      mediaTransform: { scale: 0.50 }
+
     },
     {
       id: 'LXM-VL-NA',
@@ -54,7 +58,9 @@ export default {
       familyId: 'LXM-VL',
       price: 1000, // 1K
       img: VL_IMG_DEF,
-      video
+      video,
+      mediaTransform: { scale: 0.25 }
+
     },
   ] satisfies Product[]
 } satisfies Family

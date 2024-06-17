@@ -1,5 +1,6 @@
 import { 
   action,
+  autorun,
   computed, 
   makeObservable, 
   observable,
@@ -9,9 +10,10 @@ import {
 
 import type { CommerceService, LineItem, ObsLineItemRef } from '@hanzo/commerce/types'
 
-const logOn = false
+const LOG = false ////////////////////
+
 const log = (s: string) => {
-  if (logOn) {
+  if (LOG) {
     console.log('COMMERCE_UI ' + s)
   }
 }
@@ -69,7 +71,7 @@ class CommerceUIStore implements
 
   _currentSkuPath: string | undefined = undefined
   _closedByUser: boolean = false
-  _checkingOut: boolean = false
+  _checkingOut: boolean | undefined = undefined
   _ignoreStateChange: boolean = false
   _activePoint: SnapPoint | null = null 
   
@@ -116,6 +118,7 @@ class CommerceUIStore implements
       showCheckout: computed,
       snapPointPx: computed,
       state: computed,
+      open: computed
     })
   }
 
@@ -135,6 +138,16 @@ class CommerceUIStore implements
         }
       }
     ))
+    this._reactionDisposers.push(autorun(() => {
+      log('AUTORUN: OPEN: ' + this.open)
+      log('AUTORUN:' + // ===============
+        '[showCheckout: '  + this.showCheckout + 
+        '], [showAdded: ' + this.showAdded + 
+        '], [showBuy: ' + this.showBuy + 
+        '], [closedByUser: ' + this._closedByUser + 
+        '], [checkingOut: ' + this._checkingOut + ']'
+      ) // ===========
+    }))
   }
 
   reset = () => {
@@ -191,7 +204,7 @@ class CommerceUIStore implements
   get ignoreStateChange(): boolean { return this._ignoreStateChange }
   setIgnoreStateChange = (b: boolean): void => { this._ignoreStateChange = b}
 
-  get checkingOut(): boolean { return this._checkingOut }
+  get checkingOut(): boolean | undefined { return this._checkingOut }
   setCheckingOut = (b: boolean): void => { this._checkingOut = b }
 
   get activePoint(): SnapPoint | null { return this._activePoint }
@@ -218,26 +231,41 @@ class CommerceUIStore implements
   }
 
   get open(): boolean {
+
+    log('open():' + // ===============
+      ' showCheckout: '  + this.showCheckout + 
+      ' showAdded: ' + this.showAdded + 
+      ' showBuy: ' + this.showBuy
+    ) // ===========
+
+
+
     return ( 
-      !this.closedByUser 
+      this._checkingOut !== undefined
+      &&
+      !this._checkingOut 
+      &&
+      !this.closedByUser
       && 
       (this.showCheckout || this.showAdded || this.showBuy)
     )
   }
 
   get state(): DrawerState {
-    if (this.showBuy) {
-      return 'full'
-    }
-    else if (!this.closedByUser && (this.showAdded || this.showCheckout)) {
-      return 'micro'
+    if (!this.closedByUser && !this._checkingOut) {
+      if (this.showBuy) {
+        return 'full'
+      }
+      else if (this.showAdded || this.showCheckout) {
+        return 'micro'
+      }
     }
     return 'closed'
   }
 
   get showBuy(): boolean {return !!this.currentSkuPath}
-  get showAdded(): boolean { return !this._checkingOut && !!this.item}
-  get showCheckout(): boolean { return !this._checkingOut && !this._service.cartEmpty}
+  get showAdded(): boolean { return !!this.item}
+  get showCheckout(): boolean { return !this._service.cartEmpty}
   get modal(): boolean { return this.state !== 'micro'}
 
   get microHeight(): SnapPoint {

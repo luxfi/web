@@ -27,14 +27,6 @@ const CommerceUIComponent: React.FC = observer(() => {
     router.push('/checkout')
   }
 
-    // see handleCloseGesture()
-  const setOpen = (b: boolean): void => {
-    if (!b) {
-      if (!drawer.closedByUser) {
-        drawer.setClosedByUser(true)
-      }
-    }
-  }
 
   const handleHandleClicked = (): void => {
 
@@ -64,19 +56,10 @@ const CommerceUIComponent: React.FC = observer(() => {
     return false
   }
 
-
   return (
     <CommerceDrawer 
-      open={drawer.open} 
-      setOpen={setOpen}
-      snapPoints={drawer.points}
-      modal={drawer.modal}
-      activeSnapPoint={drawer.activePoint}
-      setActiveSnapPoint={drawer.onActivePointChanged.bind(drawer)}
       handleHandleClicked={handleHandleClicked}
       handleCloseGesture={handleCloseGesture}
-      micro={drawer.state === 'micro'}
-      mobile={drawer.isMobile}
       drawerClx='flex flex-col'
     >
       {drawer.state === 'full' && (
