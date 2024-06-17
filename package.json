@@ -21,11 +21,11 @@
       "@types/react": "^18.3.2",
       "@types/react-dom": "^18.3.0",
       "supports-color": "8.1.1",
-      "@luxfi/core": "5.2.7",
-      "@luxfi/data": "1.0.6",
+      "@luxfi/core": "5.2.8",
+      "@luxfi/data": "1.0.8",
       "@hanzo/auth": "2.4.12",
-      "@hanzo/commerce": "7.1.5",
-      "@hanzo/ui": "3.8.21",
+      "@hanzo/commerce": "7.1.20",
+      "@hanzo/ui": "3.8.24",
       "react-hook-form": "7.51.4"
     },
     "allowedDeprecatedVersions": {

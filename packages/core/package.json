@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/core",
-  "version": "5.2.7",
+  "version": "5.2.8",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -44,6 +44,7 @@
     "firebase": "10.12.0",
     "react-device-detect": "^2.2.3",
     "react-social-icons": "^6.4.0",
+    "react-tooltip": "^5.26.4",
     "request": "^2.88.2",
     "usehooks-ts": "^3.1.0"
   },

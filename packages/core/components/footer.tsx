@@ -33,7 +33,7 @@ const Footer: React.FC<{
         'md:flex md:flex-row md:justify-between ' 
       }>
         <div className='hidden lg:flex flex-col' key={0}>
-          <Logo size='md' layout='text-only' />
+          <Logo size='md' variant='text-only' />
         </div>
         {footer.map((defs: LinkDef[], index: number) => {
 
