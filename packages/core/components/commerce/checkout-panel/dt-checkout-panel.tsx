@@ -24,24 +24,30 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
 }) => ( 
   <div /* id='CHECKOUT_PANEL' */  className={cn('grid grid-cols-2',  className)}>
     <div key={1} className='w-full h-full bg-background flex flex-row items-start justify-end'>
-      <div className='w-full max-w-[750px] relative flex flex-col items-center justify-start px-8 pb-8'>
-        <div key={1} className=' self-start h-[80px] flex items-center' >
+      <div className='w-full h-full max-w-[750px] relative flex flex-col items-stretch justify-start px-8 pb-8'>
+        <div key={1} className='h-[80px] grow-0 flex flex-row items-center' >
           <Logo onClick={close} size='md' href='/' variant='text-only' outerClx='logo-outer-tooltip-class' />
-          <Tooltip select='.logo-outer-tooltip-class' text='home' place='bottom-start'/>
+          <Tooltip select='.logo-outer-tooltip-class' text='home' position='right' offset={6}/>
         </div>
-        <BackButton size='sm' clx='!pl-0 !pr-1 self-start back-button-tooltip-class relative -top-4' />
-        <Tooltip  select='.back-button-tooltip-class' text='back' place='bottom-start'/>
-        <div key={2} className='w-full max-w-[550px] mx-auto flex flex-col gap-3'>
-          <DesktopBagCarousel className='h-[260px] w-[360px] lg:w-[420px] mx-auto -mt-8' constrainTo={{w: 250, h: 250}}/>
+        <BackButton size='sm' clx={
+          'z-10 absolute top-14 left-6 !px-0 aspect-square ' + 
+          'rounded-full hover:!bg-level-1 ' + 
+          'border border-transparent hover:border-muted-2 ' + 
+          'back-button-tooltip-class '
+        }/>
+        <Tooltip  select='.back-button-tooltip-class' text='back' position='right' offset={5}/>
+        <div key={2} className='w-full grow min-h-0 max-w-[550px] mx-auto flex flex-col justify-between gap-3'>
+          <DesktopBagCarousel className='grow-0 h-[260px] w-[360px] lg:w-[420px] mx-auto -mt-8' constrainTo={{w: 250, h: 250}}/>
           <CartPanel 
             className='w-full border-none p-0' 
-            itemClx='mb-3' 
-            totalClx='sticky -bottom-1 p-1 bg-background'
+            itemClx='mb-2' 
+            totalClx='sticky bottom-0 bg-background'
             listClx='pr-3'
             scrollAfter={5}
-            scrollHeightClx='h-[50vh]'
+            scrollHeightClx='min-h-[50vh] grow'
             showPromoCode
             showShipping
+            selectItems
           />
         </div>
       </div>
