@@ -68,19 +68,19 @@ const Logo: React.FC<{
   const outerClasses = 'flex flex-row items-center ' + outerClx
   const spanClasses = 'inline-block font-bold font-heading ' 
     + textClx
-    + (href ? ' hover:text-accent ' : ' cursor-default ') 
+    + (href ? ' hover:text-accent cursor-pointer ' : ' cursor-default ') 
     + classes.span 
 
   return (
     href ? (
       <Link href={href} className={outerClasses} onClick={onClick} >
         <Icons.logo className={classes.icon} />
-        <span className={cn(spanClasses, ' text-inherit')}>{TEXT}</span>
+        <span className={spanClasses}>{TEXT}</span>
       </Link>
     ) : (
       <span className={outerClasses} onClick={onClick}>
         <Icons.logo className={classes.icon} />
-        <span className={cn(spanClasses, ' text-inherit')}>{TEXT}</span>
+        <span className={spanClasses}>{TEXT}</span>
       </span>
     )
   )
