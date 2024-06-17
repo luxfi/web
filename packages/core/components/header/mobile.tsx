@@ -86,28 +86,25 @@ const MobileHeader: React.FC<{
     // header element MUST be fixed, and NOT sticky.  Or else drawer breaks on mobile browsers
     return (<>
       <header className={cn(
-        `bg-background fixed z-header top-0 left-0 w-full h-19 ${menuOpen() ? 'hidden' : 'block'}`,
+        `bg-background fixed z-header top-0 left-0 w-full ${menuOpen() ? 'hidden' : 'block'}`,
         className
       )}>
         {/* smaller than md: mobile style drawer menu; h-11 is 44px, the standard mobile header height */}
-        <div className="flex h-11 items-center justify-between pl-6 pr-4">
-          <div className='h-[74px] w-pr-100 flex flex-row justify-between items-center font-bold'>
-            <Logo href='/' size='sm' className={'top-[3px] h-full'} layout='text-only' />
-            {/* Not that key to the cross-fade effect 
-              is that this is **on top of** the logo. */}
-            {menuOpen() && (
-              <div className={'absolute left-0 top-0 bottom-0 right-0 pl-8 ' +
-              'flex flex-row ' +
-              'bg-background animate-mobile-menu-open'
-            }>
-                <Icons.Avatar className='self-center ' />
-              </div>
-            )}
-            <div className='flex gap-0 flex-row'>
-              <BagButton className='text-primary -mr-[3px]' onClick={openBag} />
-              <MenuToggleButton className='text-foreground' open={menuOpen()} setOpen={setMenuOpen} />
+        <div className='w-full h-11 flex flex-row justify-between items-center font-bold pl-6 pr-4'>
+          <Logo href='/' size='sm' outerClx={'top-[3px] h-full'} variant='text-only' />
+          {/* Not that key to the cross-fade effect 
+            is that this is **on top of** the logo. */}
+          {menuOpen() && (
+            <div className={'absolute left-0 top-0 bottom-0 right-0 pl-8 ' +
+            'flex flex-row ' +
+            'bg-background animate-mobile-menu-open'
+          }>
+              <Icons.Avatar className='self-center ' />
             </div>
-
+          )}
+          <div className='flex gap-0 flex-row'>
+            <BagButton className='text-primary -mr-[3px]' onClick={openBag} />
+            <MenuToggleButton className='text-foreground' open={menuOpen()} setOpen={setMenuOpen} />
           </div>
 
         </div>

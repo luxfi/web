@@ -30,6 +30,7 @@ const BannerBlockComponent: React.FC<{
     return <>banner block required</>
   }
   const banner = block as BannerBlock
+  const specifies = (s: string) => (banner.specifiers?.includes(s))  
 
   const CTAs: React.FC<{className?: string}> = ({
     className=''
@@ -50,7 +51,8 @@ const BannerBlockComponent: React.FC<{
           buttonVariants({ 
             variant: banner.skuPath ? 'outline' : 'primary', 
             size: 'default', 
-            rounded: 'md' }),
+            rounded: 'md' 
+          }),
           'lg:min-w-[220px]  sm:min-w-[220px]'
         )}
       />
@@ -59,7 +61,7 @@ const BannerBlockComponent: React.FC<{
       <BuyButton 
         skuPath={banner.skuPath} 
         size='default'
-        className='lg:min-w-[220px] sm:min-w-[220px]'
+        className={'lg:min-w-[220px] sm:min-w-[220px] ' + (banner.learnLink ? '' : '!min-w-[320px]')}
       >
         Buy
       </BuyButton>
@@ -73,6 +75,7 @@ const BannerBlockComponent: React.FC<{
     const ctaClasses = (groupingClasses && groupingClasses[2]) ? groupingClasses[2] : ''
     return (<>
       <div className={'text-center ' + titleClasses}>
+        {banner.bylineBefore && (<h5 className='text-center'>{banner.bylineBefore}</h5>)}
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
@@ -92,6 +95,7 @@ const BannerBlockComponent: React.FC<{
     const ctaClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
     return (<>
       <div className={'self-center flex flex-col justify-start items-center text-center ' + titleAndMediaClasses} >
+        {banner.bylineBefore && (<h5 className='text-center'>{banner.bylineBefore}</h5>)}
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.video ? (
@@ -113,6 +117,7 @@ const BannerBlockComponent: React.FC<{
   const ctaClasses = (groupingClasses && groupingClasses[5]) ? groupingClasses[5] : ''
 
   return (<>
+    {banner.bylineBefore && (<h5 className={'text-center ' + bylineClasses}>{banner.bylineBefore}</h5>)}
     <h1 className={'text-center ' + titleClasses}>{banner.title}</h1>
     {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
     {banner.video ? (

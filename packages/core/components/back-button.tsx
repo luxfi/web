@@ -5,19 +5,23 @@ import { useRouter } from 'next/navigation'
 import { ChevronLeft } from 'lucide-react'
 
 
-import { Button, buttonVariants } from '@hanzo/ui/primitives'
+import { 
+  Button, 
+  buttonVariants, 
+} from '@hanzo/ui/primitives'
+
 import type { VariantProps } from '@hanzo/ui/util'
 
 const BackButton: React.FC<{
-  variant: VariantProps<typeof buttonVariants>['variant']
+  variant?: VariantProps<typeof buttonVariants>['variant']
   size?: VariantProps<typeof buttonVariants>['size']
-  className?: string
+  clx?: string
   iconClx?: string
 }> = ({
-  variant,
+  variant='ghost',
   size='default',
-  className='',
-  iconClx=''
+  clx='',
+  iconClx='',
 }) => {
 
   const router = useRouter()
@@ -28,10 +32,11 @@ const BackButton: React.FC<{
       variant={variant}
       size={size}
       onClick={back}
-      className={className}
+      className={clx}
     >
       <ChevronLeft className={iconClx}/>
-    </Button>  )
+    </Button> 
+  )
 }
 
 export default BackButton
