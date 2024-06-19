@@ -51,7 +51,7 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
             itemClx='mb-2' 
             totalClx='sticky bottom-0 bg-background'
             listClx='pr-3'
-            scrollAfter={5}
+            scrollAfter={4}
             scrollHeightClx='min-h-[50vh] grow'
             showPromoCode
             showShipping
@@ -63,11 +63,11 @@ const DesktopCheckoutPanel: React.FC<PropsWithChildren & {
     <div key={2} className='w-full h-full flex flex-col bg-level-1 min-h-screen justify-between'>
       <ScrollArea className='w-full flex flex-row items-start justify-start overflow-y-auto'>
         <div className='h-full w-full max-w-[750px] relative flex flex-col items-center px-8 pt-0'>
-          <div key={1} className='bg-level-1 sticky h-30 pb-8 w-full top-0 flex justify-center items-end'>
+          <div key={1} className='bg-level-1 sticky h-[80px] bg-[#aaaaff] w-full top-0 flex justify-center items-end'>
             <AuthWidget noLogin className='hidden md:flex absolute top-4 right-4 '/>
-            <StepIndicator dotSizeRem={1.5} steps={stepNames} currentStep={index} className='gap-2 text-base w-pr-70' />
+            <StepIndicator dotSizeRem={1.35} steps={stepNames} currentStep={index} className='gap-2 text-base w-pr-70' />
           </div>
-          <div key={2} className='w-full max-w-[550px] mx-auto pb-10'>
+          <div key={2} className='w-full max-w-[550px] mx-auto py-8'>
             {children}
           </div>
         </div>

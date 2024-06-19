@@ -68,7 +68,6 @@ const Micro: React.FC<{
 
   const drawer = useCommerceDrawer()
   const recent = useRecentActivity()
-  const mobile = drawer.isMobile
 
   return (        
     <div className={cn(
@@ -91,7 +90,7 @@ const Micro: React.FC<{
         <Button 
           variant='ghost'
           rounded={drawer.isMobile ? 'md' : 'lg'}
-          size={drawer.isMobile ? 'default' : 'lg'}
+          size={drawer.isMobile ? 'sm' : 'lg'}
           onClick={handleItemClicked}
           className={cn(
             'box-content',
@@ -126,13 +125,14 @@ const Micro: React.FC<{
         <CheckoutButton 
           handleCheckout={handleCheckout} 
           variant='primary' 
-          size={drawer.isMobile ? 'default' : 'lg'}
+          size={drawer.isMobile ? 'xs' : 'lg'}
           rounded={drawer.isMobile ? 'md' : 'lg'}
           centerText={drawer.isMobile ? !drawer.showAdded : true}
           className={cn(drawer.isMobile ? 
             (drawer.showAdded ? 'pl-3.5 pr-2.5' : 'min-w-[320px]')
             :
-            (drawer.showAdded ? '' : 'w-[320px]')
+            (drawer.showAdded ? '' : 'w-[320px]'),
+            'text-sm font-semibold'
           )} 
         />
       </div>
