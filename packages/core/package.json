@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/core",
-  "version": "5.2.8",
+  "version": "5.2.9",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

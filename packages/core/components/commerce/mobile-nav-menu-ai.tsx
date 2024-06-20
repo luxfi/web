@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react'
-import { Plus } from 'lucide-react'
+import { ArrowRight, Plus } from 'lucide-react'
 import { Search } from '../icons'
 import { Button, Card } from '@hanzo/ui/primitives'
+import { Logo } from '..'
 
 interface MobileNavMenuAIProps {
     setMenuOpen: (open: boolean) => void
@@ -13,11 +14,16 @@ const MobileNavMenuAI: React.FC<MobileNavMenuAIProps> = ({ setMenuOpen }) => {
 
     return (
         <>
-            <div className="w-full px-5 py-4 text-2xl bg-[#202020] cursor-pointer">
-                <div className="flex items-center gap-5 border-b border-[#3A3A3A]">
-                    <Search className='w-6 h-6 flex-none' />
-                    <div className="text-white font-bold flex-1" onClick={() => setIsOpen(true)}>Ask AI Chat...</div>
-                    <Plus className='w-6 h-6 flex-none rotate-45 transition-transform' onClick={() => setMenuOpen(false)} />
+            <div className="w-full px-[10.8px] py-4 text-2xl cursor-pointer">
+                <div className='flex justify-between'>
+                    <Logo variant='text-only' />
+                    <Plus className='w-[17.7px] h-[17.7px] flex-none rotate-45 transition-transform' onClick={() => setMenuOpen(false)} />
+                </div>
+                <div className="flex items-center gap-5 border-b border-[#3A3A3A] mt-4 rounded-2xl bg-muted-4">
+                    <div className="text-muted-1 font-bold flex-1 flex justify-between h-9 items-center" onClick={() => setIsOpen(true)}>
+                        <span className='text-base pl-2 font-light'>Ask AI a question</span>
+                        <ArrowRight />
+                    </div>                    
                 </div>
             </div>
             <div className={

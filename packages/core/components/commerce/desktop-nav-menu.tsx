@@ -5,7 +5,7 @@ import * as React from "react"
 import Link from "next/link"
 import { cn } from '@hanzo/ui/util'
 import type { LinkDef } from '@hanzo/ui/types'
-import type { LinkDefExtended } from "../../site-def/main-nav"
+import type { ChildMenu, LinkDefExtended } from "../../site-def/main-nav"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -38,59 +38,25 @@ const DesktopNav: React.FC<{
                   </Link>
                 </NavigationMenuItem>
               )
-            } else if (el.title == 'Community') {
+            } else if (el.title == "Credit") {
               return (
                 <NavigationMenuItem key={index}>
                   <NavigationMenuTrigger>{el.title}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid md:grid-cols-2 gap-3 p-6 md:w-[400px] lg:w-[500px]" key={index}>
-                      <li className="row-span-3" key='0'>
-                        <NavigationMenuLink asChild>
-                          <a
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href={el.href}
-                          >
-                            <Warpcast />
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              {el.title}
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              {el.details}
-                            </p>
-                          </a>
-                        </NavigationMenuLink>
-                      </li>
-                      {el.childMenu?.map((component, index) => (
-                        <div className="relative flex items-center my-2" key={index}>
-                          <div className="mr-2 mt-0">
-                          {component.icon}
-                          </div>
-                          <ListItem href={component.href} title={component.title} key={index}>
-                            {component.contents}
-                          </ListItem>
-                        </div>
-                      ))}
-
-                    </ul>
+                  <NavigationMenuContent className="!left-0">
+                    <div className="grid grid-cols-3 w-[846px]">
+                      {GroupChildMenu(el.childMenu)}
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               )
             } else {
               return (
                 <NavigationMenuItem key={index}>
-                  <NavigationMenuTrigger>{el.title}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[500px] " key={index}>
-                      {el.childMenu?.map((component, index) => (
-                        <ListItem
-                          key={index}
-                          title={component.title}
-                          href={component.href}
-                        >
-                          {component.contents}
-                        </ListItem>
-                      ))}
-                    </ul>
+                  <NavigationMenuTrigger className=" !rounded-2xl">{el.title}</NavigationMenuTrigger>
+                  <NavigationMenuContent className="!left-0">
+                    <div className="flex flex-row">
+                      {GroupChildMenu(el.childMenu)}
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               )
@@ -128,3 +94,38 @@ const ListItem = React.forwardRef<
   )
 })
 ListItem.displayName = "ListItem"
+
+const GroupChildMenu = (childs: ChildMenu[] | undefined) => {
+  // Initialize groupedChildMenus with the type specification
+  if (!childs) {
+    return null
+  }
+  let groupedChildMenus = childs.reduce((grouped: Record<string, ChildMenu[]>, childLink) => {
+    if (childLink.groupName) {
+      if (!grouped[childLink.groupName]) {
+        grouped[childLink.groupName] = []
+      }
+      grouped[childLink.groupName].push(childLink)
+    }
+    return grouped
+  }, {} as Record<string, ChildMenu[]>) // added explicit type here
+
+  // Convert groups object to array
+  return Object.entries(groupedChildMenus).map(([groupName, childLinks]: [string, ChildMenu[]]) => { // added type specification here
+    return (
+      <div key={groupName} className={` py-4 px-4 ${groupName === "Elite Card" || groupName === "Sovereign Card" ? " -mt-34" : ""}` }>
+        <h2 className="text-muted-1">{groupName}</h2>
+        <ul className=" w-[200px] gap-3 md:w-[250px] lg:w-[250px]">
+          {childLinks.map((link) => (
+            <div className={"flex items-center"} key={link.title}>
+              {link.icon}
+              <ListItem key={link.title} title={link.title} href={link.href} className="text-muted-1 hover:text-primary hover:bg-transparent">
+                {link.contents}
+              </ListItem>
+            </div>
+          ))}
+        </ul>
+      </div>
+    )
+  })
+}
