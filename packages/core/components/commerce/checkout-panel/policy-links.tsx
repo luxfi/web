@@ -11,12 +11,12 @@ const linkClx = buttonVariants({
   rounded: 'none', 
 })
 
-const LinksRow: React.FC<{
-  className?: string
+const PolicyLinks: React.FC<{
+  clx?: string
 }> = ({
-  className=''
+  clx=''
 }) => (
-  <div className={cn('flex flex-col items-center', className)}>
+  <div className={cn('flex flex-col items-center', clx)}>
     <Separator/>
     <div className='flex gap-4 py-2 text-sm'>
       {/* TODO: add Refund policy and Privacy policy links */}
@@ -26,4 +26,4 @@ const LinksRow: React.FC<{
   </div>   
 )
 
-export default LinksRow
+export default PolicyLinks

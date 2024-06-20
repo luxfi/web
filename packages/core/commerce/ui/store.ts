@@ -138,6 +138,7 @@ class CommerceUIStore implements
         }
       }
     ))
+    /*
     this._reactionDisposers.push(autorun(() => {
       log('AUTORUN: OPEN: ' + this.open)
       log('AUTORUN:' + // ===============
@@ -148,6 +149,7 @@ class CommerceUIStore implements
         '], [checkingOut: ' + this._checkingOut + ']'
       ) // ===========
     }))
+    */
   }
 
   reset = () => {
