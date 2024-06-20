@@ -36,6 +36,7 @@ const BannerBlockComponent: React.FC<BlockComponentProps & {
     return <>banner block required</>
   }
   const banner = block as BannerBlock
+  const specifies = (s: string) => (banner.specifiers?.includes(s))  
 
   const CTAs: React.FC<{className?: string}> = ({
     className=''

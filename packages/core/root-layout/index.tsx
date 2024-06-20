@@ -44,7 +44,7 @@ const viewport = {
   We cannot have these on body tag for scroll-snap to work on iOS!
 */
 const bodyClasses =
-  'bg-background text-foreground flex flex-col min-h-full' +
+  'bg-background text-foreground flex flex-col min-h-full overflow-x-hidden ' +
   getAppRouterBodyFontClasses()
 
 async function RootLayout({
