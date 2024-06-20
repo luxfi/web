@@ -32,18 +32,4 @@ export default {
     last
   ] satisfies BannerBlock[],
 
-/*
-  bottom: [
-    {blockType: 'element',
-     element: <BottomMDX />
-    } satisfies ElementBlock as Block,
-    {blockType: 'element',
-     element: (
-      <div className='w-full flex flex-col justify-center items-center'>
-        <BuyButton skuPath='LXM-AG' className='lg:min-w-[220px] min-w-[220px]'>Buy</BuyButton>
-      </div>
-     )
-    } satisfies ElementBlock as Block,
-  ] satisfies Block[]
-*/
 }
