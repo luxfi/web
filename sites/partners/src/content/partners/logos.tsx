@@ -6,21 +6,12 @@ export default {
     blockType: "partners-logos",
     title: {
         blockType: "heading",
-        heading: "Partners",
+        heading: "PARTNERS",
         level: 3,
     } as C.HeadingBlock,
     partners: [
         {
-            url: 'https://vera.financial',
-            logo: {
-                blockType: 'image',
-                src: '/assets/images/logo_vera.png',
-                alt: 'Vera',
-                dim: { w: 138, h: 37 },
-            } as C.ImageBlock
-        },
-        {
-            url: 'https://cdax.im',
+            url: 'https://cdaxforex.com',
             logo: {
                 blockType: 'image',
                 src: '/assets/images/logo_cdax.svg',
@@ -44,6 +35,15 @@ export default {
                 src: '/assets/images/logo_gda_capital.svg',
                 alt: 'GDA Capital',
                 dim: { w: 142, h: 52 },
+            } as C.ImageBlock
+        },
+        {
+            url: 'https://vera.financial',
+            logo: {
+                blockType: 'image',
+                src: '/assets/images/logo_vera.png',
+                alt: 'Vera',
+                dim: { w: 138, h: 37 },
             } as C.ImageBlock
         },
         {

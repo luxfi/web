@@ -4,12 +4,12 @@ export default {
   blockType: 'product-card',
   badge: {
     blockType: 'heading',
-    heading: 'Retail',
+    heading: 'DeFi',
     level: 0
   } as C.HeadingBlock,
   title: {
     blockType: 'element',
-    element: <a href='https://lux.finance'><h1>LUX<br />FINANCE</h1></a>,
+    element: <a href='https://lux.network'><h1>LUX<br />NETWORK</h1></a>,
   } as C.ElementBlock,
   description: {
     blockType: 'enh-heading',
@@ -18,7 +18,7 @@ export default {
       level: 6
     },
     byline: {
-      text: 'Digital Asset platform powered by Lux Network, a sovereign, decentralized network. Non-custodial, privacy preserving  applications based in the Isle of Man.',
+      text: 'DAO governed decentralized network of blockchains, designed to provide privacy and quantum safety to over a billion users.',
       level: 0
     }
   } as C.EnhHeadingBlock,
