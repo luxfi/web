@@ -29,3 +29,20 @@ div.nextjs-toast-errors-parent[data-nextjs-toast="true"] {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+
+.element-container:hover .icon-container-nor {
+  display: none;
+}
+
+.icon-container-hov {
+  display: none;
+}
+
+.element-container:hover .icon-container-hov {
+  display: block !important;
+}
+
+.element-container:hover .text-container {
+  background: transparent;
+}
