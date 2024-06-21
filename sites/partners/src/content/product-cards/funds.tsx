@@ -9,7 +9,7 @@ export default {
   } as C.HeadingBlock,
   title: {
     blockType: 'element',
-    element: <a href='https://lux.fund'><h1>LUX<br />FUND</h1></a>,
+    element: <a href='https://lux.finance'><h1>LUX<br />FINANCE</h1></a>,
   } as C.ElementBlock,
   description: {
     blockType: 'enh-heading',
@@ -18,7 +18,7 @@ export default {
       level: 6
     },
     byline: {
-      text: 'Fund of Funds managing tokenized real world assets (RWAs) on Lux Network, enabling global access to sound, regulated, and managed portfolios based in Luxembourg.',
+      text: 'Regulated financial platform built on an Isle of Man based MTL providing institutional grade custody and financial services.',
       level: 0
     }
   } as C.EnhHeadingBlock,
@@ -27,8 +27,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Asset Management",
-          href: "https://lux.fund",
+          title: "Licensed, regulated Money Transmitter",
+          href: "https://cdaxforex.com",
           external: false,
           newTab: false,
         }
@@ -38,8 +38,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Real World Asset Backed Funds",
-          href: "https://lux.fund",
+          title: "Highly efficient FX and fiat on/off ramp",
+          href: "https://lux.finance",
           external: false,
           newTab: false,
           variant: 'link',
@@ -50,8 +50,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Arbitrage and Venture Funds",
-          href: "https://lux.fund",
+          title: "Regulated token issuance and redemption",
+          href: "https://lux.finance",
           external: false,
           newTab: false,
           variant: 'link',
@@ -62,8 +62,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Impact Thematic Funds",
-          href: "https://lux.fund",
+          title: "Supports tax-advantaged FX + trading",
+          href: "https://lux.finance",
           external: false,
           newTab: false,
           variant: 'link',
@@ -74,8 +74,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Digitization and Securitization",
-          href: "https://lux.fund",
+          title: "Corporate Cards and Treasury Services",
+          href: "https://lux.finance",
           external: false,
           newTab: false,
           variant: 'link',
@@ -86,8 +86,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Treasury Services",
-          href: "https://lux.fund",
+          title: "Only crypto exchange in Isle of Man",
+          href: "https://lux.exchange",
           external: false,
           newTab: false,
           variant: 'link',

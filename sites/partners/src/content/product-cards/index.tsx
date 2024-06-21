@@ -15,10 +15,9 @@ export default {
     blockType: 'element',
     element: (
       <h5>
-        <span className='font-heading font-bold'>ASSET BACKED</span>
+        <span className='font-heading font-bold'>QUANTUM</span>
         <br />
-        <span className='font-heading font-bold'>1</span>:
-        <span className='font-heading font-bold'>1</span>
+        <span className='font-heading font-bold'>BRIDGE</span>
       </h5>
     ),
   } as C.ElementBlock,
