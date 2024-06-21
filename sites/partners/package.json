@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/partners",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,7 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "@luxfi/core": "5.2.10",
+    "@luxfi/core": "5.2.12",
     "@hanzo/auth": "*",
     "@hanzo/commerce": "*",
     "@hanzo/ui": "*",

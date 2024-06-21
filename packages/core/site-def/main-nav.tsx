@@ -35,6 +35,34 @@ import Wallet from '../components/icons/wallet'
 import Validators from '../components/icons/validators'
 import OpenSource from '../components/icons/open-source'
 import LuxPass from '../components/icons/lux-pass'
+import CompareCardsAct from '../components/icons/compare-cards-act'
+import ViewAllCardsAct from '../components/icons/view-all-card-act'
+import MoreBenefitsAct from '../components/icons/more-benefits-act'
+import AIChatAct from '../components/icons/ai-chat-act'
+import ExchangeAct from '../components/icons/exchange-act'
+import MarketAct from '../components/icons/market-act'
+import ShopAct from '../components/icons/shop-act'
+import CreditAct from '../components/icons/credit-act'
+import LuxFinanceAct from '../components/icons/lux-finance-act'
+import LuxQuestsAct from '../components/icons/lux-quests-act'
+import BridgeAct from '../components/icons/bridge-act'
+import ExplorerAct from '../components/icons/explorer-act'
+import LaunchSubnetAct from '../components/icons/launchsubnet-act'
+import CoinsAct from '../components/icons/coins-act'
+import SafeAct from '../components/icons/safe-act'
+import LuxWalletAct from '../components/icons/wallet-act'
+import ValidatorsAct from '../components/icons/validators-act'
+import DeveloperDocsAct from '../components/icons/developer-docs-act'
+import OpenSourceAct from '../components/icons/open-source-act'
+import LuxPassAct from '../components/icons/lux-pass-act'
+import IntegrationAct from '../components/icons/integrations-act'
+import TemplatesAct from '../components/icons/templates-act'
+import CustomersAct from '../components/icons/customers-act'
+import BlogAct from '../components/icons/blog-act'
+import ChangeLogAct from '../components/icons/changelog-act'
+import CustomerSupportAct from '../components/icons/customer-support-act'
+import FAQsAct from '../components/icons/faqs-act'
+import GuidesAct from '../components/icons/guides-act'
 
 export interface LinkDefExtended extends LinkDef {
   isAIMenu?: boolean
@@ -46,6 +74,7 @@ export interface LinkDefExtended extends LinkDef {
 
 export interface ChildMenu extends LinkDef{
   groupName?:string
+  icon_act?:any
 }
 
 export default [
@@ -67,6 +96,7 @@ export default [
         groupName:'Black Card',
         title: "Anodized Black Titanium",
         icon: <Anodized />,
+        icon_act: '',
         href: "https://lux.credit/cards/black?sku=LXM-CR-B-ABT",
         newTab: false,
         contents:"" //insert string to here
@@ -75,6 +105,7 @@ export default [
         groupName:'Black Card',
         title: "Black Gunmetal",
         icon: <GunMetal />,
+        icon_act: '',
         href: "https://lux.credit/cards/black?sku=LXM-CR-B-GM",
         newTab: false,
         contents:"" //insert string to here
@@ -83,6 +114,7 @@ export default [
         groupName:'Founder Card',
         title: "Cool Chrome",
         icon: <Chrome />,
+        icon_act: '',
         href: "https://lux.credit/cards/founder?sku=LXM-CR-F-CC",
         newTab: false,
         contents:"" //insert string to here
@@ -91,6 +123,7 @@ export default [
         groupName:'Founder Card',
         title: "Iridescent Chrome",
         icon: <Irradescent />,
+        icon_act: '',
         href: "https://lux.credit/cards/founder?sku=LXM-CR-F-IC",
         newTab: false,
         contents:"" //insert string to here
@@ -98,7 +131,8 @@ export default [
       {
         groupName:'Explore',
         title: "Compare cards",
-        icon: <CompareCards width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <CompareCards width={25} height={25} />,
+        icon_act: <CompareCardsAct width={27} height={27} />,
         href: "https://lux.credit/compare",
         newTab: false,
         contents:"Evaluate Lux cards"
@@ -106,7 +140,8 @@ export default [
       {
         groupName:'Explore',
         title: "View all cards",
-        icon: <ViewAllCards width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <ViewAllCards width={25} height={25} />,
+        icon_act: <ViewAllCardsAct  width={25} height={25}/>,
         href: "https://lux.credit/cards",
         newTab: false,
         contents:"General overview"
@@ -114,7 +149,8 @@ export default [
       {
         groupName:'Explore',
         title: "More benefits",
-        icon: <MoreBenefits  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <MoreBenefits  width={25} height={25} />,
+        icon_act: <MoreBenefitsAct width={27} height={27} />,
         href: "#",
         newTab: false,
         contents:"See what's truly unique"
@@ -123,6 +159,7 @@ export default [
         groupName:'Elite Card',
         title: "24k Gold",
         icon: <GoldCard />,
+        icon_act: "",
         href: "https://lux.credit/cards/elite?sku=LXM-CR-E-24G",
         newTab: false,
         contents:"" //insert string to here
@@ -131,6 +168,7 @@ export default [
         groupName:'Elite Card',
         title: "Sterling Silver",
         icon: <Sterling />,
+        icon_act: "",
         href: "https://lux.credit/cards/elite?sku=LXM-CR-E-SS",
         newTab: false,
         contents:"" //insert string to here
@@ -139,6 +177,7 @@ export default [
         groupName:'Sovereign Card',
         title: "Reflective Titanium",
         icon: <MirroredTitanium/>,
+        icon_act: "",
         href: "https://lux.credit/cards/sovereign?sku=LXM-CR-S-RT",
         newTab: false,
         contents:"" //insert string to here
@@ -155,7 +194,8 @@ export default [
       {
         groupName:'Blockchain',
         title: "AI Chat",
-        icon: <AIChat  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <AIChat  width={25} height={25} />,
+        icon_act: <AIChatAct width={27} height={27}/>,
         href: "https://lux.chat",
         newTab: false,
         contents:"Ask anything, literally"
@@ -163,7 +203,8 @@ export default [
       {
         groupName:'Blockchain',
         title: "Exchange",
-        icon: <Exchange  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Exchange  width={25} height={25} />,
+        icon_act: <ExchangeAct width={27} height={27} />,
         href: "https://lux.exchange",
         newTab: false,
         contents:"Buy, sell, trade, swap..."
@@ -171,7 +212,8 @@ export default [
       {
         groupName:'Blockchain',
         title: "Market",
-        icon: <Market  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Market  width={25} height={25} />,
+        icon_act: <MarketAct width={27} height={27}/>,
         href: "https://lux.market",
         newTab: false,
         contents:"Digital collectibles & more" 
@@ -179,7 +221,8 @@ export default [
       {
         groupName:'Blockchain',
         title: "Shop",
-        icon: <Shop  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Shop  width={25} height={25} />,
+        icon_act: <ShopAct width={27} height={27}/>,
         href: "https://lux.market",
         newTab: false,
         contents:"Find any Lux product for sale"
@@ -187,7 +230,8 @@ export default [
       {
         groupName:'Real World',
         title: "Credit",
-        icon: <Credit  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Credit  width={25} height={25} />,
+        icon_act: <CreditAct width={27} height={27}/>,
         href: "https://lux.credit",
         newTab: false,
         contents:"Risk free loans" 
@@ -195,7 +239,8 @@ export default [
       {
         groupName:'Real World',
         title: "Lux Finance",
-        icon: <LuxFinance  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <LuxFinance  width={25} height={25} />,
+        icon_act: <LuxFinanceAct width={27} height={27}/>,
         href: "https://lux.finance",
         newTab: false,
         contents:"Financial arbitrage"
@@ -203,7 +248,8 @@ export default [
       {
         groupName:'More',
         title: "Lux Quest",
-        icon: <LuxQuests  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <LuxQuests  width={25} height={25} />,
+        icon_act: <LuxQuestsAct width={27} height={27}/>,
         href: "https://lux.quest",
         newTab: false,
         contents:"Go above and beyond"
@@ -220,7 +266,8 @@ export default [
       {
         groupName:'Defi Tools',
         title: "Bridge",
-        icon: <Bridge width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Bridge width={25} height={25} />,
+        icon_act: <BridgeAct width={27} height={27}/>,
         href: "https://bridge.lux.network/",
         newTab: false,
         contents:"Teleport assets"
@@ -228,7 +275,8 @@ export default [
       {
         groupName:'Defi Tools',
         title: "Explorer",
-        icon: <Explorer width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Explorer width={25} height={25} />,
+        icon_act: <ExplorerAct width={27} height={27}/>,
         href: "https://explorer.lux.network/",
         newTab: false,
         contents:"All transactions"
@@ -236,7 +284,8 @@ export default [
       {
         groupName:'Defi Tools',
         title: "Launch Subnet",
-        icon: <LaunchSubnet width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <LaunchSubnet width={25} height={25} />,
+        icon_act: <LaunchSubnetAct width={27} height={27}/>,
         href: "https://docs.lux.network/build/subnet/hello-subnet",
         newTab: false,
         contents:"Easy, free, and superior"
@@ -244,7 +293,8 @@ export default [
       {
         groupName:'Earn',
         title: "Coins",
-        icon: <Coins width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Coins width={25} height={25} />,
+        icon_act: <CoinsAct width={27} height={27}/>,
         href: "https://lux.network/coin",
         newTab: false,
         contents:"Be part of the ecosystem"
@@ -252,7 +302,8 @@ export default [
       {
         groupName:'Earn',
         title: "Safe",
-        icon: <Safe width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Safe width={25} height={25} />,
+        icon_act: <SafeAct width={27} height={27} />,
         href: "https://safe.lux.network",
         newTab: false,
         contents:"Multi-signature wallet"
@@ -260,7 +311,8 @@ export default [
       {
         groupName:'Earn',
         title: "Lux Wallet",
-        icon: <Wallet width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Wallet width={25} height={25} />,
+        icon_act: <LuxWalletAct width={27} height={27}/>,
         href: "https://wallet.lux.network",
         newTab: false,
         contents:"Safe and quantum secure"
@@ -268,7 +320,8 @@ export default [
       {
         groupName:'Earn',
         title: "Validators",
-        icon: <Validators width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Validators width={25} height={25} />,
+        icon_act: <ValidatorsAct width={27} height={27}/>,
         href: "https://lux.market/validator",
         newTab: false,
         contents:"Own a part of the network"
@@ -276,7 +329,8 @@ export default [
       {
         groupName:'Get Access',
         title: "Developer docs",
-        icon: <DeveloperDocs width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <DeveloperDocs width={25} height={25} />,
+        icon_act: <DeveloperDocsAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Software explained"
@@ -284,7 +338,8 @@ export default [
       {
         groupName:'Get Access',
         title: "Open Source",
-        icon: <OpenSource width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <OpenSource width={25} height={25} />,
+        icon_act: <OpenSourceAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Accessible for everyone"
@@ -292,7 +347,8 @@ export default [
       {
         groupName:'Get Access',
         title: "Lux Pass",
-        icon: <LuxPass width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <LuxPass width={25} height={25} />,
+        icon_act: <LuxPassAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"All access pass to network"
@@ -309,7 +365,8 @@ export default [
       {
         groupName:'Tools',
         title: "Resource Center",
-        icon: <AIChat  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <AIChat  width={25} height={25} />,
+        icon_act: <AIChatAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Dynamic solutions"
@@ -317,7 +374,8 @@ export default [
       {
         groupName:'Tools',
         title: "Integrations",
-        icon: <Integration  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Integration  width={25} height={25} />,
+        icon_act: <IntegrationAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Simplified onboarding"
@@ -325,7 +383,8 @@ export default [
       {
         groupName:'Tools',
         title: "Templates",
-        icon: <Templates  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Templates  width={25} height={25} />,
+        icon_act: <TemplatesAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Speedy app development"
@@ -333,7 +392,8 @@ export default [
       {
         groupName:'Tools',
         title: "Guides",
-        icon: <Guides  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Guides  width={25} height={25} />,
+        icon_act: <GuidesAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Find help quickly"
@@ -341,7 +401,8 @@ export default [
       {
         groupName:'Company',
         title: "Customers",
-        icon: <Customers  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Customers  width={25} height={25} />,
+        icon_act: <CustomersAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Trusted by the best teams"
@@ -349,7 +410,8 @@ export default [
       {
         groupName:'Company',
         title: "Blog",
-        icon: <Blog  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <Blog  width={25} height={25} />,
+        icon_act: <BlogAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Latest posts and changes"
@@ -357,7 +419,8 @@ export default [
       {
         groupName:'Company',
         title: "Changelog",
-        icon: <ChangeLog  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <ChangeLog  width={25} height={25} />,
+        icon_act: <ChangeLogAct width={27} height={27} />,
         href: "#",
         newTab: false,
         contents:"Manage deployments"
@@ -365,7 +428,8 @@ export default [
       {
         groupName:'More',
         title: "Developer docs",
-        icon: <DeveloperDocs  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <DeveloperDocs  width={25} height={25} />,
+        icon_act: <DeveloperDocsAct width={25}  height={25}/>,
         href: "#",
         newTab: false,
         contents:"Software explained"
@@ -373,7 +437,8 @@ export default [
       {
         groupName:'More',
         title: "Customer Support",
-        icon: <CustomerSupport  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <CustomerSupport  width={25} height={25} />,
+        icon_act: <CustomerSupportAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Dedicated help, 24/7"
@@ -381,7 +446,8 @@ export default [
       {
         groupName:'More',
         title: "FAQs",
-        icon: <FAQs  width={25} height={25} className='outline outline-1 outline-muted-2 outline-offset-4 rounded-sm'/>,
+        icon: <FAQs  width={25} height={25} />,
+        icon_act: <FAQsAct width={27} height={27}/>,
         href: "#",
         newTab: false,
         contents:"Common queries"
