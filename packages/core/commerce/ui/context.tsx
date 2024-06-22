@@ -15,7 +15,7 @@ import { useDebounceCallback } from 'usehooks-ts'
 import { preset as twConfig } from '@hanzo/ui/tailwind'
 import { useCommerce } from '@hanzo/commerce'
 
-import type { CommerceDrawer, SelectAndBuy, RecentActivity } from './store'
+import type { CommerceDrawer, SelectAndBuy } from './store'
 import { CommerceUIStore } from './store'
 import conf from './conf'
 
@@ -37,10 +37,6 @@ const useCommerceDrawer = (): CommerceDrawer => {
 
 const useSelectAndBuy = (): SelectAndBuy => {
   return useContext(CommerceUIContext) as SelectAndBuy
-}
-
-const useRecentActivity = (): RecentActivity => {
-  return useContext(CommerceUIContext) as RecentActivity
 }
 
 const CommerceUIProvider: React.FC<PropsWithChildren> = ({ 
@@ -104,7 +100,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
       &&
       prevPathRef.current !== pathname
     ) {
-      storeRef.current.reset()
+      storeRef.current.newRoute()
       prevPathRef.current = pathname
     }  
   }, [pathname])
@@ -120,7 +116,6 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
 export {
   useCommerceDrawer, 
   useSelectAndBuy,
-  useRecentActivity,
   CommerceUIProvider
 }
 
