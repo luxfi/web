@@ -188,7 +188,7 @@ importers:
         version: 5.4.5
       vite-node:
         specifier: ^1.4.0
-        version: 1.6.0(@types/node@20.14.8)(terser@5.31.1)
+        version: 1.6.0(@types/node@20.14.8)
 
   sites/auth:
     dependencies:
@@ -12514,13 +12514,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-node@1.6.0(@types/node@20.14.8)(terser@5.31.1):
+  vite-node@1.6.0(@types/node@20.14.8):
     dependencies:
       cac: 6.7.14
       debug: 4.3.5(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.1(@types/node@20.14.8)(terser@5.31.1)
+      vite: 5.3.1(@types/node@20.14.8)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -12531,7 +12531,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.3.1(@types/node@20.14.8)(terser@5.31.1):
+  vite@5.3.1(@types/node@20.14.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.38
@@ -12539,7 +12539,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.8
       fsevents: 2.3.3
-      terser: 5.31.1
 
   watchpack@2.4.1:
     dependencies:
