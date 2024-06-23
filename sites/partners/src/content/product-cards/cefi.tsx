@@ -50,8 +50,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Regulated token issuance and redemption",
-          href: "https://app.cdaxforex.com",
+          title: "Credit Cards and Treasury Services",
+          href: "https://lux.credit",
           external: false,
           newTab: false,
           variant: 'link',
@@ -74,8 +74,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Corporate Cards and Treasury Services",
-          href: "https://lux.credit",
+          title: "Asset digitization, tokenization, issuance and redemption",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
