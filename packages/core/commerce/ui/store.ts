@@ -221,8 +221,6 @@ class CommerceUIStore implements
       ' showBuy: ' + this.showBuy
     ) // ===========
 
-
-
     return ( 
       this._checkingOut !== undefined
       &&

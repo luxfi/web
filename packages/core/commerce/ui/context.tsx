@@ -74,6 +74,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
     storeRef.current.initialize()
     onResize()
     window.addEventListener('resize', onResize_debounced);
+
     return () => {
       window.removeEventListener('resize', onResize_debounced)
       storeRef.current.dispose() 
@@ -102,6 +103,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
     ) {
       storeRef.current.newRoute()
       prevPathRef.current = pathname
+      log("ROUTE CHANGE: " + pathname + ": " + storeRef.current._routeChangedTime)
     }  
   }, [pathname])
 

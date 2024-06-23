@@ -1,3 +1,5 @@
+'use client' // Put spline back into a client component, make this ssr comp
+
 import React from 'react'
 
 import { ApplyTypography } from '@hanzo/ui/primitives'
