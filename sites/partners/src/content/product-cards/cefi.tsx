@@ -4,7 +4,7 @@ export default {
   blockType: 'product-card',
   badge: {
     blockType: 'heading',
-    heading: 'Institutional',
+    heading: 'CeFi',
     level: 0
   } as C.HeadingBlock,
   title: {
@@ -38,8 +38,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Highly efficient FX and fiat on/off ramp",
-          href: "https://lux.finance",
+          title: "Low cost FX and fiat on/off ramp",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -51,7 +51,7 @@ export default {
       elements: [
         {
           title: "Regulated token issuance and redemption",
-          href: "https://lux.finance",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -62,8 +62,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Supports tax-advantaged FX + trading",
-          href: "https://lux.finance",
+          title: "Ultra efficient, tax-advantaged FX + trading",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -75,7 +75,7 @@ export default {
       elements: [
         {
           title: "Corporate Cards and Treasury Services",
-          href: "https://lux.finance",
+          href: "https://lux.credit",
           external: false,
           newTab: false,
           variant: 'link',
@@ -86,8 +86,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Only crypto exchange in Isle of Man",
-          href: "https://lux.exchange",
+          title: "Qunatum safe digital asset custody",
+          href: "https://safe.lux.finance",
           external: false,
           newTab: false,
           variant: 'link',
@@ -96,5 +96,3 @@ export default {
     } as C.CTABlock,
   ] as C.CTABlock[]
 }
-
-
