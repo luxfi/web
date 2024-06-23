@@ -14,11 +14,11 @@ export default {
   description: {
     blockType: 'enh-heading',
     heading: {
-      text: 'Financial Sovereignty for All',
+      text: 'Sovereignty for All',
       level: 6
     },
     byline: {
-      text: 'DAO governed decentralized network of blockchains, designed to provide privacy and quantum safety to over a billion users.',
+      text: 'DAO governed, decentralized network of blockchains designed as a public good to power private and quantum safe DeFi on Bitcoin and other blockchains.',
       level: 0
     }
   } as C.EnhHeadingBlock,

@@ -14,11 +14,11 @@ export default {
   description: {
     blockType: 'enh-heading',
     heading: {
-      text: 'Institutional and Private Client',
+      text: 'Institutional Grade',
       level: 6
     },
     byline: {
-      text: 'Regulated financial platform built on an Isle of Man based MTL providing institutional grade custody and financial services.',
+      text: "Next-gen financial stack designed for Web3, powered by an Isle of Man based money transmitter, offering Institutional grade compliance and safety.",
       level: 0
     }
   } as C.EnhHeadingBlock,

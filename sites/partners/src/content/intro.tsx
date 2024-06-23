@@ -4,13 +4,8 @@ export default {
   text: {
     blockType: "enh-heading",
     specifiers: 'center byline-center',
-    preheading: {
-      text: "Lux Partners",
-      level: 3,
-      mb: 4
-    },
     heading: {
-      text: "QUANTUM STANDARD",
+      text: "LUX PARTNERS",
       level: 1,
       mb: 4
     },
@@ -31,7 +26,7 @@ export default {
         variant: 'outline',
       },
       {
-        title: "Partner with us",
+        title: "Lets talk",
         href: "https://apply.lux.partners",
         external: true,
         newTab: false,
