@@ -2,7 +2,7 @@
   "extends": "../tsconfig.modules.base.json",
   "include": [
     "**/*.ts",
-    "**/*.tsx",
+    "**/*.tsx", "components/commerce/_to_deprecate_checkout-widget/index.tsx_",
   ],
   "exclude": [
     "node_modules",
