@@ -13,7 +13,7 @@ const Copyright: React.FC<{
 
   return (
     <div className={className}>
-      {`Copyright © ${yearString}`}&nbsp;<br className='sm:hidden'/>Lux Partners Ltd (Isle of Man) and Lux Industries Inc (Delaware, USA).&nbsp;<br className='md:hidden'/>&nbsp;All rights reserved.
+      {`Copyright © ${yearString}`}&nbsp;<br className='sm:hidden'/>Lux Partners Limited.&nbsp;<br className='md:hidden'/>&nbsp;All rights reserved.
     </div>
   )
 }
