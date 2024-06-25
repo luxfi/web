@@ -66,7 +66,7 @@ async function RootLayout({
     {chatbot && (<ChatWidget
       title='LUX'
       subtitle='AI'
-      chatbotUrl='https://lux.chat/?isIframe=true'
+      chatbotUrl='https://lux.chat/iframe'
       suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
       buttonClx='hidden md:block'
     />)}

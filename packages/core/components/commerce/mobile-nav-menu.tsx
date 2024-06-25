@@ -48,7 +48,7 @@ const MobileNav: React.FC<{
 
               if (!el.isAIMenu) {
                 return (
-                  <AccordionItem key={index} value={el.title ? el.title : ""} className='!no-underline !border-0'>
+                  <AccordionItem key={index} value={el.title ? el.title : ""} className='!no-underline !border-0 px-6'>
                     <AccordionTrigger className={cn(internalClx, itemClx, '')}>
                       <div className={cn(internalClx, itemClx, 'flex items-center justify-between w-full pl-3 text-base font-normal leading-6')}>
                         {el.title}
