@@ -8,7 +8,6 @@ import { CarouselBuyCard } from '@hanzo/commerce'
 import { 
   useSelectAndBuy, 
   useCommerceDrawer, 
-  useRecentActivity 
 } from '../../../commerce/ui/context'
 
 import CommerceDrawer from './shell'
@@ -19,14 +18,11 @@ const CommerceUIComponent: React.FC = observer(() => {
 
   const buy = useSelectAndBuy()
   const drawer = useCommerceDrawer()
-  const recent = useRecentActivity()
   const router = useRouter()
-  
 
   const handleCheckout = (): void => {
     router.push('/checkout')
   }
-
 
   const handleHandleClicked = (): void => {
 
@@ -34,18 +30,12 @@ const CommerceUIComponent: React.FC = observer(() => {
       buy.hideVariants()
     }
     else if (drawer.state === 'micro') {
-      if (drawer.showAdded) {
-        buy.showVariants(recent.item?.sku ?? '')
-      }
-        // checkout only
-      else {
-        drawer.setClosedByUser(true)
-      }
+      buy.showRecentVariants()
     }
   }
 
   const handleItemClicked = () => {
-    buy.showVariants(recent.item?.sku ?? '')
+    buy.showRecentVariants()
   }
 
   const handleCloseGesture = (): boolean => {
@@ -76,7 +66,6 @@ const CommerceUIComponent: React.FC = observer(() => {
                 className='w-full min-w-[160px] sm:max-w-[320px]'
               />
             }
-            onQuantityChanged={recent.quantityChanged.bind(recent)}
             clx='justify-between h-full pb-3 gap-8'
             addBtnClx='w-full min-w-[160px] sm:max-w-[320px]' 
             buttonsAreaClx='grow-0 shrink-0 mt-0'

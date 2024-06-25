@@ -8,6 +8,12 @@ import productCards from "@/content/product-cards"
 const Products = () => {
   return (
     <div className="flex flex-col items-center">
+      <div className="hidden lg:block opacity-40 text-center">
+        <ImageBlockComponent block={productCards.subimage} />
+        <ApplyTypography className="mt-3">
+          <ContentComponent blocks={productCards.subtitle} />
+        </ApplyTypography>
+      </div>
       <div className="grid grid-cols-1 grid-rows-2 gap-8 md:gap-12 lg:grid-cols-2 lg:grid-rows-1 lg:gap-14">
         {productCards.products.map((card, index) => (
           <CardBlockComponent
@@ -17,12 +23,6 @@ const Products = () => {
             className="lg:h-full"
           />
         ))}
-      </div>
-      <div className="hidden lg:block opacity-40 text-center">
-        <ImageBlockComponent block={productCards.subimage} />
-        <ApplyTypography className="mt-3">
-          <ContentComponent blocks={productCards.subtitle} />
-        </ApplyTypography>
       </div>
     </div>
   )

@@ -4,18 +4,13 @@ export default {
   text: {
     blockType: "enh-heading",
     specifiers: 'center byline-center',
-    preheading: {
-      text: "Lux Partners",
-      level: 3,
-      mb: 4
-    },
     heading: {
-      text: "THE GOLD STANDARD",
+      text: "LUX PARTNERS",
       level: 1,
       mb: 4
     },
     byline: {
-      text: "Lux Partners has established a new standard for quantum safe, real world assets, starting with gold and silver.",
+      text: "Pioneering new standards for security, privacy and decentralized finance and on quantum safe distributed ledger technology.",
       level: 0
     }
   } as C.EnhHeadingBlock,
@@ -25,13 +20,13 @@ export default {
     elements: [
       {
         title: "Learn more",
-        href: "https://lux.chat",
+        href: "https://docs.lux.network",
         external: true,
         newTab: false,
         variant: 'outline',
       },
       {
-        title: "Join us",
+        title: "Lets talk",
         href: "https://apply.lux.partners",
         external: true,
         newTab: false,

@@ -4,7 +4,7 @@ export default {
   blockType: 'product-card',
   badge: {
     blockType: 'heading',
-    heading: 'Retail',
+    heading: 'CeFi',
     level: 0
   } as C.HeadingBlock,
   title: {
@@ -14,11 +14,11 @@ export default {
   description: {
     blockType: 'enh-heading',
     heading: {
-      text: 'Financial Sovereignty for All',
+      text: 'Institutional and Private Client',
       level: 6
     },
     byline: {
-      text: 'Digital Asset platform powered by Lux Network, a sovereign, decentralized network. Non-custodial, privacy preserving  applications based in the Isle of Man.',
+      text: 'Quantum safe, institutional grade custody and financial services built on top proven regulated money transmitter and FX platform.',
       level: 0
     }
   } as C.EnhHeadingBlock,
@@ -27,8 +27,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Lux Network",
-          href: "https://lux.network",
+          title: "Regulated, licensed Money Transmitter",
+          href: "https://cdaxforex.com",
           external: false,
           newTab: false,
         }
@@ -38,8 +38,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Lux Bridge",
-          href: "https://bridge.lux.network",
+          title: "Low cost FX and fiat on/off ramp",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -50,7 +50,31 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Lux Credit Card",
+          title: "Asset digitization and tokenization",
+          href: "https://app.lux.market",
+          external: false,
+          newTab: false,
+          variant: 'link',
+        }
+      ]
+    } as C.CTABlock,
+    {
+      blockType: 'cta',
+      elements: [
+        {
+          title: "Ultra efficient FX + trading",
+          href: "https://app.lux.exchange",
+          external: false,
+          newTab: false,
+          variant: 'link',
+        }
+      ]
+    } as C.CTABlock,
+    {
+      blockType: 'cta',
+      elements: [
+        {
+          title: "Corporate Cards and Treasury Services",
           href: "https://lux.credit",
           external: false,
           newTab: false,
@@ -62,32 +86,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Lux Exchange",
-          href: "https://lux.exchange",
-          external: false,
-          newTab: false,
-          variant: 'link',
-        }
-      ]
-    } as C.CTABlock,
-    {
-      blockType: 'cta',
-      elements: [
-        {
-          title: "Lux Market",
-          href: "https://lux.market",
-          external: false,
-          newTab: false,
-          variant: 'link',
-        }
-      ]
-    } as C.CTABlock,
-    {
-      blockType: 'cta',
-      elements: [
-        {
-          title: "Lux Safe",
-          href: "https://safe.lux.finance/welcome",
+          title: "Quantum Safe digital asset custody",
+          href: "https://app.lux.safe",
           external: false,
           newTab: false,
           variant: 'link',

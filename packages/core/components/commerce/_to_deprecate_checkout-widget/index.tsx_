@@ -9,8 +9,6 @@ import { useStepAnimation } from '@hanzo/ui/util-client'
 
 import { Image } from '@hanzo/ui/primitives'
 
-import { useCommerceDrawer, useRecentActivity } from '../../../commerce/ui/context'
-
 import CheckoutButton from '../checkout-button'
 import useAnimationClxSet from './use-anim-clx-set'
 import CONST from './const'
@@ -110,8 +108,6 @@ const CheckoutWidget: React.FC<{
 
   const isCheckout = usePathname() === '/checkout'
   const clxSet = useAnimationClxSet(isCheckout)
-
-  const recentActivity = useRecentActivity()
 
     // for rendering content after recentActivity.item() would return false
   const persistentRef = useRef<LineItem | undefined>(undefined)

@@ -1,18 +1,15 @@
 import React from 'react'
 
-import { ContentComponent } from '@hanzo/ui/blocks'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { DrawerMargin, Footer } from '@luxfi/core'
 
 import BannerComponent from '@/blocks/components/banner-block'
-
 import { landing } from '@/content'
-
 import siteDef from '@/site-def'
 
 const MOBILE_VID_CONSTRAINT = {
-  w: 300,
-  h: 300
+  w: 360,
+  h: 400
 }
 
   // using this approach: 
@@ -25,40 +22,37 @@ const swipeInnerDesk = swipeInner + 'h-full '
 const swipeInnerTouch = swipeInner + 'h-[100svh] '
 
 const Desktop: React.FC = () => (<>
-{landing.banners.map((banner, index) => (
-  <div key={index} className={swipeOuter + 'px-4 lg:px-6 flex flex-col' }>
-    <ApplyTypography 
-      asTag='section' 
-      className={
-        swipeInnerDesk + 
-          // must use justify-between to trigger the 'grow' of the video (below)
-        'w-full h-full flex flex-col items-center justify-between self-stretch grow '
-      } 
-    >
-      <BannerComponent 
-        block={banner}
-        grouping='title-media-cta'
-        groupingClasses={[
-          'flex-none', // Title area
-          'grow', // video area
-          'flex-none xs:w-full md:w-auto md:min-w-[500px]' // cta area
-        ]}
-      />
-    </ApplyTypography>
-    <DrawerMargin clx='grow-0 shrink-0'/>
-  </div>
-))}
+
+  {landing.banners.map((banner, index) => (
+    <div key={index} className={swipeOuter + 'px-4 lg:px-6 flex flex-col' }>
+      <ApplyTypography 
+        asTag='section' 
+        className={
+          swipeInnerDesk + 
+            // must use justify-between to trigger the 'grow' of the video (below)
+          'w-full h-full flex flex-col items-center justify-between self-stretch grow '
+        } 
+      >
+        <BannerComponent 
+          block={banner}
+          agent='desktop'
+          grouping='separate'
+          groupClx={{
+            title: 'flex-none', 
+            media: 'grow', 
+            cta: 'flex-none xs:w-full md:w-auto md:min-w-[500px]' 
+          }}
+        />
+      </ApplyTypography>
+      <DrawerMargin clx='grow-0 shrink-0'/>
+    </div>
+  ))}
   <div key='last' className={swipeOuter + 'swipe flex flex-col justify-start items-stretch'} >
     <Footer siteDef={siteDef} className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
     <DrawerMargin clx='grow-0 shrink-0'/>
   </div>
 </>)
 
-/* above footer
-    <ApplyTypography asTag='section' className={swipeInnerDesk + 'grow w-full border-b flex flex-col items-center justify-start self-stretch lg:gap-10'} >
-      <ContentComponent blocks={landing.bottom}/>
-    </ApplyTypography>
-*/
 
 const TouchDevice: React.FC<{
   isTablet: boolean
@@ -79,10 +73,11 @@ const TouchDevice: React.FC<{
       >
         <BannerComponent 
           block={banner} 
-          groupingClasses={[
-            'md:pt-12 lg:pt-32', 
-            'md:mt-32 md:w-pr-70 lg:w-pr-60 md:self-center']
-          }
+          agent={isTablet ? 'tablet' : 'phone'}
+          groupClx={{
+            title: 'md:pt-12 lg:pt-32', 
+            cta: 'md:mt-32 md:w-pr-70 lg:w-pr-60 md:self-center'
+          }}
           videoConstraint={isTablet ? undefined : MOBILE_VID_CONSTRAINT}
           videoSize={isTablet ? 'lg' : 'md'}
         />
@@ -96,18 +91,6 @@ const TouchDevice: React.FC<{
     </div>
   </>) 
 }
-
-/* above lastest
-    <div key='last' className={swipeOuter + 'flex flex-col'}>
-      <ApplyTypography 
-        asTag='section' 
-        className={swipeInnerTouch + 'pb-[180px] mx-auto px-2 flex flex-col gap-10 justify-center items-center grow'}  
-      >
-        <ContentComponent blocks={landing.bottom}/>
-      </ApplyTypography>
-      <DrawerMargin clx='grow-0 shrink-0'/>
-    </div>
-*/
 
 export {
   Desktop,

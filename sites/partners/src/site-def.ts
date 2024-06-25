@@ -4,14 +4,14 @@ export default {
   currentAs: 'https://lux.partners',
   nav: {
     common: mainNav,
-    featured: [{
-      title: "Login",
-      href: "https://lux.chat/login",
-      newTab: false,
-      variant: 'primary',
-    }],
+    //featured: [{
+    //  title: "Login",
+    //  href: "https://lux.chat/login",
+    //  newTab: false,
+    //  variant: 'primary',
+    //}],
   },
-  footer: footer.standard, 
+  footer: footer.standard,
   chatbot: {
     suggestedQuestions: [
       { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },

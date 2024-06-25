@@ -2,7 +2,7 @@ import React from "react"
 
 import { Footer, Main } from "@luxfi/core"
 
-import Ecosystem from "@/blocks/components/ecosystem"
+//import Ecosystem from "@/blocks/components/ecosystem"
 import Intro from "@/blocks/components/intro"
 import Outro from "@/blocks/components/outro"
 import PartnersBlockComponent from "@/blocks/components/partners/partners-block"
@@ -19,7 +19,6 @@ const LandingPage = () => {
     <>
       <Main className='max-w-[1224px]'>
         <Intro />
-        <Ecosystem />
         <Products />
         <PartnersBlockComponent block={partners} />
         <PartnersBlockComponent block={advisors} />

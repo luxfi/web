@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import { ArrowRight, Plus } from 'lucide-react'
-import { Search } from '../icons'
 import { Button, Card } from '@hanzo/ui/primitives'
 import { Logo } from '..'
 

@@ -1,35 +1,28 @@
 import type * as C from '@hanzo/ui/blocks'
 
 import ProductCardContentBlockComponent from '@/blocks/components/products/product-card-content-block'
-import finance from './finance'
-import funds from './funds'
+import cefi from './cefi'
+import defi from './defi'
 
 export default {
   subimage: {
     blockType: 'image',
-    src: '/assets/images/icon-arrows-up.png',
+    src: '/assets/images/transparent.gif',
     alt: 'arrows up',
     dim: { w: 350, h: 55 },
   } as C.ImageBlock,
   subtitle: {
     blockType: 'element',
-    element: (
-      <h5>
-        <span className='font-heading font-bold'>ASSET BACKED</span>
-        <br />
-        <span className='font-heading font-bold'>1</span>:
-        <span className='font-heading font-bold'>1</span>
-      </h5>
-    ),
+    element: (<></>),
   } as C.ElementBlock,
   products: [
     {
       blockType: 'card',
-      content: <ProductCardContentBlockComponent block={finance} />,
+      content: <ProductCardContentBlockComponent block={cefi} />,
     },
     {
       blockType: 'card',
-      content: <ProductCardContentBlockComponent block={funds} />,
+      content: <ProductCardContentBlockComponent block={defi} />,
     },
   ] as C.CardBlock[],
 }

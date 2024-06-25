@@ -4,21 +4,21 @@ export default {
   blockType: 'product-card',
   badge: {
     blockType: 'heading',
-    heading: 'Institutional',
+    heading: 'CeFi',
     level: 0
   } as C.HeadingBlock,
   title: {
     blockType: 'element',
-    element: <a href='https://lux.fund'><h1>LUX<br />FUND</h1></a>,
+    element: <a href='https://lux.finance'><h1>LUX<br />FINANCE</h1></a>,
   } as C.ElementBlock,
   description: {
     blockType: 'enh-heading',
     heading: {
-      text: 'Institutional and Private Client',
+      text: 'Institutional Grade',
       level: 6
     },
     byline: {
-      text: 'Fund of Funds managing tokenized real world assets (RWAs) on Lux Network, enabling global access to sound, regulated, and managed portfolios based in Luxembourg.',
+      text: "Next-gen financial stack designed for Web3, powered by an Isle of Man based money transmitter, offering Institutional grade compliance and safety.",
       level: 0
     }
   } as C.EnhHeadingBlock,
@@ -27,8 +27,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Asset Management",
-          href: "https://lux.fund",
+          title: "Licensed, regulated Money Transmitter",
+          href: "https://cdaxforex.com",
           external: false,
           newTab: false,
         }
@@ -38,8 +38,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Real World Asset Backed Funds",
-          href: "https://lux.fund",
+          title: "Low cost FX and fiat on/off ramp",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -50,8 +50,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Arbitrage and Venture Funds",
-          href: "https://lux.fund",
+          title: "Credit Cards and Treasury Services",
+          href: "https://lux.credit",
           external: false,
           newTab: false,
           variant: 'link',
@@ -62,8 +62,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Impact Thematic Funds",
-          href: "https://lux.fund",
+          title: "Ultra efficient, tax-advantaged FX + trading",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -74,8 +74,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Digitization and Securitization",
-          href: "https://lux.fund",
+          title: "Asset digitization, tokenization, issuance and redemption",
+          href: "https://app.cdaxforex.com",
           external: false,
           newTab: false,
           variant: 'link',
@@ -86,8 +86,8 @@ export default {
       blockType: 'cta',
       elements: [
         {
-          title: "Treasury Services",
-          href: "https://lux.fund",
+          title: "Qunatum safe digital asset custody",
+          href: "https://safe.lux.finance",
           external: false,
           newTab: false,
           variant: 'link',
@@ -96,5 +96,3 @@ export default {
     } as C.CTABlock,
   ] as C.CTABlock[]
 }
-
-
