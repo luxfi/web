@@ -42,6 +42,7 @@
     "date-fns": "^3.6.0",
     "embla-carousel-autoplay": "^8.1.1",
     "firebase": "10.12.0",
+    "framer-motion": "^11.2.12",
     "react-device-detect": "^2.2.3",
     "react-social-icons": "^6.4.0",
     "react-tooltip": "^5.26.4",
