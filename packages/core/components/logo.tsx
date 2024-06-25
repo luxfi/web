@@ -29,7 +29,7 @@ const Logo: React.FC<{
     {
       span: 'hidden',
       icon: ''
-    } 
+    }  
     :
     (variant === 'text-only') ? 
       {
