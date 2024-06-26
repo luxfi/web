@@ -57,7 +57,7 @@ const CommerceUIComponent: React.FC = observer(() => {
         vaul impl.  So we have to ask the drawer for its currect snappoint 
         and constrain layout to that.  
         */
-        <div style={{height: drawer.snapPointPx - 24 /* fudge factor for handle area */}}>
+        <div style={{height: drawer.snapPointPx - 24 /* fudge factor for handle area */}} >
           <CarouselBuyCard 
             skuPath={buy.currentSkuPath!} 
             checkoutButton={

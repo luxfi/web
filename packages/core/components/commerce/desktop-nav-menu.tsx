@@ -35,8 +35,8 @@ const DesktopNav: React.FC<{ links: LinkDefExtended[] }> = ({ links }) => (
             return (
               <NavigationMenuItem key={index}>
                 <NavigationMenuTrigger className="!rounded-2xl">{el.title}</NavigationMenuTrigger>
-                <NavigationMenuContent className="!left-0">
-                  <div className="grid grid-cols-3 w-[846px]">
+                <NavigationMenuContent className="!left-0 overflow-scroll xl:w-[720px]">
+                  <div className="grid xl:grid-cols-3 xl:h-auto h-[600px] w-full ">
                     <GroupChildMenu childs={el.childMenu} />
                   </div>
                 </NavigationMenuContent>
@@ -46,8 +46,8 @@ const DesktopNav: React.FC<{ links: LinkDefExtended[] }> = ({ links }) => (
             return (
               <NavigationMenuItem key={index}>
                 <NavigationMenuTrigger className="!rounded-2xl">{el.title}</NavigationMenuTrigger>
-                <NavigationMenuContent className="!left-0">
-                  <div className="flex flex-row">
+                <NavigationMenuContent className="!left-0 overflow-scroll">
+                  <div className="xl:flex xl:flex-row w-full xl:h-auto h-[600px]">
                     <GroupChildMenu childs={el.childMenu} />
                   </div>
                 </NavigationMenuContent>
@@ -103,9 +103,9 @@ const GroupChildMenu: React.FC<{ childs: ChildMenu[] | undefined }> = ({ childs 
   }, {} as Record<string, ChildMenu[]>)
 
   return Object.entries(groupedChildMenus).map(([groupName, childLinks]: [string, ChildMenu[]]) => (
-    <div key={groupName} className={`py-4 px-4 ${groupName === "Elite Card" || groupName === "Sovereign Card" ? "-mt-34" : ""}`}>
+    <div key={groupName} className={`xl:p-4 p-2 ${groupName === "Elite Card" || groupName === "Sovereign Card" ? "xl:-mt-34" : ""}`}>
       <h2 className="text-muted-1">{groupName}</h2>
-      <ul className="w-[200px] gap-3 md:w-[250px] lg:w-[250px]">
+      <ul className="w-[200px] gap-3 2xl:w-[250px]">
         {childLinks.map((link) => (
           <div className="flex items-center element-container text-muted-1 hover:text-primary" key={link.title}>
             {

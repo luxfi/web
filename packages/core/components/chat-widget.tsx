@@ -56,7 +56,7 @@ const ChatWidget: React.FC<{
     }>
       <Card className='flex flex-col h-full w-full'>
         <div className='flex px-4 py-2 h-12 bg-level-0 items-center justify-between'>
-          <h3 className='font-semibold font-heading'>{title} <span className='opacity-60'>{subtitle}</span></h3>
+          <h1 className='font-semibold font-heading'>{title} <span className='opacity-60'>{subtitle}</span></h1>
           <Button onClick={onClick} variant='link' size='icon' className='w-fit sm:hidden'>
             <LuxLogo width={24} height={24}/>
           </Button>
@@ -71,7 +71,7 @@ const ChatWidget: React.FC<{
       onClick={onClick}
       className={cn(
           // z-index should be below anything in commerce-iu (buy drawer and checkout widget)
-        'fixed bottom-5 right-5 z-floating cursor-pointer',
+        'fixed bottom-5 right-[24px] md:z-floating z-16 cursor-pointer',
         'hover:drop-shadow-[0_2px_6px_rgba(255,255,255,1)]',
         'transition-transform', 
         showChatbot ? 'rotate-180' : '',

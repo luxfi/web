@@ -94,7 +94,7 @@ const CommerceUIProvider: React.FC<PropsWithChildren> = ({
     }
     if ( prevPathRef.current === 'initial') {
       prevPathRef.current = pathname
-      // no need to reset  
+      storeRef.current.newRoute()
     }
     else if (
       !checkingOut

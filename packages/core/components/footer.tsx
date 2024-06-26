@@ -29,8 +29,8 @@ const Footer: React.FC<{
       <div className={
         (noHorizPadding ? '' : 'px-5 md:px-8 ') +
         'grid grid-cols-2 gap-4 gap-y-6 md:gap-x-6 lg:gap-8 ' + smGridColsClx +  
-        'md:w-full sm:justify-items-center md:mx-0 lg:w-full max-w-screen-2xl ' +
-        'md:flex md:flex-row md:justify-between ' 
+        'md:w-full sm:justify-items-center md:mx-0 lg:w-full ' +
+        'md:flex md:flex-row md:justify-between px-[24px]' 
       }>
         <div className='hidden lg:flex flex-col' key={0}>
           <Logo size='md' variant='text-only' />

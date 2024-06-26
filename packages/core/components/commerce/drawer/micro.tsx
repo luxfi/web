@@ -90,7 +90,7 @@ const Micro: React.FC<{
         <Button 
           variant='ghost'
           rounded={drawer.isMobile ? 'md' : 'lg'}
-          size={drawer.isMobile ? 'sm' : 'lg'}
+          size={drawer.isMobile ? 'sm' : 'default'}
           onClick={handleItemClicked}
           className={cn(
             'box-content',
@@ -99,7 +99,8 @@ const Micro: React.FC<{
             'overflow-hidden ', 
             'px-1 md:px-2 py-[2px]',
             'border border-transparent group-hover:border-muted-3',
-            'group-hover:!bg-transparent '
+            'group-hover:!bg-transparent',
+            '!min-w-0'
           )}
         >
           {cmmc.recentItem?.item.img && (<>
