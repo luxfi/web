@@ -12,6 +12,9 @@ const DrawerMargin: React.FC<{
 }) => {
 
   const drawer = useCommerceDrawer()
+  if (!drawer) {
+    throw new Error("DrawerMargin must be used with a CommerceUIContext!")
+  }
   return (
     <div 
       className={cn('transition-height', clx)} 

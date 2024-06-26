@@ -11,6 +11,7 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
+    "@luxfi/data": "*",
     "@luxfi/core": "*",
     "@hanzo/auth": "*",
     "@hanzo/commerce": "*",
