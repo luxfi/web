@@ -10,7 +10,7 @@ overrides:
   '@types/react': ^18.3.2
   '@types/react-dom': ^18.3.0
   supports-color: 8.1.1
-  '@luxfi/core': 5.3.2
+  '@luxfi/core': 5.3.3
   '@luxfi/data': 1.0.9
   '@hanzo/auth': 2.4.12
   '@hanzo/commerce': 7.3.1
@@ -205,8 +205,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(lbvr4htsagqszbti37lhlnwbg4)
+        specifier: 5.3.3
+        version: 5.3.3(lbvr4htsagqszbti37lhlnwbg4)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -287,8 +287,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@luxfi/data':
         specifier: 1.0.9
         version: 1.0.9(@hanzo/commerce@7.3.1(dis4w4wrq5nrfgf44kamovqxbu))(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(lucide-react@0.344.0(react@18.3.1))
@@ -372,8 +372,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -445,8 +445,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -527,8 +527,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -609,8 +609,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -694,8 +694,8 @@ importers:
         specifier: ^3.3.4
         version: 3.6.0(react-hook-form@7.51.4(react@18.3.1))
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(jluaahwq2yk77ysmw7hzmkqcgq)
+        specifier: 5.3.3
+        version: 5.3.3(jluaahwq2yk77ysmw7hzmkqcgq)
       '@luxfi/data':
         specifier: 1.0.9
         version: 1.0.9(@hanzo/commerce@7.3.1(ok6wir2tddzispckd2xhxcbt5u))(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(lucide-react@0.344.0(react@18.3.1))
@@ -800,8 +800,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(jluaahwq2yk77ysmw7hzmkqcgq)
+        specifier: 5.3.3
+        version: 5.3.3(jluaahwq2yk77ysmw7hzmkqcgq)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -882,8 +882,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -973,8 +973,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -1049,8 +1049,8 @@ importers:
         specifier: ^3.3.4
         version: 3.6.0(react-hook-form@7.51.4(react@18.3.1))
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(jluaahwq2yk77ysmw7hzmkqcgq)
+        specifier: 5.3.3
+        version: 5.3.3(jluaahwq2yk77ysmw7hzmkqcgq)
       '@luxfi/data':
         specifier: 1.0.9
         version: 1.0.9(@hanzo/commerce@7.3.1(ok6wir2tddzispckd2xhxcbt5u))(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(lucide-react@0.344.0(react@18.3.1))
@@ -1164,8 +1164,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(jluaahwq2yk77ysmw7hzmkqcgq)
+        specifier: 5.3.3
+        version: 5.3.3(jluaahwq2yk77ysmw7hzmkqcgq)
       '@luxfi/data':
         specifier: 1.0.9
         version: 1.0.9(@hanzo/commerce@7.3.1(ok6wir2tddzispckd2xhxcbt5u))(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(lucide-react@0.344.0(react@18.3.1))
@@ -1261,8 +1261,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -1331,8 +1331,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -1413,8 +1413,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -1492,8 +1492,8 @@ importers:
         specifier: ^3.3.4
         version: 3.6.0(react-hook-form@7.51.4(react@18.3.1))
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(jluaahwq2yk77ysmw7hzmkqcgq)
+        specifier: 5.3.3
+        version: 5.3.3(jluaahwq2yk77ysmw7hzmkqcgq)
       '@luxfi/data':
         specifier: 1.0.9
         version: 1.0.9(@hanzo/commerce@7.3.1(ok6wir2tddzispckd2xhxcbt5u))(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(lucide-react@0.344.0(react@18.3.1))
@@ -1598,8 +1598,8 @@ importers:
         specifier: 3.8.34
         version: 3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8)
       '@luxfi/core':
-        specifier: 5.3.2
-        version: 5.3.2(qvhghhh4atbxk325nrwnxosc3i)
+        specifier: 5.3.3
+        version: 5.3.3(qvhghhh4atbxk325nrwnxosc3i)
       '@next/mdx':
         specifier: 14.1.0
         version: 14.1.0(@mdx-js/loader@3.0.1(supports-color@8.1.1)(webpack@5.92.0))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -2816,8 +2816,8 @@ packages:
   '@js-sdsl/ordered-map@4.4.2':
     resolution: {integrity: sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==}
 
-  '@luxfi/core@5.3.2':
-    resolution: {integrity: sha512-JW4peHfERLWxzp37TAiLWemk+UFY52nf42NFs4wy4RHasdpJxGURFEf69yJAg7Ac0SsfBEG+/vOhvbKZQPidlQ==}
+  '@luxfi/core@5.3.3':
+    resolution: {integrity: sha512-/NrkctvIiYgGlYgXI1jE+qquUES5shgJxcCY6Ht3Rqg3WP9pbil5cAOoXqOPHj/s45XRzldM7dyvPDPoLnLI1g==}
     peerDependencies:
       '@hanzo/auth': 2.4.12
       '@hanzo/commerce': 7.3.1
@@ -8701,7 +8701,7 @@ snapshots:
   '@js-sdsl/ordered-map@4.4.2':
     optional: true
 
-  '@luxfi/core@5.3.2(jluaahwq2yk77ysmw7hzmkqcgq)':
+  '@luxfi/core@5.3.3(jluaahwq2yk77ysmw7hzmkqcgq)':
     dependencies:
       '@hanzo/auth': 2.4.12(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.12.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.4)(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(supports-color@8.1.1)(zod@3.23.8)
       '@hanzo/commerce': 7.3.1(ok6wir2tddzispckd2xhxcbt5u)
@@ -8732,7 +8732,7 @@ snapshots:
       - '@react-native-async-storage/async-storage'
       - embla-carousel
 
-  '@luxfi/core@5.3.2(lbvr4htsagqszbti37lhlnwbg4)':
+  '@luxfi/core@5.3.3(lbvr4htsagqszbti37lhlnwbg4)':
     dependencies:
       '@hanzo/auth': 2.4.12(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.12.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.4)(next@14.2.3(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(zod@3.23.8)
       '@hanzo/commerce': 7.3.1(qcotcwj6kkvaqc3az6lisodssu)
@@ -8763,7 +8763,7 @@ snapshots:
       - '@react-native-async-storage/async-storage'
       - embla-carousel
 
-  '@luxfi/core@5.3.2(qvhghhh4atbxk325nrwnxosc3i)':
+  '@luxfi/core@5.3.3(qvhghhh4atbxk325nrwnxosc3i)':
     dependencies:
       '@hanzo/auth': 2.4.12(@hanzo/ui@3.8.34(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(@types/react-dom@18.3.0)(@types/react@18.3.3)(date-fns@3.6.0)(embla-carousel@8.1.1)(lucide-react@0.344.0(react@18.3.1))(mobx@6.12.4)(next-themes@0.2.1(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.4)(validator@13.12.0)(zod@3.23.8))(@hookform/resolvers@3.6.0(react-hook-form@7.51.4(react@18.3.1)))(firebase@10.12.0)(lucide-react@0.344.0(react@18.3.1))(mobx-react-lite@4.0.7(mobx@6.12.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(mobx@6.12.4)(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-hook-form@7.51.4(react@18.3.1))(react@18.3.1)(zod@3.23.8)
       '@hanzo/commerce': 7.3.1(dis4w4wrq5nrfgf44kamovqxbu)
