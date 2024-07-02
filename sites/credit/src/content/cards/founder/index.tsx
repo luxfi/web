@@ -26,7 +26,7 @@ const card: Card = {
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Cool Chrome'
       },
-      animation: '../../assets/content/iridescent-card.mp4'
+      animation: '../../assets/content/cool-chrome-card.mp4'
     },
     {
       title: 'Iridescent Chrome',
