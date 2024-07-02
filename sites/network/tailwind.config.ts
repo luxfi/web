@@ -9,4 +9,13 @@ export default {
       './node_modules/@hanzo/**/*.{ts,tsx}'
     ]
   },
+  theme: {
+    extend: {
+      colors: {
+          white: "#ffffff",
+          black: "#000000",
+          gray: "#e5e7eb",
+      }
+    },
+  }
 }
