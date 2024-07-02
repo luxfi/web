@@ -27,6 +27,7 @@ const Page = ({ searchParams }: Props ) => {
         snapTile
         key={`section-${index}`} 
         bottom={<DrawerMargin clx='grow-0 shrink-0'/>}
+        contentClx='max-w-screen-2xl'
       />
     ))}
     <FooterSlide agent={agent} />
