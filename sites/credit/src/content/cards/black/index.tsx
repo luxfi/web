@@ -23,7 +23,7 @@ const card: Card = {
       },
       cardImg: {
         src: '/assets/commerce/cr/product/black-titanium-back.png',
-        dim: {w: 800, h: 441 },
+        dim: {w: 700, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
       animation: '../../assets/content/gunmetal-card.mp4'
@@ -39,7 +39,7 @@ const card: Card = {
       },
       cardImg: {
         //TODO: Change this to the correct image
-        src: '/assets/commerce/cr/product/black-f.png',
+        src: '/assets/commerce/cr/product/black-ff.png',
         dim: {w: 700, h: 441 },
         alt: 'Black Card Black Gunmetal',
       },
