@@ -3,7 +3,6 @@
 import * as React from "react"
 import Link from "next/link"
 import { cn } from '@hanzo/ui/util'
-import type { LinkDef } from '@hanzo/ui/types'
 import type { ChildMenu, LinkDefExtended } from "../../site-def/main-nav"
 import {
   NavigationMenu,
@@ -14,118 +13,173 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from '@hanzo/ui/primitives'
-import Warpcast from "../icons/warpcast"
 
-const DesktopNav: React.FC<{ links: LinkDefExtended[] }> = ({ links }) => (
-  links.length > 0 ? (
+const DesktopNav: React.FC<{
+  links: LinkDefExtended[],
+  isMenuOpened: boolean,
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+}> = ({ links, isMenuOpened, setIsMenuOpen }) => {
+
+  React.useEffect(() => {
+    const preventScroll = (e: WheelEvent | TouchEvent) => {
+      e.preventDefault();
+    };
+
+    if (isMenuOpened) {
+      window.addEventListener('wheel', preventScroll, { passive: false });
+      window.addEventListener('touchmove', preventScroll, { passive: false });
+      window.addEventListener('keydown', preventScrollKeys, { passive: false });
+    } else {
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+      window.removeEventListener('keydown', preventScrollKeys);
+    }
+
+    return () => {
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+      window.removeEventListener('keydown', preventScrollKeys);
+    };
+  }, [isMenuOpened]);
+
+  const preventScrollKeys = (e: KeyboardEvent) => {
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes(e.key)) {
+      e.preventDefault();
+    }
+  };
+
+  const handleMouseEnter = React.useCallback(() => {
+    setIsMenuOpen(true);
+  }, [setIsMenuOpen]);
+
+  const handleMouseLeave = React.useCallback(() => {
+    setIsMenuOpen(false);
+  }, [setIsMenuOpen]);
+
+  return links.length > 0 ? (
     <NavigationMenu>
       <NavigationMenuList>
-        {links.map((el, index) => {
-          if (el.isAIMenu) {
-            return (
-              <NavigationMenuItem key={index}>
-                <Link href={el.href} legacyBehavior passHref >
-                  <NavigationMenuLink className={cn('!rounded-2xl ', navigationMenuTriggerStyle())}>
-                    {el.title}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-            )
-          } else if (el.title === "Cards") {
-            return (
-              <NavigationMenuItem key={index}>
-                <NavigationMenuTrigger className="!rounded-2xl">{el.title}</NavigationMenuTrigger>
-                <NavigationMenuContent className="!left-0 overflow-scroll xl:w-[720px]">
-                  <div className="grid xl:grid-cols-3 xl:h-auto h-[600px] w-full ">
-                    <GroupChildMenu childs={el.childMenu} />
+        {links.map((el, index) => (
+          <NavigationMenuItem key={index}>
+            {el.isAIMenu ? (
+              <Link href={el.href} legacyBehavior passHref>
+                <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), ' rounded-full')}>
+                  {el.title}
+                </NavigationMenuLink>
+              </Link>
+            ) : el.title === "Cards" ? (
+              <>
+                <NavigationMenuTrigger
+                  className="rounded-full"
+                  onMouseEnter={handleMouseEnter}
+                  onFocus={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onBlur={handleMouseLeave}
+                >
+                  {el.title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className="fixed left-0 top-20 w-screen h-full border-0 !backdrop-blur-3xl bg-transparent mt-0"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="flex justify-center items-start">
+                    <div className="grid xl:grid-cols-3 w-full justify-center max-w-[750px]">
+                      {GroupChildMenu({ childs: el.childMenu, isCards: true })}
+                    </div>
                   </div>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
-            )
-          } else {
-            return (
-              <NavigationMenuItem key={index}>
-                <NavigationMenuTrigger className="!rounded-2xl">{el.title}</NavigationMenuTrigger>
-                <NavigationMenuContent className="!left-0 overflow-scroll">
-                  <div className="xl:flex xl:flex-row w-full xl:h-auto h-[600px]">
-                    <GroupChildMenu childs={el.childMenu} />
+              </>
+            ) : (
+              <>
+                <NavigationMenuTrigger
+                  className="rounded-full"
+                  onMouseEnter={handleMouseEnter}
+                  onFocus={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onBlur={handleMouseLeave}
+                >
+                  {el.title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className="fixed left-0 top-20 w-screen h-full border-0 !backdrop-blur-3xl bg-transparent mt-0"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="flex flex-row w-full justify-center">
+                    {GroupChildMenu({ childs: el.childMenu })}
                   </div>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
-            )
-          }
-        })}
+              </>
+            )}
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
-  ) : null
-)
+  ) : null;
+};
+
 export default DesktopNav
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-level-1 hover:text-accent-foreground focus:bg-level-1 focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-3 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
+>(({ className, title, children, key, ...props }, ref) => (
+  <li key={key}>
+    <NavigationMenuLink asChild>
+      <a
+        ref={ref}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-accent-foreground focus:bg-level-1 focus:text-accent-foreground text-muted-1 hover:text-primary hover:bg-transparent duration-1000 ease-in-out",
+          className
+        )}
+        {...props}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        <p className="line-clamp-3 text-sm leading-snug text-muted-1">
+          {children}
+        </p>
+      </a>
+    </NavigationMenuLink>
+  </li>
+));
 ListItem.displayName = "ListItem"
 
-const GroupChildMenu: React.FC<{ childs: ChildMenu[] | undefined }> = ({ childs }) => {
+const GroupChildMenu = (params: { childs: ChildMenu[] | undefined, isCards?: boolean }) => {
+  const { childs, isCards = false } = params;
+
   if (!childs) {
-    return null
+    return null;
   }
 
-  let groupedChildMenus = childs.reduce((grouped: Record<string, ChildMenu[]>, childLink) => {
+  const groupedChildMenus = childs.reduce((grouped: Record<string, ChildMenu[]>, childLink) => {
     if (childLink.groupName) {
-      if (!grouped[childLink.groupName]) {
-        grouped[childLink.groupName] = []
-      }
-      grouped[childLink.groupName].push(childLink)
+      grouped[childLink.groupName] = grouped[childLink.groupName] || [];
+      grouped[childLink.groupName].push(childLink);
     }
-    return grouped
-  }, {} as Record<string, ChildMenu[]>)
+    return grouped;
+  }, {});
 
-  return Object.entries(groupedChildMenus).map(([groupName, childLinks]: [string, ChildMenu[]]) => (
-    <div key={groupName} className={`xl:p-4 p-2 ${groupName === "Elite Card" || groupName === "Sovereign Card" ? "xl:-mt-34" : ""}`}>
+  const getChildExtraClass = React.useCallback((index: number) => {
+    if (isCards && (index === 3 || index === 4)) {
+      return "xl:-mt-30"
+    }
+    return ""
+  }, [isCards]);
+
+  return Object.entries(groupedChildMenus).map(([groupName, childLinks], index) => (
+    <div key={groupName} className={cn("py-4 px-4 ", getChildExtraClass(index))}>
       <h2 className="text-muted-1">{groupName}</h2>
-      <ul className="w-[200px] gap-3 2xl:w-[250px]">
+      <ul className="w-[200px] gap-3 md:w-[250px] lg:w-[250px]">
         {childLinks.map((link) => (
-          <div className="flex items-center element-container text-muted-1 hover:text-primary" key={link.title}>
-            {
-              link.icon_act ? (
-                <>
-                  <div className="icon-container-nor">{link.icon}</div>
-                  <div className="icon-container-hov">{link.icon_act}</div>
-                </>
-              ):(
-                <div>{link.icon}</div>
-              )
-            }
-            <div className="text-container">
-              <ListItem key={link.title} title={link.title} href={link.href} className="hover:bg-transparent">
-                {link.contents}
-              </ListItem>
-            </div>
+          <div className="flex justify-start items-center" key={link.title}>
+            {link.icon}
+            <ListItem key={link.title} title={link.title} href={link.href} className="ml-[14px]">
+              {link.contents}
+            </ListItem>
           </div>
         ))}
       </ul>
     </div>
-  ))
-}
+  ));
+};
