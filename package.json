@@ -31,5 +31,8 @@
     "allowedDeprecatedVersions": {
       "request": "*"
     }
+  },
+  "dependencies": {
+    "undici": "5.28.4"
   }
 }
