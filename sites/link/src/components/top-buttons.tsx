@@ -12,7 +12,7 @@ const TopButtons = () => {
   return (
     <div className='flex justify-between w-full max-w-[680px]'>
       <div>
-        <ShareDialog link={{name: "LUX", url: "", icon: ""}} showButton={true}/>
+        <ShareDialog link={{name: "LUX", url: "", icon: ""}} showButton={true} />
       </div>
       <div>
         <ContactDialog

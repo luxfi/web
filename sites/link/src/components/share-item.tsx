@@ -25,7 +25,7 @@ const ShareItem: React.FC<{
           <div className='flex justify-between px-2'>
             <div className='flex gap-4 items-center'>
               {icon}
-              <p className='text-black'>{title}</p>
+              <p className='text-white'>{title}</p>
             </div>
             <Icons.ArrowRight className='my-auto'/>
           </div>

@@ -40,7 +40,7 @@ const ShareDialog: React.FC<{
       <DialogTrigger asChild>
         {showButton ? (
           <Button className='bg-primary rounded-full h-[49px] w-[49px] items-center'>
-            <Icons.Share2 className='text-white'/>
+            <Icons.Share2 className='text-black'/>
           </Button>
         ) : (
           <Icons.Share2 className='text-white hover:bg-secondary-0 p-1 rounded'/>
@@ -94,7 +94,7 @@ const ShareDialog: React.FC<{
               readOnly
             />
             <Button onClick={() => {navigator.clipboard.writeText(url())}}>
-              <Icons.Copy className='text-white'/>
+              <Icons.Copy className='text-black'/>
             </Button>
           </div>
 
