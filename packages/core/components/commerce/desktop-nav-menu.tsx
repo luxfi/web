@@ -56,30 +56,34 @@ const DesktopNav: React.FC<{
     setIsMenuOpen(false);
   }, [setIsMenuOpen]);
 
+  const menuHiddenClass = !isMenuOpened ? "invisible" : "";
+
   return links.length > 0 ? (
     <NavigationMenu>
       <NavigationMenuList>
         {links.map((el, index) => (
-          <NavigationMenuItem key={index}>
+          <NavigationMenuItem key={index} className="!m-0">
             {el.isAIMenu ? (
               <Link href={el.href} legacyBehavior passHref>
-                <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), ' rounded-full')}>
+                <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), ' text-muted-1 bg-transparent')}>
                   {el.title}
                 </NavigationMenuLink>
               </Link>
             ) : el.title === "Cards" ? (
               <>
                 <NavigationMenuTrigger
-                  className="rounded-full"
+                  className="text-muted-1 bg-transparent"
                   onMouseEnter={handleMouseEnter}
                   onFocus={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onBlur={handleMouseLeave}
                 >
-                  {el.title}
+                  <Link href={el.href} legacyBehavior passHref>
+                    {el.title}
+                  </Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent
-                  className="fixed left-0 top-20 w-screen h-full border-0 !backdrop-blur-3xl bg-transparent mt-0"
+                  className={cn("fixed left-0 top-14 pt-6 w-screen h-full border-0 !backdrop-blur-3xl bg-transparent mt-0", menuHiddenClass)}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -93,16 +97,21 @@ const DesktopNav: React.FC<{
             ) : (
               <>
                 <NavigationMenuTrigger
-                  className="rounded-full"
+                  className="text-muted-1 bg-transparent"
                   onMouseEnter={handleMouseEnter}
                   onFocus={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onBlur={handleMouseLeave}
                 >
-                  {el.title}
+                  {
+                    el.href && el.href !== "" ?
+                      <Link href={el.href} legacyBehavior passHref>
+                        {el.title}
+                      </Link> : <>{el.title}</>
+                  }
                 </NavigationMenuTrigger>
                 <NavigationMenuContent
-                  className="fixed left-0 top-20 w-screen h-full border-0 !backdrop-blur-3xl bg-transparent mt-0"
+                  className={cn("fixed left-0 top-14 pt-6 w-screen h-full border-0 !backdrop-blur-3xl bg-transparent mt-0", menuHiddenClass)}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -124,8 +133,8 @@ export default DesktopNav
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, key, ...props }, ref) => (
-  <li key={key}>
+>(({ className, title, children, ...props }, ref) => (
+  <li key={title}>
     <NavigationMenuLink asChild>
       <a
         ref={ref}
@@ -160,12 +169,12 @@ const GroupChildMenu = (params: { childs: ChildMenu[] | undefined, isCards?: boo
     return grouped;
   }, {});
 
-  const getChildExtraClass = React.useCallback((index: number) => {
+  const getChildExtraClass = (index: number) => {
     if (isCards && (index === 3 || index === 4)) {
-      return "xl:-mt-30"
+      return "xl:-mt-32"
     }
     return ""
-  }, [isCards]);
+  };
 
   return Object.entries(groupedChildMenus).map(([groupName, childLinks], index) => (
     <div key={groupName} className={cn("py-4 px-4 ", getChildExtraClass(index))}>
