@@ -51,9 +51,9 @@ const Footer: React.FC<{
               )} 
               key={index + 1}
               itemClx={(def: LinkDef) => ((def.variant === 'linkFG') ?
-                'font-nav text-[15px]/[1.3] font-medium text-foreground tracking-normal'
+                'font-nav text-[15px]/[1.3] font-medium tracking-normal text-muted-1 sm:hover:text-foreground transition-color duration-500'
                 : 
-                'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-1'
+                'text-[15px]/[1.1] font-normal tracking-[0.2px] text-muted-1 sm:hover:text-foreground transition-color duration-500'
               )}
             /> 
           )
