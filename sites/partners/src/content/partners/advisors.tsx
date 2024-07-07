@@ -119,6 +119,32 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
+      name: "Dan Coinburn",
+      title: "Evangelism",
+      description: "Dan Coinburn is a visionary blockchain developer and media producer, leading the way in innovative technologies and digital media. As the founder of Coinburn.com, Dan has established himself as a pioneer in the blockchain industry. Specializing in Ethereum Virtual Machines (EVMs) and Solana, Dan’s technical expertise enables him to develop and optimize solutions across these leading blockchain platforms, ensuring efficiency and scalability. Dan’s companies are spearheading the development of plastic-free solutions for payment cards via non-custodial NFTs. As a media content creator and producer, Dan and his team have achieved remarkable success, amassing tens of millions of views on social media. Their captivating content has been showcased at prestigious fashion events in Miami, New York, Los Angeles, Milan, Paris, as well as at the Miss USA and Miss Universe pageants.",
+      url: "https://lux.partners/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/ryan-stobie.png',
+        alt: 'Dan Coinburn',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "John Hanks",
+      title: "Engineering",
+      description: "John Hanks is a seasoned blockchain engineer and entrepreneur with a rich history in the blockchain industry. With a deep passion for decentralized technologies, John has played a pivotal role in numerous successful blockchain projects, contributing his expertise in engineering and innovation. His work spans various sectors, highlighting his versatility and commitment to advancing blockchain solutions. John’s visionary approach and hands-on experience have earned him a reputation as a leader and innovator in the blockchain community. He continues to drive forward-thinking projects that push the boundaries of what blockchain technology can achieve, all while maintaining a focus on engineering excellence and entrepreneurial spirit.",
+      url: "https://lux.partners/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/john-hanks.png',
+        alt: 'John Hanks',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
       name: "Major Williams",
       title: "Art, Sustainability, Technology",
       description: "Major \"Dream\" Williams, a visionary with diverse talents in finance, entrepreneurship, fitness, and culinary arts, aims to transform society's challenges into opportunities. With a keen ability to inspire and collaborate with international thought leaders, he envisions a world of financial freedom through open protocols.",
