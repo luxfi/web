@@ -2,18 +2,19 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+
 import { setCookie } from 'cookies-next'
 
 import { cn } from '@hanzo/ui/util'
 import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
-import { LoginPanel as Login } from '@hanzo/auth/components'
+import { LoginPanel as Login, SignupPanel as Signup } from '@hanzo/auth/components'
 
 import Logo from '../logo'
 import { EmblaAutoplay } from '..'
 import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
 
-const LoginPanel: React.FC<{
+const SignupPanel: React.FC<{
   close: () => void
   getStartedUrl?: string
   redirectUrl?: string
@@ -49,6 +50,7 @@ const LoginPanel: React.FC<{
       let url = new URL(redirectUrl ?? '')
       let params = new URLSearchParams(url.search)
       params.append('auth-token', token)
+
       url.search = params.toString()
 
       redirectUrl && router.push(url.toString())
@@ -95,7 +97,7 @@ const LoginPanel: React.FC<{
               >
                 <LuxLogo className='w-5 h-5' />
               </Button>
-              <Login
+              <Signup
                 getStartedUrl={getStartedUrl}
                 redirectUrl={redirectUrl}
                 className='w-full max-w-sm'
@@ -111,4 +113,4 @@ const LoginPanel: React.FC<{
     )
   }
 
-export default LoginPanel
+export default SignupPanel
