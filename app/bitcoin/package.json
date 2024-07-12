@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@luxfi/data": "*",
-    "@luxfi/ui": "*",
+    "@luxfi/ui": "5.3.8",
     "@hanzo/auth": "*",
     "@hanzo/commerce": "*",
     "@hanzo/ui": "*",

@@ -13,7 +13,7 @@
     "ul:ui": "pnpm unlink -g @hanzo/ui"
   },
   "dependencies": {
-    "@luxfi/ui": "*",
+    "@luxfi/ui": "5.3.8",
     "@hanzo/auth": "*",
     "@hanzo/commerce": "*",
     "@hanzo/ui": "*",
