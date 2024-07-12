@@ -18,6 +18,7 @@ export { default as BuyButton } from './commerce/buy-button'
 export { default as CheckoutButton } from './commerce/checkout-button'
 export { default as CheckoutPanel } from './commerce/checkout-panel'
 export { default as LoginPanel } from './auth/login-panel'
+export { default as SignupPanel } from './auth/signup-panel'
 export { default as Scripts } from './scripts'
 export { default as Tooltip } from './tooltip'
 
