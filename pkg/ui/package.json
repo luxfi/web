@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/ui",
-  "version": "5.3.7",
+  "version": "5.3.8",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxfi/web.git",
-    "directory": "packages/core"
+    "directory": "pkg/core"
   },
   "keywords": [
     "components",
