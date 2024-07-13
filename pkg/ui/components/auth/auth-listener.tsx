@@ -14,7 +14,7 @@ const AuthListener = () => {
     })
     .then(response => response.json())
     .then((data: any) => {
-      const token = getCookie('auth-token')
+      const token = data.reqToken
       console.log(data)
       console.log(token)
       if (!!token) {
