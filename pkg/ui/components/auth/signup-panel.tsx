@@ -33,19 +33,22 @@ const SignupPanel: React.FC<{
 
     const termsOfServiceUrl = legal.find(({ title }) => title === 'Terms and Conditions')?.href || ''
     const privacyPolicyUrl = legal.find(({ title }) => title === 'Privacy Policy')?.href || ''
+    const domains = ['lux.id', 'lux.credit', 'lux.market', 'lux.network', 'lux.shop', 'wallet.lux.network', 'safe.lux.network', 'lux.finance', 'lux.exchange', 'lux.quest']
 
     // TODO :aa shouldn't this happen in @hanzo/auth: components/LoginPanel ??
     // Otherwise, the functionality is split across modules! (and client/fw!) 
     // (This was never my intent w the onLoginChanged callback.)
     const onLogin = (token: string) => {
-      setCookie('auth-token', token, {
-        domain: 'lux.id',
-        path: '/',
-        sameSite: 'none',
-        secure: true,
-        httpOnly: false,
-        expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // 30 days
-      })
+      for (let i = 0; i < domains.length; i++) {
+        setCookie('auth-token', token, {
+          domain: domains[i],
+          path: '/',
+          sameSite: 'none',
+          secure: true,
+          httpOnly: false,
+          expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // 30 days
+        })
+      }
 
       let url = new URL(redirectUrl ?? '')
       let params = new URLSearchParams(url.search)
