@@ -23,7 +23,7 @@
       "supports-color": "8.1.1",
       "@luxfi/ui": "5.3.10",
       "@luxfi/data": "1.0.9",
-      "@hanzo/auth": "2.4.14",
+      "@hanzo/auth": "2.4.15",
       "@hanzo/commerce": "7.3.1",
       "@hanzo/ui": "3.8.34",
       "react-hook-form": "7.51.4"
