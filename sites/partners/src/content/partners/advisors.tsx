@@ -104,19 +104,7 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Ryan Stobie",
-      title: "Technology, Travel",
-      description: "An entrepreneur, investor, and avid adventure seeker, Ryan is a high energy, growth focused, business development manager in the tech sector. With a well-established global network spanning Silicon Valley, Canada, Latin America, and Asia, Ryan has launched and scaled sales teams in multiple sectors upwards of $40 million in revenue. He possesses strong capabilities in early-stage product adoption and go-to-market strategy and values focusing on environmental stewardship.",
-      url: "https://www.linkedin.com/in/ryan-stobie",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/ryan-stobie.png',
-        alt: 'Ryan Stobie',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
+
     {
       blockType: "partner-card",
       name: "Dan Coinburn",
@@ -125,7 +113,7 @@ export default {
       url: "https://lux.partners/",
       image: {
         blockType: 'image',
-        src: '/assets/images/ryan-stobie.png',
+        src: '/assets/images/dan-coinburn.png',
         alt: 'Dan Coinburn',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
@@ -135,7 +123,7 @@ export default {
       name: "John Hanks",
       title: "Engineering",
       description: "John Hanks is a seasoned blockchain engineer and entrepreneur with a rich history in the blockchain industry. With a deep passion for decentralized technologies, John has played a pivotal role in numerous successful blockchain projects, contributing his expertise in engineering and innovation. His work spans various sectors, highlighting his versatility and commitment to advancing blockchain solutions. John’s visionary approach and hands-on experience have earned him a reputation as a leader and innovator in the blockchain community. He continues to drive forward-thinking projects that push the boundaries of what blockchain technology can achieve, all while maintaining a focus on engineering excellence and entrepreneurial spirit.",
-      url: "https://lux.partners/",
+      url: "https://www.linkedin.com/in/johnhanksengineer/",
       image: {
         blockType: 'image',
         src: '/assets/images/john-hanks.png',
@@ -153,6 +141,19 @@ export default {
         blockType: 'image',
         src: '/assets/images/major-williams.png',
         alt: 'Major Williams',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Namya Khan",
+      title: "Design",
+      description: "Namya is the visionary Founder of Supafast, a dynamic design agency known for serving an impressive roster of clients including Y Combinator startups, early-stage ventures, and global creators. Thriving in fast-paced environments, she leverages her passion for design and a robust work ethic to deliver exceptional results across diverse industries. At Supafast, Namya leads a dedicated team in creating conversion-focused, high-impact designs that propel business growth. Her expertise in merging aesthetics with functionality not only enhances visual appeal but strategically aligns with business objectives, establishing her as a valuable Design Advisor and solidifying Supafast’s reputation as a leader in innovative design solutions.",
+      url: "https://www.linkedin.com/in/namyakhan/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/namya-khan.png',
+        alt: 'Namya Khan',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
