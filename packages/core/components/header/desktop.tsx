@@ -11,6 +11,7 @@ import DesktopNav from '../commerce/desktop-nav-menu'
 
 
 import type { LinkDef } from '@hanzo/ui/types'
+import { Button } from '@hanzo/ui/primitives'
 
 const DesktopHeader: React.FC<{
   currentAs: string | undefined
@@ -28,8 +29,8 @@ const DesktopHeader: React.FC<{
       <header className={cn('bg-background fixed z-header top-0 left-0 right-0', className)} >
         {/* md or larger */}
         <div className={
-          'flex flex-row h-[80px] items-center  justify-between ' +
-          'px-[8px] w-full mx-auto max-w-screen'
+          'flex flex-row h-[80px] items-center justify-between ' +
+          'mx-[24px] w-full max-w-screen'
         }>
           <Logo size='md' href='/' outerClx='hidden lg:flex' key='two' variant='text-only' />
           <Logo size='sm' href='/' outerClx='hidden md:flex lg:hidden' key='one' variant='text-only' />

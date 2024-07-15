@@ -40,3 +40,4 @@ tsconfig.tsbuildinfo
 .vscode/
 
 **/dist
+*.orig

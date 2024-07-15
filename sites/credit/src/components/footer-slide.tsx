@@ -43,7 +43,7 @@ const FooterSlide: React.FC<PropsWithChildren & {
         <p className='mx-auto max-w-[45rem] !text-center px-4'>{byline}</p>
       </ApplyTypography>
       <CardsCarousel/>
-      <Footer siteDef={siteDef} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
+      <Footer siteDef={siteDef} className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
     </div>
   </div>    
 )

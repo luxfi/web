@@ -48,7 +48,7 @@ const Desktop: React.FC = () => (<>
     </div>
   ))}
   <div key='last' className={swipeOuter + 'swipe flex flex-col justify-start items-stretch'} >
-    <Footer siteDef={siteDef} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
+    <Footer siteDef={siteDef} className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
     <DrawerMargin clx='grow-0 shrink-0'/>
   </div>
 </>)

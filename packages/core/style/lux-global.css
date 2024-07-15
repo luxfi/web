@@ -46,3 +46,6 @@ div.nextjs-toast-errors-parent[data-nextjs-toast="true"] {
 .element-container:hover .text-container {
   background: transparent;
 }
+.overflow-scroll::-webkit-scrollbar{
+  display:none;
+}

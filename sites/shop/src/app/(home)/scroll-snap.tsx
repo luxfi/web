@@ -52,7 +52,7 @@ const Desktop: React.FC = () => (<>
     <ApplyTypography asTag='section' className={swipeInnerDesk + 'grow w-full border-b flex flex-col items-center justify-start self-stretch lg:gap-10'} >
       <ContentComponent blocks={landing.bottom}/>
     </ApplyTypography>
-    <Footer siteDef={siteDef} className='grow-0 max-w-screen-2xl w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
+    <Footer siteDef={siteDef} className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
     <DrawerMargin clx='grow-0 shrink-0'/>
   </div>
 </>)
