@@ -17,24 +17,36 @@ const Header: React.FC<{
 }) => {
 
     // TODO
-  const [open, setOpen] = React.useState<boolean>(false);
+    const [open, setOpen] = React.useState<boolean>(false);
 
-  const { nav: { common, featured }, currentAs } = siteDef
-  const links = (featured) ? [...common, ...featured] : common
+    const { nav: { common, featured }, currentAs } = siteDef
+    const links = (featured) ? [...common, ...featured] : common
+    const isDesktopView = (): boolean => {
+      if (typeof window === 'undefined') return false 
+      return window.innerWidth > 768 
+    }
 
-  return (<>
-    <DesktopHeader
-      className={cn(className, 'hidden md:flex')}
-      links={links}
-      currentAs={currentAs}
-    />
-    <MobileHeader
-      className={cn(className, 'md:hidden')}
-      links={links}
-      currentAs={currentAs}
-      setChatbotOpen={setOpen}
-    />
-  </>)
-}
+    return (<>
+      <DesktopHeader
+        className={cn(className, 'hidden md:flex')}
+        links={links}
+        currentAs={currentAs}
+      />
+      <MobileHeader
+        className={cn(className, 'md:hidden')}
+        links={links}
+        currentAs={currentAs}
+        setChatbotOpen={setOpen}
+      />
+      {isDesktopView() && (
+        <ChatWidget
+          title='LUX'
+          subtitle='AI'
+          chatbotUrl='https://lux.chat/iframe'
+          suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
+        />
+      )}
+    </>)
+  }
 
 export default Header

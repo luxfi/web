@@ -3,13 +3,17 @@ import type { LinkDefExtended } from '../../site-def/main-nav'
 import { RightArrow } from '../icons'
 import LeftArrow from '../icons/left-arrow'
 import Link from 'next/link'
+import MobileNavMenuAI from './mobile-nav-menu-ai'
 
 interface MobileNavMenuItemProps {
-    link: LinkDefExtended
+    link: LinkDefExtended,
+    setMenuOpen: (open: boolean) => void
+
 }
 
 const MobileNavMenuItem: React.FC<MobileNavMenuItemProps> = ({
-    link
+    link,
+    setMenuOpen
 }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -21,6 +25,7 @@ const MobileNavMenuItem: React.FC<MobileNavMenuItemProps> = ({
                 <RightArrow className='' />
             </div>
             <div className={`fixed left-0 top-0 w-screen h-screen ${isOpen ? 'block' : 'hidden'}`} style={{ backgroundColor: 'black' }}>
+                <MobileNavMenuAI setMenuOpen={setMenuOpen} />
                 <div className="w-full flex items-center px-5 py-3 gap-[27px] text-2xl font-bold" onClick={() => setIsOpen(false)}>
                     <LeftArrow />
                     <span className="text-white">{link.title}</span>
@@ -28,13 +33,12 @@ const MobileNavMenuItem: React.FC<MobileNavMenuItemProps> = ({
                 <div className="flex flex-col">
                     {link.childMenu?.map((menu, index) => {
                         return (
-                            <div className="w-full flex items-center px-5 py-3 gap-[27px] text-2xl" key={index}>
-                                <span className='block w-[18px] h-[22px] self-center'>{menu.icon}</span>
-                                <span className='flex-1'>{menu.title}</span>
-                                <Link href={menu.href}>
-                                    <RightArrow className='' />
-                                </Link>
-                            </div>
+                            <Link href={menu.href}>
+                                <div className="w-full flex items-center px-5 py-3 gap-[27px] text-2xl" key={index}>
+                                    <span className='w-[18px] h-[22px] self-center flex items-center justify-center'>{menu.icon}</span>
+                                    <span className='flex-1'>{menu.title}</span>
+                                </div>
+                            </Link>
                         )
                     })}
                 </div>
