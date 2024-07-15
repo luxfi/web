@@ -39,9 +39,8 @@ Explore and purchase all our products, from Lux Pyramids to other blockchain ess
 
 ## Dev: run locally
 
-Install `pnpm` [like so](https://pnpm.io/installation)
+Install `pnpm` [like so](https://pnpm.io/installation). And then:
 
-The usual scripts for a Next site, using `pnpm`
 ```
 pnpm install
 cd app/<siteName>
