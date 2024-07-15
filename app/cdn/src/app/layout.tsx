@@ -1,23 +1,16 @@
-import React, { type PropsWithChildren } from 'react'
+export const metadata = {
+  title: 'Lux CDN',
+  description: 'Lux Network content delivery network app',
+}
 
-import { 
-  RootLayout as RootLayoutCore, 
-  viewport as ViewportCode, 
-} from '@luxfi/ui/root-layout'
-
-
-import siteDef from '../site-def'
-import _metadata from '../metadata'
-
-export const metadata = { ..._metadata }
-export const viewport = { ...ViewportCode}
-
-const RootLayout: React.FC<PropsWithChildren> = async ({
-  children
-}) =>  (
-  <RootLayoutCore siteDef={siteDef} showHeader>
-    {children}
-  </RootLayoutCore>
-)
-
-export default RootLayout
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" style={{backgroundColor: 'black'}}>
+      <body>{children}</body>
+    </html>
+  )
+}
