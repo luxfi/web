@@ -35,7 +35,7 @@ const FooterSlide: React.FC<PropsWithChildren & {
  (
   <div className='md:flex w-full'>
     <div className={cn(
-      'snap-start snap-always h-[100vh] ', 
+      'snap-start snap-always h-[100vh] ',
       'swipe flex flex-col justify-between items-stretch pt-20 gap-3 w-full'
     )} >
       <ApplyTypography className='flex flex-col !gap-2 max-w-screen-md mx-auto items-center'>
@@ -45,7 +45,7 @@ const FooterSlide: React.FC<PropsWithChildren & {
       <CardsCarousel/>
       <Footer siteDef={siteDef} className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
     </div>
-  </div>    
+  </div>
 )
 */
 export default FooterSlide
