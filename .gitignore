@@ -38,6 +38,7 @@ yarn-error.log*
 tsconfig.tsbuildinfo
 
 .vscode/
+.idea
 
 **/dist
 *.orig
