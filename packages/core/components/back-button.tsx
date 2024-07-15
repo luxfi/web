@@ -15,6 +15,7 @@ import type { VariantProps } from '@hanzo/ui/util'
 const BackButton: React.FC<{
   variant?: VariantProps<typeof buttonVariants>['variant']
   size?: VariantProps<typeof buttonVariants>['size']
+  onBack?: () => void
   clx?: string
   iconClx?: string
 }> = ({
@@ -22,10 +23,16 @@ const BackButton: React.FC<{
   size='default',
   clx='',
   iconClx='',
+  onBack
 }) => {
 
   const router = useRouter()
-  const back = () => {router.back()}
+  const back = () => {
+    if (onBack) {
+      onBack()
+    }
+    router.back()
+  }
 
   return (
     <Button

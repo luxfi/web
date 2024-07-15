@@ -1,3 +1,5 @@
+'use client' // Put spline back into a client component, make this ssr comp
+
 import React from 'react'
 
 import { ApplyTypography } from '@hanzo/ui/primitives'
@@ -9,11 +11,12 @@ import {
   SpaceBlockComponent,
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
-  VideoBlockComponent,
+  VideoBlockComponent
 } from '@hanzo/ui/blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
-import SplinePlayer from '@/components/spline-player'
+
+import Spline from '@splinetool/react-spline'
 
 const Spacer: React.FC = () => (
   <SpaceBlockComponent block={{blockType: 'space'}} />
@@ -34,7 +37,11 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
   const TitleArea: React.FC<{className?: string}> = ({
     className=''
   }) => (
-    <ApplyTypography className={cn('typography-headings:text-left typography-h2:md:text-3xl typography-h2:lg:text-4xl', className)}>
+    <ApplyTypography className={cn(
+      'typography-headings:text-left typography-h2:md:text-3xl', 
+      'typography-h2:lg:text-4xl', 
+      className
+    )}>
       <h2 className='text-left'>{p.title}</h2>
       {p.desc && (typeof p.desc === 'string') ? (
           <h6>{p.desc}</h6>
@@ -52,7 +59,7 @@ const ProductDetailBlockComponent: React.FC<BlockComponentProps> = ({
           <VideoBlockComponent block={p.video} agent={agent} size={videoSize} className='md:sticky md:top-[80px] md:mt-0 mt-[16px] mx-auto'/>
         ) :
         p.animation ? (
-          <SplinePlayer src={p.animation} className='!aspect-square'/>
+          <Spline scene={p.animation} className='!w-full !h-auto pointer-events-none !aspect-square'/>
         ) : null}
       </div>
 

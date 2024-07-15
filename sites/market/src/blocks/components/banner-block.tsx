@@ -1,27 +1,34 @@
+'use client' // Put spline back into a client component, make this ssr comp
 import React  from 'react'
 
 import type { TShirtSize } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
-import { type Block, VideoBlockComponent } from '@hanzo/ui/blocks'
+import { VideoBlockComponent, type BlockComponentProps  } from '@hanzo/ui/blocks'
 
 import { BuyButton } from '@luxfi/core'
 
+import Spline from '@splinetool/react-spline'
 import type BannerBlock from '@/blocks/def/banner-block'
-import SplinePlayer from '@/components/spline-player'
 
-type BannerGrouping = 'all-separate' | 'title-media-cta' | 'titleAndMedia-cta'
+type BannerGrouping = 'separate' | 'titleAndMedia-cta'
 
-const BannerBlockComponent: React.FC<{
-  block: Block,
+interface GroupClx {
+  title?: string // for media and title if grouping === 'titleAndMedia-cta'
+  media?: string
+  cta?: string
+}
+
+const BannerBlockComponent: React.FC<BlockComponentProps & {
   videoSize?: TShirtSize
   videoConstraint?: {w: number, h: number}
   grouping?: BannerGrouping
-  groupingClasses?: string[] // count should match number of siblings in the chosen grouping
+  groupClx?: GroupClx
 }> = ({
   block,
+  agent,
   grouping = 'titleAndMedia-cta',
-  groupingClasses=[],
+  groupClx={},
   videoSize='md',
   videoConstraint
 }) => {
@@ -69,65 +76,48 @@ const BannerBlockComponent: React.FC<{
     </div>
   ) : null)
 
-  if (grouping === 'title-media-cta') {
-    const titleClasses = (groupingClasses && groupingClasses[0]) ? groupingClasses[0] : ''
-    const mediaClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
-    const ctaClasses = (groupingClasses && groupingClasses[2]) ? groupingClasses[2] : ''
-    return (<>
-      <div className={'text-center ' + titleClasses}>
+  return (grouping === 'separate') ? 
+    (<>
+      <div className={'text-center ' + groupClx.title ?? ''}>
         {banner.bylineBefore && (<h5 className='text-center'>{banner.bylineBefore}</h5>)}
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
       </div>
-      <div className={'self-center w-full max-w-[40rem] flex flex-col justify-center items-center text-center ' + mediaClasses}>
-        {banner.video ? (
-          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
+      <div className={'self-center w-full max-w-[40rem] flex flex-col justify-center items-center text-center ' + groupClx.media ?? ''}>
+        { banner.video ? (
+          <VideoBlockComponent 
+            className='self-center not-typography' 
+            block={{blockType: 'video', ...banner.video}} 
+            agent={agent}
+            size={videoSize} 
+            constrainTo={videoConstraint}
+          />
         ) :
         banner.animation ? (
-          <SplinePlayer src={banner.animation} className='!aspect-[12/10]'/>
+          <Spline scene={banner.animation} className='!w-full !h-auto pointer-events-none !aspect-[12/10]'/>
         ) : null}
       </div>
-      <CTAs className={ctaClasses}/>
-    </>)
-  }
-  else if (grouping === 'titleAndMedia-cta') {
-    const titleAndMediaClasses = (groupingClasses && groupingClasses[0]) ? groupingClasses[0] : ''
-    const ctaClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
-    return (<>
-      <div className={'self-center flex flex-col justify-start items-center text-center ' + titleAndMediaClasses} >
+      <CTAs className={groupClx.cta ?? ''}/>
+    </>) : /* grouping === 'titleAndMedia-cta' */ (<>
+      <div className={'self-center flex flex-col justify-start items-center text-center ' + groupClx.title ?? ''} >
         {banner.bylineBefore && (<h5 className='text-center'>{banner.bylineBefore}</h5>)}
         <h1>{banner.title}</h1>
         {banner.byline && (<h5 className='text-center'>{banner.byline}</h5>)}
         {banner.video ? (
-          <VideoBlockComponent className='self-center not-typography' block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
+          <VideoBlockComponent 
+            className='self-center not-typography' 
+            block={{blockType: 'video', ...banner.video}} 
+            agent={agent}
+            size={videoSize} 
+            constrainTo={videoConstraint}
+          />
         ) :
         banner.animation ? (
-          <SplinePlayer src={banner.animation} className='!aspect-[12/10]'/>
+          <Spline scene={banner.animation} className='!w-full !h-auto pointer-events-none !aspect-[12/10]'/>
         ) : null}
       </div>
-      <CTAs className={ctaClasses}/>
+      <CTAs className={groupClx.cta ?? ''}/>
     </>)
-  }
-
-  const titleClasses = (groupingClasses && groupingClasses[0]) ? groupingClasses[0] : ''
-  const bylineClasses = (groupingClasses && groupingClasses[1]) ? groupingClasses[1] : ''
-  const contentBeforeClasses = (groupingClasses && groupingClasses[2]) ? groupingClasses[2] : ''
-  const mediaClasses = (groupingClasses && groupingClasses[3]) ? groupingClasses[3] : ''
-  const contentAfterClasses = (groupingClasses && groupingClasses[4]) ? groupingClasses[4] : ''
-  const ctaClasses = (groupingClasses && groupingClasses[5]) ? groupingClasses[5] : ''
-
-  return (<>
-    {banner.bylineBefore && (<h5 className={'text-center ' + bylineClasses}>{banner.bylineBefore}</h5>)}
-    <h1 className={'text-center ' + titleClasses}>{banner.title}</h1>
-    {banner.byline && (<h5 className={'text-center ' + bylineClasses}>{banner.byline}</h5>)}
-    {banner.video ? (
-      <VideoBlockComponent className={'self-center not-typography ' + mediaClasses} block={banner.video} size={videoSize} constrainTo={videoConstraint}/>
-    ) :
-    banner.animation ? (
-      <SplinePlayer src={banner.animation} className='!aspect-[12/10]'/>
-    ) : null}
-    <CTAs className={ctaClasses}/>
-  </>)
 }
 
 export {
