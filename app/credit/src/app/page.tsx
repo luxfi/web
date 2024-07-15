@@ -20,12 +20,12 @@ const Page = ({ searchParams }: Props ) => {
   return (<>
     <Header siteDef={siteDef}/>
     {tiles.map((banner, index) => (
-      <Screenful 
-        block={banner} 
-        initialInView={index === 0} 
+      <Screenful
+        block={banner}
+        initialInView={index === 0}
         agent={agent}
         snapTile
-        key={`section-${index}`} 
+        key={`section-${index}`}
         bottom={<DrawerMargin clx='grow-0 shrink-0'/>}
         contentClx='max-w-screen-2xl'
       />
