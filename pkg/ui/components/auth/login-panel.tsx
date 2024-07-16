@@ -22,7 +22,7 @@ const LoginPanel: React.FC<{
   setIsLogin?: React.Dispatch<React.SetStateAction<boolean>>
 }> = ({
   close,
-  getStartedUrl = 'https://lux.id/account',
+  getStartedUrl = '/',
   redirectUrl,
   className = '',
   reviews,
