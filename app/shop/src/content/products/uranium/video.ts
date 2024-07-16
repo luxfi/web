@@ -4,10 +4,10 @@ import { DEF_VIDEO_PROPS } from '@luxfi/data'
 export default {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/commerce/uranium/product/LUX-URANIUM-1000-LBS-poster.jpg',
+  poster: 'https://cdn.lux.network/commerce/uranium/product/LUX-URANIUM-1000-LBS-poster.jpg',
   sources: [
-    '/assets/commerce/uranium/product/LUX-URANIUM-1000-LBS-transcode.mp4', 
-    '/assets/commerce/uranium/product/LUX-URANIUM-1000-LBS-transcode.webm'
+    'https://cdn.lux.network/commerce/uranium/product/LUX-URANIUM-1000-LBS-transcode.mp4', 
+    'https://cdn.lux.network/commerce/uranium/product/LUX-URANIUM-1000-LBS-transcode.webm'
   ],
     // From manually looking at aspect ratio
     // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co

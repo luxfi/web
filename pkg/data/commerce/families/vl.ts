@@ -1,7 +1,7 @@
 import type { Product, Family } from '@hanzo/commerce/types'
 import { validator as video } from './videos'
 
-const VL_IMG = '/assets/commerce/vl/product/validator-800x800.png'
+const VL_IMG = 'https://cdn.lux.network/commerce/vl/product/validator-800x800.png'
 const VL_IMG_DEF = {src: VL_IMG, dim: {w: 800, h: 800}}
 
 

@@ -17,12 +17,12 @@ const card: Card = {
       titleAlt: 'Cool Chrome',
       sku: 'LXM-CR-F-CC',
       materialImg: {
-        src: '/assets/commerce/cr/product/option/founder-card-cool-chrome-99x99.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/option/founder-card-cool-chrome-99x99.png',
         dim: {w: 99, h: 99 },
         alt: 'Cool Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/chrome-cool-f.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/chrome-cool-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Cool Chrome'
       },
@@ -33,12 +33,12 @@ const card: Card = {
       titleAlt: 'Iridescent Chrome',
       sku: 'LXM-CR-F-IC',
       materialImg: {
-        src: '/assets/commerce/cr/product/option/founder-card-iridescent-chrome-99x99.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/option/founder-card-iridescent-chrome-99x99.png',
         dim: {w: 99, h: 99 },
         alt: 'Iridescent Chrome'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/iradescent-chrome-f.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/iradescent-chrome-f.png',
         dim: {w: 700, h: 441 },
         alt: 'Founder Card Iridescent Chrome'
       },

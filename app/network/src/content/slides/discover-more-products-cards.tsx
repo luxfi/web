@@ -14,9 +14,9 @@ import { DEF_VIDEO_PROPS } from '@luxfi/data'
 const silverVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/commerce/silver/product/luxsilver-poster.jpg',
+  poster: 'https://cdn.lux.network/commerce/silver/product/luxsilver-poster.jpg',
   sources: [
-    '/assets/commerce/silver/product/luxsilver.mp4',
+    'https://cdn.lux.network/commerce/silver/product/luxsilver.mp4',
   ],
   dim: {md: { w: 1172, h: 1920}, lg: {w: 1172, h: 1920}},
   sizing: {vh: 30, mobile: {vw: 20}}
@@ -25,9 +25,9 @@ const silverVideo = {
 const keyVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/commerce/ps/product/LUX-PASS-poster.jpg',
+  poster: 'https://cdn.lux.network/commerce/ps/product/LUX-PASS-poster.jpg',
   sources: [
-    '/assets/commerce/ps/product/LUX-PASS-transcode.mp4',
+    'https://cdn.lux.network/commerce/ps/product/LUX-PASS-transcode.mp4',
   ],
   dim: {md: { w: 658, h: 720}, lg: {w: 658, h: 720}},
   sizing: {vh: 30, mobile: {vw: 20}}
@@ -36,9 +36,9 @@ const keyVideo = {
 const cardVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS, 
-  poster: '/assets/commerce/cr/product/black-f-700x441.jpg',
+  poster: 'https://cdn.lux.network/commerce/cr/product/black-f-700x441.jpg',
   sources: [
-    '/assets/commerce/cr/product/gunmetal-card.mp4',
+    'https://cdn.lux.network/commerce/cr/product/gunmetal-card.mp4',
   ],
   dim: {md: { w: 1920, h: 1080}, lg: {w: 1920, h: 1080}},
   sizing: {vh: 30, mobile: {vw: 20}}

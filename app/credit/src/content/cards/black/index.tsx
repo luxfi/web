@@ -17,12 +17,12 @@ const card: Card = {
       titleAlt: 'Matte Titanium',
       sku: 'LXM-CR-B-ABT',
       materialImg: {
-        src: '/assets/commerce/cr/product/option/black-card-anodized-black-titanium-100x99.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/option/black-card-anodized-black-titanium-100x99.png',
         dim: {w: 100, h: 99 },
         alt: 'Anodized Black Titanium'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/black-titanium-back.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/black-titanium-back.png',
         dim: {w: 700, h: 441 },
         alt: 'Black Card Anodized Black Titanium'
       },
@@ -33,13 +33,13 @@ const card: Card = {
       titleAlt: 'Gun Metal',
       sku: 'LXM-CR-B-GM',
       materialImg: {
-        src: '/assets/commerce/cr/product/option/black-card-gunmetal-99x99.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/option/black-card-gunmetal-99x99.png',
         dim: {w: 99, h: 99 },
         alt: 'Black Gunmetal'
       },
       cardImg: {
         //TODO: Change this to the correct image
-        src: '/assets/commerce/cr/product/black-ff.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/black-ff.png',
         dim: {w: 700, h: 441 },
         alt: 'Black Card Black Gunmetal',
       },

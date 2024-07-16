@@ -17,10 +17,10 @@ const video = {
   
   blockType: 'video',
   videoProps: { ...DEF_VIDEO_PROPS, preload: 'auto' },
-  poster: '/assets/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
+  poster: 'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
   sources: [
-    '/assets/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
-    '/assets/commerce/vl/product/Lux-VALIDATOR-transcode.webm'
+    'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
+    'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.webm'
   ],
   // Determin aspect ration from dims manually...
   // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co

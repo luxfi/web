@@ -16,12 +16,12 @@ const card: Card = {
     titleAlt: 'Mirrored Card',
     sku: 'LXM-CR-S-RT',
     materialImg: {
-      src: '/assets/commerce/cr/product/option/sovereign-card-reflective-titanium-100x99.png',
+      src: 'https://cdn.lux.network/commerce/cr/product/option/sovereign-card-reflective-titanium-100x99.png',
       dim: {w: 100, h: 99 },
       alt: 'Reflective Titanium'
     },
     cardImg: {
-      src: '/assets/commerce/cr/product/mirrored-f.png',
+      src: 'https://cdn.lux.network/commerce/cr/product/mirrored-f.png',
       dim: {w: 700, h: 442 },
       alt: 'Sovereign Card Reflective Titanium'
     },

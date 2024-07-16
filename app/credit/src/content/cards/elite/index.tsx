@@ -17,12 +17,12 @@ const card: Card = {
       titleAlt: '24K Gold',
       sku: 'LXM-CR-E-24G',
       materialImg: {
-        src: '/assets/commerce/cr/product/option/elite-card-gold-100x99.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/option/elite-card-gold-100x99.png',
         dim: {w: 100, h: 99 },
         alt: '24k Gold'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/gold-f.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/gold-f.png',
         dim: {w: 700, h: 442 },
         alt: 'Elite Card 24k Gold'
       },
@@ -33,12 +33,12 @@ const card: Card = {
       titleAlt: 'Sterling Silver',
       sku: 'LXM-CR-E-SS',
       materialImg: {
-        src: '/assets/commerce/cr/product/option/elite-card-silver-99x99.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/option/elite-card-silver-99x99.png',
         dim: {w: 99, h: 99 },
         alt: 'Sterling Silver'
       },
       cardImg: {
-        src: '/assets/commerce/cr/product/Sterling-Silver-F.png',
+        src: 'https://cdn.lux.network/commerce/cr/product/Sterling-Silver-F.png',
         dim: {w: 700, h: 441 },
         alt: 'Elite Card Sterling Silver'
       },
