@@ -70,7 +70,7 @@ const Page = ({ searchParams }: Props) => {
     <div className={isLogin ? '' : 'hidden'}>
       <LoginPanel
         close={handleLoginDone}
-        getStartedUrl='/'
+        getStartedUrl='lux.id'
         redirectUrl={searchParams?.redirectUrl as string ?? undefined}
         reviews={reviews}
         setIsLogin={setIsLogin}
@@ -79,7 +79,7 @@ const Page = ({ searchParams }: Props) => {
     <div className={isLogin ? 'hidden' : ''}>
       <SignupPanel
         close={handleLoginDone}
-        getStartedUrl='/'
+        getStartedUrl='lux.id'
         redirectUrl={searchParams?.redirectUrl as string ?? undefined}
         reviews={reviews}
         setIsLogin={setIsLogin}
