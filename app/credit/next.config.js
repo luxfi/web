@@ -8,6 +8,7 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   images: {
+    domains: ["cdn.lux.network"],
     remotePatterns: [
       {
         protocol: 'https',
