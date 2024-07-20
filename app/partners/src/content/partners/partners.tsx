@@ -108,7 +108,7 @@ export default {
       blockType: "partner-card",
       name: "Ling Qing Meng",
       title: "Chief Information Officer",
-      description: "Ling Qing worked at Edenledger as a CTO, cybersecurity advisor to Beamswap and software engineer at Branch.io. His role was focused on go to market launch for shipping mission critical features for the marketing products at these firms. He has experience working at Decentral which has built MEV bots for funds such as Whalepod. In settings where he was competing with the best of the best in the world, Ling has the know-how and track record of consistently coming out on top",
+      description: "Ling Qing worked at Edenledger as a CTO, cybersecurity advisor to Beamswap and software engineer at Branch.io. His role was focused on go to market launch for shipping mission critical features for the marketing products at these firms. He has experience working at Decentral which has built MEV bots for funds such as Whalepod. In settings where he was competing with the best of the best in the world, Ling has the know-how and track record of consistently coming out on top.",
       url: "https://www.linkedin.com/in/lingqingmeng",
       image: {
         blockType: 'image',
@@ -251,7 +251,7 @@ export default {
       blockType: "partner-card",
       name: "Michael Filteau",
       title: "Operations Lead",
-      description: "",
+      description: "Michael comes from a background as an IT Technician and Crypto Miner. He brings a wealth of experience across various industries, marked by his adaptive approach and innovative solutions. With a foundational interest sparked by his first Mac, Michael’s journey into technology has been largely autodidactic, allowing him to think outside the box and deliver unique solutions. His early forays into cryptocurrency mining during the initial release of Ethereum highlight his forward-thinking and pioneering spirit in adopting new technologies. Michael’s diverse industry experience has honed his ability to adapt and excel in different technological environments, making him a versatile and valuable asset.",
       url: "https://lux.partners",
       image: {
         blockType: 'image',
