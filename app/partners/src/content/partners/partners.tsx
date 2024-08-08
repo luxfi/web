@@ -224,7 +224,7 @@ export default {
     {
       blockType: "partner-card",
       name: "Kaori Fujio",
-      title: "Lead Mobile Engineer",
+      title: "Lead Wallet Engineer",
       description: "Kaori Fujio has a strong foundation in Full-stack development and a focus on WordPress customization, bringing a unique blend of technical expertise and creative solutions to every project. His ability to integrate front-end technologies like React and Vue.js with back-end frameworks such as Node.js and Laravel allows him to create dynamic and feature-rich web applications. By leveraging his PHP skills, he develops custom themes and plugins that elevate website design. His attention to detail ensures that every element aligns with the client's branding, resulting in a cohesive and visually appealing website. Through his dedication to staying updated on the latest trends and technologies, he continues to deliver innovative solutions that exceed client expectations.",
       url: "https://www.linkedin.com/in/kaori-fujio-b534a9303/overlay/photo/",
       image: {
@@ -234,12 +234,25 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
+	{
+      blockType: "partner-card",
+      name: "Christopher Duong",
+      title: "Lead Wallet Engineer",
+      description: "Christopher Duong is a self-directed software developer specializing in full stack app development in an agile/DevOps environment, using C#, Java, JS, and Angular throughout the full SDLC. He enjoys solving problems, innovating, automating, and delivering products/services that make end users' lives easier. At university, Christopher is the president of the card game club, promoting social interaction and fun games to students. Under his leadership, attendance has increased by 300%.",
+      url: "https://www.linkedin.com/in/christopher-duong/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/christoper-duong.png',
+        alt: 'christoper-duong',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
     {
       blockType: "partner-card",
       name: "Yuri Galasevich",
-      title: "Lead Mobile Engineer",
+      title: "Lead dApp Engineer",
       description: "Yuri Galasevich has worked as a Full-Stack & WebGL Developer at NovaConcepts, a Full-Stack Developer at Motley Agency, and has extensive experience in developing web, mobile applications, and web3 solutions. His role has been pivotal in creating mission-critical features, including a 3D Virtual Store, Casino Game Platform, and integrating complex systems with third-party services. Yuri has also contributed to the development of interactive 3D web applications and 2D web games, optimizing performance and implementing advanced visual effects. Competing with top-tier professionals, Yuri has consistently demonstrated his expertise and ability to deliver high-performance solutions in the tech industry.",
-      url: "https://www.linkedin.com/in/kaori-fujio-b534a9303/overlay/photo/",
+      url: "https://www.linkedin.com/in/jurij-galasevic-mdc/",
       image: {
         blockType: 'image',
         src: '/assets/images/yuri-galasevich.png',
