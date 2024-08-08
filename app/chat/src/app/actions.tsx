@@ -296,7 +296,7 @@ export const AI = createAI<AIState, UIState>({
 
     const { chatId, messages } = state
     const createdAt = new Date()
-    const userId = await getUserData() ?? 'anonymous'
+    const userData = await getUserData()
     const path = `/search/${chatId}`
     const title =
       messages.length > 0
@@ -317,7 +317,7 @@ export const AI = createAI<AIState, UIState>({
     const chat: Chat = {
       id: chatId,
       createdAt,
-      userId,
+      userId: userData ?? 'anonymous',
       path,
       title,
       messages: updatedMessages
