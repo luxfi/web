@@ -23,7 +23,6 @@ import { CopilotDisplay } from '@/components/copilot/copilot-display'
 import RetrieveSection from '@/components/section/retrieve-section'
 import { VideoSearchSection } from '@/components/search/video-search-section'
 
-import { useAuth } from '@hanzo/auth/service'
 import { loginWithCustomToken } from '@hanzo/auth/service/impl/firebase-support'
 
 async function submit(formData?: FormData, skip?: boolean) {
@@ -246,11 +245,11 @@ const getUserData = async () => {
       const token = data.reqToken
       console.log ("token: ", token)
 
-      if (!!token) return token as string
-      else 'anonymouse'
+      if (token) return token as string
+      else 'anonymous'
     })
     if (response) return response
-    else return 'anonymouse'
+    else return 'anonymous'
 }
 
 export type AIState = {
