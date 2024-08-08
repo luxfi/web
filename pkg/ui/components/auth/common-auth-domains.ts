@@ -9,6 +9,7 @@ const domains = [
   { id: 'lux.exchange', url: 'https://lux.exchange' },
   { id: 'lux.quest', url: 'https://lux.quest' },
   { id: 'lux.id', url: 'https://lux.id' },
+  { id: 'lux.chat', url: 'https://lux.chat' }
 ]
 
 export {

@@ -170,5 +170,18 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "William Hadala",
+      title: "Infrastructure Security",
+      description: "William is a distinguished United States Air Force veteran and senior technology executive with over 25 years of experience. He has been issued 27 USPTO patents and has a formidable track record in building global technology infrastructure in media and telecommunications. As the CEO of A113 Venture Fund, Edge Data Intelligence, Exposition TV, and CTO of TMT Capital Group, William has driven significant advancements in technology deployment across various sectors. Notably, he founded TMGcore, pioneering the world's most advanced edge supercomputer for cryptocurrency mining and AI, achieving a multi-billion-dollar valuation within its first year. Additionally, during the global COVID crisis, he established the Connectivity Foundation, a non-profit aimed at bridging the digital divide for underserved communities worldwide through innovative broadband solutions.",
+      url: "https://www.linkedin.com/in/williammichael/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/william-hadala.jpg',
+        alt: 'William Hadala',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
   ]
 } as PartnersBlock

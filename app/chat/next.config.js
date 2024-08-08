@@ -1,14 +1,11 @@
 const withMDX = require('@next/mdx')()
-const svgrPluginConfig = require('./next-conf/svgr.next.config')
-const watchPluginConfig = require('./next-conf/watch.next.config')
-
+const svgrWebpackConfig = require('./svgr.next.config')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   images: {
-    domains: ["cdn.lux.network"],
     remotePatterns: [
       {
         protocol: 'https',
@@ -30,11 +27,7 @@ const nextConfig = {
     '@luxfi/data'
   ],
   productionBrowserSourceMaps: true,
-  webpack: (config) => {
-    let conf = svgrPluginConfig(config)
-    //conf =  watchPluginConfig(conf) 
-    return conf
-  }
+  webpack: svgrWebpackConfig // if we need others, set up a chain of calls. 
 }
 
 module.exports = withMDX(nextConfig)
