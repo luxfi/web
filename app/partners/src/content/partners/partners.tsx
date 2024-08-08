@@ -237,7 +237,7 @@ export default {
 	{
       blockType: "partner-card",
       name: "Christopher Duong",
-      title: "Lead Wallet Engineer",
+      title: "Lead Finance Engineer",
       description: "Christopher Duong is a self-directed software developer specializing in full stack app development in an agile/DevOps environment, using C#, Java, JS, and Angular throughout the full SDLC. He enjoys solving problems, innovating, automating, and delivering products/services that make end users' lives easier. At university, Christopher is the president of the card game club, promoting social interaction and fun games to students. Under his leadership, attendance has increased by 300%.",
       url: "https://www.linkedin.com/in/christopher-duong/",
       image: {
