@@ -245,7 +245,12 @@ const getUserData = async () => {
     .then(async (data: any) => {
       const token = data.reqToken
       console.log ("token: ", token)
+
+      if (!!token) return token as string
+      else 'anonymouse'
     })
+    if (response) return response
+    else return 'anonymouse'
 }
 
 export type AIState = {
