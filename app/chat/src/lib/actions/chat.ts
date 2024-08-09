@@ -33,7 +33,7 @@ export async function getChats(userId?: string | null) {
   }
 }
 
-export async function getChat(id: string, userId: string = 'anonymous') {
+export async function getChat(id: string) {
   const chat = await redis.hgetall<Chat>(`chat:${id}`)
 
   if (!chat) {
@@ -44,7 +44,7 @@ export async function getChat(id: string, userId: string = 'anonymous') {
 }
 
 export async function clearChats(
-  userId: string = 'anonymous'
+  userId: string
 ): Promise<{ error?: string }> {
   const chats: string[] = await redis.zrange(`user:chat:${userId}`, 0, -1)
   if (!chats.length) {
