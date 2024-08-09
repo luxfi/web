@@ -283,45 +283,37 @@ export const AI = createAI<AIState, UIState>({
       return
     }
 
-    axios.get(`${process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/api/auth/get-auth-token`).then(response => { console.log(response.data); return response.data })
-      .then(async (data) => {
-        console.log('data: ', data)
-        const token = data.reqToken
-        console.log("token: ", token)
+    const userInfo = await axios.get('/api/auth/get-user-info')
 
-        if (!!token) return token as string
-        else 'anonymous'
-        const { chatId, messages } = state
-        const createdAt = new Date()
-        const userData = token
-        const path = `/search/${chatId}`
-        const title =
-          messages.length > 0
-            ? JSON.parse(messages[0].content)?.input?.substring(0, 100) ||
-            'Untitled'
-            : 'Untitled'
-        // Add an 'end' message at the end to determine if the history needs to be reloaded
-        const updatedMessages: AIMessage[] = [
-          ...messages,
-          {
-            id: nanoid(),
-            role: 'assistant',
-            content: `end`,
-            type: 'end'
-          }
-        ]
+    const { chatId, messages } = state
+    const createdAt = new Date()
+    const userData = userInfo.data.email
+    const path = `/search/${chatId}`
+    const title =
+      messages.length > 0
+        ? JSON.parse(messages[0].content)?.input?.substring(0, 100) ||
+        'Untitled'
+        : 'Untitled'
+    // Add an 'end' message at the end to determine if the history needs to be reloaded
+    const updatedMessages: AIMessage[] = [
+      ...messages,
+      {
+        id: nanoid(),
+        role: 'assistant',
+        content: `end`,
+        type: 'end'
+      }
+    ]
 
-        const chat: Chat = {
-          id: chatId,
-          createdAt,
-          userId: userData ?? 'anonymous',
-          path,
-          title,
-          messages: updatedMessages
-        }
-        await saveChat(chat)
-      })
-
+    const chat: Chat = {
+      id: chatId,
+      createdAt,
+      userId: userData ?? 'anonymous',
+      path,
+      title,
+      messages: updatedMessages
+    }
+    await saveChat(chat)
   }
 })
 
