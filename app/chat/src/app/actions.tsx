@@ -306,7 +306,7 @@ export const AI = createAI<AIState, UIState>({
         const token = data.reqToken
         console.log("token: ", token)
 
-        if (token) return token as string
+        if (!!token) return token as string
         else 'anonymous'
       })
 
