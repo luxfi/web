@@ -243,13 +243,13 @@ const getUserData = async () => {
   }).then(response => response.json())
     .then(async (data: any) => {
       const token = data.reqToken
-      console.log ("token: ", token)
+      console.log("token: ", token)
 
       if (token) return token as string
       else 'anonymous'
     })
-    if (response) return response
-    else return 'anonymous'
+  if (response) return response
+  else return 'anonymous'
 }
 
 export type AIState = {
@@ -298,9 +298,21 @@ export const AI = createAI<AIState, UIState>({
       return
     }
 
+    const response = await fetch(`https://lux.id/api/auth/get-auth-token`, {
+      method: 'GET',
+      credentials: 'include',
+    }).then(response => response.json())
+      .then(async (data: any) => {
+        const token = data.reqToken
+        console.log("token: ", token)
+
+        if (token) return token as string
+        else 'anonymous'
+      })
+
     const { chatId, messages } = state
     const createdAt = new Date()
-    const userData = await getUserData()
+    const userData = response
     const path = `/search/${chatId}`
     const title =
       messages.length > 0
