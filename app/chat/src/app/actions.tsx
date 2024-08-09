@@ -24,6 +24,7 @@ import RetrieveSection from '@/components/section/retrieve-section'
 import { VideoSearchSection } from '@/components/search/video-search-section'
 
 import { loginWithCustomToken } from '@hanzo/auth/service/impl/firebase-support'
+import axios from 'axios'
 
 async function submit(formData?: FormData, skip?: boolean) {
   'use server'
@@ -236,22 +237,6 @@ async function submit(formData?: FormData, skip?: boolean) {
   }
 }
 
-const getUserData = async () => {
-  const response = await fetch(`https://lux.id/api/auth/get-auth-token`, {
-    method: 'GET',
-    credentials: 'include',
-  }).then(response => response.json())
-    .then(async (data: any) => {
-      const token = data.reqToken
-      console.log("token: ", token)
-
-      if (token) return token as string
-      else 'anonymous'
-    })
-  if (response) return response
-  else return 'anonymous'
-}
-
 export type AIState = {
   messages: AIMessage[]
   chatId: string
@@ -298,47 +283,45 @@ export const AI = createAI<AIState, UIState>({
       return
     }
 
-    const response = await fetch(`https://lux.id/api/auth/get-auth-token`, {
-      method: 'GET',
-      credentials: 'include',
-    }).then(response => response.json())
-      .then(async (data: any) => {
+    axios.get(`${process.env.NEXT_PUBLIC_LOGIN_SITE_URL}/api/auth/get-auth-token`).then(response => { console.log(response.data); return response.data })
+      .then(async (data) => {
+        console.log('data: ', data)
         const token = data.reqToken
         console.log("token: ", token)
 
         if (!!token) return token as string
         else 'anonymous'
+        const { chatId, messages } = state
+        const createdAt = new Date()
+        const userData = token
+        const path = `/search/${chatId}`
+        const title =
+          messages.length > 0
+            ? JSON.parse(messages[0].content)?.input?.substring(0, 100) ||
+            'Untitled'
+            : 'Untitled'
+        // Add an 'end' message at the end to determine if the history needs to be reloaded
+        const updatedMessages: AIMessage[] = [
+          ...messages,
+          {
+            id: nanoid(),
+            role: 'assistant',
+            content: `end`,
+            type: 'end'
+          }
+        ]
+
+        const chat: Chat = {
+          id: chatId,
+          createdAt,
+          userId: userData ?? 'anonymous',
+          path,
+          title,
+          messages: updatedMessages
+        }
+        await saveChat(chat)
       })
 
-    const { chatId, messages } = state
-    const createdAt = new Date()
-    const userData = response
-    const path = `/search/${chatId}`
-    const title =
-      messages.length > 0
-        ? JSON.parse(messages[0].content)?.input?.substring(0, 100) ||
-        'Untitled'
-        : 'Untitled'
-    // Add an 'end' message at the end to determine if the history needs to be reloaded
-    const updatedMessages: AIMessage[] = [
-      ...messages,
-      {
-        id: nanoid(),
-        role: 'assistant',
-        content: `end`,
-        type: 'end'
-      }
-    ]
-
-    const chat: Chat = {
-      id: chatId,
-      createdAt,
-      userId: userData ?? 'anonymous',
-      path,
-      title,
-      messages: updatedMessages
-    }
-    await saveChat(chat)
   }
 })
 
