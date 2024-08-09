@@ -66,7 +66,7 @@ export function Chat({ id }: ChatProps) {
   }, [])
 
   return (
-    <div ref={containerRef} className="min-h-[calc(100vh-80px)] mt-[80px] overflow-x-hidden pt-12 md:pt-14 pb-14 md:pb-24 w-full max-w-2xl mx-auto flex flex-col space-y-3 md:space-y-4 justify-center">
+    <div ref={containerRef} className="min-h-[calc(100vh-80px)] mt-[80px] overflow-x-hidden px-4 pt-12 md:pt-14 pb-14 md:pb-24 w-full max-w-2xl mx-auto flex flex-col space-y-3 md:space-y-4 justify-center">
       <ChatMessages messages={messages} />
       <ChatPanel messages={messages} />
       <div ref={scrollerRef}></div>
