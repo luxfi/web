@@ -22,7 +22,8 @@ type HistoryProps = {
 }
 
 export function History({ location }: HistoryProps) {
-  const { user } = useAuth()
+  const auth = useAuth()
+  
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -45,7 +46,7 @@ export function History({ location }: HistoryProps) {
         </SheetHeader>
         <div className="my-2 h-full pb-12 md:pb-10">
           <Suspense fallback={<HistorySkeleton />}>
-            <HistoryList userId={user?.email} />
+            <HistoryList userId={auth ? auth.user?.email : ''} />
           </Suspense>
         </div>
       </SheetContent>

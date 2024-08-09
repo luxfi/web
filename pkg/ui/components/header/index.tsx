@@ -38,12 +38,6 @@ const Header: React.FC<{
         currentAs={currentAs}
         setChatbotOpen={setOpen}
       />
-        <ChatWidget
-          title='LUX'
-          subtitle='AI'
-          chatbotUrl='https://lux.chat/iframe'
-          suggestedQuestions={siteDef.chatbot?.suggestedQuestions ?? []}
-        />
     </>)
   }
 
