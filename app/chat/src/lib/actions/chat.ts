@@ -64,15 +64,15 @@ export async function clearChats(
 }
 
 export async function saveChat(chat: Chat) {
-  if (chat.userId !== 'anonymous') {
-    const pipeline = redis.pipeline()
-    pipeline.hmset(`chat:${chat.id}`, chat)
-    pipeline.zadd(`user:chat:${chat.userId}`, {
-      score: Date.now(),
-      member: `chat:${chat.id}`
-    })
-    await pipeline.exec()
-  }
+  // if (chat.userId !== 'anonymous') {
+  const pipeline = redis.pipeline()
+  pipeline.hmset(`chat:${chat.id}`, chat)
+  pipeline.zadd(`user:chat:${chat.userId}`, {
+    score: Date.now(),
+    member: `chat:${chat.id}`
+  })
+  await pipeline.exec()
+  // }
 }
 
 export async function getSharedChat(id: string) {

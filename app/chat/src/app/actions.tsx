@@ -23,8 +23,7 @@ import { CopilotDisplay } from '@/components/copilot/copilot-display'
 import RetrieveSection from '@/components/section/retrieve-section'
 import { VideoSearchSection } from '@/components/search/video-search-section'
 
-import { loginWithCustomToken } from '@hanzo/auth/service/impl/firebase-support'
-import axios from 'axios'
+import { getUserServerSide } from '@hanzo/auth/server'
 
 async function submit(formData?: FormData, skip?: boolean) {
   'use server'
@@ -283,11 +282,11 @@ export const AI = createAI<AIState, UIState>({
       return
     }
 
-    const userInfo = await axios.get('/api/auth/get-user-info')
+    const userInfo = await getUserServerSide()
 
     const { chatId, messages } = state
     const createdAt = new Date()
-    const userData = userInfo.data.email
+    const userData = userInfo?.email
     const path = `/search/${chatId}`
     const title =
       messages.length > 0
