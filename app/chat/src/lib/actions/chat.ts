@@ -33,7 +33,7 @@ export async function getChats(userId?: string | null) {
   }
 }
 
-export async function getChat(id: string, userId: string = 'anonymous') {
+export async function getChat(id: string) {
   const chat = await redis.hgetall<Chat>(`chat:${id}`)
 
   if (!chat) {
@@ -44,7 +44,7 @@ export async function getChat(id: string, userId: string = 'anonymous') {
 }
 
 export async function clearChats(
-  userId: string = 'anonymous'
+  userId?: string
 ): Promise<{ error?: string }> {
   const chats: string[] = await redis.zrange(`user:chat:${userId}`, 0, -1)
   if (!chats.length) {
@@ -64,15 +64,15 @@ export async function clearChats(
 }
 
 export async function saveChat(chat: Chat) {
-  if (chat.userId !== 'anonymous') {
-    const pipeline = redis.pipeline()
-    pipeline.hmset(`chat:${chat.id}`, chat)
-    pipeline.zadd(`user:chat:${chat.userId}`, {
-      score: Date.now(),
-      member: `chat:${chat.id}`
-    })
-    await pipeline.exec()
-  }
+  // if (chat.userId !== 'anonymous') {
+  const pipeline = redis.pipeline()
+  pipeline.hmset(`chat:${chat.id}`, chat)
+  pipeline.zadd(`user:chat:${chat.userId}`, {
+    score: Date.now(),
+    member: `chat:${chat.id}`
+  })
+  await pipeline.exec()
+  // }
 }
 
 export async function getSharedChat(id: string) {

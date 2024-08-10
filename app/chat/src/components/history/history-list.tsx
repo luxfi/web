@@ -1,4 +1,4 @@
-import React, { cache } from 'react'
+import React, { cache, useState, useEffect } from 'react'
 import HistoryItem from './history-item'
 import { type Chat } from '@/lib/types'
 import { getChats } from '@/lib/actions/chat'
@@ -8,13 +8,19 @@ type HistoryListProps = {
   userId?: string
 }
 
-const loadChats = cache(async (userId?: string) => {
-  return await getChats(userId)
-})
 
 // Start of Selection
 export async function HistoryList({ userId }: HistoryListProps) {
-  const chats = await loadChats(userId)
+  const [chats, setChats] = useState<Chat[] | undefined>(undefined)
+  
+  const loadChats = cache(async (userId?: string) => {
+    const history = await getChats(userId)
+    setChats(history)
+  })
+
+  useEffect(() => {
+    loadChats(userId)
+  }, [])
 
   return (
     <div className="flex flex-col flex-1 space-y-3 h-full">

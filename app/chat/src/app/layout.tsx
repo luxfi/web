@@ -1,4 +1,5 @@
 import React, { type PropsWithChildren } from 'react'
+import { headers } from 'next/headers'
 
 import {
   RootLayout as RootLayoutCore,
@@ -16,14 +17,18 @@ export const viewport = { ...ViewportCode }
 
 const RootLayout: React.FC<PropsWithChildren> = async ({
   children
-}) => (
-  <RootLayoutCore siteDef={siteDef} showHeader>
-    <ThemeProvider>
-      {children}
-      <Sidebar />
-    </ThemeProvider>
-  </RootLayoutCore>
-)
+}) => {
+  const headersList = headers()
+  const isIframe = headersList.get("x-pathname") === '/iframe'
+  return (
+    <RootLayoutCore siteDef={siteDef} showHeader={!isIframe}>
+      <ThemeProvider>
+        {children}
+        <Sidebar />
+      </ThemeProvider>
+    </RootLayoutCore>
+  )
+}
 
 export default RootLayout
 
