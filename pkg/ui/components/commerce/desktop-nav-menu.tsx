@@ -56,6 +56,10 @@ const DesktopNav: React.FC<{
     setIsMenuOpen(false);
   }, [setIsMenuOpen]);
 
+  const handleContentMouseMove = () => {
+    setIsMenuOpen(false)
+  }
+
   const menuHiddenClass = !isMenuOpened ? "invisible" : "";
 
   return links.length > 0 ? (
@@ -88,7 +92,10 @@ const DesktopNav: React.FC<{
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="flex justify-center items-start">
-                    <div className="grid xl:grid-cols-3 w-full justify-center max-w-[750px]">
+                    <div
+                      className="grid xl:grid-cols-3 w-full justify-center max-w-[750px]"
+                      onMouseLeave={handleContentMouseMove}
+                    >
                       {GroupChildMenu({ childs: el.childMenu, isCards: true })}
                     </div>
                   </div>
@@ -115,7 +122,10 @@ const DesktopNav: React.FC<{
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="flex flex-row w-full justify-center">
+                  <div
+                    className="flex flex-row w-full justify-center"
+                    onMouseLeave={handleContentMouseMove}
+                  >
                     {GroupChildMenu({ childs: el.childMenu })}
                   </div>
                 </NavigationMenuContent>
