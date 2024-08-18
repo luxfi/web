@@ -14,7 +14,7 @@ import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
 const video = {
-  
+
   blockType: 'video',
   videoProps: { ...DEF_VIDEO_PROPS, preload: 'auto' },
   poster: 'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
@@ -93,10 +93,10 @@ const screenful = {
           },
         ]
       } as CTABlock,
-    ], 
+    ],
     [
-      video      
-    ]],  
+      video
+    ]],
 } as ScreenfulBlock
 
 export default {
@@ -106,18 +106,10 @@ export default {
       {
         blockType:'element',
         element:(
-          <div className='lg:mt-28 z-2'>
+          <div className='p-3 z-2'>
           <ScreenfulBlockComponent block={screenful} />
           </div>
         )
-      }as ElementBlock,
-      {
-        blockType: 'element',
-        element: <>
-          <div className='animate-validator absolute top-[0%] left-[5%] w-[500px] h-[500px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
-          <div className='animate-validator absolute top-[5%] right-[0%] w-[400px] h-[400px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
-          <div className='animate-validator absolute top-[5%] right-[45%] w-[300px] h-[300px] invisible lg:visible z-network-node'><VideoBlockComponent block={video}/></div>
-        </>,
       } as ElementBlock,
     ]
   ]
