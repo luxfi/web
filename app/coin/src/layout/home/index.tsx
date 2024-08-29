@@ -218,10 +218,10 @@ const HomeLayout: FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
 
       {/* Section One: Join the resolution */}
-      <div className="relative w-full">
+      <div className="relative w-full overflow-x-hidden md:overflow-x-clip">
         <img src="assets/common/pink-effect.png" alt="effect-bg" className="absolute top-[-50px] lg:top-[-160px] right-[-80px] lg:right-0 w-[400px] lg:w-auto" />
         <div className="mt-40 flex flex-col lg:flex-row justify-evenly">
           <div className="flex flex-col gap-20 items-center z-1">
@@ -366,6 +366,9 @@ const HomeLayout: FC = () => {
           }
         </div>
       </div>
+
+      {/* Mobile mint button */}
+      <Button className="block md:hidden fixed bottom-2 left-[10px] w-[calc(100%-20px)] h-10 uppercase">Mint Now</Button>
 
     </div>
   )
