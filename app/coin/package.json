@@ -11,9 +11,6 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "@hanzo/auth": "*",
-    "@hanzo/commerce": "*",
-    "@hanzo/ui": "*",
     "@luxfi/ui": "*",
     "@next/mdx": "14.1.0",
     "@types/node": "^20.12.12",
