@@ -13,6 +13,7 @@
   "dependencies": {
     "@hanzo/ui": "*",
     "@luxfi/ui": "*",
+    "@next/bundle-analyzer": "^14.2.8",
     "@next/mdx": "14.1.0",
     "@types/node": "^20.12.12",
     "lucide-react": "^0.344.0",
