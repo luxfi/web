@@ -106,7 +106,7 @@ const LearnMoreBlockData: LearnMoreBlockProps[] = [
     description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
     image: "assets/common/luxcash.png"
   },
-]
+];
 
 const FaqItemsData: FaqItemProp[] = [
   {
@@ -145,7 +145,7 @@ const FaqItemsData: FaqItemProp[] = [
     title: "How do you launch a subnet?",
     link: "#"
   },
-]
+];
 
 const EnterpriseData: EnterpriseBoxProps[] = [
   {
@@ -200,7 +200,7 @@ const EnterpriseData: EnterpriseBoxProps[] = [
       }
     ]
   }
-]
+];
 
 const HomeLayout: FC = () => {
   const learnMoreBlockRef = useRef<HTMLDivElement | null>(null);
