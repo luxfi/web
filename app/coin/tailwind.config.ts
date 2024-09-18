@@ -12,10 +12,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: "#ffffff",
-        black: "#000000",
-        gray: "#e5e7eb",
-        grey: "rgb(102, 102, 102)"
+          white: "#ffffff",
+          black: "#000000",
+          gray: "#e5e7eb",
       }
     },
   }

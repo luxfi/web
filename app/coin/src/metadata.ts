@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 export default {
   metadataBase: new URL('https://lux.credit'),
   title: {
-    default: 'Lux ICO',
-    template: '%s | Lux ICO',
+    default: 'Lux Blank',
+    template: '%s | Lux Blank',
   },
   description: 'Explore your swaps',
   applicationName: 'Lux Bridge Explorer',

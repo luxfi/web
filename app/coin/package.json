@@ -1,5 +1,5 @@
 {
-  "name": "@luxfi/coin",
+  "name": "@luxfi/blank",
   "version": "0.0.2",
   "private": true,
   "scripts": {
@@ -11,24 +11,18 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "@hanzo/ui": "*",
     "@luxfi/ui": "*",
-    "@next/bundle-analyzer": "^14.2.8",
+    "@hanzo/auth": "*",
+    "@hanzo/commerce": "*",
+    "@hanzo/ui": "*",
     "@next/mdx": "14.1.0",
     "@types/node": "^20.12.12",
-    "css-loader": "^7.1.2",
     "lucide-react": "^0.344.0",
-    "mobx": "^6.13.2",
-    "mobx-react-lite": "^4.0.7",
-    "mobx-utils": "^6.0.8",
     "next": "14.2.3",
     "next-themes": "^0.2.1",
-    "postcss-loader": "^8.1.1",
     "postcss-selector-parser": "^6.0.13",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "style-loader": "^4.0.0",
-    "validator": "^13.12.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",
