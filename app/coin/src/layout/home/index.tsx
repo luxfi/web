@@ -69,37 +69,37 @@ const LinkToData: LinkToProps[] = [
 const LearnMoreBlockData: LearnMoreBlockProps[] = [
   {
     title: "Explore Lux Network",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    description: "Dive into expert insights, tutorials, and guides that unlock the potential of the Lux blockchain ecosystem and its innovative solutions.",
     image: "assets/common/zk.png"
   },
   {
-    title: "A Quantum Secure Wallet",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    title: "Secure and Quantum Safe",
+    description: "Discover Lux’s quantum-secure Lux Safe and Lux Wallet, safeguarding your digital assets with the highest level of encryption and security.",
     image: "assets/common/quantum.png"
   },
   {
-    title: "Zero-Knowledge Bridge Portal",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    title: "Zero-Knowledge Bridge",
+    description: "Learn about Lux’s Zero-Knowledge Teleport Protocol and Lux Bridge, enabling private and secure asset transfers across multiple blockchains.",
     image: "assets/common/zero.png"
   },
   {
-    title: "Auto Repaying Credit Card",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    title: "Lux Credit Card",
+    description: "Experience unlimited spending power with the Lux Credit Card. Access up to 80% of your collateral, earn rewards, and enjoy fee-free transactions without selling your crypto.",
     image: "assets/common/auto-repaying.png"
   },
   {
-    title: "The Pyramid Computer",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    title: "Lux Pyramid",
+    description: "The Lux Pyramid Computer is a high-performance AI supercomputer designed for home and office use, combining cutting-edge technology with unmatched privacy.",
     image: "assets/common/validator.png"
   },
   {
     title: "Lux Key is your all access pass.",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    description: "Your all-access pass to the Lux ecosystem, unlocking seamless entry to every product, service, and benefit Lux has to offer.",
     image: "assets/common/luxkey.png"
   },
   {
     title: "What is Lux Cash?",
-    description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
+    description: "A versatile, stable digital currency designed for instant transactions and easy integration across the entire Lux Network.",
     image: "assets/common/luxcash.png"
   },
 ];
@@ -107,39 +107,39 @@ const LearnMoreBlockData: LearnMoreBlockProps[] = [
 const FaqItemsData: FaqItemProp[] = [
   {
     title: "How do you earn rewards?",
-    link: "#"
+    link: "https://docs.lux.network"
   },
   {
     title: "When are the Lux Quests?",
-    link: "#"
+    link: "https://lux.quest"
   },
   {
     title: "Is Lux safe from hacking?",
-    link: "#"
+    link: "https://docs.lux.network"
   },
   {
     title: "Can you add Bitcoin to your Lux Wallet?",
-    link: "#"
+    link: "https://docs.lux.network"
   },
   {
     title: "How can I work for Lux?",
-    link: "#"
+    link: "https://lux.careers"
   },
   {
     title: "How do I stake my LUX coins?",
-    link: "#"
+    link: "https://wallet.lux.network"
   },
   {
     title: "How do you earn rewards?",
-    link: "#"
+    link: "https://docs.lux.network"
   },
   {
-    title: "How to join Dao?",
-    link: "#"
+    title: "How to join DAO?",
+    link: "https://docs.lux.network"
   },
   {
     title: "How do you launch a subnet?",
-    link: "#"
+    link: "https://docs.lux.network"
   },
 ];
 
@@ -150,7 +150,7 @@ const EnterpriseData: EnterpriseBoxProps[] = [
     links: [
       {
         label: "Run a Validator",
-        link: "#"
+        link: "https://docs.lux.network"
       }
     ]
   },
@@ -160,11 +160,11 @@ const EnterpriseData: EnterpriseBoxProps[] = [
     links: [
       {
         label: "Browse Cards",
-        link: "#"
+        link: "https://lux.cards"
       },
       {
         label: "See Benefits",
-        link: "#"
+        link: "https://lux.cards/benefits"
       }
     ]
   },
@@ -173,12 +173,12 @@ const EnterpriseData: EnterpriseBoxProps[] = [
     description: "Quantum safety and securitization of your assets and transaction, within the Lux Ecosystem, Zk Bridge, Lux Wallet, Lux Brdige, and Lux Exchange. All made possible through the utilization of lattice and lamport signatures.",
     links: [
       {
-        label: "Run a Docs",
-        link: "#"
+        label: "Read Docs",
+        link: "https://docs.lux.network"
       },
       {
         label: "Open Source",
-        link: "#"
+        link: "https://github.com/luxfi"
       }
     ]
   },
@@ -188,11 +188,11 @@ const EnterpriseData: EnterpriseBoxProps[] = [
     links: [
       {
         label: "Bridge Assets",
-        link: "#"
+        link: "https://bridge.lux.network"
       },
       {
         label: "Lux Exchange",
-        link: "#"
+        link: "https://lux.exchange"
       }
     ]
   }
@@ -232,8 +232,8 @@ const HomeLayout: FC = () => {
               </div>
               <div className="mt-0 lg:mt-[52px] flex flex-col lg:flex-row justify-between gap-3">
                 <div>
-                  <p className="text-[8px] lg:text-xl 2xl:text-2xl text-grey">Current Period 96/369</p>
-                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">00:03:14:19&nbsp;<span className="uppercase text-white text-base">Time Left</span></h3>
+                  <p className="text-[8px] lg:text-xl 2xl:text-2xl text-grey">Current Period 0/369</p>
+                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">00:00:00:00&nbsp;<span className="uppercase text-white text-base">Time Left</span></h3>
                 </div>
                 <div>
                   <p className="text-[8px] lg:text-xl 2xl:text-2xl text-grey">Current Distribution</p>
@@ -244,7 +244,7 @@ const HomeLayout: FC = () => {
             </div>
             <div className="mt-10">
               <p className="text-xl text-grey">Total Distributed</p>
-              <p className="text-sm text-white text-center">400,000,000</p>
+              <p className="text-sm text-white text-center">4,000,000,000</p>
               <Progress value={50} className="h-[10px] lg:h-[31px] mt-2 lg:mt-4" />
               <div className="flex flex-row justify-between mt-4">
                 <span className="text-xs text-grey uppercase">0 Lux</span>
