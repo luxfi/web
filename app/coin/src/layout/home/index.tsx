@@ -74,12 +74,12 @@ const LearnMoreBlockData: LearnMoreBlockProps[] = [
   },
   {
     title: "Secure and Quantum Safe",
-    description: "Discover Lux’s quantum-secure Lux Safe and Lux Wallet, safeguarding your digital assets with the highest level of encryption and security.",
+    description: "Discover Lux’s quantum secure Lux Safe and Lux Wallet, safeguarding your digital assets with the highest level of encryption and security.",
     image: "assets/common/quantum.png"
   },
   {
     title: "Zero-Knowledge Bridge",
-    description: "Learn about Lux’s Zero-Knowledge Teleport Protocol and Lux Bridge, enabling private and secure asset transfers across multiple blockchains.",
+    description: "Learn about Lux’s zero knowledge Teleport Protocol and Lux Bridge, enabling private and secure asset transfers across multiple blockchains.",
     image: "assets/common/zero.png"
   },
   {
@@ -89,7 +89,7 @@ const LearnMoreBlockData: LearnMoreBlockProps[] = [
   },
   {
     title: "Lux Pyramid",
-    description: "The Lux Pyramid Computer is a high-performance AI supercomputer designed for home and office use, combining cutting-edge technology with unmatched privacy.",
+    description: "The Pyramid Computer is a high-performance AI supercomputer designed for home and office use, combining cutting-edge technology with unmatched privacy.",
     image: "assets/common/validator.png"
   },
   {
@@ -98,7 +98,7 @@ const LearnMoreBlockData: LearnMoreBlockProps[] = [
     image: "assets/common/luxkey.png"
   },
   {
-    title: "What is Lux Cash?",
+    title: "What is Lux Dollar?",
     description: "A versatile, stable digital currency designed for instant transactions and easy integration across the entire Lux Network.",
     image: "assets/common/luxcash.png"
   },
@@ -156,7 +156,7 @@ const EnterpriseData: EnterpriseBoxProps[] = [
   },
   {
     title: "Unlimited Credit Card",
-    description: "Never lose your credit card, spend unlimitedly without selling your crypto, spend up to 80% of your collateral on any transaction, plus earn generously without getting fees.",
+    description: "Spend without selling your crypto, loan to value of up to 80% on any transaction, plus earn generously without getting fees.",
     links: [
       {
         label: "Browse Cards",
@@ -183,8 +183,8 @@ const EnterpriseData: EnterpriseBoxProps[] = [
     ]
   },
   {
-    title: "Universal Transactions",
-    description: "Seamlessly transact across any chain with Lux Bridge for fast, efficient payments. Trade, stake, and provide liquidity for Lux and other cryptos using fiat, altcoins, wire transfer, Apple Pay, debit, or credit cards.",
+    title: "Private Transactions",
+    description: "Privately transact across any chain with Lux Bridge for fast, efficient payments. Trade, stake, and provide liquidity for Lux and other cryptos using fiat, altcoins, wire transfer, Apple Pay, debit, or credit cards.",
     links: [
       {
         label: "Bridge Assets",
@@ -340,18 +340,18 @@ const HomeLayout: FC = () => {
       {/* Section Six: Select Card */}
       <div className="hidden mt-[100px] 2xl:mt-[300px] lg:flex flex-row gap-[35px] 2xl:gap-[86px] px-[50px] 2xl:px-[142px]">
         <div className="">
-          <h1 className="text-[32px] 2xl:text-[64px] text-white">You never have to sell your crypto again.</h1>
+          <h1 className="text-[32px] 2xl:text-[64px] text-white">Never sell your crypto again.</h1>
           <p className="text-[24px] 2xl:text-[32px] text-white mt-[16px] 2xl:mt-[30px]">The Lux Credit Card lets you spend up to 80% of any asset in your LUX wallet without ever liquidating your digital assets.</p>
           <Button className="px-8 py-4 text-2xl text-black rounded-full mt-[58px]">Select Your Card</Button>
         </div>
         <img src="assets/common/cards.png" alt="cards" />
       </div>
 
-      {/* Section Seven: Financial Enterprise */}
+      {/* Section Seven: Financial Ecosystem */}
       <div className="hidden lg:block mt-[250px] px-[70px]">
         <div className="flex flex-row items-center gap-[30px]">
           <div>
-            <h1 className="text-white lg:text-[40px] 2xl:text-[72px] font-bold">Lux is a seamless financial enterprise.</h1>
+            <h1 className="text-white lg:text-[40px] 2xl:text-[72px] font-bold">Lux is a seamless financial ecosystem.</h1>
             <p className="text-white text-[24px] mt-[78px]">All the financial tools you will ever need for success and peace of mind. </p>
           </div>
           <img src="assets/common/video.png" alt="video" className="max-w-[700px]" />
