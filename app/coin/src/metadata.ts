@@ -1,45 +1,45 @@
 import type { Metadata } from 'next'
 
 export default {
-  metadataBase: new URL('https://lux.credit'),
+  metadataBase: new URL('https://luxco.in'),
   title: {
-    default: 'Lux ICO',
-    template: '%s | Lux ICO',
+    default: 'Lux Coin',
+    template: '%s | Lux Coin',
   },
-  description: 'Explore your swaps',
-  applicationName: 'Lux Bridge Explorer',
-  authors: {name: 'Lux Dev team'},
-  keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
+  description: 'LUX is a groundbreaking digital currency with a structured distribution model that ensures fair access for all participants. Priced transparently and distributed over 369 days, Lux Coin allows users to engage deeply with the Lux ecosystem, participate in staking, governance, and decentralized finance, all while enjoying quantum-safe security. Designed to empower a diverse community of users, Lux Coin combines innovation, inclusivity, and robust security, setting a new standard in the world of digital assets. Discover Lux Coin and be part of the future of finance.',
+  applicationName: 'Lux Coin',
+  authors: {name: 'Lux Partners Limited'},
+  keywords: "LUX, Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
   icons: [
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/assets/lux-site-icons/favicon-16x16.png'   
+      url: '/assets/lux-site-icons/favicon-16x16.png'
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/assets/lux-site-icons/favicon-32x32.png'   
+      url: '/assets/lux-site-icons/favicon-32x32.png'
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '192x192',
-      url: '/assets/lux-site-icons/android-chrome-192x192.png'   
+      url: '/assets/lux-site-icons/android-chrome-192x192.png'
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '512x512',
-      url: '/assets/lux-site-icons/android-chrome-512x512.png'   
+      url: '/assets/lux-site-icons/android-chrome-512x512.png'
     },
     {
       rel: 'apple-touch-icon',
       type: 'image/png',
       sizes: "180x180",
-      url: '/assets/lux-site-icons/apple-touch-icon.png'  
+      url: '/assets/lux-site-icons/apple-touch-icon.png'
     },
   ],
   //manifest: '/site.webmanifest',
@@ -64,4 +64,4 @@ export default {
   other: {
     'msapplication-TileColor': '#000000'
   },
-} as Metadata 
+} as Metadata

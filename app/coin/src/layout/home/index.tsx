@@ -214,9 +214,9 @@ const HomeLayout: FC = () => {
   };
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative" style={{fontSize: '80%'}}>
 
-      {/* Section One: Join the resolution */}
+      {/* Section One: Join the Revolution */}
       <div className="relative w-full overflow-x-hidden md:overflow-x-clip">
         <img src="assets/common/pink-effect.png" alt="effect-bg" className="absolute top-[-50px] lg:top-[-160px] right-[-80px] lg:right-0 w-[400px] lg:w-auto" />
         <div className="mt-40 flex flex-col lg:flex-row justify-evenly">
