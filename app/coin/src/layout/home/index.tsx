@@ -12,17 +12,17 @@ import { EnterpriseBox, type EnterpriseBoxProps } from "../components/Enterprise
 const TextBlockData: TextBlockType[] = [
   {
     title: "Inclusive and Fair",
-    description: "To ensure inclusivity, Lux Coin have no pre-determined price; rather price is set by market demand. This mimics mining without giving potential unfair advantages to large purchasers.",
+    description: "Lux Coin’s distribution model is designed to ensure fairness and inclusivity, allowing participants of all sizes to engage without bias. Market-driven pricing ensures equal opportunity for all.",
     icon: "assets/common/hand.svg"
   },
   {
     title: "Open Distribution",
-    description: "The Coin distribution takes place over 369 days which is plenty of time coin holders to familiarize themselves with the Lux ecosystem, as well as participate in the distribution.",
+    description: "Lux Coin is distributed over a 369-day period, providing ample time for users to engage, learn, and participate within the Lux ecosystem, ensuring a broad and equitable distribution.",
     icon: "assets/common/door.svg"
   },
   {
     title: "Transparent",
-    description: "To ensure inclusivity, Lux Coin have no pre-determined price; rather price is set by market demand. This mimics mining without giving potential unfair advantages to large purchasers.",
+    description: "Lux Coin operates with full transparency, with pricing determined by market demand. This approach mirrors traditional mining economics, offering a clear and unbiased entry for all participants.",
     icon: "assets/common/rect.svg"
   }
 ];
@@ -170,7 +170,7 @@ const EnterpriseData: EnterpriseBoxProps[] = [
   },
   {
     title: "Military Grade Security",
-    description: "Quantum safety and securitization of your assets and transaction, within the Lux Ecosystem, Zk Bridge, Lux Wallet, Lux Brdige, and Lux Exchange. All made possible through the utilization of lattice and lamport signatures.",
+    description: "Quantum safety and securitization of your assets and transaction, within the Lux Ecosystem, Lux Bridge, Lux Wallet, and Lux Exchange. All made possible through the utilization of lattice and lamport signatures.",
     links: [
       {
         label: "Read Docs",
@@ -214,7 +214,7 @@ const HomeLayout: FC = () => {
   };
 
   return (
-    <div className="w-full relative"}}>
+    <div className="w-full relative">
 
       {/* Section One: Join the Revolution */}
       <div className="relative w-full overflow-x-hidden md:overflow-x-clip">
@@ -222,23 +222,23 @@ const HomeLayout: FC = () => {
         <div className="mt-40 flex flex-col lg:flex-row justify-evenly">
           <div className="flex flex-col gap-20 items-center z-1">
             <img src="assets/common/lux-logo.png" alt="lux-logo" className="w-[300px] lg:w-full" />
-            <Button className="hidden lg:flex px-4 py-4 text-2xl text-black uppercase rounded-full">Claim your lux</Button>
+            <Button className="hidden lg:flex px-4 py-4 text-xl text-black uppercase rounded-full">Claim your lux</Button>
           </div>
           <div className="z-1 px-[15px] lg:px-0 mt-[30px] lg:mt-0">
             <div className="flex flex-row lg:flex-col justify-between">
               <div>
-                <h2 className="text-[20px] lg:text-[32px] 2xl:text-[40px] uppercase text-grey">Lux Coin distribution</h2>
-                <span className="text-[32px] lg:text-[48px] 2xl:text-[64px] uppercase text-white mt-4">Join the revolution</span>
+                <h2 className="text-[20px] lg:text-[32px] xl:text-[40px] uppercase text-grey">Lux Coin distribution</h2>
+                <span className="text-[32px] lg:text-[48px] xl:text-[64px] uppercase text-white mt-4">Join the revolution</span>
               </div>
               <div className="mt-0 lg:mt-[52px] flex flex-col lg:flex-row justify-between gap-3">
                 <div>
-                  <p className="text-[8px] lg:text-xl 2xl:text-2xl text-grey">Current Period 0/369</p>
-                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">00:00:00:00&nbsp;<span className="uppercase text-white text-base">Time Left</span></h3>
+                  <p className="text-[8px] lg:text-xl xl:text-xl text-grey">Current Period 0/369</p>
+                  <h3 className="text-white text-[14px] lg:text-xl xl:text-4xl">00:00:00:00&nbsp;<span className="uppercase text-white text-base">Time Left</span></h3>
                 </div>
                 <div>
-                  <p className="text-[8px] lg:text-xl 2xl:text-2xl text-grey">Current Distribution</p>
-                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">2,000,000&nbsp;<span className="uppercase text-white text-base">Lux</span></h3>
-                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">$500,000&nbsp;<span className="uppercase text-white text-base">Received</span></h3>
+                  <p className="text-[8px] lg:text-xl xl:text-xl text-grey">Current Distribution</p>
+                  <h3 className="text-white text-[14px] lg:text-xl xl:text-4xl">2,000,000&nbsp;<span className="uppercase text-white text-base">Lux</span></h3>
+                  <h3 className="text-white text-[14px] lg:text-xl xl:text-4xl">$500,000&nbsp;<span className="uppercase text-white text-base">Received</span></h3>
                 </div>
               </div>
             </div>
@@ -256,7 +256,7 @@ const HomeLayout: FC = () => {
       </div>
 
       {/* Section Two: Text Blocks */}
-      <div className="mt-[190px] hidden lg:flex flex-row gap-[35px] 2xl:gap-[70px] items-start justify-center">
+      <div className="mt-[190px] hidden lg:flex flex-row gap-[35px] xl:gap-[70px] items-start justify-center">
         {
           TextBlockData.map((item, index) => <TextBlock {...item} key={index} />)
         }
@@ -282,9 +282,9 @@ const HomeLayout: FC = () => {
       </div>
 
       {/* Section Three: Join Lux */}
-      <div className="mt-[51px] lg:mt-[105px] px-[30px] lg:px-[50px] 2xl:px-[142px]">
-        <h1 className="text-white text-[20px] lg:text-[48px] 2xl:text-[64px]">Join Lux</h1>
-        <div className="flex flex-wrap gap-x-4 2xl:gap-x-[50px] gap-y-2 2xl:gap-y-3 px-0 2xl:px-[42px] mt-5 2xl:mt-15">
+      <div className="mt-[51px] lg:mt-[105px] px-[30px] lg:px-[50px] xl:px-[142px]">
+        <h1 className="text-white text-[24px] xl:text-[36px]">Join Lux</h1>
+        <div className="flex flex-wrap gap-x-4 xl:gap-x-[50px] gap-y-2 xl:gap-y-3 px-0 mt-5 xl:mt-15">
           {
             LinkToData.map((item, index) => <LinkTo {...item} key={index} />)
           }
@@ -292,12 +292,12 @@ const HomeLayout: FC = () => {
       </div>
 
       {/* Section Four: Learn More */}
-      <div className="mt-[125px] px-[50px] 2xl:px-[142px] relative">
+      <div className="mt-[125px] px-[50px] xl:px-[142px] relative">
         <div className="hidden lg:flex flex-row gap-5">
-          <h1 className="text-white text-[24px] 2xl:text-[36px]">Learn More</h1>
-          <span className="underline text-white text-[24px] 2xl:text-[36px] cursor-pointer">Show All</span>
+          <h1 className="text-white text-[24px] xl:text-[36px]">Learn More</h1>
+          <span className="underline text-white text-[24px] xl:text-[36px] cursor-pointer">Show All</span>
         </div>
-        <div ref={learnMoreBlockRef} className="flex flex-col lg:flex-row gap-5 2xl:gap-11 overflow-x-auto overflow-y-auto lg:overflow-y-hidden no-scroll justify-start mt-10 2xl:mt-20">
+        <div ref={learnMoreBlockRef} className="flex flex-col lg:flex-row gap-5 xl:gap-11 overflow-x-auto overflow-y-auto lg:overflow-y-hidden no-scroll justify-start mt-10 xl:mt-20">
           {
             LearnMoreBlockData.map((item, index) => <LearnMoreBlock {...item} key={index} />)
           }
@@ -311,9 +311,9 @@ const HomeLayout: FC = () => {
       </div>
 
       {/* Section Five: Faqs */}
-      <div className="hidden lg:block mt-[144px] px-[50px] 2xl:px-[142px]">
-        <h1 className="text-white text-[24px] 2xl:text-[36px]">FAQ's</h1>
-        <div className="flex flex-wrap gap-x-[40px] 2xl:gap-x-[140px] gap-y-[20px] 2xl:gap-y-[60px] mt-[20px] 2xl:mt-[62px]">
+      <div className="hidden lg:block mt-[144px] px-[50px] xl:px-[142px]">
+        <h1 className="text-white text-[24px] xl:text-[36px]">FAQ's</h1>
+        <div className="flex flex-wrap gap-x-[40px] xl:gap-x-[140px] gap-y-[20px] xl:gap-y-[60px] mt-[20px] xl:mt-[62px]">
           {
             FaqItemsData.map((item, index) => <FaqItem {...item} key={index} />)
           }
@@ -321,7 +321,7 @@ const HomeLayout: FC = () => {
       </div>
 
       <div className="block lg:hidden mt-[53px]">
-        <h1 className="text-white text-[24px] 2xl:text-[36px] px-2">FAQ's</h1>
+        <h1 className="text-white text-[24px] xl:text-[36px] px-2">FAQ's</h1>
         <Accordion type="single" collapsible className="w-full border-t border-[#1E1E1E] mt-[37px]">
           {
             FaqItemsData.map((item, index) =>
@@ -338,11 +338,11 @@ const HomeLayout: FC = () => {
       </div>
 
       {/* Section Six: Select Card */}
-      <div className="hidden mt-[100px] 2xl:mt-[300px] lg:flex flex-row gap-[35px] 2xl:gap-[86px] px-[50px] 2xl:px-[142px]">
+      <div className="hidden mt-[100px] xl:mt-[300px] lg:flex flex-row gap-[35px] xl:gap-[86px] px-[50px] xl:px-[142px]">
         <div className="">
-          <h1 className="text-[32px] 2xl:text-[64px] text-white">Never sell your crypto again.</h1>
-          <p className="text-[24px] 2xl:text-[32px] text-white mt-[16px] 2xl:mt-[30px]">The Lux Credit Card lets you spend up to 80% of any asset in your LUX wallet without ever liquidating your digital assets.</p>
-          <Button className="px-8 py-4 text-2xl text-black rounded-full mt-[58px]">Select Your Card</Button>
+          <h1 className="text-[28px] xl:text-[36px] text-white">Never sell your crypto again.</h1>
+          <p className="text-[20px] xl:text-[24px] text-white mt-[16px] xl:mt-[30px]">The Lux Credit Card lets you spend up to 80% of any asset in your Lux Wallet without ever liquidating your digital assets.</p>
+          <Button className="px-8 py-4 text-xl text-black rounded-full mt-[58px]">Select Your Card</Button>
         </div>
         <img src="assets/common/cards.png" alt="cards" />
       </div>
@@ -351,8 +351,8 @@ const HomeLayout: FC = () => {
       <div className="hidden lg:block mt-[250px] px-[70px]">
         <div className="flex flex-row items-center gap-[30px]">
           <div>
-            <h1 className="text-white lg:text-[40px] 2xl:text-[72px] font-bold">Lux is a seamless financial ecosystem.</h1>
-            <p className="text-white text-[24px] mt-[78px]">All the financial tools you will ever need for success and peace of mind. </p>
+            <h1 className="text-white text-[28px] xl:text-[36px]">Lux is a seamless financial ecosystem.</h1>
+            <p className="text-white text-[20px] mt-[78px]">All the financial tools you will ever need for success and peace of mind. </p>
           </div>
           <img src="assets/common/video.png" alt="video" className="max-w-[700px]" />
         </div>
