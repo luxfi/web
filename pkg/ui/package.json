@@ -67,6 +67,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@types/facebook-pixel": "^0.0.30",
@@ -75,10 +76,16 @@
     "@types/node": "^20.11.24",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "lucide-react": "^0.344.0",
+    "mobx": "^6.12.3",
+    "mobx-react-lite": "^4.0.7",
+    "mobx-utils": "^6.0.8",
+    "next": "14.2.3",
+    "next-themes": "^0.2.1",
+    "react-hook-form": "^7.51.4",
     "tailwindcss": "^3.4.3",
     "typescript": "5.6.2",
-    "mobx": "^6.13.2",
-    "mobx-utils": "^6.0.8",
-    "mobx-react-lite": "^4.0.7"
+    "validator": "^13.11.0",
+    "zod": "3.23.8"
   }
 }
