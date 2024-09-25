@@ -6,6 +6,6 @@
       "ENABLE_EXPERIMENTAL_COREPACK": "1"
     }
   },
-  "installCommand": "pnpm install --ignore-frozen-lockfile",
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm build"
 }
