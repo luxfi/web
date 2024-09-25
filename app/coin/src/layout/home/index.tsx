@@ -214,7 +214,7 @@ const HomeLayout: FC = () => {
   };
 
   return (
-    <div className="w-full relative" style={{fontSize: '80%'}}>
+    <div className="w-full relative"}}>
 
       {/* Section One: Join the Revolution */}
       <div className="relative w-full overflow-x-hidden md:overflow-x-clip">
