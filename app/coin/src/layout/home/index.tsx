@@ -45,10 +45,6 @@ const LinkToData: LinkToProps[] = [
     link: "#"
   },
   {
-    title: "Stack Overflow",
-    link: "#"
-  },
-  {
     title: "Facebook",
     link: "#"
   },
@@ -57,7 +53,7 @@ const LinkToData: LinkToProps[] = [
     link: "#"
   },
   {
-    title: "Lux.credit",
+    title: "Lux Credit Card",
     link: "#"
   },
   {
@@ -65,7 +61,7 @@ const LinkToData: LinkToProps[] = [
     link: "#"
   },
   {
-    title: "Medium",
+    title: "Blog",
     link: "#"
   },
 ];
@@ -92,7 +88,7 @@ const LearnMoreBlockData: LearnMoreBlockProps[] = [
     image: "assets/common/auto-repaying.png"
   },
   {
-    title: "The Validator Computer",
+    title: "The Pyramid Computer",
     description: "Our expert opinions, tutorials, guide’s, and educational content, everything you need to know about the diverse blockchain ecosystem and the game changing solutions. .",
     image: "assets/common/validator.png"
   },
@@ -242,7 +238,7 @@ const HomeLayout: FC = () => {
                 <div>
                   <p className="text-[8px] lg:text-xl 2xl:text-2xl text-grey">Current Distribution</p>
                   <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">2,000,000&nbsp;<span className="uppercase text-white text-base">Lux</span></h3>
-                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">$500,000&nbsp;<span className="uppercase text-white text-base">ETH Received</span></h3>
+                  <h3 className="text-white text-[14px] lg:text-2xl 2xl:text-4xl">$500,000&nbsp;<span className="uppercase text-white text-base">Received</span></h3>
                 </div>
               </div>
             </div>
