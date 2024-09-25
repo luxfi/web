@@ -1,0 +1,11 @@
+{
+  "build": {
+    "env": {
+      "NODE_VERSION": "20",
+      "ENABLE_EXPERIMENTAL_PNPM": "true",
+      "ENABLE_EXPERIMENTAL_COREPACK": "1"
+    }
+  },
+  "installCommand": "pnpm install --ignore-frozen-lockfile",
+  "buildCommand": "pnpm build"
+}
