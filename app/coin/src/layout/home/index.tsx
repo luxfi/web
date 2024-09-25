@@ -29,40 +29,40 @@ const TextBlockData: TextBlockType[] = [
 
 const LinkToData: LinkToProps[] = [
   {
-    title: "Create Lux ID",
-    link: "#"
+    title: "Lux ID",
+    link: "https://lux.id"
+  },
+  {
+    title: "Lux Credit",
+    link: "https://lux.credit"
+  },
+  {
+    title: "Lux Network",
+    link: "https://lux.network"
   },
   {
     title: "Linkedin",
-    link: "#"
+    link: "https://linkedin.com/company/luxdefi"
   },
   {
     title: "Instagram",
-    link: "#"
-  },
-  {
-    title: "Lux.network",
-    link: "#"
+    link: "https://www.instagram.com/luxdefi"
   },
   {
     title: "Facebook",
-    link: "#"
+    link: "https://facebook.com/luxdefi"
   },
   {
     title: "Github",
-    link: "#"
-  },
-  {
-    title: "Lux Credit Card",
-    link: "#"
+    link: "https://github.com/luxfi"
   },
   {
     title: "X",
-    link: "#"
+    link: "https://x.com/luxdefi"
   },
   {
     title: "Blog",
-    link: "#"
+    link: "https://lux.blog"
   },
 ];
 
