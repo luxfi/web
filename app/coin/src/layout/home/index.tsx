@@ -222,7 +222,9 @@ const HomeLayout: FC = () => {
         <div className="mt-40 flex flex-col lg:flex-row justify-evenly">
           <div className="flex flex-col gap-20 items-center z-1">
             <img src="assets/common/lux-logo.png" alt="lux-logo" className="w-[300px] lg:w-full" />
+            <a href="https://app.luxco.in" target="blank">
             <Button className="hidden lg:flex px-4 py-4 text-xl text-black uppercase rounded-full">Claim your lux</Button>
+            </a>
           </div>
           <div className="z-1 px-[15px] lg:px-0 mt-[30px] lg:mt-0">
             <div className="flex flex-row lg:flex-col justify-between">
