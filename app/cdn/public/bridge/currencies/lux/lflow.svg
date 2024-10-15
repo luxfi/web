@@ -1,6 +1,5 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="256.001" cy="256" r="255.5" fill="black" stroke="white"/>
-<circle cx="255.532" cy="256.279" r="210.164" fill="black" stroke="white" stroke-width="4"/>
 <g clip-path="url(#clip0_40_442)">
 <path d="M257.5 440C358.292 440 440 358.292 440 257.5C440 156.708 358.292 75 257.5 75C156.708 75 75 156.708 75 257.5C75 358.292 156.708 440 257.5 440Z" fill="black"/>
 <path d="M337.435 229.03H285.97V280.495H337.435V229.03Z" fill="white"/>
