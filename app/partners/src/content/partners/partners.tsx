@@ -147,7 +147,7 @@ export default {
       blockType: "partner-card",
       name: "Jack Kochen",
       title: "Chief Marketing Officer",
-      description: "Jack has been running communities since he was young, and has been a blockchain hobbyist since 2012! Jack's last project was the first DeFi application on Cardano, VyFinance. He has also worked alongside Moonpay, Vechain, and a swath of smaller projects. Jack's expertise ranges far and wide, from programming in Golang, to running a community, to operational logistics; and all the marketing required between. Focusing on efficiency, trust, transparency, and 'cult following' styles, Jack hopes to make Lux a household-name.",
+      description: "Jack has been running communities since he was young, and has been a blockchain hobbyist since 2012! Jack's last project was the first DeFi application on Cardano, VyFinance. He has also worked alongside Moonpay, Vechain, and a swath of smaller projects. Jack's expertise ranges far and wide, from programming in Golang, to running a community, to operational logistics; and all the marketing required between. Focusing on efficiency, trust, and transparency, Jack hopes to make Lux a household-name.",
       url: "https://www.linkedin.com/in/jack-kochen/",
       image: {
         blockType: 'image',
@@ -314,3 +314,5 @@ export default {
     } as PartnerCardBlock,
   ]
 } as PartnersBlock
+
+
