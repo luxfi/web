@@ -41,45 +41,6 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
-      name: "Ari Lerner",
-      title: "Chief Technology Officer",
-      description: "Ari is a passionate software engineer, entrepreneur, and educator. With over 20 years of experience, he has co-founded successful companies like Fullstack.io and Fieldday. As a senior consultant at Amazon Web Services, Ari guides clients in application development and has extensive experience in technology. He is a respected author, having written over ten books on programming, and shares his insights at global tech conferences. His notable works include co-authoring D3 on AngularJS, Zero to Deep Learning, and Fullstack React, Native, & Vue.",
-      url: "https://www.linkedin.com/in/arilerner",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/ari-lerner.png',
-        alt: 'Ari Lerner',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Ashley Christie",
-      title: "Chief of Staff",
-      description: "Ashley Kathleen Christie is the Chief of Staff at Lux Partners Limited, where she leverages her diverse experience in military operations and private wealth management to drive digital finance and lifestyle ventures. At Lux, she has been pivotal in integrating advanced technologies like renewable Bitcoin mining and quantum-secure systems into global strategies. Notably, Ashley led the launch of the Lux Credit Card, enhancing financial utility with wealth-building features. Her previous role at Carbon Nation saw her pioneering the Carbon-Based Agro Metaverse Game, merging gaming with environmental sustainability. Ashley's expertise in operations and her strategic vision continue to shape Lux’s trajectory in the blockchain space.",
-      url: "https://www.linkedin.com/in/ashley-kathleen-christie",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/justen-mckenzie.png',
-        alt: 'Justen McKenzie',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Cyrus Pahlavi",
-      title: "Executive President",
-      description: `An accomplished artist, inventor, human rights advocate, and expert in global finance and commodities, HRH Prince Cyrus Pahlavi brings a wealth of experience and a unique perspective to his role as Executive President of LUX. His diverse career, highlighted by significant achievements in art, activism, philanthropy, film production, and diplomacy, is underpinned by a robust global network cultivated through prestigious education at Le Rosey in Switzerland and Parsons College. This network, enriched by his lineage as a descendant of the "Peacock Dynasty" and his advocacy for women's rights, aligns with the legacy of Cyrus the Great and his pioneering human rights efforts.`,
-      url: "https://www.cyruspahlavi.com/about",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/cyrus-pahlavi.png',
-        alt: 'Cyrus Pahlavi',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
       name: "Antje Worring",
       title: "Chief Operating Officer",
       description: "Metaverse architect and multidisciplinary designer with over 10 years of experience in art, branding, design, engineering, fashion and marketing as well UI/UX, video production and 3D modeling. She is also an advocate for animal and ocean conservation and has worked in the sustainability sector for over a decade. Antje's career began at award-winning Karma Bikinis, where she has served as CEO & lead designer since 2014, producing over 300 products and hundreds of photo shoots. Since March 2020, she has also worked as designer, software engineer and delivers multidisciplinary activations, engagements and partnerships, while never losing focus on growth.",
@@ -93,6 +54,45 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
+      name: "Ari Lerner",
+      title: "Chief Technology Officer",
+      description: "Ari is a passionate software engineer, entrepreneur, and educator. With over 20 years of experience, he has co-founded successful companies like Fullstack.io and Fieldday. As a senior consultant at Amazon Web Services, Ari guides clients in application development and has extensive experience in technology. He is a respected author, having written over ten books on programming, and shares his insights at global tech conferences. His notable works include co-authoring D3 on AngularJS, Zero to Deep Learning, and Fullstack React, Native, & Vue.",
+      url: "https://www.linkedin.com/in/arilerner",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/ari-lerner.png',
+        alt: 'Ari Lerner',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Justen McKenzie",
+      title: "Chief Financial Officer",
+      description: "Justen McKenzie is a seasoned CFO with a robust track record in financial strategy and management. At Bruxa Premium Tequila Beverages, he plays a crucial role in shaping the financial strategy, managing budgets, and overseeing investor relations for the production of premium, low-calorie Tequila cocktails. His financial stewardship ensures that the company's health-conscious, high-quality beverage offerings align with strategic goals and market demands. Previously, Justen served as the Manager for the Vancouver Monster Ambassador Team, where he was responsible for the financial oversight of marketing campaigns and field operations, ensuring efficient budget management and effective resource allocation.",
+      url: "https://www.linkedin.com/in/justenmckenzie/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/justen-mckenzie.png',
+        alt: 'Justen McKenzie',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Ashley Christie",
+      title: "Chief of Staff",
+      description: "Ashley Kathleen Christie is the Chief of Staff at Lux Partners Limited, where she leverages her diverse experience in military operations and private wealth management to drive digital finance and lifestyle ventures. At Lux, she has been pivotal in integrating advanced technologies like renewable Bitcoin mining and quantum-secure systems into global strategies. Notably, Ashley led the launch of the Lux Credit Card, enhancing financial utility with wealth-building features. Her previous role at Carbon Nation saw her pioneering the Carbon-Based Agro Metaverse Game, merging gaming with environmental sustainability. Ashley's expertise in operations and her strategic vision continue to shape Lux’s trajectory in the blockchain space.",
+      url: "https://www.linkedin.com/in/ashley-kathleen-christie",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/ashley-christie.png',
+        alt: 'Ashley Christie',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
       name: "Christopher Dinelli",
       title: "Chief Information Officer",
       description: "Former US Navy Lieutenant and United States Naval Academy alumnus with an Aerospace Engineering background, expansion into blockchain mining and AI cloud services and infrastructure, forging pivotal partnerships within the generative AI and cloud domains. As the founder of All Mine Lah, Inc., Chris innovatively melded green energy with digital currency mining, advancing sustainable supercomputing solutions. Renowned for his data analysis acumen and Matlab expertise, Chris's leadership style, rooted in military principles, champions innovation, ethical practices, and security, solidifying Lux's stature in blockchain and finance, reflecting his overarching commitment to responsible technological growth.",
@@ -101,19 +101,6 @@ export default {
         blockType: 'image',
         src: '/assets/images/christopher-dinelli.png',
         alt: 'Christopher Dinelli',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Ling Qing Meng",
-      title: "Chief Information Officer",
-      description: "Ling Qing worked at Edenledger as a CTO, cybersecurity advisor to Beamswap and software engineer at Branch.io. His role was focused on go to market launch for shipping mission critical features for the marketing products at these firms. He has experience working at Decentral which has built MEV bots for funds such as Whalepod. In settings where he was competing with the best of the best in the world, Ling has the know-how and track record of consistently coming out on top.",
-      url: "https://www.linkedin.com/in/lingqingmeng",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/ling-qing-meng.png',
-        alt: 'Ling Qing Meng',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -160,7 +147,7 @@ export default {
       blockType: "partner-card",
       name: "Jack Kochen",
       title: "Chief Marketing Officer",
-      description: "Jack has been running communities since he was young, and has been a blockchain hobbyist since 2012! Jack's last project was the first DeFi application on Cardano, VyFinance. He has also worked alongside Moonpay, Vechain, and a swath of smaller projects. Jack's expertise ranges far and wide, from programming in Golang, to running a community, to operational logistics; and all the marketing required between. Focusing on efficiency, trust, transparency, and 'cult following' styles, Jack hopes to make Lux a household-name.",
+      description: "Jack has been running communities since he was young, and has been a blockchain hobbyist since 2012! Jack's last project was the first DeFi application on Cardano, VyFinance. He has also worked alongside Moonpay, Vechain, and a swath of smaller projects. Jack's expertise ranges far and wide, from programming in Golang, to running a community, to operational logistics; and all the marketing required between. Focusing on efficiency, trust, and transparency, Jack hopes to make Lux a household-name.",
       url: "https://www.linkedin.com/in/jack-kochen/",
       image: {
         blockType: 'image',
@@ -247,7 +234,7 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
-	{
+    {
       blockType: "partner-card",
       name: "Christopher Duong",
       title: "Lead Finance Engineer",
@@ -270,19 +257,6 @@ export default {
         blockType: 'image',
         src: '/assets/images/yuri-galasevich.png',
         alt: 'yuri-galasevich',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Michael Filteau",
-      title: "Operations Lead",
-      description: "Michael comes from a background as an IT Technician and Crypto Miner. He brings a wealth of experience across various industries, marked by his adaptive approach and innovative solutions. With a foundational interest sparked by his first Mac, Michael’s journey into technology has been largely autodidactic, allowing him to think outside the box and deliver unique solutions. His early forays into cryptocurrency mining during the initial release of Ethereum highlight his forward-thinking and pioneering spirit in adopting new technologies. Michael’s diverse industry experience has honed his ability to adapt and excel in different technological environments, making him a versatile and valuable asset.",
-      url: "https://lux.partners",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/michael-filteau.png',
-        alt: 'Michael Filteau',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -340,3 +314,5 @@ export default {
     } as PartnerCardBlock,
   ]
 } as PartnersBlock
+
+
