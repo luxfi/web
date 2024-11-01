@@ -26,11 +26,13 @@ const MobileHeader: React.FC<{
   links: LinkDef[]
   className?: string,
   setChatbotOpen: (open: boolean) => void,
+  noAuth?: boolean
 }> = ({
   currentAs,
   links,
   className = '',
   setChatbotOpen,
+  noAuth=false // :aa TODO
 }) => {
     const cmmc = useCommerce()
     const [menuState, setMenuState] = useState<'closed' | 'nav' | 'login' | 'bag'>('closed')

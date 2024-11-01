@@ -32,7 +32,7 @@ const BagButton: React.FC<{
 
   useEffect(() => (
       // return IReactionDisposer
-    animateOnQuantityChange ? reaction(
+    (animateOnQuantityChange && c) ? reaction(
       () => (c.cartQuantity),
       (curr, prev) => {
         if (curr > prev) {

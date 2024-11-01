@@ -38,6 +38,9 @@ interface SiteDef {
 
   commerce?: CommerceConfig
   chatbot?: ChatbotConfig
+
+    // Do not render login / avatar widget
+  noAuth?: boolean
 }
 
 export { type SiteDef as default }

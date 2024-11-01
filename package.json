@@ -21,9 +21,9 @@
       "supports-color": "8.1.1",
       "@luxfi/ui": "5.3.18",
       "@luxfi/data": "1.0.9",
-      "@hanzo/auth": "2.4.19",
-      "@hanzo/commerce": "7.3.2",
-      "@hanzo/ui": "3.8.36",
+      "@hanzo/auth": "2.5.1",
+      "@hanzo/commerce": "7.3.4",
+      "@hanzo/ui": "4.0.2",
       "react-hook-form": "7.51.4"
       
     },
