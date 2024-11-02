@@ -1,0 +1,79 @@
+{
+  "name": "@luxfi/wallet",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build && yarn docs:build && yarn claims:build",
+    "dev": "react-scripts start",
+    "docs:dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
+    "docs:build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
+    "claims:dev": "cd packages/lux-points && yarn dev",
+    "claims:build": "cd packages/lux-points && yarn build && cpy --cwd=out . ../../../../dist/lux-points && cpy --cwd=out . ../../../../dist/points"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxfi/luxwallet.xyz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@debank/common": "^0.3.56",
+    "@lux-wallet/lux-api": "0.7.20",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "clsx": "^1.1.1",
+    "cpy-cli": "^5.0.0",
+    "dayjs": "^1.11.10",
+    "normalize.css": "^8.0.1",
+    "nuka-carousel": "^5.4.0",
+    "qrcode.react": "^3.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
+    "react-hot-toast": "^2.4.1",
+    "react-loading-skeleton": "^3.4.0",
+    "react-modal": "^3.16.1",
+    "react-query": "^3.39.3",
+    "react-remove-scroll": "^2.5.9",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "5.0.1",
+    "react-tooltip": "^5.26.3",
+    "recharts": "^2.12.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/react-modal": "^3.16.3",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.5",
+    "vue-server-renderer": "2.5.22",
+    "vuepress": "^1.8.2"
+  },
+  "resolutions": {
+    "@lux-wallet/lux-sign": "0.3.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@1.22.22"
+}
