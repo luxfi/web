@@ -89,7 +89,7 @@ export default {
       name: "Ashley Christie",
       title: "Chief of Staff",
       description:
-        "Ashley Kathleen Christie is the Chief of Staff at Lux Partners Limited, where she leverages her diverse experience in military operations and private wealth management to drive digital finance and lifestyle ventures. At Lux, she has been pivotal in integrating advanced technologies like renewable Bitcoin mining and quantum-secure systems into global strategies. Notably, Ashley led the launch of the Lux Credit Card, enhancing financial utility with wealth-building features. Her previous role at Carbon Nation saw her pioneering the Carbon-Based Agro Metaverse Game, merging gaming with environmental sustainability. Ashley's expertise in operations and her strategic vision continue to shape Lux’s trajectory in the blockchain space.",
+        "Ashley Kathleen Christie is the Chief of Staff at Lux, where she leverages her diverse experience in military operations and private wealth management to drive digital finance and lifestyle ventures. At Lux, she has been pivotal in integrating advanced technologies like renewable Bitcoin mining and quantum-secure systems into global strategies. Notably, Ashley led the launch of the Lux Credit Card, enhancing financial utility with wealth-building features. Her previous role at Carbon Nation saw her pioneering the Carbon-Based Agro Metaverse Game, merging gaming with environmental sustainability. Ashley's expertise in operations and her strategic vision continue to shape Lux’s trajectory in the blockchain space.",
       url: "https://www.linkedin.com/in/ashley-kathleen-christie",
       image: {
         blockType: "image",
