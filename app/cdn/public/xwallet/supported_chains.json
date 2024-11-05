@@ -1,5 +1,22 @@
 [
     {
+        "id": "lux",
+        "community_id": 7777,
+        "name": "Lux",
+        "native_token": {
+            "id": "lux",
+            "symbol": "LUX",
+            "logo": "https://lux.exchange/favicon.png",
+            "decimals": 18
+        },
+        "logo_url": "https://lux.exchange/favicon.png",
+        "white_logo_url": "https://lux.exchange/favicon.png",
+        "eip_1559": true,
+        "is_disabled": false,
+        "explorer_host": "https://explore.lux.network",
+        "need_estimate_gas": false
+    },
+    {
         "id": "eth",
         "community_id": 1,
         "name": "Ethereum",

@@ -1,0 +1,37 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - release*
+
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ap-northeast-1
+  LUX_PROD_BUCKET: lux-fe
+  CI: true
+
+jobs:
+  build-and-release:
+    runs-on: [self-hosted, Linux]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Use Node.js v18
+        uses: actions/setup-node@v1
+        with:
+          node-version: v18.20.3
+
+      - name: Build source code
+        run: |
+          npm install -g yarn
+          yarn install
+          yarn build
+      - name: Copy dists to s3
+        run: |
+          aws s3 sync . s3://${LUX_PROD_BUCKET}/ --delete
+          aws cloudfront create-invalidation --distribution-id E1LJA4J5XV5BB --paths '/*'
+        working-directory: dist
