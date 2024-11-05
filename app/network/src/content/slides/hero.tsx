@@ -5,16 +5,24 @@ import {
   type ScreenfulBlock,
   ScreenfulBlockComponent,
 } from '@hanzo/ui/blocks'
-
-import "./animation.css"
-
-const byline = `Decentralized network of blockchains designed to provide private and quantum safe access to high yield auto compounding staking protocols, and zero interest, zero liquidation, self repaying loans.`
-
 import type { ElementBlock, VideoBlock, SpaceBlock } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
+import "./animation.css"
+import { Check } from "lucide-react"
+
+type HeroProps = {
+  txCount?: string
+}
+
+const checkedText = [
+  "Decentralized Network of Blockchains",
+  "Private and Quantum Safe access to high yield returns",
+  "Auto-compounding staking protocol",
+  "Zero-interest, Zero Liquidation",
+  "Collateralized loans that are self repaying"
+]
 
 const video = {
-
   blockType: 'video',
   videoProps: { ...DEF_VIDEO_PROPS, preload: 'auto' },
   poster: 'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
@@ -22,17 +30,11 @@ const video = {
     'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
     'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.webm'
   ],
-  // Determin aspect ration from dims manually...
-  // https://stackoverflow.com/questions/684015/how-can-i-get-the-resolution-width-and-height-for-a-video-file-from-a-linux-co
   dim: {
-    // dims are 656x484, let's cut in half
-    // ratio: 1.355
-
     md: {
       w: 600,
       h: 350
     },
-
     lg: {
       w: 800,
       h: 450
@@ -40,74 +42,65 @@ const video = {
   },
 } as VideoBlock
 
-const screenful = {
+const createScreenful = (props: HeroProps): ScreenfulBlock => ({
   blockType: 'screenful',
-  columnSpecifiers: ['right vert-center text-align-left ', 'bottom vert-center'],
-  mobileOrder: [1, 0], // right column first on mobile
+  columnSpecifiers: ['left vert-center text-align-left ', 'bottom vert-center'],
+  mobileOrder: [1, 0],
   contentColumns: [
     [
       {
         blockType: 'element',
-        element: <h1 className='font-heading self-start text-6xl sm:text-5xl mb-6'>LUX NETWORK</h1>,
+        element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>{props.txCount || '789,000,000,000'} transactions and counting</p>,
       } as ElementBlock,
       {
-        blockType: 'enh-heading',
+        blockType: 'element',
+        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>A World Beyond Banking: <b>Trustless Defi</b></span>,
+      } as ElementBlock,
+      {
+        blockType: 'element',
+        element: <h1 className='font-heading self-start text-6xl sm:text-5xl mb-12'>LUX NETWORK</h1>,
+      } as ElementBlock,
+      {
+        blockType: 'element',
         specifiers: 'mobile-center-headings',
-        heading: { text: byline, level: 6 },
-      } as EnhHeadingBlock,
-      { blockType: 'space', level: 0 },
-      {
-        blockType: 'cta',
-        specifiers: 'fill mobile-odd-full-width',
-        elements: [
-          {
-            title: "Run the Chain",
-            href: "https://lux.network/#run-the-network",
-            newTab: false,
-            variant: 'primary',
-          },
-        ]
-      } as CTABlock,
-      {
-        blockType: 'space', sizes: {
-          xs: 2,
-          sm: 2,
-          md: 2,
-          lg: 2,
-          xl: 2
-        }
-      } as SpaceBlock,
+        element: <ul>{checkedText.map((feature) => (
+          <li key={feature} className="flex items-center space-x-3">
+            <Check className="h-5 w-5 text-primary" />
+            <span>{feature}</span>
+          </li>
+        ))}</ul>
+      } as ElementBlock,
+      { blockType: 'space', level: 0 } as SpaceBlock,
       {
         blockType: 'cta',
         specifiers: 'fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
           {
-            title: "Learn More",
-            href: "https://docs.lux.network",
-            variant: 'outline',
+            title: "Run the Chain",
+            href: "https://lux.network/#run-the-network",
+            variant: 'primary',
           },
           {
-            title: "Open Source",
-            href: "https://github.com/luxfi",
+            title: "Explor Network",
+            href: "https://explore.lux.network/",
             variant: 'outline',
           },
         ]
       } as CTABlock,
     ],
-    [
-      video
-    ]],
-} as ScreenfulBlock
+    [video]
+  ],
+})
 
 export default {
-  blockType:'screenful',
-  contentColumns:[
+  blockType: 'screenful',
+  contentColumns: [
     [
       {
-        blockType:'element',
-        element:(
+        blockType: 'element',
+        element: (
           <div className='p-3 z-2'>
-          <ScreenfulBlockComponent block={screenful} />
+            <ScreenfulBlockComponent block={createScreenful({})} />
           </div>
         )
       } as ElementBlock,
