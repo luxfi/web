@@ -107,10 +107,10 @@ export default {
 
     {
       blockType: "partner-card",
-      name: "Dan Coinburn",
+      name: "Darth Coinburner",
       title: "Evangelism",
       description: "Dan Coinburn is a visionary blockchain developer and media producer, leading the way in innovative technologies and digital media. As the founder of Coinburn.com, Dan has established himself as a pioneer in the blockchain industry. Specializing in Ethereum Virtual Machines (EVMs) and Solana, Dan’s technical expertise enables him to develop and optimize solutions across these leading blockchain platforms, ensuring efficiency and scalability. Dan’s companies are spearheading the development of plastic-free solutions for payment cards via non-custodial NFTs. As a media content creator and producer, Dan and his team have achieved remarkable success, amassing tens of millions of views on social media. Their captivating content has been showcased at prestigious fashion events in Miami, New York, Los Angeles, Milan, Paris, as well as at the Miss USA and Miss Universe pageants.",
-      url: "https://lux.partners/",
+      url: "https://coinburn.com",
       image: {
         blockType: 'image',
         src: '/assets/images/dan-coinburn.png',

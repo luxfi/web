@@ -1,7 +1,7 @@
 import { footer, mainNav, type SiteDef  } from '@luxfi/ui/site-def'
 
 export default {
-  currentAs: 'https://lux.partners',
+  currentAs: 'https://luxindustries.xyz',
   nav: {
     common: mainNav,
     //featured: [{
@@ -14,7 +14,7 @@ export default {
   footer: footer.standard,
   chatbot: {
     suggestedQuestions: [
-      { heading: 'Become Lux Partner', message: 'How do I become Lux partner?', icon: 'GroupLineIcon' },
+      { heading: 'Become Lux Partner', message: 'How do I become Lux Partner?', icon: 'GroupLineIcon' },
       { heading: 'Lux Ecosystem', message: 'Tell me more about Lux ecosystem', icon: 'GlobalLineIcon' },
     ]
   }
