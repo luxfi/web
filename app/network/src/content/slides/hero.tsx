@@ -73,7 +73,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
       { blockType: 'space', level: 0 } as SpaceBlock,
       {
         blockType: 'cta',
-        specifiers: 'fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
+        specifiers: 'left desktop-dont-fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
           {
             title: "Run the Chain",
@@ -81,7 +81,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
             variant: 'primary',
           },
           {
-            title: "Explor Network",
+            title: "Explore Network",
             href: "https://explore.lux.network/",
             variant: 'outline',
           },
@@ -99,7 +99,7 @@ export default {
       {
         blockType: 'element',
         element: (
-          <div className='p-3 z-2'>
+          <div className='p-3 z-2 flex-col md:flex-row'>
             <ScreenfulBlockComponent block={createScreenful({})} />
           </div>
         )
