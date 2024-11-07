@@ -1,7 +1,7 @@
-import type { 
+import type {
   Block,
-  ElementBlock, 
-  ScreenfulBlock, 
+  ElementBlock,
+  ScreenfulBlock,
 } from '@hanzo/ui/blocks'
 
 import { ApplyTypography } from '@hanzo/ui/primitives'
@@ -14,18 +14,22 @@ export default {
   specifiers: 'vert-center',
   columnSpecifiers: ['vert-center mobile-vert-center', 'vert-center mobile-vert-center'],
   contentColumns: [[
-    {blockType: 'element',
+    {
+      blockType: 'element',
       element: (<div className={'flex items-center justify-center self-center w-full aspect-square md:aspect-auto overflow-hidden'}>
-        <CashBackGraphic className='h-full max-h-[30rem] py-3'/>
+        <CashBackGraphic className='h-full max-h-[30rem] py-3' />
       </div>)
     } satisfies ElementBlock as Block
-  ] , [
-    {blockType: 'element',
-      element: (
+  ], [
+    {
+      blockType: 'element',
+      element: (<>
+        <h1 className='font-heading self-start text-4xl sm:text-5xl mb-2 z-2'>EARN WHILE YOU SWIPE</h1>
         <ApplyTypography className='p-3'>
           <MDX_right />
         </ApplyTypography>
+      </>
       )
     } satisfies ElementBlock as Block
-  ]] as Block[][], 
+  ]] as Block[][],
 } satisfies ScreenfulBlock as ScreenfulBlock
