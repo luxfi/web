@@ -11,7 +11,7 @@ import getAppRouterBodyFontClasses from '../next/font/get-app-router-font-classe
 import { FacebookPixelHead } from '../next/analytics/pixel-analytics'
 
 import { CommerceUIProvider } from '../commerce/ui/context'
-import { AuthListener, ChatWidget, Header, Scripts } from '../components'
+import { AuthListener, ChatWidget, Header, Analytics } from '../components'
 
 import CommerceDrawer from '../components/commerce/drawer'
 
@@ -80,13 +80,12 @@ async function RootLayout({
         <FacebookPixelHead/>
       </head>
 
-      <body className={bodyClasses} style={{
+      <body suppressHydrationWarning className={bodyClasses} style={{
 
-        // As also noted above, 'overflow: hidden' on the <body> tag breaks scroll snap!
-        display: 'none', // see scripts.tsx // :aa concerned about this.
-
+        // As noted above: 'overflow: hidden' on the <body> tag breaks scroll snap!
+        display: 'none', // see analytics.tsx 
       }}>
-        <Scripts/>
+        <Analytics/>
         <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
         {siteDef?.commerce ? (
           <CommerceProvider config={siteDef.commerce!} >

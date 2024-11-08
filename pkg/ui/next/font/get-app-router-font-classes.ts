@@ -5,8 +5,13 @@ import type NextFontDesc from './next-font-desc'
 
   // First is assumed to be mapped to the default font and is injected into <body>
   // as a normal tw font family class.
-export default () => (
-  nextFonts.map(
-      (desc: NextFontDesc) => (desc.nextFont!.variable)
-    ).join(' ') + ` font-${nextFonts[0].twName}`
-)
+export default () => {
+  let nf = nextFonts.map((desc: NextFontDesc) => (desc.nextFont!.variable))
+    // dedupe
+  nf = nf.filter(
+    (str, i, arr) => (
+      arr.indexOf(str) === i
+    )  
+  )
+  return nf.join(' ') + ` font-${nextFonts[0].twName}`
+}

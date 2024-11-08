@@ -41,11 +41,11 @@ const DesktopHeader: React.FC<{
           <Logo size='sm' href='/' outerClx='hidden md:flex lg:hidden' key='one' variant='text-only' />
           {/* md or larger */}
           <div className='flex w-full gap-4 items-center justify-center'>
-            <DesktopNav links={links} isMenuOpened={isMenuOpened} setIsMenuOpen={setIsMenuOpen} />
+             <DesktopNav links={links} isMenuOpened={isMenuOpened} setIsMenuOpen={setIsMenuOpen} />
           </div>
           <div className='flex items-center'>
-            <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
-            <AuthWidget noLogin={noAuth}/>
+             <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
+             <AuthWidget noLogin={noAuth}/>
           </div>
         </div>
       </header>
@@ -53,4 +53,6 @@ const DesktopHeader: React.FC<{
   }
 
 export default DesktopHeader
+
+
 
