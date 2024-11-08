@@ -11,11 +11,13 @@ import compatible from './slides/compatible'
 import reviews from './slides/reviews'
 import roadmap from './slides/roadmap'
 import zeroInterest from './slides/zero-interest'
+import smartSpend from './slides/smart-spend'
 
 const mobileTiles = [
   hero,
   keyFeatures,
   cashBack,
+  smartSpend,
   autoRepayment,
   zeroInterest,
   compatible,
@@ -29,6 +31,7 @@ const desktopTiles = [
   hero,
   keyFeatures,
   cashBack,
+  smartSpend,
   autoRepayment,
   zeroInterest,
   compatible,

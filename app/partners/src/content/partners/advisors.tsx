@@ -117,20 +117,7 @@ export default {
         alt: 'Dan Coinburn',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "John Hanks",
-      title: "Engineering",
-      description: "John Hanks is a seasoned blockchain engineer and entrepreneur with a rich history in the blockchain industry. With a deep passion for decentralized technologies, John has played a pivotal role in numerous successful blockchain projects, contributing his expertise in engineering and innovation. His work spans various sectors, highlighting his versatility and commitment to advancing blockchain solutions. John’s visionary approach and hands-on experience have earned him a reputation as a leader and innovator in the blockchain community. He continues to drive forward-thinking projects that push the boundaries of what blockchain technology can achieve, all while maintaining a focus on engineering excellence and entrepreneurial spirit.",
-      url: "https://www.linkedin.com/in/johnhanksengineer/",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/john-hanks.png',
-        alt: 'John Hanks',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
+    } as PartnerCardBlock,   
     {
       blockType: "partner-card",
       name: "Major Williams",
@@ -152,36 +139,11 @@ export default {
       url: "https://www.linkedin.com/in/williammichael/",
       image: {
         blockType: 'image',
-        src: '/assets/images/william-hadala',
-        alt: 'William Hadala',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Namya Khan",
-      title: "Design",
-      description: "Namya is the visionary Founder of Supafast, a dynamic design agency known for serving an impressive roster of clients including Y Combinator startups, early-stage ventures, and global creators. Thriving in fast-paced environments, she leverages her passion for design and a robust work ethic to deliver exceptional results across diverse industries. At Supafast, Namya leads a dedicated team in creating conversion-focused, high-impact designs that propel business growth. Her expertise in merging aesthetics with functionality not only enhances visual appeal but strategically aligns with business objectives, establishing her as a valuable Design Advisor and solidifying Supafast’s reputation as a leader in innovative design solutions.",
-      url: "https://www.linkedin.com/in/namyakhan/",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/namya_khan2.png',
-        alt: 'Namya Khan',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "William Hadala",
-      title: "Infrastructure Security",
-      description: "William is a distinguished United States Air Force veteran and senior technology executive with over 25 years of experience. He has been issued 27 USPTO patents and has a formidable track record in building global technology infrastructure in media and telecommunications. As the CEO of A113 Venture Fund, Edge Data Intelligence, Exposition TV, and CTO of TMT Capital Group, William has driven significant advancements in technology deployment across various sectors. Notably, he founded TMGcore, pioneering the world's most advanced edge supercomputer for cryptocurrency mining and AI, achieving a multi-billion-dollar valuation within its first year. Additionally, during the global COVID crisis, he established the Connectivity Foundation, a non-profit aimed at bridging the digital divide for underserved communities worldwide through innovative broadband solutions.",
-      url: "https://www.linkedin.com/in/williammichael/",
-      image: {
-        blockType: 'image',
         src: '/assets/images/william-hadala.jpg',
         alt: 'William Hadala',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
+    
   ]
 } as PartnersBlock

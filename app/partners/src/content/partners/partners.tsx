@@ -261,7 +261,7 @@ export default {
       url: "https://www.linkedin.com/in/christopher-duong/",
       image: {
         blockType: "image",
-        src: "/assets/images/christoper-duong.png",
+        src: "/assets/images/christopher-duong.png",
         alt: "christoper-duong",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
@@ -291,6 +291,19 @@ export default {
         blockType: "image",
         src: "/assets/images/michael-filteau.png",
         alt: "Michael Filteau",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "John Hanks",
+      title: "Engineering",
+      description: "John Hanks is a seasoned blockchain engineer and entrepreneur with a rich history in the blockchain industry. With a deep passion for decentralized technologies, John has played a pivotal role in numerous successful blockchain projects, contributing his expertise in engineering and innovation. His work spans various sectors, highlighting his versatility and commitment to advancing blockchain solutions. John’s visionary approach and hands-on experience have earned him a reputation as a leader and innovator in the blockchain community. He continues to drive forward-thinking projects that push the boundaries of what blockchain technology can achieve, all while maintaining a focus on engineering excellence and entrepreneurial spirit.",
+      url: "https://www.linkedin.com/in/johnhanksengineer/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/john-hanks.png',
+        alt: 'John Hanks',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
