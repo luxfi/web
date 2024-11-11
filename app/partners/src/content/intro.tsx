@@ -10,7 +10,7 @@ export default {
       mb: 4
     },
     byline: {
-      text: "Pioneering new standards for security, privacy and decentralized finance and on quantum safe distributed ledger technology.",
+      text: "Accelerating the velocity of human progress with next-generation quantum-safe AI, blockchain, and telecommunications.",
       level: 0
     }
   } as C.EnhHeadingBlock,
