@@ -19,11 +19,11 @@
       "@types/react": "^18.3.2",
       "@types/react-dom": "^18.3.0",
       "supports-color": "8.1.1",
-      "@luxfi/ui": "5.3.18",
+      "@luxfi/ui": "5.3.23",
       "@luxfi/data": "1.0.9",
-      "@hanzo/auth": "2.5.1",
+      "@hanzo/auth": "2.5.2",
       "@hanzo/commerce": "7.3.4",
-      "@hanzo/ui": "4.0.2",
+      "@hanzo/ui": "4.0.5",
       "react-hook-form": "7.51.4"
       
     },
