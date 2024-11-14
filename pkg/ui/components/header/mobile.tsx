@@ -87,7 +87,7 @@ const MobileHeader: React.FC<{
     }
     // header element MUST be fixed, and NOT sticky.  Or else drawer breaks on mobile browsers
     return (<>
-      <header className={cn(
+      <header id='MOBILE_HEADER' className={cn(
         `bg-background fixed z-header top-0 left-0 w-full ${menuOpen() ? 'hidden' : 'block'}`,
         className
       )}>

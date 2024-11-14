@@ -73,7 +73,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
       { blockType: 'space', level: 0 } as SpaceBlock,
       {
         blockType: 'cta',
-        specifiers: 'left desktop-dont-fill mobile-2-columns mobile-center-first-if-odd mobile-odd-full-width',
+        specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
           {
             title: "Run the Chain",
