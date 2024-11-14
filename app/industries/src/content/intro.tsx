@@ -10,7 +10,7 @@ export default {
       mb: 4
     },
     byline: {
-      text: "Accelerating the velocity of money with the next-generation of AI, blockchain, and quantum security technologies.",
+      text: "Accelerating the velocity of human progress with next-generation quantum-safe AI, blockchain, and telecommunications.",
       level: 0
     }
   } as C.EnhHeadingBlock,
