@@ -27,7 +27,7 @@ const DesktopHeader: React.FC<{
     // TODO move 13px into a size class and configure twMerge to recognize say, 'text-size-nav' 
     // (vs be beat out by 'text-color-nav')
     return (
-      <header className={cn(
+      <header  id='DESKTOP_HEADER' className={cn(
         'bg-[rgba(0, 0, 0, 0.5)] !backdrop-blur-3xl fixed z-header top-0 left-0 right-0', 
         className, 
         isMenuOpened ? ' h-full' : ''
@@ -41,11 +41,11 @@ const DesktopHeader: React.FC<{
           <Logo size='sm' href='/' outerClx='hidden md:flex lg:hidden' key='one' variant='text-only' />
           {/* md or larger */}
           <div className='flex w-full gap-4 items-center justify-center'>
-             <DesktopNav links={links} isMenuOpened={isMenuOpened} setIsMenuOpen={setIsMenuOpen} />
+            <DesktopNav links={links} isMenuOpened={isMenuOpened} setIsMenuOpen={setIsMenuOpen} />
           </div>
           <div className='flex items-center'>
-             <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
-             <AuthWidget noLogin={noAuth}/>
+            <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
+            <AuthWidget noLogin={noAuth}/>
           </div>
         </div>
       </header>
@@ -53,6 +53,5 @@ const DesktopHeader: React.FC<{
   }
 
 export default DesktopHeader
-
 
 
