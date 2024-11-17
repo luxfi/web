@@ -1,4 +1,4 @@
-import type { 
+import type {
   Block,
   CarteBlancheBlock,
 } from '@hanzo/ui/blocks'
@@ -15,7 +15,7 @@ export default [
     specifiers: 'big-padding no-inner-borders',
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
-      heading: { text: 'Developed for developers.', level: 4},
+      heading: { text: 'Developed for developers', level: 4},
       byline: { text: bylines[0], level: 0}
     }
   } as CarteBlancheBlock,
@@ -23,7 +23,7 @@ export default [
     specifiers: 'big-padding no-inner-borders',
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
-      heading: { text: 'Fast and scalable deployment.', level: 4},
+      heading: { text: 'Fast and scalable deployment', level: 4},
       byline: { text: bylines[1], level: 0}
     }
   } as CarteBlancheBlock,
@@ -31,7 +31,7 @@ export default [
     specifiers: 'big-padding no-inner-borders',
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
-      heading: { text: 'Privacy made familiar.', level: 4},
+      heading: { text: 'Privacy made familiar', level: 4},
       byline: { text: bylines[2], level: 0}
     }
   } as CarteBlancheBlock,
@@ -39,7 +39,7 @@ export default [
     specifiers: 'big-padding no-inner-borders',
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
-      heading: { text: 'Launch on all chains.', level: 4},
+      heading: { text: 'Launch on all chains', level: 4},
       byline: { text: bylines[3], level: 0}
     }
   } as CarteBlancheBlock,

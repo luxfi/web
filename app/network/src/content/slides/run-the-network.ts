@@ -16,7 +16,7 @@ export default {
   [
     {blockType: 'enh-heading',
       specifiers: 'center',
-      heading: { text: 'RUN THE NETWORK', level: 1 },
+      heading: { text: 'JOIN THE NETWORK', level: 1 },
     } as EnhHeadingBlock,
     {blockType: 'space', level: 0},
     {blockType: 'grid',

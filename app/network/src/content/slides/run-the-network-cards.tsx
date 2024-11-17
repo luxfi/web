@@ -20,6 +20,18 @@ const validatorVideo = {
   sizing: { vh: 25, mobile: {vw: 50} }
 } as VideoBlock
 
+const fossVideo = {
+  blockType: 'video',
+  videoProps: DEF_VIDEO_PROPS,
+  poster: 'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-poster.jpg',
+  sources: [
+    'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
+    'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.webm'
+  ],
+  dim: {md: {w: 656, h: 484}, lg: {w: 656, h: 484}},
+  sizing: { vh: 25, mobile: {vw: 50} }
+} as VideoBlock
+
 const coinVideo = {
   blockType: 'video',
   videoProps: DEF_VIDEO_PROPS,
@@ -34,7 +46,7 @@ const coinVideo = {
 
 const bylines = [
   'Help run Lux Network by becoming a validator node and earn a % from every transaction fee.',
-  'Buy and stake LUX Coin to participate in the DAO to help govern the network.',
+  'Contribute to Lux and our app library, fork pre-made Lux apps, or launch a sub-chain.'
 ]
 
 export default [
@@ -50,7 +62,7 @@ export default [
       {blockType: 'space', level: 0},
       {blockType: 'element',
         element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='/validator' skuPath='LXM-VL' />
-      } satisfies ElementBlock as Block  
+      } satisfies ElementBlock as Block
     ]
   } as CarteBlancheBlock,
   {blockType: 'carte-blanche',
@@ -59,12 +71,12 @@ export default [
       coinVideo,
       {blockType: 'enh-heading',
         specifiers: 'center byline-center',
-        heading: {text: 'COIN', level: 2, mb: 5},
+        heading: {text: 'JOIN', level: 2, mb: 5},
         byline: {text: bylines[1], level: 6}
       } as EnhHeadingBlock,
       {blockType: 'space', level: 0},
       {blockType: 'element',
-        element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='/coin' skuPath='LXM-CN' />
+        element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='https://lux.quest/' skuPath='LXM-CN' />
       } satisfies ElementBlock as Block
     ]
   } as CarteBlancheBlock,
