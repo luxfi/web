@@ -9,7 +9,7 @@ const CN_IMG_DEF = {
   rounded: 'full'
 } satisfies ImageDef
 
-const COIN = 0.0011
+const COIN = 0.0021
 
 const K = 1000
 const M = 1000 * K
@@ -26,7 +26,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '1B',
       familyId: 'LXM-CN',
-      price: 111111, // B * COIN, // $1.111M
+      price: Math.round(B * COIN), 
       img: CN_IMG_DEF,
       video
     },
@@ -36,7 +36,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '100M',
       familyId: 'LXM-CN',
-      price: 11111, // 100 * M * COIN, // $111.1K
+      price: Math.round(100 * M * COIN), 
       img: CN_IMG_DEF,
       video,
       mediaTransform: { scale: 0.75 }
@@ -47,7 +47,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '10M',
       familyId: 'LXM-CN',
-      price: 1111, // 10 * M * COIN, // $11.1K
+      price: Math.round(10 * M * COIN), 
       img: CN_IMG_DEF,
       video,
       mediaTransform: { scale: 0.50 }
@@ -58,7 +58,7 @@ export default {
       familyTitle: 'Lux Coin',
       optionLabel: '1M',
       familyId: 'LXM-CN',
-      price: 111, // M * COIN, // $1.1K
+      price: Math.round(M * COIN), 
       img: CN_IMG_DEF,
       video,
       mediaTransform: { scale: 0.25 }

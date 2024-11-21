@@ -20,10 +20,10 @@
       "@types/react-dom": "^18.3.0",
       "supports-color": "8.1.1",
       "@luxfi/ui": "5.3.23",
-      "@luxfi/data": "1.0.9",
+      "@luxfi/data": "1.1.0",
       "@hanzo/auth": "2.5.2",
       "@hanzo/commerce": "7.3.4",
-      "@hanzo/ui": "4.0.5",
+      "@hanzo/ui": "4.1.0",
       "react-hook-form": "7.51.4"
       
     },
