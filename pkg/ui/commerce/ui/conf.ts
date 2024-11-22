@@ -2,12 +2,12 @@ import type { SnapPointsConfig } from './store'
 
 export default {
   mb: {
-    micro: '62px',
-    full: '550px' 
+    micro: '72px',
+    full: '600px' 
   },
 
   dt: {
-    micro: '74px',
-    full: '575px' 
+    micro: '90px',
+    full: '620px' 
   }
 } satisfies SnapPointsConfig
