@@ -10,7 +10,7 @@ import {
 
 import type { CommerceService } from '@hanzo/commerce/types'
 
-const LOG = false ////////////////////
+const LOG = true ////////////////////
 const log = (s: string) => {
   if (LOG) {
     console.log('COMMERCE_UI ' + s)
@@ -157,10 +157,12 @@ class CommerceUIStore implements
   onActivePointChanged = (newPoint: SnapPoint | null): void => { 
     log("ON onActivePointChanged: " +  newPoint) // ===========
     if (newPoint === this._points.micro && this.activePoint === this._points.full) {
+      log("ON onActivePointChanged: to MICRO") // ===========
       this.setIgnoreStateChange(true)
       this.hideVariants()  
     }
     else if (newPoint === this._points.full && this.activePoint === this._points.micro) {
+      log("ON onActivePointChanged: to FULL") // ===========
       this.setIgnoreStateChange(true)
       this.showRecentVariants()
     }
@@ -210,6 +212,9 @@ class CommerceUIStore implements
     }
     else if (s === 'full') {
       this.setActivePoint(this.points[this.points.length - 1])
+    }
+    else {
+      this.setActivePoint(null)
     } 
   }
 
