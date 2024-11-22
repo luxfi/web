@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { type PropsWithChildren } from 'react'
 
 import { cn } from '@hanzo/ui/util'
 import { AuthWidget } from '@hanzo/auth/components'
 
-import { Logo } from '..'
+import Logo, { type LogoVariant } from '../logo'
 
 import DesktopBagPopup from '../commerce/desktop-bag-popup'
 import BagButton from '../commerce/bag-button'
@@ -17,10 +17,13 @@ const DesktopHeader: React.FC<{
   links: LinkDef[]
   className?: string
   noAuth?: boolean
-}> = ({
+  logoVariant?: LogoVariant
+} & PropsWithChildren> = ({
   links,
   className = '',
-  noAuth=false
+  noAuth=false,
+  children,
+  logoVariant='text-only'
 }) => {
     const [isMenuOpened, setIsMenuOpen] = React.useState(false);
 
@@ -37,8 +40,8 @@ const DesktopHeader: React.FC<{
           'flex flex-row h-[80px] items-center justify-between ' +
           'mx-[24px] w-full max-w-screen'
         }>
-          <Logo size='md' href='/' outerClx='hidden lg:flex' key='two' variant='text-only' />
-          <Logo size='sm' href='/' outerClx='hidden md:flex lg:hidden' key='one' variant='text-only' />
+          <Logo size={logoVariant === 'logo-only' ? 'lg' : 'md'} href='/' outerClx='hidden lg:flex' key='two' variant={logoVariant} />
+          <Logo size='sm' href='/' outerClx='hidden md:flex lg:hidden' key='one' variant={logoVariant} />
           {/* md or larger */}
           <div className='flex w-full gap-4 items-center justify-center'>
             <DesktopNav links={links} isMenuOpened={isMenuOpened} setIsMenuOpen={setIsMenuOpen} />
@@ -46,6 +49,7 @@ const DesktopHeader: React.FC<{
           <div className='flex items-center'>
             <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
             <AuthWidget noLogin={noAuth}/>
+            {children}
           </div>
         </div>
       </header>

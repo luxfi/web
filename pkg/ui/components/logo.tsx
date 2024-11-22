@@ -3,15 +3,15 @@ import Link from 'next/link'
 
 import { type TShirtSize  } from '@hanzo/ui/types'
 
-import { cn } from '@hanzo/ui/util'
-
 import * as Icons from './icons'
 
 const TEXT = 'LUX'
+type LogoVariant = 'text-only' | 'logo-only' | 'full'
+
 
 const Logo: React.FC<{
   size?: TShirtSize
-  variant?: 'text-only' | 'logo-only' | 'full'
+  variant?: LogoVariant
   onClick?: () => void
   href?: string
   outerClx?: string
@@ -86,4 +86,7 @@ const Logo: React.FC<{
   )
 }
 
-export default Logo
+export {
+  Logo as default,
+  type LogoVariant
+}
