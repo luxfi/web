@@ -13,6 +13,11 @@ const nextConfig = {
         pathname: '**',
       },
       {
+        protocol: 'https',
+        hostname: 'cdn.lux.network',
+        pathname: '**',
+      },
+      {
         protocol: "http",
         hostname: "localhost",
       }
@@ -27,7 +32,7 @@ const nextConfig = {
     '@luxfi/data'
   ],
   productionBrowserSourceMaps: true,
-  webpack: svgrWebpackConfig // if we need others, set up a chain of calls. 
+  webpack: svgrWebpackConfig // if we need others, set up a chain of calls.
 }
 
 module.exports = withMDX(nextConfig)

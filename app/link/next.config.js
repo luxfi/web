@@ -13,6 +13,11 @@ const nextConfig = {
         pathname: '**',
       },
       {
+        protocol: 'https',
+        hostname: 'cdn.lux.network',
+        pathname: '**',
+      },
+      {
         protocol: "http",
         hostname: "localhost",
       }

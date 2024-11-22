@@ -16,16 +16,21 @@ const nextConfig = {
         pathname: '**',
       },
       {
+        protocol: 'https',
+        hostname: 'cdn.lux.network',
+        pathname: '**',
+      },
+      {
         protocol: "http",
         hostname: "localhost",
       }
-    ],    
+    ],
  },
     // https://stackoverflow.com/questions/72621835/how-to-fix-you-may-need-an-appropriate-loader-to-handle-this-file-type-current
   transpilePackages: [
-    '@hanzo/ui', 
-    '@hanzo/auth', 
-    '@hanzo/commerce', 
+    '@hanzo/ui',
+    '@hanzo/auth',
+    '@hanzo/commerce',
     '@luxfi/ui',
     '@luxfi/data'
   ],
@@ -33,7 +38,7 @@ const nextConfig = {
   webpack: (config, { dev }) => {
     let conf = svgrPluginConfig(config)
     if (dev) {
-      //conf =  watchPluginConfig(conf) 
+      //conf =  watchPluginConfig(conf)
         //https://github.com/vercel/next.js/discussions/33929
       config.snapshot = {
         ...(config.snapshot ?? {}),
