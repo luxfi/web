@@ -1,19 +1,24 @@
 'use client'
-import React from 'react'
+import React, { type PropsWithChildren } from 'react'
 
 import type { SiteDef } from '../../site-def'
 
 import DesktopHeader from './desktop'
 import MobileHeader from './mobile'
 import { cn } from '@hanzo/ui/util'
-import { ChatWidget } from '../../components'
+import { type LogoVariant } from '../logo'
 
+
+  /** children will render furthest right */
 const Header: React.FC<{
   siteDef: SiteDef
   className?: string
-}> = ({
+  logoVariant?: LogoVariant
+} & PropsWithChildren> = ({
   siteDef,
-  className = ''
+  className = '',
+  children,
+  logoVariant='text-only'
 }) => {
 
     // TODO
@@ -28,13 +33,15 @@ const Header: React.FC<{
         links={links}
         currentAs={currentAs}
         noAuth={noAuth}
-      />
+        logoVariant={logoVariant}
+      >{children}</DesktopHeader>
       <MobileHeader
         className={cn(className, 'md:hidden')}
         links={links}
         currentAs={currentAs}
         setChatbotOpen={setOpen}
         noAuth={noAuth}
+        
       />
     </>)
   }
