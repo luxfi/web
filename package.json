@@ -11,22 +11,7 @@
   "devDependencies": {
     "webpack-watch-files-plugin": "^1.2.1"
   },
-  "//": "re 'supports-color': https://stackoverflow.com/questions/76591038/module-not-found-esm-packages-supports-color-need-to-be-imported-use-import",
   "pnpm": {
-    "overrides": {
-      "react": "^18.3.1",
-      "react-dom": "^18.3.1",
-      "@types/react": "^18.3.2",
-      "@types/react-dom": "^18.3.0",
-      "supports-color": "8.1.1",
-      "@luxfi/ui": "5.4.0",
-      "@luxfi/data": "1.1.0",
-      "@hanzo/auth": "2.5.2",
-      "@hanzo/commerce": "7.3.4",
-      "@hanzo/ui": "4.1.1",
-      "react-hook-form": "7.51.4"
-      
-    },
     "allowedDeprecatedVersions": {
       "request": "*"
     }

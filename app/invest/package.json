@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@types/node": "^20.12.12",
+    "@types/node": "catalog:",
     "http-server": "^14.1.1"
   }
 }
