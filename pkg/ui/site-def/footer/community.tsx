@@ -23,21 +23,16 @@ export default   [
     href: 'https://github.com/orgs/luxfi/discussions',
     icon: <Icons.SocialIcon network='github' size={SOC_ICON_SIZE} />
   },
-
-
   {
     title: 'Discord',
     href: 'https://discord.gg/sxaS7FFHwh',
-    external: true,
     icon: <Icons.SocialIcon network='discord' size={SOC_ICON_SIZE} />
   },
   {
     title: 'Telegram',
     href: 'https://t.me/luxdefi',
-    external: true,
     icon: <Icons.SocialIcon network='telegram' size={SOC_ICON_SIZE} />
   },
-
   {
     title: '@luxdefi',
     href: 'https://twitter.com/luxdefi',
