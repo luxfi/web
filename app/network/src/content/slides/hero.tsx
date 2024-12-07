@@ -20,7 +20,6 @@ const checkedText = [
   "Future-proof quantum security",
   "Privacy built for the modern age",
   "Effortless high-yield staking",
-  "Access over $3T in liquid assets",
 ]
 
 const video = {
@@ -51,11 +50,11 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
     [
       {
         blockType: 'element',
-        element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>Access over 3.1 trillion dollars and counting</p>,
+        element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>Access to over $3.1 trillion hyper liquid assets and growing</p>,
       } as ElementBlock,
       {
         blockType: 'element',
-        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>Private, Post Quantum, <b>Sovereign DeFi</b></span>,
+        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>Private, Post Quantum, Sovereign DeFi</span>,
       } as ElementBlock,
       {
         blockType: 'element',
@@ -74,7 +73,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
       { blockType: 'space', level: 0 } as SpaceBlock,
       {
         blockType: 'cta',
-        specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width',
+        specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width mb-12',
         elements: [
           {
             title: "Run Chain",
@@ -84,7 +83,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
           {
             title: "Bridge Assets",
             href: "https://bridge.lux.network",
-            variant: 'primary',
+            variant: 'secondary',
           },
           {
             title: "Explore Network",
