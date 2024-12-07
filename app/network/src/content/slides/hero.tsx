@@ -15,11 +15,12 @@ type HeroProps = {
 }
 
 const checkedText = [
-  "Decentralized Network of Blockchains",
-  "Private and Quantum Safe access to high yield returns",
-  "Auto-compounding staking protocol",
-  "Zero-interest, Zero Liquidation",
-  "Collateralized loans that are self repaying"
+  "Sovereign and unstoppable",
+  "Lightning-fast transactions",
+  "Future-proof quantum security",
+  "Privacy built for the modern age",
+  "Effortless high-yield staking",
+  "Access over $3T in liquid assets",
 ]
 
 const video = {
@@ -48,10 +49,10 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
   mobileOrder: [1, 0],
   contentColumns: [
     [
-      //{
-      //  blockType: 'element',
-      //  element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>{props.txCount || '789,000,000,000'} transactions and counting</p>,
-      //} as ElementBlock,
+      {
+        blockType: 'element',
+        element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>Access over 3.1 trillion dollars and counting</p>,
+      } as ElementBlock,
       {
         blockType: 'element',
         element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>Private, Post Quantum, <b>Sovereign DeFi</b></span>,
@@ -75,6 +76,11 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
         blockType: 'cta',
         specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
+          {
+            title: "Run Chain",
+            href: "https://lux.network#run-the-network",
+            variant: 'primary',
+          },
           {
             title: "Bridge Assets",
             href: "https://bridge.lux.network",
