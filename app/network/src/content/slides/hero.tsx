@@ -48,13 +48,13 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
   mobileOrder: [1, 0],
   contentColumns: [
     [
+      //{
+      //  blockType: 'element',
+      //  element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>{props.txCount || '789,000,000,000'} transactions and counting</p>,
+      //} as ElementBlock,
       {
         blockType: 'element',
-        element: <p className='self-start text-[16px] sm:text-[12px] mb-2'>{props.txCount || '789,000,000,000'} transactions and counting</p>,
-      } as ElementBlock,
-      {
-        blockType: 'element',
-        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>A World Beyond Banking: <b>Trustless Defi</b></span>,
+        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>Private, Post Quantum, <b>Sovereign DeFi</b></span>,
       } as ElementBlock,
       {
         blockType: 'element',
@@ -76,8 +76,8 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
         specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
           {
-            title: "Run the Chain",
-            href: "https://lux.network/#run-the-network",
+            title: "Bridge Assets",
+            href: "https://bridge.lux.network",
             variant: 'primary',
           },
           {
