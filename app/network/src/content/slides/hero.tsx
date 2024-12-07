@@ -54,7 +54,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
       } as ElementBlock,
       {
         blockType: 'element',
-        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>Private, Post Quantum, Sovereign DeFi</span>,
+        element: <span className='self-start text-[24px] sm:text-[18px] mb-4'>Private, Post-Quantum, <b>Sovereign DeFi</b></span>,
       } as ElementBlock,
       {
         blockType: 'element',
@@ -73,7 +73,7 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
       { blockType: 'space', level: 0 } as SpaceBlock,
       {
         blockType: 'cta',
-        specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width mb-12',
+        specifiers: 'left desktop-dont-fill mobile-center-first-if-odd mobile-odd-full-width',
         elements: [
           {
             title: "Run Chain",
