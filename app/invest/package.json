@@ -1,7 +1,7 @@
 {
   "name": "@luxfi/invest",
   "homepage": "https://invest.lux.fund",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
   "private": true,
   "description": "Onboarding for investors",
