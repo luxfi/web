@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/data",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Shared data for all Products, Families, that are available via any eCommrece functions on Lux sites.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -29,18 +29,18 @@
     "./commerce/types": "./commerce/types/index.ts"
   },
   "peerDependencies": {
-    "@hanzo/commerce": "*",
-    "@hanzo/ui": "*",
-    "lucide-react": "^0.344.0"
+    "@hanzo/commerce": "catalog:",
+    "@hanzo/ui": "catalog:",
+    "lucide-react": "catalog:"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@types/mdx": "^2.0.9",
-    "@types/node": "^20.11.24",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "react": "*",
-    "typescript": "5.4.5"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "typescript": "catalog:"
   }
 }

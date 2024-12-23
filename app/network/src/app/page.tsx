@@ -38,7 +38,7 @@ const Page = async ({ searchParams }: Props ) => {
     }
     return tile
   })
-  console.log(tilesWithData);
+  // console.log(tilesWithData);
 
   return (<>
     <Header siteDef={siteDef} />

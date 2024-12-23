@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/ui",
-  "version": "5.4.1",
+  "version": "5.4.2",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.1.0",
-    "@types/node": "^20.12.12",
     "@types/validator": "^13.12.1",
     "cookies-next": "^4.1.1",
     "date-fns": "^3.6.0",
@@ -51,18 +50,18 @@
     "usehooks-ts": "^3.1.0"
   },
   "peerDependencies": {
-    "@hanzo/auth": "*",
-    "@hanzo/commerce": "*",
-    "@hanzo/ui": "*",
+    "@hanzo/auth": "catalog:",
+    "@hanzo/commerce": "catalog:",
+    "@hanzo/ui": "catalog:",
     "@hookform/resolvers": "^3.3.2",
-    "lucide-react": "^0.344.0",
+    "lucide-react": "catalog:",
     "mobx": "^6.12.3",
     "mobx-react-lite": "^4.0.7",
-    "next": "15.0.1",
+    "next": "catalog:",
     "next-themes": "^0.2.1",
-    "react": "*",
-    "react-dom": "*",
-    "react-hook-form": "^7.51.4",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-hook-form": "catalog:",
     "validator": "^13.11.0",
     "zod": "3.23.8"
   },
@@ -73,15 +72,10 @@
     "@types/facebook-pixel": "^0.0.30",
     "@types/gtag.js": "^0.0.19",
     "@types/mdx": "^2.0.9",
-    "@types/node": "^20.11.24",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "lucide-react": "^0.344.0",
-    "next-themes": "^0.2.1",
-    "react-hook-form": "^7.51.4",
-    "tailwindcss": "^3.4.3",
-    "typescript": "5.6.3",
-    "validator": "^13.11.0",
-    "zod": "3.23.8"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
   }
 }

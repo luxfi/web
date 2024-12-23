@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/coin",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,22 +11,21 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "@hanzo/ui": "*",
-    "@luxfi/ui": "*",
+    "@hanzo/ui": "catalog:",
+    "@luxfi/ui": "catalog:",
     "@next/bundle-analyzer": "^14.2.13",
     "@next/mdx": "14.2.13",
-    "@types/node": "^20.12.12",
     "css-loader": "^7.1.2",
-    "lucide-react": "^0.344.0",
+    "lucide-react": "catalog:",
     "mobx": "^6.13.2",
     "mobx-utils": "^6.0.8",
     "mobx-react-lite": "^4.0.7",
-    "next": "14.2.13",
+    "next": "catalog:",
     "next-themes": "^0.2.1",
     "postcss-loader": "^8.1.1",
     "postcss-selector-parser": "^6.0.13",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "style-loader": "^4.0.0",
     "validator": "^13.12.0"
   },
@@ -35,13 +34,13 @@
     "@mdx-js/react": "^3.0.0",
     "@svgr/webpack": "^8.1.0",
     "@types/mdx": "^2.0.9",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.4.2",
-    "typescript": "^5.6.2"
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
   }
 }
