@@ -14,6 +14,9 @@ import {
   navigationMenuTriggerStyle
 } from '@hanzo/ui/primitives'
 
+// why the F is this in commerce!!! :aa
+
+
 const DesktopNav: React.FC<{
   links: LinkDefExtended[],
   isMenuOpened: boolean,
