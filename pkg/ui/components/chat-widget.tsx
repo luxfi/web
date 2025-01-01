@@ -4,7 +4,7 @@ import React from 'react'
 import { Button, Card } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
-import LuxLogo from './icons/lux-logo'
+import { LuxLogo } from './icons'
 import type { ChatbotSuggestedQuestion } from '../types'
 
 const ChatWidget: React.FC<{

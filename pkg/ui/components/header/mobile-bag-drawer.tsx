@@ -5,7 +5,7 @@ import { Drawer, DrawerContent} from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { CartPanel } from '@hanzo/commerce'
 
-import BagButton from './bag-button'
+import BagButton from '../commerce/bag-button'
 
 const MobileBagDrawer: React.FC<{
   open: boolean,

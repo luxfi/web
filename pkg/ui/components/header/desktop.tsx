@@ -7,7 +7,7 @@ import Logo, { type LogoVariant } from '../logo'
 
 import DesktopBagPopup from '../commerce/desktop-bag-popup'
 import BagButton from '../commerce/bag-button'
-import DesktopNav from '../commerce/desktop-nav-menu'
+import DesktopNav from './desktop-nav-menu'
 
 
 import type { LinkDef } from '@hanzo/ui/types'
@@ -17,11 +17,13 @@ const DesktopHeader: React.FC<{
   links: LinkDef[]
   className?: string
   noAuth?: boolean
+  noCommerce?: boolean
   logoVariant?: LogoVariant
 } & PropsWithChildren> = ({
   links,
   className = '',
   noAuth=false,
+  noCommerce=false,
   children,
   logoVariant='text-only'
 }) => {
@@ -47,7 +49,9 @@ const DesktopHeader: React.FC<{
             <DesktopNav links={links} isMenuOpened={isMenuOpened} setIsMenuOpen={setIsMenuOpen} />
           </div>
           <div className='flex items-center'>
-            <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
+            {!noCommerce && (
+              <DesktopBagPopup popupClx='w-[340px]' trigger={<BagButton className='text-primary -mr-[3px] lg:min-w-0' />} />
+            )}
             <AuthWidget noLogin={noAuth}/>
             {children}
           </div>

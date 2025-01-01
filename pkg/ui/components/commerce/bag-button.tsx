@@ -7,7 +7,7 @@ import { buttonVariants } from '@hanzo/ui/primitives'
 import { cn, type VariantProps } from '@hanzo/ui/util'
 import { useCommerce } from '@hanzo/commerce'
 
-import * as Icons from '../icons'
+import { Bag } from '../icons'
 
 const BagButton: React.FC<{
   showIfEmpty?: boolean  
@@ -82,7 +82,7 @@ const BagButton: React.FC<{
         <div>{c.cartQuantity}</div>
       </div>
     )}
-      <Icons.bag width='24' height='28' className={cn(
+      <Bag width='24' height='28' className={cn(
         'relative -top-[3px] fill-primary',
         iconClx,
         (animateOnHover ? 

@@ -1,0 +1,37 @@
+{
+  "name": "@luxfi/menu-icons",
+  "version": "1.0.1",
+  "description": "icons used by Lux web app menus",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "scope": "@luxfi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxfi/web.git",
+    "directory": "pkg/menu-items"
+  },
+  "scripts": {
+    "lat": "npm show @luxfi/menu-items version",
+    "pub": "npm publish",
+    "build": "tsc",
+    "tc": "tsc",
+    "clean": "rm -rf node_modules"
+  },
+  "exports": {
+    ".": "./icons/index.ts"
+  },
+  "dependencies": {
+    "react-social-icons": "^6.4.0"
+  },
+  "peerDependencies": {
+    "@hanzo/ui": "catalog:",
+    "lucide-react": "catalog:",
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -24,7 +24,7 @@ const Header: React.FC<{
     // TODO
     const [open, setOpen] = React.useState<boolean>(false);
 
-    const { nav: { common, featured }, currentAs, noAuth } = siteDef
+    const { nav: { common, featured }, currentAs, noAuth, commerce } = siteDef
     const links = (featured) ? [...common, ...featured] : common
 
     return (<>
@@ -33,6 +33,7 @@ const Header: React.FC<{
         links={links}
         currentAs={currentAs}
         noAuth={noAuth}
+        noCommerce={!!!commerce}
         logoVariant={logoVariant}
       >{children}</DesktopHeader>
       <MobileHeader
@@ -41,7 +42,7 @@ const Header: React.FC<{
         currentAs={currentAs}
         setChatbotOpen={setOpen}
         noAuth={noAuth}
-        
+        noCommerce={!!!commerce}
       />
     </>)
   }

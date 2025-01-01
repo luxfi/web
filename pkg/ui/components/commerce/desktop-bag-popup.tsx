@@ -14,7 +14,7 @@ import {
 import { cn } from '@hanzo/ui/util'
 import { CartPanel, useCommerce } from '@hanzo/commerce'
 
-import * as Icons from '../icons'
+import { Bag } from '../icons'
 import sendGAEvent from '../../next/analytics/google-analytics'
 
 const DesktopBagPopup: React.FC<{
@@ -65,7 +65,7 @@ const DesktopBagPopup: React.FC<{
           buttonClx='max-w-[220px] flex-none'
         >
           <div className='flex flex-row items-center flex-none justify-center '>
-            <Icons.bag  className='mr-2 relative w-6 h-7 fill-foreground ' />
+            <Bag  className='mr-2 relative w-6 h-7 fill-foreground ' />
             <p className='font-heading text-foreground text-default'>Your Bag</p>
           </div>
           <div className='h-[1px] w-pr-80 bg-muted-3 mx-auto mt-1.5 flex-none'/>

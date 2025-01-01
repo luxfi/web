@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { type TShirtSize  } from '@hanzo/ui/types'
 
-import * as Icons from './icons'
+import { LuxLogo } from './icons'
 
 const TEXT = 'LUX'
 type LogoVariant = 'text-only' | 'logo-only' | 'full'
@@ -74,12 +74,12 @@ const Logo: React.FC<{
   return (
     href ? (
       <Link href={href} className={outerClasses} onClick={onClick} >
-        <Icons.logo className={classes.icon} />
+        <LuxLogo className={classes.icon} />
         <span className={spanClasses}>{TEXT}</span>
       </Link>
     ) : (
       <span className={outerClasses} onClick={onClick}>
-        <Icons.logo className={classes.icon} />
+        <LuxLogo className={classes.icon} />
         <span className={spanClasses}>{TEXT}</span>
       </span>
     )

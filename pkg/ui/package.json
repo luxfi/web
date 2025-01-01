@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/ui",
-  "version": "5.4.2",
+  "version": "5.5.0",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -53,6 +53,7 @@
     "@hanzo/auth": "catalog:",
     "@hanzo/commerce": "catalog:",
     "@hanzo/ui": "catalog:",
+    "@luxfi/menu-icons": "1.0.1",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "catalog:",
     "mobx": "^6.12.3",

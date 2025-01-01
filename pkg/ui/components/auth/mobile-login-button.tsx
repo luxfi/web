@@ -17,7 +17,6 @@ import { cn } from '@hanzo/ui/util'
 import { useAuth } from "@hanzo/auth/service"
 
 import { Ethereum } from "@hanzo/auth/icons"
-import { Icons } from ".."
 
 const MobileAuthWidget: React.FC<{
     noLogin?: boolean
