@@ -1,6 +1,6 @@
 # web
 
-▼ on the World Wide Web 🌏.
+Lux Ecosystem on the World Wide Web.
 
 #### Decentralized network of blockchains designed for privacy and quantum security.
 
@@ -21,19 +21,17 @@
 
 ## Lux Features
 
-- **Decentralized with High Nakamoto Coefficient**: The Lux Network exemplifies a decentralized architecture with a high Nakamoto coefficient, ensuring resilience and reducing the risk of single points of failure. This structure enhances security and distributes control widely across the network.
+- **Decentralized**: The Lux Network exemplifies a decentralized architecture with a high Nakamoto coefficient, ensuring resilience and reducing the risk of single points of failure. This structure enhances security and distributes control widely across the network.
 
-- **Probabilistic Leaderless Consensus**: Employing a probabilistic leaderless consensus mechanism, Lux Network achieves agreement without centralized leadership, promoting true decentralization and fairness in transaction validation.
+- **Consensus**: Employing a probabilistic leaderless consensus mechanism, Lux Network achieves agreement without centralized leadership, promoting true decentralization and fairness in transaction validation.
 
-- **Quantum Encryption**: To combat future technological threats, Lux Network incorporates cutting-edge quantum encryption, safeguarding data against even the most advanced decryption methods.
+- **Post-Quantum Encryption**: To combat future technological threats, Lux Network incorporates cutting-edge post-quantum encryption, safeguarding data against even the most advanced decryption methods.
 
 - **zkPowered Bridge and Privacy Features**: The Lux Bridge, enhanced with zero-knowledge proofs, ensures transaction privacy while maintaining cross-chain interoperability. This feature allows for secure and private asset transfers across different blockchains within the Lux ecosystem.
 
 - **Next-generation Credit Card**: Offering financial liberty, merging spending with saving, tailored for a global lifestyle.
 
-- **Tokenization of Assets**: Digital efficiency meets tangible value, gold, silver and more available on our Lux Market.
-
-- **AI-Driven Lifestyle**: Lux AI ensures seamless access to all Lux products and integration into your daily life.
+- **All Finance in One Place**: Digital efficiency meets tangible value, gold, silver and all global assets are finally available in one place.
 
 Explore and purchase all our products, from Lux Pyramids to other blockchain essentials, at [Lux Shop](https://lux.shop). This comprehensive platform supports crypto investors looking to 'APE in' and take full advantage of Lux Network’s advanced, user-friendly technologies.
 
