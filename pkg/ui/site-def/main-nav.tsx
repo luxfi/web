@@ -1,75 +1,77 @@
 import type { LinkDef } from '@hanzo/ui/types'
-import Anodized from '../components/icons/anodized-titanium'
-import GunMetal from '../components/icons/gun-metal'
-import  Chrome from '../components/icons/chrome'
-import Irradescent from '../components/icons/irradescent'
-import CompareCards from '../components/icons/compare-cards'
-import ViewAllCards from '../components/icons/view-all-card'
-import MoreBenefits from '../components/icons/more-benefits'
-import GoldCard from '../components/icons/24k-gold-card'
-import Sterling from '../components/icons/sterling-silver-card'
-import MirroredTitanium from '../components/icons/mirrored-titanium'
-import AIChat from '../components/icons/ai-chat'
-import Exchange from '../components/icons/exchange'
-import Market from '../components/icons/market'
-import Shop from '../components/icons/shop'
-import Credit from '../components/icons/credit'
-import LuxFinance from '../components/icons/lux-finance'
-import LuxQuests from '../components/icons/lux-quests'
-import DeveloperDocs from '../components/icons/developer-docs'
-import Integration from '../components/icons/integrations'
-import Templates from '../components/icons/templates'
-import Guides from '../components/icons/guides'
-import Customers from '../components/icons/customers'
-import Blog from '../components/icons/blog'
-import ChangeLog from '../components/icons/changelog'
-import type { CLIENT_STATIC_FILES_PATH } from 'next/dist/shared/lib/constants'
-import CustomerSupport from '../components/icons/customer-support'
-import FAQs from '../components/icons/faqs'
-import Bridge from '../components/icons/bridge'
-import Explorer from '../components/icons/explorer'
-import LaunchSubnet from '../components/icons/launch-subnet'
-import Coins from '../components/icons/coins'
-import Safe from '../components/icons/safe'
-import Wallet from '../components/icons/wallet'
-import Validators from '../components/icons/validators'
-import OpenSource from '../components/icons/open-source'
-import LuxPass from '../components/icons/lux-pass'
-import CompareCardsAct from '../components/icons/compare-cards-act'
-import ViewAllCardsAct from '../components/icons/view-all-card-act'
-import MoreBenefitsAct from '../components/icons/more-benefits-act'
-import AIChatAct from '../components/icons/ai-chat-act'
-import ExchangeAct from '../components/icons/exchange-act'
-import MarketAct from '../components/icons/market-act'
-import ShopAct from '../components/icons/shop-act'
-import CreditAct from '../components/icons/credit-act'
-import LuxFinanceAct from '../components/icons/lux-finance-act'
-import LuxQuestsAct from '../components/icons/lux-quests-act'
-import BridgeAct from '../components/icons/bridge-act'
-import ExplorerAct from '../components/icons/explorer-act'
-import LaunchSubnetAct from '../components/icons/launchsubnet-act'
-import CoinsAct from '../components/icons/coins-act'
-import SafeAct from '../components/icons/safe-act'
-import LuxWalletAct from '../components/icons/wallet-act'
-import ValidatorsAct from '../components/icons/validators-act'
-import DeveloperDocsAct from '../components/icons/developer-docs-act'
-import OpenSourceAct from '../components/icons/open-source-act'
-import LuxPassAct from '../components/icons/lux-pass-act'
-import IntegrationAct from '../components/icons/integrations-act'
-import TemplatesAct from '../components/icons/templates-act'
-import CustomersAct from '../components/icons/customers-act'
-import BlogAct from '../components/icons/blog-act'
-import ChangeLogAct from '../components/icons/changelog-act'
-import CustomerSupportAct from '../components/icons/customer-support-act'
-import FAQsAct from '../components/icons/faqs-act'
-import GuidesAct from '../components/icons/guides-act'
+
+import {
+  AIChatAct,
+  AIChat,
+  Anodized,
+  BlogAct,
+  Blog,
+  BridgeAct,
+  Bridge,
+  ChangeLogAct,
+  ChangeLog,
+  Chrome,
+  CoinsAct,
+  Coins,
+  CompareCardsAct,
+  CompareCards,
+  CreditAct,
+  Credit,
+  CustomersAct,
+  Customers,
+  CustomerSupportAct,
+  CustomerSupport,
+  DeveloperDocsAct,
+  DeveloperDocs,
+  ExchangeAct,
+  Exchange,
+  ExplorerAct,
+  Explorer,
+  FAQsAct,
+  FAQs,
+  GoldCard,
+  GuidesAct,
+  Guides,
+  GunMetal,
+  IntegrationAct,
+  Integration,
+  Irradescent,
+  LaunchSubnetAct,
+  LaunchSubnet,
+  LuxFinanceAct,
+  LuxFinance,
+  LuxPassAct,
+  LuxPass,
+  LuxQuestsAct,
+  LuxQuests,
+  LuxWalletAct,
+  MarketAct,
+  Market,
+  MirroredTitanium,
+  MoreBenefitsAct,
+  MoreBenefits,
+  OpenSourceAct,
+  OpenSource,
+  SafeAct,
+  Safe,
+  ShopAct,
+  Shop,
+  Sterling,
+  TemplatesAct,
+  Templates,
+  ValidatorsAct,
+  Validators,
+  ViewAllCardsAct,
+  ViewAllCards,
+  Wallet,
+} from '@luxfi/menu-icons'
+
 
 export interface LinkDefExtended extends LinkDef {
   isAIMenu?: boolean
   icon?: any,
   details?: string,
   childMenu?: ChildMenu[]
-
 }
 
 export interface ChildMenu extends LinkDef{

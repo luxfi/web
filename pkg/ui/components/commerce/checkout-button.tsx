@@ -7,7 +7,7 @@ import { Button, type ButtonProps } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 import { useCommerce } from '@hanzo/commerce'
 
-import * as Icons from '../icons'
+import { Bag } from '../icons'
 
 const IconAndQuantity: React.FC<{
   animateOnQuantityChange?: boolean
@@ -67,7 +67,7 @@ const IconAndQuantity: React.FC<{
           <div style={{/* color: 'white'  tailwind bug? ,*/ fontSize: '11px', position: 'relative', top: '1px' }}>{cmmc.cartQuantity}</div>
         </div>
         )}
-        <Icons.bag width='19' height='24' className={cn('relative -top-[3px] opacity-70' , iconClx)} aria-hidden="true" />
+        <Bag width='19' height='24' className={cn('relative -top-[3px] opacity-70' , iconClx)} aria-hidden="true" />
       </div>            
     )}
       {showArrow && (<span style={{fontSize: '17px',}}>&rsaquo;</span>)}

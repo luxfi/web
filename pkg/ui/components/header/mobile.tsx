@@ -6,16 +6,16 @@ import type { LinkDef } from '@hanzo/ui/types'
 import { cn } from '@hanzo/ui/util'
 
 import { CartPanel, useCommerce } from '@hanzo/commerce'
-import { AuthWidget, LoginPanel } from '@hanzo/auth/components'
+import { LoginPanel } from '@hanzo/auth/components'
 import sendGAEvent from '../../next/analytics/google-analytics'
-import * as Icons from '../icons'
 
+import { Avatar, Bag } from '../icons'
 import { Logo } from '..'
 
-import MenuToggleButton from '../commerce/mobile-menu-toggle-button'
+import MenuToggleButton from './mobile-menu-toggle-button'
 import BagButton from '../commerce/bag-button'
-import MobileBagDrawer from '../commerce/mobile-bag-drawer'
-import NavMenu from '../commerce/mobile-nav-menu'
+import MobileBagDrawer from './mobile-bag-drawer'
+import NavMenu from './mobile-nav-menu'
 
 const bagClx = 'mt-4 mb-8 border-none py-0 px-4 w-full ' +
   'sm:min-w-[350px] sm:max-w-[500px] sm:mx-auto min-h-[60vh] max-h-[70vh] ' +
@@ -24,15 +24,17 @@ const bagClx = 'mt-4 mb-8 border-none py-0 px-4 w-full ' +
 const MobileHeader: React.FC<{
   currentAs: string | undefined
   links: LinkDef[]
-  className?: string,
-  setChatbotOpen: (open: boolean) => void,
+  className?: string
+  setChatbotOpen: (open: boolean) => void
   noAuth?: boolean
+  noCommerce?: boolean
 }> = ({
   currentAs,
   links,
   className = '',
   setChatbotOpen,
-  noAuth=false // :aa TODO
+  noAuth=false,   // :aa TODO
+  noCommerce=false // :aa TODO
 }) => {
     const cmmc = useCommerce()
     const [menuState, setMenuState] = useState<'closed' | 'nav' | 'login' | 'bag'>('closed')
@@ -101,7 +103,7 @@ const MobileHeader: React.FC<{
             'flex flex-row ' +
             'bg-background animate-mobile-menu-open'
           }>
-              <Icons.Avatar className='self-center ' />
+              <Avatar className='self-center ' />
             </div>
           )}
           <div className='flex gap-0 flex-row'>
@@ -111,22 +113,25 @@ const MobileHeader: React.FC<{
 
         </div>
       </header>
-      <MobileBagDrawer
-        className=''
-        open={bagDrawerOpen}
-        setOpen={setBagDrawerOpen}
-        handleCheckout={handleCheckout}
-      />
+      {!noCommerce && (
+        <MobileBagDrawer
+          className=''
+          open={bagDrawerOpen}
+          setOpen={setBagDrawerOpen}
+          handleCheckout={handleCheckout}
+        />
+      )}
+
       {menuOpen() && (
         <div className={
           'fixed top-0 left-0 w-full h-full ' +
           // z must below header itself
           'flex flex-column bg-background z-below-header animate-mobile-menu-open'
         }>
-          {menuState === 'login' ? (
+          {(!!!noAuth && menuState === 'login') ? (
             <LoginPanel noHeading onLoginChanged={onLoginChanged} className='sm:animate-in sm:zoom-in-90' />
           ) : (
-            menuState === 'bag' ? (
+            (!!!noCommerce && menuState === 'bag') ? (
 
               <CartPanel
                 handleCheckout={() => { router.push('/checkout') }}
@@ -139,7 +144,7 @@ const MobileHeader: React.FC<{
                 buttonClx='max-w-[220px] flex-none'
               >
                 <div className='flex flex-row items-center flex-none justify-center '>
-                  <Icons.bag className='mr-2 relative w-4 h-5 fill-foreground ' />
+                  <Bag className='mr-2 relative w-4 h-5 fill-foreground ' />
                   <p className='font-heading text-foreground text-default'>Your Bag</p>
                 </div>
                 <div className='h-[1px] w-pr-80 bg-muted-3 mx-auto mt-1.5 flex-none' />

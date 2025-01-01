@@ -9,9 +9,9 @@ import { cn } from '@hanzo/ui/util'
 import { Button, Carousel, CarouselContent, CarouselItem } from '@hanzo/ui/primitives'
 import { LoginPanel as Login, SignupPanel as Signup } from '@hanzo/auth/components'
 
+import { LuxLogo } from '../icons'
 import Logo from '../logo'
 import { EmblaAutoplay } from '..'
-import LuxLogo from '../icons/lux-logo'
 import { legal } from '../../site-def/footer'
 
 const SignupPanel: React.FC<{
