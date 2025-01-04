@@ -7,7 +7,8 @@
   "private": true,
   "description": "Lux Partners Meeting tool",
   "scripts": {
-    "start": "http-server ./public"
+    "start": "http-server ./public",
+    "build": "echo"
   },
   "keywords": [],
   "dependencies": {
