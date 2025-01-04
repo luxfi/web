@@ -84,20 +84,6 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
-      name: "Jack Kochen",
-      title: "Chief Marketing Officer",
-      description:
-        "Jack has been running communities since he was young, and has been a blockchain hobbyist since 2012! Jack's last project was the first DeFi application on Cardano, VyFinance. He has also worked alongside Moonpay, Vechain, and a swath of smaller projects. Jack's expertise ranges far and wide, from programming in Golang, to running a community, to operational logistics; and all the marketing required between. Focusing on efficiency, trust, and transparency, Jack hopes to make Lux a household-name.",
-      url: "https://www.linkedin.com/in/jack-kochen/",
-      image: {
-        blockType: "image",
-        src: "/assets/images/jack-kochen.png",
-        alt: "Jack Kochen",
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
       name: "Antje Worring",
       title: "Chief Design Officer",
       description:
@@ -112,6 +98,20 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
+      name: "Jack Kochen",
+      title: "Chief Marketing Officer",
+      description:
+        "Jack has been running communities since he was young, and has been a blockchain hobbyist since 2012. Jack's last project was the first DeFi application on Cardano, VyFinance. He has also worked alongside Moonpay, Vechain, and a swath of smaller projects. Jack's expertise ranges far and wide, from programming in Golang, to running a community, to operational logistics; and all the marketing required between. Focusing on efficiency, trust, and transparency, Jack hopes to make Lux a household-name.",
+      url: "https://www.linkedin.com/in/jack-kochen/",
+      image: {
+        blockType: "image",
+        src: "/assets/images/jack-kochen.png",
+        alt: "Jack Kochen",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
       name: "Christopher Dinelli",
       title: "Chief Information Officer",
       description:
@@ -121,20 +121,6 @@ export default {
         blockType: "image",
         src: "/assets/images/christopher-dinelli.png",
         alt: "Christopher Dinelli",
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Lori Luttrell",
-      title: "Chief Data Scientist",
-      description:
-        "As a data scientist, Lori’s expertise in research is matched by her strategic business intellect. With an academic background in the biological sciences, she brings a unique perspective that bridges the gap between tech and real world applications. She navigates complex systems and identifies opportunities for collaboration that drive innovation forward. Her experience in a diversity of industries includes scientific research and advisory roles in emerging biotechnologies, Big Data, AI, and the health and wellness sector. As a numismatist, her interests cross into fintech and currency trends. A systems thinker with a strong work ethic, she is dedicated to leveraging data driven strategies towards the responsible growth of beneficial technologies.",
-      url: "https://www.linkedin.com/in/lorijluttrell/",
-      image: {
-        blockType: "image",
-        src: "/assets/images/lori-luttrell.png",
-        alt: "Lori Luttrell",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -177,6 +163,20 @@ export default {
         blockType: "image",
         src: "/assets/images/dara-gallopin.png",
         alt: "Dara Gallopin",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Lori Luttrell",
+      title: "Chief Data Scientist",
+      description:
+        "As a data scientist, Lori’s expertise in research is matched by her strategic business intellect. With an academic background in the biological sciences, she brings a unique perspective that bridges the gap between tech and real world applications. She navigates complex systems and identifies opportunities for collaboration that drive innovation forward. Her experience in a diversity of industries includes scientific research and advisory roles in emerging biotechnologies, Big Data, AI, and the health and wellness sector. As a numismatist, her interests cross into fintech and currency trends. A systems thinker with a strong work ethic, she is dedicated to leveraging data driven strategies towards the responsible growth of beneficial technologies.",
+      url: "https://www.linkedin.com/in/lorijluttrell/",
+      image: {
+        blockType: "image",
+        src: "/assets/images/lori-luttrell.png",
+        alt: "Lori Luttrell",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,

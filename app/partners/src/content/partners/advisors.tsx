@@ -145,6 +145,7 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
+    /*
     {
       blockType: "partner-card",
       name: "Grant Cairney",
@@ -159,6 +160,7 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
+     */
     {
       blockType: "partner-card",
       name: "Christian Cowley",
@@ -171,6 +173,20 @@ export default {
         blockType: 'image',
         src: '/assets/images/christian-cowley.jpg',
         alt: 'Christian Cowley',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Fernando Barrajon",
+      title: "Designer",
+      description:
+        "Fernando Barrajón is a UX Lead with 8 years of experience in Banking and Fintech and a degree in Interaction Design. He excels in visual and verbal storytelling, UX design, product management, and agile methodologies. He has a strong background in creating prototypes to align stakeholders and drive decision-making, facilitating workshops, and training cross-functional teams. He has also contributed to the design of various innovative digital products and platforms. He is skilled in Figma, Product Development, User Research, and more.",
+      url: "https://www.linkedin.com/in/fbarrajon/",
+      image: {
+        blockType: "image",
+        src: "/assets/images/fernando-barrajon.png",
+        alt: "Fernando Barrajon",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
