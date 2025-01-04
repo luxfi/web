@@ -1,2 +1,2 @@
 # invest.lux.fund
-Embedded application form for Lux Fund
+Landing page for scheduling meetings with Lux Fund.
