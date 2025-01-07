@@ -15,19 +15,6 @@ export default {
   partners: [
     {
       blockType: "partner-card",
-      name: "Vincent Butta",
-      title: "Entertainment, FinTech",
-      description: "Vincent is a seasoned business leader with 30 years of experience in entertainment, social media, and licensing. He has built and sold early-stage startups, leading them to become multimillion-dollar enterprises. Vincent has an impressive track record, including creating one of the largest marketing companies in the US and launching over 400 consumer products for major brands like P&G, J&J, and Walmart. In the entertainment industry, he has managed film releases for Disney, Fox, and Paramount, and has produced notable films that received critical acclaim and awards. Vincent has also been involved in turnaround and business acceleration for various companies on behalf of investors.",
-      url: "https://www.linkedin.com/in/vincent-butta-8562791",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/vincent-butta.png',
-        alt: 'Vincent Butta',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
       name: "Andrew Gertler",
       title: "Energy, Geology, Mining",
       description: "Co-founder of Viscount Mining Corp, Andrew has a solid track record in the mining and wealth management industries. Since 2011, he has driven Viscount's growth, focusing on silver and gold deposits in Nevada. Simultaneously, he has managed high-net-worth portfolios at Lester Asset Management since 2006. He holds board positions in Solid Impact Investment Corp and Impact Acquisition Corp, contributing to asset identification and business acquisition. His diverse career includes roles at Esplanade Loft Project, Hunt Mining, Zi Corporation, and Hudson Advisors.",
@@ -107,27 +94,14 @@ export default {
 
     {
       blockType: "partner-card",
-      name: "Darth Coinburner",
+      name: "Dan Coinburn",
       title: "Evangelism",
       description: "Dan Coinburn is a visionary blockchain developer and media producer, leading the way in innovative technologies and digital media. As the founder of Coinburn.com, Dan has established himself as a pioneer in the blockchain industry. Specializing in Ethereum Virtual Machines (EVMs) and Solana, Dan’s technical expertise enables him to develop and optimize solutions across these leading blockchain platforms, ensuring efficiency and scalability. Dan’s companies are spearheading the development of plastic-free solutions for payment cards via non-custodial NFTs. As a media content creator and producer, Dan and his team have achieved remarkable success, amassing tens of millions of views on social media. Their captivating content has been showcased at prestigious fashion events in Miami, New York, Los Angeles, Milan, Paris, as well as at the Miss USA and Miss Universe pageants.",
-      url: "https://coinburn.com",
+      url: "https://lux.partners/",
       image: {
         blockType: 'image',
         src: '/assets/images/dan-coinburn.png',
         alt: 'Dan Coinburn',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "John Hanks",
-      title: "Engineering",
-      description: "John Hanks is a seasoned blockchain engineer and entrepreneur with a rich history in the blockchain industry. With a deep passion for decentralized technologies, John has played a pivotal role in numerous successful blockchain projects, contributing his expertise in engineering and innovation. His work spans various sectors, highlighting his versatility and commitment to advancing blockchain solutions. John’s visionary approach and hands-on experience have earned him a reputation as a leader and innovator in the blockchain community. He continues to drive forward-thinking projects that push the boundaries of what blockchain technology can achieve, all while maintaining a focus on engineering excellence and entrepreneurial spirit.",
-      url: "https://www.linkedin.com/in/johnhanksengineer/",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/john-hanks.png',
-        alt: 'John Hanks',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -152,34 +126,67 @@ export default {
       url: "https://www.linkedin.com/in/williammichael/",
       image: {
         blockType: 'image',
-        src: '/assets/images/william-hadala',
-        alt: 'William Hadala',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Namya Khan",
-      title: "Design",
-      description: "Namya is the visionary Founder of Supafast, a dynamic design agency known for serving an impressive roster of clients including Y Combinator startups, early-stage ventures, and global creators. Thriving in fast-paced environments, she leverages her passion for design and a robust work ethic to deliver exceptional results across diverse industries. At Supafast, Namya leads a dedicated team in creating conversion-focused, high-impact designs that propel business growth. Her expertise in merging aesthetics with functionality not only enhances visual appeal but strategically aligns with business objectives, establishing her as a valuable Design Advisor and solidifying Supafast’s reputation as a leader in innovative design solutions.",
-      url: "https://www.linkedin.com/in/namyakhan/",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/namya_khan2.png',
-        alt: 'Namya Khan',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "William Hadala",
-      title: "Infrastructure Security",
-      description: "William is a distinguished United States Air Force veteran and senior technology executive with over 25 years of experience. He has been issued 27 USPTO patents and has a formidable track record in building global technology infrastructure in media and telecommunications. As the CEO of A113 Venture Fund, Edge Data Intelligence, Exposition TV, and CTO of TMT Capital Group, William has driven significant advancements in technology deployment across various sectors. Notably, he founded TMGcore, pioneering the world's most advanced edge supercomputer for cryptocurrency mining and AI, achieving a multi-billion-dollar valuation within its first year. Additionally, during the global COVID crisis, he established the Connectivity Foundation, a non-profit aimed at bridging the digital divide for underserved communities worldwide through innovative broadband solutions.",
-      url: "https://www.linkedin.com/in/williammichael/",
-      image: {
-        blockType: 'image',
         src: '/assets/images/william-hadala.jpg',
         alt: 'William Hadala',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Chris Connor",
+      title: "CEO and Co-Founder, CDAX Limited",
+      description: "\n" +
+        "A dynamic senior business leader with a proven track record in strategic, operational, and change management domains, Chris excels in driving team performance, delivering exceptional client experiences, and achieving outstanding business results. He has served as COO of Barclays Wealth, Managing Director of Barclays Private Clients International, and CEO of a successful Isle of Man payment business. A Chartered Fellow of the CISI, CMI, and LIBF, as well as a Prince2 Practitioner, Chris brings deep expertise and credibility in financial and management sectors. He also sits on the Boards of several UK and Isle of Man companies.",
+      url: "https://www.linkedin.com/in/chrisconnor-/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/chris-connor.jpg',
+        alt: 'Chris Connor',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    /*
+    {
+      blockType: "partner-card",
+      name: "Grant Cairney",
+      title: "Head of Compliance, CDAX Limited",
+      description: "\n" +
+        "A commercially minded risk and compliance professional with 12+ years of expertise in financial services, payments, and digital currencies, Grant specializes in licensing, setup, and management of fiat, crypto, and digital payment platforms. His experience includes roles as Chief Compliance Officer for the Isle of Man’s first licensed eMoney issuer, Head of Compliance for a fiduciary service provider, and Consultant for financial and eGaming clients. Recognized by the Isle of Man FSA for his expertise, Grant is also the co-founder and COO of a RegTech SaaS company launched in 2024 and a Fellow of the International Compliance Association.",
+      url: "https://www.linkedin.com/in/grant-cairney-iom/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/Chris Connor.jpg',
+        alt: 'Grant Cairney',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+     */
+    {
+      blockType: "partner-card",
+      name: "Christian Cowley",
+      title: "Finance Director, CDAX Limited",
+      description: "\n" +
+      "\n" +
+        "Christian is a Chartered Fellow Certified Accountant with extensive expertise across sectors including leisure, banking, financial services, and public practice. With degrees in Law and Archaeology, his career highlights include driving a threefold net profit increase for a payroll company, overseeing the financial reorganization of a pre-paid card provider, and managing cost budgets for international banking operations with over 1,000 employees. As Director at Oak Group (IOM) Limited and CDAX Limited, and founder of a successful accountancy practice, Christian excels in financial strategy, resource optimization, and business transformation, consistently delivering innovative and sustainable results.",
+      url: "https://www.linkedin.com/in/christian-cowley-55121589/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/christian-cowley.jpg',
+        alt: 'Christian Cowley',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Fernando Barrajon",
+      title: "Designer",
+      description:
+        "Fernando Barrajón is a UX Lead with 8 years of experience in Banking and Fintech and a degree in Interaction Design. He excels in visual and verbal storytelling, UX design, product management, and agile methodologies. He has a strong background in creating prototypes to align stakeholders and drive decision-making, facilitating workshops, and training cross-functional teams. He has also contributed to the design of various innovative digital products and platforms. He is skilled in Figma, Product Development, User Research, and more.",
+      url: "https://www.linkedin.com/in/fbarrajon/",
+      image: {
+        blockType: "image",
+        src: "/assets/images/fernando-barrajon.png",
+        alt: "Fernando Barrajon",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,

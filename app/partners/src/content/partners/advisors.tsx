@@ -15,19 +15,6 @@ export default {
   partners: [
     {
       blockType: "partner-card",
-      name: "Vincent Butta",
-      title: "Entertainment, FinTech",
-      description: "Vincent is a seasoned business leader with 30 years of experience in entertainment, social media, and licensing. He has built and sold early-stage startups, leading them to become multimillion-dollar enterprises. Vincent has an impressive track record, including creating one of the largest marketing companies in the US and launching over 400 consumer products for major brands like P&G, J&J, and Walmart. In the entertainment industry, he has managed film releases for Disney, Fox, and Paramount, and has produced notable films that received critical acclaim and awards. Vincent has also been involved in turnaround and business acceleration for various companies on behalf of investors.",
-      url: "https://www.linkedin.com/in/vincent-butta-8562791",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/vincent-butta.png',
-        alt: 'Vincent Butta',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
       name: "Andrew Gertler",
       title: "Energy, Geology, Mining",
       description: "Co-founder of Viscount Mining Corp, Andrew has a solid track record in the mining and wealth management industries. Since 2011, he has driven Viscount's growth, focusing on silver and gold deposits in Nevada. Simultaneously, he has managed high-net-worth portfolios at Lester Asset Management since 2006. He holds board positions in Solid Impact Investment Corp and Impact Acquisition Corp, contributing to asset identification and business acquisition. His diverse career includes roles at Esplanade Loft Project, Hunt Mining, Zi Corporation, and Hudson Advisors.",
@@ -117,7 +104,7 @@ export default {
         alt: 'Dan Coinburn',
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
-    } as PartnerCardBlock,   
+    } as PartnerCardBlock,
     {
       blockType: "partner-card",
       name: "Major Williams",
@@ -144,6 +131,64 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
-    
+    {
+      blockType: "partner-card",
+      name: "Chris Connor",
+      title: "CEO and Co-Founder, CDAX Limited",
+      description: "\n" +
+        "A dynamic senior business leader with a proven track record in strategic, operational, and change management domains, Chris excels in driving team performance, delivering exceptional client experiences, and achieving outstanding business results. He has served as COO of Barclays Wealth, Managing Director of Barclays Private Clients International, and CEO of a successful Isle of Man payment business. A Chartered Fellow of the CISI, CMI, and LIBF, as well as a Prince2 Practitioner, Chris brings deep expertise and credibility in financial and management sectors. He also sits on the Boards of several UK and Isle of Man companies.",
+      url: "https://www.linkedin.com/in/chrisconnor-/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/chris-connor.jpg',
+        alt: 'Chris Connor',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    /*
+    {
+      blockType: "partner-card",
+      name: "Grant Cairney",
+      title: "Head of Compliance, CDAX Limited",
+      description: "\n" +
+        "A commercially minded risk and compliance professional with 12+ years of expertise in financial services, payments, and digital currencies, Grant specializes in licensing, setup, and management of fiat, crypto, and digital payment platforms. His experience includes roles as Chief Compliance Officer for the Isle of Man’s first licensed eMoney issuer, Head of Compliance for a fiduciary service provider, and Consultant for financial and eGaming clients. Recognized by the Isle of Man FSA for his expertise, Grant is also the co-founder and COO of a RegTech SaaS company launched in 2024 and a Fellow of the International Compliance Association.",
+      url: "https://www.linkedin.com/in/grant-cairney-iom/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/Chris Connor.jpg',
+        alt: 'Grant Cairney',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+     */
+    {
+      blockType: "partner-card",
+      name: "Christian Cowley",
+      title: "Finance Director, CDAX Limited",
+      description: "\n" +
+      "\n" +
+        "Christian is a Chartered Fellow Certified Accountant with extensive expertise across sectors including leisure, banking, financial services, and public practice. With degrees in Law and Archaeology, his career highlights include driving a threefold net profit increase for a payroll company, overseeing the financial reorganization of a pre-paid card provider, and managing cost budgets for international banking operations with over 1,000 employees. As Director at Oak Group (IOM) Limited and CDAX Limited, and founder of a successful accountancy practice, Christian excels in financial strategy, resource optimization, and business transformation, consistently delivering innovative and sustainable results.",
+      url: "https://www.linkedin.com/in/christian-cowley-55121589/",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/christian-cowley.jpg',
+        alt: 'Christian Cowley',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Fernando Barrajon",
+      title: "Designer",
+      description:
+        "Fernando Barrajón is a UX Lead with 8 years of experience in Banking and Fintech and a degree in Interaction Design. He excels in visual and verbal storytelling, UX design, product management, and agile methodologies. He has a strong background in creating prototypes to align stakeholders and drive decision-making, facilitating workshops, and training cross-functional teams. He has also contributed to the design of various innovative digital products and platforms. He is skilled in Figma, Product Development, User Research, and more.",
+      url: "https://www.linkedin.com/in/fbarrajon/",
+      image: {
+        blockType: "image",
+        src: "/assets/images/fernando-barrajon.png",
+        alt: "Fernando Barrajon",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
   ]
 } as PartnersBlock
