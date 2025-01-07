@@ -61,6 +61,8 @@ import Validators from './validators'
 import ViewAllCardsAct from './view-all-card-act'
 import ViewAllCards from './view-all-card'
 import Wallet from './wallet'
+import Warpcast from './warpcast'
+import YouTubeLogo from './you-tube-logo'
 
 export {
   AIChatAct,
@@ -126,4 +128,6 @@ export {
   ViewAllCardsAct,
   ViewAllCards,
   Wallet,
+  Warpcast,
+  YouTubeLogo
 }

@@ -1,8 +1,8 @@
 'use client'
-
+import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Script from 'next/script'
-import { useEffect, useState } from 'react'
+
 import * as fbq from './fpixel'
 
 const FacebookPixelHead = () => {

@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/ui",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "description": "Library that contains shared UI primitives, support for a common design system, and other boilerplate support.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.1.0",
-    "@types/validator": "^13.12.1",
     "cookies-next": "^4.1.1",
     "date-fns": "^3.6.0",
     "embla-carousel-autoplay": "^8.1.6",
@@ -53,7 +52,7 @@
     "@hanzo/auth": "catalog:",
     "@hanzo/commerce": "catalog:",
     "@hanzo/ui": "catalog:",
-    "@luxfi/menu-icons": "1.0.1",
+    "@luxfi/menu-icons": "1.0.2",
     "@hookform/resolvers": "^3.3.2",
     "lucide-react": "catalog:",
     "mobx": "^6.12.3",
@@ -76,6 +75,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@types/validator": "^13.12.1",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   }
