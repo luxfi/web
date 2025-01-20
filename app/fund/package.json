@@ -8,7 +8,8 @@
     "tc": "tsc",
     "typecheck": "tsc",
     "clean": "rm -rf ./node_modules && rm -rf ./vercel",
-    "clean:all": "pnpm -w clean:all && rm -rf ./vercel"
+    "clean:all": "pnpm -w clean:all && rm -rf ./vercel",
+    "static": "pnpm http-server ./static-site"
   },
   "sideEffects": false,
   "type": "module",
@@ -21,17 +22,10 @@
     "@remix-run/serve": "^2.15.1",
     "@vercel/analytics": "^1.4.1",
     "@vercel/remix": "^2.15.1",
-    "axios": "^1.7.9",
-    "isbot": "^4",
     "lucide-react": "catalog:",
-    "mobx": "^6.12.3",
-    "mobx-react-lite": "^4.0.7",
-    "mobx-utils": "^6.1.0",
-    "motion": "^11.15.0",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-social-icons": "^6.18.0",
-    "use-debounce": "^10.0.4"
+    "react-social-icons": "^6.18.0"
   },
   "devDependencies": {
     "@originjs/vite-plugin-commonjs": "^1.0.3",
@@ -41,6 +35,7 @@
     "@types/react-dom": "catalog:",
     "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.20",
+    "http-server": "^14.1.1",
     "postcss": "^8.4.49",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
