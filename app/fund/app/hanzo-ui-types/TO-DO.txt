@@ -1,0 +1,2 @@
+These are "remix-safe" versions of the types used by @luxfi/ui
+TODO: remove them make luxfi/ui usable by next and remix

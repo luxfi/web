@@ -1,9 +1,6 @@
-  // https://tailwindcss.com/docs/using-with-preprocessors#nesting
-module.exports = {
+export default {
   plugins: {
-    'postcss-import': {},
-    'tailwindcss/nesting': {},
     tailwindcss: {},
     autoprefixer: {},
   },
-}
+};

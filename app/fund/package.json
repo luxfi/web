@@ -1,40 +1,53 @@
 {
   "name": "@luxfi/fund",
-  "version": "0.0.5",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "prod": "next start",
-    "cn": "rm -rf ./.next",
-    "clean": "rm -rf ./.next && rm -rf node_modules",
-    "tc": "tsc --noEmit"
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "start": "remix-serve ./build/server/index.js",
+    "tc": "tsc",
+    "typecheck": "tsc",
+    "clean": "rm -rf ./node_modules && rm -rf ./vercel",
+    "clean:all": "pnpm -w clean:all && rm -rf ./vercel"
   },
+  "sideEffects": false,
+  "type": "module",
   "dependencies": {
-    "@luxfi/ui": "catalog:",
-    "@hanzo/auth": "catalog:",
-    "@hanzo/commerce": "catalog:",
     "@hanzo/ui": "catalog:",
-    "@next/mdx": "14.1.0",
-    "lucide-react": "^0.344.0",
-    "next": "catalog:",
-    "next-themes": "^0.2.1",
-    "postcss-selector-parser": "^6.0.13",
+    "@luxfi/menu-icons": "1.0.2",
+    "@remix-run/node": "^2.15.1",
+    "@remix-run/react": "^2.15.1",
+    "@remix-run/route-config": "^2.15.2",
+    "@remix-run/serve": "^2.15.1",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/remix": "^2.15.1",
+    "axios": "^1.7.9",
+    "isbot": "^4",
+    "lucide-react": "catalog:",
+    "mobx": "^6.12.3",
+    "mobx-react-lite": "^4.0.7",
+    "mobx-utils": "^6.1.0",
+    "motion": "^11.15.0",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "react-social-icons": "^6.18.0",
+    "use-debounce": "^10.0.4"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^3.0.0",
-    "@mdx-js/react": "^3.0.0",
-    "@svgr/webpack": "^8.1.0",
-    "@types/mdx": "^2.0.9",
-    "@types/node": "catalog:",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@remix-run/dev": "^2.15.1",
+    "@remix-run/server-runtime": "^2.15.1",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "postcss-import": "^15.1.0",
+    "@types/uuid": "^10.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
     "tailwindcss": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vite": "5.4.11",
+    "vite-tsconfig-paths": "5.1.2"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
