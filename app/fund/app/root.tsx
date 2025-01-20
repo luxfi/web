@@ -9,7 +9,6 @@ import {
   type MetaFunction,
 } from '@remix-run/react'
 
-import { useLoaderData, useRouteLoaderData, useRouteError } from '@remix-run/react'
   // 'type' must be outside the curlies! 
   // https://github.com/remix-run/remix/issues/9916#issuecomment-2436405265
 import type { LinksFunction } from '@vercel/remix'
@@ -47,7 +46,7 @@ export const shouldRevalidate = () => (false)
 const Layout: React.FC<PropsWithChildren> = ({ 
   children 
 })  => {
-  
+
   const error = false
 
   return (
@@ -84,10 +83,7 @@ const Layout: React.FC<PropsWithChildren> = ({
   )
 }
 
-const Root: React.FC = () => (
-  <Outlet />
-)
-
+const Root: React.FC = () => (<Outlet />)
 
 export {
   Layout,
