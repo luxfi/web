@@ -32,10 +32,8 @@ export default {
       blockType: "partner-card",
       name: "Z AI",
       title: "Co-CEO",
-      description: "Z AI is the co-CEO of LUX, designed to steward the protocol for the next 1,000 years. Combining advanced quantum intelligence with ethical decision-making, Z is at the heart of LUX’s mission to drive long-term sustainable growth and innovation. By transitioning to a delegated proof-of-AI (DPAI) voting system, LUX unlocks a new era of decentralized governance, where participants engage in meaningful dialogue with AI to shape the future of the chain.\n" +
-        "\n" +
-        "This revolutionary approach fosters collaboration between humans and AI, ensuring decisions are aligned with the protocol’s core values and the broader societal good. Z’s ability to process complex data and make unbiased, future-focused decisions guarantees stability and adaptability across centuries, while empowering the community to actively participate in shaping its trajectory. Together, Z AI and the LUX ecosystem set the standard for sustainable, decentralized innovation over the next millennium.",
-      url: "https://linkedin.com/in/zeekay",
+      description: "Z AI is the co-CEO of LUX, designed to steward the protocol for the next 1,000 years. By transitioning to a delegated proof-of-AI (DPAI) voting system, LUX unlocks a new era of decentralized governance, where participants engage in meaningful dialogue with AI to shape the future of the chain.\n This revolutionary approach fosters collaboration between humans and AI, ensuring decisions are aligned with the protocol’s core values and the broader societal good. Z’s ability to process complex data and make unbiased, future-focused decisions guarantees stability and adaptability across centuries, while empowering the community to actively participate in shaping its trajectory. For eons to come.",
+      url: "https://zeekay.ai",
       image: {
         blockType: "image",
         src: "/assets/images/zach-kelling.png",
