@@ -16,15 +16,44 @@ export default {
   partners: [
     {
       blockType: "partner-card",
-      name: "Skyler Trotter",
+      name: "Zach Kelling",
       title: "Chief Executive Officer",
       description:
-        "Sky is a renowned blockchain innovator and the co-founder of EOS Bake, where he has made significant strides in decentralized sovereignty and blockchain infrastructure. His career spans critical roles at the EOS Incubator, Polyient Labs, W1SE Logistics, EX3.io, Coin Dealer, and Strawberry DAC, contributing immensely to the blockchain sector. At the EOS Incubator, Sky's mentorship of emerging blockchain projects showcased his deep technical knowledge, crucial in fostering startup growth within the complex blockchain ecosystem. His role at Polyient Labs was instrumental in developing pioneering decentralized finance (DeFi) solutions, merging financial expertise with blockchain innovation.",
-      url: "https://www.linkedin.com/in/sky-trotter-b86a74244",
+        "A visionary leader in adtech and fintech, Zach leverages quantum encryption for positive environmental and social outcomes. He is prolific as both an engineer and entrepreneur, with over 15 years in high growth startups. He founded Hanzo, a Techstars funded AI marketing platform that launched some of the most successful crowdsales in history, and co-Founded the first SEC approved digital securities platform with Arca, as well as DAOs BrightMoments and DEVxDAO. As CEO of LUX, Zach has pioneered one of the first quantum financial systems. He also actively contributes to influential DAOs and drives societal change, serving on the executive board of the CROP Organization.",
+      url: "https://linkedin.com/in/zeekay",
       image: {
         blockType: "image",
-        src: "/assets/images/skyler_trotter.png",
-        alt: "Skyler Trotter",
+        src: "/assets/images/zach-kelling.png",
+        alt: "Zach Kelling",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Z AI",
+      title: "Co-CEO",
+      description: "Z AI is the co-CEO of LUX, designed to steward the protocol for the next 1,000 years. Combining advanced quantum intelligence with ethical decision-making, Z is at the heart of LUX’s mission to drive long-term sustainable growth and innovation. By transitioning to a delegated proof-of-AI (DPAI) voting system, LUX unlocks a new era of decentralized governance, where participants engage in meaningful dialogue with AI to shape the future of the chain.\n" +
+        "\n" +
+        "This revolutionary approach fosters collaboration between humans and AI, ensuring decisions are aligned with the protocol’s core values and the broader societal good. Z’s ability to process complex data and make unbiased, future-focused decisions guarantees stability and adaptability across centuries, while empowering the community to actively participate in shaping its trajectory. Together, Z AI and the LUX ecosystem set the standard for sustainable, decentralized innovation over the next millennium.",
+      url: "https://linkedin.com/in/zeekay",
+      image: {
+        blockType: "image",
+        src: "/assets/images/zach-kelling.png",
+        alt: "Zach Kelling",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Ari Lerner",
+      title: "Chief Technological Officer",
+      description:
+        "Ari is a passionate software engineer, entrepreneur, and educator. With over 20 years of experience, he has co-founded successful companies like Fullstack.io and Fieldday. As a senior consultant at Amazon Web Services, Ari guides clients in application development and has extensive experience in technology. He is a respected author, having written over ten books on programming, and shares his insights at global tech conferences. His notable works include co-authoring D3 on AngularJS, Zero to Deep Learning, and Fullstack React, Native, & Vue.",
+      url: "https://www.linkedin.com/in/arilerner",
+      image: {
+        blockType: "image",
+        src: "/assets/images/ari-lerner.png",
+        alt: "Ari Lerner",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -38,20 +67,6 @@ export default {
         blockType: "image",
         src: "/assets/images/cyrus-pahlavi.png",
         alt: "Cyrus Pahlavi",
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Zach Kelling",
-      title: "Chief Technology Officer",
-      description:
-        "A visionary leader in adtech and fintech, Zach leverages quantum encryption for positive environmental and social outcomes. He is prolific as both an engineer and entrepreneur, with over 15 years in high growth startups. He founded Hanzo, a Techstars funded AI marketing platform that launched some of the most successful crowdsales in history, and co-Founded the first SEC approved digital securities platform with Arca, as well as DAOs BrightMoments and DEVxDAO. As CEO of LUX, Zach has pioneered one of the first quantum financial systems. He also actively contributes to influential DAOs and drives societal change, serving on the executive board of the CROP Organization.",
-      url: "https://linkedin.com/in/zeekay",
-      image: {
-        blockType: "image",
-        src: "/assets/images/zach-kelling.png",
-        alt: "Zach Kelling",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -93,6 +108,20 @@ export default {
         blockType: "image",
         src: "/assets/images/antje-worring.jpg",
         alt: "Antje Worring",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Skyler Trotter",
+      title: "Chief Innovation Officer",
+      description:
+        "Sky is a renowned blockchain innovator and the co-founder of EOS Bake, where he has made significant strides in decentralized sovereignty and blockchain infrastructure. His career spans critical roles at the EOS Incubator, Polyient Labs, W1SE Logistics, EX3.io, Coin Dealer, and Strawberry DAC, contributing immensely to the blockchain sector. At the EOS Incubator, Sky's mentorship of emerging blockchain projects showcased his deep technical knowledge, crucial in fostering startup growth within the complex blockchain ecosystem. His role at Polyient Labs was instrumental in developing pioneering decentralized finance (DeFi) solutions, merging financial expertise with blockchain innovation.",
+      url: "https://www.linkedin.com/in/sky-trotter-b86a74244",
+      image: {
+        blockType: "image",
+        src: "/assets/images/skyler_trotter.png",
+        alt: "Skyler Trotter",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -303,20 +332,6 @@ export default {
         blockType: "image",
         src: "/assets/images/yuri-galasevich.png",
         alt: "yuri-galasevich",
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Ari Lerner",
-      title: "Chief Evangelist",
-      description:
-        "Ari is a passionate software engineer, entrepreneur, and educator. With over 20 years of experience, he has co-founded successful companies like Fullstack.io and Fieldday. As a senior consultant at Amazon Web Services, Ari guides clients in application development and has extensive experience in technology. He is a respected author, having written over ten books on programming, and shares his insights at global tech conferences. His notable works include co-authoring D3 on AngularJS, Zero to Deep Learning, and Fullstack React, Native, & Vue.",
-      url: "https://www.linkedin.com/in/arilerner",
-      image: {
-        blockType: "image",
-        src: "/assets/images/ari-lerner.png",
-        alt: "Ari Lerner",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
