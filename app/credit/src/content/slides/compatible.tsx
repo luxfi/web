@@ -10,7 +10,7 @@ import { BlocksComponent } from '@hanzo/ui/blocks'
 import { Button, LinkElement } from '@hanzo/ui/primitives'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
-const byline = 'Every vard lets you earn points that pay off your balance, AND has access to exclusive Lux Card Benefits.'
+const byline = 'Every card lets you earn points that pay off your balance, AND has access to exclusive Lux Card Benefits.'
 
 // :aa TODO clean this up!
 const viewAllCards = {
@@ -33,13 +33,13 @@ export default {
             blockType: 'video',
             videoProps: DEF_VIDEO_PROPS,
             sources: ['/assets/content/iradescent-chrome-video.mp4'],
-            dim: { 
+            dim: {
                 md: {w: 600, h: 300},
              },
              sizing: {vh: 100, mobile: {vw: 100}}
         } satisfies VideoBlock as Block,
         {blockType: 'element', element: (
-        <LinkElement 
+        <LinkElement
             def={{ variant: 'link', href: '/cards/founder?sku=LXM-CR-F-CC' }}
             className='w-full text-xs !text-muted-2 hover:!text-foreground italic !text-center !no-underline'
         >
