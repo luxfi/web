@@ -13,19 +13,19 @@ export default {
     bylineLevel: 0
   } as C.HeadingBlock,
   partners: [
-    {
-      blockType: "partner-card",
-      name: "Andrew Gertler",
-      title: "Energy, Geology, Mining",
-      description: "Co-founder of Viscount Mining Corp, Andrew has a solid track record in the mining and wealth management industries. Since 2011, he has driven Viscount's growth, focusing on silver and gold deposits in Nevada. Simultaneously, he has managed high-net-worth portfolios at Lester Asset Management since 2006. He holds board positions in Solid Impact Investment Corp and Impact Acquisition Corp, contributing to asset identification and business acquisition. His diverse career includes roles at Esplanade Loft Project, Hunt Mining, Zi Corporation, and Hudson Advisors.",
-      url: "https://www.linkedin.com/in/andrew-gertler-4a33293",
-      image: {
-        blockType: 'image',
-        src: '/assets/images/andrew-gertler.png',
-        alt: 'Andrew Gertler',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
+    // {
+    //   blockType: "partner-card",
+    //   name: "Andrew Gertler",
+    //   title: "Energy, Geology, Mining",
+    //   description: "Co-founder of Viscount Mining Corp, Andrew has a solid track record in the mining and wealth management industries. Since 2011, he has driven Viscount's growth, focusing on silver and gold deposits in Nevada. Simultaneously, he has managed high-net-worth portfolios at Lester Asset Management since 2006. He holds board positions in Solid Impact Investment Corp and Impact Acquisition Corp, contributing to asset identification and business acquisition. His diverse career includes roles at Esplanade Loft Project, Hunt Mining, Zi Corporation, and Hudson Advisors.",
+    //   url: "https://www.linkedin.com/in/andrew-gertler-4a33293",
+    //   image: {
+    //     blockType: 'image',
+    //     src: '/assets/images/andrew-gertler.png',
+    //     alt: 'Andrew Gertler',
+    //     dim: { w: 100, h: 100 },
+    //   } as C.ImageBlock,
+    // } as PartnerCardBlock,
     {
       blockType: "partner-card",
       name: "Lisa Gansky",
@@ -145,7 +145,6 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
-    /*
     {
       blockType: "partner-card",
       name: "Grant Cairney",
@@ -160,7 +159,6 @@ export default {
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
-     */
     {
       blockType: "partner-card",
       name: "Christian Cowley",
