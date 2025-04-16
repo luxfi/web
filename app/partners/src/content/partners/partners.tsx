@@ -111,20 +111,6 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
-      name: "Skyler Trotter",
-      title: "Chief Innovation Officer",
-      description:
-        "Sky is a renowned blockchain innovator and the co-founder of EOS Bake, where he has made significant strides in decentralized sovereignty and blockchain infrastructure. His career spans critical roles at the EOS Incubator, Polyient Labs, W1SE Logistics, EX3.io, Coin Dealer, and Strawberry DAC, contributing immensely to the blockchain sector. At the EOS Incubator, Sky's mentorship of emerging blockchain projects showcased his deep technical knowledge, crucial in fostering startup growth within the complex blockchain ecosystem. His role at Polyient Labs was instrumental in developing pioneering decentralized finance (DeFi) solutions, merging financial expertise with blockchain innovation.",
-      url: "https://www.linkedin.com/in/sky-trotter-b86a74244",
-      image: {
-        blockType: "image",
-        src: "/assets/images/skyler_trotter.png",
-        alt: "Skyler Trotter",
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
       name: "Jack Kochen",
       title: "Chief Marketing Officer",
       description:
