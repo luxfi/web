@@ -12,12 +12,14 @@ import _metadata from '../metadata'
 export const metadata = { ..._metadata }
 export const viewport = { ...ViewportCode}
 
-const RootLayout: React.FC<PropsWithChildren> = async ({
+const RootLayout = async ({
   children
-}) =>  (
-  <RootLayoutCore siteDef={siteDef} showHeader>
-    {children}
-  </RootLayoutCore>
-)
+}: PropsWithChildren) => {
+  return (
+    <RootLayoutCore siteDef={siteDef} showHeader>
+      {children}
+    </RootLayoutCore>
+  )
+}
 
 export default RootLayout
