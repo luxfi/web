@@ -12,14 +12,16 @@ import _metadata from '../metadata'
 export const metadata = { ..._metadata }
 export const viewport = { ...ViewportCode}
 
-const RootLayout = async ({
+export default async function RootLayout({
   children
-}: PropsWithChildren) => {
+}: PropsWithChildren) {
   return (
-    <RootLayoutCore siteDef={siteDef} showHeader>
-      {children}
-    </RootLayoutCore>
+    <html lang="en">
+      <body>
+        <RootLayoutCore siteDef={siteDef} showHeader>
+          {children}
+        </RootLayoutCore>
+      </body>
+    </html>
   )
 }
-
-export default RootLayout
