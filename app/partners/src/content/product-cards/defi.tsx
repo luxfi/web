@@ -29,7 +29,7 @@ export default {
         {
           title: "Lux Network",
           href: "https://lux.network",
-          external: false,
+          
           newTab: false,
         }
       ],
@@ -40,7 +40,7 @@ export default {
         {
           title: "Lux Bridge",
           href: "https://bridge.lux.network",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -52,7 +52,7 @@ export default {
         {
           title: "Lux Credit Card",
           href: "https://lux.credit",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -64,7 +64,7 @@ export default {
         {
           title: "Lux Exchange",
           href: "https://lux.exchange",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -76,7 +76,7 @@ export default {
         {
           title: "Lux Market",
           href: "https://lux.market",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -88,7 +88,7 @@ export default {
         {
           title: "Lux Safe",
           href: "https://safe.lux.finance/welcome",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }

@@ -29,7 +29,7 @@ export default {
         {
           title: "Licensed, regulated Money Transmitter",
           href: "https://cdaxforex.com",
-          external: false,
+          
           newTab: false,
         }
       ],
@@ -40,7 +40,7 @@ export default {
         {
           title: "Low cost FX and fiat on/off ramp",
           href: "https://app.cdaxforex.com",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -52,7 +52,7 @@ export default {
         {
           title: "Credit Cards and Treasury Services",
           href: "https://lux.credit",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -64,7 +64,7 @@ export default {
         {
           title: "Ultra efficient, tax-advantaged FX + trading",
           href: "https://app.cdaxforex.com",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -76,7 +76,7 @@ export default {
         {
           title: "Asset digitization, tokenization, issuance and redemption",
           href: "https://app.cdaxforex.com",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
@@ -88,7 +88,7 @@ export default {
         {
           title: "Qunatum safe digital asset custody",
           href: "https://safe.lux.finance",
-          external: false,
+          
           newTab: false,
           variant: 'link',
         }
