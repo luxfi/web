@@ -15,13 +15,5 @@ export const viewport = { ...ViewportCode}
 export default async function RootLayout({
   children
 }: PropsWithChildren) {
-  return (
-    <html lang="en">
-      <body>
-        <RootLayoutCore siteDef={siteDef} showHeader>
-          {children}
-        </RootLayoutCore>
-      </body>
-    </html>
-  )
+  return await RootLayoutCore({ siteDef, showHeader: true, children });
 }
