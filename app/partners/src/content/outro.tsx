@@ -13,7 +13,6 @@ export default {
       {
         title: "Partner with Lux",
         href: "https://apply.lux.partners",
-        external: true,
         newTab: false,
         variant: 'primary'
       }
