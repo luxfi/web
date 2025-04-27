@@ -21,14 +21,12 @@ export default {
       {
         title: "Learn more",
         href: "https://docs.lux.network",
-        external: true,
         newTab: false,
         variant: 'outline',
       },
       {
         title: "Lets talk",
         href: "https://apply.lux.partners",
-        external: true,
         newTab: false,
         variant: 'primary'
       }
