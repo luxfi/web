@@ -1,4 +1,4 @@
-import { initializeApp, getApps } from 'firebase/app'
+import { initializeApp, getApps, type FirebaseApp } from 'firebase/app'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -10,5 +10,20 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
-// Initialize Firebase instance if there isn't one already
-export default getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]
+// Check if Firebase config is present
+const hasFirebaseConfig = firebaseConfig.apiKey && firebaseConfig.projectId;
+
+// Initialize Firebase instance only if config is present
+let firebaseApp: FirebaseApp | null = null;
+
+if (hasFirebaseConfig) {
+  try {
+    firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]
+  } catch (error) {
+    console.warn('Failed to initialize Firebase app:', error);
+  }
+} else {
+  console.log('Firebase configuration not found, skipping initialization');
+}
+
+export default firebaseApp

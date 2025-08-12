@@ -3,7 +3,7 @@ import type { Viewport } from 'next'
 
 import { Toaster } from '@hanzo/ui/primitives'
 import { AuthServiceProvider } from '@hanzo/auth/service'
-import { getUserServerSide } from '@hanzo/auth/server'
+import { getUserServerSideSafe } from '../server/auth-wrapper'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 import { CommerceProvider } from '@hanzo/commerce'
 
@@ -58,7 +58,7 @@ async function RootLayout({
   chatbot?: boolean
 } & PropsWithChildren) {
 
-  const currentUser = await getUserServerSide()
+  const currentUser = await getUserServerSideSafe()
 
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}

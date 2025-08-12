@@ -14,7 +14,11 @@ import type { ContactInfo } from '../types'
 
 let dbInstance: Firestore | undefined = undefined
 
-const getDBInstance = (name: string): Firestore => {
+const getDBInstance = (name: string): Firestore | null => {
+  if (!firebaseApp) {
+    console.warn('Firebase not initialized, cannot get database instance');
+    return null;
+  }
   if (!dbInstance) {
     dbInstance = getFirestore(firebaseApp, name) 
   }
@@ -27,8 +31,19 @@ const storeContact = async ( formData: ContactInfo, enclosure: any ) => {
   const dbName = enclosure?.dbId
   const tableName = enclosure?.listId
 
+  // Return early if Firebase is not configured
+  if (!firebaseApp) {
+    console.warn('Firebase not configured, skipping contact storage');
+    return { success: true, error: null, id: email };
+  }
+
   let error: any | null = null
-  const tableRef = collection(getDBInstance(dbName), tableName)
+  const db = getDBInstance(dbName);
+  if (!db) {
+    return { success: false, error: 'Database not available' };
+  }
+  
+  const tableRef = collection(db, tableName)
 
   try {
     await setDoc(doc(tableRef, email), {
