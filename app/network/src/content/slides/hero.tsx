@@ -44,8 +44,8 @@ const video = {
 
 const createScreenful = (props: HeroProps): ScreenfulBlock => ({
   blockType: 'screenful',
-  columnSpecifiers: ['left vert-center text-align-left narrow-gutters no-gutters', 'bottom vert-center'],
-  specifiers: "narrow-gutters no-gutters",
+  columnSpecifiers: ['left vert-center text-align-left', 'right vert-center'],
+  specifiers: "vert-center",
   mobileOrder: [1, 0],
   contentColumns: [
     [
@@ -93,20 +93,4 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
   ],
 })
 
-export default {
-  blockType: 'screenful',
-  columnSpecifiers: ['center vert-center narrow-gutters no-gutters'],
-  specifiers: "narrow-gutters no-gutters",
-  contentColumns: [
-    [
-      {
-        blockType: 'element',
-        element: (
-          <div className='p-3 z-2 flex-col md:flex-row w-full'>
-            <ScreenfulBlockComponent block={createScreenful({})} />
-          </div>
-        )
-      } as ElementBlock,
-    ]
-  ]
-} as ScreenfulBlock
+export default createScreenful({})

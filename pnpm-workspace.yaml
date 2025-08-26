@@ -9,14 +9,14 @@ catalog:
   '@hanzo/commerce': 7.3.5
   '@luxfi/ui': 5.4.2
   '@luxfi/data': 1.1.1
-  '@types/node': 20.14.15
-  '@types/react': 18.3.12
-  '@types/react-dom': 18.3.1
-  lucide-react: 0.456.0
-  react-hook-form: 7.51.4
-  next: 14.2.16
+  '@types/node': 22.10.6
+  '@types/react': 18.3.14
+  '@types/react-dom': 18.3.2
+  lucide-react: 0.470.0
+  react-hook-form: 7.54.2
+  next: 15.1.6
   react: 18.3.1
   react-dom: 18.3.1
-  supports-color: 8.1.1
-  tailwindcss: 3.4.14
-  typescript: 5.6.3
+  supports-color: 9.4.0
+  tailwindcss: 3.4.17
+  typescript: 5.7.3
