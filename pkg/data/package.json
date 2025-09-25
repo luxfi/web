@@ -1,0 +1,46 @@
+{
+  "name": "@luxfi/data",
+  "version": "1.1.1",
+  "description": "Shared data for all Products, Families, that are available via any eCommrece functions on Lux sites.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "scope": "@luxfi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxfi/web.git",
+    "directory": "packages/data"
+  },
+  "keywords": [
+    "hanzo",
+    "luxdefi"
+  ],
+  "scripts": {
+    "lat": "npm show @luxfi/data version",
+    "pub": "npm publish",
+    "build": "tsc",
+    "tc": "tsc",
+    "clean": "rm -rf node_modules"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./commerce": "./commerce/index.ts",
+    "./commerce/types": "./commerce/types/index.ts"
+  },
+  "peerDependencies": {
+    "@hanzo/commerce": "catalog:",
+    "@hanzo/ui": "catalog:",
+    "lucide-react": "catalog:"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@types/mdx": "^2.0.9",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@luxfi/invest",
+  "homepage": "https://invest.lux.fund",
+  "version": "0.1.4",
+  "author": "Lux Partners Limited <dev@lux.partners> (https://lux.partners)",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "description": "Lux Partners Meeting tool",
+  "scripts": {
+    "start": "http-server ./public",
+    "build": "echo"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@types/node": "catalog:",
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,10 @@
+Migrations.sol
+
+npx hardhat run scripts/deployMigrations.js --network localhost
+npx hardhat run scripts/deployMigrations.js --network sepolia
+
+sepolia: 0x21BEb5dB837b197E2A9949f40Bc04799A769A4db
+
+AuctionMultipleGuaranteed.sol
+npx hardhat run scripts/deployAuctionMultipleGuaranteed.js --network localhost
+npx hardhat run scripts/deployAuctionMultipleGuaranteed.js --network sepolia

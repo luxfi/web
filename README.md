@@ -18,6 +18,20 @@ A modern, quantum-ready web platform for participating in Lux network governance
 - **MCP Integration**: Use AI agents to analyze proposals
 - **Predictive Analytics**: ML models for outcome prediction
 
+## Lux Ecosystem Integration
+
+### Core Platforms
+- [Lux Network](https://lux.network): Foundation of the quantum blockchain ecosystem
+- [Lux Bridge](https://bridge.lux.network): Cross-chain asset transfers with zkProof privacy
+- [Lux Explorer](https://explore.lux.network): Transaction and block explorer
+- [Lux Wallet](https://wallet.lux.network): Wallet and validator management
+- [Lux Credit](https://lux.credit): Zero-interest, auto-repaid credit card
+- [Lux Exchange](https://lux.exchange): Cryptocurrency and NFT trading
+- [Lux Market](https://lux.market): Real-world asset tokenization (gold, silver)
+- [Lux Safe](https://safe.lux.finance): Quantum-safe multisig wallet
+- [Lux AI](https://lux.chat): AI assistant for ecosystem navigation
+- [Lux Shop](https://lux.shop): Purchase blockchain essentials
+
 ## Tech Stack
 
 ### Frontend
@@ -26,6 +40,8 @@ A modern, quantum-ready web platform for participating in Lux network governance
 - **State**: Zustand + TanStack Query
 - **Web3**: Wagmi + Viem + RainbowKit
 - **Charts**: Recharts for analytics
+- **Icons**: Lucide icons
+- **Dark Mode**: next-themes
 
 ### Backend
 - **API**: tRPC with Next.js API routes
@@ -101,7 +117,7 @@ export function useLuxDAO() {
 // components/VoteCard.tsx
 export function VoteCard({ proposal }: { proposal: Proposal }) {
   const { vote, isLoading } = useVote(proposal.id)
-  
+
   return (
     <Card>
       <CardHeader>
@@ -110,7 +126,7 @@ export function VoteCard({ proposal }: { proposal: Proposal }) {
       </CardHeader>
       <CardContent>
         <p>{proposal.description}</p>
-        <VotingProgress 
+        <VotingProgress
           for={proposal.votesFor}
           against={proposal.votesAgainst}
           quorum={proposal.quorum}
@@ -138,7 +154,7 @@ import { LuxAI } from '@luxfi/ai-sdk'
 
 export async function analyzeProposal(proposal: Proposal) {
   const ai = new LuxAI()
-  
+
   const analysis = await ai.analyze({
     type: 'proposal_impact',
     data: {
@@ -147,7 +163,7 @@ export async function analyzeProposal(proposal: Proposal) {
       actions: proposal.actions
     }
   })
-  
+
   return {
     summary: analysis.summary,
     risks: analysis.risks,
@@ -164,18 +180,30 @@ export const governanceTools = {
   analyzeVotingPower: async (address: string) => {
     // Analyze voting power distribution
   },
-  
+
   predictOutcome: async (proposalId: number) => {
     // ML prediction of voting outcome
   },
-  
+
   suggestDelegates: async (preferences: Preferences) => {
     // AI-powered delegate recommendations
   }
 }
 ```
 
-## Deployment
+## Development
+
+### Installation
+```bash
+# Install pnpm if not already installed
+npm install -g pnpm
+
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm dev
+```
 
 ### Environment Variables
 ```env
@@ -220,11 +248,11 @@ CMD ["npm", "run", "start"]
 ### Deployment Commands
 ```bash
 # Development
-npm run dev
+pnpm dev
 
 # Production build
-npm run build
-npm run start
+pnpm build
+pnpm start
 
 # Docker
 docker build -t lux-web .
@@ -241,11 +269,11 @@ vercel --prod
 describe('Voting', () => {
   it('should cast vote successfully', async () => {
     const { vote } = renderHook(() => useVote())
-    
+
     await act(async () => {
       await vote(proposalId, true)
     })
-    
+
     expect(mockContract.vote).toHaveBeenCalledWith(
       proposalId,
       true
@@ -262,6 +290,23 @@ describe('Voting', () => {
 - **CORS**: Strict CORS policies
 - **CSP**: Content Security Policy headers
 - **Audit Trail**: All votes logged and auditable
+- **Post-Quantum Encryption**: Quantum-safe cryptography for future security
+
+## Lux Network Features
+
+- **Decentralized**: High Nakamoto coefficient ensuring resilience
+- **Consensus**: Probabilistic leaderless consensus mechanism
+- **Post-Quantum Encryption**: Protection against quantum threats
+- **zkPowered Bridge**: Privacy-preserving cross-chain transfers
+- **Quantum-Safe**: Built for the quantum computing era
+
+## Architecture
+
+Built on:
+- Next.js 14
+- Radix UI Primitives
+- Tailwind CSS
+- Hanzo React SDK (@hanzo/ui, @hanzo/auth, @hanzo/commerce)
 
 ## Resources
 
@@ -269,6 +314,7 @@ describe('Voting', () => {
 - [Documentation](https://docs.lux.network/web)
 - [API Reference](https://api.lux.network/docs)
 - [GitHub](https://github.com/luxfi/web)
+- [Discord Community](https://discord.gg/xXMA2DYqNf)
 
 ## License
 

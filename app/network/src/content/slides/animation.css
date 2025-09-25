@@ -1,0 +1,15 @@
+ .animate-validator {
+  animation: animateOpacityAndScale 2s infinite alternate;
+}
+
+@keyframes animateOpacityAndScale {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0); /* Initial position */
+  }
+  100% {
+    opacity: 0.89;
+    transform: scale(0.69);
+    transform: scale(0.69) translate(11px, 11px); /* Move 10px along x and y axes */
+  }
+}

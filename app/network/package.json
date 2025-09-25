@@ -1,0 +1,52 @@
+{
+  "name": "@luxfi/network",
+  "version": "1.0.13",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "prod": "next start",
+    "cn": "rm -rf ./.next",
+    "clean": "rm -rf ./.next && rm -rf node_modules",
+    "tc": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug"
+  },
+  "dependencies": {
+    "@luxfi/ui": "catalog:",
+    "@luxfi/data": "catalog:",
+    "@hanzo/auth": "catalog:",
+    "@hanzo/commerce": "catalog:",
+    "@hanzo/ui": "catalog:",
+    "@next/mdx": "15.1.6",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.10.8",
+    "lucide-react": "catalog:",
+    "mobx": "^6.13.5",
+    "mobx-react-lite": "^4.0.8",
+    "next": "catalog:",
+    "next-themes": "^0.4.4",
+    "postcss-selector-parser": "^7.0.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "supports-color": "catalog:",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@playwright/test": "^1.49.1",
+    "@svgr/webpack": "^8.1.0",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "autoprefixer": "^10.4.20",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}
