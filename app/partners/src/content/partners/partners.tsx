@@ -36,8 +36,8 @@ export default {
       url: "https://zeekay.ai",
       image: {
         blockType: "image",
-        src: "/assets/images/zach-kelling.png",
-        alt: "Zach Kelling",
+        src: "/assets/images/z-ai.png",
+        alt: "Z-AI",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -125,20 +125,6 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
-      name: "Christopher Dinelli",
-      title: "Chief Information Officer",
-      description:
-        "Former US Navy Lieutenant and United States Naval Academy alumnus with an Aerospace Engineering background, expansion into blockchain mining and AI cloud services and infrastructure, forging pivotal partnerships within the generative AI and cloud domains. As the founder of All Mine Lah, Inc., Chris innovatively melded green energy with digital currency mining, advancing sustainable supercomputing solutions. Renowned for his data analysis acumen and Matlab expertise, Chris's leadership style, rooted in military principles, champions innovation, ethical practices, and security, solidifying Lux's stature in blockchain and finance, reflecting his overarching commitment to responsible technological growth.",
-      url: "https://www.linkedin.com/in/christopher-dinelli-0152578b",
-      image: {
-        blockType: "image",
-        src: "/assets/images/christopher-dinelli.png",
-        alt: "Christopher Dinelli",
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
       name: "Ryan Stobie",
       title: "Chief Business Officer",
       description:
@@ -148,6 +134,20 @@ export default {
         blockType: "image",
         src: "/assets/images/ryan-stobie.png",
         alt: "Ryan Stobie",
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
+      name: "Christopher Dinelli",
+      title: "Chief Information Officer",
+      description:
+        "Former US Navy Lieutenant and United States Naval Academy alumnus with an Aerospace Engineering background, expansion into blockchain mining and AI cloud services and infrastructure, forging pivotal partnerships within the generative AI and cloud domains. As the founder of All Mine Lah, Inc., Chris innovatively melded green energy with digital currency mining, advancing sustainable supercomputing solutions. Renowned for his data analysis acumen and Matlab expertise, Chris's leadership style, rooted in military principles, champions innovation, ethical practices, and security, solidifying Lux's stature in blockchain and finance, reflecting his overarching commitment to responsible technological growth.",
+      url: "https://www.linkedin.com/in/christopher-dinelli-0152578b",
+      image: {
+        blockType: "image",
+        src: "/assets/images/christopher-dinelli.png",
+        alt: "Christopher Dinelli",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
@@ -322,27 +322,13 @@ export default {
     {
       blockType: "partner-card",
       name: "John Hanks",
-      title: "Engineering",
+      title: "Lead Blockchain Engineer",
       description: "John Hanks is a seasoned blockchain engineer and entrepreneur with a rich history in the blockchain industry. With a deep passion for decentralized technologies, John has played a pivotal role in numerous successful blockchain projects, contributing his expertise in engineering and innovation. His work spans various sectors, highlighting his versatility and commitment to advancing blockchain solutions. John’s visionary approach and hands-on experience have earned him a reputation as a leader and innovator in the blockchain community. He continues to drive forward-thinking projects that push the boundaries of what blockchain technology can achieve, all while maintaining a focus on engineering excellence and entrepreneurial spirit.",
       url: "https://www.linkedin.com/in/johnhanksengineer/",
       image: {
         blockType: 'image',
         src: '/assets/images/john-hanks.png',
         alt: 'John Hanks',
-        dim: { w: 100, h: 100 },
-      } as C.ImageBlock,
-    } as PartnerCardBlock,
-    {
-      blockType: "partner-card",
-      name: "Ashley Christie",
-      title: "Chief of Staff",
-      description:
-        "Ashley Kathleen Christie is the Chief of Staff at Lux Partners Limited, where she leverages her diverse experience in military operations and private wealth management to drive digital finance and lifestyle ventures. At Lux, she has been pivotal in integrating advanced technologies like renewable Bitcoin mining and quantum-secure systems into global strategies. Notably, Ashley led the launch of the Lux Credit Card, enhancing financial utility with wealth-building features. Her previous role at Carbon Nation saw her pioneering the Carbon-Based Agro Metaverse Game, merging gaming with environmental sustainability. Ashley's expertise in operations and her strategic vision continue to shape Lux’s trajectory in the blockchain space.",
-      url: "https://www.linkedin.com/in/ashley-kathleen-christie",
-      image: {
-        blockType: "image",
-        src: "/assets/images/ashley-christie.png",
-        alt: "Ashley Christie",
         dim: { w: 100, h: 100 },
       } as C.ImageBlock,
     } as PartnerCardBlock,
