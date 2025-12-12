@@ -31,7 +31,7 @@ export default {
             blockType: 'element',
             element:
                 <>
-                    <h1 className='font-heading self-start text-4xl sm:text-5xl mb-2'>LUX CREDIT</h1>
+                    <h1 className='font-heading self-start text-4xl sm:text-5xl mb-2 text-left'>LUX<br />CREDIT</h1>
                 </>
         } as ElementBlock,
         {
@@ -54,8 +54,8 @@ export default {
         {
             blockType: 'element',
             element:
-                <div className='flex flex-col h-full items-end justify-center text-left'>
-                    <h1 className='font-heading self-start text-4xl sm:text-5xl mb-2 z-2'>THE SMART WAY TO SPEND</h1>
+                <div className='flex flex-col h-full items-start justify-center text-left'>
+                    <h1 className='font-heading self-start text-4xl sm:text-5xl mb-2 z-2 text-left'>THE SMART<br />WAY TO SPEND</h1>
                     <img src="/assets/content/smart-spend.png" alt="Smart Spend" className='align-right mt-[-80px] mr-[-80px] md:mt-[-50px] md:mr-0 z-1' />
                 </div>
         } as ElementBlock,

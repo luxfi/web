@@ -8,16 +8,30 @@ export default {
   specifiers: 'vert-center no-gutters full-screen-width',
   columnSpecifiers: ['vert-center center mobile-vert-center'],
   contentColumns: [[
-    {blockType: 'enh-heading',
-      specifiers: 'center',
-      heading: {
-        text: 'MAKE LUX YOUR DEFAULT CARD',
-        level: 3,
-      },
-    } satisfies EnhHeadingBlock as Block,
+    {
+      blockType: 'space',
+      sizes: {xs: 1, sm: 2, md: 3}
+    } satisfies SpaceBlock as Block,
+    {blockType: 'element',
+      element: 
+        <div className='flex flex-col items-center justify-center w-full min-h-[150px]'>
+          <div className='text-center'>
+            <span className='font-heading text-2xl sm:text-3xl mb-1 block'>MAKE LUX</span>
+            <span className='font-heading text-2xl sm:text-3xl block'>YOUR DEFAULT CARD</span>
+          </div>
+        </div>
+    } satisfies ElementBlock as Block,
+    {
+      blockType: 'space',
+      sizes: {xs: 1, sm: 2, md: 3}
+    } satisfies SpaceBlock as Block,
     {blockType: 'element',
       element: <h5 className='mx-auto max-w-[45rem] !text-center px-4 text-blue'>{byline}</h5>,
     } satisfies ElementBlock as Block,
+    {
+      blockType: 'space',
+      sizes: {xs: 0.5, sm: 1, md: 2}
+    } satisfies SpaceBlock as Block,
     {
       blockType: 'cta',
       elements: [
