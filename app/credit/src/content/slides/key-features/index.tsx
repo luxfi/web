@@ -8,7 +8,7 @@ import type {
 
 import SVG_companion_cards from './svg/companion-cards-115x127.svg'
 import SVG_bridge from './svg/bridge-131x122.svg'
-import SVG_globally from './svg/send-recieve-globally-121x127.svg'
+import SVG_globally from './svg/send-receive-globally-121x127.svg'
 
 import SVG_mobile_wallet from './svg/mobile-wallet-129x120.svg'
 import SVG_network from './svg/network-123x105.svg'
@@ -69,7 +69,7 @@ export default {
           icon: <SVG_quantum_security width={121 * .25} height={130 * .25} className={iconStyle}/>
         },
         {
-          text: 'Elimenating the need for crypto-to-fiat swaps and reduced tax liabilities',
+          text: 'Eliminating the need for crypto-to-fiat swaps and reduced tax liabilities',
           icon: <SVG_no_fiat width={137 * .22} height={137 * .22} className={iconStyle}/>
         },
         {
@@ -78,11 +78,11 @@ export default {
         },
 
         {
-          text: 'Premium wellness serves, luxury travel and experiences',
+          text: 'Premium wellness services, luxury travel and experiences',
           icon: <SVG_wellness width={128 * .30} height={160 * .30} className={iconStyle}/>
         },
         {
-          text: 'Android Wallet, Android Wallet, and Google Wallet available',
+          text: 'Apple Wallet, Android Wallet, and Google Wallet available',
           icon: <SVG_wallets_available width={81 * .30} height={141 * .30} className={iconStyle}/>
         },
         {

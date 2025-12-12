@@ -12,8 +12,8 @@ type Props = {
 
 const Page = ({ searchParams }: Props) => {
   
-  const predefinedCards = searchParams?.cards
-  const mobile = searchParams?.agent === 'phone'
+  const predefinedCards = React.use(searchParams)?.cards
+  const mobile = React.use(searchParams)?.agent === 'phone'
 
   return (
     <Main>

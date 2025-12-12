@@ -1,3 +1,5 @@
+'use client'
+
 import React  from 'react'
 
 import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
@@ -14,7 +16,7 @@ type Props = {
 
 const Page = ({ searchParams }: Props ) => {
     // see src/middleware.ts
-  const agent = searchParams?.agent as string
+  const agent = React.use(searchParams)?.agent as string
   const tiles = agent === 'desktop' ? desktopTiles : mobileTiles
 
   return (<>

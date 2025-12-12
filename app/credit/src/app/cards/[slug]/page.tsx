@@ -28,7 +28,7 @@ const Page = ({ params, searchParams }: Props) => {
 
   useEffect(() => {
     const card = cards.find(card => card.category === params.slug)
-    const material = card?.materials.find(material => material.sku === searchParams?.sku)
+    const material = card?.materials.find(material => material.sku === React.use(searchParams)?.sku)
 
     setCard(card)
     setSelectedMaterial(material ?? card?.materials[0])

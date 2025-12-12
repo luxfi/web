@@ -10,6 +10,12 @@ import { Toaster } from '@hanzo/ui/primitives'
 import siteDef from '@/site-def'
 import _metadata from '@/metadata'
 
+// Import CSS styles
+import '@luxfi/ui/style/lux-fonts.css'
+import '@luxfi/ui/style/lux-global.css'
+import '@luxfi/ui/style/cart-animation.css'
+import '@luxfi/ui/style/checkout-animation.css'
+
 export const metadata = { ..._metadata }
 
 export const viewport = {
@@ -27,8 +33,11 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
     <head>
       <base target='_blank' />
     </head>
-    <body suppressHydrationWarning className='bg-background text-foreground flex flex-col min-h-full' style={{
+    <body suppressHydrationWarning className='bg-background text-foreground flex flex-col min-h-full font-sans' style={{
       display: 'none', // Will be shown by client-side JS
+      fontFamily: 'var(--font-inter), sans-serif',
+      '--font-druk-wide': 'DrukWide, sans-serif',
+      '--font-inter': 'inter, sans-serif',
     }}>
       {children}
       <Toaster position='top-center' duration={3000}/>

@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { cookies } from 'next/headers'
 
-export default function NotFoundComponent() {
-  const token = cookies().get('auth-token')
+export default async function NotFoundComponent() {
+  const cookieStore = await cookies()
+  const token = cookieStore.get('auth-token')
   const email = token?.value
 
   return (
