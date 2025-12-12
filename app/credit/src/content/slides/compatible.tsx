@@ -10,17 +10,17 @@ import { BlocksComponent } from '@hanzo/ui/blocks'
 import { Button, LinkElement } from '@hanzo/ui/primitives'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
-const byline = 'Every card lets you earn points that pay off your balance, AND has access to exclusive Lux Card Benefits.'
+const byline = 'The only credit card that is not predatory, dedicated to your financial health, that can never be closed.'
 
 // :aa TODO clean this up!
 const viewAllCards = {
   blockType: 'element',
-  element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>View All Cards</Button></a>
+  element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>See if you Qualify</Button></a>
 } satisfies ElementBlock as Block
 
 const compare = {
     blockType: 'element',
-    element: <a className='!w-full max-w-56' href='/compare' style={{textDecoration: 'none'}}><Button variant='primary' className='!w-full max-w-56'>Compare Cards</Button></a>
+    element: <a className='!w-full max-w-56' href='/compare' style={{textDecoration: 'none'}}><Button variant='primary' className='!w-full max-w-56'>Apply for Opening Credit</Button></a>
 } satisfies ElementBlock as Block
 
 
