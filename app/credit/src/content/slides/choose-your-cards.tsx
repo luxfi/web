@@ -1,5 +1,4 @@
 import type {
-import type {
   Block,
   EnhHeadingBlock,
   ElementBlock,
