@@ -15,12 +15,12 @@ const byline = 'The only credit card that is not predatory, dedicated to your fi
 // :aa TODO clean this up!
 const viewAllCards = {
   blockType: 'element',
-  element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>See if you Qualify</Button></a>
+  element: <a className='!w-full max-w-56' href='/cards' style={{textDecoration: 'none'}}><Button variant='outline' className='!w-full max-w-56'>See If You Qualify</Button></a>
 } satisfies ElementBlock as Block
 
 const compare = {
     blockType: 'element',
-    element: <a className='!w-full max-w-56' href='/compare' style={{textDecoration: 'none'}}><Button variant='primary' className='!w-full max-w-56'>Apply for Opening Credit</Button></a>
+    element: <a className='!w-full max-w-56' href='/compare' style={{textDecoration: 'none'}}><Button variant='primary' className='!w-full max-w-56'>Apply For Opening Credit</Button></a>
 } satisfies ElementBlock as Block
 
 
