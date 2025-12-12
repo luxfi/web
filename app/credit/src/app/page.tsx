@@ -32,7 +32,6 @@ const Page = ({ searchParams }: Props ) => {
         contentClx='max-w-screen-2xl'
       />
     ))}
-    <CompatibleSection />
     <FooterSlide agent={agent} />
   </>)
 }

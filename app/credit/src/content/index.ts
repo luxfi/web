@@ -21,10 +21,10 @@ const mobileTiles = [
   smartSpend,
   autoRepayment,
   zeroInterest,
-  compatible,
   chooseYourCards,
   premierBenefits,
   cardDefaultMobile,
+  compatible,
   //reviews,
   //roadmap,
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
@@ -36,10 +36,10 @@ const desktopTiles = [
   smartSpend,
   autoRepayment,
   zeroInterest,
-  compatible,
   chooseYourCards,
   premierBenefits,
   cardDefault,
+  compatible,
   //reviews,
   //roadmap,
 ] satisfies ScreenfulBlock[] as ScreenfulBlock[]
