@@ -10,7 +10,7 @@ import { BlocksComponent } from '@hanzo/ui/blocks'
 import { Button, LinkElement } from '@hanzo/ui/primitives'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
-const byline = 'The only credit card that is not predatory, dedicated to your financial health, and that can never be closed.'
+const byline = 'The only credit card that is not predatorial, dedicated to your financial health, and that can never be closed.'
 
 // :aa TODO clean this up!
 const viewAllCards = {
