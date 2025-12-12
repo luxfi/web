@@ -6,6 +6,7 @@ import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
 
 import { desktopTiles, mobileTiles}  from '@/content'
 import FooterSlide from '@/components/footer-slide'
+import CompatibleSection from '@/components/compatible-section'
 import HeaderNoAuth from '@/components/header-no-auth'
 import siteDef from '@/site-def'
 import '@/blocks/registerComponents'
@@ -31,6 +32,7 @@ const Page = ({ searchParams }: Props ) => {
         contentClx='max-w-screen-2xl'
       />
     ))}
+    <CompatibleSection />
     <FooterSlide agent={agent} />
   </>)
 }
