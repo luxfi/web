@@ -49,7 +49,7 @@ export default {
     ], [
         {
             blockType: 'enh-heading',
-            heading: { text: 'COMPATIBLE WITH YOUR LIFESTYLE', level: 3, mb: 7 },
+            heading: { text: 'Available Free for Low Income', level: 3, mb: 7 },
             byline: { text: byline, level: 6 },
         } satisfies EnhHeadingBlock,
         { blockType: 'space', level: 0 } satisfies SpaceBlock as Block,
