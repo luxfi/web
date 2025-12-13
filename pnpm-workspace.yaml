@@ -4,10 +4,10 @@ packages:
 
 # "re 'supports-color': https://stackoverflow.com/questions/76591038/module-not-found-esm-packages-supports-color-need-to-be-imported-use-import",
 catalog:
-  '@hanzo/auth': 2.5.3
-  '@hanzo/ui': 5.3.2
-  '@hanzo/commerce': 7.3.5
-  '@luxfi/ui': 5.4.2
+  '@hanzo/auth': 2.5.5
+  '@hanzo/ui': 5.3.22
+  '@hanzo/commerce': 7.3.8
+  '@luxfi/ui': 5.5.2
   '@luxfi/data': 1.1.1
   '@types/node': 22.10.6
   '@types/react': 18.3.14

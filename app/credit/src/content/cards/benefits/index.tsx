@@ -1,3 +1,6 @@
+import type { FC } from 'react'
+import type { LucideProps } from 'lucide-react'
+
 import Butler from './icons/butler'
 import ChaufferServices from './icons/chauffer-services'
 import Promoters from './icons/chauffer-services copy 2'
@@ -11,7 +14,15 @@ import VIPExperiences from './icons/vip-experiences'
 import Wellness from './icons/wellness'
 import YachtCharter from './icons/yacht-charter'
 
-const benefits = [
+export interface BenefitItem {
+  id: string
+  img: { src: string; dim: { w: number; h: number }; alt: string }
+  Icon: FC<LucideProps>
+  title: string
+  description: string
+}
+
+const benefits: BenefitItem[] = [
   {
     id: 'food-and-dining',
     img: {
@@ -19,7 +30,7 @@ const benefits = [
       dim: {w: 560, h: 299},
       alt: 'Food and Dining'
     },
-    icon: <FoodAndDining width={24} height={24}/>,
+    Icon: FoodAndDining,
     title: 'Food and Dining',
     description: 'Wine and Dine in style. Get 4x points when you use your Lux Gold Card to pay for meals, restaurants, delivery apps, and any other edible drinkable delicacies unlimitedly! You can even earn off our exclusive venues and 5 star restaurants.'
   },
@@ -30,7 +41,7 @@ const benefits = [
       dim: {w: 560, h: 295},
       alt: 'Private Jets'
     },
-    icon: <PrivateJets width={24} height={24}/>,
+    Icon: PrivateJets,
     title: 'Private Jets',
     description: 'The Lux Elite Card gives you access to the most stylish and comfortable ways to travel. Our network has access to the best private jets available to charter you around the world with the most competitive pricing. Available individually or for 5-20 persons.'
   },
@@ -41,7 +52,7 @@ const benefits = [
       dim: {w: 509, h: 272},
       alt: 'Chauffer Services'
     },
-    icon: <ChaufferServices width={24} height={24}/>,
+    Icon: ChaufferServices,
     title: 'Chauffer Services',
     description: 'Travel around every city in unmatched comfort and convenience with Lux Chauffeur Services. Relax in luxurious cars featuring state-of-the-art sound systems, and high speed internet while our drivers ensure a smooth and enjoyable journey.'
   },
@@ -52,7 +63,7 @@ const benefits = [
       dim: {w: 540, h: 289},
       alt: 'Yacht Charter'
     },
-    icon: <YachtCharter width={24} height={24}/>,
+    Icon: YachtCharter,
     title: 'Yacht Charter',
     description: 'Sail in luxury. Create memorable moments with friends and family with Lux yacht charters, and boat rentals. Experience exquisite cuisine, professional staff and earn rewards. Experience sea excursions and marine wild life like never before.'
   },
@@ -63,7 +74,7 @@ const benefits = [
       dim: {w: 560, h: 300},
       alt: 'VIP Experiences & Events'
     },
-    icon: <VIPExperiences width={24} height={24}/>,
+    Icon: VIPExperiences,
     title: 'VIP Experiences & Events',
     description: 'Meticulously tailored experiences from blockchain & finance summits to private cultural soirees, each event is a door to new worlds. Join an elite circle with access to sold-out events, exclusive gatherings, and transformative experiences.'
   },
@@ -74,7 +85,7 @@ const benefits = [
       dim: {w: 560, h: 300},
       alt: 'Security Detail'
     },
-    icon: <SecurityDetail width={24} height={24}/>,
+    Icon: SecurityDetail,
     title: 'Security Detail',
     description: 'Lux transforms security into luxury. With experts from U.S. special ops and elite law enforcement, cardholders access a fortress of safety for personal, corporate, or private interests. Security detail tailored for peace of mind in every corner of the globe.'
   },
@@ -85,7 +96,7 @@ const benefits = [
       dim: {w: 300, h: 161},
       alt: 'Butler & 24/7 Concierge'
     },
-    icon: <Butler width={24} height={24}/>,
+    Icon: Butler,
     title: 'Butler & 24/7 Concierge',
     description: 'The Lux Elite Card gives you access to the most stylish and comfortable ways to travel. Our network has access to the best private jets available to charter you around the world with the most competitive pricing. Available individually or for 5 - 20 persons.'
   },
@@ -96,7 +107,7 @@ const benefits = [
       dim: {w: 560, h: 300},
       alt: 'Private Chefs and Sommeliers'
     },
-    icon: <PrivateChef width={24} height={24}/>,
+    Icon: PrivateChef,
     title: 'Private Chefs and Sommeliers',
     description: 'Wine and Dine in style. Get 4x points when you use your Lux Gold Card to pay for meals, restaurants, delivery apps, and any other edible drinkable delicacies unlimitedly! You can even earn off our exclusive sommeliers and private chefs.'
   },
@@ -107,7 +118,7 @@ const benefits = [
       dim: {w: 465, h: 249},
       alt: 'Wellness'
     },
-    icon: <Wellness width={24} height={24}/>,
+    Icon: Wellness,
     title: 'Wellness',
     description: 'A holistic approach to wellbeing with personalized, exclusive care and top-of-the-line treatments. Blends mental, physical, and emotional health through private retreats, tailored fitness programs, nutrition counseling, and spa treatments.'
   },
@@ -118,7 +129,7 @@ const benefits = [
       dim: {w: 560, h: 300},
       alt: 'Lux Quests and Retreats'
     },
-    icon: <LuxQuests width={24} height={24}/>,
+    Icon: LuxQuests,
     title: 'Lux Quests and Retreats',
     description: 'Your gateway to connection. Every month you can embark on a journey, be it solo, or in a group. From educational summits to private cultural soirees, & couples experiences. Lux promises meticulous curation to open doors to new frontiers.'
   },
@@ -129,7 +140,7 @@ const benefits = [
       dim: {w: 560, h: 300},
       alt: 'Mindfulness'
     },
-    icon: <Mindfulness width={24} height={24}/>,
+    Icon: Mindfulness,
     title: 'Mindfulness',
     description: 'Experience mindfulness elevation through silent retreats, private sessions with spiritual healers, sound baths, workshops, mediation and VR. Access to journeys for self improvement by balancing mind & body merging ancient practices in lavish locales.'
   },
@@ -140,7 +151,7 @@ const benefits = [
       dim: {w: 560, h: 300},
       alt: 'Promoters & Organizers'
     },
-    icon: <Promoters width={24} height={24}/>,
+    Icon: Promoters,
     title: 'Promoters & Organizers',
     description: 'Partnering with top promoters and organizers globally, Lux can craft exclusive gatherings featuring world class entertainment, stunning venues, and a vibrant beautiful people as per your requirements and budget constraints.'
   }

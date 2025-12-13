@@ -31,11 +31,12 @@ const nextConfig = {
  },
     // https://stackoverflow.com/questions/72621835/how-to-fix-you-may-need-an-appropriate-loader-to-handle-this-file-type-current
   transpilePackages: [
-    '@hanzo/ui', 
-    '@hanzo/auth', 
-    '@hanzo/commerce', 
+    '@hanzo/ui',
+    '@hanzo/auth',
+    '@hanzo/commerce',
     '@luxfi/ui',
-    '@luxfi/data'
+    '@luxfi/data',
+    '@luxfi/menu-icons'
   ],
   productionBrowserSourceMaps: true,
   webpack: (config) => {

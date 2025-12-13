@@ -7,7 +7,7 @@ import FooterSlide from '@/components/footer-slide'
 import CompatibleSection from '@/components/compatible-section'
 import HeaderNoAuth from '@/components/header-no-auth'
 import siteDef from '@/site-def'
-import '@/blocks/registerComponents'
+// Block registration moved to DynamicScreenful (client-side)
 
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>

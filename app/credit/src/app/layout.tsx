@@ -1,6 +1,6 @@
 import React, { type PropsWithChildren } from 'react'
 import type { Viewport } from 'next'
-import { Toaster } from '@hanzo/ui/primitives'
+import { Toaster } from 'sonner'
 // Temporarily comment out Firebase-dependent imports
 // import { 
 //   RootLayout as RootLayoutCore, 

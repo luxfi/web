@@ -14,12 +14,15 @@ import { Loader2 } from 'lucide-react'
 import {
   Button,
   Input,
+} from '@hanzo/ui/primitives'
+
+import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '@hanzo/ui/primitives'
+} from '@hanzo/ui/form'
 
 import type { SubmitServerAction } from '@hanzo/ui/types'
 import type { ContactInfo } from '../../types'

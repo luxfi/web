@@ -1,4 +1,4 @@
-import '@/blocks/registerComponents'
+// Block registration moved to DynamicScreenful (client-side)
 
 import DesktopAllCards from './_page/desktop'
 import MobileAllCards from './_page/mobile'

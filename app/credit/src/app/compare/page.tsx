@@ -2,8 +2,7 @@ import React  from 'react'
 
 // Use local Main to avoid Firebase imports from @luxfi/ui
 import MainNoAuth from '@/components/main-no-auth'
-
-import '@/blocks/registerComponents'
+// Block registration moved to DynamicScreenful (client-side)
 
 import CompareCards from './_page'
 

@@ -1,8 +1,8 @@
-import React, { type PropsWithChildren } from 'react'
+import type { PropsWithChildren, FC } from 'react'
 import { cn } from '@hanzo/ui/util'
 
 // Local Main component to avoid Firebase imports from @luxfi/ui barrel export
-const MainNoAuth: React.FC<PropsWithChildren & {
+const MainNoAuth: FC<PropsWithChildren & {
   id?: string
   className?: string
   headerSpace?: boolean
