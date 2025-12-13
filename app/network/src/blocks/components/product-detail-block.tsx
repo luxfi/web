@@ -3,14 +3,14 @@ import React from 'react'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { cn } from '@hanzo/ui/util'
 
+import type { BlockComponentProps } from '@hanzo/ui/blocks'
 import {
-  type BlockComponentProps,
   ContentComponent,
   SpaceBlockComponent,
   CardBlockComponent as CardComponent,
   AccordianBlockComponent,
   VideoBlockComponent,
-} from '@hanzo/ui/blocks'
+} from '@/blocks/client-blocks'
 
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import SplinePlayer from '@/components/spline-player'

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
+import { ScreenfulBlockComponent as Screenful } from '@/blocks/client-blocks'
 
 const ClientScreenful = ({ block, initialInView, agent, index }: any) => {
   return (

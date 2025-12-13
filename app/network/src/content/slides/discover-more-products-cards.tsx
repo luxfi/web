@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
-import { 
-  VideoBlockComponent,
-  type Block,
-  type ElementBlock,
-  type EnhHeadingBlock,
-  type VideoBlock,
-  type CarteBlancheBlock,
+import { VideoBlockComponent } from '@/blocks/client-blocks'
+import type {
+  Block,
+  ElementBlock,
+  EnhHeadingBlock,
+  VideoBlock,
+  CarteBlancheBlock,
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 

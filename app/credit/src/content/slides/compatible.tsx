@@ -6,7 +6,7 @@ import type {
   ScreenfulBlock,
   SpaceBlock,
 } from '@hanzo/ui/blocks'
-import { BlocksComponent } from '@hanzo/ui/blocks'
+import { BlocksComponent } from '@/blocks/client-blocks'
 import { Button, LinkElement } from '@hanzo/ui/primitives'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 
