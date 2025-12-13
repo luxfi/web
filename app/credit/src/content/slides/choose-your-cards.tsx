@@ -4,6 +4,7 @@ import type {
   ElementBlock,
   ScreenfulBlock,
   SpaceBlock,
+  VideoBlock,
 } from '@hanzo/ui/blocks'
 import { BlocksComponent } from '@hanzo/ui/blocks'
 import { Button, LinkElement } from '@hanzo/ui/primitives'

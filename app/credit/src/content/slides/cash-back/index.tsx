@@ -16,7 +16,6 @@ export default {
   contentColumns: [
     [
       {
-        key: 'cash-back-graphic',
         blockType: 'element',
         element: (<div className={'flex items-center justify-center self-center w-full min-h-[300px] md:min-h-[400px] overflow-visible'}>
           <CashBackGraphic className='w-full h-auto max-w-[500px] max-h-[400px] py-3' />
@@ -25,7 +24,6 @@ export default {
     ],
     [
       {
-        key: 'cash-back-content',
         blockType: 'element',
         element: (<>
           <h1 className='font-heading self-start text-4xl sm:text-5xl mb-2 z-2'>EARN WHILE YOU SWIPE</h1>

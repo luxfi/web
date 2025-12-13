@@ -14,12 +14,14 @@ import CardsBar from './_page/cards-bar'
 
 import cards from '@/content/cards'
 
-type Props = {
-  params: { slug: CardType }
-  searchParams?: { [key: string]: string | string[] | undefined }
+interface PageProps {
+  params: Promise<{ slug: string }>
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-const Page = ({ params, searchParams }: Props) => {
+const Page = async ({ params, searchParams }: PageProps) => {
+  const resolvedParams = await params
+  const resolvedSearchParams = await searchParams
   const cmmc = useCommerce()
 
   const [card, setCard] = useState<Card>()
@@ -27,12 +29,12 @@ const Page = ({ params, searchParams }: Props) => {
   const [lineItem, setLineItem] = useState<LineItem>()
 
   useEffect(() => {
-    const card = cards.find(card => card.category === params.slug)
-    const material = card?.materials.find(material => material.sku === React.use(searchParams)?.sku)
+    const card = cards.find(card => card.category === resolvedParams.slug)
+    const material = card?.materials.find(material => material.sku === resolvedSearchParams?.sku)
 
     setCard(card)
     setSelectedMaterial(material ?? card?.materials[0])
-  }, [params, searchParams])
+  }, [resolvedParams, resolvedSearchParams])
 
   useEffect(() => {
     if (selectedMaterial) {

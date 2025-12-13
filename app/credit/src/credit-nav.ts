@@ -1,4 +1,12 @@
-import type { LinkDefExtended, ChildMenu } from '@luxfi/ui/site-def'
+import type { LinkDef } from '@hanzo/ui/types'
+
+interface ChildMenu extends LinkDef {
+  groupName?: string
+}
+
+interface LinkDefExtended extends LinkDef {
+  childMenu?: ChildMenu[]
+}
 
 export default [
   {

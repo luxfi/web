@@ -4,7 +4,8 @@ import { useRouter } from "next/navigation"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { Button, Separator } from '@hanzo/ui/primitives'
-import { Main } from '@luxfi/ui'
+// Use local Main to avoid Firebase imports from @luxfi/ui
+import MainNoAuth from '@/components/main-no-auth'
 import benefits from "@/content/cards/benefits"
 import Link from "next/link"
 
@@ -15,7 +16,7 @@ const Page = () => {
   const router = useRouter()
   
   return (
-    <Main className={'flex flex-col gap-4 pt-11'}>
+    <MainNoAuth className={'flex flex-col gap-4 pt-11'}>
       <div className='flex gap-4 items-center self-start cursor-pointer'>
         <Button size='icon' variant='ghost' onClick={() => router.back()}>
           <ChevronLeft/>
@@ -38,7 +39,7 @@ const Page = () => {
         ))}
         <Separator className="bg-level-2"/>
       </div>
-    </Main>
+    </MainNoAuth>
   )
 }
 

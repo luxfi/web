@@ -8,7 +8,8 @@ import { cn } from '@hanzo/ui/util'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 import { AddToCartWidget, formatCurrencyValue } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
-import { Main } from '@luxfi/ui'
+// Use local Main to avoid Firebase imports from @luxfi/ui
+import MainNoAuth from '@/components/main-no-auth'
 
 import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
 
@@ -54,7 +55,7 @@ const DesktopViewCardDetails: React.FC<{
 
 
     return (
-      <Main className={cn('flex flex-col gap-8 mt-20', clx)}>
+      <MainNoAuth className={cn('flex flex-col gap-8 mt-20', clx)}>
         <div className='flex gap-1 items-center self-start cursor-pointer mt-16 fixed' onClick={() => router.push('/cards')}>
           <ChevronLeft />
           <div>View All Cards</div>
@@ -95,7 +96,7 @@ const DesktopViewCardDetails: React.FC<{
             <Benefits card={card} showByline clx='mt-14' />
           </div>
         </ApplyTypography>
-      </Main>
+      </MainNoAuth>
     )
   }
 

@@ -1,12 +1,26 @@
 import React  from 'react'
 
 import { cn } from '@hanzo/ui/util'
-import { LinkElement, buttonVariants } from '@hanzo/ui/primitives'
+import { LinkElement, buttonVariants, Button } from '@hanzo/ui/primitives'
 import { type Block} from '@hanzo/ui/blocks'
 
-import { BuyButton } from '@luxfi/ui'
+// Temporarily disabled - causes Firebase import
+// import { BuyButton } from '@luxfi/ui'
 
 import type ItemCTAsBlock from '@/blocks/def/item-ctas'
+
+// Temporary placeholder for BuyButton
+const BuyButtonPlaceholder: React.FC<{
+  skuPath: string
+  size?: string
+  variant?: string
+  className?: string
+  children?: React.ReactNode
+}> = ({ className, children }) => (
+  <Button variant='primary' size='default' className={className}>
+    {children}
+  </Button>
+)
 
 const ItemCTAsBlockComponent: React.FC<{
   block: Block
@@ -45,14 +59,14 @@ const ItemCTAsBlockComponent: React.FC<{
       />
     )}
     {ctas.skuPath && (
-      <BuyButton
+      <BuyButtonPlaceholder
         skuPath={ctas.skuPath}
         size='default'
         variant='primary'
         className='!w-full max-w-56'
       >
         {ctas.buyLabel ? ctas.buyLabel : 'Buy Now'}
-      </BuyButton>
+      </BuyButtonPlaceholder>
     )}
     </div>
   ) : null

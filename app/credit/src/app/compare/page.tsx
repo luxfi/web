@@ -1,24 +1,26 @@
 import React  from 'react'
 
-import { Main } from '@luxfi/ui'
+// Use local Main to avoid Firebase imports from @luxfi/ui
+import MainNoAuth from '@/components/main-no-auth'
 
 import '@/blocks/registerComponents'
 
 import CompareCards from './_page'
 
-type Props = {
-  searchParams?: { [key: string]: string }
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string }>
 }
 
-const Page = ({ searchParams }: Props) => {
+const Page = async ({ searchParams }: PageProps) => {
+  const resolvedSearchParams = await searchParams
   
-  const predefinedCards = React.use(searchParams)?.cards
-  const mobile = React.use(searchParams)?.agent === 'phone'
+  const predefinedCards = resolvedSearchParams?.cards
+  const mobile = resolvedSearchParams?.agent === 'phone'
 
   return (
-    <Main>
-      <CompareCards predefinedCards={predefinedCards} mobile={mobile}/> 
-    </Main>
+    <MainNoAuth>
+      <CompareCards predefinedCards={predefinedCards} mobile={mobile}/>
+    </MainNoAuth>
   )
 }
 

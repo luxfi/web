@@ -1,10 +1,10 @@
 import React, { type PropsWithChildren } from 'react'
 
-import { Footer } from '@luxfi/ui'
+// Temporarily disabled - causes Firebase import
+// import { Footer } from '@luxfi/ui'
 import { cn } from '@hanzo/ui/util'
 import { ApplyTypography } from '@hanzo/ui/primitives'
 
-import siteDef from '@/site-def'
 import CardsCarousel from './cards-carousel-browse'
 
 const title = 'CHOOSE YOUR CARDS'
@@ -26,7 +26,10 @@ const FooterSlide: React.FC<PropsWithChildren & {
         <p className='mx-auto max-w-[45rem] !text-center px-4'>{byline}</p>
       </ApplyTypography>
       <CardsCarousel/>
-      <Footer siteDef={siteDef} className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start'/>
+      {/* TODO: Restore Footer when Firebase is configured */}
+      <footer className='grow-0 w-full lg:mx-auto sm:pt-6 border-t-0 flex flex-col justify-between md:justify-start p-4 text-center text-sm text-muted-foreground'>
+        © {new Date().getFullYear()} Lux Partners Limited
+      </footer>
     </div>
   </div>
 )

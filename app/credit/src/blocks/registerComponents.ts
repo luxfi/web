@@ -1,4 +1,4 @@
-import { registerBlockType } from '@hanzo/ui/blocks'
+import { registerBlockType } from '@/blocks/overrides/screenful-block'
 
 import ItemCTAs from '@/blocks/components/item-ctas'
 

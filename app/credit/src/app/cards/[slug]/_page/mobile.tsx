@@ -17,7 +17,8 @@ import {
 import { AddToCartWidget, formatCurrencyValue } from '@hanzo/commerce'
 import type { LineItem } from '@hanzo/commerce/types'
 
-import { Main } from '@luxfi/ui'
+// Use local Main to avoid Firebase imports from @luxfi/ui
+import MainNoAuth from '@/components/main-no-auth'
 import type { Card, CardMaterial } from '@luxfi/data/commerce/types'
 
 import SplinePlayer from '@/components/spline-player'
@@ -60,7 +61,7 @@ const MobileViewCardDetails: React.FC<{
   }
 
   return (
-    <Main className={cn('flex flex-col gap-4 pt-11', clx)}>
+    <MainNoAuth className={cn('flex flex-col gap-4 pt-11', clx)}>
       <div className='flex gap-1 items-center self-start cursor-pointer' onClick={() => router.push('/cards')}>
         <ChevronLeft/>
         <div>View All Cards</div>
@@ -105,7 +106,7 @@ const MobileViewCardDetails: React.FC<{
           <Arrow/>
         </Link>
       </div>
-    </Main>
+    </MainNoAuth>
   )
 }
 

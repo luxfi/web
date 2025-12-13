@@ -1,8 +1,6 @@
-'use client'
-
 import React  from 'react'
 
-import { ScreenfulBlockComponent as Screenful } from '@hanzo/ui/blocks'
+import { ScreenfulBlockComponent as Screenful } from '@/blocks/overrides/screenful-block'
 
 import { desktopTiles, mobileTiles}  from '@/content'
 import FooterSlide from '@/components/footer-slide'
@@ -11,13 +9,14 @@ import HeaderNoAuth from '@/components/header-no-auth'
 import siteDef from '@/site-def'
 import '@/blocks/registerComponents'
 
-type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined }
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-const Page = ({ searchParams }: Props ) => {
+const Page = async ({ searchParams }: PageProps ) => {
+  const resolvedSearchParams = await searchParams
     // see src/middleware.ts
-  const agent = React.use(searchParams)?.agent as string
+  const agent = resolvedSearchParams?.agent as string
   const tiles = agent === 'desktop' ? desktopTiles : mobileTiles
 
   return (<>

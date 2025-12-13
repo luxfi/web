@@ -26,7 +26,7 @@ export const viewport = {
 } satisfies Viewport
 
 // Temporary simplified layout without Firebase
-const RootLayout: React.FC<PropsWithChildren> = async ({
+const RootLayout: React.FC<PropsWithChildren> = ({
   children
 }) =>  (
   <html lang='en' suppressHydrationWarning className='hanzo-ui-dark-theme' style={{backgroundColor: '#000'}}>
@@ -38,7 +38,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({
       fontFamily: 'var(--font-inter), sans-serif',
       '--font-druk-wide': 'DrukWide, sans-serif',
       '--font-inter': 'inter, sans-serif',
-    }}>
+    } as React.CSSProperties}>
       {children}
       <Toaster position='top-center' duration={3000}/>
       <script dangerouslySetInnerHTML={{ __html: `document.body.style.display = 'flex';` }} />

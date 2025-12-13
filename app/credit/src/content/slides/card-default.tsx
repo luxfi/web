@@ -1,10 +1,11 @@
-import { 
-  type Block, 
-  type CTABlock, 
-  type ElementBlock, 
-  type EnhHeadingBlock, 
-  type ScreenfulBlock, 
-  type VideoBlock 
+import {
+  type Block,
+  type CTABlock,
+  type ElementBlock,
+  type EnhHeadingBlock,
+  type ScreenfulBlock,
+  type SpaceBlock,
+  type VideoBlock
 } from '@hanzo/ui/blocks'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
 

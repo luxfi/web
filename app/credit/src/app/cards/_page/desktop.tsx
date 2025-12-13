@@ -1,5 +1,6 @@
 import { cn } from '@hanzo/ui/util'
-import { Main } from '@luxfi/ui'
+// Use local Main to avoid Firebase imports from @luxfi/ui
+import MainNoAuth from '@/components/main-no-auth'
 
 import cards from '@/content/cards'
 import CardPreview from './desktop-card-preview'
@@ -9,9 +10,9 @@ const DesktopAllCards: React.FC<{
 }> = ({
   clx,
 }) => (
-  <Main className={cn('flex flex-col gap-20', clx)}>
+  <MainNoAuth className={cn('flex flex-col gap-20', clx)}>
   {cards.map((card, index) => ( <CardPreview key={index} card={card} /> ))}
-  </Main>
+  </MainNoAuth>
 )
 
 export {

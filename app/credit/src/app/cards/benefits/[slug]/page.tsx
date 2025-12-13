@@ -8,14 +8,15 @@ import { ImageBlockComponent } from "@hanzo/ui/blocks"
 
 import benefits from "@/content/cards/benefits"
 
-type Props = {
-  params: { slug: string }
+interface PageProps {
+  params: Promise<{ slug: string }>
 }
 
-const Page = ({ params }: Props) => {
+const Page = async ({ params }: PageProps) => {
   const router = useRouter()
+  const resolvedParams = await params
   
-  const benefit = benefits.find(benefit => benefit.id === params.slug)
+  const benefit = benefits.find(benefit => benefit.id === resolvedParams.slug)
 
   if (!benefit) {
     notFound()
