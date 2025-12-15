@@ -67,6 +67,19 @@ export default {
     } as PartnerCardBlock,
     {
       blockType: "partner-card",
+      name: "Giovanna Mingarelli",
+      title: "Altruistic Engagement, Technology",
+      description: "Giovanna, CEO and Co-Founder of M&C Consulting and MC2, is a tech entrepreneur and thought leader with 15 years of experience in political and digital communications. She has served in the office of a former Canadian Prime Minister and is a member of the Government of Canada Treasury Board Secretariat External Advisory Board for Talent Cloud. Mingarelli is a prolific writer and expert on politics gamification, social engagement, and crowdsourcing, having contributed to various media outlets. She has been recognized globally for her efforts in improving the world through entrepreneurship and civic engagement.",
+      url: "https://giovannamingarelli.com",
+      image: {
+        blockType: 'image',
+        src: '/assets/images/giovanna-mingarelli.jpg',
+        alt: 'Giovanna Mingarelli',
+        dim: { w: 100, h: 100 },
+      } as C.ImageBlock,
+    } as PartnerCardBlock,
+    {
+      blockType: "partner-card",
       name: "Lisa Goodman",
       title: "Art, Board Director",
       description: "A highly accomplished corporate executive, entrepreneur, and board director with over 30 years of experience in diverse industries, Lisa is renowned for her strategic acumen and expertise in customer engagement. Currently on the executive team at The Benaroya Company, a leading commercial real estate firm, she previously founded, scaled, and sold Service Intelligence Inc., a multimillion-dollar company with Fortune 100 clients. Apart from her professional achievements, Lisa is dedicated to promoting diversity, equity, and inclusion, evident in her philanthropic work and passion for the arts. She has been recognized in various media outlets and is known as an international thought leader, writer, and speaker in the areas of collaborative economy, open innovation, and entrepreneurship.",
