@@ -48,3 +48,7 @@ pnpm-lock.yaml
 yarn.lock
 package-lock.json
 .vercel
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+QWEN.md
