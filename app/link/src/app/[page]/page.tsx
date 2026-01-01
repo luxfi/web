@@ -4,6 +4,11 @@ import React, {useEffect} from 'react'
 import {useParams, useRouter} from "next/navigation";
 import links, {type ILink, type ILinks} from "@/links";
 
+
+export async function generateStaticParams() {
+  return [{ page: "about" }, { page: "contact" }, { page: "terms" }, { page: "privacy" }]
+}
+
 const RedirectPage = () => {
   const { page } = useParams()
   const router = useRouter()

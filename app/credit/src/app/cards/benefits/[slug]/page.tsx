@@ -5,7 +5,17 @@ import benefits from "@/content/cards/benefits"
 import BackButton from "@/components/back-button"
 import Link from "next/link"
 
-export const dynamic = 'force-dynamic'
+
+export async function generateStaticParams() {
+  return [
+    { slug: "travel" },
+    { slug: "lifestyle" },
+    { slug: "rewards" },
+    { slug: "wellness" },
+    { slug: "dining" },
+    { slug: "entertainment" }
+  ]
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>

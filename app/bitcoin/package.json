@@ -11,8 +11,8 @@
     "tc": "tsc --noEmit"
   },
   "dependencies": {
-    "@luxfi/data": "catalog:",
-    "@luxfi/ui": "catalog:",
+    "@luxfi/data": "workspace:*",
+    "@luxfi/ui": "workspace:*",
     "@hanzo/auth": "catalog:",
     "@hanzo/commerce": "catalog:",
     "@hanzo/ui": "catalog:",

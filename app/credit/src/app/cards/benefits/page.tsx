@@ -6,8 +6,6 @@ import benefits from "@/content/cards/benefits"
 import Link from "next/link"
 import BackButton from '@/components/back-button'
 
-export const dynamic = 'force-dynamic'
-
 const title = 'All Lux Benefits'
 const byline = 'Learn more about the exclusive benefits only available to Lux card holders and what to expect when you sign up for your Lux card.'
 

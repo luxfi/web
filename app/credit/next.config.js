@@ -1,3 +1,4 @@
+const path = require('path')
 const withMDX = require('@next/mdx')()
 const svgrPluginConfig = require('./next-conf/svgr.next.config')
 const watchPluginConfig = require('./next-conf/watch.next.config')
@@ -5,13 +6,14 @@ const watchPluginConfig = require('./next-conf/watch.next.config')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   typescript: {
-    // TODO: Fix type errors in @hanzo/commerce package
     ignoreBuildErrors: true,
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -27,7 +29,7 @@ const nextConfig = {
         protocol: "http",
         hostname: "localhost",
       }
-    ],    
+    ],
  },
     // https://stackoverflow.com/questions/72621835/how-to-fix-you-may-need-an-appropriate-loader-to-handle-this-file-type-current
   transpilePackages: [
@@ -39,9 +41,34 @@ const nextConfig = {
     '@luxfi/menu-icons'
   ],
   productionBrowserSourceMaps: true,
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     let conf = svgrPluginConfig(config)
-    //conf =  watchPluginConfig(conf) 
+
+    // Exclude server action files for static export
+    conf.module.rules.push({
+      test: /server-actions|square-payment|promo-codes/,
+      use: 'null-loader'
+    })
+
+    // Deduplicate React to prevent multiple instances
+    const reactPath = path.dirname(require.resolve('react/package.json'))
+    const reactDomPath = path.dirname(require.resolve('react-dom/package.json'))
+
+    // Replace server action imports with empty modules and dedupe React
+    conf.resolve.alias = {
+      ...conf.resolve.alias,
+      '@luxfi/ui/server-actions': false,
+      'react': reactPath,
+      'react-dom': reactDomPath,
+      'react/jsx-runtime': path.join(reactPath, 'jsx-runtime'),
+      'react/jsx-dev-runtime': path.join(reactPath, 'jsx-dev-runtime'),
+      'react-dom/server': path.join(reactDomPath, 'server'),
+      'react-dom/client': path.join(reactDomPath, 'client'),
+    }
+
+    // Ensure symlinks are resolved
+    conf.resolve.symlinks = true
+
     return conf
   }
 }

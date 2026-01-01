@@ -4,19 +4,17 @@ packages:
 
 # "re 'supports-color': https://stackoverflow.com/questions/76591038/module-not-found-esm-packages-supports-color-need-to-be-imported-use-import",
 catalog:
-  '@hanzo/auth': 2.5.5
-  '@hanzo/ui': 5.3.22
-  '@hanzo/commerce': 7.3.8
-  '@luxfi/ui': 5.5.2
-  '@luxfi/data': 1.1.1
+  '@hanzo/auth': 2.5.8
+  '@hanzo/ui': 5.3.34
+  '@hanzo/commerce': 7.3.10
   '@types/node': 22.10.6
-  '@types/react': 18.3.14
-  '@types/react-dom': 18.3.2
+  '@types/react': 19.0.2
+  '@types/react-dom': 19.0.2
   lucide-react: 0.470.0
   react-hook-form: 7.54.2
-  next: 15.1.6
-  react: 18.3.1
-  react-dom: 18.3.1
+  next: 16.1.0
+  react: 19.2.0
+  react-dom: 19.2.0
   supports-color: 9.4.0
   tailwindcss: 3.4.17
   typescript: 5.7.3

@@ -3,6 +3,11 @@ import { Chat } from '@/components/chat/chat'
 import { getSharedChat } from '@/lib/actions/chat'
 import { AI } from '@/app/actions'
 
+
+export async function generateStaticParams() {
+  return [{ id: "default" }]
+}
+
 export interface SharePageProps {
   params: {
     id: string

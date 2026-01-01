@@ -3,7 +3,6 @@ import type { Viewport } from 'next'
 
 import { Toaster } from '@hanzo/ui/primitives'
 import { AuthServiceProvider } from '@hanzo/auth/service'
-import { getUserServerSideSafe } from '../server/auth-wrapper'
 import type { AuthServiceConf } from '@hanzo/auth/types'
 import { CommerceProvider } from '@hanzo/commerce'
 
@@ -47,7 +46,7 @@ const bodyClasses =
   'bg-background text-foreground flex flex-col min-h-full ' +
   getAppRouterBodyFontClasses()
 
-async function RootLayout({
+function RootLayout({
   showHeader = false,
   chatbot = false,
   siteDef,
@@ -58,7 +57,9 @@ async function RootLayout({
   chatbot?: boolean
 } & PropsWithChildren) {
 
-  const currentUser = await getUserServerSideSafe()
+  // For static export, we don't have server-side auth
+  // User auth will be handled client-side via AuthListener
+  const currentUser = null
 
   const Guts: React.FC = () => (<>
     {showHeader && <Header siteDef={siteDef}/>}
@@ -83,7 +84,7 @@ async function RootLayout({
       <body suppressHydrationWarning className={bodyClasses} style={{
 
         // As noted above: 'overflow: hidden' on the <body> tag breaks scroll snap!
-        display: 'none', // see analytics.tsx 
+        display: 'none', // see analytics.tsx
       }}>
         <Analytics/>
         <AuthServiceProvider user={currentUser} conf={{} as AuthServiceConf}>
@@ -103,7 +104,7 @@ async function RootLayout({
       </body>
     </html>
   )
-} 
+}
 
 export {
   RootLayout,

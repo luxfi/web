@@ -2,9 +2,9 @@ import React, { type PropsWithChildren } from 'react'
 import type { Viewport } from 'next'
 import { Toaster } from 'sonner'
 // Temporarily comment out Firebase-dependent imports
-// import { 
-//   RootLayout as RootLayoutCore, 
-//   viewport as ViewportCode, 
+// import {
+//   RootLayout as RootLayoutCore,
+//   viewport as ViewportCode,
 // } from '@luxfi/ui/root-layout'
 
 import siteDef from '@/site-def'

@@ -17,7 +17,7 @@
     "@hanzo/auth": "catalog:",
     "@hanzo/commerce": "catalog:",
     "@hanzo/ui": "catalog:",
-    "@luxfi/ui": "catalog:",
+    "@luxfi/ui": "workspace:*",
     "@next/mdx": "14.1.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-collapsible": "^1.0.3",

@@ -14,8 +14,8 @@
     "test:e2e:debug": "playwright test --debug"
   },
   "dependencies": {
-    "@luxfi/ui": "catalog:",
-    "@luxfi/data": "catalog:",
+    "@luxfi/ui": "workspace:*",
+    "@luxfi/data": "workspace:*",
     "@hanzo/auth": "catalog:",
     "@hanzo/commerce": "catalog:",
     "@hanzo/ui": "catalog:",

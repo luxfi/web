@@ -3,9 +3,6 @@ import React from 'react'
 import { cn } from '@hanzo/ui/util'
 import { CheckoutPanel, Main } from '@luxfi/ui'
 
-// Prevent static generation since checkout requires auth
-export const dynamic = 'force-dynamic'
-
 const Page: React.FC = () => (
   <Main id='CHECKOUT_MAIN' className={cn(
     '!px-0 !py-0',

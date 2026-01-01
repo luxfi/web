@@ -1,7 +1,6 @@
 'use client'
 
-import { registerBlockType } from '@/blocks/overrides/screenful-block'
+// Placeholder - block registration disabled for static export
+// This file previously registered custom block types but is not needed for the current implementation
 
-import ItemCTAs from '@/blocks/components/item-ctas'
-
-registerBlockType('item-ctas', ItemCTAs)
+export {}

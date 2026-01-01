@@ -3,8 +3,6 @@
 import DesktopAllCards from './_page/desktop'
 import MobileAllCards from './_page/mobile'
 
-export const dynamic = 'force-dynamic'
-
 const Page = () => {
   return (<>
     <DesktopAllCards clx='hidden md:flex pt-[80px]'/>

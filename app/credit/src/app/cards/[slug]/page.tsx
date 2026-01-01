@@ -1,112 +1,22 @@
-'use client'
+import CardPageClient from './client-page'
 
-import { useEffect, useRef, useState } from 'react'
-
-import { useCommerce } from '@hanzo/commerce'
-import type { LineItem } from '@hanzo/commerce/types'
-
-import type { Card, CardMaterial, CardType } from '@luxfi/data/commerce/types'
-
-import DesktopViewCardDetails from './_page/desktop'
-import MobileViewCardDetails from './_page/mobile'
-import TabletViewCardDetails from './_page/tablet'
-import CardsBar from './_page/cards-bar'
-
-import cards from '@/content/cards'
+export async function generateStaticParams() {
+  return [
+    { slug: 'black' },
+    { slug: 'elite' },
+    { slug: 'founder' },
+    { slug: 'sovereign' }
+  ]
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-const Page = async ({ params, searchParams }: PageProps) => {
+export default async function Page({ params }: PageProps) {
   const resolvedParams = await params
-  const resolvedSearchParams = await searchParams
-  const cmmc = useCommerce()
 
-  const [card, setCard] = useState<Card>()
-  const [selectedMaterial, setSelectedMaterial] = useState<CardMaterial>()
-  const [lineItem, setLineItem] = useState<LineItem>()
-
-  useEffect(() => {
-    const card = cards.find(card => card.category === resolvedParams.slug)
-    const material = card?.materials.find(material => material.sku === resolvedSearchParams?.sku)
-
-    setCard(card)
-    setSelectedMaterial(material ?? card?.materials[0])
-  }, [resolvedParams, resolvedSearchParams])
-
-  useEffect(() => {
-    if (selectedMaterial) {
-      if(!cmmc) return
-      cmmc.selectPath(selectedMaterial.sku)
-      setLineItem(cmmc.selectedItems.find(item => item.sku === selectedMaterial.sku))
-    }
-  }, [selectedMaterial])
-
-  // Determine if mobile, tablet or desktop based on visibility of desktopElement
-  // https://stackoverflow.com/a/21696585/11378853
-  const desktopElement = useRef<HTMLDivElement | null>(null)
-  const tabletElement = useRef<HTMLDivElement | null>(null)
-  const mobileElement = useRef<HTMLDivElement | null>(null)
-  const [layout, setLayout] = useState<'mobile' | 'tablet' | 'desktop' | undefined>()
-  useEffect(() => {
-    const checkLayout = () => {
-      setLayout(
-        !!desktopElement.current?.offsetParent ? 'desktop' :
-        !!tabletElement.current?.offsetParent ? 'tablet' :
-        !!mobileElement.current?.offsetParent ? 'mobile' :
-        undefined
-      )
-    }
-
-    // initial layout check
-    setTimeout(checkLayout)
-
-    window.addEventListener('resize', checkLayout)
-    return () => {
-      window.removeEventListener('resize', checkLayout)
-    }
-  }, [])
-
-  const isCardSet = !!card && !!selectedMaterial && !!lineItem
-
-  return (<>
-    <CardsBar selectedCard={card} clx='fixed top-0 mt-11 md:mt-20'/>
-    <div className='sm:hidden h-full min-h-screen'>
-      <div ref={mobileElement}></div>
-      {layout === 'mobile' && isCardSet && (
-        <MobileViewCardDetails
-          card={card}
-          lineItem={lineItem}
-          selectedMaterial={selectedMaterial}
-          setSelectedMaterial={setSelectedMaterial}
-        />
-      )}
-    </div>
-    <div className='hidden sm:flex md:hidden h-full min-h-screen'>
-      <div ref={tabletElement}></div>
-      {layout === 'tablet' && isCardSet && (
-        <TabletViewCardDetails
-          card={card}
-          lineItem={lineItem}
-          selectedMaterial={selectedMaterial}
-          setSelectedMaterial={setSelectedMaterial}
-        />
-      )}
-    </div>
-    <div className='hidden md:flex h-full min-h-screen'>
-      <div ref={desktopElement}></div>
-      {layout === 'desktop' && isCardSet && (
-        <DesktopViewCardDetails
-          card={card}
-          lineItem={lineItem}
-          selectedMaterial={selectedMaterial}
-          setSelectedMaterial={setSelectedMaterial}
-        />
-      )}
-    </div>
-  </>)
+  return (
+    <CardPageClient slug={resolvedParams.slug} />
+  )
 }
-
-export default Page

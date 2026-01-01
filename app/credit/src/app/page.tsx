@@ -1,22 +1,25 @@
-import React  from 'react'
+'use client'
+
+import React from 'react'
 
 import { ScreenfulBlockComponent as Screenful } from '@/blocks/overrides/screenful-block'
 
-import { desktopTiles, mobileTiles}  from '@/content'
+import { desktopTiles, mobileTiles } from '@/content'
 import FooterSlide from '@/components/footer-slide'
-import CompatibleSection from '@/components/compatible-section'
 import HeaderNoAuth from '@/components/header-no-auth'
 import siteDef from '@/site-def'
 // Block registration moved to DynamicScreenful (client-side)
 
-interface PageProps {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
+const Page = () => {
+  // For static export, detect agent on client side
+  const [agent, setAgent] = React.useState<string>('')
 
-const Page = async ({ searchParams }: PageProps ) => {
-  const resolvedSearchParams = await searchParams
-    // see src/middleware.ts
-  const agent = resolvedSearchParams?.agent as string
+  React.useEffect(() => {
+    // Check if running on desktop based on window width
+    const isMobile = window.innerWidth < 768
+    setAgent(isMobile ? 'mobile' : 'desktop')
+  }, [])
+
   const tiles = agent === 'desktop' ? desktopTiles : mobileTiles
 
   return (<>

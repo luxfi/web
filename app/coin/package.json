@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@hanzo/ui": "catalog:",
-    "@luxfi/ui": "catalog:",
+    "@luxfi/ui": "workspace:*",
     "@next/bundle-analyzer": "^14.2.13",
     "@next/mdx": "14.2.13",
     "css-loader": "^7.1.2",
