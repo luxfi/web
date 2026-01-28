@@ -35,7 +35,7 @@ jobs:
 
       - name: Build network app
         working-directory: ./app/network
-        run: npx next build --no-turbopack
+        run: npx next build --webpack
 
       - name: Prepare deployment
         run: |
