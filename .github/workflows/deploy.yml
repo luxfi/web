@@ -35,7 +35,7 @@ jobs:
 
       - name: Build network app
         working-directory: ./app/network
-        run: pnpm build
+        run: npx next build --no-turbopack
 
       - name: Prepare deployment
         run: |
