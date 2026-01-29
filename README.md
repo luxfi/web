@@ -310,7 +310,7 @@ Built on:
 
 ## Resources
 
-- [Live Platform](https://vote.lux.network)
+- [Live Platform](https://lux.vote)
 - [Documentation](https://docs.lux.network/web)
 - [API Reference](https://api.lux.network/docs)
 - [GitHub](https://github.com/luxfi/web)
