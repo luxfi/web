@@ -1,27 +1,7 @@
-import React  from 'react'
+import dynamic from 'next/dynamic'
 
-import { Footer, Header } from '@luxfi/ui'
-import ClientScreenful from '@/components/ClientScreenful'
+const PageContent = dynamic(() => import('@/components/PageContent'), { ssr: false })
 
-import { tiles } from '@/content'
-import siteDef from '@/site-def'
-
-  // Scroll Snap using this is the approach:
-  // https://stackoverflow.com/a/76066443/11645689
-  // see also styles on 'html' in @hanzo/ui/style/global.css
-const Page = () => (
-  <>
-    <Header siteDef={siteDef} />
-    {tiles.map((banner, index) => (
-      <ClientScreenful
-        block={banner}
-        initialInView={index === 0}
-        agent={undefined as unknown as string}
-        index={index}
-      />
-    ))}
-    <Footer siteDef={siteDef} className='w-full pt-16 lg:mx-auto ' />
-  </>
-)
+const Page = () => <PageContent />
 
 export default Page

@@ -6,6 +6,7 @@ const nextConfig = {
   output: 'export',
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
+  staticPageGenerationTimeout: 180,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   images: {
