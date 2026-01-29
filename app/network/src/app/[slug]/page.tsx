@@ -9,7 +9,8 @@ import { products } from '@/content'
 import siteDef from '@/site-def'
 
 type Props = {
-  params: Promise<{ slug: 'coin' | 'validator' }>
+  params: { slug: 'coin' | 'validator' }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 export async function generateStaticParams() {
@@ -25,25 +26,26 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params}: Props) {
-  const { slug } = await params
-  const title = slug
+  const title = params.slug
   const capitalized = title.charAt(0).toUpperCase() + title.slice(1)
   return { title: capitalized }
 }
 
-const ProductPage = async ({ params }: Props) => {
+const ProductPage = ({ params, searchParams }: Props) => {
 
-  const { slug } = await params
-  const product = products[slug] as ProductDetailBlock
+  const product = products[params.slug] as ProductDetailBlock
 
   if (!product) {
     notFound()
   }
 
+  // see src/middleware.ts
+  const agent = searchParams?.agent
+
   return (<>
     <Header siteDef={siteDef}/>
     <Main className='md:flex-row md:gap-4 '>
-      <ProductDetailBlockComponent block={product} agent={undefined as unknown as string}/>
+      <ProductDetailBlockComponent block={product} agent={agent as string}/>
     </Main>
     <div className='border-t'></div>
     <Footer siteDef={siteDef} className='w-full pt-16 lg:mx-auto ' />
