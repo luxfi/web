@@ -1,7 +1,7 @@
 'use client'
 
-import React from 'react'
-import { notFound } from 'next/navigation'
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Footer, Header, Main } from '@luxfi/ui'
 import type ProductDetailBlock from '@/blocks/def/product-detail-block'
 import ProductDetailBlockComponent from '@/blocks/components/product-detail-block'
@@ -9,10 +9,19 @@ import { products } from '@/content'
 import siteDef from '@/site-def'
 
 const ProductPageContent: React.FC<{ slug: string }> = ({ slug }) => {
+  const router = useRouter()
+  const [mounted, setMounted] = useState(false)
   const product = products[slug as keyof typeof products] as ProductDetailBlock
 
-  if (!product) {
-    notFound()
+  useEffect(() => {
+    setMounted(true)
+    if (!products[slug as keyof typeof products]) {
+      router.replace('/404')
+    }
+  }, [slug, router])
+
+  if (!mounted || !product) {
+    return null
   }
 
   return (<>
