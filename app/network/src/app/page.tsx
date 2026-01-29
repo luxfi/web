@@ -7,16 +7,17 @@ import { tiles } from '@/content'
 import siteDef from '@/site-def'
 
 type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined }
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-  // Scroll Snap using this is the approach: 
+  // Scroll Snap using this is the approach:
   // https://stackoverflow.com/a/76066443/11645689
   // see also styles on 'html' in @hanzo/ui/style/global.css
-const Page = ({ searchParams }: Props ) => {
-  
+const Page = async ({ searchParams }: Props ) => {
+
     // see src/middleware.ts
-  const agent = searchParams?.agent as string
+  const resolvedSearchParams = await searchParams
+  const agent = resolvedSearchParams?.agent as string
 
   return (<>
     <Header siteDef={siteDef} />
