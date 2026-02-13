@@ -68,7 +68,7 @@ const Logo: React.FC<{
   const outerClasses = 'flex flex-row items-center ' + outerClx
   const spanClasses = 'inline-block font-bold font-heading ' 
     + textClx
-    + (href ? ' hover:text-accent cursor-pointer ' : ' cursor-default ') 
+    + (href ? ' hover:opacity-80 cursor-pointer ' : ' cursor-default ') 
     + classes.span 
 
   return (

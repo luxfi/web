@@ -15,11 +15,11 @@ type HeroProps = {
 }
 
 const checkedText = [
-  "Sovereign and unstoppable",
-  "Lightning-fast transactions",
-  "Future-proof quantum security",
-  "Privacy built for the modern age",
-  "Effortless high-yield staking",
+  "Specialized chains: P, X, C, D, T, Z, Q, B and more",
+  "Sub-second finality, unlimited scalability",
+  "Lattice encryption for post-quantum consensus",
+  "FHE privacy on T-Chain, ZK on Z-Chain",
+  "Quasar consensus with Flare finalization",
 ]
 
 const video = {
@@ -30,16 +30,18 @@ const video = {
     'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.mp4',
     'https://cdn.lux.network/commerce/vl/product/Lux-VALIDATOR-transcode.webm'
   ],
+  // Original video is 656x484, aspect ratio 1.355
   dim: {
     md: {
-      w: 600,
-      h: 350
+      w: 500,
+      h: 369
     },
     lg: {
-      w: 800,
-      h: 450
+      w: 656,
+      h: 484
     },
   },
+  className: 'object-contain',
 } as VideoBlock
 
 const createScreenful = (props: HeroProps): ScreenfulBlock => ({
@@ -51,11 +53,11 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
     [
       {
         blockType: 'element',
-        element: <p className='self-start text-base sm:text-xs mb-2 px-4 md:px-0'>Access to over $3.1 trillion hyper liquid assets and growing</p>,
+        element: <p className='self-start text-base sm:text-xs mb-2 px-4 md:px-0'>Multi-chain architecture with specialized VMs for every use case</p>,
       } as ElementBlock,
       {
         blockType: 'element',
-        element: <span className='self-start text-2xl sm:text-lg mb-4 px-4 md:px-0'>Private, Post-Quantum, <b>Sovereign DeFi</b></span>,
+        element: <span className='self-start text-2xl sm:text-lg mb-4 px-4 md:px-0'>Post-Quantum, Privacy-First, <b>High-Performance DeFi</b></span>,
       } as ElementBlock,
       {
         blockType: 'element',
@@ -76,13 +78,13 @@ const createScreenful = (props: HeroProps): ScreenfulBlock => ({
         blockType: 'element',
         specifiers: 'mobile-center-headings',
         element: <div className="w-full md:w-fit flex flex-col md:flex-row gap-2 justify-center md:justify-start relative">
-          <a href="https://lux.network#run-the-network" className="flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-fg sm:hover:bg-primary-hover font-nav whitespace-nowrap not-typography h-9 py-2 px-4 text-sm md:text-base font-semibold min-w-0 rounded-md">
-            <div>Run Chain</div>
+          <a href="https://lux.build" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-fg sm:hover:bg-primary-hover font-nav whitespace-nowrap not-typography h-9 py-2 px-4 text-sm md:text-base font-semibold min-w-0 rounded-md">
+            <div>Start Building</div>
           </a>
-          <a href="https://bridge.lux.network" className="flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-secondary text-secondary-fg sm:hover:bg-secondary-hover font-nav whitespace-nowrap not-typography h-9 py-2 px-4 text-sm md:text-base font-semibold min-w-0 rounded-md">
-            <div>Bridge Assets</div>
+          <a href="https://docs.lux.network" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-secondary text-secondary-fg sm:hover:bg-secondary-hover font-nav whitespace-nowrap not-typography h-9 py-2 px-4 text-sm md:text-base font-semibold min-w-0 rounded-md">
+            <div>Read Docs</div>
           </a>
-          <a href="https://explore.lux.network/" className="flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background text-foreground bg-background border border-muted-4 sm:hover:bg-level-1 sm:hover:text-accent sm:hover:border-accent font-nav whitespace-nowrap not-typography h-9 py-2 px-4 text-sm md:text-base font-semibold min-w-0 rounded-md">
+          <a href="https://explorer.lux.network" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background text-foreground bg-background border border-muted-4 sm:hover:bg-level-1 sm:hover:text-muted-1 sm:hover:border-muted-1 font-nav whitespace-nowrap not-typography h-9 py-2 px-4 text-sm md:text-base font-semibold min-w-0 rounded-md">
             <div>Explore Network</div>
           </a>
         </div>
