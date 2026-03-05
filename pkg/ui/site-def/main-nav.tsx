@@ -225,7 +225,7 @@ export default [
         title: "Shop",
         icon: <Shop  width={25} height={25} />,
         icon_act: <ShopAct width={27} height={27}/>,
-        href: "https://lux.market",
+        href: "https://lux.shop",
         newTab: false,
         contents:"Find any Lux product for sale"
       },
@@ -279,7 +279,7 @@ export default [
         title: "Explorer",
         icon: <Explorer width={25} height={25} />,
         icon_act: <ExplorerAct width={27} height={27}/>,
-        href: "https://explorer.lux.network/",
+        href: "https://explore.lux.network/",
         newTab: false,
         contents:"All transactions"
       },
@@ -324,16 +324,16 @@ export default [
         title: "Validators",
         icon: <Validators width={25} height={25} />,
         icon_act: <ValidatorsAct width={27} height={27}/>,
-        href: "https://lux.market/validator",
+        href: "https://lux.build",
         newTab: false,
-        contents:"Own a part of the network"
+        contents:"Stake, delegate, and manage"
       },
       {
         groupName:'Get Access',
         title: "Developer docs",
         icon: <DeveloperDocs width={25} height={25} />,
         icon_act: <DeveloperDocsAct width={27} height={27}/>,
-        href: "#",
+        href: "https://docs.lux.network",
         newTab: false,
         contents:"Software explained"
       },
@@ -342,7 +342,7 @@ export default [
         title: "Open Source",
         icon: <OpenSource width={25} height={25} />,
         icon_act: <OpenSourceAct width={27} height={27}/>,
-        href: "#",
+        href: "https://github.com/luxfi",
         newTab: false,
         contents:"Accessible for everyone"
       },
@@ -432,7 +432,7 @@ export default [
         title: "Developer docs",
         icon: <DeveloperDocs  width={25} height={25} />,
         icon_act: <DeveloperDocsAct width={25}  height={25}/>,
-        href: "#",
+        href: "https://docs.lux.network",
         newTab: false,
         contents:"Software explained"
       },

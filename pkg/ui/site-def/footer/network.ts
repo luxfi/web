@@ -23,8 +23,8 @@ export default [
     href: "https://safe.lux.network/",
   },
   {
-    title: 'Lux Validator',
-    href: "https://lux.network/validator",
+    title: 'Lux Build',
+    href: "https://lux.build",
   },
   {
     title: 'Lux Coin',
