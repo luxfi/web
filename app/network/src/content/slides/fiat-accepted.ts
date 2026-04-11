@@ -1,7 +1,6 @@
 import type {
   GridBlock,
   EnhHeadingBlock,
-  ElementBlock,
   BulletCardsBlock,
   ImageBlock,
 } from '@hanzo/ui/blocks'
@@ -26,9 +25,10 @@ export default {
         {blockType: 'grid',
           grid: COMMON_GRID_1_COL,
           cells: [
-            {blockType: 'element',
-              element: <p>{byline}</p>,
-            } as ElementBlock,
+            {blockType: 'enh-heading',
+              heading: { text: '', level: 0 },
+              byline: { text: byline, level: 6 },
+            } as EnhHeadingBlock,
             {blockType: 'bullet-cards',
               grid: COMMON_GRID_1_COL,
               specifiers: 'no-card-border',

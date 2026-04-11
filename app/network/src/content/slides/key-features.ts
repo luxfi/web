@@ -43,13 +43,13 @@ export default {
         },
         {
           text: 'Tax advantaged trading.',
-          icon: <p className='font-serif text-[24px] leading-[28px] font-bold  h-[28px] pr-2'>0%</p>
+          icon: '/assets/content/icon-dao-475.png'
         },
         {
           text: 'Governed by a DAO.',
           icon: '/assets/content/icon-dao-475.png'
         },
-      ] 
+      ]
     } as BulletCardsBlock
   ]]
 }

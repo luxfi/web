@@ -6,10 +6,10 @@ export default {
     default: 'Lux Network',
     template: '%s | Lux Network',
   },
-  description: 'Explore your swaps',
-  applicationName: 'Lux Bridge Explorer',
+  description: 'The consensus layer for AI computation. Post-quantum, privacy-first, AI-native blockchain infrastructure.',
+  applicationName: 'Lux Network',
   authors: {name: 'Lux Dev team'},
-  keywords: "Lux Network, Blockchain Bridge, Multi-Chain, EVM, Solana, Bitcoin, Cross-Chain, Interoperability, Cryptocurrency, Blockchain Technology",
+  keywords: "Lux Network, AI Compute Chain, Post-Quantum Blockchain, FHE, Decentralized AI, Multi-Chain, EVM, Cross-Chain, AI Infrastructure",
   icons: [
     {
       rel: 'icon',

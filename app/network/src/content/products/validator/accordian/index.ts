@@ -1,20 +1,17 @@
-import RunANodeMDX from './run-a-node.mdx'
-import ScarceAndAppreciableMDX from './scarce-and-appreciable-asset.mdx'
-
 export default {
   blockType: 'accordian',
   items: [
     {
       trigger: 'Run a node on the Lux Network',
-      content: <RunANodeMDX />
+      content: 'Lux Validators create the decentralized computation network that powers the Lux proof-of-stake blockchains. Run your own computer on a gigabit network or have Lux partner Validation Cloud do it all for 10% of your earnings.'
     },
     {
       trigger: 'Earn a % of every transaction fee',
-      content: <p>Lux Validators earn a proportion of every Lux Network transaction fee, instantly paid to your Lux Wallet in <a href="/coin">LUX Coin</a>.</p>
+      content: 'Lux Validators earn a proportion of every Lux Network transaction fee, instantly paid to your Lux Wallet in LUX Coin.'
     },
     {
       trigger: 'Scarce and appreciable asset',
-      content: <ScarceAndAppreciableMDX />
+      content: 'Each of the 1/100th or 1/1,000th Lux Validators can be sold or traded at anytime on the Lux Market, with values expected to rise as earnings increase from greater transaction volumes.'
     },
     {
       trigger: 'LUX Coin already bonded',

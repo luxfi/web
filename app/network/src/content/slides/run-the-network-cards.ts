@@ -1,12 +1,12 @@
 import type {
   Block,
   CarteBlancheBlock,
-  ElementBlock,
+  CTABlock,
   EnhHeadingBlock,
   VideoBlock,
 } from '@hanzo/ui/blocks'
+import type { LinkDef } from '@hanzo/ui/types'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
-import ProductCTA from '@/components/product-cta'
 
 const validatorVideo = {
   blockType: 'video',
@@ -28,8 +28,8 @@ const coinVideo = {
     'https://cdn.lux.network/commerce/cn/product/LUX-COIN-transcode.mp4',
     'https://cdn.lux.network/commerce/cn/product/LUX-COIN-transcode.webm'
   ],
-    dim: {md: {w: 546, h: 540}, lg: {w: 546, h: 540}},
-    sizing: { vh: 25, mobile: {vw: 50} }
+  dim: {md: {w: 546, h: 540}, lg: {w: 546, h: 540}},
+  sizing: { vh: 25, mobile: {vw: 50} }
 } as VideoBlock
 
 const bylines = [
@@ -48,9 +48,13 @@ export default [
         byline: {text: bylines[0], level: 6}
       } as EnhHeadingBlock,
       {blockType: 'space', level: 0},
-      {blockType: 'element',
-        element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='/validator' skuPath='LXM-VL' />
-      } satisfies ElementBlock as Block  
+      {blockType: 'cta',
+        specifiers: 'center',
+        elements: [
+          {title: 'Learn more', href: '/validator', variant: 'outline'} as LinkDef,
+          {title: 'Buy Validator', href: 'https://lux.market/validator', external: true, newTab: true, variant: 'primary'} as LinkDef,
+        ],
+      } as CTABlock,
     ]
   } as CarteBlancheBlock,
   {blockType: 'carte-blanche',
@@ -63,9 +67,13 @@ export default [
         byline: {text: bylines[1], level: 6}
       } as EnhHeadingBlock,
       {blockType: 'space', level: 0},
-      {blockType: 'element',
-        element: <ProductCTA learnMoreText='Learn more' learnMoreUrl='/coin' skuPath='LXM-CN' />
-      } satisfies ElementBlock as Block
+      {blockType: 'cta',
+        specifiers: 'center',
+        elements: [
+          {title: 'Learn more', href: '/coin', variant: 'outline'} as LinkDef,
+          {title: 'Buy Coin', href: 'https://lux.market/coin', external: true, newTab: true, variant: 'primary'} as LinkDef,
+        ],
+      } as CTABlock,
     ]
   } as CarteBlancheBlock,
 ] as Block[]

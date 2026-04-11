@@ -25,7 +25,7 @@ export default {
           byline: { text: bylines[0], level: 6 },
         } as EnhHeadingBlock,
         {blockType: 'enh-heading',
-          icon: <p className='font-serif text-[24px] leading-[28px] font-bold  h-[28px] pr-2'>0%</p>,
+          icon: '/assets/content/icon-dao-475.png',
           iconSize: 40,
           preheading: { text: 'CAPITAL GAINS', level: 5, mb: 2 },
           heading: { text: 'TAX EFFICIENT', level: 1 },

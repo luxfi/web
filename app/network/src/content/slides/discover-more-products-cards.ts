@@ -1,19 +1,16 @@
-import Link from 'next/link'
-
-import { VideoBlockComponent } from '@/blocks/client-blocks'
 import type {
   Block,
-  ElementBlock,
+  CarteBlancheBlock,
+  CTABlock,
   EnhHeadingBlock,
   VideoBlock,
-  CarteBlancheBlock,
 } from '@hanzo/ui/blocks'
+import type { LinkDef } from '@hanzo/ui/types'
 import { DEF_VIDEO_PROPS } from '@luxfi/data'
-
 
 const silverVideo = {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: DEF_VIDEO_PROPS,
   poster: 'https://cdn.lux.network/commerce/silver/product/luxsilver-poster.jpg',
   sources: [
     'https://cdn.lux.network/commerce/silver/product/luxsilver.mp4',
@@ -24,7 +21,7 @@ const silverVideo = {
 
 const keyVideo = {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: DEF_VIDEO_PROPS,
   poster: 'https://cdn.lux.network/commerce/ps/product/LUX-PASS-poster.jpg',
   sources: [
     'https://cdn.lux.network/commerce/ps/product/LUX-PASS-transcode.mp4',
@@ -35,7 +32,7 @@ const keyVideo = {
 
 const cardVideo = {
   blockType: 'video',
-  videoProps: DEF_VIDEO_PROPS, 
+  videoProps: DEF_VIDEO_PROPS,
   poster: 'https://cdn.lux.network/commerce/cr/product/black-f-700x441.jpg',
   sources: [
     'https://cdn.lux.network/commerce/cr/product/gunmetal-card.mp4',
@@ -48,52 +45,52 @@ export default [
   {blockType: 'carte-blanche',
     specifiers: 'no-outer-borders',
     content: [
-      {blockType: 'element',
-        element: <>
-          <Link href='https://lux.market/silver' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
-            <VideoBlockComponent block={silverVideo} className='h-full !my-0'/>
-          </Link>
-        </>
-      } as ElementBlock,
+      silverVideo,
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
         heading: {text: 'SILVER', level: 3},
       } as EnhHeadingBlock,
+      {blockType: 'cta',
+        specifiers: 'center',
+        elements: [
+          {title: 'Shop Silver', href: 'https://lux.market/silver', external: true, newTab: true, variant: 'outline'} as LinkDef,
+        ],
+      } as CTABlock,
     ]
   } as CarteBlancheBlock,
   {blockType: 'carte-blanche',
     specifiers: 'no-outer-borders',
     content: [
-      {blockType: 'element',
-        element: <>
-          <Link href='https://lux.market/key' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1'>
-            <VideoBlockComponent block={keyVideo} className='h-full !my-0'/>
-          </Link>
-        </>
-      } as ElementBlock,
+      keyVideo,
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
         heading: {text: 'KEY', level: 3},
       } as EnhHeadingBlock,
+      {blockType: 'cta',
+        specifiers: 'center',
+        elements: [
+          {title: 'Shop Key', href: 'https://lux.market/key', external: true, newTab: true, variant: 'outline'} as LinkDef,
+        ],
+      } as CTABlock,
     ]
   } as CarteBlancheBlock,
   {blockType: 'carte-blanche',
     specifiers: 'no-outer-borders',
     content: [
-      {blockType: 'element',
-        element: <>
-          <Link href='https://lux.credit' target='_blank' className='border rounded-md hover:border-primary-lux h-[15rem] sm:h-[20rem] p-1 content-center'>
-            <VideoBlockComponent block={cardVideo} className='h-full !my-0'/>
-          </Link>
-        </>
-      } as ElementBlock,
+      cardVideo,
       {blockType: 'space', level: 0},
       {blockType: 'enh-heading',
         specifiers: 'center',
         heading: {text: 'CREDIT', level: 3},
       } as EnhHeadingBlock,
+      {blockType: 'cta',
+        specifiers: 'center',
+        elements: [
+          {title: 'Get Credit', href: 'https://lux.credit', external: true, newTab: true, variant: 'outline'} as LinkDef,
+        ],
+      } as CTABlock,
     ]
   } as CarteBlancheBlock,
 ] as Block[]

@@ -153,7 +153,7 @@ export default [
         title: "More benefits",
         icon: <MoreBenefits  width={25} height={25} />,
         icon_act: <MoreBenefitsAct width={27} height={27} />,
-        href: "#",
+        href: "https://lux.credit/compare",
         newTab: false,
         contents:"See what's truly unique"
       },
@@ -351,7 +351,7 @@ export default [
         title: "Lux Pass",
         icon: <LuxPass width={25} height={25} />,
         icon_act: <LuxPassAct width={27} height={27}/>,
-        href: "#",
+        href: "https://lux.market/pass",
         newTab: false,
         contents:"All access pass to network"
       },
@@ -360,7 +360,7 @@ export default [
   {
     title: "Resources",
     icon: '',
-    href: "",
+    href: "https://docs.lux.network",
     newTab: false,
     details: "",
     childMenu: [
@@ -369,7 +369,7 @@ export default [
         title: "Resource Center",
         icon: <AIChat  width={25} height={25} />,
         icon_act: <AIChatAct width={27} height={27}/>,
-        href: "#",
+        href: "https://docs.lux.network",
         newTab: false,
         contents:"Dynamic solutions"
       },
@@ -378,7 +378,7 @@ export default [
         title: "Integrations",
         icon: <Integration  width={25} height={25} />,
         icon_act: <IntegrationAct width={27} height={27}/>,
-        href: "#",
+        href: "https://docs.lux.network/integrations",
         newTab: false,
         contents:"Simplified onboarding"
       },
@@ -387,7 +387,7 @@ export default [
         title: "Templates",
         icon: <Templates  width={25} height={25} />,
         icon_act: <TemplatesAct width={27} height={27}/>,
-        href: "#",
+        href: "https://docs.lux.network/templates",
         newTab: false,
         contents:"Speedy app development"
       },
@@ -396,7 +396,7 @@ export default [
         title: "Guides",
         icon: <Guides  width={25} height={25} />,
         icon_act: <GuidesAct width={27} height={27}/>,
-        href: "#",
+        href: "https://docs.lux.network/guides",
         newTab: false,
         contents:"Find help quickly"
       },
@@ -405,7 +405,7 @@ export default [
         title: "Customers",
         icon: <Customers  width={25} height={25} />,
         icon_act: <CustomersAct width={27} height={27}/>,
-        href: "#",
+        href: "https://lux.partners",
         newTab: false,
         contents:"Trusted by the best teams"
       },
@@ -414,7 +414,7 @@ export default [
         title: "Blog",
         icon: <Blog  width={25} height={25} />,
         icon_act: <BlogAct width={27} height={27}/>,
-        href: "#",
+        href: "https://blog.lux.network",
         newTab: false,
         contents:"Latest posts and changes"
       },
@@ -423,7 +423,7 @@ export default [
         title: "Changelog",
         icon: <ChangeLog  width={25} height={25} />,
         icon_act: <ChangeLogAct width={27} height={27} />,
-        href: "#",
+        href: "https://docs.lux.network/changelog",
         newTab: false,
         contents:"Manage deployments"
       },
@@ -441,7 +441,7 @@ export default [
         title: "Customer Support",
         icon: <CustomerSupport  width={25} height={25} />,
         icon_act: <CustomerSupportAct width={27} height={27}/>,
-        href: "#",
+        href: "mailto:support@lux.network",
         newTab: false,
         contents:"Dedicated help, 24/7"
       },
@@ -450,7 +450,7 @@ export default [
         title: "FAQs",
         icon: <FAQs  width={25} height={25} />,
         icon_act: <FAQsAct width={27} height={27}/>,
-        href: "#",
+        href: "https://docs.lux.network/faq",
         newTab: false,
         contents:"Common queries"
       }

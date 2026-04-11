@@ -50,7 +50,7 @@ export default [
     heading: {blockType: 'enh-heading',
       specifiers: 'left',
       heading: { text: 'Zero Knowledge Virtual Machine', level: 4},
-      byline: { text: bylines[1], level: 0}
+      byline: { text: bylines[2], level: 0}
     }
   } as CarteBlancheBlock,
 ] as Block[]

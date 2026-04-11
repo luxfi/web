@@ -4,10 +4,10 @@ import type {
 } from '@hanzo/ui/blocks'
 
 const bylines = [
-  'Giving developers a comprehensive suite of open source products and services to launch and scale fast on the Lux Network, including: APIs for blockchain, users, payments, e-commerce, hosting, automation, marketing, analytics; various blockchain protocols; smart contracts; SDKs; third-party integrations; and open source developer tools.',
-  'Deploy with zero configuration to our global network and scale dynamically to millions of transaction and users with high-performance compute and caching. Lux is natively networked, making programming smart contracts, networking, operating systems, and dApps all in the same environment and in familiar programming languages.',
-  'ZChain provides a unified programming layer to write, test, and deploy Zero Knowledge Circuits.',
-  'Lux Network\'s built-in cross-chain bridge ensures your dApps can launch on any EVM compatible chain, day one.'
+  'A comprehensive suite of open source products and services for AI and blockchain: APIs for inference, training, payments, e-commerce, hosting, automation, and analytics. Smart contracts, SDKs, third-party integrations, and developer tools—all designed for the AI era.',
+  'Deploy decentralized AI workloads with zero configuration. Scale dynamically to millions of inference requests with high-performance compute and caching. Lux is natively networked—smart contracts, AI models, and dApps coexist in the same environment using familiar programming languages.',
+  'FHE-encrypted computation keeps models and data private. ZChain provides a unified programming layer for Zero Knowledge circuits, enabling verifiable AI inference without exposing proprietary weights.',
+  'Lux Network\'s built-in cross-chain bridge ensures your AI-powered dApps can launch on any EVM compatible chain, day one. Interoperate with Ethereum, Solana, and every major L1.'
 ]
  // re images: https://nextjs.org/docs/pages/api-reference/components/image#responsive-image-with-aspect-ratio
 export default [

@@ -68,10 +68,8 @@ const DesktopNav: React.FC<{
         {links.map((el, index) => (
           <NavigationMenuItem key={index} className='!m-0'>
             {el.isAIMenu ? (
-              <Link href={el.href} legacyBehavior passHref>
-                <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), ' text-muted-1 bg-transparent')}>
-                  {el.title}
-                </NavigationMenuLink>
+              <Link href={el.href} className={cn(navigationMenuTriggerStyle(), ' text-muted-1 bg-transparent')}>
+                {el.title}
               </Link>
             ) : el.title === 'Cards' ? (
               <>
@@ -82,7 +80,7 @@ const DesktopNav: React.FC<{
                   onMouseLeave={handleMouseLeave}
                   onBlur={handleMouseLeave}
                 >
-                  <Link href={el.href} legacyBehavior passHref>
+                  <Link href={el.href}>
                     {el.title}
                   </Link>
                 </NavigationMenuTrigger>
@@ -112,7 +110,7 @@ const DesktopNav: React.FC<{
                 >
                   {
                     el.href && el.href !== '' ?
-                      <Link href={el.href} legacyBehavior passHref>
+                      <Link href={el.href}>
                         {el.title}
                       </Link> : <>{el.title}</>
                   }

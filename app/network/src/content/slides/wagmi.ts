@@ -1,10 +1,9 @@
 import type {
-  ElementBlock,
+  CTABlock,
   EnhHeadingBlock,
-  ScreenfulBlock, 
+  ScreenfulBlock,
 } from '@hanzo/ui/blocks'
-
-import { Button, Input } from '@hanzo/ui/primitives'
+import type { LinkDef } from '@hanzo/ui/types'
 
 export default {
   blockType: 'screenful',
@@ -16,11 +15,11 @@ export default {
       heading: { text: '#WAGMI', level: 1 },
     } as EnhHeadingBlock,
     {blockType: 'space', level: 1},
-    {blockType: 'element',
-      element: <form className="flex gap-2">
-      <Input placeholder="Phone number" required />
-      <Button type='submit' formTarget='_self' className='px-6'>I WANT IN</Button>
-    </form>
-    } as ElementBlock
+    {blockType: 'cta',
+      specifiers: 'center',
+      elements: [
+        {title: 'I WANT IN', href: 'https://lux.market', external: true, variant: 'primary'} as LinkDef,
+      ],
+    } as CTABlock,
   ]],
 } as ScreenfulBlock

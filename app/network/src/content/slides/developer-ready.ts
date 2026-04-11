@@ -8,7 +8,7 @@ import { COMMON_GRID_2_COL } from '@hanzo/ui/types'
 
 import cells from './developer-ready-cards'
 
-const byline = 'Build and launch DeFi apps using pre-built smart contracts for finance, gaming, NFTs, and more. If you are an institution or government, use it for issuing and trading assets and Central Bank digital currencies, finance debt, create digital IDs, track documents, and more.'
+const byline = 'Build and launch AI-powered applications on a post-quantum blockchain. Deploy decentralized inference, train models across the network, and build DeFi, gaming, NFTs, and institutional applications with pre-built smart contracts. FHE-encrypted computation keeps your data and models private.'
 
 export default {
   blockType: 'screenful',
@@ -20,7 +20,7 @@ export default {
       icon: '/assets/content/icon-eth-475.png',
       iconSize: 40,
       preheading: { text: 'EVM PLATFORM', level: 5, mb: 2 },
-      heading: { text: 'DEVELOPER READY', mb: 0 },
+      heading: { text: 'DEVELOPER READY', level: 1, mb: 0 },
       byline: { text: byline, level: 6 },
     } as EnhHeadingBlock,
     { blockType: 'space', level: 0},

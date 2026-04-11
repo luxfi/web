@@ -2,9 +2,6 @@ import type { LinkDef } from '@hanzo/ui/types'
 
 import { SocialIcon } from '../../components/icons'
 
-  // @ts-ignore (will build in project that has @svgr support)
-import SVG_warp_logo from './svg/warpcast-logo.svg'
-
 const SOC_ICON_SIZE = 18
 
 export default   [
@@ -16,7 +13,7 @@ export default   [
   {
     title: 'Lux Channel',
     href: 'https://warpcast.com/~/channel/lux',
-    icon: <SVG_warp_logo width={SOC_ICON_SIZE} height={SOC_ICON_SIZE} /> //<SocialIcon network='warpcast' size={SOC_ICON_SIZE} />
+    icon: <SocialIcon network='x' size={SOC_ICON_SIZE} />
   },
   {
     title: 'Lux Discussions',
