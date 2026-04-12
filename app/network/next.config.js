@@ -4,6 +4,7 @@ const svgrWebpackConfig = require('./svgr.next.config')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  poweredByHeader: false,
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
   staticPageGenerationTimeout: 180,
